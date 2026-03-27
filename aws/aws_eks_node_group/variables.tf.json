@@ -1,0 +1,123 @@
+{
+    "variable": {
+        "cluster_name": [
+            {
+                "type": "string",
+                "description": "The name of the EKS cluster.",
+                "nullable": false
+            }
+        ],
+        "node_group_name": [
+            {
+                "type": "string",
+                "description": "The name of the node group.",
+                "nullable": true
+            }
+        ],
+        "node_role_arn": [
+            {
+                "type": "string",
+                "description": "The ARN of the IAM role to associate with the node group.",
+                "nullable": false
+            }
+        ],
+        "subnet_ids": [
+            {
+                "type": "list(string)",
+                "description": "A list of subnet IDs to launch the worker nodes in.",
+                "nullable": false
+            }
+        ],
+        "scaling_config": [
+            {
+                "type": "list(object({ desired_size : number, max_size : number, min_size : number }))",
+                "description": "The scaling configuration details.",
+                "nullable": false
+            }
+        ],
+        "update_config": [
+            {
+                "type": "list(object({ max_unavailable : number, max_unavailable_percentage : number }))",
+                "description": "The update configuration details.",
+                "nullable": true
+            }
+        ],
+        "ami_type": [
+            {
+                "type": "string",
+                "description": "The AMI type for the worker nodes. Defaults to AL2_x86_64.",
+                "nullable": true
+            }
+        ],
+        "capacity_type": [
+            {
+                "type": "string",
+                "description": "The capacity type for the worker nodes. Defaults to ON_DEMAND.",
+                "nullable": true
+            }
+        ],
+        "disk_size": [
+            {
+                "type": "number",
+                "description": "The root device disk size (in GiB) for the worker nodes. Defaults to 20.",
+                "nullable": true
+            }
+        ],
+        "force_update_version": [
+            {
+                "type": "bool",
+                "description": "Force version update if existing pods are unable to be drained due to a pod disruption budget issue.",
+                "nullable": true
+            }
+        ],
+        "instance_types": [
+            {
+                "type": "list(string)",
+                "description": "A list of instance types that can be used for the worker nodes. Defaults to [\"t3.medium\"].",
+                "nullable": true
+            }
+        ],
+        "labels": [
+            {
+                "type": "map(string)",
+                "description": "The Kubernetes labels to be applied to the nodes in the node group when they are created.",
+                "nullable": true
+            }
+        ],
+        "launch_template": [
+            {
+                "type": "list(object({ id : string, version : string, name : string }))",
+                "description": "The launch template to use for the node group.",
+                "nullable": true
+            }
+        ],
+        "release_version": [
+            {
+                "type": "string",
+                "description": "The AMI version of the EKS optimized AMI to use for the worker nodes.",
+                "nullable": true
+            }
+        ],
+        "remote_access": [
+            {
+                "type": "list(object({ ec2_ssh_key : string, source_security_group_ids : list(string) }))",
+                "description": "The remote access configuration details.",
+                "nullable": true
+            }
+        ],
+        "taint": [
+            {
+                "type": "list(object({ key : string, value : string, effect : string }))",
+                "description": "The Kubernetes taints to be applied to the nodes in the node group when they are created.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A mapping of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

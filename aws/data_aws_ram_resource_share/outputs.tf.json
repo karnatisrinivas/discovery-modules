@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.arn}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.id}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.name}"
+        },
+        "owning_account_id": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.owning_account_id}"
+        },
+        "resource_arns": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.resource_arns}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.status}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_ram_resource_share.this.tags}"
+        }
+    }
+}

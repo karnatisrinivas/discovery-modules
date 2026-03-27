@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "index_name": [
+      {
+        "description": "The name you want to assign to the AWS Location Place Index.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

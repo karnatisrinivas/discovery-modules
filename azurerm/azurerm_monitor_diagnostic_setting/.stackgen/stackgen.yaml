@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitor Diagnostic Setting
+  node:
+    label:
+      static: Monitor Diagnostic Setting
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_monitor_diagnostic_setting
+  dnd_supported: false
+  references:
+    log_analytics_workspace_id:
+      from: azurerm_log_analytics_workspace
+      output: log_analytics_workspace_resource_id

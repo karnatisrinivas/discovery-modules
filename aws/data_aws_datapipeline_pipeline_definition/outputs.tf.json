@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Data Pipeline definition.",
+            "value": "${data.aws_datapipeline_pipeline_definition.this.id}"
+        },
+        "parameter_object": {
+            "description": "A set of parameter objects used in the pipeline, each with attributes defining key-value pairs and a unique identifier.",
+            "value": "${data.aws_datapipeline_pipeline_definition.this.parameter_object}"
+        },
+        "pipeline_object": {
+            "description": "A set of pipeline objects, each containing fields with key-value pairs or references, along with a unique identifier and name.",
+            "value": "${data.aws_datapipeline_pipeline_definition.this.pipeline_object}"
+        }
+    }
+}

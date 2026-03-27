@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "billing_account": [
+      {
+        "description": "Specifies the billing account ID to associate with the project; must be a valid and active billing account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time limit for operations on the billing project, including create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

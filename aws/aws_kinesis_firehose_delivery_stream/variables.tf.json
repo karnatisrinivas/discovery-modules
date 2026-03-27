@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "destination": [
+      {
+        "description": "Specifies the target destination where the data will be delivered, such as Amazon S3, Redshift, Elasticsearch, or another supported service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "elasticsearch_configuration": [
+      {
+        "description": "Defines the Elasticsearch destination configuration, including index name, type name, and endpoint URL, for the Kinesis Firehose delivery stream.",
+        "nullable": true,
+        "type": "list(object({buffering_interval: optional(number),buffering_size: optional(number),cluster_endpoint: optional(string),domain_arn: optional(string),index_name: string,index_rotation_period: optional(string),retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),type_name: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),vpc_config: list(object({role_arn: string,security_group_ids: list(string),subnet_ids: list(string),vpc_id: optional(string)}))}))"
+      }
+    ],
+    "extended_s3_configuration": [
+      {
+        "description": "Configuration settings for extended S3 destination, including bucket details, buffering, compression, encryption, and data format options.",
+        "nullable": true,
+        "type": "list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),custom_time_zone: optional(string),error_output_prefix: optional(string),file_extension: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,s3_backup_mode: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),data_format_conversion_configuration: list(object({enabled: optional(bool),input_format_configuration: list(object({deserializer: list(object({hive_json_ser_de: list(object({timestamp_formats: optional(list(string))})),open_x_json_ser_de: list(object({case_insensitive: optional(bool),column_to_json_key_mappings: optional(map(string)),convert_dots_in_json_keys_to_underscores: optional(bool)}))}))})),output_format_configuration: list(object({serializer: list(object({orc_ser_de: list(object({block_size_bytes: optional(number),bloom_filter_columns: optional(list(string)),bloom_filter_false_positive_probability: optional(number),compression: optional(string),dictionary_key_threshold: optional(number),enable_padding: optional(bool),format_version: optional(string),padding_tolerance: optional(number),row_index_stride: optional(number),stripe_size_bytes: optional(number)})),parquet_ser_de: list(object({block_size_bytes: optional(number),compression: optional(string),enable_dictionary_compression: optional(bool),max_padding_bytes: optional(number),page_size_bytes: optional(number),writer_version: optional(string)}))}))})),schema_configuration: list(object({catalog_id: optional(string),database_name: string,region: optional(string),role_arn: string,table_name: string,version_id: optional(string)}))})),dynamic_partitioning_configuration: list(object({enabled: optional(bool),retry_duration: optional(number)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_backup_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))}))}))"
+      }
+    ],
+    "http_endpoint_configuration": [
+      {
+        "description": "Configuration block for defining the HTTP endpoint destination, including URL, access key, and buffering options.",
+        "nullable": true,
+        "type": "list(object({access_key: optional(string),buffering_interval: optional(number),buffering_size: optional(number),name: optional(string),retry_duration: optional(number),role_arn: optional(string),s3_backup_mode: optional(string),url: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),request_configuration: list(object({content_encoding: optional(string),common_attributes: list(object({name: string,value: string}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),secrets_manager_configuration: list(object({enabled: optional(bool),role_arn: optional(string),secret_arn: optional(string)}))}))"
+      }
+    ],
+    "iceberg_configuration": [
+      {
+        "description": "Defines the configuration for delivering data to an Iceberg table, including table-specific settings and schema constraints.",
+        "nullable": true,
+        "type": "list(object({buffering_interval: optional(number),buffering_size: optional(number),catalog_arn: string,retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),destination_table_configuration: list(object({database_name: string,s3_error_output_prefix: optional(string),table_name: string,unique_keys: optional(list(string))})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))}))}))"
+      }
+    ],
+    "kinesis_source_configuration": [
+      {
+        "description": "Defines the source configuration for the delivery stream, specifying the Kinesis data stream to use as input.",
+        "nullable": true,
+        "type": "list(object({kinesis_stream_arn: string,role_arn: string}))"
+      }
+    ],
+    "msk_source_configuration": [
+      {
+        "description": "Configuration details for the MSK source, including the ARN of the MSK cluster and topic to deliver messages from.",
+        "nullable": true,
+        "type": "list(object({msk_cluster_arn: string,read_from_timestamp: optional(string),topic_name: string,authentication_configuration: list(object({connectivity: string,role_arn: string}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Kinesis Firehose delivery stream, required for identifying and managing the stream.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "opensearch_configuration": [
+      {
+        "description": "Configuration settings for delivering data to an OpenSearch domain, including index name, type, and endpoint.",
+        "nullable": true,
+        "type": "list(object({buffering_interval: optional(number),buffering_size: optional(number),cluster_endpoint: optional(string),domain_arn: optional(string),index_name: string,index_rotation_period: optional(string),retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),type_name: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),document_id_options: list(object({default_document_id_format: string})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),vpc_config: list(object({role_arn: string,security_group_ids: list(string),subnet_ids: list(string),vpc_id: optional(string)}))}))"
+      }
+    ],
+    "opensearchserverless_configuration": [
+      {
+        "description": "Defines the configuration settings for delivering data to an OpenSearch Serverless destination, including index name and role ARN requirements.",
+        "nullable": true,
+        "type": "list(object({buffering_interval: optional(number),buffering_size: optional(number),collection_endpoint: string,index_name: string,retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),vpc_config: list(object({role_arn: string,security_group_ids: list(string),subnet_ids: list(string),vpc_id: optional(string)}))}))"
+      }
+    ],
+    "redshift_configuration": [
+      {
+        "description": "Defines the configuration for delivering data to an Amazon Redshift cluster, including table name, cluster settings, and connection credentials.",
+        "nullable": true,
+        "type": "list(object({cluster_jdbcurl: string,copy_options: optional(string),data_table_columns: optional(string),data_table_name: string,password: optional(string),retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),username: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_backup_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),secrets_manager_configuration: list(object({enabled: optional(bool),role_arn: optional(string),secret_arn: optional(string)}))}))"
+      }
+    ],
+    "server_side_encryption": [
+      {
+        "description": "Enables or disables server-side encryption for the delivery stream; must be true to encrypt data at rest.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),key_arn: optional(string),key_type: optional(string)}))"
+      }
+    ],
+    "snowflake_configuration": [
+      {
+        "description": "Configuration settings for delivering data to a Snowflake table, including connection details, role ARN, and Snowflake-specific parameters.",
+        "nullable": true,
+        "type": "list(object({account_url: string,buffering_interval: optional(number),buffering_size: optional(number),content_column_name: optional(string),data_loading_option: optional(string),database: string,key_passphrase: optional(string),metadata_column_name: optional(string),private_key: optional(string),retry_duration: optional(number),role_arn: string,s3_backup_mode: optional(string),schema: string,table: string,user: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),secrets_manager_configuration: list(object({enabled: optional(bool),role_arn: optional(string),secret_arn: optional(string)})),snowflake_role_configuration: list(object({enabled: optional(bool),snowflake_role: optional(string)})),snowflake_vpc_configuration: list(object({private_link_vpce_id: string}))}))"
+      }
+    ],
+    "splunk_configuration": [
+      {
+        "description": "Defines the configuration settings for delivering data to Splunk, including the required HECEndpoint, HECEndpointType, and HECToken.",
+        "nullable": true,
+        "type": "list(object({buffering_interval: optional(number),buffering_size: optional(number),hec_acknowledgment_timeout: optional(number),hec_endpoint: string,hec_endpoint_type: optional(string),hec_token: optional(string),retry_duration: optional(number),s3_backup_mode: optional(string),cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)})),processing_configuration: list(object({enabled: optional(bool),processors: list(object({type: string,parameters: list(object({parameter_name: string,parameter_value: string}))}))})),s3_configuration: list(object({bucket_arn: string,buffering_interval: optional(number),buffering_size: optional(number),compression_format: optional(string),error_output_prefix: optional(string),kms_key_arn: optional(string),prefix: optional(string),role_arn: string,cloudwatch_logging_options: list(object({enabled: optional(bool),log_group_name: optional(string),log_stream_name: optional(string)}))})),secrets_manager_configuration: list(object({enabled: optional(bool),role_arn: optional(string),secret_arn: optional(string)}))}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the resource, supporting cost allocation and management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for create, update, and delete operations for the delivery stream.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

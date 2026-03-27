@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Organizations Policy
+  node:
+    label:
+      static: Organizations Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_organizations_policy
+  dnd_supported: false
+  data_source: data_aws_organizations_policy

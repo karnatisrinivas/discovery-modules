@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Spanner Instance Iam Member
+  node:
+    label:
+      static: Spanner Instance Iam Member
+      template: ${instance}
+    display_type: default
+
+discovery:
+  type: google_spanner_instance_iam_member
+  dnd_supported: false

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "config": [
+      {
+        "description": "Configuration settings for the Spanner instance, including display name, node count, and instance type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies the user-friendly name for the Spanner instance, must be between 4 and 30 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The unique identifier for the Spanner instance, must be between 2 and 64 characters and start with a letter.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

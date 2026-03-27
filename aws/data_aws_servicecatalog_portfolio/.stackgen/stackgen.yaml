@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicecatalog Portfolio"
+  node:
+    label:
+      static: "[Data] Servicecatalog Portfolio"
+      template: "[Data] Servicecatalog Portfolio"
+    display_type: default
+
+discovery:
+  type: data_aws_servicecatalog_portfolio
+  dnd_supported: false

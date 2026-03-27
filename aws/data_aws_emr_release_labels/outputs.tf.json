@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the set of EMR release labels queried.",
+            "value": "${data.aws_emr_release_labels.this.id}"
+        },
+        "release_labels": {
+            "description": "A list of release labels available for AWS EMR clusters.",
+            "value": "${data.aws_emr_release_labels.this.release_labels}"
+        }
+    }
+}

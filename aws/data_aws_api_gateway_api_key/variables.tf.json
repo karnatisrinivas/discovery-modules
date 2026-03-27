@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the API Gateway API Key.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

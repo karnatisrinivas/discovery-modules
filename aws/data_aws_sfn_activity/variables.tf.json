@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) that uniquely identifies the Step Functions activity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Step Functions activity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

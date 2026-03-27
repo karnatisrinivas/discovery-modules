@@ -1,0 +1,114 @@
+{
+  "variable": {
+    "allowed_ips": [
+      {
+        "description": "List of IP addresses or CIDR ranges permitted to access the Azure Search service; must be valid IPv4 addresses or CIDR blocks.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "authentication_failure_mode": [
+      {
+        "description": "Determines the behavior when authentication fails; valid options are 'Http401' or 'Http403'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "customer_managed_key_enforcement_enabled": [
+      {
+        "description": "Enforces the use of customer-managed keys for encryption; must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "hosting_mode": [
+      {
+        "description": "Determines the hosting mode for the Azure Search service, either \"default\" or \"high_density\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Defines the managed identity configuration for the Azure Cognitive Search service, enabling secure access to other Azure resources.",
+        "nullable": true,
+        "type": "list(object({principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "local_authentication_enabled": [
+      {
+        "description": "Controls whether local authentication is enabled for the search service; must be `true` or `false`.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Azure Search Service, must be globally unique and adhere to Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "partition_count": [
+      {
+        "description": "Number of partitions for the Azure Cognitive Search service, must be between 1 and 12.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Specifies whether the service can be accessed over the public internet.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "replica_count": [
+      {
+        "description": "Specifies the number of replicas for the Azure Search service, which determines the number of copies of the search index. Must be between 1 and 12.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "semantic_search_sku": [
+      {
+        "description": "Specifies the pricing tier for semantic search capabilities, such as 'Standard' or 'Premium'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Defines the pricing tier for the Azure Cognitive Search service, such as Free, Basic, or Standard.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the resource, supporting resource management and cost tracking.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for create, read, update, and delete operations, allowing adjustments to default operation durations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

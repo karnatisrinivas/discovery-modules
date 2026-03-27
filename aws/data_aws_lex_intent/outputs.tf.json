@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Lex intent, which uniquely identifies the intent.",
+            "value": "${data.aws_lex_intent.this.arn}"
+        },
+        "checksum": {
+            "description": "A checksum that helps to validate the integrity of the intent's data.",
+            "value": "${data.aws_lex_intent.this.checksum}"
+        },
+        "created_date": {
+            "description": "The date and time when the Lex intent was originally created.",
+            "value": "${data.aws_lex_intent.this.created_date}"
+        },
+        "description": {
+            "description": "A brief explanation or summary of what the Lex intent does.",
+            "value": "${data.aws_lex_intent.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the Lex intent.",
+            "value": "${data.aws_lex_intent.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the Lex intent was last modified.",
+            "value": "${data.aws_lex_intent.this.last_updated_date}"
+        },
+        "parent_intent_signature": {
+            "description": "The signature of the parent intent, if the intent is derived from another intent.",
+            "value": "${data.aws_lex_intent.this.parent_intent_signature}"
+        }
+    }
+}

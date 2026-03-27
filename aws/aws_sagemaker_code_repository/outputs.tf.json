@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM policies and API interactions with the repository",
+            "value": "${aws_sagemaker_code_repository.this.arn}"
+        },
+        "code_repository_name": {
+            "description": "SageMaker Code Repository Name",
+            "value": "${aws_sagemaker_code_repository.this.code_repository_name}"
+        },
+        "id": {
+            "description": "Unique identifier for managing and referencing the SageMaker code repository",
+            "value": "${aws_sagemaker_code_repository.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for categorizing and organizing the repository resources",
+            "value": "${aws_sagemaker_code_repository.this.tags_all}"
+        }
+    }
+}

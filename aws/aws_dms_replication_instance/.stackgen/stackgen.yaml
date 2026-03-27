@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DMS Replication Instance
+  node:
+    label:
+      static: DMS Replication Instance
+      template: ${replication_instance_id}
+    display_type: default
+
+discovery:
+  type: aws_dms_replication_instance
+  dnd_supported: false
+  data_source: data_aws_dms_replication_instance

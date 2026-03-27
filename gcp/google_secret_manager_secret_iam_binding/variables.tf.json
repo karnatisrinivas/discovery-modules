@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines the IAM condition that must be met for the binding to apply, using attributes like expression, title, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of identities to which the IAM binding applies; must be in the format `user:\u003cemail\u003e`, `serviceAccount:\u003cemail\u003e`, or `group:\u003cemail\u003e`.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to grant to members, such as 'roles/secretmanager.secretAccessor'; must match predefined or custom roles in Google Cloud.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_id": [
+      {
+        "description": "ID of the secret in Google Secret Manager to which the IAM binding will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

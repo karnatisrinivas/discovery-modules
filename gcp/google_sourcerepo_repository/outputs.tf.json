@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "an identifier for the resource with format projects/{{project}}/repos/{{name}}",
+            "value": "${google_sourcerepo_repository.this.id}"
+        },
+        "name": {
+            "description": "The name of the repository.",
+            "value": "${google_sourcerepo_repository.this.name}"
+        },
+        "url": {
+            "description": "URL to clone the repository from Google Cloud Source Repositories.",
+            "value": "${google_sourcerepo_repository.this.url}"
+        }
+    }
+}

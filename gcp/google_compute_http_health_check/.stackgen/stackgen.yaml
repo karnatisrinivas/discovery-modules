@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Http Health Check
+  node:
+    label:
+      static: Compute Http Health Check
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_http_health_check
+  dnd_supported: false

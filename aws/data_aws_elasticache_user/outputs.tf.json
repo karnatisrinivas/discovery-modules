@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the ElastiCache user.",
+            "value": "${data.aws_elasticache_user.this.id}"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.arn}"
+        },
+        "created_date": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.created_date}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.id}"
+        },
+        "last_updated_date": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.resource_owner}"
+        },
+        "spec": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.spec}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_appmesh_virtual_gateway.this.tags}"
+        }
+    }
+}

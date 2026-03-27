@@ -1,0 +1,20 @@
+{
+    "output": {
+        "description": {
+            "description": "A brief explanation or detail about the AWS region, typically indicating its purpose or characteristics.",
+            "value": "${data.aws_region.this.description}"
+        },
+        "endpoint": {
+            "description": "The URL endpoint for the AWS region, used to access AWS services in that region.",
+            "value": "${data.aws_region.this.endpoint}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS region, often used in configurations and scripts.",
+            "value": "${data.aws_region.this.id}"
+        },
+        "name": {
+            "description": "The official name of the AWS region, typically in a format like 'us-east-1'.",
+            "value": "${data.aws_region.this.name}"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM User
+  node:
+    label:
+      static: IAM User
+      template: ${name}
+    display_type: default
+
+variables:
+  force_destroy:
+    description: "When destroying this user, destroy even if it has non-Terraform-managed IAM access keys, login profile or MFA devices. Without force_destroy a user with non-Terraform-managed access keys and login profile will fail to be destroyed."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_iam_user
+  dnd_supported: false
+  data_source: data_aws_iam_user
+  references:
+    permissions_boundary:
+      from: aws_iam_policy
+      output: arn

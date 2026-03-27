@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Quicksight Data Set"
+  node:
+    label:
+      static: "[Data] Quicksight Data Set"
+      template: "[Data] Quicksight Data Set"
+    display_type: default
+
+discovery:
+  type: data_aws_quicksight_data_set
+  dnd_supported: false

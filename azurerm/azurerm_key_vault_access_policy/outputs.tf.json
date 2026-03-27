@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The value of the id output",
+            "value": "${azurerm_key_vault_access_policy.this.id}"
+        }
+    }
+}

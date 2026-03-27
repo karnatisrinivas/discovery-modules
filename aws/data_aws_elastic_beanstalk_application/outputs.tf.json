@@ -1,0 +1,20 @@
+{
+    "output": {
+        "appversion_lifecycle": {
+            "description": "Details the lifecycle settings for application versions, including whether to delete the source from S3, maximum age in days, maximum count, and the service role.",
+            "value": "${data.aws_elastic_beanstalk_application.this.appversion_lifecycle}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) uniquely identifying the Elastic Beanstalk application.",
+            "value": "${data.aws_elastic_beanstalk_application.this.arn}"
+        },
+        "description": {
+            "description": "A brief explanation or summary of the Elastic Beanstalk application.",
+            "value": "${data.aws_elastic_beanstalk_application.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the Elastic Beanstalk application.",
+            "value": "${data.aws_elastic_beanstalk_application.this.id}"
+        }
+    }
+}

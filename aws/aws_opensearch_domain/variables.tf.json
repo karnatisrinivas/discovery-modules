@@ -1,0 +1,69 @@
+{
+    "variable": {
+        "advanced_options": [
+            {
+                "default": {},
+                "description": "Map of advanced options",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "domain_name": [
+            {
+                "description": "Name of the OpenSearch domain",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "domain_endpoint_options": [
+            {
+                "description": "Map of domain endpoint options",
+                "type": "list(object({ custom_endpoint: string, enforce_https: bool, tls_security_policy: string }))",
+                "nullable": true
+            }
+        ],
+        "ebs_options": [
+            {
+                "description": "EBS options for the OpenSearch domain",
+                "type": "list(object({ ebs_enabled: bool, volume_size: number, volume_type:string }))",
+                "nullable": true
+            }
+        ],
+        "engine_version": [
+            {
+                "default": "OpenSearch_2.9",
+                "description": "Elasticsearch version for the OpenSearch domain",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "log_publishing_options": [
+            {
+                "description": "Map of log publishing options",
+                "type": "list(object({ cloudwatch_log_group_arn:string, enabled: bool, log_type: string }))",
+                "nullable": true
+            }
+        ],
+        "vpc_options": [
+            {
+                "description": "VPC options for the OpenSearch domain. Optional if subnet_ids is set.",
+                "type": "list(object({ security_group_ids: list(string), subnet_ids: list(string) }))",
+                "nullable": true
+            }
+        ],
+        "encrypt_at_rest": [
+            {
+                "description": "Whether to enable encryption at rest",
+                "type": "list(object({ enabled: bool, kms_key_id: string }))",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "nullable": true,
+                "description": "A mapping of tags to assign to the resource",
+                "type": "map(string)"
+            }
+        ]
+    }
+}

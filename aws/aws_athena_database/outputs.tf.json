@@ -1,0 +1,8 @@
+{
+    "output": {
+        "name": {
+            "description": "The value of the name output",
+            "value": "${aws_athena_database.this.name}"
+        }
+    }
+}

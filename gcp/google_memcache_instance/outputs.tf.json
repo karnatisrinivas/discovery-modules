@@ -1,0 +1,20 @@
+{
+    "output": {
+        "discovery_endpoint": {
+            "description": "Endpoint for Discovery API",
+            "value": "${google_memcache_instance.this.discovery_endpoint}"
+        },
+        "host": {
+            "description": "Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.",
+            "value": "${google_memcache_instance.this.host}"
+        },
+        "id": {
+            "description": "The ID of the Memcache instance",
+            "value": "${google_memcache_instance.this.id}"
+        },
+        "port": {
+            "description": "The port number of the Memcached server on this node.",
+            "value": "${google_memcache_instance.this.port}"
+        }
+    }
+}

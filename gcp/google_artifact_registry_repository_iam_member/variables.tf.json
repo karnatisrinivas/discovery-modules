@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional IAM condition to apply, specifying when the IAM policy binding takes effect, using attributes like title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the GCP region where the Artifact Registry repository is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM role will be applied; must be in the format of an email address or predefined identity.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "repository": [
+      {
+        "description": "Specifies the Artifact Registry repository to apply IAM bindings, must be a fully qualified repository name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be assigned to the member for the Artifact Registry repository.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CloudWatch log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the CloudWatch log group was created, in milliseconds since the epoch.",
+            "value": "${data.aws_cloudwatch_log_group.this.creation_time}"
+        },
+        "id": {
+            "description": "The unique identifier of the CloudWatch log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS KMS key used to encrypt the logs in the log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.kms_key_id}"
+        },
+        "log_group_class": {
+            "description": "The class type of the CloudWatch log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.log_group_class}"
+        },
+        "retention_in_days": {
+            "description": "The number of days to retain the log events in the specified log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.retention_in_days}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the CloudWatch log group.",
+            "value": "${data.aws_cloudwatch_log_group.this.tags}"
+        }
+    }
+}

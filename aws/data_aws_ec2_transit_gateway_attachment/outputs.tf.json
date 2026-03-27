@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.arn}"
+        },
+        "association_state": {
+            "description": "The current state of the association between the transit gateway and the route table.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.association_state}"
+        },
+        "association_transit_gateway_route_table_id": {
+            "description": "The ID of the route table associated with the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.association_transit_gateway_route_table_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.id}"
+        },
+        "resource_id": {
+            "description": "The ID of the resource (e.g., VPC or VPN connection) attached to the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.resource_id}"
+        },
+        "resource_owner_id": {
+            "description": "The AWS account ID of the owner of the resource attached to the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.resource_owner_id}"
+        },
+        "resource_type": {
+            "description": "The type of resource attached to the transit gateway (e.g., VPC, VPN).",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.resource_type}"
+        },
+        "state": {
+            "description": "The current state of the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.tags}"
+        },
+        "transit_gateway_attachment_id": {
+            "description": "The ID of the transit gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.transit_gateway_attachment_id}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the transit gateway to which the resource is attached.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.transit_gateway_id}"
+        },
+        "transit_gateway_owner_id": {
+            "description": "The AWS account ID of the owner of the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_attachment.this.transit_gateway_owner_id}"
+        }
+    }
+}

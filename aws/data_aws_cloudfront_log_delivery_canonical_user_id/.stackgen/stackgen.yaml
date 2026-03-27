@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Log Delivery Canonical User Id"
+  node:
+    label:
+      static: "[Data] Cloudfront Log Delivery Canonical User Id"
+      template: "[Data] Cloudfront Log Delivery Canonical User Id"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_log_delivery_canonical_user_id
+  dnd_supported: false

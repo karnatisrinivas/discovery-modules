@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user_pool_id": [
+      {
+        "description": "The unique identifier for the Cognito User Pool where the user groups will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

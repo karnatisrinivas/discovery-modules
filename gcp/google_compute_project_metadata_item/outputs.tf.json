@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique key for accessing project-level metadata in Google Cloud configurations",
+            "value": "${google_compute_project_metadata_item.this.id}"
+        }
+    }
+}

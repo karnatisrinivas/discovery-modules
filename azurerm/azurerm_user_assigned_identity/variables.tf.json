@@ -1,0 +1,30 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of azurerm user assigned identity",
+        "type": "string",
+        "nullable": false
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags which should be assigned to the User Assigned Identity.",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

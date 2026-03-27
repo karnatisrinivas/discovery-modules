@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Vpn Connection
+  node:
+    label:
+      static: Vpn Connection
+      template: ${customer_gateway_id}
+    display_type: default
+
+discovery:
+  type: aws_vpn_connection
+  dnd_supported: false
+  references:
+    type:
+      from: aws_customer_gateway
+      output: type
+    customer_gateway_id:
+      from: aws_customer_gateway
+      output: id
+    transit_gateway_id:
+      from: aws_ec2_transit_gateway
+      output: id
+    vpn_gateway_id:
+      from: aws_vpn_gateway
+      output: id

@@ -1,0 +1,240 @@
+{
+  "variable": {
+    "app_settings": [
+      {
+        "description": "Defines app-specific settings as key-value pairs",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "auth_settings": [
+      {
+        "description": "Configures authentication, including providers and token settings",
+        "nullable": true,
+        "type": "list(object({additional_login_parameters: optional(map(string)),allowed_external_redirect_urls: optional(list(string)),default_provider: optional(string),enabled: bool,issuer: optional(string),runtime_version: optional(string),token_refresh_extension_hours: optional(number),token_store_enabled: optional(bool),unauthenticated_client_action: optional(string),active_directory: list(object({allowed_audiences: optional(list(string)),client_id: string,client_secret: optional(string),client_secret_setting_name: optional(string)})),facebook: list(object({app_id: string,app_secret: optional(string),app_secret_setting_name: optional(string),oauth_scopes: optional(list(string))})),github: list(object({client_id: string,client_secret: optional(string),client_secret_setting_name: optional(string),oauth_scopes: optional(list(string))})),google: list(object({client_id: string,client_secret: optional(string),client_secret_setting_name: optional(string),oauth_scopes: optional(list(string))})),microsoft: list(object({client_id: string,client_secret: optional(string),client_secret_setting_name: optional(string),oauth_scopes: optional(list(string))})),twitter: list(object({consumer_key: string,consumer_secret: optional(string),consumer_secret_setting_name: optional(string)}))}))"
+      }
+    ],
+    "auth_settings_v2": [
+      {
+        "description": "Sets advanced authentication options and provider configurations",
+        "nullable": true,
+        "type": "list(object({auth_enabled: optional(bool),config_file_path: optional(string),default_provider: optional(string),excluded_paths: optional(list(string)),forward_proxy_convention: optional(string),forward_proxy_custom_host_header_name: optional(string),forward_proxy_custom_scheme_header_name: optional(string),http_route_api_prefix: optional(string),require_authentication: optional(bool),require_https: optional(bool),runtime_version: optional(string),unauthenticated_action: optional(string),active_directory_v2: list(object({allowed_applications: optional(list(string)),allowed_audiences: optional(list(string)),allowed_groups: optional(list(string)),allowed_identities: optional(list(string)),client_id: string,client_secret_certificate_thumbprint: optional(string),client_secret_setting_name: optional(string),jwt_allowed_client_applications: optional(list(string)),jwt_allowed_groups: optional(list(string)),login_parameters: optional(map(string)),tenant_auth_endpoint: string,www_authentication_disabled: optional(bool)})),apple_v2: list(object({client_id: string,client_secret_setting_name: string,login_scopes: optional(list(string))})),azure_static_web_app_v2: list(object({client_id: string})),custom_oidc_v2: list(object({authorisation_endpoint: optional(string),certification_uri: optional(string),client_credential_method: optional(string),client_id: string,client_secret_setting_name: optional(string),issuer_endpoint: optional(string),name: string,name_claim_type: optional(string),openid_configuration_endpoint: string,scopes: optional(list(string)),token_endpoint: optional(string)})),facebook_v2: list(object({app_id: string,app_secret_setting_name: string,graph_api_version: optional(string),login_scopes: optional(list(string))})),github_v2: list(object({client_id: string,client_secret_setting_name: string,login_scopes: optional(list(string))})),google_v2: list(object({allowed_audiences: optional(list(string)),client_id: string,client_secret_setting_name: string,login_scopes: optional(list(string))})),login: list(object({allowed_external_redirect_urls: optional(list(string)),cookie_expiration_convention: optional(string),cookie_expiration_time: optional(string),logout_endpoint: optional(string),nonce_expiration_time: optional(string),preserve_url_fragments_for_logins: optional(bool),token_refresh_extension_time: optional(number),token_store_enabled: optional(bool),token_store_path: optional(string),token_store_sas_setting_name: optional(string),validate_nonce: optional(bool)})),microsoft_v2: list(object({allowed_audiences: optional(list(string)),client_id: string,client_secret_setting_name: string,login_scopes: optional(list(string))})),twitter_v2: list(object({consumer_key: string,consumer_secret_setting_name: string}))}))"
+      }
+    ],
+    "backup": [
+      {
+        "description": "Defines backup configuration, including schedule and storage settings",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),name: string,storage_account_url: string,schedule: list(object({frequency_interval: number,frequency_unit: string,keep_at_least_one_backup: optional(bool),last_execution_time: optional(string),retention_period_days: optional(number),start_time: optional(string)}))}))"
+      }
+    ],
+    "builtin_logging_enabled": [
+      {
+        "description": "Enables or disables built-in logging for the app",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_enabled": [
+      {
+        "description": "Specifies whether client certificate authentication is enabled",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_exclusion_paths": [
+      {
+        "description": "Defines paths excluded from client certificate enforcement",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "client_certificate_mode": [
+      {
+        "description": "Configures client certificate requirements (e.g., optional or required)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "connection_string": [
+      {
+        "description": "Defines connection strings for external resources",
+        "nullable": true,
+        "type": "list(object({name: string,type: string,value: string}))"
+      }
+    ],
+    "content_share_force_disabled": [
+      {
+        "description": "Forces disabling of the content share feature",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "daily_memory_time_quota": [
+      {
+        "description": "Limits the daily memory usage for the app in minutes",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Indicates whether the app is enabled or disabled",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "ftp_publish_basic_authentication_enabled": [
+      {
+        "description": "Enables or disables basic authentication for FTP publishing",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "functions_extension_version": [
+      {
+        "description": "Specifies the runtime version for Azure Functions",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "https_only": [
+      {
+        "description": "Forces HTTPS-only traffic to the app",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Configures managed identity settings for the app",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "key_vault_reference_identity_id": [
+      {
+        "description": "Specifies the identity ID used for Key Vault references",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the app (must be unique)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Enables or disables public network access to the app",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "service_plan_id": [
+      {
+        "description": "Specifies the ID of the service plan associated with the app",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "site_config": [
+      {
+        "description": "Defines site configurations like runtime settings and logs",
+        "nullable": true,
+        "type": "list(object({always_on: optional(bool),api_definition_url: optional(string),api_management_api_id: optional(string),app_command_line: optional(string),app_scale_limit: optional(number),application_insights_connection_string: optional(string),application_insights_key: optional(string),default_documents: optional(list(string)),detailed_error_logging_enabled: optional(bool),elastic_instance_minimum: optional(number),ftps_state: optional(string),health_check_eviction_time_in_min: optional(number),health_check_path: optional(string),http2_enabled: optional(bool),ip_restriction_default_action: optional(string),load_balancing_mode: optional(string),managed_pipeline_mode: optional(string),minimum_tls_version: optional(string),pre_warmed_instance_count: optional(number),remote_debugging_enabled: optional(bool),remote_debugging_version: optional(string),runtime_scale_monitoring_enabled: optional(bool),scm_ip_restriction_default_action: optional(string),scm_minimum_tls_version: optional(string),scm_type: optional(string),scm_use_main_ip_restriction: optional(bool),use_32_bit_worker: optional(bool),vnet_route_all_enabled: optional(bool),websockets_enabled: optional(bool),windows_fx_version: optional(string),worker_count: optional(number),app_service_logs: list(object({disk_quota_mb: optional(number),retention_period_days: optional(number)})),application_stack: list(object({dotnet_version: optional(string),java_version: optional(string),node_version: optional(string),powershell_core_version: optional(string),use_custom_runtime: optional(bool),use_dotnet_isolated_runtime: optional(bool)})),cors: list(object({allowed_origins: optional(list(string)),support_credentials: optional(bool)})),ip_restriction: list(object({action: optional(string),description: optional(string),headers: optional(list(object({x_azure_fdid:list(string),x_fd_health_probe:list(string),x_forwarded_for:list(string),x_forwarded_host:list(string)}))),ip_address: optional(string),name: optional(string),priority: optional(number),service_tag: optional(string),virtual_network_subnet_id: optional(string)})),scm_ip_restriction: list(object({action: optional(string),description: optional(string),headers: optional(list(object({x_azure_fdid:list(string),x_fd_health_probe:list(string),x_forwarded_for:list(string),x_forwarded_host:list(string)}))),ip_address: optional(string),name: optional(string),priority: optional(number),service_tag: optional(string),virtual_network_subnet_id: optional(string)}))}))"
+      }
+    ],
+    "sticky_settings": [
+      {
+        "description": "Defines app settings and connection strings to remain sticky across slots",
+        "nullable": true,
+        "type": "list(object({app_setting_names: optional(list(string)),connection_string_names: optional(list(string))}))"
+      }
+    ],
+    "storage_account": [
+      {
+        "description": "Configures storage account settings, such as name and access key",
+        "nullable": true,
+        "type": "list(object({access_key: string,account_name: string,mount_path: optional(string),name: string,share_name: string,type: string}))"
+      }
+    ],
+    "storage_account_access_key": [
+      {
+        "description": "Defines the access key for the storage account",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_name": [
+      {
+        "description": "Specifies the name of the storage account",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_key_vault_secret_id": [
+      {
+        "description": "Specifies the Key Vault secret ID for the storage account",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_uses_managed_identity": [
+      {
+        "description": "Indicates if the storage account uses a managed identity",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines key-value pairs for resource organization and billing",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeouts for create, read, update, and delete operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "virtual_network_subnet_id": [
+      {
+        "description": "Specifies the ID of the subnet in the virtual network",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "webdeploy_publish_basic_authentication_enabled": [
+      {
+        "description": "Enables or disables basic authentication for WebDeploy publishing",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "zip_deploy_file": [
+      {
+        "description": "Specifies the path to the ZIP file for deployment",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

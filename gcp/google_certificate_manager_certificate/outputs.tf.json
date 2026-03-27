@@ -1,0 +1,20 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Final set of labels applied to the certificate, useful for resource organization",
+            "value": "${google_certificate_manager_certificate.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the certificate, essential for resource referencing",
+            "value": "${google_certificate_manager_certificate.this.id}"
+        },
+        "san_dnsnames": {
+            "description": "List of DNS names included in the certificate's Subject Alternative Names",
+            "value": "${google_certificate_manager_certificate.this.san_dnsnames}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for managing and grouping resources",
+            "value": "${google_certificate_manager_certificate.this.terraform_labels}"
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "arguments": [
+      {
+        "description": "Specifies the input parameters for the BigQuery routine, including their names, data types, and modes (IN/OUT/INOUT).",
+        "nullable": true,
+        "type": "list(object({argument_kind: optional(string),data_type: optional(string),mode: optional(string),name: optional(string)}))"
+      }
+    ],
+    "data_governance_type": [
+      {
+        "description": "Specifies the type of data governance policy applied to the routine, such as access control or classification requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dataset_id": [
+      {
+        "description": "Specifies the ID of the dataset where the routine will be created. Must exist in the specified project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "definition_body": [
+      {
+        "description": "Defines the SQL or JavaScript code that constitutes the logic of the routine; must be a valid function or procedure definition.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the purpose or functionality of the routine, providing context for its use in BigQuery.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "determinism_level": [
+      {
+        "description": "Specifies whether the routine is deterministic, impacting query optimization and caching. Valid values are \"DETERMINISTIC\" or \"NOT_DETERMINISTIC\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "imported_libraries": [
+      {
+        "description": "List of libraries to import into the routine, specified as fully-qualified names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "language": [
+      {
+        "description": "Specifies the programming language used for the routine, such as \"SQL\" or \"JAVASCRIPT\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "remote_function_options": [
+      {
+        "description": "Configuration for remote function invocation, including connection details and required parameters for accessing external services.",
+        "nullable": true,
+        "type": "list(object({connection: optional(string),endpoint: optional(string),max_batching_rows: optional(string),user_defined_context: optional(map(string))}))"
+      }
+    ],
+    "return_table_type": [
+      {
+        "description": "Specifies the output table type for the routine, required for routines that return table data.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "return_type": [
+      {
+        "description": "Specifies the data type of the value returned by the routine; must be a valid BigQuery data type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "routine_id": [
+      {
+        "description": "Unique identifier for the routine, must be within the same dataset and conform to BigQuery naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "routine_type": [
+      {
+        "description": "Defines the type of routine, such as SCALAR_FUNCTION or PROCEDURE, specifying its functional behavior in BigQuery.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "spark_options": [
+      {
+        "description": "Specifies optional Spark configurations for the routine, such as Spark SQL properties or execution parameters.",
+        "nullable": true,
+        "type": "list(object({archive_uris: optional(list(string)),connection: optional(string),container_image: optional(string),file_uris: optional(list(string)),jar_uris: optional(list(string)),main_class: optional(string),main_file_uri: optional(string),properties: optional(map(string)),py_file_uris: optional(list(string)),runtime_version: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for creating, updating, or deleting the BigQuery routine, specifying the maximum amount of time allowed for each operation.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

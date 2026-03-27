@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kendra Query Suggestions Block List"
+  node:
+    label:
+      static: "[Data] Kendra Query Suggestions Block List"
+      template: "[Data] Kendra Query Suggestions Block List"
+    display_type: default
+
+discovery:
+  type: data_aws_kendra_query_suggestions_block_list
+  dnd_supported: false

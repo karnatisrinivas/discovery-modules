@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Apprunner Hosted Zone Id"
+  node:
+    label:
+      static: "[Data] Apprunner Hosted Zone Id"
+      template: "[Data] Apprunner Hosted Zone Id"
+    display_type: default
+
+discovery:
+  type: data_aws_apprunner_hosted_zone_id
+  dnd_supported: false

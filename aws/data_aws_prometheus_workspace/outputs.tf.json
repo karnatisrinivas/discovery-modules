@@ -1,0 +1,36 @@
+{
+    "output": {
+        "alias": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.alias}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.arn}"
+        },
+        "created_date": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.created_date}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.kms_key_arn}"
+        },
+        "prometheus_endpoint": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.prometheus_endpoint}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.status}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspace.this.tags}"
+        }
+    }
+}

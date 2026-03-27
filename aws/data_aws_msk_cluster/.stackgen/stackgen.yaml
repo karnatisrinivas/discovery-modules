@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Msk Cluster"
+  node:
+    label:
+      static: "[Data] Msk Cluster"
+      template: "[Data] Msk Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_msk_cluster
+  dnd_supported: false

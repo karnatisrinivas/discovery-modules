@@ -1,0 +1,72 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kendra index.",
+            "value": "${data.aws_kendra_index.this.arn}"
+        },
+        "capacity_units": {
+            "description": "The capacity units allocated for the Kendra index, including query and storage units.",
+            "value": "${data.aws_kendra_index.this.capacity_units}"
+        },
+        "created_at": {
+            "description": "The timestamp when the Kendra index was created.",
+            "value": "${data.aws_kendra_index.this.created_at}"
+        },
+        "description": {
+            "description": "A description of the Kendra index.",
+            "value": "${data.aws_kendra_index.this.description}"
+        },
+        "document_metadata_configuration_updates": {
+            "description": "Updates to the document metadata configuration for the Kendra index, including relevance and search settings.",
+            "value": "${data.aws_kendra_index.this.document_metadata_configuration_updates}"
+        },
+        "edition": {
+            "description": "The edition of the Kendra index, which can affect capacity and pricing.",
+            "value": "${data.aws_kendra_index.this.edition}"
+        },
+        "error_message": {
+            "description": "Any error messages associated with the Kendra index.",
+            "value": "${data.aws_kendra_index.this.error_message}"
+        },
+        "index_statistics": {
+            "description": "Statistics about the Kendra index, including the number of indexed FAQs and text documents.",
+            "value": "${data.aws_kendra_index.this.index_statistics}"
+        },
+        "name": {
+            "description": "The name of the Kendra index.",
+            "value": "${data.aws_kendra_index.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role used by the Kendra index.",
+            "value": "${data.aws_kendra_index.this.role_arn}"
+        },
+        "server_side_encryption_configuration": {
+            "description": "Configuration for server-side encryption, including the KMS key ID.",
+            "value": "${data.aws_kendra_index.this.server_side_encryption_configuration}"
+        },
+        "status": {
+            "description": "The current status of the Kendra index, such as 'ACTIVE' or 'FAILED'.",
+            "value": "${data.aws_kendra_index.this.status}"
+        },
+        "tags": {
+            "description": "Tags associated with the Kendra index for categorization and management.",
+            "value": "${data.aws_kendra_index.this.tags}"
+        },
+        "updated_at": {
+            "description": "The timestamp when the Kendra index was last updated.",
+            "value": "${data.aws_kendra_index.this.updated_at}"
+        },
+        "user_context_policy": {
+            "description": "The policy governing user context data for the Kendra index.",
+            "value": "${data.aws_kendra_index.this.user_context_policy}"
+        },
+        "user_group_resolution_configuration": {
+            "description": "Configuration for resolving user groups within the Kendra index.",
+            "value": "${data.aws_kendra_index.this.user_group_resolution_configuration}"
+        },
+        "user_token_configurations": {
+            "description": "Configurations for user token types, including JSON and JWT tokens, for authentication and access control.",
+            "value": "${data.aws_kendra_index.this.user_token_configurations}"
+        }
+    }
+}

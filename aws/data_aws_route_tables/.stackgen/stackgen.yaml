@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route Tables"
+  node:
+    label:
+      static: "[Data] Route Tables"
+      template: "[Data] Route Tables"
+    display_type: default
+
+discovery:
+  type: data_aws_route_tables
+  dnd_supported: false
+  references:
+    vpc_id:
+      from: aws_vpc
+      output: id

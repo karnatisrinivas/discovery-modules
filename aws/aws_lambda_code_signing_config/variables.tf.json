@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "allowed_publishers": [
+      {
+        "description": "List of AWS account IDs authorized to sign the Lambda function code.",
+        "nullable": false,
+        "type": "list(object({signing_profile_version_arns: list(string)}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the description of the code signing configuration for the Lambda function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "policies": [
+      {
+        "description": "Defines the code signing policies for the Lambda function, specifying whether code update failures should be allowed or denied.",
+        "nullable": true,
+        "type": "list(object({untrusted_artifact_on_deployment: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the resource, used for organization and management purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

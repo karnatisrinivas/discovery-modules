@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "A unique identifier for the default tags configuration in AWS.",
+            "value": "${data.aws_default_tags.this.id}"
+        },
+        "tags": {
+            "description": "A collection of default tags applied to AWS resources in key-value pairs.",
+            "value": "${data.aws_default_tags.this.tags}"
+        }
+    }
+}

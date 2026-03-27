@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "record_type": [
+      {
+        "description": "Specifies the DNS record type (e.g., A, AAAA, CNAME) for the Route 53 traffic policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "start_endpoint": [
+      {
+        "description": "Defines the initial endpoint or resource where traffic is first directed in the Route 53 traffic policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "start_rule": [
+      {
+        "description": "Indicates the first rule to apply when processing the traffic policy in Route 53.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

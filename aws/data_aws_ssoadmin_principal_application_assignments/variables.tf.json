@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) that uniquely identifies the AWS SSO instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "principal_id": [
+      {
+        "description": "The unique identifier for the principal (user or group) to which the application assignment is associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "principal_type": [
+      {
+        "description": "The type of principal (e.g., 'USER' or 'GROUP') for which the application assignment is being configured.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Virtual Service"
+  node:
+    label:
+      static: "[Data] Appmesh Virtual Service"
+      template: "[Data] Appmesh Virtual Service"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_virtual_service
+  dnd_supported: false

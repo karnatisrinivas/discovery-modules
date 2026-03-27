@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] SSH Public Key"
+  node:
+    label:
+      static: "[Data] SSH Public Key"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_ssh_public_key
+  dnd_supported: false

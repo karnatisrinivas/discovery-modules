@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Msk Vpc Connection"
+  node:
+    label:
+      static: "[Data] Msk Vpc Connection"
+      template: "[Data] Msk Vpc Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_msk_vpc_connection
+  dnd_supported: false

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudwatch Log Resource Policy
+  node:
+    label:
+      static: Cloudwatch Log Resource Policy
+      template: ${policy_name}
+    display_type: default
+
+discovery:
+  type: aws_cloudwatch_log_resource_policy
+  dnd_supported: false
+  references:
+    policy_document:
+      from: data_aws_iam_policy_document
+      output: json

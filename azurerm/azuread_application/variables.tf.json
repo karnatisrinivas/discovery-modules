@@ -1,0 +1,186 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "type": "string",
+        "description": "The display name for the application"
+      }
+    ],
+    "identifier_uris": [
+      {
+        "type": "list(string)",
+        "description": "A list of user-defined URI(s) that uniquely identify an application within its Azure AD tenant",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "owners": [
+      {
+        "type": "list(string)",
+        "description": "A list of object IDs of principals that will be granted ownership of the application",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "sign_in_audience": [
+      {
+        "type": "string",
+        "description": "The Microsoft account types that are supported for the current application",
+        "default": "AzureADMyOrg",
+        "nullable": true
+      }
+    ],
+    "api": [
+      {
+        "type": "list(object({known_client_applications: list(string), mapped_claims_enabled: bool, requested_access_token_version: number, oauth2_permission_scope: list(object({admin_consent_description: string, admin_consent_display_name: string, id: string, enabled: bool, type: string, user_consent_description: string, user_consent_display_name: string}))}))",
+        "description": "API configuration for the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "app_role": [
+      {
+        "type": "list(object({allowed_member_types:list(string),description:string,display_name:string,enabled:bool,id:string,value:string}))",
+        "description": "List of app roles to declare for the application",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "feature_tags": [
+      {
+        "type": "list(object({custom_single_sign_on: bool, enterpise: bool, gallery: bool, hide: bool}))",
+        "description": "Feature tags configuration for the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "optional_claims": [
+      {
+        "type": "list(object({access_token: list(object({additional_properties: string, essential: bool, name: string, source: string})), id_token: list(object({additional_properties: string, essential: bool, name: string, source: string})), saml2_token: list(object({additional_properties: string, essential: bool, name: string, source: string}))}))",
+        "description": "Optional claims configuration for the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "public_client": [
+      {
+        "type": "list(object({redirect_uris: list(string)}))",
+        "description": "Public client configuration for the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "required_resource_access": [
+      {
+        "type": "list(object({resource_app_id:string,resource_access:list(object({id:string,type:string}))}))",
+        "description": "List of required resource access for the application",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "single_page_application": [
+      {
+        "type": "list(object({redirect_uris: list(string)}))",
+        "description": "Single page application configuration",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "web": [
+      {
+        "type": "list(object({homepage_url: string, logout_url: string, redirect_uris: list(string), implicit_grant: object({access_token_issuance_enabled: bool, id_token_issuance_enabled: bool})}))",
+        "description": "Web configuration for the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "group_membership_claims": [
+      {
+        "type": "list(string)",
+        "description": "Configures the groups claim issued in a user or OAuth 2.0 access token",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "fallback_public_client_enabled": [
+      {
+        "type": "bool",
+        "description": "Specifies whether the application is fallen back to public client",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "logo_image": [
+      {
+        "type": "string",
+        "description": "Base64 encoded logo image",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "marketing_url": [
+      {
+        "type": "string",
+        "description": "URL of the application's marketing page",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "notes": [
+      {
+        "type": "string",
+        "description": "User-specified notes relevant for the management of the application",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "privacy_statement_url": [
+      {
+        "type": "string",
+        "description": "URL of the application's privacy statement",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "service_management_reference": [
+      {
+        "type": "string",
+        "description": "References application manager in a service management tool",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "support_url": [
+      {
+        "type": "string",
+        "description": "URL of the application's support page",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "list(string)",
+        "description": "A list of tags to apply to the application",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "template_id": [
+      {
+        "type": "string",
+        "description": "Unique ID for a templated application in the Azure AD App Gallery",
+        "default": null,
+        "nullable": true
+      }
+    ],
+    "terms_of_service_url": [
+      {
+        "type": "string",
+        "description": "URL of the application's terms of service statement",
+        "default": null,
+        "nullable": true
+      }
+    ]
+  }
+}

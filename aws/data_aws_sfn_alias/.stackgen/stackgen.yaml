@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sfn Alias"
+  node:
+    label:
+      static: "[Data] Sfn Alias"
+      template: "[Data] Sfn Alias"
+    display_type: default
+
+discovery:
+  type: data_aws_sfn_alias
+  dnd_supported: false

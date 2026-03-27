@@ -1,0 +1,36 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Role Policy
+  node:
+    label:
+      static: IAM Role Policy
+      template: ${name}
+    display_type: default
+
+variables:
+  policy:
+    type: string
+    ui_control: json
+    description: JSON formatted inline policy document
+  role_type:
+    description: The type of the IAM role to attach to the policy
+    type: string
+    options: 
+      - custom
+    ui_control: select
+
+variable_groups:
+- label: Policy Configuration
+  variables:
+    - role_type
+    - role
+
+discovery:
+  type: aws_iam_role_policy
+  dnd_supported: false
+  references:
+    role:
+      from: aws_iam_role
+      output: name

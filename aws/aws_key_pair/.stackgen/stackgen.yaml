@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Key Pair
+  node:
+    label:
+      static: Key Pair
+      template: Key Pair
+    display_type: default
+
+discovery:
+  type: aws_key_pair
+  dnd_supported: false
+  data_source: data_aws_key_pair

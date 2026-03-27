@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "engine": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_additional_language_codes": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "language_code": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

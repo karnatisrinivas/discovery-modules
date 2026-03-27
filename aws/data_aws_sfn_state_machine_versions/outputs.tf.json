@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Step Functions state machine.",
+            "value": "${data.aws_sfn_state_machine_versions.this.id}"
+        },
+        "statemachine_versions": {
+            "description": "A list of version identifiers for the AWS Step Functions state machine.",
+            "value": "${data.aws_sfn_state_machine_versions.this.statemachine_versions}"
+        }
+    }
+}

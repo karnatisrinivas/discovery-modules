@@ -1,0 +1,256 @@
+{
+  "variable": {
+    "auto_pause_delay_in_minutes": [
+      {
+        "description": "Specifies the delay in minutes before automatically pausing the database when no activity is detected; must be between 60 and 1,440.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "collation": [
+      {
+        "description": "Specifies the database collation, which determines the rules for how data is sorted and compared. Must match supported SQL Server collations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "create_mode": [
+      {
+        "description": "Specifies the creation mode of the SQL database, such as 'Default', 'Copy', 'Secondary', or 'PointInTimeRestore'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "creation_source_database_id": [
+      {
+        "description": "Specifies the ID of the source database for database creation, required for creating a database from an existing database or a restore point.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "elastic_pool_id": [
+      {
+        "description": "Specifies the ID of the Elastic Pool to associate the database with. Required if the database is part of an Elastic Pool.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enclave_type": [
+      {
+        "description": "Specifies the type of enclave to enable for the SQL database. Must be either \"None\" or \"Virtualized\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "geo_backup_enabled": [
+      {
+        "description": "Enables or disables geo-redundant backups for the database. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Specifies the managed identity to associate with the SQL database for authentication purposes.",
+        "nullable": true,
+        "type": "list(object({identity_ids: list(string),type: string}))"
+      }
+    ],
+    "import": [
+      {
+        "description": "Specifies whether the database should be created by importing a BACPAC file. Requires the source URI and storage account credentials.",
+        "nullable": true,
+        "type": "list(object({administrator_login: string,administrator_login_password: string,authentication_type: string,storage_account_id: optional(string),storage_key: string,storage_key_type: string,storage_uri: string}))"
+      }
+    ],
+    "ledger_enabled": [
+      {
+        "description": "Specifies whether the database should have ledger functionality enabled, ensuring tamper-evidence for transactions. Must be set to `true` for ledger-enabled databases.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "license_type": [
+      {
+        "description": "Specifies the licensing model for the SQL database, either 'LicenseIncluded' or 'BasePrice'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "long_term_retention_policy": [
+      {
+        "description": "Defines the retention policy for long-term backups, specifying the duration and storage location for retaining database backups.",
+        "nullable": true,
+        "type": "list(object({immutable_backups_enabled: optional(bool),monthly_retention: optional(string),week_of_year: optional(number),weekly_retention: optional(string),yearly_retention: optional(string)}))"
+      }
+    ],
+    "maintenance_configuration_name": [
+      {
+        "description": "Specifies the name of the maintenance configuration to associate with the SQL database. Must be an existing configuration in the same region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "max_size_gb": [
+      {
+        "description": "Defines the maximum storage size for the database in gigabytes. Must be within the limits of the selected service tier.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "min_capacity": [
+      {
+        "description": "Defines the minimum compute capacity (in DTUs or vCores) for the database, ensuring baseline performance.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the SQL database, must be unique within the SQL server and follow Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "read_replica_count": [
+      {
+        "description": "Specifies the number of read replicas to be created for the database. Must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "read_scale": [
+      {
+        "description": "Enables or disables read-scale functionality for the database, allowing for read-only replicas; valid values are `Enabled` or `Disabled`.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "recover_database_id": [
+      {
+        "description": "ID of the source database to recover from, required when creating a database using the recovery feature.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "recovery_point_id": [
+      {
+        "description": "Specifies the unique identifier of the recovery point to restore the database from.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "restore_dropped_database_id": [
+      {
+        "description": "Specifies the ID of the dropped database to restore. Must be used with the restore point in time parameter.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "restore_long_term_retention_backup_id": [
+      {
+        "description": "Specifies the ID of the long-term retention backup to restore from. Must be a valid backup ID in the same region and subscription.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "restore_point_in_time": [
+      {
+        "description": "Specifies the point in time (ISO8601 format) to restore the database to, applicable only for point-in-time restore operations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sample_name": [
+      {
+        "description": "Specifies the name of the SQL database; must be unique within the SQL server and adhere to Azure naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "secondary_type": [
+      {
+        "description": "Specifies the replication type for the secondary database; valid options are \"Geo\", \"Named\", or \"None\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "server_id": [
+      {
+        "description": "Specifies the ID of the existing SQL server to host the database.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "short_term_retention_policy": [
+      {
+        "description": "Specifies the retention period for short-term backups, measured in days. Must be between 7 and 35 days.",
+        "nullable": true,
+        "type": "list(object({backup_interval_in_hours: optional(number),retention_days: number}))"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "\"Specifies the SKU name for the SQL database, determining the performance level and pricing tier.\"",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_type": [
+      {
+        "description": "Specifies the storage account type for the database, determining performance and cost characteristics. Possible values include 'Standard' or 'Premium'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs used to categorize and organize resources for management and billing purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "threat_detection_policy": [
+      {
+        "description": "Defines the threat detection policy for the SQL database, specifying security alert configurations such as email recipients, retention days, and enabled alert types.",
+        "nullable": true,
+        "type": "list(object({disabled_alerts: optional(list(string)),email_account_admins: optional(string),email_addresses: optional(list(string)),retention_days: optional(number),state: optional(string),storage_account_access_key: optional(string),storage_endpoint: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time durations for create, update, and delete operations, allowing customization of operation timeouts.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "transparent_data_encryption_enabled": [
+      {
+        "description": "Determines whether transparent data encryption is enabled for the SQL database; must be either true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "transparent_data_encryption_key_automatic_rotation_enabled": [
+      {
+        "description": "Enables automatic rotation of the transparent data encryption key; must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "transparent_data_encryption_key_vault_key_id": [
+      {
+        "description": "Specifies the Azure Key Vault key ID to use for transparent data encryption, requiring the key to be in the same region as the database.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "zone_redundant": [
+      {
+        "description": "Specifies whether the database should be zone-redundant. Requires the database to be in a supported region and service tier.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

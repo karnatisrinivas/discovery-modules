@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the custom routing accelerator.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.arn}"
+        },
+        "attributes": {
+            "description": "The attributes related to flow logs, including whether they are enabled, the S3 bucket storing them, and the prefix used.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.attributes}"
+        },
+        "dns_name": {
+            "description": "The DNS name associated with the custom routing accelerator.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.dns_name}"
+        },
+        "enabled": {
+            "description": "Indicates whether the custom routing accelerator is enabled.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.enabled}"
+        },
+        "hosted_zone_id": {
+            "description": "The ID of the hosted zone that is associated with the accelerator.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.hosted_zone_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the custom routing accelerator.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.id}"
+        },
+        "ip_address_type": {
+            "description": "The type of IP addresses used by the accelerator, such as IPv4 or IPv6.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.ip_address_type}"
+        },
+        "ip_sets": {
+            "description": "A list of IP sets associated with the accelerator, including IP addresses and their family type.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.ip_sets}"
+        },
+        "name": {
+            "description": "The name given to the custom routing accelerator.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.name}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the custom routing accelerator for organization and identification.",
+            "value": "${data.aws_globalaccelerator_custom_routing_accelerator.this.tags}"
+        }
+    }
+}

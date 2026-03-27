@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Instances"
+  node:
+    label:
+      static: "[Data] Instances"
+      template: "[Data] Instances"
+    display_type: default
+
+discovery:
+  type: data_aws_instances
+  dnd_supported: false

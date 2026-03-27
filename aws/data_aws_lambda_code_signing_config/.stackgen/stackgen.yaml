@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lambda Code Signing Config"
+  node:
+    label:
+      static: "[Data] Lambda Code Signing Config"
+      template: "[Data] Lambda Code Signing Config"
+    display_type: default
+
+discovery:
+  type: data_aws_lambda_code_signing_config
+  dnd_supported: false

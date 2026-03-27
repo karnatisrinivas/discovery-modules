@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "database_dialect": [
+      {
+        "description": "Specifies the SQL dialect for the Spanner database. Options include GOOGLE_STANDARD_SQL or POSTGRESQL.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ddl": [
+      {
+        "description": "Defines the Data Definition Language (DDL) statements for the database schema, specifying tables, indexes, and other schema-related elements. Must be valid Spanner DDL syntax.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "deletion_protection": [
+      {
+        "description": "Indicates whether deletion protection is enabled for the database, preventing accidental deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_drop_protection": [
+      {
+        "description": "Indicates whether the database is protected from being dropped; setting this to true prevents accidental deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "encryption_config": [
+      {
+        "description": "Specifies the encryption configuration for the Spanner database, including the key to use for customer-managed encryption. Must match the required format and permissions for Cloud KMS keys.",
+        "nullable": true,
+        "type": "list(object({kms_key_name: optional(string),kms_key_names: optional(list(string))}))"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Spanner instance where the database will be created; must already exist in the same project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Spanner database, adhering to the naming requirements of Google Cloud Spanner.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for creating, updating, or deleting the Spanner database, ensuring operations complete within the specified time.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "version_retention_period": [
+      {
+        "description": "Specifies the duration for retaining a version of a Cloud Spanner database schema, must be a valid duration string (e.g., \"1h\", \"7d\") and between 1 hour and 7 days.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

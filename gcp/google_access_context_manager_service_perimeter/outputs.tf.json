@@ -1,0 +1,20 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the service perimeter was created",
+            "value": "${google_access_context_manager_service_perimeter.this.create_time}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the service perimeter in configurations",
+            "value": "${google_access_context_manager_service_perimeter.this.id}"
+        },
+        "name": {
+            "description": "The name of the service perimeter",
+            "value": "${google_access_context_manager_service_perimeter.this.name}"
+        },
+        "update_time": {
+            "description": "Timestamp indicating the last update to the service perimeter",
+            "value": "${google_access_context_manager_service_perimeter.this.update_time}"
+        }
+    }
+}

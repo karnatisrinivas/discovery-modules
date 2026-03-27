@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Organization Iam Binding
+  node:
+    label:
+      static: Organization Iam Binding
+      template: ${org_id}
+    display_type: default
+
+discovery:
+  type: google_organization_iam_binding
+  dnd_supported: false
+  references:
+    org_id:
+      from: data_google_organization
+      output: org_id

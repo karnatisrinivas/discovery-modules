@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "vpc_id": [
+            {
+                "type": "string",
+                "description": "The VPC ID to create in.",
+                "nullable": false
+            }
+        ],
+        "internet_gateway_id": [
+            {
+                "type": "string",
+                "description": "The ID of the internet gateway.",
+                "nullable": false
+            }
+        ]
+    }
+}

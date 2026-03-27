@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] LB Hosted Zone Id"
+  node:
+    label:
+      static: "[Data] LB Hosted Zone Id"
+      template: "[Data] LB Hosted Zone Id"
+    display_type: default
+
+variables:
+  load_balancer_type:
+    description: "Specifies the type of load balancer to create, such as 'application' or 'network'."
+    type: string
+    options: 
+      - application
+      - network
+    ui_control: select
+
+discovery:
+  type: data_aws_lb_hosted_zone_id
+  dnd_supported: false

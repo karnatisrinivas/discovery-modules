@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_connection.this.arn}"
+        },
+        "authorization_type": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_connection.this.authorization_type}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_connection.this.id}"
+        },
+        "secret_arn": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_connection.this.secret_arn}"
+        }
+    }
+}

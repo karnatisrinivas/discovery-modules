@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "domain": [
+      {
+        "description": "The domain name for which the SES domain identity will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

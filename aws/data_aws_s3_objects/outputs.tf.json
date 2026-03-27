@@ -1,0 +1,24 @@
+{
+    "output": {
+        "common_prefixes": {
+            "description": "A list of common prefixes (like folder paths) found in the specified S3 bucket.",
+            "value": "${data.aws_s3_objects.this.common_prefixes}"
+        },
+        "id": {
+            "description": "A unique identifier for the set of S3 objects being referenced.",
+            "value": "${data.aws_s3_objects.this.id}"
+        },
+        "keys": {
+            "description": "A list of keys (object names) within the specified S3 bucket.",
+            "value": "${data.aws_s3_objects.this.keys}"
+        },
+        "owners": {
+            "description": "A list of owners associated with the S3 objects, indicating who owns each object.",
+            "value": "${data.aws_s3_objects.this.owners}"
+        },
+        "request_charged": {
+            "description": "Indicates if the request to access the S3 objects was charged, typically 'requester' if the requester pays for the request.",
+            "value": "${data.aws_s3_objects.this.request_charged}"
+        }
+    }
+}

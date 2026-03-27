@@ -1,0 +1,34 @@
+{
+  "variable": {
+    "service_principal_id": [
+      {
+        "description": "The unique identifier of the Azure AD service principal for which the password is being managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "display_name": [{
+      "type": "string",
+      "description": "A display name for the password",
+      "nullable": true
+    }],
+    "end_date": [{
+      "type": "string",
+      "description": "The end date until which the password is valid",
+      "default": null,
+      "nullable": true
+    }],
+    "start_date": [{
+      "type": "string",
+      "description": "The start date from which the password is valid",
+      "default": null,
+      "nullable": true
+    }],
+    "rotate_when_changed": [{
+      "type": "map(string)",
+      "description": "Map of arbitrary key/value pairs that, when changed, will trigger rotation of the password",
+      "default": {},
+      "nullable": true
+    }]
+  }
+}

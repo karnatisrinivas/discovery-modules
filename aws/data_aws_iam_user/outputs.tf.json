@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) assigned to the IAM user.",
+            "value": "${data.aws_iam_user.this.arn}"
+        },
+        "id": {
+            "description": "The unique ID assigned to the IAM user.",
+            "value": "${data.aws_iam_user.this.id}"
+        },
+        "path": {
+            "description": "The path to the IAM user in the AWS directory structure.",
+            "value": "${data.aws_iam_user.this.path}"
+        },
+        "permissions_boundary": {
+            "description": "The ARN of the policy that is used to set the permissions boundary for the IAM user.",
+            "value": "${data.aws_iam_user.this.permissions_boundary}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the IAM user.",
+            "value": "${data.aws_iam_user.this.tags}"
+        },
+        "user_id": {
+            "description": "The stable and unique string identifying the IAM user.",
+            "value": "${data.aws_iam_user.this.user_id}"
+        }
+    }
+}

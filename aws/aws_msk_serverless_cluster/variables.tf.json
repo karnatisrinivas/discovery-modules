@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "client_authentication": [
+      {
+        "description": "Defines the client authentication method for the MSK Serverless cluster, specifying how clients connect securely.",
+        "nullable": false,
+        "type": "list(object({sasl: list(object({iam: list(object({enabled: bool}))}))}))"
+      }
+    ],
+    "cluster_name": [
+      {
+        "description": "Name of the MSK Serverless cluster. Must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the cluster for categorization and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout durations for create, update, and delete operations on the MSK serverless cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "vpc_config": [
+      {
+        "description": "Configuration specifying the subnets and security groups for the cluster's VPC connectivity. Must include at least two subnets in different availability zones.",
+        "nullable": false,
+        "type": "list(object({security_group_ids: optional(list(string)),subnet_ids: list(string)}))"
+      }
+    ]
+  }
+}

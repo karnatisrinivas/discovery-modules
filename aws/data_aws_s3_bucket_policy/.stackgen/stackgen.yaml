@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] S3 Bucket Policy"
+  node:
+    label:
+      static: "[Data] S3 Bucket Policy"
+      template: "[Data] S3 Bucket Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_s3_bucket_policy
+  dnd_supported: false

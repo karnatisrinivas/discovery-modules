@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Rds Reserved Instance Offering"
+  node:
+    label:
+      static: "[Data] Rds Reserved Instance Offering"
+      template: "[Data] Rds Reserved Instance Offering"
+    display_type: default
+
+discovery:
+  type: data_aws_rds_reserved_instance_offering
+  dnd_supported: false

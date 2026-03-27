@@ -1,0 +1,35 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Big Query Dataset
+  node:
+    label:
+      static: Big Query Dataset
+      template: ${dataset_id}
+    display_type: default
+
+variables:
+  access:
+    description: Defines access controls for the resource, specifying roles and permissions for users, groups, or domains, along with optional conditions and targeted datasets, routines, or views.
+    attributes: 
+      role: 
+        description: The role granted by this access configuration.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+        label: Role
+      user_by_email: 
+        ui_control: text
+        label: User By Email
+        description: An email address of a user to grant access to.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+
+discovery:
+  type: google_bigquery_dataset
+  dnd_supported: false

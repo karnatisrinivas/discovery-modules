@@ -1,0 +1,68 @@
+{
+    "output": {
+        "date_created": {
+            "description": "The date when the infrastructure configuration was created.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.date_created}"
+        },
+        "date_updated": {
+            "description": "The date when the infrastructure configuration was last updated.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.date_updated}"
+        },
+        "description": {
+            "description": "A brief description of the infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.id}"
+        },
+        "instance_metadata_options": {
+            "description": "Options for configuring instance metadata, such as HTTP tokens and hop limit.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.instance_metadata_options}"
+        },
+        "instance_profile_name": {
+            "description": "The name of the instance profile associated with the configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.instance_profile_name}"
+        },
+        "instance_types": {
+            "description": "The set of instance types that can be used with this infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.instance_types}"
+        },
+        "key_pair": {
+            "description": "The name of the key pair used for SSH access to the instance.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.key_pair}"
+        },
+        "logging": {
+            "description": "Configuration for logging, including the S3 bucket and key prefix for logs.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.logging}"
+        },
+        "name": {
+            "description": "The name of the infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.name}"
+        },
+        "resource_tags": {
+            "description": "A map of tags to apply to resources created with this infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.resource_tags}"
+        },
+        "security_group_ids": {
+            "description": "The set of security group IDs associated with the configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.security_group_ids}"
+        },
+        "sns_topic_arn": {
+            "description": "The ARN of the SNS topic for notifications related to the infrastructure configuration.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.sns_topic_arn}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet in which to launch the instance.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.subnet_id}"
+        },
+        "tags": {
+            "description": "A map of tags to apply to the infrastructure configuration itself.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.tags}"
+        },
+        "terminate_instance_on_failure": {
+            "description": "Indicates whether to terminate the instance if image creation fails.",
+            "value": "${data.aws_imagebuilder_infrastructure_configuration.this.terminate_instance_on_failure}"
+        }
+    }
+}

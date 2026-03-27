@@ -1,0 +1,37 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of the elastic cloud elasticsearch",
+        "nullable": false
+      }
+    ],
+    "sku_name": [
+      {
+        "type": "string",
+        "description": "The name of the elastic cloud elasticsearch sku",
+        "nullable": false
+      }
+    ],
+    "elastic_cloud_email_address": [
+      {
+        "type": "string",
+        "description": "The email address of the elastic cloud account",
+        "nullable": false
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

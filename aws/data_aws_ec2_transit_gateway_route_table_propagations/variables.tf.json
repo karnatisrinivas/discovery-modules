@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "transit_gateway_route_table_id": [
+      {
+        "description": "The ID of the transit gateway route table to which the route propagation should be associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

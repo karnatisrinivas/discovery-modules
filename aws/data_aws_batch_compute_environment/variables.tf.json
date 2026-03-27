@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "compute_environment_name": [
+      {
+        "description": "The name assigned to the AWS Batch compute environment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

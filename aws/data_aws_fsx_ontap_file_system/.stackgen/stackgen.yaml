@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Fsx Ontap File System"
+  node:
+    label:
+      static: "[Data] Fsx Ontap File System"
+      template: "[Data] Fsx Ontap File System"
+    display_type: default
+
+discovery:
+  type: data_aws_fsx_ontap_file_system
+  dnd_supported: false

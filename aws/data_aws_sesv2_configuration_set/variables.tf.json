@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "configuration_set_name": [
+      {
+        "description": "The name of the SES configuration set to be created or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

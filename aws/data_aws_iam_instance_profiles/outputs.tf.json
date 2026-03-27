@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the IAM instance profiles.",
+            "value": "${data.aws_iam_instance_profiles.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the IAM instance profiles data source.",
+            "value": "${data.aws_iam_instance_profiles.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the IAM instance profiles.",
+            "value": "${data.aws_iam_instance_profiles.this.names}"
+        },
+        "paths": {
+            "description": "A set of paths for the IAM instance profiles.",
+            "value": "${data.aws_iam_instance_profiles.this.paths}"
+        }
+    }
+}

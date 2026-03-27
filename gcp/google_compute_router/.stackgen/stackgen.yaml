@@ -1,0 +1,63 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloud Router
+  node:
+    label:
+      static: Cloud Router
+      template: ${name}
+    display_type: default
+
+variables:
+  encrypted_interconnect_router:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Indicates if a router is dedicated for use with encrypted VLAN attachments
+  bgp:
+    description: BGP information specific to this router.
+    attributes: 
+      asn: 
+        label: ASN
+        description: "Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN."
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+      advertise_mode: 
+        label: Advertise Mode
+        description: "User-specified flag to indicate which mode to use for advertisement. Default value is `Default`"
+        type: select
+        options: 
+          - DEFAULT
+          - CUSTOM
+        ui_control: select
+      keepalive_interval: 
+        label: Keepalive Interval
+        description: "The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20."
+        validation: 
+          dataType: number
+          required: false
+        type: number
+      advertised_groups: 
+        label: Advertised Groups
+        description: "User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified IP ranges."
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - ALL_SUBNETS
+        ui_control: select
+
+discovery:
+  type: google_compute_router
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Application Load Balancer
+  node:
+    label:
+      static: Application Load Balancer
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_alb
+  dnd_supported: false
+  data_source: data_aws_alb
+  references:
+    security_groups:
+      from: aws_security_group
+      output: id

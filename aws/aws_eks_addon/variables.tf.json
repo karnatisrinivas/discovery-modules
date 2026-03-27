@@ -1,0 +1,84 @@
+{
+    "variable": {
+        "cluster_name": [
+            {
+                "type": "string",
+                "description": "The name of the EKS cluster where the add-on will be installed.",
+                "nullable": false
+            }
+        ],
+        "addon_name": [
+            {
+                "type": "string",
+                "description": "The name of the EKS add-on (e.g., 'coredns', 'vpc-cni').",
+                "nullable": false
+            }
+        ],
+        "addon_version": [
+            {
+                "type": "string",
+                "description": "The version of the EKS add-on to install. Leave blank to use the latest version.",
+                "default": "",
+                "nullable": true
+            }
+        ],
+        "resolve_conflicts_on_create": [
+            {
+                "type": "string",
+                "description": "What to do if conflicts arise during add-on creation. Options: 'OVERWRITE' or 'NONE'.",
+                "default": "OVERWRITE",
+                "nullable": true
+            }
+        ],
+        "resolve_conflicts_on_update": [
+            {
+                "description": "Specifies the strategy for resolving conflicts when updating EKS add-ons, such as replacing or preserving existing resources.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "service_account_role_arn": [
+            {
+                "type": "string",
+                "description": "The IAM role ARN for the service account, if required by the add-on.",
+                "default": "",
+                "nullable": true
+            }
+        ],
+        "configuration_values": [
+            {
+                "description": "Specifies custom configuration values for the EKS addon; must be in JSON format.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "pod_identity_association": [
+            {
+                "description": "Defines the association between IAM roles and Kubernetes service accounts for the EKS addon, ensuring proper pod identity management.",
+                "nullable": true,
+                "type": "list(object({role_arn: string,service_account: string}))"
+            }
+        ],
+        "preserve": [
+            {
+                "description": "Determines whether the EKS addon should be preserved after deletion of the cluster, requiring a boolean value.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A mapping of tags to assign to the add-on.",
+                "nullable": true
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "Defines the duration to wait for various operations related to the EKS addon, such as creation, update, and deletion. Specify timeouts in the format \"create\", \"update\", and \"delete\", with values in seconds or using the Terraform time syntax.",
+                "nullable": true,
+                "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+            }
+        ]
+    }
+}

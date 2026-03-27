@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The id of the mail from",
+            "value": "${aws_ses_domain_mail_from.this.id}"
+        }
+    }
+}

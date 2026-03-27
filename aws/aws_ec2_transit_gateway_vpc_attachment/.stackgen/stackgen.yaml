@@ -1,0 +1,25 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ec2 Transit Gateway Vpc Attachment
+  node:
+    label:
+      static: Ec2 Transit Gateway Vpc Attachment
+      template: ${transit_gateway_id}
+    display_type: default
+
+discovery:
+  type: aws_ec2_transit_gateway_vpc_attachment
+  dnd_supported: false
+  data_source: data_aws_ec2_transit_gateway_vpc_attachment
+  references:
+    vpc_id:
+      from: aws_vpc
+      output: id
+    transit_gateway_id:
+      from: aws_ec2_transit_gateway
+      output: id
+    subnet_ids:
+      from: aws_subnet
+      output: id

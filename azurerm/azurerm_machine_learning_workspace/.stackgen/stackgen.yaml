@@ -1,0 +1,107 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Machine Learning Workspace
+  node:
+    label:
+      static: Machine Learning Workspace
+      template: ${name}
+    display_type: default
+
+variables:
+  sku_name:
+    options: 
+      - Free
+      - Basic
+      - Standard
+      - Premium
+    ui_control: select
+    description: The SKU name for the workspace, representing the pricing tier.
+    type: string
+  managed_network:
+    description: An encryption block
+    attributes: 
+      isolation_mode: 
+        label: Isolation Mode
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - Disabled
+          - AllowOnlyApprovedOutbound
+          - AllowInternetOutbound
+        ui_control: select
+  serverless_compute:
+    description: An serverless_compute block
+    attributes: 
+      public_ip_enabled: 
+        ui_control: select
+        label: Public IP Enabled
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+  high_business_impact:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Specifies whether the workspace has a high business impact. This is a boolean value.
+  public_network_access_enabled:
+    description: Enable public access when this Machine Learning Workspace is behind VNet.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  v1_legacy_mode_enabled:
+    description: Indicates if the workspace should operate in legacy mode, which might support older functionality.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  identity:
+    attributes: 
+      type: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - SystemAssigned
+          - UserAssigned
+          - SystemAssigned, UserAssigned
+        ui_control: select
+        label: Type
+    description: An identity block
+  kind:
+    description: The kind of the machine learning workspace, which can indicate a specific configuration or purpose.
+    type: string
+    options: 
+      - Default
+      - FeatureStore
+    ui_control: select
+
+discovery:
+  type: azurerm_machine_learning_workspace
+  dnd_supported: false
+  references:
+    application_insights_id:
+      from: azurerm_application_insights
+      output: id
+    container_registry_id:
+      from: azurerm_container_registry
+      output: id
+    key_vault_id:
+      from: azurerm_key_vault
+      output: id
+    storage_account_id:
+      from: azurerm_storage_account
+      output: id

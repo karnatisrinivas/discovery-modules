@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "address_type": [
+      {
+        "description": "Specifies whether the IP address is internal or external.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "An optional description of the IP address resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_version": [
+      {
+        "description": "The IP version to be used, either IPv4 or IPv6.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipv6_endpoint_type": [
+      {
+        "description": "Specifies the type of IPv6 access configuration, e.g., 'EXTERNAL'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "A set of key-value pairs to organize and categorize the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "A unique name for the IP address resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "The network to which the IP address belongs, applicable for internal IPs.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

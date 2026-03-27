@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user": [
+      {
+        "description": "Specifies the IAM user for whom the access key will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

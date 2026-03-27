@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "default_baseline": [
+      {
+        "description": "Indicates whether this patch baseline should be the default baseline for the selected operating system.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "A prefix to be added to the name of the patch baseline, making it easier to identify.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "operating_system": [
+      {
+        "description": "Specifies the operating system type that the patch baseline applies to, such as 'WINDOWS', 'AMAZON_LINUX', etc.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "owner": [
+      {
+        "description": "The owner of the patch baseline, typically specifying who created or manages it, such as 'AWS' or 'Self'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

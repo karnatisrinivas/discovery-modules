@@ -1,0 +1,56 @@
+{
+    "output": {
+        "change_description": {
+            "description": "A summary of changes made to the component.",
+            "value": "${data.aws_imagebuilder_component.this.change_description}"
+        },
+        "data": {
+            "description": "The raw data or content of the component.",
+            "value": "${data.aws_imagebuilder_component.this.data}"
+        },
+        "date_created": {
+            "description": "The date and time when the component was created.",
+            "value": "${data.aws_imagebuilder_component.this.date_created}"
+        },
+        "description": {
+            "description": "A detailed explanation of what the component does.",
+            "value": "${data.aws_imagebuilder_component.this.description}"
+        },
+        "encrypted": {
+            "description": "Indicates if the component is encrypted.",
+            "value": "${data.aws_imagebuilder_component.this.encrypted}"
+        },
+        "id": {
+            "description": "The unique identifier of the component.",
+            "value": "${data.aws_imagebuilder_component.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the KMS key used for encryption, if applicable.",
+            "value": "${data.aws_imagebuilder_component.this.kms_key_id}"
+        },
+        "name": {
+            "description": "The name of the component.",
+            "value": "${data.aws_imagebuilder_component.this.name}"
+        },
+        "owner": {
+            "description": "The AWS account ID of the component owner.",
+            "value": "${data.aws_imagebuilder_component.this.owner}"
+        },
+        "platform": {
+            "description": "The platform for which the component is intended, such as Windows or Linux.",
+            "value": "${data.aws_imagebuilder_component.this.platform}"
+        },
+        "supported_os_versions": {
+            "description": "The operating system versions that the component supports.",
+            "value": "${data.aws_imagebuilder_component.this.supported_os_versions}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the component.",
+            "value": "${data.aws_imagebuilder_component.this.tags}"
+        },
+        "version": {
+            "description": "The version number of the component.",
+            "value": "${data.aws_imagebuilder_component.this.version}"
+        }
+    }
+}

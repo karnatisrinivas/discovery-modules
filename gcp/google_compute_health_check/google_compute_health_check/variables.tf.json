@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "check_interval_sec": [
+      {
+        "description": "Time interval, in seconds, between consecutive health checks; must be between 1 and 300 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a description for the health check, used for identifying the resource in Google Cloud. Maximum length is 63 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "grpc_health_check": [
+      {
+        "description": "Configuration for a gRPC health check, including parameters like service name and port, used for monitoring the health of backend services.",
+        "nullable": true,
+        "type": "list(object({grpc_service_name: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string)}))"
+      }
+    ],
+    "healthy_threshold": [
+      {
+        "description": "Number of consecutive successful health check responses required before marking the instance as healthy.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "http2_health_check": [
+      {
+        "description": "Defines the configuration for an HTTP/2 health check, including request path, port specification, and response timeout settings.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "http_health_check": [
+      {
+        "description": "Defines the configuration for an HTTP health check, including parameters such as request path, port, and response timeout, to monitor the health of backend services.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "https_health_check": [
+      {
+        "description": "Configuration for an HTTPS health check, including criteria for determining the health status of a resource.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Specifies whether logging is enabled for the health check, including configuration settings.",
+        "nullable": true,
+        "type": "list(object({enable: optional(bool)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the health check resource, which must be unique within the project and comply with Google Cloud's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_regions": [
+      {
+        "description": "Defines the regions to which the health check request should be sent; must match regions where the backend service is deployed.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ssl_health_check": [
+      {
+        "description": "Defines the configuration for SSL health checks, including settings like port, request, and response expectations for validating the health of backend services.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "tcp_health_check": [
+      {
+        "description": "Defines the configuration for TCP health checks, specifying how the health check monitors the availability and responsiveness of a target service using TCP.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "Duration in seconds to wait for a response before marking the health check as failed. Must be between 1 and 300 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for health check requests, specifying how long to wait for a response before marking the check as failed.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "unhealthy_threshold": [
+      {
+        "description": "Number of consecutive health check failures required to consider an instance unhealthy. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "add_on": [
+      {
+        "description": "List of add-on configurations, each containing snapshot time, status, and type. Must comply with the object structure provided.",
+        "nullable": true,
+        "type": "list(object({snapshot_time: string,status: string,type: string}))"
+      }
+    ],
+    "availability_zone": [
+      {
+        "description": "Specifies the AWS availability zone where the resource will be created. Must be a valid zone for the selected region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "blueprint_id": [
+      {
+        "description": "Identifier for the blueprint to use for the resource. Must match an existing blueprint in the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "bundle_id": [
+      {
+        "description": "Identifier for the bundle specifying the resource's hardware and pricing. Must correspond to a valid bundle in the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ip_address_type": [
+      {
+        "description": "Type of IP address to assign to the resource (e.g., IPv4 or IPv6). Optional field.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key_pair_name": [
+      {
+        "description": "Optional name of the key pair to associate with the resource for SSH access. Must exist in the AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the resource to be created. Must be unique within the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Optional key-value pairs for tagging the resource. Keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "user_data": [
+      {
+        "description": "Optional user-provided script to configure the instance at launch. Must be a valid string, typically a shell script.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

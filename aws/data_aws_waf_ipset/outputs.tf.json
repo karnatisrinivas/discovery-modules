@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS WAF IP Set.",
+            "value": "${data.aws_waf_ipset.this.id}"
+        }
+    }
+}

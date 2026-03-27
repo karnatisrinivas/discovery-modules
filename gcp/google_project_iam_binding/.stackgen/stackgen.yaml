@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Iam Binding
+  node:
+    label:
+      static: Project Iam Binding
+      template: ${role}
+    display_type: default
+
+discovery:
+  type: google_project_iam_binding
+  dnd_supported: false

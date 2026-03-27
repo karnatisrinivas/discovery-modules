@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "ARN of the cluster.",
+            "value": "${aws_eks_cluster.this.arn}"
+        },
+        "id": {
+            "description": "Name of the cluster.",
+            "value": "${aws_eks_cluster.this.id}"
+        },
+        "name": {
+            "description": "Name of the cluster.",
+            "value": "${aws_eks_cluster.this.name}"
+        }
+    }
+}

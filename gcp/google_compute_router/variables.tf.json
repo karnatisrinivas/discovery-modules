@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "Name of the resource. First character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "network": [
+            {
+                "description": "The network the router belongs to.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "bgp": [
+            {
+                "type": "list(object({ asn: string, advertise_mode: optional(string), advertised_groups: string, advertised_ip_ranges: list(object({ range: string, description: optional(string) })), keepalive_interval: optional(number) }))",
+                "description": "BGP information specific to this router.",
+                "nullable": true
+            }
+        ],
+        "encrypted_interconnect_router": [
+            {
+                "type": "bool",
+                "description": "Indicates if a router is dedicated for use with encrypted VLAN attachments",
+                "nullable": true
+            }
+        ]
+    }
+}

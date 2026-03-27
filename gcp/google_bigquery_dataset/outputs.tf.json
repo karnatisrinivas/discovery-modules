@@ -1,0 +1,36 @@
+{
+    "output": {
+        "creation_time": {
+            "description": "Timestamp for when the dataset was initially created",
+            "value": "${google_bigquery_dataset.this.creation_time}"
+        },
+        "dataset_id": {
+            "description": "The ID of the dataset",
+            "value": "${google_bigquery_dataset.this.dataset_id}"
+        },
+        "effective_labels": {
+            "description": "Aggregated labels, including inherited and applied ones",
+            "value": "${google_bigquery_dataset.this.effective_labels}"
+        },
+        "etag": {
+            "description": "Unique identifier for dataset version changes",
+            "value": "${google_bigquery_dataset.this.etag}"
+        },
+        "id": {
+            "description": "Resource ID for referencing the dataset in APIs and configurations",
+            "value": "${google_bigquery_dataset.this.id}"
+        },
+        "last_modified_time": {
+            "description": "Time of the most recent update to the dataset",
+            "value": "${google_bigquery_dataset.this.last_modified_time}"
+        },
+        "self_link": {
+            "description": "Direct URL for interacting with the dataset via API",
+            "value": "${google_bigquery_dataset.this.self_link}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly set within Terraform for resource organization",
+            "value": "${google_bigquery_dataset.this.terraform_labels}"
+        }
+    }
+}

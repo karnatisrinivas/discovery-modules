@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the CloudWatch log resource policy",
+            "value": "${aws_cloudwatch_log_resource_policy.this.id}"
+        }
+    }
+}

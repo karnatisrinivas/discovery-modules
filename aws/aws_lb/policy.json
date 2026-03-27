@@ -1,0 +1,18 @@
+{
+    "name": "aws_lb",
+    "policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "Default",
+                "Action": [
+                    "elasticloadbalancing:*"
+                ],
+                "Effect": "Allow",
+                "Resource": [
+                    "${module.module_name.arn}"
+                ]
+            }
+        ]
+    }
+}

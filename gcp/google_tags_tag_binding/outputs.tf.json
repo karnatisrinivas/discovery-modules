@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the tag binding resource in Google Cloud",
+            "value": "${google_tags_tag_binding.this.id}"
+        },
+        "name": {
+            "description": "Name of the tag binding, useful for managing and tracking resources",
+            "value": "${google_tags_tag_binding.this.name}"
+        }
+    }
+}

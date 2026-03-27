@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the virtual machine scale set.",
+            "value": "${azurerm_linux_virtual_machine_scale_set.this.id}"
+        },
+        "unique_id": {
+            "description": "Unique identifier of the virtual machine scale set.",
+            "value": "${azurerm_linux_virtual_machine_scale_set.this.unique_id}"
+        }
+    }
+}

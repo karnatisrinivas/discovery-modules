@@ -1,0 +1,12 @@
+{
+    "output": {
+        "delegated_services": {
+            "description": "A set of objects representing the services that have been delegated within the AWS Organization, including the date when delegation was enabled and the service principal name.",
+            "value": "${data.aws_organizations_delegated_services.this.delegated_services}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Organizations Delegated Services resource.",
+            "value": "${data.aws_organizations_delegated_services.this.id}"
+        }
+    }
+}

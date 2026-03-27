@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "certificate_manager_certificates": [
+      {
+        "description": "List of SSL certificates to be associated with the HTTPS proxy, managed by Certificate Manager. Must be in the same region as the proxy.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the text for the optional user-provided description of the HTTPS proxy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_keep_alive_timeout_sec": [
+      {
+        "description": "Defines the timeout, in seconds, for keeping idle HTTP connections alive. Must be between 1 and 3600.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the HTTPS proxy resource; must be 1-63 characters long and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_tls_policy": [
+      {
+        "description": "Specifies the TLS policy for the HTTPS proxy, defining the server-side SSL configuration and requirements. Must be a valid resource name in the same project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ssl_certificates": [
+      {
+        "description": "List of SSL certificates to use for HTTPS connections; must be self-managed or Google-managed certificates.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ssl_policy": [
+      {
+        "description": "Specifies the SSL policy to be associated with the HTTPS proxy, defining the set of SSL features and minimum TLS version for connections. Must be the self-link of an existing SSL policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations, allowing customization of timeout settings for managing the HTTPS proxy resource.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "url_map": [
+      {
+        "description": "Specifies the URL map resource that defines the mapping of URLs to backend services for the HTTPS proxy. Must be a valid URL map in the same region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

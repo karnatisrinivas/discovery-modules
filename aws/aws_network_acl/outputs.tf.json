@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_network_acl.this.arn}"
+        }
+    }
+}

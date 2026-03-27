@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sql Database Instance"
+  node:
+    label:
+      static: "[Data] Sql Database Instance"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_google_sql_database_instance
+  dnd_supported: false

@@ -1,0 +1,10 @@
+{
+    "variable": {
+        "services": [
+            {
+                "type": "list(string)",
+                "description": "The services to generate identities for."
+            }
+        ]
+    }
+}

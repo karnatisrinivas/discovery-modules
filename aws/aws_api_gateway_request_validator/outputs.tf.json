@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the API Gateway request validator configuration",
+            "value": "${aws_api_gateway_request_validator.this.id}"
+        }
+    }
+}

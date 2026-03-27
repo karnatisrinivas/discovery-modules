@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Interface Security Group Association
+  node:
+    label:
+      static: Network Interface Security Group Association
+      template: ${network_interface_id}
+    display_type: default
+
+discovery:
+  type: azurerm_network_interface_security_group_association
+  dnd_supported: false
+  references:
+    network_interface_id:
+      from: azurerm_network_interface
+      output: id
+    network_security_group_id:
+      from: azurerm_network_security_group
+      output: id

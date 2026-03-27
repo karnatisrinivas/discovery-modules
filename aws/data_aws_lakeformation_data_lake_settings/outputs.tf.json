@@ -1,0 +1,48 @@
+{
+    "output": {
+        "admins": {
+            "description": "A set of AWS IAM user or role ARNs that are designated as administrators for the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.admins}"
+        },
+        "allow_external_data_filtering": {
+            "description": "A boolean indicating whether external data filtering is allowed in the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.allow_external_data_filtering}"
+        },
+        "allow_full_table_external_data_access": {
+            "description": "A boolean indicating whether full table access is allowed for external data sources.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.allow_full_table_external_data_access}"
+        },
+        "authorized_session_tag_value_list": {
+            "description": "A list of session tag values that are authorized for use in the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.authorized_session_tag_value_list}"
+        },
+        "create_database_default_permissions": {
+            "description": "Default permissions assigned to users or roles when a new database is created in the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.create_database_default_permissions}"
+        },
+        "create_table_default_permissions": {
+            "description": "Default permissions assigned to users or roles when a new table is created in the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.create_table_default_permissions}"
+        },
+        "external_data_filtering_allow_list": {
+            "description": "A set of ARNs for which external data filtering is explicitly allowed.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.external_data_filtering_allow_list}"
+        },
+        "id": {
+            "description": "The unique identifier for the data lake settings configuration.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.id}"
+        },
+        "parameters": {
+            "description": "A map of additional parameters and their values for configuring the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.parameters}"
+        },
+        "read_only_admins": {
+            "description": "A set of ARNs for users or roles that have read-only administrative access to the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.read_only_admins}"
+        },
+        "trusted_resource_owners": {
+            "description": "A list of ARNs for trusted resource owners who can manage resources within the data lake.",
+            "value": "${data.aws_lakeformation_data_lake_settings.this.trusted_resource_owners}"
+        }
+    }
+}

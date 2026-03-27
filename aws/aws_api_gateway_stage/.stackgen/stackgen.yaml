@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: API Gateway Stage
+  node:
+    label:
+      static: API Gateway Stage
+      template: ${stage_name}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_stage
+  dnd_supported: false

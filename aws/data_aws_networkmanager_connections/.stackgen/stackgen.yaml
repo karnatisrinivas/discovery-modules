@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkmanager Connections"
+  node:
+    label:
+      static: "[Data] Networkmanager Connections"
+      template: "[Data] Networkmanager Connections"
+    display_type: default
+
+discovery:
+  type: data_aws_networkmanager_connections
+  dnd_supported: false

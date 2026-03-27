@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfront Origin Access Control
+  node:
+    label:
+      static: Cloudfront Origin Access Control
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_cloudfront_origin_access_control
+  dnd_supported: false

@@ -1,0 +1,26 @@
+{
+    "variable": {
+      "condition": [
+        {
+          "description": "Defines a condition for the IAM policy binding, specifying attributes and logic that determine when the binding is applied.",
+          "nullable": true,
+          "type": "list(object({description: optional(string),expression: string,title: string}))"
+        }
+      ],
+      "member": [
+        {
+          "description": "Specifies the identity to be granted the role, such as a user, group, service account, or domain. Ref: https://cloud.google.com/billing/docs/reference/rest/v1/Policy#Binding",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "role": [
+        {
+          "description": "Specifies the IAM role to be assigned to the member. Must be in the format `roles/{role_name}`.",
+          "nullable": false,
+          "type": "string"
+        }
+      ]
+    }
+  }
+  

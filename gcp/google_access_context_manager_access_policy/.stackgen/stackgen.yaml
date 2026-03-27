@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Access Context Manager Access Policy
+  node:
+    label:
+      static: Access Context Manager Access Policy
+      template: ${title}
+    display_type: default
+
+discovery:
+  type: google_access_context_manager_access_policy
+  dnd_supported: false

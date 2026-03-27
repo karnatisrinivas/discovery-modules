@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Watcher
+  node:
+    label:
+      static: Network Watcher
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_network_watcher
+  dnd_supported: false

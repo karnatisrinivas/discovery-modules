@@ -1,0 +1,28 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Transit Gateway Connect.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.id}"
+        },
+        "protocol": {
+            "description": "The protocol used by the Transit Gateway Connect.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.protocol}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Transit Gateway Connect.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.tags}"
+        },
+        "transit_gateway_connect_id": {
+            "description": "The identifier for the Transit Gateway Connect resource.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.transit_gateway_connect_id}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the Transit Gateway associated with this Connect.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.transit_gateway_id}"
+        },
+        "transport_attachment_id": {
+            "description": "The ID of the transport attachment for the Transit Gateway Connect.",
+            "value": "${data.aws_ec2_transit_gateway_connect.this.transport_attachment_id}"
+        }
+    }
+}

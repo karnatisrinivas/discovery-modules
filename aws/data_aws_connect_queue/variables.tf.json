@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the AWS Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "queue_id": [
+      {
+        "description": "The unique identifier for the AWS Connect queue. It can be omitted if creating a new queue.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the AWS Connect queue. This is optional and used when creating or identifying a queue.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

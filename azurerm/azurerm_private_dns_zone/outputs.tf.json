@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Private DNS Zone.",
+            "value": "${azurerm_private_dns_zone.this.id}"
+        },
+        "name": {
+            "description": "The name of the Azure Private DNS Zone.",
+            "value": "${azurerm_private_dns_zone.this.name}"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for cluster, used in IAM and API interactions",
+            "value": "${aws_msk_serverless_cluster.this.arn}"
+        },
+        "bootstrap_brokers_sasl_iam": {
+            "description": "Broker connection endpoint using IAM for client authentication",
+            "value": "${aws_msk_serverless_cluster.this.bootstrap_brokers_sasl_iam}"
+        },
+        "cluster_uuid": {
+            "description": "Unique cluster UUID for tracking and referencing the resource",
+            "value": "${aws_msk_serverless_cluster.this.cluster_uuid}"
+        },
+        "id": {
+            "description": "Unique cluster identifier for configuration and management",
+            "value": "${aws_msk_serverless_cluster.this.id}"
+        },
+        "tags_all": {
+            "description": "Map of all tags applied to the cluster for categorization",
+            "value": "${aws_msk_serverless_cluster.this.tags_all}"
+        }
+    }
+}

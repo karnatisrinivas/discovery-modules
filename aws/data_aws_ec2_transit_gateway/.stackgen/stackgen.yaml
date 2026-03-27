@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway"
+      template: "[Data] Ec2 Transit Gateway"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway
+  dnd_supported: false

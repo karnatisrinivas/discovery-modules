@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Iam Policy Attachment
+  node:
+    label:
+      static: Iam Policy Attachment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_policy_attachment
+  dnd_supported: false
+  references:
+    roles:
+      from: aws_iam_role
+      output: name
+    users:
+      from: aws_iam_user
+      output: name
+    groups:
+      from: aws_iam_group
+      output: name
+    policy_arn:
+      from: aws_iam_policy
+      output: arn

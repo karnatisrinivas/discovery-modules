@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.arn}"
+        },
+        "aws_managed": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.aws_managed}"
+        },
+        "content": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.content}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.id}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_organizations_policy.this.name}"
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "default_route_action": [
+      {
+        "description": "Defines the default routing action for requests that do not match any configured path matcher in the URL map; must specify either a redirect or forwarding configuration.",
+        "nullable": true,
+        "type": "list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: optional(bool),expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: optional(number),percentage: optional(number)})),delay: list(object({percentage: optional(number),fixed_delay: list(object({nanos: optional(number),seconds: optional(string)}))}))})),request_mirror_policy: list(object({backend_service: optional(string)})),retry_policy: list(object({num_retries: optional(number),retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: optional(string)}))})),timeout: list(object({nanos: optional(number),seconds: optional(string)})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: optional(string),weight: optional(number),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)})),response_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)}))}))}))}))"
+      }
+    ],
+    "default_service": [
+      {
+        "description": "Specifies the backend service to route traffic to when no other rule matches. Must be a valid regional backend service resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "default_url_redirect": [
+      {
+        "description": "Defines the default URL redirect configuration, specifying how requests should be redirected when no other rules match.",
+        "nullable": true,
+        "type": "list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the user-provided description for the regional URL map, which can be used to identify its purpose or functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "host_rule": [
+      {
+        "description": "Defines rules to match specific hostnames for routing traffic, requiring at least one hostname and a path matcher.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),hosts: list(string),path_matcher: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the regional URL map, required to be compliant with GCP naming conventions (1-63 characters, lowercase letters, numbers, and hyphens).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "path_matcher": [
+      {
+        "description": "Defines the configuration for matching HTTP request paths, including rules and routing behavior for regional URL maps.",
+        "nullable": true,
+        "type": "list(object({default_service: optional(string),description: optional(string),name: string,default_url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool})),path_rule: list(object({paths: list(string),service: optional(string),route_action: list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: bool,expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: number,percentage: number})),delay: list(object({percentage: number,fixed_delay: list(object({nanos: optional(number),seconds: string}))}))})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: optional(number),retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: string}))})),timeout: list(object({nanos: optional(number),seconds: string})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: string,weight: number,header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))}))}))})),url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool}))})),route_rules: list(object({priority: number,service: optional(string),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))})),match_rules: list(object({full_path_match: optional(string),ignore_case: optional(bool),path_template_match: optional(string),prefix_match: optional(string),regex_match: optional(string),header_matches: list(object({exact_match: optional(string),header_name: string,invert_match: optional(bool),prefix_match: optional(string),present_match: optional(bool),regex_match: optional(string),suffix_match: optional(string),range_match: list(object({range_end: number,range_start: number}))})),metadata_filters: list(object({filter_match_criteria: string,filter_labels: list(object({name: string,value: string}))})),query_parameter_matches: list(object({exact_match: optional(string),name: string,present_match: optional(bool),regex_match: optional(string)}))})),route_action: list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: optional(bool),expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: optional(number),percentage: optional(number)})),delay: list(object({percentage: optional(number),fixed_delay: list(object({nanos: optional(number),seconds: string}))}))})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: number,retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: string}))})),timeout: list(object({nanos: optional(number),seconds: string})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string),path_template_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: string,weight: number,header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))}))}))})),url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: optional(bool)}))}))}))"
+      }
+    ],
+    "test": [
+      {
+        "description": "Defines the name of the test URL map to be created in a specific region, used for routing traffic based on request properties.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),host: string,path: string,service: string}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the resource operations to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

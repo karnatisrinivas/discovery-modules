@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "publisher": [
+      {
+        "description": "The publisher of the Log Analytics solution.",
+        "nullable": false,
+        "type": "string",
+        "default": "Microsoft"
+      }
+    ],
+    "product": [
+      {
+        "description": "The product of the Log Analytics solution.",
+        "nullable": false,
+        "type": "string",
+        "default": "OMSGallery/Containers"
+      }
+    ],
+    "solution_name": [
+      {
+        "description": "The name of the Log Analytics solution.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the solution.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "workspace_name": [
+      {
+        "description": "The name of the Log Analytics workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "workspace_resource_id": [
+      {
+        "description": "The resource ID of the Log Analytics workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

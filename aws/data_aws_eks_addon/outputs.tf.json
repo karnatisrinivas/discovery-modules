@@ -1,0 +1,40 @@
+{
+    "output": {
+        "addon_version": {
+            "description": "The version of the EKS addon.",
+            "value": "${data.aws_eks_addon.this.addon_version}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EKS addon.",
+            "value": "${data.aws_eks_addon.this.arn}"
+        },
+        "configuration_values": {
+            "description": "The configuration values for the EKS addon.",
+            "value": "${data.aws_eks_addon.this.configuration_values}"
+        },
+        "created_at": {
+            "description": "The timestamp when the EKS addon was created.",
+            "value": "${data.aws_eks_addon.this.created_at}"
+        },
+        "id": {
+            "description": "The unique identifier for the EKS addon.",
+            "value": "${data.aws_eks_addon.this.id}"
+        },
+        "modified_at": {
+            "description": "The timestamp when the EKS addon was last modified.",
+            "value": "${data.aws_eks_addon.this.modified_at}"
+        },
+        "pod_identity_association": {
+            "description": "Associations between pod identities and IAM roles for the EKS addon.",
+            "value": "${data.aws_eks_addon.this.pod_identity_association}"
+        },
+        "service_account_role_arn": {
+            "description": "The ARN of the IAM role associated with the service account for the EKS addon.",
+            "value": "${data.aws_eks_addon.this.service_account_role_arn}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EKS addon.",
+            "value": "${data.aws_eks_addon.this.tags}"
+        }
+    }
+}

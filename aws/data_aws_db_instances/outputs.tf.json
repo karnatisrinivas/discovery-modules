@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the database instance data.",
+            "value": "${data.aws_db_instances.this.id}"
+        },
+        "instance_arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the database instances.",
+            "value": "${data.aws_db_instances.this.instance_arns}"
+        },
+        "instance_identifiers": {
+            "description": "A list of unique identifiers for each database instance.",
+            "value": "${data.aws_db_instances.this.instance_identifiers}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the database instances.",
+            "value": "${data.aws_db_instances.this.tags}"
+        }
+    }
+}

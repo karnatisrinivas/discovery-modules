@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Security Center Subscription Pricing
+  node:
+    label:
+      static: Security Center Subscription Pricing
+      template: ${tier}
+    display_type: default
+
+discovery:
+  type: azurerm_security_center_subscription_pricing
+  dnd_supported: false

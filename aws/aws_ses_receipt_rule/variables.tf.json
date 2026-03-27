@@ -1,0 +1,102 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "The name of the receipt rule",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "rule_set_name": [
+            {
+                "description": "The name of the receipt rule set",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "enabled": [
+            {
+                "description": "Whether the receipt rule is enabled",
+                "type": "bool",
+                "nullable": true
+            }
+        ],
+        "recipients": [
+            {
+                "description": "The recipients of the receipt rule",
+                "type": "list(string)",
+                "nullable": true
+            }
+        ],
+        "scan_enabled": [
+            {
+                "description": " If true, incoming emails will be scanned for spam and viruses",
+                "type": "bool",
+                "nullable": true
+            }
+        ],
+        "after": [
+            {
+                "description": "The name of the rule to place this rule after",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "tls_policy": [
+            {
+                "description": "The TLS policy to apply to the receipt rule",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "add_header_action": [
+            {
+                "description": "Configuration block for the add header action",
+                "type": "list(object({header_name: string, header_value: string, position: number}))",
+                "nullable": true
+            }
+        ],
+        "bounce_action": [
+            {
+                "description": "Configuration block for the bounce action",
+                "type": "list(object({message: string, sender: string, smtp_reply_code: string, status_code: string, topic_arn: string, position: number}))",
+                "nullable": true
+            }
+        ],
+        "lambda_action": [
+            {
+                "description": "Configuration block for the lambda action",
+                "type": "list(object({function_arn: string, invocation_type: string, topic_arn: string, position: number}))",
+                "nullable": true
+            }
+        ],
+        "s3_action": [
+            {
+                "description": "Configuration block for the S3 action",
+                "type": "list(object({bucket_name: string, iam_role_arn: optional(string), position: number, topic_arn: optional(string), kms_key_arn: optional(string), object_key_prefix: optional(string)}))",
+                "nullable": true
+            }
+        ],
+        "sns_action": [
+            {
+                "description": "Configuration block for the SNS action",
+                "type": "list(object({topic_arn: string, position: number, encoding: string}))",
+                "nullable": true
+            }
+        ],
+        "stop_action": [
+            {
+                "description": "Configuration block for the stop action",
+                "type": "list(object({scope: string, topic_arn: string, position: number}))",
+                "nullable": true
+            }
+        ],
+        "workmail_action": [
+            {
+                "description": "Configuration block for the workmail action",
+                "type": "list(object({organization_arn: string, position: number, topic_arn: string}))",
+                "nullable": true
+            }
+        ]
+    }
+}

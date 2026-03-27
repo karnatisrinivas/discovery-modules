@@ -1,0 +1,107 @@
+{
+  "variable": {
+    "administrator_login": [
+      {
+        "description": "The administrator login for the MySQL server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "administrator_password": [
+      {
+        "description": "The password for the server administrator.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "backup_retention_days": [
+      {
+        "description": "Number of days to retain backups for the server.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "create_mode": [
+      {
+        "description": "Specifies the mode to create the server, such as Default or PointInTimeRestore.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "delegated_subnet_id": [
+      {
+        "description": "The ID of the subnet to which the server is connected.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "geo_redundant_backup_enabled": [
+      {
+        "description": "Enables geo-redundant backup for the server.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the MySQL flexible server.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "point_in_time_restore_time_in_utc": [
+      {
+        "description": "The time in UTC to restore the server to.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "private_dns_zone_id": [
+      {
+        "description": "The ID of the private DNS zone for the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "The SKU name for the server, defining its performance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_server_id": [
+      {
+        "description": "The ID of the source server for replication or restore.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the availability zone for the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

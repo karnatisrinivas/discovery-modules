@@ -1,0 +1,44 @@
+{
+    "output": {
+        "creation_option": {
+            "description": "Specifies how the snapshot was created, useful for understanding its origin.",
+            "value": "${data.azurerm_snapshot.this.creation_option}"
+        },
+        "disk_size_gb": {
+            "description": "Size of the snapshot disk in GB, useful for capacity planning.",
+            "value": "${data.azurerm_snapshot.this.disk_size_gb}"
+        },
+        "encryption_settings": {
+            "description": "Details of encryption applied to the snapshot, ensuring data security.",
+            "value": "${data.azurerm_snapshot.this.encryption_settings}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the snapshot in Terraform configurations.",
+            "value": "${data.azurerm_snapshot.this.id}"
+        },
+        "os_type": {
+            "description": "Type of operating system associated with the snapshot, aids compatibility checks.",
+            "value": "${data.azurerm_snapshot.this.os_type}"
+        },
+        "source_resource_id": {
+            "description": "Resource ID of the source disk, useful for tracking snapshot origin.",
+            "value": "${data.azurerm_snapshot.this.source_resource_id}"
+        },
+        "source_uri": {
+            "description": "URI of the source used to create the snapshot, helpful for validation.",
+            "value": "${data.azurerm_snapshot.this.source_uri}"
+        },
+        "storage_account_id": {
+            "description": "ID of the storage account holding the snapshot, useful for management.",
+            "value": "${data.azurerm_snapshot.this.storage_account_id}"
+        },
+        "time_created": {
+            "description": "Timestamp of snapshot creation, useful for tracking lifecycle events.",
+            "value": "${data.azurerm_snapshot.this.time_created}"
+        },
+        "trusted_launch_enabled": {
+            "description": "Indicates if trusted launch is enabled, ensuring secure snapshot deployment.",
+            "value": "${data.azurerm_snapshot.this.trusted_launch_enabled}"
+        }
+    }
+}

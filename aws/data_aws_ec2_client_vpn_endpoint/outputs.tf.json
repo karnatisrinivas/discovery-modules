@@ -1,0 +1,88 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.arn}"
+        },
+        "authentication_options": {
+            "description": "List of authentication options used by the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.authentication_options}"
+        },
+        "client_cidr_block": {
+            "description": "The CIDR block of the client IP address range.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.client_cidr_block}"
+        },
+        "client_connect_options": {
+            "description": "Options for client connection, including lambda function for customization.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.client_connect_options}"
+        },
+        "client_login_banner_options": {
+            "description": "Options for displaying a login banner to clients.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.client_login_banner_options}"
+        },
+        "client_vpn_endpoint_id": {
+            "description": "The ID of the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.client_vpn_endpoint_id}"
+        },
+        "connection_log_options": {
+            "description": "Options for logging connection activities to CloudWatch.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.connection_log_options}"
+        },
+        "description": {
+            "description": "A description of the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.description}"
+        },
+        "dns_name": {
+            "description": "The DNS name for the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.dns_name}"
+        },
+        "dns_servers": {
+            "description": "List of DNS server IP addresses for the VPN clients.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.dns_servers}"
+        },
+        "id": {
+            "description": "The ID assigned to the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.id}"
+        },
+        "security_group_ids": {
+            "description": "List of security group IDs associated with the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.security_group_ids}"
+        },
+        "self_service_portal": {
+            "description": "Indicates whether the self-service portal is enabled.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.self_service_portal}"
+        },
+        "self_service_portal_url": {
+            "description": "URL for the self-service portal of the Client VPN.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.self_service_portal_url}"
+        },
+        "server_certificate_arn": {
+            "description": "ARN of the server certificate for the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.server_certificate_arn}"
+        },
+        "session_timeout_hours": {
+            "description": "Number of hours a VPN session lasts before timing out.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.session_timeout_hours}"
+        },
+        "split_tunnel": {
+            "description": "Indicates whether split tunneling is enabled.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.split_tunnel}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.tags}"
+        },
+        "transport_protocol": {
+            "description": "Transport protocol used by the VPN (e.g., UDP or TCP).",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.transport_protocol}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC associated with the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.vpc_id}"
+        },
+        "vpn_port": {
+            "description": "Port number for the Client VPN endpoint.",
+            "value": "${data.aws_ec2_client_vpn_endpoint.this.vpn_port}"
+        }
+    }
+}

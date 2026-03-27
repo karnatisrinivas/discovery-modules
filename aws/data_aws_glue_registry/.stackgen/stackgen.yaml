@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Glue Registry"
+  node:
+    label:
+      static: "[Data] Glue Registry"
+      template: "[Data] Glue Registry"
+    display_type: default
+
+discovery:
+  type: data_aws_glue_registry
+  dnd_supported: false

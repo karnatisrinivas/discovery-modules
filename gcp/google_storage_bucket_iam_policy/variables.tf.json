@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "Specifies the name of the S3 bucket to be used. Must be globally unique and comply with AWS naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_data": [
+      {
+        "description": "Defines the JSON-formatted policy document to be applied. Ensure it adheres to the syntax requirements of the target resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

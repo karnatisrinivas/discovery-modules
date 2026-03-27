@@ -1,0 +1,102 @@
+{
+  "variable": {
+    "checker_type": [
+      {
+        "description": "Specifies the type of checker to use for the uptime check, such as STATIC_IP or VPC. Must match the supported checker types for the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_matchers": [
+      {
+        "description": "Specifies the criteria for evaluating the response content of the uptime check, including exact or partial matches.",
+        "nullable": true,
+        "type": "list(object({content: string,matcher: optional(string),json_path_matcher: list(object({json_matcher: optional(string),json_path: string}))}))"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "The user-friendly name for the uptime check, displayed in the Google Cloud Console and used for identification purposes.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "http_check": [
+      {
+        "description": "Specifies the HTTP settings for the uptime check, including URL, request method, headers, and validation rules.",
+        "nullable": true,
+        "type": "list(object({body: optional(string),content_type: optional(string),custom_content_type: optional(string),headers: optional(map(string)),mask_headers: optional(bool),path: optional(string),port: optional(number),request_method: optional(string),use_ssl: optional(bool),validate_ssl: optional(bool),accepted_response_status_codes: list(object({status_class: optional(string),status_value: optional(number)})),auth_info: list(object({password: optional(string),password_wo: optional(string),password_wo_version: optional(string),username: string})),ping_config: list(object({pings_count: number})),service_agent_authentication: list(object({type: optional(string)}))}))"
+      }
+    ],
+    "log_check_failures": [
+      {
+        "description": "Enables logging for failed uptime checks to assist with troubleshooting and monitoring.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "monitored_resource": [
+      {
+        "description": "Specifies the monitored resource to check, such as a GCE instance or App Engine service; must match the resource type and labels required by the uptime check.",
+        "nullable": true,
+        "type": "list(object({labels: map(string),type: string}))"
+      }
+    ],
+    "period": [
+      {
+        "description": "Defines the frequency at which uptime checks are performed, specified in seconds. Must be a multiple of 60.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group": [
+      {
+        "description": "Defines the group of monitored resources for the uptime check, such as instances or services, based on specified criteria.",
+        "nullable": true,
+        "type": "list(object({group_id: optional(string),resource_type: optional(string)}))"
+      }
+    ],
+    "selected_regions": [
+      {
+        "description": "Defines the geographic regions from which the uptime checks will be performed; must be a list of valid region codes.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "synthetic_monitor": [
+      {
+        "description": "Defines the synthetic monitoring configuration for an uptime check, specifying settings for simulated user requests to test service availability.",
+        "nullable": true,
+        "type": "list(object({cloud_function_v2: list(object({name: string}))}))"
+      }
+    ],
+    "tcp_check": [
+      {
+        "description": "Defines the TCP-based configuration for the uptime check, specifying connection details such as port and optional headers.",
+        "nullable": true,
+        "type": "list(object({port: number,ping_config: list(object({pings_count: number}))}))"
+      }
+    ],
+    "timeout": [
+      {
+        "description": "Duration to wait for a response before marking the uptime check as failed; must be between 1 and 60 seconds.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for create, update, and delete operations, ensuring operations complete within specified limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_labels": [
+      {
+        "description": "Custom labels to organize and identify the uptime check; must be key-value pairs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

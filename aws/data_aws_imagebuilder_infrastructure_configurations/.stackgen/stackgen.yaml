@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Imagebuilder Infrastructure Configurations"
+  node:
+    label:
+      static: "[Data] Imagebuilder Infrastructure Configurations"
+      template: "[Data] Imagebuilder Infrastructure Configurations"
+    display_type: default
+
+discovery:
+  type: data_aws_imagebuilder_infrastructure_configurations
+  dnd_supported: false

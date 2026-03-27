@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Application Gateway.",
+            "value": "${azurerm_application_gateway.this.id}"
+        }
+    }
+}

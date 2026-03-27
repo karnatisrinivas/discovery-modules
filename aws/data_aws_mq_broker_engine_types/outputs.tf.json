@@ -1,0 +1,12 @@
+{
+    "output": {
+        "broker_engine_types": {
+            "description": "A list of broker engine types and their corresponding engine versions available in AWS MQ.",
+            "value": "${data.aws_mq_broker_engine_types.this.broker_engine_types}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS MQ broker engine types data source.",
+            "value": "${data.aws_mq_broker_engine_types.this.id}"
+        }
+    }
+}

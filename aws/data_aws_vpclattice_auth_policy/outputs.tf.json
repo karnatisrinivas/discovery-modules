@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS VPC Lattice authentication policy.",
+            "value": "${data.aws_vpclattice_auth_policy.this.id}"
+        }
+    }
+}

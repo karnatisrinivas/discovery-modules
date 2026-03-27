@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "default_port": [
+      {
+        "description": "Specifies the default port for endpoints in the group, used when a port is not explicitly provided. Must be a valid port number between 1 and 65535.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a description for the network endpoint group, detailing its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name of the network endpoint group, adhering to GCP naming conventions and limited to 63 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the name of the network to which the endpoint group belongs; must be an existing network in the same project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_endpoint_type": [
+      {
+        "description": "Specifies the type of network endpoints in the group, such as `SERVERLESS`, `VM`, or `INTERNET_IP_PORT`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork to which the network endpoint group is connected; required if the network is a custom VPC.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for creating, updating, or deleting the network endpoint group, ensuring operations complete within the specified limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone where the network endpoint group will be created, must match the location of the endpoints.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

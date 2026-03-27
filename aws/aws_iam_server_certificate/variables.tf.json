@@ -1,0 +1,61 @@
+{
+    "variable": {
+        "name": [
+            {
+            "type": "string",
+            "description": "The name of the server certificate",
+            "nullable": true
+            }
+        ],
+        "name_prefix": [
+            {
+                "type": "string",
+                "description": "The prefix of the server certificate",
+                "nullable": true
+            }
+        ],
+        "certificate_body": [
+            {
+                "type": "string",
+                "description": "The body of the server certificate",
+                "nullable": false
+            }
+        ],
+        "private_key": [
+            {
+                "type": "string",
+                "description": "The private key of the server certificate",
+                "nullable": false,
+                "sensitive": true
+            }
+        ],
+        "certificate_chain": [
+            {
+                "type": "string",
+                "description": "The chain of the server certificate",
+                "nullable": true
+            }
+        ],
+        "path": [
+            {
+                "type": "string",
+                "description": "The path of the server certificate",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "The tags of the server certificate",
+                "nullable": true
+            }
+        ],
+        "timeouts": [
+            {
+                "type": "object({ delete: string })",
+                "description": "The timeouts of the server certificate",
+                "nullable": true
+            }
+        ]
+    }
+}

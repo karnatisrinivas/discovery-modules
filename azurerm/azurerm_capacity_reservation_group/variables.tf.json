@@ -1,0 +1,44 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Specifies the name of the capacity reservation group, which must be unique within the resource group and comply with Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize resources, typically for management and billing purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for create, read, update, and delete operations, allowing control over the maximum duration of each operation.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "zones": [
+      {
+        "description": "Specifies the Azure availability zones where the capacity reservation group will be created; must match the zones supported by the selected region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

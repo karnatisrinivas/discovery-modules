@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the first VPC returned by the data source.",
+            "value": "${data.aws_vpcs.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all VPCs returned by the data source.",
+            "value": "${data.aws_vpcs.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the VPCs.",
+            "value": "${data.aws_vpcs.this.tags}"
+        }
+    }
+}

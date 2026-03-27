@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Outposts Asset"
+  node:
+    label:
+      static: "[Data] Outposts Asset"
+      template: "[Data] Outposts Asset"
+    display_type: default
+
+discovery:
+  type: data_aws_outposts_asset
+  dnd_supported: false

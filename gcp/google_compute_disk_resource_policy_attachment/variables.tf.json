@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "disk": [
+      {
+        "description": "Specifies the name or self-link of the disk to which the resource policy will be attached.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the resource policy attachment, used to associate a resource policy with a Google Compute Disk.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for operations such as creating, updating, or deleting the disk resource policy attachment.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone where the disk and resource policy attachment are located. Must match the zone of the disk.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Databricks Workspace
+  node:
+    label:
+      static: Databricks Workspace
+      template: ${name}
+    display_type: default
+
+variables:
+  no_public_ip:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Are public IP Addresses not allowed?"
+
+discovery:
+  type: azurerm_databricks_workspace
+  dnd_supported: false
+  data_source: data_azurerm_databricks_workspace

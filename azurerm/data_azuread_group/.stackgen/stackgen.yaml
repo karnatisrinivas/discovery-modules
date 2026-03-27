@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Group"
+  node:
+    label:
+      static: "[Data] Group"
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: data_azuread_group
+  dnd_supported: false

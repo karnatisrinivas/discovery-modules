@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for identifying the CloudWatch dashboard in API calls and IAM policies",
+            "value": "${aws_cloudwatch_dashboard.this.dashboard_arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the CloudWatch dashboard, useful for referencing in configurations",
+            "value": "${aws_cloudwatch_dashboard.this.id}"
+        }
+    }
+}

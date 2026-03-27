@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: ECR Repository
+  node:
+    label:
+      static: ECR Repository
+      template: ECR Repository
+    display_type: default
+
+variables:
+  force_delete:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: If true, the repository will be deleted even if it contains images
+  image_tag_mutability:
+    description: The tag mutability setting for the repository
+    type: string
+    options: 
+      - MUTABLE
+      - IMMUTABLE
+    ui_control: select
+
+discovery:
+  type: aws_ecr_repository
+  dnd_supported: false
+  data_source: data_aws_ecr_repository

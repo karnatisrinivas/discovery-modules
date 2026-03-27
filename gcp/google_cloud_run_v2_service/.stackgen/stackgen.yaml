@@ -1,0 +1,47 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloud Run Service
+  node:
+    label:
+      static: Cloud Run Service
+      template: ${name}
+    display_type: default
+
+variables:
+  ingress:
+    ui_control: select
+    description: The ingress settings for the service
+    type: string
+    options: 
+      - INGRESS_TRAFFIC_ALL
+      - INGRESS_TRAFFIC_INTERNAL_ONLY
+      - INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER
+  deletion_protection:
+    ui_control: select
+    description: " Whether Terraform will be prevented from destroying the service."
+    type: bool
+    options: 
+      - true
+      - false
+  launch_stage:
+    options: 
+      - ALPHA
+      - BETA
+      - GA
+      - DEPRECATED
+      - EARLY_ACCESS
+      - PRELAUNCH
+      - UNIMPLEMENTED
+    ui_control: select
+    description: The launch stage of the service
+    type: string
+
+discovery:
+  type: google_cloud_run_v2_service
+  dnd_supported: false
+  references:
+    service_account:
+      from: google_service_account_composite
+      output: email

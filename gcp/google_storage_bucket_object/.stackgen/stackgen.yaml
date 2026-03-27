@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Bucket Object
+  node:
+    label:
+      static: Storage Bucket Object
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_storage_bucket_object
+  dnd_supported: false
+  references:
+    bucket:
+      from: google_storage_bucket
+      output: id

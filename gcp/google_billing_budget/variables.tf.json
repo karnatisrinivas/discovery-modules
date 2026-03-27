@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "all_updates_rule": [
+      {
+        "description": "Defines the configuration for sending notifications for all budget updates, including thresholds and recipient details.",
+        "nullable": true,
+        "type": "list(object({disable_default_iam_recipients: optional(bool),enable_project_level_recipients: optional(bool),monitoring_notification_channels: optional(list(string)),pubsub_topic: optional(string),schema_version: optional(string)}))"
+      }
+    ],
+    "amount": [
+      {
+        "description": "Defines the monetary threshold for the budget, specifying the maximum spend limit in the billing account.",
+        "nullable": false,
+        "type": "list(object({last_period_amount: optional(bool),specified_amount: list(object({currency_code: optional(string),nanos: optional(number),units: optional(string)}))}))"
+      }
+    ],
+    "billing_account": [
+      {
+        "description": "Specifies the billing account ID to associate with the budget, must be in the format of a valid Google Cloud billing account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "budget_filter": [
+      {
+        "description": "Defines criteria to filter resources and services for the budget, such as project, labels, or services to include in budget calculations.",
+        "nullable": true,
+        "type": "list(object({calendar_period: optional(string),credit_types: optional(list(string)),credit_types_treatment: optional(string),labels: optional(map(string)),projects: optional(list(string)),resource_ancestors: optional(list(string)),services: optional(list(string)),subaccounts: optional(list(string)),custom_period: list(object({end_date: list(object({day: number,month: number,year: number})),start_date: list(object({day: number,month: number,year: number}))}))}))"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name to identify the billing budget, must be unique within the billing account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ownership_scope": [
+      {
+        "description": "Defines the scope of resources to monitor, either within a single project or across multiple projects within a billing account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "threshold_rules": [
+      {
+        "description": "Defines the percentage thresholds for budget notification triggers, requiring values between 0 and 1 to specify when alerts should be sent.",
+        "nullable": true,
+        "type": "list(object({spend_basis: optional(string),threshold_percent: number}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations, with specific time limits for each action.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

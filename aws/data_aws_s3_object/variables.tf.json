@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket where the object will be stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "checksum_mode": [
+      {
+        "description": "Specifies the method to validate the object's integrity using checksums.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key": [
+      {
+        "description": "The unique identifier for the object within the bucket.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "range": [
+      {
+        "description": "The byte range of the object to retrieve, if only part of the object is needed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

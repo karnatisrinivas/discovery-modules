@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Autoscale Setting
+  node:
+    label:
+      static: Autoscale Setting
+      template: ${name}
+    display_type: default
+
+variables:
+  scale_mode:
+    description: " Specifies the predictive scale mode. Possible values are Enabled or ForecastOnly."
+    type: string
+    options: 
+      - Enabled
+      - ForecastOnly
+    ui_control: select
+
+discovery:
+  type: azurerm_monitor_autoscale_setting
+  dnd_supported: false

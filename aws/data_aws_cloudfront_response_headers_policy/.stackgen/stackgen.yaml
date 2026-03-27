@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Response Headers Policy"
+  node:
+    label:
+      static: "[Data] Cloudfront Response Headers Policy"
+      template: "[Data] Cloudfront Response Headers Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_response_headers_policy
+  dnd_supported: false

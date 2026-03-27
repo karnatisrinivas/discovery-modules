@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: KMS Alias
+  node:
+    label:
+      static: KMS Alias
+      template: KMS Alias
+    display_type: default
+
+discovery:
+  type: aws_kms_alias
+  dnd_supported: false
+  data_source: data_aws_kms_alias
+  references:
+    target_key_id:
+      from: aws_kms_key
+      output: key_id

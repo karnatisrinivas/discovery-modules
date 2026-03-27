@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the backup plan.",
+            "value": "${data.aws_backup_plan.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the backup plan.",
+            "value": "${data.aws_backup_plan.this.id}"
+        },
+        "name": {
+            "description": "The name of the backup plan.",
+            "value": "${data.aws_backup_plan.this.name}"
+        },
+        "rule": {
+            "description": "Details of the backup rule, including schedule and lifecycle settings.",
+            "value": "${data.aws_backup_plan.this.rule}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the backup plan.",
+            "value": "${data.aws_backup_plan.this.tags}"
+        },
+        "version": {
+            "description": "The version of the backup plan.",
+            "value": "${data.aws_backup_plan.this.version}"
+        }
+    }
+}

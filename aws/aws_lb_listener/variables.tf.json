@@ -1,0 +1,46 @@
+{
+    "variable": {
+        "load_balancer_arn": [
+            {
+                "description": "The ARN of the load balancer",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "port": [
+            {
+                "description": "The port on which the load balancer is listening",
+                "type": "number",
+                "nullable": true
+            }
+        ],
+        "protocol": [
+            {
+                "description": "The protocol for connections from clients to the load balancer",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to all resources",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "default_action":[
+            {
+                "description": "The default action for the listener",
+                "type": "list(object({type: string, target_group_arn: string, order: number, redirect: list(object({host: string, path: string, port: string, protocol: string, query: string, status_code: string})), fixed_response: list(object({content_type: string, message_body: string, status_code: string}))}))",
+                "nullable": false
+            }
+        ],
+        "certificate_arn": [
+            {
+                "description": "The ARN of the default SSL server certificate",
+                "type": "string",
+                "nullable": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Datapipeline Pipeline Definition"
+  node:
+    label:
+      static: "[Data] Datapipeline Pipeline Definition"
+      template: "[Data] Datapipeline Pipeline Definition"
+    display_type: default
+
+discovery:
+  type: data_aws_datapipeline_pipeline_definition
+  dnd_supported: false

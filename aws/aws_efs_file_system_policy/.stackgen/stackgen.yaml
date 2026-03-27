@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Efs File System Policy
+  node:
+    label:
+      static: Efs File System Policy
+      template: ${file_system_id}
+    display_type: default
+
+discovery:
+  type: aws_efs_file_system_policy
+  dnd_supported: false
+  references:
+    file_system_id:
+      from: aws_efs_file_system
+      output: id
+    policy:
+      from: data_aws_iam_policy_document
+      output: json

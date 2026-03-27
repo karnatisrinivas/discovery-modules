@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Transit Gateway Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.arn}"
+        },
+        "bgp_asn": {
+            "description": "The Border Gateway Protocol (BGP) Autonomous System Number (ASN) associated with the peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.bgp_asn}"
+        },
+        "bgp_peer_address": {
+            "description": "The BGP peer address used for establishing the BGP session.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.bgp_peer_address}"
+        },
+        "bgp_transit_gateway_addresses": {
+            "description": "The addresses of the transit gateway used for the BGP session.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.bgp_transit_gateway_addresses}"
+        },
+        "id": {
+            "description": "The unique identifier of the Transit Gateway Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.id}"
+        },
+        "inside_cidr_blocks": {
+            "description": "The list of inside CIDR blocks for the Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.inside_cidr_blocks}"
+        },
+        "peer_address": {
+            "description": "The IP address of the Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.peer_address}"
+        },
+        "tags": {
+            "description": "The tags assigned to the Transit Gateway Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.tags}"
+        },
+        "transit_gateway_address": {
+            "description": "The IP address of the transit gateway for the Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.transit_gateway_address}"
+        },
+        "transit_gateway_attachment_id": {
+            "description": "The ID of the attachment for the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.transit_gateway_attachment_id}"
+        },
+        "transit_gateway_connect_peer_id": {
+            "description": "The ID of the Transit Gateway Connect Peer.",
+            "value": "${data.aws_ec2_transit_gateway_connect_peer.this.transit_gateway_connect_peer_id}"
+        }
+    }
+}

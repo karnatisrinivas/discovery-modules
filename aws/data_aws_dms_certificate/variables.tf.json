@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "certificate_id": [
+      {
+        "description": "The unique identifier for the DMS certificate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

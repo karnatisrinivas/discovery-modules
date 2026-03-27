@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) uniquely identifying the KMS public key.",
+            "value": "${data.aws_kms_public_key.this.arn}"
+        },
+        "customer_master_key_spec": {
+            "description": "The specification of the KMS key, defining its cryptographic capabilities.",
+            "value": "${data.aws_kms_public_key.this.customer_master_key_spec}"
+        },
+        "encryption_algorithms": {
+            "description": "A list of encryption algorithms that the KMS public key supports.",
+            "value": "${data.aws_kms_public_key.this.encryption_algorithms}"
+        },
+        "id": {
+            "description": "The unique identifier for the KMS public key.",
+            "value": "${data.aws_kms_public_key.this.id}"
+        },
+        "key_usage": {
+            "description": "Specifies how the KMS key can be used, such as for encryption or signing.",
+            "value": "${data.aws_kms_public_key.this.key_usage}"
+        },
+        "public_key": {
+            "description": "The KMS public key in binary format used for encryption or verification.",
+            "value": "${data.aws_kms_public_key.this.public_key}"
+        },
+        "public_key_pem": {
+            "description": "The KMS public key in PEM format, suitable for use in applications that require PEM encoding.",
+            "value": "${data.aws_kms_public_key.this.public_key_pem}"
+        },
+        "signing_algorithms": {
+            "description": "A list of signing algorithms that the KMS public key supports.",
+            "value": "${data.aws_kms_public_key.this.signing_algorithms}"
+        }
+    }
+}

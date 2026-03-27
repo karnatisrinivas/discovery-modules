@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to IAM bindings for concurrency control",
+            "value": "${google_project_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Resource ID for identifying the IAM binding within the project",
+            "value": "${google_project_iam_binding.this.id}"
+        }
+    }
+}

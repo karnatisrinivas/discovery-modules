@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lex Bot Alias"
+  node:
+    label:
+      static: "[Data] Lex Bot Alias"
+      template: "[Data] Lex Bot Alias"
+    display_type: default
+
+discovery:
+  type: data_aws_lex_bot_alias
+  dnd_supported: false

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier for the global network to which the link belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "provider_name": [
+      {
+        "description": "The name of the service provider for the link.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "site_id": [
+      {
+        "description": "The unique identifier of the site where the link is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs for tagging the link.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of link, such as Internet or MPLS.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

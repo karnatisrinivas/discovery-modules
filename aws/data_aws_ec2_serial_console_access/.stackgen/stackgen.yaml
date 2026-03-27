@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Serial Console Access"
+  node:
+    label:
+      static: "[Data] Ec2 Serial Console Access"
+      template: "[Data] Ec2 Serial Console Access"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_serial_console_access
+  dnd_supported: false

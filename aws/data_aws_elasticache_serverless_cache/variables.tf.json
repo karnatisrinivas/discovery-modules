@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the AWS ElastiCache serverless cache cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

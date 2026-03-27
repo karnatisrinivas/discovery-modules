@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for managing and referencing the DNS policy resource",
+            "value": "${google_dns_policy.this.id}"
+        }
+    }
+}

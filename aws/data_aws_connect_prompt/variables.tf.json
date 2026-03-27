@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the AWS Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the AWS Connect prompt.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

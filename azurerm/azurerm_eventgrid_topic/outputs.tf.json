@@ -1,0 +1,8 @@
+{
+    "output": {
+        "eventgrid_topic_id": {
+            "description": "The value of the eventgrid_topic_id output",
+            "value": "${azurerm_eventgrid_topic.this.id}"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CDN Profile
+  node:
+    label:
+      static: CDN Profile
+      template: ${name}
+    display_type: default
+
+variables:
+  sku:
+    description: The pricing related information of current CDN profile. Changing this forces a new resource to be created.
+    type: string
+    options: 
+      - Standard_Akamai
+      - Standard_ChinaCdn
+      - Standard_Microsoft
+      - Standard_Verizon
+      - Premium_Verizon
+    ui_control: select
+
+discovery:
+  type: azurerm_cdn_profile
+  dnd_supported: false

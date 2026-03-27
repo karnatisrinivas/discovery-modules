@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route"
+  node:
+    label:
+      static: "[Data] Route"
+      template: "[Data] Route"
+    display_type: default
+
+discovery:
+  type: data_aws_route
+  dnd_supported: false

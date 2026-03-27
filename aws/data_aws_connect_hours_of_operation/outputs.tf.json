@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the hours of operation.",
+            "value": "${data.aws_connect_hours_of_operation.this.arn}"
+        },
+        "config": {
+            "description": "The configuration of the hours of operation, specifying the start and end times for each day.",
+            "value": "${data.aws_connect_hours_of_operation.this.config}"
+        },
+        "description": {
+            "description": "A description of the hours of operation.",
+            "value": "${data.aws_connect_hours_of_operation.this.description}"
+        },
+        "hours_of_operation_id": {
+            "description": "The unique identifier for the hours of operation.",
+            "value": "${data.aws_connect_hours_of_operation.this.hours_of_operation_id}"
+        },
+        "id": {
+            "description": "The ID of the hours of operation resource.",
+            "value": "${data.aws_connect_hours_of_operation.this.id}"
+        },
+        "name": {
+            "description": "The name of the hours of operation.",
+            "value": "${data.aws_connect_hours_of_operation.this.name}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the hours of operation.",
+            "value": "${data.aws_connect_hours_of_operation.this.tags}"
+        },
+        "time_zone": {
+            "description": "The time zone in which the hours of operation are set.",
+            "value": "${data.aws_connect_hours_of_operation.this.time_zone}"
+        }
+    }
+}

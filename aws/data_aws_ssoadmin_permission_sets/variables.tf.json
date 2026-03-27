@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "instance_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS SSO instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

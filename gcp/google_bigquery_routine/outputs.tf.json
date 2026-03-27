@@ -1,0 +1,16 @@
+{
+    "output": {
+        "creation_time": {
+            "description": "Timestamp indicating when the BigQuery routine was initially created",
+            "value": "${google_bigquery_routine.this.creation_time}"
+        },
+        "id": {
+            "description": "Unique identifier for the BigQuery routine, useful for referencing in queries",
+            "value": "${google_bigquery_routine.this.id}"
+        },
+        "last_modified_time": {
+            "description": "Timestamp of the most recent update made to the BigQuery routine",
+            "value": "${google_bigquery_routine.this.last_modified_time}"
+        }
+    }
+}

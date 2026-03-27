@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Launch Template"
+  node:
+    label:
+      static: "[Data] Launch Template"
+      template: "[Data] Launch Template"
+    display_type: default
+
+discovery:
+  type: data_aws_launch_template
+  dnd_supported: false

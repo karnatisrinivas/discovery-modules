@@ -1,0 +1,79 @@
+{
+  "variable": {
+    "auto_inflate_enabled": [
+      {
+        "description": "Enable or disable automatic scaling of throughput units.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "capacity": [
+      {
+        "description": "The capacity of the Event Hub namespace in throughput units.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "dedicated_cluster_id": [
+      {
+        "description": "The ID of the dedicated cluster for the Event Hub namespace.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "local_authentication_enabled": [
+      {
+        "description": "Enable or disable local authentication for the Event Hub namespace.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "maximum_throughput_units": [
+      {
+        "description": "The maximum throughput units for the Event Hub namespace.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Event Hub namespace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Enable or disable public network access to the Event Hub namespace.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "description": "The SKU (pricing tier) of the Event Hub namespace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the Event Hub namespace.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

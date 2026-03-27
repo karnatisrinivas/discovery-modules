@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for accessing and managing the domain in AWS",
+            "value": "${aws_codeartifact_domain.this.arn}"
+        },
+        "asset_size_bytes": {
+            "description": "Total size of assets stored in the domain, useful for monitoring storage usage",
+            "value": "${aws_codeartifact_domain.this.asset_size_bytes}"
+        },
+        "created_time": {
+            "description": "Timestamp indicating when the domain was created",
+            "value": "${aws_codeartifact_domain.this.created_time}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the domain in configurations",
+            "value": "${aws_codeartifact_domain.this.id}"
+        },
+        "owner": {
+            "description": "AWS account ID of the domain owner, helpful for cross-account setups",
+            "value": "${aws_codeartifact_domain.this.owner}"
+        },
+        "repository_count": {
+            "description": "Number of repositories in the domain, useful for understanding domain usage",
+            "value": "${aws_codeartifact_domain.this.repository_count}"
+        },
+        "s3_bucket_arn": {
+            "description": "ARN of the S3 bucket used for domain storage",
+            "value": "${aws_codeartifact_domain.this.s3_bucket_arn}"
+        },
+        "tags_all": {
+            "description": "Complete list of tags assigned to the domain for categorization",
+            "value": "${aws_codeartifact_domain.this.tags_all}"
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "output": {
+        "allocated_storage": {
+            "description": "The amount of storage allocated for the database snapshot.",
+            "value": "${data.aws_db_snapshot.this.allocated_storage}"
+        },
+        "availability_zone": {
+            "description": "The Availability Zone where the DB snapshot is located.",
+            "value": "${data.aws_db_snapshot.this.availability_zone}"
+        },
+        "db_snapshot_arn": {
+            "description": "The Amazon Resource Name (ARN) for the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.db_snapshot_arn}"
+        },
+        "encrypted": {
+            "description": "Indicates whether the DB snapshot is encrypted.",
+            "value": "${data.aws_db_snapshot.this.encrypted}"
+        },
+        "engine": {
+            "description": "The database engine used for the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.engine}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine used for the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.engine_version}"
+        },
+        "id": {
+            "description": "The unique identifier for the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.id}"
+        },
+        "iops": {
+            "description": "The IOPS (Input/Output Operations Per Second) of the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.iops}"
+        },
+        "kms_key_id": {
+            "description": "The AWS KMS key identifier for an encrypted DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.kms_key_id}"
+        },
+        "license_model": {
+            "description": "The license model information for the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.license_model}"
+        },
+        "option_group_name": {
+            "description": "The option group name associated with the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.option_group_name}"
+        },
+        "original_snapshot_create_time": {
+            "description": "The time when the original snapshot was created.",
+            "value": "${data.aws_db_snapshot.this.original_snapshot_create_time}"
+        },
+        "port": {
+            "description": "The port number on which the database listens.",
+            "value": "${data.aws_db_snapshot.this.port}"
+        },
+        "snapshot_create_time": {
+            "description": "The time when the DB snapshot was created.",
+            "value": "${data.aws_db_snapshot.this.snapshot_create_time}"
+        },
+        "source_db_snapshot_identifier": {
+            "description": "The identifier of the source DB snapshot, if applicable.",
+            "value": "${data.aws_db_snapshot.this.source_db_snapshot_identifier}"
+        },
+        "source_region": {
+            "description": "The AWS region from which the DB snapshot was copied.",
+            "value": "${data.aws_db_snapshot.this.source_region}"
+        },
+        "status": {
+            "description": "The current status of the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.status}"
+        },
+        "storage_type": {
+            "description": "The type of storage used by the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.storage_type}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The VPC ID associated with the DB snapshot.",
+            "value": "${data.aws_db_snapshot.this.vpc_id}"
+        }
+    }
+}

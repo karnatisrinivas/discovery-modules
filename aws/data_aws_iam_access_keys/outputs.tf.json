@@ -1,0 +1,12 @@
+{
+    "output": {
+        "access_keys": {
+            "description": "A set of objects containing details about each AWS IAM access key, including the access key ID, creation date, and status.",
+            "value": "${data.aws_iam_access_keys.this.access_keys}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS IAM access keys data source.",
+            "value": "${data.aws_iam_access_keys.this.id}"
+        }
+    }
+}

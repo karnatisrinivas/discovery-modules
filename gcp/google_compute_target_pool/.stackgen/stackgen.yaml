@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Target Pool
+  node:
+    label:
+      static: Compute Target Pool
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_target_pool
+  dnd_supported: false

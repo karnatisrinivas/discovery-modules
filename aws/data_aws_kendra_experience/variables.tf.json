@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "experience_id": [
+      {
+        "description": "The unique identifier for the Kendra experience.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "index_id": [
+      {
+        "description": "The unique identifier for the Kendra index associated with the experience.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

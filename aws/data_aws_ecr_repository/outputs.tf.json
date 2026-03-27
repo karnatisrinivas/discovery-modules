@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ECR repository.",
+            "value": "${data.aws_ecr_repository.this.arn}"
+        },
+        "encryption_configuration": {
+            "description": "The encryption configuration for the repository, including type and KMS key.",
+            "value": "${data.aws_ecr_repository.this.encryption_configuration}"
+        },
+        "id": {
+            "description": "The ID of the ECR repository.",
+            "value": "${data.aws_ecr_repository.this.id}"
+        },
+        "image_scanning_configuration": {
+            "description": "Configuration for image scanning on the repository, indicating if scan on push is enabled.",
+            "value": "${data.aws_ecr_repository.this.image_scanning_configuration}"
+        },
+        "image_tag_mutability": {
+            "description": "The tag mutability setting for the repository, which defines if image tags can be overwritten.",
+            "value": "${data.aws_ecr_repository.this.image_tag_mutability}"
+        },
+        "most_recent_image_tags": {
+            "description": "A list of the most recent image tags in the repository.",
+            "value": "${data.aws_ecr_repository.this.most_recent_image_tags}"
+        },
+        "registry_id": {
+            "description": "The registry ID where the repository is located.",
+            "value": "${data.aws_ecr_repository.this.registry_id}"
+        },
+        "repository_url": {
+            "description": "The URL of the ECR repository.",
+            "value": "${data.aws_ecr_repository.this.repository_url}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the repository.",
+            "value": "${data.aws_ecr_repository.this.tags}"
+        }
+    }
+}

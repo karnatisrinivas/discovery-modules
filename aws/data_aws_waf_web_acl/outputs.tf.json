@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS WAF Web ACL.",
+            "value": "${data.aws_waf_web_acl.this.id}"
+        }
+    }
+}

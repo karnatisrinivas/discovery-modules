@@ -1,0 +1,39 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Elastic Load Balancer
+  node:
+    label:
+      static: Elastic Load Balancer
+      template: ${name}
+    display_type: default
+
+variables:
+  cross_zone_load_balancing:
+    description: "If true, cross-zone load balancing will be enabled."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  connection_draining:
+    description: If true, connection draining will be enabled.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  desync_mitigation_mode:
+    options: 
+      - defensive
+      - strictest
+      - monitor
+    ui_control: select
+    description: The desync mitigation mode for the LB.
+    type: string
+
+discovery:
+  type: aws_elb
+  dnd_supported: false
+  data_source: data_aws_elb

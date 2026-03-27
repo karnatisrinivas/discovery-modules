@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lakeformation Resource"
+  node:
+    label:
+      static: "[Data] Lakeformation Resource"
+      template: "[Data] Lakeformation Resource"
+    display_type: default
+
+discovery:
+  type: data_aws_lakeformation_resource
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Logging Metric
+  node:
+    label:
+      static: Logging Metric
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_logging_metric
+  dnd_supported: false

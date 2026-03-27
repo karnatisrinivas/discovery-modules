@@ -1,0 +1,48 @@
+{
+    "output": {
+        "base_forwarding_rule": {
+            "description": "Defines the core configuration of the forwarding rule in Google Cloud",
+            "value": "${google_compute_forwarding_rule.this.base_forwarding_rule}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp marking when the forwarding rule was created",
+            "value": "${google_compute_forwarding_rule.this.creation_timestamp}"
+        },
+        "effective_labels": {
+            "description": "Labels applied to the forwarding rule for organization and filtering",
+            "value": "${google_compute_forwarding_rule.this.effective_labels}"
+        },
+        "forwarding_rule_id": {
+            "description": "Unique identifier for managing the forwarding rule resource",
+            "value": "${google_compute_forwarding_rule.this.forwarding_rule_id}"
+        },
+        "id": {
+            "description": "Resource ID used for internal and API references",
+            "value": "${google_compute_forwarding_rule.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint for tracking updates to labels on the resource",
+            "value": "${google_compute_forwarding_rule.this.label_fingerprint}"
+        },
+        "psc_connection_id": {
+            "description": "Identifier for Private Service Connect connections associated with the rule",
+            "value": "${google_compute_forwarding_rule.this.psc_connection_id}"
+        },
+        "psc_connection_status": {
+            "description": "Current status of Private Service Connect connections",
+            "value": "${google_compute_forwarding_rule.this.psc_connection_status}"
+        },
+        "self_link": {
+            "description": "URL for accessing the forwarding rule resource directly",
+            "value": "${google_compute_forwarding_rule.this.self_link}"
+        },
+        "service_name": {
+            "description": "Name of the service associated with the forwarding rule",
+            "value": "${google_compute_forwarding_rule.this.service_name}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly set in Terraform for the forwarding rule",
+            "value": "${google_compute_forwarding_rule.this.terraform_labels}"
+        }
+    }
+}

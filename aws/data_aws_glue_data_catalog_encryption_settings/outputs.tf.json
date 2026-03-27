@@ -1,0 +1,12 @@
+{
+    "output": {
+        "data_catalog_encryption_settings": {
+            "description": "A list detailing the encryption settings for the AWS Glue Data Catalog, including connection password encryption and encryption at rest.",
+            "value": "${data.aws_glue_data_catalog_encryption_settings.this.data_catalog_encryption_settings}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Glue Data Catalog encryption settings.",
+            "value": "${data.aws_glue_data_catalog_encryption_settings.this.id}"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "output": {
+        "certificate_arn": {
+            "description": "The Amazon Resource Name (ARN) of the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.certificate_arn}"
+        },
+        "certificate_creation_date": {
+            "description": "The date when the DMS certificate was created.",
+            "value": "${data.aws_dms_certificate.this.certificate_creation_date}"
+        },
+        "certificate_owner": {
+            "description": "The owner of the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.certificate_owner}"
+        },
+        "id": {
+            "description": "The unique identifier for the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.id}"
+        },
+        "key_length": {
+            "description": "The length of the encryption key used by the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.key_length}"
+        },
+        "signing_algorithm": {
+            "description": "The algorithm used to sign the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.signing_algorithm}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the DMS certificate.",
+            "value": "${data.aws_dms_certificate.this.tags}"
+        },
+        "valid_from_date": {
+            "description": "The date from which the DMS certificate is valid.",
+            "value": "${data.aws_dms_certificate.this.valid_from_date}"
+        },
+        "valid_to_date": {
+            "description": "The date until which the DMS certificate remains valid.",
+            "value": "${data.aws_dms_certificate.this.valid_to_date}"
+        }
+    }
+}

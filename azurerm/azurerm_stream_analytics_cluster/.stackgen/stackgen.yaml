@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Stream Analytics Cluster
+  node:
+    label:
+      static: Stream Analytics Cluster
+      template: ${stream_analytics_cluster_name}
+    display_type: default
+
+discovery:
+  type: azurerm_stream_analytics_cluster
+  dnd_supported: false

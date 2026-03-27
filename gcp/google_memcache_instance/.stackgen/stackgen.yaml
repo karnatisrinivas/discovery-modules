@@ -1,0 +1,47 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Memcache Instance
+  node:
+    label:
+      static: Memcache Instance
+      template: ${name}
+    display_type: default
+
+variables:
+  memcache_version:
+    description: The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically determined by our system based on the latest supported minor version. Default value is MEMCACHE_1_5
+    type: string
+    options: 
+      - MEMCACHE_1_5
+      - MEMCACHE_1_6_15
+    ui_control: select
+  maintenance_policy:
+    attributes: 
+      day: 
+        label: Day
+        description: Day of the Maintenance
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - MONDAY
+          - TUESDAY
+          - WEDNESDAY
+          - THURSDAY
+          - FRIDAY
+          - SATURDAY
+          - SUNDAY
+          - DAY_OF_WEEK_UNSPECIFIED
+        ui_control: select
+    description: "Maintenance policy for an instance. If no values are set, maintenance will be scheduled at midnight on the day selected in UTC. Duration must be within [10,800 - 28,800] and must end with 's'."
+
+discovery:
+  type: google_memcache_instance
+  dnd_supported: false
+  references:
+    authorized_network:
+      from: google_compute_network
+      output: id

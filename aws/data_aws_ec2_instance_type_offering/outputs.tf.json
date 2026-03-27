@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific EC2 instance type offering.",
+            "value": "${data.aws_ec2_instance_type_offering.this.id}"
+        },
+        "instance_type": {
+            "description": "The type of EC2 instance that is being offered, such as t2.micro or m5.large.",
+            "value": "${data.aws_ec2_instance_type_offering.this.instance_type}"
+        }
+    }
+}

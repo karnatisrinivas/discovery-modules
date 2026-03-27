@@ -1,0 +1,165 @@
+{
+  "variable": {
+    "approval_config": [
+      {
+        "description": "Defines the approval configuration for the build trigger, specifying whether manual approval is required before running the build.",
+        "nullable": true,
+        "type": "list(object({approval_required: optional(bool)}))"
+      }
+    ],
+    "bitbucket_server_trigger_config": [
+      {
+        "description": "Defines the configuration for integrating a Bitbucket Server repository, including repository details and authentication settings.",
+        "nullable": true,
+        "type": "list(object({bitbucket_server_config_resource: string,project_key: string,repo_slug: string,pull_request: list(object({branch: string,comment_control: optional(string),invert_regex: optional(bool)})),push: list(object({branch: optional(string),invert_regex: optional(bool),tag: optional(string)}))}))"
+      }
+    ],
+    "build": [
+      {
+        "description": "Specifies the build configuration to execute, including required steps, options, and source settings.",
+        "nullable": true,
+        "type": "list(object({images: optional(list(string)),logs_bucket: optional(string),queue_ttl: optional(string),substitutions: optional(map(string)),tags: optional(list(string)),timeout: optional(string),artifacts: list(object({images: optional(list(string)),maven_artifacts: list(object({artifact_id: optional(string),group_id: optional(string),path: optional(string),repository: optional(string),version: optional(string)})),npm_packages: list(object({package_path: optional(string),repository: optional(string)})),objects: list(object({location: optional(string),paths: optional(list(string)),timing: optional(list(object({end_time:string,start_time:string})))})),python_packages: list(object({paths: optional(list(string)),repository: optional(string)}))})),available_secrets: list(object({secret_manager: list(object({env: string,version_name: string}))})),options: list(object({disk_size_gb: optional(number),dynamic_substitutions: optional(bool),env: optional(list(string)),log_streaming_option: optional(string),logging: optional(string),machine_type: optional(string),requested_verify_option: optional(string),secret_env: optional(list(string)),source_provenance_hash: optional(list(string)),substitution_option: optional(string),worker_pool: optional(string),volumes: list(object({name: optional(string),path: optional(string)}))})),secret: list(object({kms_key_name: string,secret_env: optional(map(string))})),source: list(object({repo_source: list(object({branch_name: optional(string),commit_sha: optional(string),dir: optional(string),invert_regex: optional(bool),project_id: optional(string),repo_name: string,substitutions: optional(map(string)),tag_name: optional(string)})),storage_source: list(object({bucket: string,generation: optional(string),object: string}))})),step: list(object({allow_exit_codes: optional(list(number)),allow_failure: optional(bool),args: optional(list(string)),dir: optional(string),entrypoint: optional(string),env: optional(list(string)),id: optional(string),name: string,script: optional(string),secret_env: optional(list(string)),timeout: optional(string),timing: optional(string),wait_for: optional(list(string)),volumes: list(object({name: string,path: string}))}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the description of the Cloud Build trigger, providing context or details about its purpose or functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Determines whether the Cloud Build trigger is disabled; set to true to disable execution.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "filename": [
+      {
+        "description": "Specifies the path to the build configuration file in the repository, such as a Dockerfile or cloudbuild.yaml.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the criteria for triggering builds, using a CEL expression to match repository events.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "git_file_source": [
+      {
+        "description": "Specifies the location of the Cloud Build configuration file in the repository, including the file path and branch or tag.",
+        "nullable": true,
+        "type": "list(object({bitbucket_server_config: optional(string),github_enterprise_config: optional(string),path: string,repo_type: string,repository: optional(string),revision: optional(string),uri: optional(string)}))"
+      }
+    ],
+    "github": [
+      {
+        "description": "Configuration for the GitHub repository, including repository name and owner details, required for setting up the Cloud Build trigger.",
+        "nullable": true,
+        "type": "list(object({enterprise_config_resource_name: optional(string),name: optional(string),owner: optional(string),pull_request: list(object({branch: string,comment_control: optional(string),invert_regex: optional(bool)})),push: list(object({branch: optional(string),invert_regex: optional(bool),tag: optional(string)}))}))"
+      }
+    ],
+    "ignored_files": [
+      {
+        "description": "Patterns for files to be ignored by the build trigger; supports glob syntax.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "include_build_logs": [
+      {
+        "description": "Specifies whether build logs should be included in the trigger notifications; requires a boolean value.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "included_files": [
+      {
+        "description": "Specifies the files or directories to include in the trigger, using glob patterns; at least one match is required for the trigger to run.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the region where the Cloud Build trigger is created; must match the location of the associated resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Cloud Build trigger, which must be unique within the project and adhere to naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "pubsub_config": [
+      {
+        "description": "Specifies the Pub/Sub configuration that triggers the build, including the topic and optional filters.",
+        "nullable": true,
+        "type": "list(object({service_account_email: optional(string),state: optional(string),subscription: optional(string),topic: string}))"
+      }
+    ],
+    "repository_event_config": [
+      {
+        "description": "Defines the repository event configuration, specifying the repository and event type that trigger the build.",
+        "nullable": true,
+        "type": "list(object({repository: optional(string),pull_request: list(object({branch: optional(string),comment_control: optional(string),invert_regex: optional(bool)})),push: list(object({branch: optional(string),invert_regex: optional(bool),tag: optional(string)}))}))"
+      }
+    ],
+    "service_account": [
+      {
+        "description": "Specifies the email of the service account to be used for the Cloud Build trigger; must have necessary permissions to execute builds.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_to_build": [
+      {
+        "description": "Specifies the source repository and branch or tag to build from; must match the configuration of the Cloud Build trigger.",
+        "nullable": true,
+        "type": "list(object({bitbucket_server_config: optional(string),github_enterprise_config: optional(string),ref: string,repo_type: string,repository: optional(string),uri: optional(string)}))"
+      }
+    ],
+    "substitutions": [
+      {
+        "description": "Key-value pairs used to substitute variables in the build configuration, allowing dynamic customization of build steps.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "List of tags to associate with the Cloud Build trigger for organizational or filtering purposes.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the Cloud Build trigger operation to complete, with optional configuration for create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "trigger_template": [
+      {
+        "description": "Defines the repository and branch or tag to monitor for changes that will trigger the build.",
+        "nullable": true,
+        "type": "list(object({branch_name: optional(string),commit_sha: optional(string),dir: optional(string),invert_regex: optional(bool),project_id: optional(string),repo_name: optional(string),tag_name: optional(string)}))"
+      }
+    ],
+    "webhook_config": [
+      {
+        "description": "Defines the configuration for a webhook trigger, including authentication and resource requirements for Cloud Build integration.",
+        "nullable": true,
+        "type": "list(object({secret: string,state: optional(string)}))"
+      }
+    ]
+  }
+}

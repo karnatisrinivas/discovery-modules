@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "account_id": [
+      {
+        "description": "The unique identifier for the AWS account to which the service will be delegated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

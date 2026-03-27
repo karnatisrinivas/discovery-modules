@@ -1,0 +1,68 @@
+{
+    "output": {
+        "base_model_arn": {
+            "description": "The Amazon Resource Name (ARN) of the base model used to create the custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.base_model_arn}"
+        },
+        "creation_time": {
+            "description": "The timestamp indicating when the custom model was created.",
+            "value": "${data.aws_bedrock_custom_model.this.creation_time}"
+        },
+        "hyperparameters": {
+            "description": "A set of key-value pairs representing the hyperparameters used in the model training.",
+            "value": "${data.aws_bedrock_custom_model.this.hyperparameters}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.id}"
+        },
+        "job_arn": {
+            "description": "The Amazon Resource Name (ARN) of the training job associated with the custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.job_arn}"
+        },
+        "job_name": {
+            "description": "The name of the training job used to create the custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.job_name}"
+        },
+        "job_tags": {
+            "description": "Tags associated with the training job for categorization or organization.",
+            "value": "${data.aws_bedrock_custom_model.this.job_tags}"
+        },
+        "model_arn": {
+            "description": "The Amazon Resource Name (ARN) of the deployed custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.model_arn}"
+        },
+        "model_kms_key_arn": {
+            "description": "The ARN of the AWS KMS key used to encrypt the model.",
+            "value": "${data.aws_bedrock_custom_model.this.model_kms_key_arn}"
+        },
+        "model_name": {
+            "description": "The name assigned to the custom model.",
+            "value": "${data.aws_bedrock_custom_model.this.model_name}"
+        },
+        "model_tags": {
+            "description": "Tags associated with the custom model for categorization or organization.",
+            "value": "${data.aws_bedrock_custom_model.this.model_tags}"
+        },
+        "output_data_config": {
+            "description": "Configuration details of the S3 bucket where the model's output data is stored.",
+            "value": "${data.aws_bedrock_custom_model.this.output_data_config}"
+        },
+        "training_data_config": {
+            "description": "Configuration details of the S3 bucket containing the training data.",
+            "value": "${data.aws_bedrock_custom_model.this.training_data_config}"
+        },
+        "training_metrics": {
+            "description": "Metrics related to the model's training performance, such as training loss.",
+            "value": "${data.aws_bedrock_custom_model.this.training_metrics}"
+        },
+        "validation_data_config": {
+            "description": "Configuration details of the S3 bucket containing the validation data.",
+            "value": "${data.aws_bedrock_custom_model.this.validation_data_config}"
+        },
+        "validation_metrics": {
+            "description": "Metrics related to the model's validation performance, such as validation loss.",
+            "value": "${data.aws_bedrock_custom_model.this.validation_metrics}"
+        }
+    }
+}

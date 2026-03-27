@@ -1,0 +1,16 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag used for optimistic concurrency control in IAM policy updates",
+            "value": "${data.google_storage_bucket_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM policy associated with the storage bucket",
+            "value": "${data.google_storage_bucket_iam_policy.this.id}"
+        },
+        "policy_data": {
+            "description": "Serialized IAM policy for auditing and debugging access control",
+            "value": "${data.google_storage_bucket_iam_policy.this.policy_data}"
+        }
+    }
+}

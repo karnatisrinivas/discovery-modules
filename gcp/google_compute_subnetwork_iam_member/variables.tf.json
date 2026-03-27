@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a condition under which the IAM binding applies, using an expression, title, and optional description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to be granted the IAM role, such as a user, group, or service account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member for the subnetwork. Must be a predefined or custom IAM role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork to which the IAM member policy will be applied; must be in the same region as the associated resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

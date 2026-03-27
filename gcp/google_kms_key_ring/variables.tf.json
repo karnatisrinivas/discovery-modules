@@ -1,0 +1,23 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The resource name for the KeyRing."
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "The location for the KeyRing."
+            }
+        ],
+        "project": [
+            {
+                "type": "string",
+                "description": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
+                "nullable": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the Amazon Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

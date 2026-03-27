@@ -1,0 +1,59 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Elasticache Replication Group
+  node:
+    label:
+      static: Elasticache Replication Group
+      template: Elasticache Replication Group
+    display_type: default
+
+variables:
+  auth_token_update_strategy:
+    options: 
+      - SET
+      - ROTATE
+      - DELETE
+    ui_control: select
+    description: Specifies the strategy to use to update the auth token
+    type: string
+  automatic_failover_enabled:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Specifies whether a read-only replica is automatically promoted to read/write primary if the existing primary fails"
+  apply_immediately:
+    description: Specifies whether any modifications are applied immediately, or during the next maintenance window
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  at_rest_encryption_enabled:
+    description: Whether to enable encryption at rest
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  transit_encryption_enabled:
+    description: Whether to enable encryption in transit
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  engine:
+    description: The name of the cache engine to be used for the clusters in this replication group
+    type: string
+    options: 
+      - redis
+    ui_control: select
+
+discovery:
+  type: aws_elasticache_replication_group
+  dnd_supported: false
+  data_source: data_aws_elasticache_replication_group

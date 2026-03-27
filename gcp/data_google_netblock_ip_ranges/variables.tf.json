@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "range_type": [
+      {
+        "description": "Specifies the type of IP range to be included, such as INTERNAL or EXTERNAL; must match valid range types supported by Google Cloud.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

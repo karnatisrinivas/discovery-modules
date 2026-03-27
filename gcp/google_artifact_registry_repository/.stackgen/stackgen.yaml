@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Artifact Registry Repository
+  node:
+    label:
+      static: Artifact Registry Repository
+      template: ${repository_id}
+    display_type: default
+
+discovery:
+  type: google_artifact_registry_repository
+  dnd_supported: false
+  data_source: data_google_artifact_registry_repository
+  references:
+    kms_key_name:
+      from: google_kms_crypto_key
+      output: id

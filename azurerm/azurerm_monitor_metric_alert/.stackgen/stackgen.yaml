@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitor Metric Alert
+  node:
+    label:
+      static: Monitor Metric Alert
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_monitor_metric_alert
+  dnd_supported: false
+  references:
+    action_group_id:
+      from: azurerm_monitor_action_group
+      output: id

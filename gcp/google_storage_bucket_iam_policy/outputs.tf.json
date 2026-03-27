@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Entity tag for detecting updates to the bucket's IAM policy",
+            "value": "${google_storage_bucket_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for managing and referencing the bucket's IAM policy",
+            "value": "${google_storage_bucket_iam_policy.this.id}"
+        }
+    }
+}

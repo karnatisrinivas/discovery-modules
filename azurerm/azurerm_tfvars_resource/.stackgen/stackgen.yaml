@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Azure Tfvars Resource
+  node:
+    label:
+      static: Azure Tfvars Resource
+      template: Azure Tfvars Resource
+    display_type: default
+
+discovery:
+  type: azurerm_tfvars_resource
+  dnd_supported: false

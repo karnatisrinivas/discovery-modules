@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS service principal.",
+            "value": "${data.aws_service_principal.this.id}"
+        },
+        "name": {
+            "description": "The name of the AWS service principal.",
+            "value": "${data.aws_service_principal.this.name}"
+        },
+        "region": {
+            "description": "The AWS region associated with the service principal.",
+            "value": "${data.aws_service_principal.this.region}"
+        },
+        "suffix": {
+            "description": "The suffix used for the AWS service principal.",
+            "value": "${data.aws_service_principal.this.suffix}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific EC2 Transit Gateway VPC Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachments.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all EC2 Transit Gateway VPC Attachments.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachments.this.ids}"
+        }
+    }
+}

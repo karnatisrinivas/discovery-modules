@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific version of the AWS MSK Kafka.",
+            "value": "${data.aws_msk_kafka_version.this.id}"
+        },
+        "status": {
+            "description": "The current status of the AWS MSK Kafka version, indicating its availability or readiness.",
+            "value": "${data.aws_msk_kafka_version.this.status}"
+        },
+        "version": {
+            "description": "The specific version number of the AWS MSK Kafka being referenced.",
+            "value": "${data.aws_msk_kafka_version.this.version}"
+        }
+    }
+}

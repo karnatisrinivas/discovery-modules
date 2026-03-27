@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "api_id": [
+      {
+        "description": "Identifier of the API Gateway V2 API to which the route belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "api_key_required": [
+      {
+        "description": "Indicates whether an API key is required for the route. Must be set to true if the route is intended to enforce API key usage.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "authorization_scopes": [
+      {
+        "description": "Defines the OAuth scopes required for API route authorization, applicable only when using OAuth 2.0 authorization.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "authorization_type": [
+      {
+        "description": "Defines the type of authorization used for the route, such as NONE, AWS_IAM, or CUSTOM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "authorizer_id": [
+      {
+        "description": "Specifies the ID of the authorizer to be associated with the route, required if the route requires authorization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "model_selection_expression": [
+      {
+        "description": "Specifies the selection expression for identifying a model for incoming request data, required for routes with request models.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "operation_name": [
+      {
+        "description": "Defines the name of the operation associated with the API Gateway route; required for uniquely identifying the route's functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "request_models": [
+      {
+        "description": "Specifies the mapping of request models for the route, where the key is the content type, and the value is the model's name.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "request_parameter": [
+      {
+        "description": "Specifies the key-value mapping of request parameters to be passed to the integration, requiring valid keys and values to match the integration's configuration.",
+        "nullable": true,
+        "type": "list(object({request_parameter_key: string,required: bool}))"
+      }
+    ],
+    "route_key": [
+      {
+        "description": "Defines the unique key for the route, typically combining the HTTP method and resource path, required for routing API requests.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "route_response_selection_expression": [
+      {
+        "description": "Defines the selection expression used to choose a route response for an API Gateway route; must be a valid expression based on request data.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "target": [
+      {
+        "description": "Specifies the integration target for the route, such as an AWS service or Lambda function ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

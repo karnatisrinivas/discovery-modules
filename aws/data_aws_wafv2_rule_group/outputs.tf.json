@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_wafv2_rule_group.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_wafv2_rule_group.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_wafv2_rule_group.this.id}"
+        }
+    }
+}

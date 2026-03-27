@@ -1,0 +1,215 @@
+{
+    "variable": {
+      "apply_immediately": [
+        {
+          "description": "Determines whether modifications to the cluster are applied immediately or during the next maintenance window.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "auto_minor_version_upgrade": [
+        {
+          "description": "Determines whether minor engine version upgrades are automatically applied during the maintenance window.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "availability_zone": [
+        {
+          "description": "Specifies the availability zone where the ElastiCache cluster will be created; must match one of the AZs in the region.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "az_mode": [
+        {
+          "description": "Specifies whether the cluster is created in a single availability zone or across multiple availability zones.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "cluster_id": [
+        {
+          "description": "Unique identifier for the ElastiCache cluster, required for managing the cluster resources.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "engine": [
+        {
+          "description": "Specifies the database engine for the Elasticache cluster, such as \"redis\" or \"memcached\".",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "engine_version": [
+        {
+          "description": "Specifies the version of the cache engine to be used, must be compatible with the chosen engine type.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "final_snapshot_identifier": [
+        {
+          "description": "Identifier for the final snapshot to be created when the cluster is deleted. Must be unique and cannot exceed 255 characters.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "ip_discovery": [
+        {
+          "description": "Specifies the IP discovery method for the cluster, determining how the cluster nodes are accessed and identified.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "log_delivery_configuration": [
+        {
+          "description": "Configuration specifying the delivery method and destination for Redis engine logs, such as Amazon CloudWatch Logs or Amazon S3.",
+          "nullable": true,
+          "type": "list(object({destination: string,destination_type: string,log_format: string,log_type: string}))"
+        }
+      ],
+      "maintenance_window": [
+        {
+          "description": "Specifies the preferred weekly time range for system maintenance, in UTC format (e.g., \"sun:23:00-mon:01:30\").",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "network_type": [
+        {
+          "description": "Specifies the type of network the cluster will use, such as 'vpc' for Virtual Private Cloud or 'classic' for the EC2-Classic network.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "node_type": [
+        {
+          "description": "Specifies the instance type for the cache cluster, determining the computational and memory capacity. Must be a valid node type supported by Amazon ElastiCache.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "notification_topic_arn": [
+        {
+          "description": "ARN of the SNS topic to which notifications will be sent; must be configured in the same AWS account.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "num_cache_nodes": [
+        {
+          "description": "Specifies the number of cache nodes in the cluster; must be between 1 and 50, depending on the chosen node type.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "outpost_mode": [
+        {
+          "description": "Determines whether the cluster is created in an Outpost or a standard AWS region; must be set to 'outpost' for Outpost deployments.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "parameter_group_name": [
+        {
+          "description": "Specifies the name of the parameter group to associate with the ElastiCache cluster, ensuring compatibility with the desired configuration settings.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "port": [
+        {
+          "description": "Specifies the port number for the cache cluster, typically 6379 for Redis or 11211 for Memcached.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "preferred_availability_zones": [
+        {
+          "description": "Specifies the availability zones for the cluster, ensuring high availability and fault tolerance; must match the region of the cluster.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "preferred_outpost_arn": [
+        {
+          "description": "Specifies the ARN of the preferred Outpost for the cache cluster; applicable only when deploying on Outposts.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "replication_group_id": [
+        {
+          "description": "Specifies the identifier of the replication group to associate the cluster with; must be an existing replication group ID.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "security_group_ids": [
+        {
+          "description": "List of security group IDs to associate with the ElastiCache cluster, ensuring network access control.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "snapshot_arns": [
+        {
+          "description": "List of Amazon Resource Names (ARNs) for Redis snapshot files to seed the cluster during creation.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "snapshot_name": [
+        {
+          "description": "Name of the snapshot to restore from when creating the ElastiCache cluster; must match an existing snapshot in the same region.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "snapshot_retention_limit": [
+        {
+          "description": "Number of days to retain automatic backups before deletion. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "snapshot_window": [
+        {
+          "description": "Time range (UTC) during which ElastiCache will create a snapshot, must be a non-overlapping window within the backup retention period.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "subnet_group_name": [
+        {
+          "description": "Specifies the name of the subnet group to associate with the ElastiCache cluster, ensuring it operates within the designated VPC subnets.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "tags": [
+        {
+          "description": "Key-value pairs to associate with the Elasticache cluster for resource organization and management.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Defines the amount of time to wait for operations like creation, update, and deletion of the Elasticache cluster.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ],
+      "transit_encryption_enabled": [
+        {
+          "description": "Determines whether transit encryption is enabled for the cluster, requiring TLS-enabled connections.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ]
+    }
+  }
+  

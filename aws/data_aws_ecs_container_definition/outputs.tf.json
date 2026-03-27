@@ -1,0 +1,40 @@
+{
+    "output": {
+        "cpu": {
+            "description": "The amount of CPU units to allocate to the container.",
+            "value": "${data.aws_ecs_container_definition.this.cpu}"
+        },
+        "disable_networking": {
+            "description": "A flag indicating whether networking is disabled within the container.",
+            "value": "${data.aws_ecs_container_definition.this.disable_networking}"
+        },
+        "docker_labels": {
+            "description": "A set of key-value pairs for Docker labels assigned to the container.",
+            "value": "${data.aws_ecs_container_definition.this.docker_labels}"
+        },
+        "environment": {
+            "description": "Environment variables available to the container.",
+            "value": "${data.aws_ecs_container_definition.this.environment}"
+        },
+        "id": {
+            "description": "The unique identifier for the container definition.",
+            "value": "${data.aws_ecs_container_definition.this.id}"
+        },
+        "image": {
+            "description": "The Docker image used for the container.",
+            "value": "${data.aws_ecs_container_definition.this.image}"
+        },
+        "image_digest": {
+            "description": "The image digest for the container's image.",
+            "value": "${data.aws_ecs_container_definition.this.image_digest}"
+        },
+        "memory": {
+            "description": "The hard limit of memory (in MiB) allocated to the container.",
+            "value": "${data.aws_ecs_container_definition.this.memory}"
+        },
+        "memory_reservation": {
+            "description": "The soft limit of memory (in MiB) reserved for the container.",
+            "value": "${data.aws_ecs_container_definition.this.memory_reservation}"
+        }
+    }
+}

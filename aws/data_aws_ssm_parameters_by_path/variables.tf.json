@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "path": [
+      {
+        "description": "The hierarchy for the parameter store parameters. This is the path under which the parameters are stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "recursive": [
+      {
+        "description": "Indicates whether to retrieve parameters recursively from the specified path.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "with_decryption": [
+      {
+        "description": "Indicates whether to retrieve parameter values with decryption if they are encrypted.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

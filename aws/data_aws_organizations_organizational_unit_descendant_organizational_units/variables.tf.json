@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "parent_id": [
+      {
+        "description": "The unique identifier (ID) of the parent organizational unit (OU) or root from which the descendant OUs are retrieved.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

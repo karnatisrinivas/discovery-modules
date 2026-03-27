@@ -1,0 +1,68 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CDN Endpoint
+  node:
+    label:
+      static: CDN Endpoint
+      template: ${name}
+    display_type: default
+
+variables:
+  geo_filter:
+    description: A set of Geo Filters for this CDN Endpoint.
+    attributes: 
+      action: 
+        ui_control: select
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Allow
+          - Block
+  is_compression_enabled:
+    description: Indicates whether compression is to be enabled.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  querystring_caching_behaviour:
+    ui_control: select
+    description: Sets query string caching behavior.
+    type: string
+    options: 
+      - IgnoreQueryString
+      - BypassCaching
+      - UseQueryString
+      - NotSet
+  optimization_type:
+    description: "What types of optimization should this CDN Endpoint optimize for?"
+    type: string
+    options: 
+      - DynamicSiteAcceleration
+      - GeneralMediaStreaming
+      - GeneralWebDelivery
+      - LargeFileDownload
+      - VideoOnDemandMediaStreaming
+    ui_control: select
+  is_http_allowed:
+    description: Specifies if HTTP allowed.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  is_https_allowed:
+    description: Specifies if HTTPS allowed.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_cdn_endpoint
+  dnd_supported: false

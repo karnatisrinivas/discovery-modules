@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "network_interface_id": [
+      {
+        "description": "Specifies the ID of the network interface to associate with the security group; must be a valid network interface in the same region as the security group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_security_group_id": [
+      {
+        "description": "Specifies the ID of the network security group to associate with the network interface.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeouts for creating, updating, and deleting the network interface security group association.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string)})"
+      }
+    ]
+  }
+}

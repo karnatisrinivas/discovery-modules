@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Reader",
+        "resource_type": "aws_vpc",
+        "description": "Read VPCs",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:DescribeVpcs"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Writer",
+        "resource_type": "aws_vpc",
+        "description": "Create/Delete VPCs, subnets and route tables",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:CreateVpc",
+                        "ec2:DeleteVpc",
+                        "ec2:ModifyVpcAttribute",
+                        "ec2:CreateSubnet",
+                        "ec2:DeleteSubnet",
+                        "ec2:CreateRouteTable",
+                        "ec2:DeleteRouteTable"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Admin",
+        "resource_type": "aws_vpc",
+        "description": "Allows all actions",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:*"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    }
+]

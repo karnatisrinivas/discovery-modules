@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Address
+  node:
+    label:
+      static: Compute Address
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_address
+  dnd_supported: false

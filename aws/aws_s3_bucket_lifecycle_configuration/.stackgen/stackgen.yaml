@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket Lifecycle Configuration
+  node:
+    label:
+      static: S3 Bucket Lifecycle Configuration
+      template: ${bucket}
+    display_type: default
+
+discovery:
+  type: aws_s3_bucket_lifecycle_configuration
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: id

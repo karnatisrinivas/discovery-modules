@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Pubsub Topic Iam Binding
+  node:
+    label:
+      static: Pubsub Topic Iam Binding
+      template: ${topic}
+    display_type: default
+
+discovery:
+  type: google_pubsub_topic_iam_binding
+  dnd_supported: false
+  references:
+    topic:
+      from: google_pubsub_topic
+      output: name

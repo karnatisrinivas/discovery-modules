@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Globalaccelerator Custom Routing Accelerator"
+  node:
+    label:
+      static: "[Data] Globalaccelerator Custom Routing Accelerator"
+      template: "[Data] Globalaccelerator Custom Routing Accelerator"
+    display_type: default
+
+discovery:
+  type: data_aws_globalaccelerator_custom_routing_accelerator
+  dnd_supported: false

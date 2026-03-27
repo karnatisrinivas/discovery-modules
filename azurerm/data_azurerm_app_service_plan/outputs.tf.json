@@ -1,0 +1,52 @@
+{
+    "output": {
+        "app_service_environment_id": {
+            "description": "The ID of the App Service Environment",
+            "value": "${data.azurerm_app_service_plan.this.app_service_environment_id}"
+        },
+        "id": {
+            "description": "The ID of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.id}"
+        },
+        "kind": {
+            "description": "The Kind of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.kind}"
+        },
+        "location": {
+            "description": "The Location of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.location}"
+        },
+        "maximum_elastic_worker_count": {
+            "description": "The Maximum Elastic Worker Count of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.maximum_elastic_worker_count}"
+        },
+        "os_type": {
+            "description": "The OS Type of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.os_type}"
+        },
+        "per_site_scaling_enabled": {
+            "description": "Whether the App Service Plan has Per Site Scaling Enabled",
+            "value": "${data.azurerm_app_service_plan.this.per_site_scaling_enabled}"
+        },
+        "reserved": {
+            "description": "Whether the App Service Plan is Reserved",
+            "value": "${data.azurerm_app_service_plan.this.reserved}"
+        },
+        "sku_name": {
+            "description": "The SKU Name of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.sku_name}"
+        },
+        "tags": {
+            "description": "A mapping of tags assigned to the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.tags}"
+        },
+        "worker_count": {
+            "description": "The Worker Count of the App Service Plan",
+            "value": "${data.azurerm_app_service_plan.this.worker_count}"
+        },
+        "zone_balancing_enabled": {
+            "description": "Whether the App Service Plan has Zone Balancing Enabled",
+            "value": "${data.azurerm_app_service_plan.this.zone_balancing_enabled}"
+        }
+    }
+}

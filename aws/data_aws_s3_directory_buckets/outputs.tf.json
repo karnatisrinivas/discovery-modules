@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the specified S3 directory buckets.",
+            "value": "${data.aws_s3_directory_buckets.this.arns}"
+        },
+        "buckets": {
+            "description": "A list of bucket names for the specified S3 directory buckets.",
+            "value": "${data.aws_s3_directory_buckets.this.buckets}"
+        },
+        "id": {
+            "description": "The identifier for the data source representing the S3 directory buckets.",
+            "value": "${data.aws_s3_directory_buckets.this.id}"
+        }
+    }
+}

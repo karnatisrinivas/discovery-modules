@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "group": [
+      {
+        "description": "Specifies the name of the resource group where the resource will be created. Must be a non-empty string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the resource. This value must be unique within the resource group and cannot be left empty.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "port": [
+      {
+        "description": "Specifies the port number to be used by the resource. Must be a valid integer.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Optional configuration for operation timeouts. Can include 'create' and 'delete' properties, both of which accept strings in duration format (e.g., '30m').",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Optional field specifying the availability zone where the resource should be deployed. If omitted, defaults may apply.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+    "output": {
+        "account_enabled": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.account_enabled}"
+        },
+        "alternative_names": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.alternative_names}"
+        },
+        "app_role_assignment_required": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.app_role_assignment_required}"
+        },
+        "app_role_ids": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.app_role_ids}"
+        },
+        "app_roles": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.app_roles}"
+        },
+        "application_tenant_id": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.application_tenant_id}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.description}"
+        },
+        "feature_tags": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.feature_tags}"
+        },
+        "features": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.features}"
+        },
+        "homepage_url": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.homepage_url}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.id}"
+        },
+        "login_url": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.login_url}"
+        },
+        "logout_url": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.logout_url}"
+        },
+        "notes": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.notes}"
+        },
+        "notification_email_addresses": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.notification_email_addresses}"
+        },
+        "oauth2_permission_scope_ids": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.oauth2_permission_scope_ids}"
+        },
+        "oauth2_permission_scopes": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.oauth2_permission_scopes}"
+        },
+        "preferred_single_sign_on_mode": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.preferred_single_sign_on_mode}"
+        },
+        "redirect_uris": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.redirect_uris}"
+        },
+        "saml_metadata_url": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.saml_metadata_url}"
+        },
+        "saml_single_sign_on": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.saml_single_sign_on}"
+        },
+        "service_principal_names": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.service_principal_names}"
+        },
+        "sign_in_audience": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.sign_in_audience}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.azuread_service_principal.this.tags}"
+        }
+    }
+}

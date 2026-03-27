@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Subnetwork Iam Member
+  node:
+    label:
+      static: Compute Subnetwork Iam Member
+      template: ${member}
+    display_type: default
+
+discovery:
+  type: google_compute_subnetwork_iam_member
+  dnd_supported: false
+  references:
+    subnetwork:
+      from: google_compute_subnetwork
+      output: name

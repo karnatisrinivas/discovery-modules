@@ -1,0 +1,20 @@
+{
+    "output": {
+        "aliases": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspaces.this.aliases}"
+        },
+        "arns": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspaces.this.arns}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspaces.this.id}"
+        },
+        "workspace_ids": {
+            "description": "",
+            "value": "${data.aws_prometheus_workspaces.this.workspace_ids}"
+        }
+    }
+}

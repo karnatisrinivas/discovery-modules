@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CodeStar Connections connection.",
+            "value": "${data.aws_codestarconnections_connection.this.arn}"
+        },
+        "connection_status": {
+            "description": "The current status of the CodeStar Connections connection.",
+            "value": "${data.aws_codestarconnections_connection.this.connection_status}"
+        },
+        "host_arn": {
+            "description": "The ARN of the host associated with the connection.",
+            "value": "${data.aws_codestarconnections_connection.this.host_arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the CodeStar Connections connection.",
+            "value": "${data.aws_codestarconnections_connection.this.id}"
+        },
+        "name": {
+            "description": "The name of the CodeStar Connections connection.",
+            "value": "${data.aws_codestarconnections_connection.this.name}"
+        },
+        "provider_type": {
+            "description": "The type of provider used for the connection, such as GitHub or Bitbucket.",
+            "value": "${data.aws_codestarconnections_connection.this.provider_type}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the CodeStar Connections connection.",
+            "value": "${data.aws_codestarconnections_connection.this.tags}"
+        }
+    }
+}

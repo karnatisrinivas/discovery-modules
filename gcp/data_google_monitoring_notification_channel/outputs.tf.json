@@ -1,0 +1,32 @@
+{
+    "output": {
+        "description": {
+            "description": "Detailed explanation of the notification channel's purpose and functionality",
+            "value": "${data.google_monitoring_notification_channel.this.description}"
+        },
+        "enabled": {
+            "description": "Indicates if the notification channel is actively sending alerts",
+            "value": "${data.google_monitoring_notification_channel.this.enabled}"
+        },
+        "force_delete": {
+            "description": "Specifies whether the channel can be deleted regardless of dependencies",
+            "value": "${data.google_monitoring_notification_channel.this.force_delete}"
+        },
+        "id": {
+            "description": "Unique identifier for the notification channel within Google Cloud",
+            "value": "${data.google_monitoring_notification_channel.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name assigned to the notification channel",
+            "value": "${data.google_monitoring_notification_channel.this.name}"
+        },
+        "sensitive_labels": {
+            "description": "Key-value pairs containing sensitive configuration details",
+            "value": "${data.google_monitoring_notification_channel.this.sensitive_labels}"
+        },
+        "verification_status": {
+            "description": "Current verification status of the notification channel",
+            "value": "${data.google_monitoring_notification_channel.this.verification_status}"
+        }
+    }
+}

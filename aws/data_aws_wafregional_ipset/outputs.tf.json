@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specified AWS WAF Regional IP Set.",
+            "value": "${data.aws_wafregional_ipset.this.id}"
+        }
+    }
+}

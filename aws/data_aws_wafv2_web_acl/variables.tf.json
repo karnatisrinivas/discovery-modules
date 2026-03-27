@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scope": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

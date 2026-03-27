@@ -1,0 +1,34 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Security Group Rule
+  node:
+    label:
+      static: Security Group Rule
+      template: Security Group Rule
+    display_type: default
+
+variables:
+  type:
+    options: 
+      - ingress
+      - egress
+    ui_control: select
+    description: Type of rule being created.
+    type: string
+  self:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `Cidr Blocks`, `Ipv6 Cidr Blocks`, or `Source Security Group Id`."
+
+discovery:
+  type: aws_security_group_rule
+  dnd_supported: false
+  references:
+    security_group_id:
+      from: aws_security_group
+      output: id

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Virtual Gateway"
+  node:
+    label:
+      static: "[Data] Appmesh Virtual Gateway"
+      template: "[Data] Appmesh Virtual Gateway"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_virtual_gateway
+  dnd_supported: false

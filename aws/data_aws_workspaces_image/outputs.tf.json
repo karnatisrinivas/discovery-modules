@@ -1,0 +1,28 @@
+{
+    "output": {
+        "description": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.id}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.name}"
+        },
+        "operating_system_type": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.operating_system_type}"
+        },
+        "required_tenancy": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.required_tenancy}"
+        },
+        "state": {
+            "description": "",
+            "value": "${data.aws_workspaces_image.this.state}"
+        }
+    }
+}

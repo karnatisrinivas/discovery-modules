@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Version identifier for tracking changes to the IAM binding",
+            "value": "${google_organization_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM binding within the organization",
+            "value": "${google_organization_iam_binding.this.id}"
+        }
+    }
+}

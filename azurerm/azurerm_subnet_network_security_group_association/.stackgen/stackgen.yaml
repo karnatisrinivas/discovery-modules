@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Subnet Network Security Group Association
+  node:
+    label:
+      static: Subnet Network Security Group Association
+      template: Subnet Network Security Group Association
+    display_type: default
+
+discovery:
+  type: azurerm_subnet_network_security_group_association
+  dnd_supported: false
+  references:
+    network_security_group_id:
+      from: azurerm_network_security_group
+      output: id
+    subnet_id:
+      from: azurerm_subnet
+      output: id

@@ -1,0 +1,156 @@
+{
+    "output": {
+        "app_settings": {
+            "description": "Configuration settings for the function app as key-value pairs",
+            "value": "${data.azurerm_windows_function_app.this.app_settings}"
+        },
+        "auth_settings": {
+            "description": "OAuth2 authentication settings for securing API access",
+            "value": "${data.azurerm_windows_function_app.this.auth_settings}"
+        },
+        "auth_settings_v2": {
+            "description": "Advanced authentication settings for enhanced security",
+            "value": "${data.azurerm_windows_function_app.this.auth_settings_v2}"
+        },
+        "backup": {
+            "description": "Backup configuration including schedule and storage details",
+            "value": "${data.azurerm_windows_function_app.this.backup}"
+        },
+        "builtin_logging_enabled": {
+            "description": "Indicates if built-in logging is activated for troubleshooting",
+            "value": "${data.azurerm_windows_function_app.this.builtin_logging_enabled}"
+        },
+        "client_certificate_enabled": {
+            "description": "Specifies if client certificates are required for HTTPS connections",
+            "value": "${data.azurerm_windows_function_app.this.client_certificate_enabled}"
+        },
+        "client_certificate_exclusion_paths": {
+            "description": "Paths excluded from client certificate requirement",
+            "value": "${data.azurerm_windows_function_app.this.client_certificate_exclusion_paths}"
+        },
+        "client_certificate_mode": {
+            "description": "Mode for handling client certificates in HTTPS requests",
+            "value": "${data.azurerm_windows_function_app.this.client_certificate_mode}"
+        },
+        "connection_string": {
+            "description": "Connection strings for the function app's external resources",
+            "value": "${data.azurerm_windows_function_app.this.connection_string}"
+        },
+        "content_share_force_disabled": {
+            "description": "Indicates if content sharing is forcibly disabled",
+            "value": "${data.azurerm_windows_function_app.this.content_share_force_disabled}"
+        },
+        "custom_domain_verification_id": {
+            "description": "ID used for verifying custom domain ownership",
+            "value": "${data.azurerm_windows_function_app.this.custom_domain_verification_id}"
+        },
+        "daily_memory_time_quota": {
+            "description": "Memory usage quota set for the function app per day",
+            "value": "${data.azurerm_windows_function_app.this.daily_memory_time_quota}"
+        },
+        "default_hostname": {
+            "description": "Primary hostname of the function app for routing requests",
+            "value": "${data.azurerm_windows_function_app.this.default_hostname}"
+        },
+        "enabled": {
+            "description": "Status indicating if the function app is active",
+            "value": "${data.azurerm_windows_function_app.this.enabled}"
+        },
+        "ftp_publish_basic_authentication_enabled": {
+            "description": "Determines if basic authentication for FTP publishing is enabled",
+            "value": "${data.azurerm_windows_function_app.this.ftp_publish_basic_authentication_enabled}"
+        },
+        "functions_extension_version": {
+            "description": "Version of the functions runtime extension in use",
+            "value": "${data.azurerm_windows_function_app.this.functions_extension_version}"
+        },
+        "hosting_environment_id": {
+            "description": "Identifier for the hosting environment of the function app",
+            "value": "${data.azurerm_windows_function_app.this.hosting_environment_id}"
+        },
+        "https_only": {
+            "description": "Ensures only HTTPS connections are allowed",
+            "value": "${data.azurerm_windows_function_app.this.https_only}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_windows_function_app.this.id}"
+        },
+        "identity": {
+            "description": "Identity details including principal and tenant IDs",
+            "value": "${data.azurerm_windows_function_app.this.identity}"
+        },
+        "kind": {
+            "description": "Type of the function app, typically 'functionapp'",
+            "value": "${data.azurerm_windows_function_app.this.kind}"
+        },
+        "location": {
+            "description": "Azure region where the function app is hosted",
+            "value": "${data.azurerm_windows_function_app.this.location}"
+        },
+        "outbound_ip_address_list": {
+            "description": "List of IP addresses used for outbound traffic",
+            "value": "${data.azurerm_windows_function_app.this.outbound_ip_address_list}"
+        },
+        "outbound_ip_addresses": {
+            "description": "Comma-separated IPs for outbound traffic management",
+            "value": "${data.azurerm_windows_function_app.this.outbound_ip_addresses}"
+        },
+        "possible_outbound_ip_address_list": {
+            "description": "Potential IP addresses for future outbound traffic",
+            "value": "${data.azurerm_windows_function_app.this.possible_outbound_ip_address_list}"
+        },
+        "possible_outbound_ip_addresses": {
+            "description": "Possible IPs for outbound traffic as a single string",
+            "value": "${data.azurerm_windows_function_app.this.possible_outbound_ip_addresses}"
+        },
+        "public_network_access_enabled": {
+            "description": "Indicates if public network access is allowed",
+            "value": "${data.azurerm_windows_function_app.this.public_network_access_enabled}"
+        },
+        "service_plan_id": {
+            "description": "ID of the service plan associated with the function app",
+            "value": "${data.azurerm_windows_function_app.this.service_plan_id}"
+        },
+        "site_config": {
+            "description": "Configuration settings for the site's runtime behavior",
+            "value": "${data.azurerm_windows_function_app.this.site_config}"
+        },
+        "site_credential": {
+            "description": "Credentials for accessing the site, including username and password",
+            "value": "${data.azurerm_windows_function_app.this.site_credential}"
+        },
+        "sticky_settings": {
+            "description": "Names of settings that remain unchanged across deployments",
+            "value": "${data.azurerm_windows_function_app.this.sticky_settings}"
+        },
+        "storage_account_access_key": {
+            "description": "Access key for the function app's associated storage account",
+            "value": "${data.azurerm_windows_function_app.this.storage_account_access_key}"
+        },
+        "storage_account_name": {
+            "description": "Name of the storage account linked to the function app",
+            "value": "${data.azurerm_windows_function_app.this.storage_account_name}"
+        },
+        "storage_key_vault_secret_id": {
+            "description": "Key Vault secret ID for the storage account access key",
+            "value": "${data.azurerm_windows_function_app.this.storage_key_vault_secret_id}"
+        },
+        "storage_uses_managed_identity": {
+            "description": "Indicates if managed identity is used for storage access",
+            "value": "${data.azurerm_windows_function_app.this.storage_uses_managed_identity}"
+        },
+        "tags": {
+            "description": "Metadata tags for categorizing and organizing the resource",
+            "value": "${data.azurerm_windows_function_app.this.tags}"
+        },
+        "virtual_network_subnet_id": {
+            "description": "ID of the subnet within the virtual network for the app",
+            "value": "${data.azurerm_windows_function_app.this.virtual_network_subnet_id}"
+        },
+        "webdeploy_publish_basic_authentication_enabled": {
+            "description": "Specifies if basic authentication is enabled for web deployment",
+            "value": "${data.azurerm_windows_function_app.this.webdeploy_publish_basic_authentication_enabled}"
+        }
+    }
+}

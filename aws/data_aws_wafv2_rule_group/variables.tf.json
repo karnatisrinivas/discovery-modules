@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the WAFv2 rule group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scope": [
+      {
+        "description": "Specifies whether the rule group is for a CloudFront distribution or a regional application. Valid values are 'CLOUDFRONT' or 'REGIONAL'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Firestore Index
+  node:
+    label:
+      static: Firestore Index
+      template: ${collection}
+    display_type: default
+
+discovery:
+  type: google_firestore_index
+  dnd_supported: false
+  references:
+    database:
+      from: google_firestore_database
+      output: name

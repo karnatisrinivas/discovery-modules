@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "action": [
+      {
+        "description": "Specifies the action to take on default service accounts, such as disabling or deleting them; must be \"DISABLE\" or \"DELETE\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "restore_policy": [
+      {
+        "description": "Defines the restoration policy for the default service accounts in the project, specifying whether they should be recreated if deleted.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations of default service accounts in a Google Cloud project.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string)})"
+      }
+    ]
+  }
+}

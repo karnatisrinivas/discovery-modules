@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "listener_identifier": [
+      {
+        "description": "A unique identifier for the listener within the VPC Lattice service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_identifier": [
+      {
+        "description": "A unique identifier for the service associated with the listener.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "variable": {
+    "application_insights_id": [
+      {
+        "description": "The ID of the Application Insights associated with the machine learning workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "container_registry_id": [
+      {
+        "description": "The ID of the Azure Container Registry to use for storing Docker images for the machine learning workspace.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "A description for the machine learning workspace.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "friendly_name": [
+      {
+        "description": "A friendly name for the machine learning workspace, used for display purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "high_business_impact": [
+      {
+        "description": "Specifies whether the workspace has a high business impact. This is a boolean value.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "image_build_compute_name": [
+      {
+        "description": "The name of the compute resource used for building Docker images.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key_vault_id": [
+      {
+        "description": "The ID of the Azure Key Vault associated with the machine learning workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kind": [
+      {
+        "description": "The kind of the machine learning workspace, which can indicate a specific configuration or purpose.",
+        "nullable": true,
+        "type": "string",
+        "default": "Default"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the machine learning workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "primary_user_assigned_identity": [
+      {
+        "description": "The principal ID of the user-assigned managed identity to be used by default by the workspace.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Enable public access when this Machine Learning Workspace is behind VNet.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "The SKU name for the workspace, representing the pricing tier.",
+        "nullable": true,
+        "type": "string",
+        "default": "Basic"
+      }
+    ],
+    "storage_account_id": [
+      {
+        "description": "The ID of the Azure Storage Account associated with the machine learning workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the machine learning workspace for categorization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "v1_legacy_mode_enabled": [
+      {
+        "description": "Indicates if the workspace should operate in legacy mode, which might support older functionality.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "identity": [
+      {
+        "description": "An identity block",
+        "nullable": false,
+        "type": "list(object({type: string, identity_ids: list(string)}))"
+      }
+    ],
+    "encryption": [
+      {
+        "description": "An encryption block",
+        "nullable": true,
+        "type": "list(object({key_vault_id: string, key_id: string, user_assigned_identity_id: string}))"
+      }
+    ],
+    "managed_network": [
+      {
+        "description": "An encryption block",
+        "nullable": true,
+        "type": "list(object({isolation_mode: string}))"
+      }
+    ],
+    "serverless_compute": [
+      {
+        "description": "An serverless_compute block",
+        "nullable": true,
+        "type": "list(object({subnet_id: string, public_ip_enabled: bool}))"
+      }
+    ],
+    "feature_store": [
+      {
+        "description": "An feature_store block",
+        "nullable": true,
+        "type": "list(object({computer_spark_runtime_version: string, offline_connection_name: string, online_connection_name: string}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

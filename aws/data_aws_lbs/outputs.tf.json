@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the load balancers.",
+            "value": "${data.aws_lbs.this.arns}"
+        },
+        "id": {
+            "description": "The identifier for the load balancer.",
+            "value": "${data.aws_lbs.this.id}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "display_name": {
+            "description": "The display name of the Azure AD application password.",
+            "value": "${azuread_application_password.this.display_name}"
+        },
+        "id": {
+            "description": "The unique identifier of the Azure AD application password.",
+            "value": "${azuread_application_password.this.id}"
+        },
+        "key_id": {
+            "description": "The key identifier of the Azure AD application password, used to distinguish it from other keys.",
+            "value": "${azuread_application_password.this.key_id}"
+        }
+    }
+}

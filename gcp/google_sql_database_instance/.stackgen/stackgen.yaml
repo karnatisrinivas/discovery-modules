@@ -1,0 +1,124 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SQL Database Instance
+  node:
+    label:
+      static: SQL Database Instance
+      template: ${name}
+    display_type: default
+
+variables:
+  database_version:
+    description: The MySQL, PostgreSQL or SQL Server version to use.
+    type: string
+    options: 
+      - MYSQL_5_6
+      - MYSQL_5_7
+      - MYSQL_8_0
+      - POSTGRES_9_6
+      - POSTGRES_10
+      - POSTGRES_11
+      - POSTGRES_12
+      - POSTGRES_13
+      - POSTGRES_14
+      - POSTGRES_15
+      - SQLSERVER_2017_STANDARD
+      - SQLSERVER_2017_ENTERPRISE
+      - SQLSERVER_2017_EXPRESS
+      - SQLSERVER_2017_WEB
+      - SQLSERVER_2019_STANDARD
+      - SQLSERVER_2019_ENTERPRISE
+      - SQLSERVER_2019_EXPRESS
+      - SQLSERVER_2019_WEB
+    ui_control: select
+  settings:
+    description: The settings to use for the database. Required if clone is not set.
+    attributes: 
+      availability_type: 
+        options: 
+          - REGIONAL
+          - ZONAL
+        ui_control: select
+        label: Availability Type
+        type: select
+      connector_enforcement: 
+        label: Connector Enforcement
+        type: select
+        options: 
+          - REQUIRED
+          - NOT_REQUIRED
+        ui_control: select
+      enable_dataplex_integration: 
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Enable Dataplex Integration
+      disk_autoresize: 
+        label: Disk Autoresize
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+      disk_type: 
+        label: Disk Type
+        type: select
+        options: 
+          - PD_SSD
+          - PD_HDD
+        ui_control: select
+      edition: 
+        ui_control: select
+        label: Edition
+        type: select
+        options: 
+          - ENTERPRISE
+          - ENTERPRISE_PLUS
+      activation_policy: 
+        ui_control: select
+        label: Activation Policy
+        type: select
+        options: 
+          - ALWAYS
+          - NEVER
+          - ON_DEMAND
+      deletion_protection_enabled: 
+        label: Deletion Protection Enabled
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+      enable_google_ml_integration: 
+        label: Enable Google ML Integration
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+  replica_configuration:
+    description: "The name of the existing instance that will act as the master in the replication setup. Note, this requires the master to have `Binary Log Enabled` set, as well as existing backups."
+    attributes: 
+      verify_server_certificate: 
+        label: Failover Target
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+      failover_target: 
+        label: Failover Target
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+
+discovery:
+  type: google_sql_database_instance
+  dnd_supported: false
+  data_source: data_google_sql_database_instance

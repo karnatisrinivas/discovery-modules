@@ -1,0 +1,68 @@
+{
+    "output": {
+        "archive_size_bytes": {
+            "description": "The size of the image when it is exported to a tarball.",
+            "value": "${data.google_compute_image.this.archive_size_bytes}"
+        },
+        "creation_timestamp": {
+            "description": "The creation timestamp of the image.",
+            "value": "${data.google_compute_image.this.creation_timestamp}"
+        },
+        "description": {
+            "description": "The description of the image.",
+            "value": "${data.google_compute_image.this.description}"
+        },
+        "disk_size_gb": {
+            "description": "The size of the image in gigabytes.",
+            "value": "${data.google_compute_image.this.disk_size_gb}"
+        },
+        "id": {
+            "description": "The ID of the image.",
+            "value": "${data.google_compute_image.this.id}"
+        },
+        "image_encryption_key_sha256": {
+            "description": "The SHA256 hash of the image encryption key.",
+            "value": "${data.google_compute_image.this.image_encryption_key_sha256}"
+        },
+        "image_id": {
+            "description": "The ID of the image.",
+            "value": "${data.google_compute_image.this.image_id}"
+        },
+        "label_fingerprint": {
+            "description": "The fingerprint of the labels.",
+            "value": "${data.google_compute_image.this.label_fingerprint}"
+        },
+        "labels": {
+            "description": "The labels of the image.",
+            "value": "${data.google_compute_image.this.labels}"
+        },
+        "licenses": {
+            "description": "The licenses of the image.",
+            "value": "${data.google_compute_image.this.licenses}"
+        },
+        "self_link": {
+            "description": "The self link of the image.",
+            "value": "${data.google_compute_image.this.self_link}"
+        },
+        "source_disk": {
+            "description": "The source disk of the image.",
+            "value": "${data.google_compute_image.this.source_disk}"
+        },
+        "source_disk_encryption_key_sha256": {
+            "description": "The SHA256 hash of the source disk encryption key.",
+            "value": "${data.google_compute_image.this.source_disk_encryption_key_sha256}"
+        },
+        "source_disk_id": {
+            "description": "The ID of the source disk.",
+            "value": "${data.google_compute_image.this.source_disk_id}"
+        },
+        "source_image_id": {
+            "description": "The ID of the source image.",
+            "value": "${data.google_compute_image.this.source_image_id}"
+        },
+        "status": {
+            "description": "The status of the image.",
+            "value": "${data.google_compute_image.this.status}"
+        }
+    }
+}

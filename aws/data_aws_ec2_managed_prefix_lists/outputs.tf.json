@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the managed prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_lists.this.id}"
+        },
+        "ids": {
+            "description": "A list of all the unique identifiers for each managed prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_lists.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the managed prefix lists.",
+            "value": "${data.aws_ec2_managed_prefix_lists.this.tags}"
+        }
+    }
+}

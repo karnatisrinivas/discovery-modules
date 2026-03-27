@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN assigned by AWS for this provider.",
+            "value": "${aws_iam_saml_provider.this.arn}"
+        },
+        "valid_until": {
+            "description": "The expiration date and time for the SAML provider.",
+            "value": "${aws_iam_saml_provider.this.valid_until}"
+        }
+    }
+}

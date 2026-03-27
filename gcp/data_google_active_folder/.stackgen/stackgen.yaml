@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Active Folder"
+  node:
+    label:
+      static: "[Data] Active Folder"
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: data_google_active_folder
+  dnd_supported: false

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arns": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.arns}"
+        },
+        "availability_zone": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.availability_zone}"
+        },
+        "availability_zone_id": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.availability_zone_id}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.id}"
+        },
+        "ids": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.ids}"
+        },
+        "owner_id": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.owner_id}"
+        },
+        "site_id": {
+            "description": "",
+            "value": "${data.aws_outposts_outposts.this.site_id}"
+        }
+    }
+}

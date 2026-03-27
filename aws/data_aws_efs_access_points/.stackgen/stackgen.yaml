@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Efs Access Points"
+  node:
+    label:
+      static: "[Data] Efs Access Points"
+      template: "[Data] Efs Access Points"
+    display_type: default
+
+discovery:
+  type: data_aws_efs_access_points
+  dnd_supported: false

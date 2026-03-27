@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route53 Delegation Set
+  node:
+    label:
+      static: Route53 Delegation Set
+      template: ${reference_name}
+    display_type: default
+
+discovery:
+  type: aws_route53_delegation_set
+  dnd_supported: false
+  data_source: data_aws_route53_delegation_set

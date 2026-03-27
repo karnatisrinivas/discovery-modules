@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition that specifies when the binding is effective, using a title, description, and an expression written in Common Expression Language (CEL).",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Spanner instance to which IAM bindings will be applied; must already exist in the specified project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to be assigned the specified role for the Spanner instance. Must be in the format 'user:email', 'serviceAccount:email', etc.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be applied to the Spanner instance, such as roles/spanner.viewer or roles/spanner.admin.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

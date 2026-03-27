@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the server certificate.",
+            "value": "${data.aws_iam_server_certificate.this.arn}"
+        },
+        "certificate_body": {
+            "description": "The actual content of the public key certificate.",
+            "value": "${data.aws_iam_server_certificate.this.certificate_body}"
+        },
+        "certificate_chain": {
+            "description": "A list of certificates that make up the chain for the server certificate.",
+            "value": "${data.aws_iam_server_certificate.this.certificate_chain}"
+        },
+        "expiration_date": {
+            "description": "The date when the server certificate will expire.",
+            "value": "${data.aws_iam_server_certificate.this.expiration_date}"
+        },
+        "id": {
+            "description": "The unique identifier of the server certificate.",
+            "value": "${data.aws_iam_server_certificate.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the server certificate.",
+            "value": "${data.aws_iam_server_certificate.this.name}"
+        },
+        "path": {
+            "description": "The path to the server certificate in IAM.",
+            "value": "${data.aws_iam_server_certificate.this.path}"
+        },
+        "upload_date": {
+            "description": "The date when the server certificate was uploaded.",
+            "value": "${data.aws_iam_server_certificate.this.upload_date}"
+        }
+    }
+}

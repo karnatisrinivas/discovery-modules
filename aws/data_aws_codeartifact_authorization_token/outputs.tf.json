@@ -1,0 +1,20 @@
+{
+    "output": {
+        "authorization_token": {
+            "description": "The token used to authorize requests to AWS CodeArtifact.",
+            "value": "${data.aws_codeartifact_authorization_token.this.authorization_token}"
+        },
+        "domain_owner": {
+            "description": "The AWS account ID of the domain owner.",
+            "value": "${data.aws_codeartifact_authorization_token.this.domain_owner}"
+        },
+        "expiration": {
+            "description": "The time when the authorization token expires.",
+            "value": "${data.aws_codeartifact_authorization_token.this.expiration}"
+        },
+        "id": {
+            "description": "The unique identifier for the authorization token.",
+            "value": "${data.aws_codeartifact_authorization_token.this.id}"
+        }
+    }
+}

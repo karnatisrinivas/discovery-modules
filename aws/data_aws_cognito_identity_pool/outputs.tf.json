@@ -1,0 +1,44 @@
+{
+    "output": {
+        "allow_classic_flow": {
+            "description": "Indicates whether the identity pool supports the basic (classic) authentication flow.",
+            "value": "${data.aws_cognito_identity_pool.this.allow_classic_flow}"
+        },
+        "allow_unauthenticated_identities": {
+            "description": "Specifies if the identity pool allows unauthenticated identities.",
+            "value": "${data.aws_cognito_identity_pool.this.allow_unauthenticated_identities}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.arn}"
+        },
+        "cognito_identity_providers": {
+            "description": "A set of Cognito identity providers associated with the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.cognito_identity_providers}"
+        },
+        "developer_provider_name": {
+            "description": "The developer provider name used to associate an identity pool with a specific developer provider.",
+            "value": "${data.aws_cognito_identity_pool.this.developer_provider_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.id}"
+        },
+        "openid_connect_provider_arns": {
+            "description": "A set of OpenID Connect provider ARNs associated with the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.openid_connect_provider_arns}"
+        },
+        "saml_provider_arns": {
+            "description": "A list of SAML provider ARNs associated with the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.saml_provider_arns}"
+        },
+        "supported_login_providers": {
+            "description": "A map of supported login providers for the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.supported_login_providers}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the identity pool.",
+            "value": "${data.aws_cognito_identity_pool.this.tags}"
+        }
+    }
+}

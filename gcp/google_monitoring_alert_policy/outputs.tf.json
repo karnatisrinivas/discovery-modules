@@ -1,0 +1,16 @@
+{
+    "output": {
+        "creation_record": {
+            "description": "Details about the creation event, useful for auditing and tracking changes",
+            "value": "${google_monitoring_alert_policy.this.creation_record}"
+        },
+        "id": {
+            "description": "Unique identifier for the alert policy, used in API calls and resource referencing",
+            "value": "${google_monitoring_alert_policy.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the alert policy, helpful for identifying its purpose",
+            "value": "${google_monitoring_alert_policy.this.name}"
+        }
+    }
+}

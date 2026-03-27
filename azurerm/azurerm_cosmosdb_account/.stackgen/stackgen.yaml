@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CosmosDB Account
+  node:
+    label:
+      static: CosmosDB Account
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_cosmosdb_account
+  dnd_supported: false
+  data_source: data_azurerm_cosmosdb_account

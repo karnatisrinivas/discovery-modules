@@ -1,0 +1,16 @@
+{
+    "output": {
+        "dedicated_cluster_id": {
+            "description": "The ID of the dedicated cluster where the Event Hub Namespace is deployed.",
+            "value": "${data.azurerm_eventhub_namespace.this.dedicated_cluster_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Event Hub Namespace.",
+            "value": "${data.azurerm_eventhub_namespace.this.id}"
+        },
+        "name": {
+            "description": "The name of the Event Hub Namespace.",
+            "value": "${data.azurerm_eventhub_namespace.this.name}"
+        }
+    }
+}

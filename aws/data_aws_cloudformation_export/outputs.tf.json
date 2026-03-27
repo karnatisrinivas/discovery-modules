@@ -1,0 +1,16 @@
+{
+    "output": {
+        "exporting_stack_id": {
+            "description": "The unique identifier of the CloudFormation stack that exported this value.",
+            "value": "${data.aws_cloudformation_export.this.exporting_stack_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the CloudFormation export.",
+            "value": "${data.aws_cloudformation_export.this.id}"
+        },
+        "value": {
+            "description": "The actual value of the CloudFormation export.",
+            "value": "${data.aws_cloudformation_export.this.value}"
+        }
+    }
+}

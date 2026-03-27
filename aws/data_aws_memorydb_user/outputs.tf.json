@@ -1,0 +1,28 @@
+{
+    "output": {
+        "access_string": {
+            "description": "The access string that defines the permissions for the MemoryDB user.",
+            "value": "${data.aws_memorydb_user.this.access_string}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB user.",
+            "value": "${data.aws_memorydb_user.this.arn}"
+        },
+        "authentication_mode": {
+            "description": "The authentication mode used by the MemoryDB user, including password details.",
+            "value": "${data.aws_memorydb_user.this.authentication_mode}"
+        },
+        "id": {
+            "description": "The unique identifier for the MemoryDB user.",
+            "value": "${data.aws_memorydb_user.this.id}"
+        },
+        "minimum_engine_version": {
+            "description": "The minimum engine version required for the MemoryDB user.",
+            "value": "${data.aws_memorydb_user.this.minimum_engine_version}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MemoryDB user for identification and organization.",
+            "value": "${data.aws_memorydb_user.this.tags}"
+        }
+    }
+}

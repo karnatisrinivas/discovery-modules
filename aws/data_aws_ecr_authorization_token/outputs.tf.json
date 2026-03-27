@@ -1,0 +1,20 @@
+{
+    "output": {
+        "expires_at": {
+            "description": "The date and time when the ECR authorization token will expire.",
+            "value": "${data.aws_ecr_authorization_token.this.expires_at}"
+        },
+        "id": {
+            "description": "The unique identifier for the ECR authorization token data.",
+            "value": "${data.aws_ecr_authorization_token.this.id}"
+        },
+        "proxy_endpoint": {
+            "description": "The URL endpoint for the Docker registry proxy associated with the ECR.",
+            "value": "${data.aws_ecr_authorization_token.this.proxy_endpoint}"
+        },
+        "user_name": {
+            "description": "The username to use when connecting to the ECR registry.",
+            "value": "${data.aws_ecr_authorization_token.this.user_name}"
+        }
+    }
+}

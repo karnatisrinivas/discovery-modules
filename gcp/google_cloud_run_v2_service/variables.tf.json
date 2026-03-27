@@ -1,0 +1,81 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "Name of the Service.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "location": [
+            {
+                "description": "The location of the cloud run service",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+       "template": [
+            {
+               "description": "The template to use for the service",
+               "type": "list(object({ revision: optional(string), containers: list(object({ name: string, image: string, command: list(string), resources:list(object({ cpu: number, memory: string, nvidia_com_gpu: optional(number), startup_cpu_boost: optional(bool)})), env: list(object({name: string, value: string})), ports: list(object({name: string, container_port: number})), liveness_initial_delay_seconds: number, liveness_period_seconds: number, liveness_timeout_seconds: number, liveness_failure_threshold: optional(number), liveness_path: optional(string), liveness_port: optional(number), startup_initial_delay_seconds: number, startup_period_seconds: number, startup_timeout_seconds: number, startup_failure_threshold: optional(number), startup_path: optional(string), startup_port: optional(number), volume_mounts_name: string, volume_mounts_path: string})), min_instance_count: number, max_instance_count: number, egress: string, connector: optional(string), network: string, subnetwork: optional(string), volumes: list(object({ name: string, secret: list(object({secret: string, version: optional(string), path: string})) }))}))",
+               "nullable": false
+           }
+       ],
+       "deletion_protection": [
+            {
+               "description": " Whether Terraform will be prevented from destroying the service.",
+               "type": "bool",
+               "nullable": true
+            }
+       ],
+       "description":  [
+            {
+               "description": "The description of the service",
+               "type": "string",
+               "nullable": true
+            }
+       ],
+        "labels": [
+            {
+            "description": "Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces",
+            "type": "map(string)",
+            "nullable": true
+            }
+        ],
+        "ingress": [
+            {
+                "description": "The ingress settings for the service",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "launch_stage": [
+            {
+                "description": "The launch stage of the service",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "timeout": [
+            {
+                "description": "The maximum amount of time in Seconds that the service can take to respond to a request. Ex: 60s, 20s",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+       "service_account": [
+            {
+               "description": "The service account represents the identity of the running revision, and determines what permissions the revision has",
+               "type": "string",
+               "nullable": true
+            }
+       ], 
+       "encryption_key": [
+            {
+               "description": "A reference to a customer managed encryption key (CMEK) to use to encrypt this container image",
+               "type": "string",
+               "nullable": true
+            }
+       ]
+    }
+}

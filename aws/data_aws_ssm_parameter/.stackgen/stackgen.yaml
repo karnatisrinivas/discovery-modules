@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssm Parameter"
+  node:
+    label:
+      static: "[Data] Ssm Parameter"
+      template: "[Data] Ssm Parameter"
+    display_type: default
+
+discovery:
+  type: data_aws_ssm_parameter
+  dnd_supported: false

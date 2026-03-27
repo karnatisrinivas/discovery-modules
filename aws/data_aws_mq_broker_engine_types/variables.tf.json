@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "engine_type": [
+      {
+        "description": "Specifies the type of message broker engine to be used, such as 'ActiveMQ' or 'RabbitMQ'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the firewall rule was created",
+            "value": "${google_compute_firewall.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for the firewall rule, useful for lookups",
+            "value": "${google_compute_firewall.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the firewall rule in the Google Cloud Console or API",
+            "value": "${google_compute_firewall.this.self_link}"
+        }
+    }
+}

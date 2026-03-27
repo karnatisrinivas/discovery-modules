@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the S3 bucket notification configuration",
+            "value": "${aws_s3_bucket_notification.this.id}"
+        }
+    }
+}

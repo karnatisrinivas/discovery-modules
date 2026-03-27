@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "accepts": [
+      {
+        "description": "Specifies the content type that the export will be in, such as 'application/json'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "export_type": [
+      {
+        "description": "Defines the type of export, such as 'oas30' for OpenAPI 3.0.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "A map of parameters for the export, where keys and values are strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "The identifier of the REST API to export.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage_name": [
+      {
+        "description": "The name of the stage that you want to export.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

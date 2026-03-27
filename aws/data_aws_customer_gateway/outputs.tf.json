@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.arn}"
+        },
+        "bgp_asn": {
+            "description": "The Border Gateway Protocol Autonomous System Number (BGP ASN) for the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.bgp_asn}"
+        },
+        "bgp_asn_extended": {
+            "description": "An extended BGP ASN for the customer gateway, if applicable.",
+            "value": "${data.aws_customer_gateway.this.bgp_asn_extended}"
+        },
+        "certificate_arn": {
+            "description": "The ARN of the certificate associated with the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.certificate_arn}"
+        },
+        "device_name": {
+            "description": "The name of the device at the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.device_name}"
+        },
+        "id": {
+            "description": "The ID of the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.id}"
+        },
+        "ip_address": {
+            "description": "The IP address of the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.ip_address}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the customer gateway.",
+            "value": "${data.aws_customer_gateway.this.tags}"
+        }
+    }
+}

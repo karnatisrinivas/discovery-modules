@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Datapipeline Pipeline"
+  node:
+    label:
+      static: "[Data] Datapipeline Pipeline"
+      template: "[Data] Datapipeline Pipeline"
+    display_type: default
+
+discovery:
+  type: data_aws_datapipeline_pipeline
+  dnd_supported: false

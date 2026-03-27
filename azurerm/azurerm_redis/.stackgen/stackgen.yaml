@@ -1,0 +1,53 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redis Cache
+  node:
+    label:
+      static: Redis Cache
+      template: ${name}
+    display_type: default
+
+variables:
+  minimum_tls_version:
+    description: The minimum TLS version required for connections.
+    type: string
+    options: 
+      - 1.0
+      - 1.1
+      - 1.2
+    ui_control: select
+  family:
+    description: The family of the SKU to use for the Redis cache.
+    type: string
+    options: 
+      - C
+      - P
+    ui_control: select
+  sku_name:
+    description: The SKU name specifying the pricing tier for the Redis cache.
+    type: string
+    options: 
+      - Basic
+      - Standard
+      - Premium
+    ui_control: select
+  public_network_access_enabled:
+    description: Determines if public network access is enabled.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  non_ssl_port_enabled:
+    description: "Indicates if the non-SSL port should be enabled for Redis cache."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_redis
+  dnd_supported: false

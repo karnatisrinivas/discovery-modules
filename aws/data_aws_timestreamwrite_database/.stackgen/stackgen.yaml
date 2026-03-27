@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Timestreamwrite Database"
+  node:
+    label:
+      static: "[Data] Timestreamwrite Database"
+      template: "[Data] Timestreamwrite Database"
+    display_type: default
+
+discovery:
+  type: data_aws_timestreamwrite_database
+  dnd_supported: false

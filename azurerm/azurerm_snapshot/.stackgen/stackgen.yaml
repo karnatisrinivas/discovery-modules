@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Snapshot
+  node:
+    label:
+      static: Snapshot
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_snapshot
+  dnd_supported: false
+  data_source: data_azurerm_snapshot
+  references:
+    source_uri:
+      from: azurerm_managed_disk
+      output: id

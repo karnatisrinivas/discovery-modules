@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Version tag for tracking changes to IAM member bindings",
+            "value": "${google_pubsub_topic_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member binding to the Pub/Sub topic",
+            "value": "${google_pubsub_topic_iam_member.this.id}"
+        }
+    }
+}

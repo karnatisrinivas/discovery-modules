@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "most_recent": [
+      {
+        "description": "Determines whether to select the most recent snapshot when creating an EBS volume.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

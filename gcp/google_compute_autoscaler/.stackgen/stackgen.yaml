@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Autoscaler
+  node:
+    label:
+      static: Compute Autoscaler
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_autoscaler
+  dnd_supported: false

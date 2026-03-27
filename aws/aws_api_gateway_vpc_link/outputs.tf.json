@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API operations",
+            "value": "${aws_api_gateway_vpc_link.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for linking the API Gateway to the VPC",
+            "value": "${aws_api_gateway_vpc_link.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for organization and resource categorization",
+            "value": "${aws_api_gateway_vpc_link.this.tags_all}"
+        }
+    }
+}

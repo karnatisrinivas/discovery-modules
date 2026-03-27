@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "map_name": [
+      {
+        "description": "The name assigned to the AWS location map.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

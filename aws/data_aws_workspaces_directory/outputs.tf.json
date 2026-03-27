@@ -1,0 +1,68 @@
+{
+    "output": {
+        "alias": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.alias}"
+        },
+        "customer_user_name": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.customer_user_name}"
+        },
+        "directory_name": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.directory_name}"
+        },
+        "directory_type": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.directory_type}"
+        },
+        "dns_ip_addresses": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.dns_ip_addresses}"
+        },
+        "iam_role_id": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.iam_role_id}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.id}"
+        },
+        "ip_group_ids": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.ip_group_ids}"
+        },
+        "registration_code": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.registration_code}"
+        },
+        "saml_properties": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.saml_properties}"
+        },
+        "self_service_permissions": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.self_service_permissions}"
+        },
+        "subnet_ids": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.tags}"
+        },
+        "workspace_access_properties": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.workspace_access_properties}"
+        },
+        "workspace_creation_properties": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.workspace_creation_properties}"
+        },
+        "workspace_security_group_id": {
+            "description": "",
+            "value": "${data.aws_workspaces_directory.this.workspace_security_group_id}"
+        }
+    }
+}

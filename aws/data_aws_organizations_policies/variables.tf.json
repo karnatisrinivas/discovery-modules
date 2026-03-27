@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "filter": [
+      {
+        "description": "A string used to filter or identify specific AWS organization policies.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

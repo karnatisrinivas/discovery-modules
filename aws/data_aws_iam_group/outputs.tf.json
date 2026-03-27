@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) assigned to the IAM group.",
+            "value": "${data.aws_iam_group.this.arn}"
+        },
+        "group_id": {
+            "description": "The unique ID assigned to the IAM group.",
+            "value": "${data.aws_iam_group.this.group_id}"
+        },
+        "id": {
+            "description": "The name of the IAM group.",
+            "value": "${data.aws_iam_group.this.id}"
+        },
+        "path": {
+            "description": "The path to the IAM group in AWS.",
+            "value": "${data.aws_iam_group.this.path}"
+        },
+        "users": {
+            "description": "A list of users that are members of the IAM group, including their details.",
+            "value": "${data.aws_iam_group.this.users}"
+        }
+    }
+}

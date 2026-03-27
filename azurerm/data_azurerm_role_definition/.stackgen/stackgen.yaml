@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Role Definition"
+  node:
+    label:
+      static: "[Data] Role Definition"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_role_definition
+  dnd_supported: false

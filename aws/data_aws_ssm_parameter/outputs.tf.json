@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SSM parameter.",
+            "value": "${data.aws_ssm_parameter.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the SSM parameter.",
+            "value": "${data.aws_ssm_parameter.this.id}"
+        },
+        "insecure_value": {
+            "description": "The actual value of the SSM parameter, not recommended for sensitive data.",
+            "value": "${data.aws_ssm_parameter.this.insecure_value}"
+        },
+        "version": {
+            "description": "The version number of the SSM parameter.",
+            "value": "${data.aws_ssm_parameter.this.version}"
+        }
+    }
+}

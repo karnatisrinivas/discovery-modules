@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "adaptive_protection_config": [
+      {
+        "description": "Configures adaptive protection settings to mitigate suspicious traffic, including thresholds and rules for detecting anomalies.",
+        "nullable": true,
+        "type": "list(object({layer_7_ddos_defense_config: list(object({enable: optional(bool),rule_visibility: optional(string),threshold_configs: list(object({auto_deploy_confidence_threshold: optional(number),auto_deploy_expiration_sec: optional(number),auto_deploy_impacted_baseline_threshold: optional(number),auto_deploy_load_threshold: optional(number),detection_absolute_qps: optional(number),detection_load_threshold: optional(number),detection_relative_to_baseline_qps: optional(number),name: string,traffic_granularity_configs: list(object({enable_each_unique_value: optional(bool),type: string,value: optional(string)}))}))}))}))"
+      }
+    ],
+    "advanced_options_config": [
+      {
+        "description": "Configuration for advanced options in the security policy, such as enabling custom headers or specific advanced features.",
+        "nullable": true,
+        "type": "list(object({json_parsing: optional(string),log_level: optional(string),user_ip_request_headers: optional(list(string)),json_custom_config: list(object({content_types: list(string)}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the purpose or details of the security policy, providing context for its use; maximum length is 512 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the security policy, required to be between 1 and 63 characters, and must match the regex `[a-z]([-a-z0-9]*[a-z0-9])?`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "recaptcha_options_config": [
+      {
+        "description": "Configuration options for reCAPTCHA Enterprise integration, used to protect web applications from abusive traffic.",
+        "nullable": true,
+        "type": "list(object({redirect_site_key: string}))"
+      }
+    ],
+    "rule": [
+      {
+        "description": "Defines the rules for the security policy, including match conditions, action to take, and priority.",
+        "nullable": true,
+        "type": "list(object({action: string,description: optional(string),preview: optional(bool),priority: number,header_action: list(object({request_headers_to_adds: list(object({header_name: string,header_value: optional(string)}))})),match: list(object({versioned_expr: optional(string),config: list(object({src_ip_ranges: list(string)})),expr: list(object({expression: string})),expr_options: list(object({recaptcha_options: list(object({action_token_site_keys: optional(list(string)),session_token_site_keys: optional(list(string))}))}))})),preconfigured_waf_config: list(object({exclusion: list(object({target_rule_ids: optional(list(string)),target_rule_set: string,request_cookie: list(object({operator: string,value: optional(string)})),request_header: list(object({operator: string,value: optional(string)})),request_query_param: list(object({operator: string,value: optional(string)})),request_uri: list(object({operator: string,value: optional(string)}))}))})),rate_limit_options: list(object({ban_duration_sec: optional(number),conform_action: string,enforce_on_key: optional(string),enforce_on_key_name: optional(string),exceed_action: string,ban_threshold: list(object({count: number,interval_sec: number})),enforce_on_key_configs: list(object({enforce_on_key_name: optional(string),enforce_on_key_type: optional(string)})),exceed_redirect_options: list(object({target: optional(string),type: string})),rate_limit_threshold: list(object({count: number,interval_sec: number}))})),redirect_options: list(object({target: optional(string),type: string}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeout configuration for operations, including create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Defines the type of security policy, such as \"CLOUD_ARMOR\" for Google Cloud Armor policies.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

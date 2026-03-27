@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a condition that determines when the IAM binding is applied, specified using a title, expression, and optional description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "env_id": [
+      {
+        "description": "Unique identifier for the Apigee environment to which the IAM binding will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to bind to the specified role in the Apigee environment; must follow the format for IAM member types (e.g., user:email, serviceAccount:email, group:email).",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Specifies the ID of the Apigee organization associated with the IAM binding.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be assigned to members in the Apigee environment. Must be a predefined IAM role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

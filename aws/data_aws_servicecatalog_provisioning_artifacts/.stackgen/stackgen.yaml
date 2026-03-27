@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicecatalog Provisioning Artifacts"
+  node:
+    label:
+      static: "[Data] Servicecatalog Provisioning Artifacts"
+      template: "[Data] Servicecatalog Provisioning Artifacts"
+    display_type: default
+
+discovery:
+  type: data_aws_servicecatalog_provisioning_artifacts
+  dnd_supported: false

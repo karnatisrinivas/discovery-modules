@@ -1,0 +1,24 @@
+{
+    "output": {
+        "comment": {
+            "description": "A brief description or note about the origin request policy.",
+            "value": "${data.aws_cloudfront_origin_request_policy.this.comment}"
+        },
+        "cookies_config": {
+            "description": "Configuration that specifies how cookies are handled by the origin request policy.",
+            "value": "${data.aws_cloudfront_origin_request_policy.this.cookies_config}"
+        },
+        "etag": {
+            "description": "The version identifier for the origin request policy, used for tracking changes.",
+            "value": "${data.aws_cloudfront_origin_request_policy.this.etag}"
+        },
+        "headers_config": {
+            "description": "Configuration that specifies which headers are included in requests sent to the origin.",
+            "value": "${data.aws_cloudfront_origin_request_policy.this.headers_config}"
+        },
+        "query_strings_config": {
+            "description": "Configuration that determines how query strings are handled in requests to the origin.",
+            "value": "${data.aws_cloudfront_origin_request_policy.this.query_strings_config}"
+        }
+    }
+}

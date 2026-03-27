@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Authorizers"
+  node:
+    label:
+      static: "[Data] Api Gateway Authorizers"
+      template: "[Data] Api Gateway Authorizers"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_authorizers
+  dnd_supported: false

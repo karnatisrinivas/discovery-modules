@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "mesh_name": [
+      {
+        "description": "The name of the service mesh that the virtual router belongs to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the virtual router within the service mesh.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

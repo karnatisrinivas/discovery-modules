@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Load Balancer Backend Address Pool Address
+  node:
+    label:
+      static: Load Balancer Backend Address Pool Address
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_lb_backend_address_pool_address
+  dnd_supported: false
+  references:
+    backend_address_pool_id:
+      from: azurerm_lb_backend_address_pool
+      output: id

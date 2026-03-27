@@ -1,0 +1,28 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the Filestore instance was created",
+            "value": "${google_filestore_instance.this.create_time}"
+        },
+        "effective_labels": {
+            "description": "Computed set of labels applied to the Filestore instance",
+            "value": "${google_filestore_instance.this.effective_labels}"
+        },
+        "effective_replication": {
+            "description": "Replication configuration currently in effect for the instance",
+            "value": "${google_filestore_instance.this.effective_replication}"
+        },
+        "etag": {
+            "description": "Checksum used to track changes to the instance's configuration",
+            "value": "${google_filestore_instance.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the Filestore instance in the project",
+            "value": "${google_filestore_instance.this.id}"
+        },
+        "terraform_labels": {
+            "description": "Labels managed through Terraform for this Filestore instance",
+            "value": "${google_filestore_instance.this.terraform_labels}"
+        }
+    }
+}

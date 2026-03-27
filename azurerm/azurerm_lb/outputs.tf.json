@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for linking the load balancer in configurations",
+            "value": "${azurerm_lb.this.id}"
+        }
+    }
+}

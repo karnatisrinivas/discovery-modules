@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "auto_create_network": [
+      {
+        "description": "Determines whether a default network is automatically created for the project; set to false to disable automatic creation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "billing_account": [
+      {
+        "description": "The ID of the billing account to associate with the project; must be an active billing account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deletion_policy": [
+      {
+        "description": "Defines the behavior for deleting the project, such as retaining or immediately deleting resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "folder_id": [
+      {
+        "description": "ID of the parent folder where the project will be created; must be a valid folder ID within the organization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the project, must be strings and comply with label naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the project, which must be unique within the organization and comply with Google Cloud's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "ID of the organization under which the project will be created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Labels to categorize and organize the project; must be key-value pairs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration to wait for each operation on the project, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "project_id":[
+      {
+        "description": "The ID of the project to create.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

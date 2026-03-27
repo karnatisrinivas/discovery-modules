@@ -1,0 +1,44 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kinesis Stream
+  node:
+    label:
+      static: Kinesis Stream
+      template: ${name}
+    display_type: default
+
+variables:
+  encryption_type:
+    options: 
+      - NONE
+      - KMS
+    ui_control: select
+    description: The encryption type to use.
+    type: string
+  stream_mode_details:
+    description: Specifies the capacity mode of the stream.
+    attributes: 
+      stream_mode: 
+        label: Stream Mode
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - PROVISIONED
+          - ON_DEMAND
+        ui_control: select
+  enforce_consumer_deletion:
+    description: A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_kinesis_stream
+  dnd_supported: false
+  data_source: data_aws_kinesis_stream

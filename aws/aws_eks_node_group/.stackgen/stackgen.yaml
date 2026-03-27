@@ -1,0 +1,41 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS EKS Node Group
+  node:
+    label:
+      static: AWS EKS Node Group
+      template: ${node_group_name}
+    display_type: default
+
+variables:
+  force_update_version:
+    description: Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  capacity_type:
+    description: The capacity type for the worker nodes. Defaults to ON_DEMAND.
+    type: string
+    options: 
+      - ON_DEMAND
+      - SPOT
+    ui_control: select
+
+discovery:
+  type: aws_eks_node_group
+  dnd_supported: false
+  data_source: data_aws_eks_node_group
+  references:
+    cluster_name:
+      from: aws_eks
+      output: id
+    subnet_ids:
+      from: aws_subnet
+      output: id
+    node_role_arn:
+      from: aws_iam_role
+      output: arn

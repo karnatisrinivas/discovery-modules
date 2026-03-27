@@ -1,0 +1,8 @@
+{
+    "output": {
+        "inference_profile_summaries": {
+            "description": "A list of summaries for AWS Bedrock inference profiles, including details such as creation and update timestamps, description, ARN, ID, name, associated models, status, and type.",
+            "value": "${data.aws_bedrock_inference_profiles.this.inference_profile_summaries}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Iam Group Policy
+  node:
+    label:
+      static: Iam Group Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_group_policy
+  dnd_supported: false
+  references:
+    group:
+      from: aws_iam_group
+      output: name

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a set of conditions that must be met for the IAM binding to apply, specified as an expression, title, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of members to be granted the specified role, defined as email addresses or identifiers.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "The ID of the organization where the IAM binding will be applied. Must be a valid organization ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to apply to the members within the organization. Must be in the format roles/{ROLE_NAME}.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

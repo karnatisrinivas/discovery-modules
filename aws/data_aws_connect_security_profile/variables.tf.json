@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the AWS Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "security_profile_id": [
+      {
+        "description": "The unique identifier for the security profile. Optional field that, if not provided, will create a new security profile.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the security profile. Optional field that specifies the name when creating or updating the security profile.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

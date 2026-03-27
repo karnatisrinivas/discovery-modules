@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS Route53 Resolver Rule Association
+  node:
+    label:
+      static: AWS Route53 Resolver Rule Association
+      template: ${url}
+    display_type: default
+
+discovery:
+  type: aws_route53_resolver_rule_association
+  dnd_supported: false

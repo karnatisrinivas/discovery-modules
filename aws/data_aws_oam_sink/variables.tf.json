@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "sink_identifier": [
+      {
+        "description": "A unique string used to identify the AWS OAM sink.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

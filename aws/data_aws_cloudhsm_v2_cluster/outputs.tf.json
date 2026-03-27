@@ -1,0 +1,28 @@
+{
+    "output": {
+        "cluster_certificates": {
+            "description": "A list of certificates related to the CloudHSM cluster, including hardware and cluster certificates.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.cluster_certificates}"
+        },
+        "cluster_state": {
+            "description": "The current state of the CloudHSM cluster, indicating its operational status.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.cluster_state}"
+        },
+        "id": {
+            "description": "The unique identifier of the CloudHSM cluster.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.id}"
+        },
+        "security_group_id": {
+            "description": "The ID of the security group associated with the CloudHSM cluster.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.security_group_id}"
+        },
+        "subnet_ids": {
+            "description": "A set of subnet IDs where the CloudHSM cluster is deployed.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.subnet_ids}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the CloudHSM cluster resides.",
+            "value": "${data.aws_cloudhsm_v2_cluster.this.vpc_id}"
+        }
+    }
+}

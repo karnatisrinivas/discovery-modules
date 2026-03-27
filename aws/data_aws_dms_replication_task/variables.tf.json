@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "replication_task_id": [
+      {
+        "description": "A unique identifier for the DMS replication task.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

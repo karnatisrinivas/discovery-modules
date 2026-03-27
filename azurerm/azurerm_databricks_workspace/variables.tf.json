@@ -1,0 +1,163 @@
+{
+  "variable": {
+    "access_connector_id": [
+      {
+        "description": "The ID of the access connector for the Databricks workspace.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "customer_managed_key_enabled": [
+      {
+        "description": "Whether customer-managed keys are enabled for encryption.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "default_storage_firewall_enabled": [
+      {
+        "description": "Whether a firewall is enabled for the default storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "infrastructure_encryption_enabled": [
+      {
+        "description": "Whether infrastructure encryption is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "load_balancer_backend_address_pool_id": [
+      {
+        "description": "The ID of the load balancer backend address pool.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed_disk_cmk_key_vault_id": [
+      {
+        "description": "The ID of the Key Vault containing the key for managed disk encryption.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed_disk_cmk_key_vault_key_id": [
+      {
+        "description": "The ID of the specific key in Key Vault used for managed disk encryption.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed_disk_cmk_rotation_to_latest_version_enabled": [
+      {
+        "description": "Whether rotation to the latest key version is enabled for managed disks.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "managed_services_cmk_key_vault_id": [
+      {
+        "description": "The ID of the Key Vault containing the key for managed services encryption.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed_services_cmk_key_vault_key_id": [
+      {
+        "description": "The ID of the specific key in Key Vault used for managed services encryption.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Databricks workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Whether public network access is enabled for the workspace.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "description": "The SKU of the Databricks workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "managed_resource_group_name": [
+      {
+        "type": "string",
+        "description": "The name of the resource group where Azure should place the managed Databricks resources.",
+        "nullable": true
+      }
+    ],
+    "no_public_ip": [
+      {
+        "type": "bool",
+        "description": "Are public IP Addresses not allowed?",
+        "default": true
+      }
+    ],
+    "virtual_network_id": [
+      {
+        "type": "string",
+        "description": "The ID of a Virtual Network where this Databricks Cluster should be created.",
+        "nullable": true
+      }
+    ],
+    "private_subnet_name": [
+      {
+        "type": "string",
+        "description": "The name of the Private Subnet within the Virtual Network. Required if `Virtual Network ID` is set.",
+        "nullable": true
+      }
+    ],
+    "public_subnet_name": [
+      {
+        "type": "string",
+        "description": "The name of the Public Subnet within the Virtual Network. Required if `Virtual Network ID` is set.",
+        "nullable": true
+      }
+    ],
+    "public_subnet_network_security_group_association_id": [
+      {
+        "type": "string",
+        "description": "The resource ID of the Subnet Network Security Group Association resource which is referred to by the `Public Subnet Name` field. Required if `Virtual Network ID` is set.",
+        "nullable": true
+      }
+    ],
+    "private_subnet_network_security_group_association_id": [
+      {
+        "type": "string",
+        "description": "The resource ID of the Subnet Network Security Group Association resource which is referred to by the `Private Subnet Name` field. Required if `Virtual Network ID` is set.",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

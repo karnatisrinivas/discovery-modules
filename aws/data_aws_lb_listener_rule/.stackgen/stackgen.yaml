@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lb Listener Rule"
+  node:
+    label:
+      static: "[Data] Lb Listener Rule"
+      template: "[Data] Lb Listener Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_lb_listener_rule
+  dnd_supported: false

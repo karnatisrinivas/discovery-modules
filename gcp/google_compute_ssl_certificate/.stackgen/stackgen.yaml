@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Ssl Certificate
+  node:
+    label:
+      static: Compute Ssl Certificate
+      template: ${certificate}
+    display_type: default
+
+discovery:
+  type: google_compute_ssl_certificate
+  dnd_supported: false

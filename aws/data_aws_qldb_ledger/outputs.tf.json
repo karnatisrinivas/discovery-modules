@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.arn}"
+        },
+        "deletion_protection": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.deletion_protection}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.id}"
+        },
+        "kms_key": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.kms_key}"
+        },
+        "permissions_mode": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.permissions_mode}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_qldb_ledger.this.tags}"
+        }
+    }
+}

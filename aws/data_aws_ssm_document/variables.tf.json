@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "document_format": [
+      {
+        "description": "The format of the document, such as JSON or YAML.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "document_version": [
+      {
+        "description": "The version of the document to use, which can be set to a specific version or '$LATEST'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the SSM document.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

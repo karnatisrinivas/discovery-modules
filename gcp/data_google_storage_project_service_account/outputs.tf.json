@@ -1,0 +1,16 @@
+{
+    "output": {
+        "email_address": {
+            "description": "Email address associated with the storage service account for authentication and access.",
+            "value": "${data.google_storage_project_service_account.this.email_address}"
+        },
+        "id": {
+            "description": "Unique identifier for the storage service account used in resource management.",
+            "value": "${data.google_storage_project_service_account.this.id}"
+        },
+        "member": {
+            "description": "IAM member string for assigning roles and permissions to the storage service account.",
+            "value": "${data.google_storage_project_service_account.this.member}"
+        }
+    }
+}

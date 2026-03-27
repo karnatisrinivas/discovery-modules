@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Server Certificate"
+  node:
+    label:
+      static: "[Data] Iam Server Certificate"
+      template: "[Data] Iam Server Certificate"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_server_certificate
+  dnd_supported: false

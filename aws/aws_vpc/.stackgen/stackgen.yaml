@@ -1,0 +1,45 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: VPC
+  node:
+    label:
+      static: VPC
+      template: ${cidr_block}
+    display_type: default
+
+variables:
+  instance_tenancy:
+    description: The IPv4 CIDR block for the VPC.
+    type: string
+    options: 
+      - default
+      - dedicated
+    ui_control: select
+  enable_dns_support:
+    description: A boolean flag to enable/disable DNS support in the VPC.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  enable_network_address_usage_metrics:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Indicates whether Network Address Usage metrics are enabled for your VPC.
+    type: bool
+  enable_dns_hostnames:
+    description: A boolean flag to enable/disable DNS hostnames in the VPC.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_vpc
+  dnd_supported: false
+  data_source: data_aws_vpc

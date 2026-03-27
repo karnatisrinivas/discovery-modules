@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the retrieved EC2 spot price data.",
+            "value": "${data.aws_ec2_spot_price.this.id}"
+        },
+        "spot_price": {
+            "description": "The actual price for the EC2 spot instance at the time of retrieval.",
+            "value": "${data.aws_ec2_spot_price.this.spot_price}"
+        },
+        "spot_price_timestamp": {
+            "description": "The exact time when the spot price was recorded.",
+            "value": "${data.aws_ec2_spot_price.this.spot_price_timestamp}"
+        }
+    }
+}

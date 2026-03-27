@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API calls",
+            "value": "${aws_codestarconnections_connection.this.arn}"
+        },
+        "connection_status": {
+            "description": "Current status of the connection, useful for monitoring availability",
+            "value": "${aws_codestarconnections_connection.this.connection_status}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the connection in configurations",
+            "value": "${aws_codestarconnections_connection.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for resource organization and metadata",
+            "value": "${aws_codestarconnections_connection.this.tags_all}"
+        }
+    }
+}

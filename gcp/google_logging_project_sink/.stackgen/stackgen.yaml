@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Logging Project Sink
+  node:
+    label:
+      static: Logging Project Sink
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_logging_project_sink
+  dnd_supported: false
+  references:
+    custom_writer_identity:
+      from: google_service_account
+      output: email

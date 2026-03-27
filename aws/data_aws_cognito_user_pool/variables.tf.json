@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user_pool_id": [
+      {
+        "description": "The unique identifier for the AWS Cognito User Pool.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

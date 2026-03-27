@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Folder Iam Member
+  node:
+    label:
+      static: Folder Iam Member
+      template: ${folder}
+    display_type: default
+
+discovery:
+  type: google_folder_iam_member
+  dnd_supported: false
+  references:
+    folder:
+      from: google_folder
+      output: name

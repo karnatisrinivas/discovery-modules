@@ -1,0 +1,16 @@
+{
+    "output": {
+        "associated_at": {
+            "description": "Timestamp when the policy was first associated with the EKS cluster",
+            "value": "${aws_eks_access_policy_association.this.associated_at}"
+        },
+        "id": {
+            "description": "Unique identifier for the EKS access policy association",
+            "value": "${aws_eks_access_policy_association.this.id}"
+        },
+        "modified_at": {
+            "description": "Timestamp of the last modification to the policy association",
+            "value": "${aws_eks_access_policy_association.this.modified_at}"
+        }
+    }
+}

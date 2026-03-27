@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "groups": [
+      {
+        "description": "Specifies the IAM groups to attach the policy to; must be a list of existing group names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the IAM policy attachment; must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_arn": [
+      {
+        "description": "ARN of the IAM policy to attach to the specified roles, users, or groups; must be a valid AWS policy ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "roles": [
+      {
+        "description": "List of IAM roles to attach the policy to; must be specified as an array of role names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "users": [
+      {
+        "description": "Specifies the list of IAM users to attach the policy to; must include valid user names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

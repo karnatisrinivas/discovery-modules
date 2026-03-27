@@ -1,0 +1,24 @@
+{
+    "output": {
+        "compute_type": {
+            "description": "",
+            "value": "${data.aws_workspaces_bundle.this.compute_type}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_workspaces_bundle.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_workspaces_bundle.this.id}"
+        },
+        "root_storage": {
+            "description": "",
+            "value": "${data.aws_workspaces_bundle.this.root_storage}"
+        },
+        "user_storage": {
+            "description": "",
+            "value": "${data.aws_workspaces_bundle.this.user_storage}"
+        }
+    }
+}

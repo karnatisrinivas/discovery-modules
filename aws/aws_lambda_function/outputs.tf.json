@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the function arn",
+            "value": "${aws_lambda_function.this.arn}"
+        },
+        "function_name": {
+            "description": "The value of the function_name output",
+            "value": "${aws_lambda_function.this.function_name}"
+        },
+        "invoke_arn": {
+            "description": "The value of the function invoke arn",
+            "value": "${aws_lambda_function.this.invoke_arn}"
+        }
+    }
+}

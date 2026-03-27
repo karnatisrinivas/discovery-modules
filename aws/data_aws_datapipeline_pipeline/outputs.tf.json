@@ -1,0 +1,20 @@
+{
+    "output": {
+        "description": {
+            "description": "The description of the AWS Data Pipeline.",
+            "value": "${data.aws_datapipeline_pipeline.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Data Pipeline.",
+            "value": "${data.aws_datapipeline_pipeline.this.id}"
+        },
+        "name": {
+            "description": "The name of the AWS Data Pipeline.",
+            "value": "${data.aws_datapipeline_pipeline.this.name}"
+        },
+        "tags": {
+            "description": "The tags associated with the AWS Data Pipeline.",
+            "value": "${data.aws_datapipeline_pipeline.this.tags}"
+        }
+    }
+}

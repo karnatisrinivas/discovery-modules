@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitor Workspace
+  node:
+    label:
+      static: Monitor Workspace
+      template: ${name}
+    display_type: default
+
+variables:
+  public_network_access_enabled:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Is public network access enabled?"
+    type: bool
+
+discovery:
+  type: azurerm_monitor_workspace
+  dnd_supported: false

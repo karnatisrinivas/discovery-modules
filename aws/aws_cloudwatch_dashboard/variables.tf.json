@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "dashboard_body": [
+      {
+        "description": "JSON-formatted string defining the layout and widgets of the CloudWatch dashboard; must adhere to CloudWatch dashboard schema requirements.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "dashboard_name": [
+      {
+        "description": "Specifies the name of the CloudWatch dashboard. Must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

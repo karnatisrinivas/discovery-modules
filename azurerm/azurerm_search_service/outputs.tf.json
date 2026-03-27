@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Azure Search Service resource",
+            "value": "${azurerm_search_service.this.id}"
+        },
+        "primary_key": {
+            "description": "Primary authentication key for managing the search service securely",
+            "value": "${azurerm_search_service.this.primary_key}"
+        },
+        "query_keys": {
+            "description": "List of keys used for querying the search service efficiently",
+            "value": "${azurerm_search_service.this.query_keys}"
+        },
+        "secondary_key": {
+            "description": "Secondary authentication key for backup access to the search service",
+            "value": "${azurerm_search_service.this.secondary_key}"
+        }
+    }
+}

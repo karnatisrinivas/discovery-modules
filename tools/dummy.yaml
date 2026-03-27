@@ -1,0 +1,148 @@
+
+version: 1.0
+
+# details about the module to be represented in the topology and in drag drop panel
+representation:
+## SIDE PANEL - should not depend on one specific version of the module
+  side_panel:
+    label: "S3 Bucket"  # default label for the S3 Bucket node
+    icon: "aws-s3-bucket"  ##??? // the name from icons-set that we support
+    # icon: "./myfile.png"" ?? if we want support for custom icons, we need to upload this file somewhere or it must be an https url
+
+
+  ## node REPRESENTATION (Could be multiple in a topology)
+  node:
+  # for each instance of the module in the topology
+    label:
+      static: "S3 Bucket"
+      template: "S3 Bucket - ${identifier}" # template for dynamic label, can use variables from the module, #"${bucket_name}" # example of using a variable from the module as label
+    display_type: "container" # "default", "connection", "container" # whether this module is a group of resources
+
+
+## Configuration PANEL on stackgen UI
+# to enrich the configuration panel for module
+# keys should match the module's variable names from variables.tf
+# use this section to define 
+  # - options for variables wherever applicable
+  # - no need to redefine type,description ,label if they are already defined in variables.tf
+  # - ui controls for variables other than default ones (json,yaml,select)
+  # - validation rules for variables
+  # - schmea for complex variables which we cannot define in variables.tf
+  # - for root level variables use variables.tf which dont need to be redefined here unless we want to add options/ui controls/validation
+variables:
+  sse_algorithm: ## the key name must match the module's variable name and should be unique here
+    label: "SSE Algorithm"
+    description:
+    ## right now we support only select, text, json, yaml
+    ui_control: "select" ## 'select', 'text', 'json', 'yaml' ## if options given and no editor specified, 'select' will be used
+    # good for boolean type variables, if not provided, a radio/dropdown with true/false should be shown and backend should handle conversion
+    options: ["AES256", "aws:kms"] # possible options for the variable, when options are provided a dropdown will be shown
+    ## the following is in addition to terraform variable type
+    value_type: IP_ADDR # one of string, number, boolean... we will formalize later
+    validation:
+      minLength: 3
+      maxLength: 5
+      Pattern: pattern
+      minValue (only for number type) : 34
+      maxValue: 200
+  required: true
+  bucket_policy:
+    ui_control: json
+    value_type: json_schema (http://.....)
+  versioning:
+    # nested properties for complex variables
+    attributes:
+      enabled:
+        ui_control: "select"
+        value_type: boolean  # how to return the value to backend
+      mfa_delete:
+        default_editor: boolean
+        label: "MFA Delete" # custom label for the variable
+        type: boolean # custom type for the variable
+        description: "Specifies whether MFA delete is enabled in the bucket versioning configuration. This cannot be changed without recreating the bucket."
+        # backend should default to true/false if no options provided in case boolean type and we should default to select editor
+        options: [true, false]
+        validation:
+          required: true # default is false, for root variables we can make use of variables.tf file for required validation
+          constraints:
+            - type: "boolean"     
+
+
+# define variable groups to organize variables in the configuration panel
+# the variable keys should match the module's variable names
+# if no variable groups defined, all variables will be shown in 2 groups as required and optional
+# if some variable keys are not part of any group, they will be shown in a default group at the start/end
+variable_groups:
+- label: "Bucket Configuration" # custom label for the property group
+  description: "Configure bucket properties"
+  variables: ["block_public_access","enable_versioning","sse_algorithm","bucket_policy"] # variable keys to be included in the group
+- label: "Static Website Configuration"
+  description: "Configure static website hosting for the bucket"
+  variables: ["website","index_document","error_document"]
+
+
+
+
+# define this section if you wish to create this module as part of a connection between two other modules
+# create this module when source or target in connections
+# defines if this module can be used as attachment point for other modules
+connections:
+- source: "aws_athena"
+  target: "aws_rds_cluster"
+  label: "IAM" # required label for the connection can be anything
+  references:
+    - to: aws_s3_bucket # the attachment module identifier, here we have taken aws_s3_bucket as example
+      from: aws_athena # the connection target/source module identifier
+      output: arn # the output attribute from source/target module
+      input: bucket # the input variable in this module to which the output is mapped
+    - to: aws_s3_bucket # the attachment module identifier, here we have taken aws_s3_bucket as example
+      from: aws_rds_cluster
+      output: id
+      input: sse_algorithm
+    - from: aws_s3_bucket # the attachment module identifier, here we have taken aws_s3_bucket as example
+      to: aws_rds_cluster # the connection target/source module identifier
+      output: function_name
+      input: lambda_function_name
+
+
+
+# discovery configuration to map existing resources to this module
+# define this section if you wish to support discovery for this module, meaning mapping terraform resource to this module
+discovery:
+  type: "aws_s3_bucket" # resource type to which this module maps to if not specified we will map the module name in place of resource type
+  dnd_supported: false # whether this module supports drag and drop discovery
+  data_source: "data_aws_s3_bucket" # data source module to use in discovery flow
+  # if they wish to provide mapping between module configuration and terraform resource attributes
+  # for example if they are using my_bucket_name as variable in module configuration for bucket
+  references:
+  # Simple attribute reference
+    bucket_name:
+      from: aws_athena
+      output: bucket
+
+    # Nested attribute reference
+    versioning_configuration:
+      status:
+        from: aws_athena
+        output: status
+
+    # Array of references (for repeated/nested attributes)
+    index_document:
+      - suffix:
+          from: aws_rds_cluster
+          output: suffix
+
+    # Multiple possible sources for a single attribute
+    logging_configuration:
+      - from: aws_cloudwatch_log
+        output: log_group
+
+
+    # If you want to support expressions or transformations:
+    website_url:
+      from: aws_s3_bucket
+      output: bucket
+      transform: "https://${output}.s3.amazonaws.com"
+
+
+

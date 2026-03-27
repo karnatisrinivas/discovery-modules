@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the CloudFront Origin Access Control configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

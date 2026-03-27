@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Oam Link"
+  node:
+    label:
+      static: "[Data] Oam Link"
+      template: "[Data] Oam Link"
+    display_type: default
+
+discovery:
+  type: data_aws_oam_link
+  dnd_supported: false

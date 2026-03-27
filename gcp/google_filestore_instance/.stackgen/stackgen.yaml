@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Filestore Instance
+  node:
+    label:
+      static: Filestore Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_filestore_instance
+  dnd_supported: false
+  references:
+    kms_key_name:
+      from: google_kms_crypto_key
+      output: id

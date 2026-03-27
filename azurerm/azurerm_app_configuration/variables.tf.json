@@ -1,0 +1,97 @@
+{
+  "variable": {
+    "encryption": [
+      {
+        "description": "Defines encryption settings, including identity and key vault details",
+        "nullable": true,
+        "type": "list(object({identity_client_id: optional(string),key_vault_key_identifier: optional(string)}))"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Configures the managed identity, including IDs and tenant information",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),type: string}))"
+      }
+    ],
+    "local_auth_enabled": [
+      {
+        "description": "Indicates if local authentication is enabled (true/false)",
+        "nullable": true,
+        "type": "bool",
+        "default": true
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the resource name (must be unique and required)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access": [
+      {
+        "description": "Defines access level for public networks (e.g., Enabled, Disabled)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "purge_protection_enabled": [
+      {
+        "description": "Indicates if purge protection is enabled (true/false)",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "replica": [
+      {
+        "description": "Specifies replica settings, including location and endpoint details",
+        "nullable": true,
+        "type": "list(object({endpoint: optional(string),id: optional(string),location: string,name: string}))"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Specifies the SKU tier (e.g., Standard, Premium)",
+        "nullable": true,
+        "type": "string",
+        "default": "free"
+      }
+    ],
+    "soft_delete_retention_days": [
+      {
+        "description": "Defines retention days for soft-deleted items (must be a number)",
+        "nullable": true,
+        "type": "number",
+        "default": 30
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines metadata as key-value pairs for resource categorization",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures operation timeouts for create, read, update, and delete",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

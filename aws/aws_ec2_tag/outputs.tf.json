@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID to reference the EC2 tag for resource tracking or updates",
+            "value": "${aws_ec2_tag.this.id}"
+        }
+    }
+}

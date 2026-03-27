@@ -1,0 +1,53 @@
+{
+    "variable": {
+        "cidr_ipv4": [
+            {
+                "description": "The CIDR block.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "from_port": [
+            {
+                "description": "The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "ip_protocol": [
+            {
+                "description": "The IP protocol name or number. Use -1 to specify all protocols.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "security_group_id": [
+            {
+                "description": "The ID of the security group.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to all resources.",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "to_port": [
+            {
+                "description": "The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "description":[
+            {
+                "description": "The description of the security group rule.",
+                "type": "string",
+                "nullable": true
+            }
+        ]
+    }
+}

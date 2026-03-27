@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the certificate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "certificate_authority_arn": [
+      {
+        "description": "The ARN of the Certificate Authority (CA) that will issue the certificate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

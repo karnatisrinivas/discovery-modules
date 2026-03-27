@@ -1,0 +1,44 @@
+{
+    "output": {
+        "engine_description": {
+            "description": "A brief description of the Neptune database engine version.",
+            "value": "${data.aws_neptune_engine_version.this.engine_description}"
+        },
+        "exportable_log_types": {
+            "description": "A list of log types that can be exported to Amazon CloudWatch Logs.",
+            "value": "${data.aws_neptune_engine_version.this.exportable_log_types}"
+        },
+        "id": {
+            "description": "The unique identifier for the Neptune engine version.",
+            "value": "${data.aws_neptune_engine_version.this.id}"
+        },
+        "parameter_group_family": {
+            "description": "The name of the parameter group family that this engine version belongs to.",
+            "value": "${data.aws_neptune_engine_version.this.parameter_group_family}"
+        },
+        "supported_timezones": {
+            "description": "A set of time zones that are supported by the Neptune engine version.",
+            "value": "${data.aws_neptune_engine_version.this.supported_timezones}"
+        },
+        "supports_log_exports_to_cloudwatch": {
+            "description": "Indicates whether the engine version supports exporting logs to CloudWatch.",
+            "value": "${data.aws_neptune_engine_version.this.supports_log_exports_to_cloudwatch}"
+        },
+        "supports_read_replica": {
+            "description": "Indicates whether the engine version supports read replicas.",
+            "value": "${data.aws_neptune_engine_version.this.supports_read_replica}"
+        },
+        "valid_upgrade_targets": {
+            "description": "A set of Neptune engine versions to which you can upgrade this current version.",
+            "value": "${data.aws_neptune_engine_version.this.valid_upgrade_targets}"
+        },
+        "version": {
+            "description": "The specific version number of the Neptune engine.",
+            "value": "${data.aws_neptune_engine_version.this.version}"
+        },
+        "version_description": {
+            "description": "A description of the specific Neptune engine version.",
+            "value": "${data.aws_neptune_engine_version.this.version_description}"
+        }
+    }
+}

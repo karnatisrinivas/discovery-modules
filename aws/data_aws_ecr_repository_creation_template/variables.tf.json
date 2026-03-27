@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "prefix": [
+      {
+        "description": "A string to be used as a prefix for naming the AWS ECR repository, ensuring uniqueness and organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

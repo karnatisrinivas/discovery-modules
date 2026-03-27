@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lambda Alias"
+  node:
+    label:
+      static: "[Data] Lambda Alias"
+      template: "[Data] Lambda Alias"
+    display_type: default
+
+discovery:
+  type: data_aws_lambda_alias
+  dnd_supported: false

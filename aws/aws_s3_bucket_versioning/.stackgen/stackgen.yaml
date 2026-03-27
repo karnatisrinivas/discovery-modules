@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket Versioning
+  node:
+    label:
+      static: S3 Bucket Versioning
+      template: S3 Bucket Versioning
+    display_type: default
+
+discovery:
+  type: aws_s3_bucket_versioning
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: bucket

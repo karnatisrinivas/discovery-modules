@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for the autoscaler, useful for resource tracking and updates",
+            "value": "${google_compute_autoscaler.this.id}"
+        },
+        "self_link": {
+            "description": "The URI of the created resource",
+            "value": "${google_compute_autoscaler.this.self_link}"
+        }
+    }
+}

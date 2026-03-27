@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Network Firewall resource policy.",
+            "value": "${data.aws_networkfirewall_resource_policy.this.id}"
+        },
+        "policy": {
+            "description": "The JSON formatted policy document of the AWS Network Firewall resource.",
+            "value": "${data.aws_networkfirewall_resource_policy.this.policy}"
+        }
+    }
+}

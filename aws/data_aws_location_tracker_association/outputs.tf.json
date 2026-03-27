@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS location tracker association.",
+            "value": "${data.aws_location_tracker_association.this.id}"
+        }
+    }
+}

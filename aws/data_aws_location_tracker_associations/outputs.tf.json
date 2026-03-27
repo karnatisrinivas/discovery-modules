@@ -1,0 +1,12 @@
+{
+    "output": {
+        "consumer_arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for consumers that are associated with the AWS Location Tracker.",
+            "value": "${data.aws_location_tracker_associations.this.consumer_arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Location Tracker associations.",
+            "value": "${data.aws_location_tracker_associations.this.id}"
+        }
+    }
+}

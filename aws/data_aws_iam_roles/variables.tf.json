@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name_regex": [
+      {
+        "description": "A regular expression pattern that IAM role names must match.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "path_prefix": [
+      {
+        "description": "A path prefix for filtering IAM roles, used to group similar roles.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

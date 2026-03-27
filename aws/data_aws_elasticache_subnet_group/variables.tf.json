@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the ElastiCache subnet group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

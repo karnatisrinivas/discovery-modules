@@ -1,0 +1,28 @@
+{
+    "output": {
+        "endpoint": {
+            "description": "The computed value of endpoint",
+            "value": "${azurerm_app_configuration.this.endpoint}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${azurerm_app_configuration.this.id}"
+        },
+        "primary_read_key": {
+            "description": "The computed value of primary_read_key",
+            "value": "${azurerm_app_configuration.this.primary_read_key}"
+        },
+        "primary_write_key": {
+            "description": "The computed value of primary_write_key",
+            "value": "${azurerm_app_configuration.this.primary_write_key}"
+        },
+        "secondary_read_key": {
+            "description": "The computed value of secondary_read_key",
+            "value": "${azurerm_app_configuration.this.secondary_read_key}"
+        },
+        "secondary_write_key": {
+            "description": "The computed value of secondary_write_key",
+            "value": "${azurerm_app_configuration.this.secondary_write_key}"
+        }
+    }
+}

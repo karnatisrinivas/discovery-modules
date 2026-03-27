@@ -1,0 +1,30 @@
+resource "azurerm_disk_encryption_set" "this" {
+  auto_key_rotation_enabled = var.auto_key_rotation_enabled
+  encryption_type           = var.encryption_type
+  federated_client_id       = var.federated_client_id
+  key_vault_key_id          = var.key_vault_key_id
+  location                  = var.location
+  managed_hsm_key_id        = var.managed_hsm_key_id
+  name                      = var.name
+  resource_group_name       = var.resource_group_name
+  tags                      = var.tags
+
+  dynamic "identity" {
+    for_each = var.identity
+    content {
+      identity_ids = identity.value.identity_ids
+      type         = identity.value.type
+    }
+  }
+
+  dynamic "timeouts" {
+    for_each = var.timeouts != null ? [var.timeouts] : []
+    content {
+      create = lookup(timeouts.value, "create", null)
+      delete = lookup(timeouts.value, "delete", null)
+      read   = lookup(timeouts.value, "read", null)
+      update = lookup(timeouts.value, "update", null)
+    }
+  }
+
+}

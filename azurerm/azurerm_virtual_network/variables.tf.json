@@ -1,0 +1,51 @@
+{
+  "variable": {
+    "address_space": [
+      {
+        "description": "The address space that is used by the virtual network.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "The edge zone where the virtual network is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "flow_timeout_in_minutes": [
+      {
+        "description": "The flow timeout duration in minutes for the network.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the virtual network.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the virtual network.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

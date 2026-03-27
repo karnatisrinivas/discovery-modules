@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "filter": [
+      {
+        "description": "Defines the criteria used to filter projects in the organization, using a valid query string syntax.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

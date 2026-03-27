@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Athena Named Query"
+  node:
+    label:
+      static: "[Data] Athena Named Query"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_aws_athena_named_query
+  dnd_supported: false

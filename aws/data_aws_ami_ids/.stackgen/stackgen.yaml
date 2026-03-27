@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ami Ids"
+  node:
+    label:
+      static: "[Data] Ami Ids"
+      template: "[Data] Ami Ids"
+    display_type: default
+
+discovery:
+  type: data_aws_ami_ids
+  dnd_supported: false

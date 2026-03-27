@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] App Configuration Keys"
+  node:
+    label:
+      static: "[Data] App Configuration Keys"
+      template: ${label}
+    display_type: default
+
+discovery:
+  type: data_azurerm_app_configuration_keys
+  dnd_supported: false
+  references:
+    configuration_store_id:
+      from: data_azurerm_app_configuration
+      output: id

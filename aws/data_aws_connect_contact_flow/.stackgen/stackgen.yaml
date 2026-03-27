@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Contact Flow"
+  node:
+    label:
+      static: "[Data] Connect Contact Flow"
+      template: "[Data] Connect Contact Flow"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_contact_flow
+  dnd_supported: false

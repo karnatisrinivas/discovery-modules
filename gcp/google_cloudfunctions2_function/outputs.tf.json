@@ -1,0 +1,36 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Labels applied to the function for organization and management",
+            "value": "${google_cloudfunctions2_function.this.effective_labels}"
+        },
+        "environment": {
+            "description": "Runtime environment details for the cloud function",
+            "value": "${google_cloudfunctions2_function.this.environment}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the function in configurations",
+            "value": "${google_cloudfunctions2_function.this.id}"
+        },
+        "name": {
+            "description": "The name of the Cloud Function",
+            "value": "${google_cloudfunctions2_function.this.name}"
+        },
+        "state": {
+            "description": "Current operational state of the cloud function",
+            "value": "${google_cloudfunctions2_function.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for resource management",
+            "value": "${google_cloudfunctions2_function.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update to the function",
+            "value": "${google_cloudfunctions2_function.this.update_time}"
+        },
+        "url": {
+            "description": "Endpoint URL for accessing the cloud function",
+            "value": "${google_cloudfunctions2_function.this.url}"
+        }
+    }
+}

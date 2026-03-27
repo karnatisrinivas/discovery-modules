@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Access Context Manager Service Perimeter
+  node:
+    label:
+      static: Access Context Manager Service Perimeter
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_access_context_manager_service_perimeter
+  dnd_supported: false

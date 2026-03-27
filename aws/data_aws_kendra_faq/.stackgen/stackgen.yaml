@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kendra Faq"
+  node:
+    label:
+      static: "[Data] Kendra Faq"
+      template: "[Data] Kendra Faq"
+    display_type: default
+
+discovery:
+  type: data_aws_kendra_faq
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redshift Snapshot Schedule
+  node:
+    label:
+      static: Redshift Snapshot Schedule
+      template: Redshift Snapshot Schedule
+    display_type: default
+
+discovery:
+  type: aws_redshift_snapshot_schedule
+  dnd_supported: false

@@ -1,0 +1,68 @@
+{
+    "variable": {
+      "allocation_id": [
+        {
+          "description": "Specifies the ID of the Elastic IP address to associate with the NAT Gateway; must be an existing Elastic IP in the same region.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "connectivity_type": [
+        {
+          "description": "Specifies the connectivity type for the NAT gateway, either \"public\" or \"private\".",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "private_ip": [
+        {
+          "description": "Specifies the private IP address to associate with the NAT gateway, must be in the subnet's CIDR block.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "secondary_allocation_ids": [
+        {
+          "description": "List of secondary Elastic IP allocation IDs to associate with the NAT Gateway, allowing multiple public IPs for high availability or failover.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "secondary_private_ip_address_count": [
+        {
+          "description": "Specifies the number of secondary private IP addresses to assign to the NAT Gateway's network interface; must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "secondary_private_ip_addresses": [
+        {
+          "description": "List of secondary private IP addresses to associate with the NAT gateway; must be valid private IPv4 addresses within the subnet's CIDR range.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "subnet_id": [
+        {
+          "description": "ID of the subnet in which the NAT gateway will be created; must be a public subnet.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "tags": [
+        {
+          "description": "Key-value pairs to categorize and organize the NAT gateway, supporting resource management and identification.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Defines the duration for NAT Gateway creation and deletion operations, allowing customization of timeout periods to ensure proper resource management.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ]
+    }
+  }
+  

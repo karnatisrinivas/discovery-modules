@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "code_repository_name": [
+      {
+        "description": "Name of the SageMaker code repository, must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "git_config": [
+      {
+        "description": "Configuration settings for connecting to a Git repository, including repository URL and optional credentials.",
+        "nullable": false,
+        "type": "list(object({branch: optional(string),repository_url: string,secret_arn: optional(string)}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the code repository, supporting resource management and identification.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

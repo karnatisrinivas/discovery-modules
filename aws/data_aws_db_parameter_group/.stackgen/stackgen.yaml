@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Db Parameter Group"
+  node:
+    label:
+      static: "[Data] Db Parameter Group"
+      template: "[Data] Db Parameter Group"
+    display_type: default
+
+discovery:
+  type: data_aws_db_parameter_group
+  dnd_supported: false

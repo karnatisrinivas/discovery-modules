@@ -1,0 +1,24 @@
+{
+    "output": {
+        "address_space": {
+            "description": "The list of address spaces used by the virtual network.",
+            "value": "${azurerm_virtual_network.this.address_space}"
+        },
+        "guid": {
+            "description": "Unique GUID of the virtual network.",
+            "value": "${azurerm_virtual_network.this.guid}"
+        },
+        "id": {
+            "description": "Resource ID of the virtual network.",
+            "value": "${azurerm_virtual_network.this.id}"
+        },
+        "name": {
+            "description": "Name of the virtual network.",
+            "value": "${azurerm_virtual_network.this.name}"
+        },
+        "resource_group_name": {
+            "description": "Name of the resource group.",
+            "value": "${azurerm_virtual_network.this.resource_group_name}"
+        }
+    }
+}

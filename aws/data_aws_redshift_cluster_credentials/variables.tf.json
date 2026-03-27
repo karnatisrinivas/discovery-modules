@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "auto_create": [
+      {
+        "description": "Determines if the database user should be automatically created if it does not exist.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "cluster_identifier": [
+      {
+        "description": "The unique identifier of the Redshift cluster for which credentials are being generated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "db_groups": [
+      {
+        "description": "A set of existing database groups that the user should join.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "db_name": [
+      {
+        "description": "The name of the database for which the credentials are created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "db_user": [
+      {
+        "description": "The name of the database user for whom credentials are being generated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "duration_seconds": [
+      {
+        "description": "The time period in seconds for which the generated credentials should remain valid.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

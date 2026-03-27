@@ -1,0 +1,40 @@
+{
+    "output": {
+        "certificate": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.certificate}"
+        },
+        "certificate_id": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.certificate_id}"
+        },
+        "creation_timestamp": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.creation_timestamp}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.description}"
+        },
+        "expire_time": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.expire_time}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.id}"
+        },
+        "name_prefix": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.name_prefix}"
+        },
+        "private_key": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.private_key}"
+        },
+        "self_link": {
+            "description": "",
+            "value": "${data.google_compute_region_ssl_certificate.this.self_link}"
+        }
+    }
+}

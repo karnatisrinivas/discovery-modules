@@ -1,0 +1,28 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Subnet
+  node:
+    label:
+      static: Subnet
+      template: ${cidr_block}
+    display_type: default
+
+variables:
+  map_public_ip_on_launch:
+    description: Specify true to indicate that instances launched into the subnet should be assigned a public IP address.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_subnet
+  dnd_supported: false
+  data_source: data_aws_subnet
+  references:
+    vpc_id:
+      from: data_aws_vpc
+      output: id

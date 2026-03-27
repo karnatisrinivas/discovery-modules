@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the OAM sink.",
+            "value": "${data.aws_oam_sink.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the OAM sink.",
+            "value": "${data.aws_oam_sink.this.id}"
+        },
+        "name": {
+            "description": "The name of the OAM sink.",
+            "value": "${data.aws_oam_sink.this.name}"
+        },
+        "sink_id": {
+            "description": "The specific ID of the sink within the OAM service.",
+            "value": "${data.aws_oam_sink.this.sink_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the OAM sink.",
+            "value": "${data.aws_oam_sink.this.tags}"
+        }
+    }
+}

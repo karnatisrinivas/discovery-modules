@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Security Profile"
+  node:
+    label:
+      static: "[Data] Connect Security Profile"
+      template: "[Data] Connect Security Profile"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_security_profile
+  dnd_supported: false

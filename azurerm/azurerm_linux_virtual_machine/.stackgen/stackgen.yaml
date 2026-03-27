@@ -1,0 +1,28 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Linux Virtual Machine
+  node:
+    label:
+      static: Linux Virtual Machine
+      template: ${name}
+    display_type: default
+
+variables:
+  reboot_setting:
+    description: Configures reboot settings for the VM
+    type: string
+    options: 
+      - Always
+      - IfRequired
+      - Never
+    ui_control: select
+
+discovery:
+  type: azurerm_linux_virtual_machine
+  dnd_supported: false
+  references:
+    network_interface_ids:
+      from: azurerm_network_interface
+      output: id

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the MySQL flexible server.",
+            "value": "${azurerm_mysql_flexible_server.this.id}"
+        },
+        "name": {
+            "description": "The name of the MySQL flexible server.",
+            "value": "${azurerm_mysql_flexible_server.this.name}"
+        }
+    }
+}

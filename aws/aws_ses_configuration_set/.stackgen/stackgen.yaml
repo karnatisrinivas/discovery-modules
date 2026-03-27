@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS SES Configuration Set
+  node:
+    label:
+      static: AWS SES Configuration Set
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_ses_configuration_set
+  dnd_supported: false

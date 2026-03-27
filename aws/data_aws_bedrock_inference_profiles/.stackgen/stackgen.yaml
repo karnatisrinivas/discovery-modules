@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Bedrock Inference Profiles"
+  node:
+    label:
+      static: "[Data] Bedrock Inference Profiles"
+      template: "[Data] Bedrock Inference Profiles"
+    display_type: default
+
+discovery:
+  type: data_aws_bedrock_inference_profiles
+  dnd_supported: false

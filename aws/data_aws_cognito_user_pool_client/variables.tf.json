@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "client_id": [
+      {
+        "description": "The unique identifier for the Cognito User Pool client.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "user_pool_id": [
+      {
+        "description": "The unique identifier for the Cognito User Pool associated with the client.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

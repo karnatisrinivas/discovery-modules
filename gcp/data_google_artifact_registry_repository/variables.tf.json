@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "repository_id": [
+            {
+                "type": "string",
+                "description": "The last part of the repository name."
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "The location of the artifact registry repository. eg us-central1"
+            }
+        ]
+    }
+}

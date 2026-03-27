@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "This variable represents the canonical user ID used by AWS CloudFront for log delivery to your S3 bucket.",
+            "value": "${data.aws_cloudfront_log_delivery_canonical_user_id.this.id}"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "config": [
+      {
+        "description": "Defines the configuration settings for the Cloud Composer environment, including the environment's infrastructure, software options, and Airflow parameters.",
+        "nullable": true,
+        "type": "list(object({airflow_uri: optional(string),dag_gcs_prefix: optional(string),enable_private_builds_only: optional(bool),enable_private_environment: optional(bool),environment_size: optional(string),gke_cluster: optional(string),node_count: optional(number),resilience_mode: optional(string),data_retention_config: list(object({airflow_metadata_retention_config: list(object({retention_days: optional(number),retention_mode: optional(string)})),task_logs_retention_config: list(object({storage_mode: optional(string)}))})),database_config: list(object({machine_type: optional(string),zone: optional(string)})),encryption_config: list(object({kms_key_name: string})),maintenance_window: list(object({end_time: string,recurrence: string,start_time: string})),master_authorized_networks_config: list(object({enabled: bool,cidr_blocks: list(object({cidr_block: string,display_name: optional(string)}))})),node_config: list(object({composer_internal_ipv4_cidr_block: optional(string),composer_network_attachment: optional(string),disk_size_gb: optional(number),enable_ip_masq_agent: optional(bool),machine_type: optional(string),network: optional(string),oauth_scopes: optional(list(string)),service_account: optional(string),subnetwork: optional(string),tags: optional(list(string)),zone: optional(string),ip_allocation_policy: list(object({cluster_ipv4_cidr_block: optional(string),cluster_secondary_range_name: optional(string),services_ipv4_cidr_block: optional(string),services_secondary_range_name: optional(string),use_ip_aliases: optional(bool)}))})),private_environment_config: list(object({cloud_composer_connection_subnetwork: optional(string),cloud_composer_network_ipv4_cidr_block: optional(string),cloud_sql_ipv4_cidr_block: optional(string),connection_type: optional(string),enable_private_endpoint: optional(bool),enable_privately_used_public_ips: optional(bool),master_ipv4_cidr_block: optional(string),web_server_ipv4_cidr_block: optional(string)})),recovery_config: list(object({scheduled_snapshots_config: list(object({enabled: bool,snapshot_creation_schedule: optional(string),snapshot_location: optional(string),time_zone: optional(string)}))})),software_config: list(object({airflow_config_overrides: optional(map(string)),env_variables: optional(map(string)),image_version: optional(string),pypi_packages: optional(map(string)),python_version: optional(string),scheduler_count: optional(number),web_server_plugins_mode: optional(string),cloud_data_lineage_integration: list(object({enabled: bool}))})),web_server_config: list(object({machine_type: string})),web_server_network_access_control: list(object({allowed_ip_range: list(object({description: optional(string),value: string}))})),workloads_config: list(object({dag_processor: list(object({count: optional(number),cpu: optional(number),memory_gb: optional(number),storage_gb: optional(number)})),scheduler: list(object({count: optional(number),cpu: optional(number),memory_gb: optional(number),storage_gb: optional(number)})),triggerer: list(object({count: number,cpu: number,memory_gb: number})),web_server: list(object({cpu: optional(number),memory_gb: optional(number),storage_gb: optional(number)})),worker: list(object({cpu: optional(number),max_count: optional(number),memory_gb: optional(number),min_count: optional(number),storage_gb: optional(number)}))}))}))"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the environment, such as identifying purpose or ownership; must be unique within the project.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Composer environment, required for identification and must be globally unique across all environments.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "storage_config": [
+      {
+        "description": "Configuration for the Cloud Storage bucket used by the Composer environment, including bucket name and settings.",
+        "nullable": true,
+        "type": "list(object({bucket: string}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for creating, updating, and deleting the Composer environment. Adjust based on operation complexity or API latency.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

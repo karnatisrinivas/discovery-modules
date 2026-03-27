@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Acm Certificate Validation
+  node:
+    label:
+      static: Acm Certificate Validation
+      template: ${certificate_arn}
+    display_type: default
+
+discovery:
+  type: aws_acm_certificate_validation
+  dnd_supported: false
+  references:
+    certificate_arn:
+      from: aws_acm_certificate
+      output: arn

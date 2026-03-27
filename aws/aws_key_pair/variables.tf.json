@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "public_key": [
+            {
+                "type": "string",
+                "description": "The public key material.",
+                "nullable": false
+            }
+        ],
+        "key_name": [
+            {
+                "type": "string",
+                "description": "The name for the key pair. If neither key_name nor key_name_prefix is provided, Terraform will create a unique key name using the prefix terraform-.",
+                "nullable": true
+            }
+        ],
+        "key_name_prefix": [
+            {
+                "type": "string",
+                "description": "Creates a unique name beginning with the specified prefix. Conflicts with key_name. If neither key_name nor key_name_prefix is provided, Terraform will create a unique key name using the prefix terraform-.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "Key-value map of resource tags. If configured with a provider default_tags configuration block present, tags with matching keys will overwrite those defined at the provider-level.",
+                "nullable": true
+            }
+        ]
+    }
+}

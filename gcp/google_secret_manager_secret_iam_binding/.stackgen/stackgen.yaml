@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Secret Manager Secret Iam Binding
+  node:
+    label:
+      static: Secret Manager Secret Iam Binding
+      template: ${secret_id}
+    display_type: default
+
+discovery:
+  type: google_secret_manager_secret_iam_binding
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS resource that has tags.",
+            "value": "${data.aws_organizations_resource_tags.this.id}"
+        },
+        "tags": {
+            "description": "A map containing the tags associated with the AWS resource.",
+            "value": "${data.aws_organizations_resource_tags.this.tags}"
+        }
+    }
+}

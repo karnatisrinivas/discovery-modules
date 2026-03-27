@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "vpc_link_id": [
+      {
+        "description": "The unique identifier for the VPC link to be used with the API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

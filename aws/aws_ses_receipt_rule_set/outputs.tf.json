@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing SES receipt rule set permissions and API calls",
+            "value": "${aws_ses_receipt_rule_set.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the SES receipt rule set, useful for configuration references",
+            "value": "${aws_ses_receipt_rule_set.this.id}"
+        }
+    }
+}

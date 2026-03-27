@@ -1,0 +1,20 @@
+{
+    "output": {
+        "application_tag": {
+            "description": "",
+            "value": "${data.aws_servicecatalogappregistry_application.this.application_tag}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_servicecatalogappregistry_application.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_servicecatalogappregistry_application.this.description}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_servicecatalogappregistry_application.this.name}"
+        }
+    }
+}

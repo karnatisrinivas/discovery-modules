@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of a specific API Gateway V2 API.",
+            "value": "${data.aws_apigatewayv2_apis.this.id}"
+        },
+        "ids": {
+            "description": "A set of unique identifiers for multiple API Gateway V2 APIs.",
+            "value": "${data.aws_apigatewayv2_apis.this.ids}"
+        }
+    }
+}

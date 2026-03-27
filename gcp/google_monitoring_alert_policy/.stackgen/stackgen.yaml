@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitoring Alert Policy
+  node:
+    label:
+      static: Monitoring Alert Policy
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: google_monitoring_alert_policy
+  dnd_supported: false
+  references:
+    notification_channels:
+      from: google_monitoring_notification_channel
+      output: id

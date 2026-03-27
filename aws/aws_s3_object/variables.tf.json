@@ -1,0 +1,186 @@
+{
+  "variable": {
+    "acl": [
+      {
+        "description": "Defines the access control list permissions for the object, specifying who can read, write, or manage it; defaults to \"private\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "aws_s3_object_source": [
+      {
+        "description": "Specifies the source file path for the object to be uploaded to the S3 bucket; must be a valid local file path.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "bucket": [
+      {
+        "description": "Specifies the S3 bucket where the object will be stored; must already exist and be correctly configured.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "bucket_key_enabled": [
+      {
+        "description": "Enables or disables the use of bucket keys for server-side encryption to reduce the cost of encryption operations.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "cache_control": [
+      {
+        "description": "Defines caching behavior for the object, specifying how long browsers or intermediate caches should store the object before checking for updates.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "checksum_algorithm": [
+      {
+        "description": "Specifies the checksum algorithm to validate the integrity of the object during upload; valid values are \"CRC32\", \"CRC32C\", \"SHA1\", or \"SHA256\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content": [
+      {
+        "description": "Specifies the content to be uploaded to the S3 object; can be plain text, a file path, or binary data.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_base64": [
+      {
+        "description": "Base64-encoded content to be uploaded to the S3 object. Ensure the data is properly encoded and within the S3 object size limits.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_disposition": [
+      {
+        "description": "Defines the presentation style of the object, such as inline or attachment, to control how the object is displayed or downloaded.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_encoding": [
+      {
+        "description": "Specifies the encoding type used for the object, such as gzip or compress, to indicate how the object data is compressed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_language": [
+      {
+        "description": "Specifies the language of the content for the S3 object, formatted as a valid RFC 2616 language code.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_type": [
+      {
+        "description": "Specifies the media type of the object, such as 'text/html' or 'application/json'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "etag": [
+      {
+        "description": "The entity tag of the object, used for conditional requests and cache validation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_destroy": [
+      {
+        "description": "Indicates whether the object should be forcibly deleted, bypassing the bucket's lifecycle rules or any retention settings.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "key": [
+      {
+        "description": "Specifies the name of the object within the S3 bucket; must be unique within the bucket.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kms_key_id": [
+      {
+        "description": "Specifies the ID of the KMS key used to encrypt the S3 object; required if server-side encryption is enabled with AWS KMS.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "metadata": [
+      {
+        "description": "Defines custom metadata key-value pairs to be stored with the S3 object. Keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "object_lock_legal_hold_status": [
+      {
+        "description": "Specifies the legal hold status of the object; must be either \"ON\" or \"OFF\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_lock_mode": [
+      {
+        "description": "Specifies the object lock mode for the S3 object; valid values are \"GOVERNANCE\" or \"COMPLIANCE\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_lock_retain_until_date": [
+      {
+        "description": "Specifies the retention expiration date for the object, applicable only if object locking is enabled. Must be in ISO 8601 format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "override_provider": [
+      {
+        "description": "Specifies an alternate provider configuration to use for managing the S3 object.",
+        "nullable": true,
+        "type": "list(object({default_tags: list(object({tags: optional(map(string))}))}))"
+      }
+    ],
+    "server_side_encryption": [
+      {
+        "description": "Specifies the server-side encryption method to protect the S3 object, such as AES256 or aws:kms.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_hash": [
+      {
+        "description": "Checksum of the source file used to detect changes and trigger updates to the S3 object.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_class": [
+      {
+        "description": "Specifies the storage class for the S3 object, such as STANDARD, REDUCED_REDUNDANCY, or GLACIER.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines metadata for the S3 object as key-value pairs; keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "website_redirect": [
+      {
+        "description": "Specifies the URL or object key to redirect requests for this object; must be a valid URL or S3 object key.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Elasticsearch domain policy resource",
+            "value": "${aws_elasticsearch_domain_policy.this.id}"
+        }
+    }
+}

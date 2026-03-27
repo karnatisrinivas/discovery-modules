@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Resourcegroupstaggingapi Resources"
+  node:
+    label:
+      static: "[Data] Resourcegroupstaggingapi Resources"
+      template: "[Data] Resourcegroupstaggingapi Resources"
+    display_type: default
+
+discovery:
+  type: data_aws_resourcegroupstaggingapi_resources
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Neptune Orderable Db Instance"
+  node:
+    label:
+      static: "[Data] Neptune Orderable Db Instance"
+      template: "[Data] Neptune Orderable Db Instance"
+    display_type: default
+
+discovery:
+  type: data_aws_neptune_orderable_db_instance
+  dnd_supported: false

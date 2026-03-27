@@ -1,0 +1,28 @@
+{
+    "output": {
+        "data_disk": {
+            "description": "A list of data disks.",
+            "value": "${data.azurerm_image.this.data_disk}"
+        },
+        "location": {
+            "description": "the Azure Location where this Image exists.",
+            "value": "${data.azurerm_image.this.location}"
+        },
+        "name": {
+            "description": "the name of the Image.",
+            "value": "${data.azurerm_image.this.name}"
+        },
+        "os_disk": {
+            "description": "a list of OS disks.",
+            "value": "${data.azurerm_image.this.os_disk}"
+        },
+        "tags": {
+            "description": "a mapping of tags to assigned to the resource.",
+            "value": "${data.azurerm_image.this.tags}"
+        },
+        "zone_resilient": {
+            "description": "is zone resiliency enabled?",
+            "value": "${data.azurerm_image.this.zone_resilient}"
+        }
+    }
+}

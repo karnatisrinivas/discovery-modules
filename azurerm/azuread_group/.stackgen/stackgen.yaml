@@ -1,0 +1,53 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AzureAD Group
+  node:
+    label:
+      static: AzureAD Group
+      template: ${display_name}
+    display_type: default
+
+variables:
+  prevent_duplicate_names:
+    ui_control: select
+    description: If true, will return an error if an existing group exists with the same name
+    type: bool
+    options: 
+      - true
+      - false
+  security_enabled:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether the group is a security group
+    type: bool
+  visibility:
+    description: The group join policy and group content visibility
+    type: string
+    options: 
+      - Public
+      - Private
+      - Hiddenmembership
+    ui_control: select
+  assignable_to_role:
+    description: Indicates whether this group can be assigned to an Azure Active Directory role
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  mail_enabled:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Whether the group is mail-enabled"
+
+discovery:
+  type: azuread_group
+  dnd_supported: false
+  data_source: data_azuread_group

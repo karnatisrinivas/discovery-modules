@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Bigquery Routine
+  node:
+    label:
+      static: Bigquery Routine
+      template: ${routine_id}
+    display_type: default
+
+discovery:
+  type: google_bigquery_routine
+  dnd_supported: false
+  references:
+    dataset_id:
+      from: google_bigquery_dataset
+      output: dataset_id

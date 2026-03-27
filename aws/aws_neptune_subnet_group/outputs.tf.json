@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API access",
+            "value": "${aws_neptune_subnet_group.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune subnet group resource",
+            "value": "${aws_neptune_subnet_group.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the Neptune subnet group",
+            "value": "${aws_neptune_subnet_group.this.tags_all}"
+        }
+    }
+}

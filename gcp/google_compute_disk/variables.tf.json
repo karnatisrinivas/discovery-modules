@@ -1,0 +1,200 @@
+{
+  "variable": {
+    "access_mode": [
+      {
+        "description": "Specifies the access mode for the resource, such as read-only or read-write.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "architecture": [
+      {
+        "description": "Defines the CPU architecture to use, such as x86_64 or arm64.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "async_primary_disk": [
+      {
+        "description": "A list of primary disk configurations, each specifying the disk name.",
+        "nullable": true,
+        "type": "list(object({disk: string}))"
+      }
+    ],
+    "create_snapshot_before_destroy": [
+      {
+        "description": "Indicates whether a snapshot should be created before destroying the resource.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "create_snapshot_before_destroy_prefix": [
+      {
+        "description": "Prefix to use for naming snapshots created before resource destruction.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a human-readable description of the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disk_encryption_key": [
+      {
+        "description": "Defines the encryption key properties for securing disks, including KMS keys and raw keys.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string),sha256: optional(string)}))"
+      }
+    ],
+    "enable_confidential_compute": [
+      {
+        "description": "Enables confidential compute for the resource if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "guest_os_features": [
+      {
+        "description": "List of features to enable for the guest operating system, such as UEFI or secure boot.",
+        "nullable": true,
+        "type": "list(object({type: string}))"
+      }
+    ],
+    "image": [
+      {
+        "description": "Specifies the image to use for creating the resource, such as a VM image.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs used to organize and categorize the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "licenses": [
+      {
+        "description": "List of licenses associated with the resource.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Required name of the resource, which must be unique within its scope.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "params": [
+      {
+        "description": "Additional parameters for the resource, including optional resource manager tags.",
+        "nullable": true,
+        "type": "list(object({resource_manager_tags: optional(map(string))}))"
+      }
+    ],
+    "physical_block_size_bytes": [
+      {
+        "description": "Specifies the block size in bytes for the physical storage, such as 4096.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "provisioned_iops": [
+      {
+        "description": "Defines the number of IOPS provisioned for the resource, if applicable.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "provisioned_throughput": [
+      {
+        "description": "Sets the provisioned throughput for the resource, measured in MB/s.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "size": [
+      {
+        "description": "Specifies the size of the resource, such as disk size in GB.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "snapshot": [
+      {
+        "description": "Reference to a snapshot used to create the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_disk": [
+      {
+        "description": "Specifies the source disk to use when creating the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_image_encryption_key": [
+      {
+        "description": "Encryption key details for the source image, including KMS or raw key options.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),sha256: optional(string)}))"
+      }
+    ],
+    "source_instant_snapshot": [
+      {
+        "description": "Specifies the instant snapshot to use as the source for creating the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_snapshot_encryption_key": [
+      {
+        "description": "Encryption key details for the source snapshot, including KMS or raw key options.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),sha256: optional(string)}))"
+      }
+    ],
+    "source_storage_object": [
+      {
+        "description": "Defines the source storage object to use when creating the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_pool": [
+      {
+        "description": "Specifies the storage pool where the resource should be allocated.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout values for create, update, or delete operations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the resource type, such as standard or premium.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Defines the zone where the resource should be created or located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

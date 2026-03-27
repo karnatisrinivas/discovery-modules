@@ -1,0 +1,39 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cognito User Pool
+  node:
+    label:
+      static: Cognito User Pool
+      template: Cognito User Pool
+    display_type: default
+
+variables:
+  auto_verified_attributes:
+    description: "Attributes to be auto-verified."
+    type: list(string)
+    options: 
+      - email
+      - phone_number
+    ui_control: select
+  deletion_protection:
+    description: When active, DeletionProtection prevents accidental deletion of your user pool. Before you can delete a user pool that you have protected against deletion, you must deactivate this feature.
+    type: string
+    options: 
+      - INACTIVE
+      - ACTIVE
+    ui_control: select
+  mfa_configuration:
+    options: 
+      - OFF
+      - ON
+      - OPTIONAL
+    ui_control: select
+    description: "Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuratio`n or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured)."
+    type: string
+
+discovery:
+  type: aws_cognito_user_pool
+  dnd_supported: false
+  data_source: data_aws_cognito_user_pool

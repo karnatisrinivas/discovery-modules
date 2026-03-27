@@ -1,0 +1,48 @@
+{
+    "output": {
+        "cpu_platform": {
+            "description": "Indicates the specific CPU platform used by the instance",
+            "value": "${google_compute_instance_from_template.this.cpu_platform}"
+        },
+        "creation_timestamp": {
+            "description": "Time when the instance was initially created in GCP",
+            "value": "${google_compute_instance_from_template.this.creation_timestamp}"
+        },
+        "current_status": {
+            "description": "Shows the current operational state of the instance",
+            "value": "${google_compute_instance_from_template.this.current_status}"
+        },
+        "effective_labels": {
+            "description": "Key-value pairs applied to organize and identify the instance",
+            "value": "${google_compute_instance_from_template.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique resource ID for referencing the instance in configurations",
+            "value": "${google_compute_instance_from_template.this.id}"
+        },
+        "instance_id": {
+            "description": "Globally unique identifier for the instance, useful for API operations",
+            "value": "${google_compute_instance_from_template.this.instance_id}"
+        },
+        "label_fingerprint": {
+            "description": "Tracks updates to labels applied on the instance",
+            "value": "${google_compute_instance_from_template.this.label_fingerprint}"
+        },
+        "metadata_fingerprint": {
+            "description": "Tracks changes to instance metadata for consistency",
+            "value": "${google_compute_instance_from_template.this.metadata_fingerprint}"
+        },
+        "self_link": {
+            "description": "Full URL for directly accessing the instance in GCP",
+            "value": "${google_compute_instance_from_template.this.self_link}"
+        },
+        "tags_fingerprint": {
+            "description": "Tracks modifications to the tags associated with the instance",
+            "value": "${google_compute_instance_from_template.this.tags_fingerprint}"
+        },
+        "terraform_labels": {
+            "description": "Labels from Terraform used to manage the instance",
+            "value": "${google_compute_instance_from_template.this.terraform_labels}"
+        }
+    }
+}

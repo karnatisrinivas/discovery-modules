@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Bedrockagent Agent Versions"
+  node:
+    label:
+      static: "[Data] Bedrockagent Agent Versions"
+      template: "[Data] Bedrockagent Agent Versions"
+    display_type: default
+
+discovery:
+  type: data_aws_bedrockagent_agent_versions
+  dnd_supported: false

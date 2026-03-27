@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Customer Gateway
+  node:
+    label:
+      static: Customer Gateway
+      template: ${device_name}
+    display_type: default
+
+discovery:
+  type: aws_customer_gateway
+  dnd_supported: false

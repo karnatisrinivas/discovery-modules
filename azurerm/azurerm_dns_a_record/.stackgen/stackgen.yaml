@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "DNS - A Record"
+  node:
+    label:
+      static: "DNS - A Record"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_dns_a_record
+  dnd_supported: false
+  references:
+    zone_name:
+      from: azurerm_dns_zone
+      output: name

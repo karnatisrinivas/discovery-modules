@@ -1,0 +1,107 @@
+{
+  "variable": {
+    "create_option": [
+      {
+        "description": "Defines how the snapshot is created, with options such as 'Copy' or 'Import'; must be compatible with the source disk or data.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disk_access_id": [
+      {
+        "description": "Specifies the ID of the Disk Access resource to associate with the snapshot, enabling private endpoint connectivity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disk_size_gb": [
+      {
+        "description": "Specifies the size of the snapshot in gigabytes; must be greater than or equal to the size of the source disk.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "encryption_settings": [
+      {
+        "description": "Specifies the encryption configuration for the snapshot, including key source and identity requirements.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),disk_encryption_key: list(object({secret_url: string,source_vault_id: string})),key_encryption_key: list(object({key_url: string,source_vault_id: string}))}))"
+      }
+    ],
+    "incremental_enabled": [
+      {
+        "description": "Specifies whether the snapshot is incremental; must be enabled for incremental snapshots.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the snapshot, which must be unique within the resource group and adhere to Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_access_policy": [
+      {
+        "description": "Defines the network access policy for the snapshot, specifying whether it is accessible over the internet or restricted to private networks.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Determines whether public network access is enabled for the snapshot; must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "source_resource_id": [
+      {
+        "description": "Specifies the ID of the source resource to create the snapshot from, such as a managed disk or another snapshot.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_uri": [
+      {
+        "description": "Specifies the URI of the source disk or snapshot to create this snapshot from; must be a valid Azure resource URI.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_id": [
+      {
+        "description": "Specifies the ID of the storage account where the snapshot will be stored. Must be an existing Azure Storage account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs used to categorize and organize the snapshot for identification and management purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for create, read, update, and delete operations, ensuring proper timeout management for resource actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

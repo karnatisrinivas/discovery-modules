@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sesv2 Configuration Set"
+  node:
+    label:
+      static: "[Data] Sesv2 Configuration Set"
+      template: "[Data] Sesv2 Configuration Set"
+    display_type: default
+
+discovery:
+  type: data_aws_sesv2_configuration_set
+  dnd_supported: false

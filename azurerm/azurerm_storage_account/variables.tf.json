@@ -1,0 +1,164 @@
+{
+  "variable": {
+    "account_kind": [
+      {
+        "description": "Specifies the kind of storage account, such as Storage or StorageV2.",
+        "nullable": true,
+        "type": "string",
+        "default": "StorageV2"
+      }
+    ],
+    "account_replication_type": [
+      {
+        "description": "Defines the replication strategy for the storage account, like LRS or GRS.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "account_tier": [
+      {
+        "description": "Specifies the performance tier of the storage account, either Standard or Premium.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "allow_nested_items_to_be_public": [
+      {
+        "description": "Allows nested items within the storage account to be publicly accessible.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "allowed_copy_scope": [
+      {
+        "description": "Defines the scope allowed for copying data, such as Private or AAD.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cross_tenant_replication_enabled": [
+      {
+        "description": "Enables replication of data across different Azure tenants.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "default_to_oauth_authentication": [
+      {
+        "description": "Sets OAuth as the default authentication method.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "dns_endpoint_type": [
+      {
+        "description": "Specifies the type of DNS endpoint, such as Standard or AzureDnsZone.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the Azure Edge Zone where the storage account is deployed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "infrastructure_encryption_enabled": [
+      {
+        "description": "Enables additional encryption for data at rest.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "is_hns_enabled": [
+      {
+        "description": "Enables the hierarchical namespace for the storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "local_user_enabled": [
+      {
+        "description": "Allows local users to access the storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "min_tls_version": [
+      {
+        "description": "Specifies the minimum TLS version required for requests to the storage account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the storage account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "nfsv3_enabled": [
+      {
+        "description": "Enables NFSv3 protocol support for the storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Allows access to the storage account from public networks.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "queue_encryption_key_type": [
+      {
+        "description": "Specifies the type of encryption key used for queues.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sftp_enabled": [
+      {
+        "description": "Enables SFTP support for the storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "shared_access_key_enabled": [
+      {
+        "description": "Allows the use of shared access keys for authentication.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "table_encryption_key_type": [
+      {
+        "description": "Specifies the type of encryption key used for tables.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the storage account.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

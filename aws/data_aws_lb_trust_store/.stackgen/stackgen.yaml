@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lb Trust Store"
+  node:
+    label:
+      static: "[Data] Lb Trust Store"
+      template: "[Data] Lb Trust Store"
+    display_type: default
+
+discovery:
+  type: data_aws_lb_trust_store
+  dnd_supported: false

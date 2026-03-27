@@ -1,0 +1,39 @@
+{
+    "variable": {
+        "cloud_function": [
+            {
+                "description": "Specifies the name of the Cloud Function to which the IAM binding will be applied.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "condition": [
+            {
+                "description": "Defines an IAM condition that restricts the binding of the role to specific attributes, such as request time or resource name. Must be expressed in Common Expression Language (CEL) syntax.",
+                "nullable": true,
+                "type": "list(object({description: optional(string),expression: string,title: string}))"
+            }
+        ],
+        "location": [
+            {
+                "description": "Specifies the region where the Cloud Function IAM binding will be applied; must match the location of the Cloud Function.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "members": [
+            {
+                "description": "List of IAM members to be granted the specified role for the Cloud Function, formatted as user, group, or serviceAccount.",
+                "nullable": false,
+                "type": "list(string)"
+            }
+        ],
+        "role": [
+            {
+                "description": "Specifies the IAM role to be applied to the Cloud Function, must be in the format of 'roles/roleName'.",
+                "nullable": false,
+                "type": "string"
+            }
+        ]
+    }
+}

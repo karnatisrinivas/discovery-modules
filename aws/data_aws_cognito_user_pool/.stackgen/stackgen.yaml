@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cognito User Pool"
+  node:
+    label:
+      static: "[Data] Cognito User Pool"
+      template: "[Data] Cognito User Pool"
+    display_type: default
+
+discovery:
+  type: data_aws_cognito_user_pool
+  dnd_supported: false

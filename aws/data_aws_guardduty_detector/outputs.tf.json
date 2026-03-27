@@ -1,0 +1,24 @@
+{
+    "output": {
+        "features": {
+            "description": "A list of features that are enabled for the GuardDuty detector, each with its name, status, and any additional configuration.",
+            "value": "${data.aws_guardduty_detector.this.features}"
+        },
+        "finding_publishing_frequency": {
+            "description": "The frequency at which findings are published by the GuardDuty detector, e.g., every 15 minutes, 1 hour, or 6 hours.",
+            "value": "${data.aws_guardduty_detector.this.finding_publishing_frequency}"
+        },
+        "id": {
+            "description": "The unique identifier of the GuardDuty detector.",
+            "value": "${data.aws_guardduty_detector.this.id}"
+        },
+        "service_role_arn": {
+            "description": "The Amazon Resource Name (ARN) of the service role that allows GuardDuty to access AWS resources.",
+            "value": "${data.aws_guardduty_detector.this.service_role_arn}"
+        },
+        "status": {
+            "description": "The current status of the GuardDuty detector, indicating whether it is enabled or disabled.",
+            "value": "${data.aws_guardduty_detector.this.status}"
+        }
+    }
+}

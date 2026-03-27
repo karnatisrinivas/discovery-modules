@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "autoscaling_policy": [
+      {
+        "description": "Defines parameters for autoscaling, including replica limits, utilization targets, and scaling schedules. Ensure min_replicas is less than max_replicas, and target values are appropriate for workload demands.",
+        "nullable": true,
+        "type": "list(object({cooldown_period: optional(number),max_replicas: number,min_replicas: number,mode: optional(string),cpu_utilization: list(object({predictive_method: optional(string),target: number})),load_balancing_utilization: list(object({target: number})),metric: list(object({filter: optional(string),name: string,single_instance_assignment: optional(number),target: optional(number),type: optional(string)})),scale_in_control: list(object({time_window_sec: optional(number),max_scaled_in_replicas: list(object({fixed: optional(number),percent: optional(number)}))})),scaling_schedules: list(object({description: optional(string),disabled: optional(bool),duration_sec: number,min_required_replicas: number,name: string,schedule: string,time_zone: optional(string)}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a human-readable explanation or details about the resource or configuration. Typically required for documentation and clarity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the resource, which must be unique within the project or region. Typically used for identification purposes.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "target": [
+      {
+        "description": "Indicates the target resource or endpoint for this configuration, such as a load balancer or compute instance. Must match the intended resource identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout durations for create, update, and delete operations. Use appropriate values to avoid timing issues for long-running processes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Defines the zone where the resource is located. Use valid zone identifiers matching the cloud provider's supported regions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "The language code for the AWS Service Catalog. This determines the language in which the AWS Service Catalog presents information. Common values include 'en' for English, 'jp' for Japanese, etc.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "product_id": [
+      {
+        "description": "The unique identifier of the product for which you want to retrieve the launch paths in the AWS Service Catalog. This ID is mandatory to specify the product.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

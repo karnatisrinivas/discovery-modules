@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SES Domain Identity
+  node:
+    label:
+      static: SES Domain Identity
+      template: SES Domain Identity
+    display_type: default
+
+discovery:
+  type: aws_ses_domain_identity
+  dnd_supported: false
+  data_source: data_aws_ses_domain_identity

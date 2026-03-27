@@ -1,0 +1,16 @@
+{
+    "output": {
+        "etag": {
+            "description": "Version tag for tracking changes to the organization policy resource",
+            "value": "${google_organization_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the organization policy resource",
+            "value": "${google_organization_policy.this.id}"
+        },
+        "update_time": {
+            "description": "Timestamp indicating the last modification of the organization policy",
+            "value": "${google_organization_policy.this.update_time}"
+        }
+    }
+}

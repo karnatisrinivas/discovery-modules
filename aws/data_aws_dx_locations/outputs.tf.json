@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Direct Connect location.",
+            "value": "${data.aws_dx_locations.this.id}"
+        },
+        "location_codes": {
+            "description": "A set of location codes for available AWS Direct Connect locations.",
+            "value": "${data.aws_dx_locations.this.location_codes}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Workspaces Directory"
+  node:
+    label:
+      static: "[Data] Workspaces Directory"
+      template: "[Data] Workspaces Directory"
+    display_type: default
+
+discovery:
+  type: data_aws_workspaces_directory
+  dnd_supported: false

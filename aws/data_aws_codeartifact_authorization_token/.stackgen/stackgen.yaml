@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Codeartifact Authorization Token"
+  node:
+    label:
+      static: "[Data] Codeartifact Authorization Token"
+      template: "[Data] Codeartifact Authorization Token"
+    display_type: default
+
+discovery:
+  type: data_aws_codeartifact_authorization_token
+  dnd_supported: false

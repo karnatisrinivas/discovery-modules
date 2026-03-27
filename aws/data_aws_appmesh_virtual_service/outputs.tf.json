@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the App Mesh virtual service.",
+            "value": "${data.aws_appmesh_virtual_service.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the virtual service was created.",
+            "value": "${data.aws_appmesh_virtual_service.this.created_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the App Mesh virtual service.",
+            "value": "${data.aws_appmesh_virtual_service.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the virtual service was last updated.",
+            "value": "${data.aws_appmesh_virtual_service.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "The AWS account ID of the service mesh owner.",
+            "value": "${data.aws_appmesh_virtual_service.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "The AWS account ID of the resource owner.",
+            "value": "${data.aws_appmesh_virtual_service.this.resource_owner}"
+        },
+        "spec": {
+            "description": "The specifications of the virtual service, including the provider details.",
+            "value": "${data.aws_appmesh_virtual_service.this.spec}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the App Mesh virtual service.",
+            "value": "${data.aws_appmesh_virtual_service.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "output": {
+        "base_policy_id": {
+            "description": "Unique ID for the base policy used in inheritance",
+            "value": "${data.azurerm_firewall_policy.this.base_policy_id}"
+        },
+        "child_policies": {
+            "description": "List of IDs for policies derived from the base policy",
+            "value": "${data.azurerm_firewall_policy.this.child_policies}"
+        },
+        "dns": {
+            "description": "DNS settings including FQDN and proxy configurations",
+            "value": "${data.azurerm_firewall_policy.this.dns}"
+        },
+        "firewalls": {
+            "description": "List of IDs for firewalls associated with the policy",
+            "value": "${data.azurerm_firewall_policy.this.firewalls}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_firewall_policy.this.id}"
+        },
+        "location": {
+            "description": "Azure region where the firewall policy is deployed",
+            "value": "${data.azurerm_firewall_policy.this.location}"
+        },
+        "rule_collection_groups": {
+            "description": "IDs of rule collection groups linked to the policy",
+            "value": "${data.azurerm_firewall_policy.this.rule_collection_groups}"
+        },
+        "tags": {
+            "description": "Key-value pairs for categorizing the firewall policy",
+            "value": "${data.azurerm_firewall_policy.this.tags}"
+        },
+        "threat_intelligence_allowlist": {
+            "description": "Allowlist of FQDNs and IPs for threat intelligence",
+            "value": "${data.azurerm_firewall_policy.this.threat_intelligence_allowlist}"
+        },
+        "threat_intelligence_mode": {
+            "description": "Operational mode for threat intelligence settings",
+            "value": "${data.azurerm_firewall_policy.this.threat_intelligence_mode}"
+        }
+    }
+}

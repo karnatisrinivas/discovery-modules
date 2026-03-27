@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition to apply constraints on the IAM policy binding, specifying when and how the binding should be enforced.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Bigtable instance for which IAM roles will be managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM policy binding applies, such as a user, service account, or group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Defines the IAM role to be assigned to the member for managing permissions in the Bigtable instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

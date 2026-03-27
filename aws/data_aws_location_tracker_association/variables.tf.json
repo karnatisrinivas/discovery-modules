@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "consumer_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the consumer resource that you want to associate with the tracker.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tracker_name": [
+      {
+        "description": "The name of the tracker resource that you want to associate with the consumer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

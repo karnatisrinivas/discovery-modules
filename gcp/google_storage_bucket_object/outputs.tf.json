@@ -1,0 +1,36 @@
+{
+    "output": {
+        "crc32c": {
+            "description": "Checksum for detecting data corruption during storage or transfer",
+            "value": "${google_storage_bucket_object.this.crc32c}"
+        },
+        "generation": {
+            "description": "Object's version number for managing lifecycle and updates",
+            "value": "${google_storage_bucket_object.this.generation}"
+        },
+        "id": {
+            "description": "Unique identifier for the storage object within the bucket",
+            "value": "${google_storage_bucket_object.this.id}"
+        },
+        "md5hash": {
+            "description": "Hash for ensuring object content integrity and security",
+            "value": "${google_storage_bucket_object.this.md5hash}"
+        },
+        "media_link": {
+            "description": "Direct URL for downloading or streaming the object data",
+            "value": "${google_storage_bucket_object.this.media_link}"
+        },
+        "name": {
+            "description": "The name of the object.",
+            "value": "${google_storage_bucket_object.this.name}"
+        },
+        "output_name": {
+            "description": "Label used to identify the object in operations or logs",
+            "value": "${google_storage_bucket_object.this.output_name}"
+        },
+        "self_link": {
+            "description": "Endpoint for performing API actions on the object",
+            "value": "${google_storage_bucket_object.this.self_link}"
+        }
+    }
+}

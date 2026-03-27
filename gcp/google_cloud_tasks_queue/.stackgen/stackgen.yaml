@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloud Tasks
+  node:
+    label:
+      static: Cloud Tasks
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloud_tasks_queue
+  dnd_supported: false

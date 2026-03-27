@@ -1,0 +1,16 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag to track IAM policy updates and prevent conflicting changes",
+            "value": "${data.google_compute_instance_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM policy to reference in configurations",
+            "value": "${data.google_compute_instance_iam_policy.this.id}"
+        },
+        "policy_data": {
+            "description": "JSON-formatted IAM policy for managing access control settings",
+            "value": "${data.google_compute_instance_iam_policy.this.policy_data}"
+        }
+    }
+}

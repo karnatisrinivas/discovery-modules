@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Rds Global Cluster
+  node:
+    label:
+      static: Rds Global Cluster
+      template: ${global_cluster_identifier}
+    display_type: default
+
+discovery:
+  type: aws_rds_global_cluster
+  dnd_supported: false
+  references:
+    source_db_cluster_identifier:
+      from: aws_rds_cluster
+      output: arn

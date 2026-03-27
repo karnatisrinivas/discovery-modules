@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "export_custom_routes": [
+      {
+        "description": "Determines whether to export custom routes from the peer network. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "export_subnet_routes_with_public_ip": [
+      {
+        "description": "Determines whether subnet routes with public IPs are exported to the peer network; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "import_custom_routes": [
+      {
+        "description": "Determines whether custom routes from the peer network are imported into the current network; must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "import_subnet_routes_with_public_ip": [
+      {
+        "description": "Determines whether subnet routes with public IP addresses are imported from the peer network. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the network peering connection, which must be unique within the project and adhere to GCP naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the name or self-link of the network to which the peering will be applied; must be within the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "peer_network": [
+      {
+        "description": "Specifies the full self-link of the peer network that will be connected via peering. Must be in the same project or have appropriate permissions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stack_type": [
+      {
+        "description": "Specifies the type of stack (e.g., development, staging, production) to determine the environment for the network peering configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout durations for create, update, and delete operations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "variable": {
+    "app_settings": [
+      {
+        "description": "A map of key-value pairs for App Settings and custom values.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "builtin_logging_enabled": [
+      {
+        "description": " Should built in logging be enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_enabled": [
+      {
+        "description": "Client certificate enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_exclusion_paths": [
+      {
+        "description": "Client certificate exclusion paths.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "client_certificate_mode": [
+      {
+        "description": "Client certificate mode.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_share_force_disabled": [
+      {
+        "description": "Should the settings for linking the Function App to storage be suppressed.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "daily_memory_time_quota": [
+      {
+        "description": "The amount of memory in gigabyte-seconds that your application is allowed to consume per day.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "enabled": [
+      {
+        "description": " Is the Function App enabled? Defaults to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "ftp_publish_basic_authentication_enabled": [
+      {
+        "description": "Should the default FTP Basic Authentication publishing profile be enabled. Defaults to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "functions_extension_version": [
+      {
+        "description": "The runtime version associated with the Function App. Defaults to ~4.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "https_only": [
+      {
+        "description": "Can the Function App only be accessed via HTTPS? Defaults to false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name which should be used for this Linux Function App.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Should public network access be enabled for the Function App. Defaults to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "service_plan_id": [
+      {
+        "description": "The ID of the App Service Plan within which to create this Function App.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "storage_account_access_key": [
+      {
+        "description": "The access key which will be used to access the backend storage account for the Function App.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_name": [
+      {
+        "description": "The backend storage account name which will be used by this Function App.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_key_vault_secret_id": [
+      {
+        "description": "The Key Vault Secret ID, optionally including version, that contains the Connection String to connect to the storage account for this Function App.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_uses_managed_identity": [
+      {
+        "description": "Should the Function App use Managed Identity to access the storage account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A mapping of tags which should be assigned to the Linux Function App.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "virtual_network_subnet_id": [
+      {
+        "description": "The subnet id which will be used by this Function App for regional virtual network integration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "webdeploy_publish_basic_authentication_enabled": [
+      {
+        "description": "Should the default WebDeploy Basic Authentication publishing credentials enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "site_config": [
+      {
+        "description": "Site config for Linux Function App",
+        "type": "list(object({ always_on: bool, api_definition_url: string, api_management_api_id: optional(string), app_command_line: optional(string), app_scale_limit: optional(number), application_insights_connection_string: optional(string), application_insights_key: optional(string), container_registry_managed_identity_client_id: optional(string), container_registry_use_managed_identity: optional(bool), default_documents: optional(list(string)), elastic_instance_minimum: optional(number), ftps_state: optional(string), health_check_eviction_time_in_min: optional(number), health_check_path: optional(string), http2_enabled: optional(bool), ip_restriction_default_action: optional(string), load_balancing_mode: optional(string), managed_pipeline_mode: optional(string), minimum_tls_version: optional(string), pre_warmed_instance_count: optional(number), remote_debugging_enabled: optional(bool), remote_debugging_version: optional(string), runtime_scale_monitoring_enabled: optional(bool), scm_ip_restriction_default_action: optional(string), scm_minimum_tls_version: optional(string), scm_use_main_ip_restriction: optional(bool), use_32_bit_worker: optional(bool), vnet_route_all_enabled: optional(bool), websockets_enabled: optional(bool), worker_count: optional(number), app_service_logs: optional(object({ disk_quota_mb: optional(number), retention_period_days: optional(number) })), application_stack: optional(object({ dotnet_version: optional(string), java_version: optional(string), node_version: optional(string), python_version: optional(string), powershell_core_version: optional(string), use_custom_runtime: optional(bool), use_dotnet_isolated_runtime: optional(bool), docker: optional(object({ image_name: string, image_tag: string, registry_url: string, registry_username: optional(string), registry_password: optional(string) })) })), cors: optional(object({ allowed_origins: optional(set(string)), support_credentials: optional(bool) })), ip_restriction: optional(list(object({ action: optional(string), description: optional(string), headers: optional(list(object({ x_azure_fdid: optional(list(string)), x_fd_health_probe: optional(list(string)), x_forwarded_for: optional(list(string)), x_forwarded_host: optional(list(string)) }))), ip_address: optional(string), name: optional(string), priority: optional(number), service_tag: optional(string), virtual_network_subnet_id: optional(string) }))), scm_ip_restriction: optional(list(object({ action: optional(string), description: optional(string), headers: optional(list(object({ x_azure_fdid: optional(list(string)), x_fd_health_probe: optional(list(string)), x_forwarded_for: optional(list(string)), x_forwarded_host: optional(list(string)) }))), ip_address: optional(string), name: optional(string), priority: optional(number), service_tag: optional(string), virtual_network_subnet_id: optional(string) }))) }))",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

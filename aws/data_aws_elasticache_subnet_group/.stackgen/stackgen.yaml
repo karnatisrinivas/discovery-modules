@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elasticache Subnet Group"
+  node:
+    label:
+      static: "[Data] Elasticache Subnet Group"
+      template: "[Data] Elasticache Subnet Group"
+    display_type: default
+
+discovery:
+  type: data_aws_elasticache_subnet_group
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Session Context"
+  node:
+    label:
+      static: "[Data] Iam Session Context"
+      template: "[Data] Iam Session Context"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_session_context
+  dnd_supported: false

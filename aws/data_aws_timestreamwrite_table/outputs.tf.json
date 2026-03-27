@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Timestream table.",
+            "value": "${data.aws_timestreamwrite_table.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the Timestream table was created.",
+            "value": "${data.aws_timestreamwrite_table.this.creation_time}"
+        },
+        "last_updated_time": {
+            "description": "The time when the Timestream table was last updated.",
+            "value": "${data.aws_timestreamwrite_table.this.last_updated_time}"
+        },
+        "magnetic_store_write_properties": {
+            "description": "Properties that define how data is written to the magnetic store, including the configuration for rejected data location.",
+            "value": "${data.aws_timestreamwrite_table.this.magnetic_store_write_properties}"
+        },
+        "retention_properties": {
+            "description": "The retention properties of the table, specifying how long data is stored in memory and magnetic stores.",
+            "value": "${data.aws_timestreamwrite_table.this.retention_properties}"
+        },
+        "schema": {
+            "description": "The schema of the Timestream table, defining the structure of the data with partition keys.",
+            "value": "${data.aws_timestreamwrite_table.this.schema}"
+        },
+        "table_status": {
+            "description": "The current status of the Timestream table (e.g., ACTIVE, DELETING).",
+            "value": "${data.aws_timestreamwrite_table.this.table_status}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Securityhub Standards Control Associations"
+  node:
+    label:
+      static: "[Data] Securityhub Standards Control Associations"
+      template: "[Data] Securityhub Standards Control Associations"
+    display_type: default
+
+discovery:
+  type: data_aws_securityhub_standards_control_associations
+  dnd_supported: false

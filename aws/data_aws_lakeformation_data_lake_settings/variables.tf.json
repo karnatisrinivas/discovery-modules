@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "catalog_id": [
+      {
+        "description": "The identifier for the AWS Glue Data Catalog associated with the Lake Formation data lake settings. If not specified, it defaults to the AWS account ID.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

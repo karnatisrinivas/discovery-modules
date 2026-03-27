@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "user": [
+            {
+            "type": "string",
+            "description": " The user the policy should be applied to",
+            "nullable": false
+            }
+        ],
+        "policy_arn": [
+            {
+            "type": "string",
+            "description": "The ARN of the policy you want to apply",
+            "nullable": false
+            }
+        ]
+    }
+}

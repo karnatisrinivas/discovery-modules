@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Resolver Firewall Rule Group Association"
+  node:
+    label:
+      static: "[Data] Route53 Resolver Firewall Rule Group Association"
+      template: "[Data] Route53 Resolver Firewall Rule Group Association"
+    display_type: default
+
+discovery:
+  type: data_aws_route53_resolver_firewall_rule_group_association
+  dnd_supported: false

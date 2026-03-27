@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ses Template
+  node:
+    label:
+      static: Ses Template
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_ses_template
+  dnd_supported: false

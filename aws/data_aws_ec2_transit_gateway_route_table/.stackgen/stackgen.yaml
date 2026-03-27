@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Route Table"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Route Table"
+      template: "[Data] Ec2 Transit Gateway Route Table"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_route_table
+  dnd_supported: false

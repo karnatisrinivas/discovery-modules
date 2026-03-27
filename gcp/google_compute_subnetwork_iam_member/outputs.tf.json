@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM policy binding",
+            "value": "${google_compute_subnetwork_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Resource ID used for identifying the IAM member binding on the subnetwork",
+            "value": "${google_compute_subnetwork_iam_member.this.id}"
+        }
+    }
+}

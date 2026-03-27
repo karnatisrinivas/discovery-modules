@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "cluster_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the ECS cluster where the service will be deployed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_name": [
+      {
+        "description": "The name of the ECS service that will be created or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

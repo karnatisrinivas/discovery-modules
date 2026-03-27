@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for the autoscaling group tag, useful for resource tracking and updates",
+            "value": "${aws_autoscaling_group_tag.this.id}"
+        }
+    }
+}

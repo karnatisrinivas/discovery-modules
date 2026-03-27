@@ -1,0 +1,16 @@
+{
+    "output": {
+        "allocation_ids": {
+            "description": "A list of allocation IDs for the Elastic IPs associated with the AWS account.",
+            "value": "${data.aws_eips.this.allocation_ids}"
+        },
+        "id": {
+            "description": "The identifier for the set of Elastic IPs being referenced.",
+            "value": "${data.aws_eips.this.id}"
+        },
+        "public_ips": {
+            "description": "A list of public IP addresses for the Elastic IPs associated with the AWS account.",
+            "value": "${data.aws_eips.this.public_ips}"
+        }
+    }
+}

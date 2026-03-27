@@ -1,0 +1,40 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route53 Resolver Endpoint
+  node:
+    label:
+      static: Route53 Resolver Endpoint
+      template: ${name}
+    display_type: default
+
+variables:
+  direction:
+    ui_control: select
+    description: The direction of the resolver endpoint
+    type: string
+    options: 
+      - INBOUND
+      - OUTBOUND
+  resolver_endpoint_type:
+    description: The type of the resolver endpoint
+    type: string
+    options: 
+      - IPV4
+      - IPV6
+      - DUALSTACK
+    ui_control: select
+  protocols:
+    description: The protocols of the resolver endpoint
+    type: list(string)
+    options: 
+      - DoH
+      - Do53
+      - "DoH-FIPS"
+    ui_control: select
+
+discovery:
+  type: aws_route53_resolver_endpoint
+  dnd_supported: false
+  data_source: data_aws_route53_resolver_endpoint

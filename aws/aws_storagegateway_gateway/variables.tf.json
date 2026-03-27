@@ -1,0 +1,130 @@
+{
+  "variable": {
+    "activation_key": [
+      {
+        "description": "Specifies the key used to activate the gateway; must be provided if activation is required.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "average_download_rate_limit_in_bits_per_sec": [
+      {
+        "description": "Defines the maximum average download rate in bits per second; useful for bandwidth throttling.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "average_upload_rate_limit_in_bits_per_sec": [
+      {
+        "description": "Defines the maximum average upload rate in bits per second; useful for bandwidth throttling.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "cloudwatch_log_group_arn": [
+      {
+        "description": "Specifies the ARN of the CloudWatch log group for monitoring and logging gateway activity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gateway_ip_address": [
+      {
+        "description": "Defines the IP address of the gateway; must be reachable within the network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gateway_name": [
+      {
+        "description": "Specifies the name of the gateway; must be unique within the region and follow naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "gateway_timezone": [
+      {
+        "description": "Sets the timezone for the gateway; required for scheduling maintenance and other time-based operations.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "gateway_type": [
+      {
+        "description": "Defines the type of gateway being deployed (e.g., file, volume, tape); optional depending on configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gateway_vpc_endpoint": [
+      {
+        "description": "Specifies the VPC endpoint to connect the gateway to; required for private network configurations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "maintenance_start_time": [
+      {
+        "description": "Defines the start time for gateway maintenance in UTC, including optional day specifications.",
+        "nullable": true,
+        "type": "list(object({day_of_month: optional(string),day_of_week: optional(string),hour_of_day: number,minute_of_hour: optional(number)}))"
+      }
+    ],
+    "medium_changer_type": [
+      {
+        "description": "Specifies the type of medium changer for tape gateways; required for tape-based workflows.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "smb_active_directory_settings": [
+      {
+        "description": "Configures SMB settings for Active Directory integration, including domain details and credentials.",
+        "nullable": true,
+        "type": "list(object({active_directory_status: optional(string),domain_controllers: optional(list(string)),domain_name: string,organizational_unit: optional(string),password: string,timeout_in_seconds: optional(number),username: string}))"
+      }
+    ],
+    "smb_file_share_visibility": [
+      {
+        "description": "Controls whether SMB file shares are visible to clients on the network; true enables visibility.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "smb_guest_password": [
+      {
+        "description": "Sets the password for guest access to SMB file shares; required if guest access is enabled.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "smb_security_strategy": [
+      {
+        "description": "Defines the security strategy for SMB file shares (e.g., client authentication methods).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Provides key-value pairs for tagging the gateway resource; used for organization and cost tracking.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tape_drive_type": [
+      {
+        "description": "Defines the type of tape drive to use in tape gateways; required for tape-based storage configurations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout settings for resource creation operations, including optional custom durations.",
+        "nullable": true,
+        "type": "object({create: optional(string)})"
+      }
+    ]
+  }
+}

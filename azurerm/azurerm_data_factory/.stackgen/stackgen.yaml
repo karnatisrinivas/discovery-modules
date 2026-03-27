@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Data Factory
+  node:
+    label:
+      static: Data Factory
+      template: ${name}
+    display_type: default
+
+variables:
+  public_network_enabled:
+    description: "Is the Data Factory visible to the public network?"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  identity_type:
+    ui_control: select
+    description: Specifies the type of Managed Service Identity that should be configured on this Data Factory
+    type: string
+    options: 
+      - SystemAssigned
+      - UserAssigned
+      - SystemAssigned, UserAssigned
+
+discovery:
+  type: azurerm_data_factory
+  dnd_supported: false

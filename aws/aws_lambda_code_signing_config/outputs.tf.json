@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for identifying the code signing config in AWS",
+            "value": "${aws_lambda_code_signing_config.this.arn}"
+        },
+        "config_id": {
+            "description": "Unique identifier for the code signing configuration",
+            "value": "${aws_lambda_code_signing_config.this.config_id}"
+        },
+        "id": {
+            "description": "Terraform resource ID for managing the code signing config lifecycle",
+            "value": "${aws_lambda_code_signing_config.this.id}"
+        },
+        "last_modified": {
+            "description": "Timestamp of the last update to the code signing configuration",
+            "value": "${aws_lambda_code_signing_config.this.last_modified}"
+        },
+        "tags_all": {
+            "description": "Merged set of tags applied to the code signing configuration",
+            "value": "${aws_lambda_code_signing_config.this.tags_all}"
+        }
+    }
+}

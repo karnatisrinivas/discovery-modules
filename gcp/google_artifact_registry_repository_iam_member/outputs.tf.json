@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag used to track changes and enforce optimistic concurrency control",
+            "value": "${google_artifact_registry_repository_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member configuration in the Artifact Registry",
+            "value": "${google_artifact_registry_repository_iam_member.this.id}"
+        }
+    }
+}

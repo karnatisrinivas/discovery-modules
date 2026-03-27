@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Key Vault Secret"
+  node:
+    label:
+      static: "[Data] Key Vault Secret"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_key_vault_secret
+  dnd_supported: false
+  references:
+    key_vault_id:
+      from: data_azurerm_key_vault
+      output: id

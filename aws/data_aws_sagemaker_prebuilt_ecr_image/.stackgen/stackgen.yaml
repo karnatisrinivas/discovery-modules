@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sagemaker Prebuilt Ecr Image"
+  node:
+    label:
+      static: "[Data] Sagemaker Prebuilt Ecr Image"
+      template: "[Data] Sagemaker Prebuilt Ecr Image"
+    display_type: default
+
+discovery:
+  type: data_aws_sagemaker_prebuilt_ecr_image
+  dnd_supported: false

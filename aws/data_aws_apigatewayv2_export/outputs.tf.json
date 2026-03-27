@@ -1,0 +1,12 @@
+{
+    "output": {
+        "body": {
+            "description": "The content of the API Gateway export, typically in a format such as OpenAPI or Swagger.",
+            "value": "${data.aws_apigatewayv2_export.this.body}"
+        },
+        "id": {
+            "description": "The unique identifier for the API Gateway export resource.",
+            "value": "${data.aws_apigatewayv2_export.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kms Custom Key Store"
+  node:
+    label:
+      static: "[Data] Kms Custom Key Store"
+      template: "[Data] Kms Custom Key Store"
+    display_type: default
+
+discovery:
+  type: data_aws_kms_custom_key_store
+  dnd_supported: false

@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Image"
+  node:
+    label:
+      static: "[Data] Image"
+      template: ${name}
+    display_type: default
+
+variables:
+  sort_descending:
+    description: By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.
+    type: string
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: data_azurerm_image
+  dnd_supported: false

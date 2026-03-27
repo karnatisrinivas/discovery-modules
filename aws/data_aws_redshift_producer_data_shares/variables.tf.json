@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "producer_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Redshift producer cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "status": [
+      {
+        "description": "The current status of the data share from the Redshift producer.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

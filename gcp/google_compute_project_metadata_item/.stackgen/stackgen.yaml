@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Project Metadata Item
+  node:
+    label:
+      static: Compute Project Metadata Item
+      template: ${key}
+    display_type: default
+
+discovery:
+  type: google_compute_project_metadata_item
+  dnd_supported: false

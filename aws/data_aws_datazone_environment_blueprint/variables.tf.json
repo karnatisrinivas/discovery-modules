@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "domain_id": [
+      {
+        "description": "The unique identifier for the domain within which the environment blueprint is created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "managed": [
+      {
+        "description": "A boolean flag indicating whether the environment is managed by AWS.",
+        "nullable": false,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the environment blueprint.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

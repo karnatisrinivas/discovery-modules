@@ -1,0 +1,56 @@
+{
+    "output": {
+        "as_paths": {
+            "description": "Details of AS paths for BGP routing, helpful for analyzing route propagation",
+            "value": "${google_compute_route.this.as_paths}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp when the route was created, useful for auditing and tracking changes",
+            "value": "${google_compute_route.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the route in configurations",
+            "value": "${google_compute_route.this.id}"
+        },
+        "next_hop_hub": {
+            "description": "Specifies the next hop hub, useful for identifying traffic forwarding endpoints",
+            "value": "${google_compute_route.this.next_hop_hub}"
+        },
+        "next_hop_inter_region_cost": {
+            "description": "Cost of inter-region routing for the next hop, aids in cost management decisions",
+            "value": "${google_compute_route.this.next_hop_inter_region_cost}"
+        },
+        "next_hop_med": {
+            "description": "Multi-Exit Discriminator value for the next hop, used in route selection",
+            "value": "${google_compute_route.this.next_hop_med}"
+        },
+        "next_hop_network": {
+            "description": "Specifies the network for the next hop, essential for routing configuration",
+            "value": "${google_compute_route.this.next_hop_network}"
+        },
+        "next_hop_origin": {
+            "description": "Indicates the origin of the next hop, useful for understanding route sources",
+            "value": "${google_compute_route.this.next_hop_origin}"
+        },
+        "next_hop_peering": {
+            "description": "Peering connection for the next hop, important for inter-network connectivity",
+            "value": "${google_compute_route.this.next_hop_peering}"
+        },
+        "route_status": {
+            "description": "Current operational status of the route, helps in monitoring route availability",
+            "value": "${google_compute_route.this.route_status}"
+        },
+        "route_type": {
+            "description": "Type of route, such as static or dynamic, useful for route classification",
+            "value": "${google_compute_route.this.route_type}"
+        },
+        "self_link": {
+            "description": "URL of the route resource, useful for API calls and resource referencing",
+            "value": "${google_compute_route.this.self_link}"
+        },
+        "warnings": {
+            "description": "List of warnings for the route, useful for identifying potential issues",
+            "value": "${google_compute_route.this.warnings}"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "description": {
+            "description": "Detailed explanation of the policy's purpose and scope",
+            "value": "${data.azurerm_policy_definition.this.description}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_policy_definition.this.id}"
+        },
+        "metadata": {
+            "description": "Metadata information like version and category of the policy",
+            "value": "${data.azurerm_policy_definition.this.metadata}"
+        },
+        "mode": {
+            "description": "Execution mode for the policy, indicating its operational context",
+            "value": "${data.azurerm_policy_definition.this.mode}"
+        },
+        "parameters": {
+            "description": "Configurable parameters for the policy definition",
+            "value": "${data.azurerm_policy_definition.this.parameters}"
+        },
+        "policy_rule": {
+            "description": "Logical rule defining the conditions and actions of the policy",
+            "value": "${data.azurerm_policy_definition.this.policy_rule}"
+        },
+        "policy_type": {
+            "description": "Classification of the policy, such as built-in or custom",
+            "value": "${data.azurerm_policy_definition.this.policy_type}"
+        },
+        "role_definition_ids": {
+            "description": "List of role IDs associated with the policy for permissions",
+            "value": "${data.azurerm_policy_definition.this.role_definition_ids}"
+        }
+    }
+}

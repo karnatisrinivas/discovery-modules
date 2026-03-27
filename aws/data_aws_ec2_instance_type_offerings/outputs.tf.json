@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "A unique identifier for the EC2 instance type offerings data source.",
+            "value": "${data.aws_ec2_instance_type_offerings.this.id}"
+        },
+        "instance_types": {
+            "description": "A list of available EC2 instance types that can be used in the specified region or location.",
+            "value": "${data.aws_ec2_instance_type_offerings.this.instance_types}"
+        },
+        "location_types": {
+            "description": "A list of location types where the EC2 instance types are offered, such as 'availability-zone' or 'region'.",
+            "value": "${data.aws_ec2_instance_type_offerings.this.location_types}"
+        },
+        "locations": {
+            "description": "A list of specific locations, like regions or availability zones, where the EC2 instance types are available.",
+            "value": "${data.aws_ec2_instance_type_offerings.this.locations}"
+        }
+    }
+}

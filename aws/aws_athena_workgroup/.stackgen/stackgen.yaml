@@ -1,0 +1,36 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Athena Workgroup
+  node:
+    label:
+      static: Athena Workgroup
+      template: Athena Workgroup
+    display_type: default
+
+variables:
+  state:
+    description: The state of the workgroup.
+    type: string
+    options: 
+      - ENABLED
+      - DISABLED
+    ui_control: select
+  force_destroy:
+    description: Option to delete the workgroup and its contents even if the workgroup contains any named queries.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  encryption_option:
+    options: 
+      - SSE_S3
+      - SSE_KMS
+      - CSE_KMS
+    ui_control: select
+
+discovery:
+  type: aws_athena_workgroup
+  dnd_supported: false

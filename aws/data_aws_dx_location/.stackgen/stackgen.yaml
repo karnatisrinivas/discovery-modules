@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dx Location"
+  node:
+    label:
+      static: "[Data] Dx Location"
+      template: "[Data] Dx Location"
+    display_type: default
+
+discovery:
+  type: data_aws_dx_location
+  dnd_supported: false

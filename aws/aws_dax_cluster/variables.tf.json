@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "availability_zones": [
+      {
+        "description": "Specifies the list of availability zones for deploying the DAX cluster, ensuring high availability and fault tolerance.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "cluster_endpoint_encryption_type": [
+      {
+        "description": "Specifies the encryption type for the cluster endpoint; valid values are \"NONE\" or \"TLS\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cluster_name": [
+      {
+        "description": "Defines the unique name for the DAX cluster; must be between 1 and 20 characters long and contain only alphanumeric characters or hyphens.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a brief, user-defined summary of the DAX cluster's purpose or configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "iam_role_arn": [
+      {
+        "description": "IAM role ARN with permissions required for the DAX cluster to access other AWS resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "maintenance_window": [
+      {
+        "description": "Specifies the time window during which system maintenance can occur, formatted as \"ddd:hh:mm-ddd:hh:mm\" in UTC; must be within a weekly schedule.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "node_type": [
+      {
+        "description": "Specifies the compute and memory capacity of each DAX node; must match one of the supported instance types.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "notification_topic_arn": [
+      {
+        "description": "ARN of the SNS topic for DAX notifications; must be an existing topic.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameter_group_name": [
+      {
+        "description": "Specifies the name of the parameter group associated with the DAX cluster. Must match an existing parameter group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "replication_factor": [
+      {
+        "description": "Number of DAX nodes in the cluster, must be between 1 and 10.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "security_group_ids": [
+      {
+        "description": "List of security group IDs to associate with the DAX cluster for controlling inbound and outbound traffic.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "server_side_encryption": [
+      {
+        "description": "Enables encryption at rest for the DAX cluster, ensuring data security; must be true or false.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool)}))"
+      }
+    ],
+    "subnet_group_name": [
+      {
+        "description": "Specifies the name of the subnet group associated with the DAX cluster; must match an existing subnet group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the DAX cluster for categorization or resource organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout durations for create, update, and delete operations for the DAX cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

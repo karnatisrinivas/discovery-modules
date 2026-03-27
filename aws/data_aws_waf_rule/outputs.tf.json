@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS WAF rule.",
+            "value": "${data.aws_waf_rule.this.id}"
+        }
+    }
+}

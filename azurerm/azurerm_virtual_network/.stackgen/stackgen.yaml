@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Network
+  node:
+    label:
+      static: Virtual Network
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_virtual_network
+  dnd_supported: false
+  data_source: data_azurerm_virtual_network

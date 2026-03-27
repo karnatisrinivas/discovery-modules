@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "vpc_endpoint_id": [
+      {
+        "description": "The unique identifier for the VPC endpoint used to connect to the OpenSearch Serverless service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

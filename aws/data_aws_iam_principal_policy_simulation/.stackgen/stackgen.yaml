@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Principal Policy Simulation"
+  node:
+    label:
+      static: "[Data] Iam Principal Policy Simulation"
+      template: "[Data] Iam Principal Policy Simulation"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_principal_policy_simulation
+  dnd_supported: false

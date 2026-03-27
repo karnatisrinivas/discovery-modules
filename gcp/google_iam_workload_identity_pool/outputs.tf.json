@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the workload identity pool, useful for referencing in configurations",
+            "value": "${google_iam_workload_identity_pool.this.id}"
+        },
+        "name": {
+            "description": "Readable name of the workload identity pool, helpful for identification in logs and dashboards",
+            "value": "${google_iam_workload_identity_pool.this.name}"
+        },
+        "state": {
+            "description": "Current state of the workload identity pool, useful for monitoring resource status",
+            "value": "${google_iam_workload_identity_pool.this.state}"
+        },
+        "workload_identity_pool_id": {
+            "description": "Unique identifier for the workload identity pool, useful for referencing in configurations",
+            "value": "${google_iam_workload_identity_pool.this.workload_identity_pool_id}"
+        }
+    }
+}

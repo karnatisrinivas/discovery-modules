@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: NAT Gateway
+  node:
+    label:
+      static: NAT Gateway
+      template: ${subnet_id}
+    display_type: default
+
+variables:
+  connectivity_type:
+    ui_control: select
+    description: "Specifies the connectivity type for the NAT gateway, either \"public\" or \"private\"."
+    type: string
+    options: 
+      - public
+      - private
+
+discovery:
+  type: aws_nat_gateway
+  dnd_supported: false
+  data_source: data_aws_nat_gateway
+  references:
+    allocation_id:
+      from: aws_eip
+      output: id
+    subnet_id:
+      from: aws_subnet
+      output: id

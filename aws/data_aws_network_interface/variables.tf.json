@@ -1,0 +1,9 @@
+{
+    "variable": {
+        "id": [{
+            "description": "The ID of the network interface",
+            "type": "string",
+            "nullable": false
+        }]
+    }
+}

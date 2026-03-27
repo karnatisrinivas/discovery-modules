@@ -1,0 +1,176 @@
+{
+    "output": {
+        "address": {
+            "description": "The address of the database instance.",
+            "value": "${data.aws_db_instance.this.address}"
+        },
+        "allocated_storage": {
+            "description": "The amount of storage allocated for the database instance.",
+            "value": "${data.aws_db_instance.this.allocated_storage}"
+        },
+        "auto_minor_version_upgrade": {
+            "description": "Indicates whether minor engine upgrades are applied automatically to the database instance during the maintenance window.",
+            "value": "${data.aws_db_instance.this.auto_minor_version_upgrade}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the database instance is located.",
+            "value": "${data.aws_db_instance.this.availability_zone}"
+        },
+        "backup_retention_period": {
+            "description": "The number of days to retain backups for the database instance.",
+            "value": "${data.aws_db_instance.this.backup_retention_period}"
+        },
+        "ca_cert_identifier": {
+            "description": "The identifier of the CA certificate for the database instance.",
+            "value": "${data.aws_db_instance.this.ca_cert_identifier}"
+        },
+        "db_cluster_identifier": {
+            "description": "The identifier of the DB cluster associated with the instance, if any.",
+            "value": "${data.aws_db_instance.this.db_cluster_identifier}"
+        },
+        "db_instance_arn": {
+            "description": "The Amazon Resource Name (ARN) of the database instance.",
+            "value": "${data.aws_db_instance.this.db_instance_arn}"
+        },
+        "db_instance_class": {
+            "description": "The compute and memory capacity of the database instance.",
+            "value": "${data.aws_db_instance.this.db_instance_class}"
+        },
+        "db_instance_identifier": {
+            "description": "The identifier for the database instance.",
+            "value": "${data.aws_db_instance.this.db_instance_identifier}"
+        },
+        "db_instance_port": {
+            "description": "The port number on which the database instance accepts connections.",
+            "value": "${data.aws_db_instance.this.db_instance_port}"
+        },
+        "db_name": {
+            "description": "The name of the initial database of this instance, if specified.",
+            "value": "${data.aws_db_instance.this.db_name}"
+        },
+        "db_parameter_groups": {
+            "description": "A list of DB parameter groups associated with the instance.",
+            "value": "${data.aws_db_instance.this.db_parameter_groups}"
+        },
+        "db_subnet_group": {
+            "description": "The DB subnet group for the database instance.",
+            "value": "${data.aws_db_instance.this.db_subnet_group}"
+        },
+        "enabled_cloudwatch_logs_exports": {
+            "description": "A list of log types that are enabled for export to CloudWatch logs.",
+            "value": "${data.aws_db_instance.this.enabled_cloudwatch_logs_exports}"
+        },
+        "endpoint": {
+            "description": "The connection endpoint for the database instance.",
+            "value": "${data.aws_db_instance.this.endpoint}"
+        },
+        "engine": {
+            "description": "The database engine used by the instance.",
+            "value": "${data.aws_db_instance.this.engine}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine.",
+            "value": "${data.aws_db_instance.this.engine_version}"
+        },
+        "hosted_zone_id": {
+            "description": "The ID of the hosted zone for the database instance's endpoint.",
+            "value": "${data.aws_db_instance.this.hosted_zone_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the database instance.",
+            "value": "${data.aws_db_instance.this.id}"
+        },
+        "iops": {
+            "description": "The provisioned IOPS for the database instance, if applicable.",
+            "value": "${data.aws_db_instance.this.iops}"
+        },
+        "kms_key_id": {
+            "description": "The Amazon Resource Name (ARN) for the KMS encryption key, if storage is encrypted.",
+            "value": "${data.aws_db_instance.this.kms_key_id}"
+        },
+        "license_model": {
+            "description": "The license model for the database instance.",
+            "value": "${data.aws_db_instance.this.license_model}"
+        },
+        "master_user_secret": {
+            "description": "Details of the master user secret, including KMS key ID, secret ARN, and status.",
+            "value": "${data.aws_db_instance.this.master_user_secret}"
+        },
+        "master_username": {
+            "description": "The username for the master user of the database instance.",
+            "value": "${data.aws_db_instance.this.master_username}"
+        },
+        "max_allocated_storage": {
+            "description": "The maximum amount of storage automatically allocated for the instance.",
+            "value": "${data.aws_db_instance.this.max_allocated_storage}"
+        },
+        "monitoring_interval": {
+            "description": "The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.",
+            "value": "${data.aws_db_instance.this.monitoring_interval}"
+        },
+        "monitoring_role_arn": {
+            "description": "The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs.",
+            "value": "${data.aws_db_instance.this.monitoring_role_arn}"
+        },
+        "multi_az": {
+            "description": "Indicates if the database instance is a Multi-AZ deployment.",
+            "value": "${data.aws_db_instance.this.multi_az}"
+        },
+        "network_type": {
+            "description": "The network type used by the database instance, such as IPv4 or Dual-stack.",
+            "value": "${data.aws_db_instance.this.network_type}"
+        },
+        "option_group_memberships": {
+            "description": "A list of option group memberships for the database instance.",
+            "value": "${data.aws_db_instance.this.option_group_memberships}"
+        },
+        "port": {
+            "description": "The port on which the database instance listens for connections.",
+            "value": "${data.aws_db_instance.this.port}"
+        },
+        "preferred_backup_window": {
+            "description": "The daily time range during which automated backups are created if automated backups are enabled.",
+            "value": "${data.aws_db_instance.this.preferred_backup_window}"
+        },
+        "preferred_maintenance_window": {
+            "description": "The weekly time range during which system maintenance can occur, in UTC.",
+            "value": "${data.aws_db_instance.this.preferred_maintenance_window}"
+        },
+        "publicly_accessible": {
+            "description": "Indicates whether the database instance is publicly accessible.",
+            "value": "${data.aws_db_instance.this.publicly_accessible}"
+        },
+        "replicate_source_db": {
+            "description": "The identifier of the source DB instance if this DB instance is a read replica.",
+            "value": "${data.aws_db_instance.this.replicate_source_db}"
+        },
+        "resource_id": {
+            "description": "The RDS Resource ID for the database instance.",
+            "value": "${data.aws_db_instance.this.resource_id}"
+        },
+        "storage_encrypted": {
+            "description": "Indicates whether the storage is encrypted for the database instance.",
+            "value": "${data.aws_db_instance.this.storage_encrypted}"
+        },
+        "storage_throughput": {
+            "description": "The storage throughput, in MiB/s, for the database instance.",
+            "value": "${data.aws_db_instance.this.storage_throughput}"
+        },
+        "storage_type": {
+            "description": "The storage type associated with the database instance.",
+            "value": "${data.aws_db_instance.this.storage_type}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the database instance.",
+            "value": "${data.aws_db_instance.this.tags}"
+        },
+        "timezone": {
+            "description": "The time zone of the database instance.",
+            "value": "${data.aws_db_instance.this.timezone}"
+        },
+        "vpc_security_groups": {
+            "description": "A list of VPC security groups associated with the database instance.",
+            "value": "${data.aws_db_instance.this.vpc_security_groups}"
+        }
+    }
+}

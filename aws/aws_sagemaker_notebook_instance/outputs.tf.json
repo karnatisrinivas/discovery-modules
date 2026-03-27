@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for permissions and API interactions",
+            "value": "${aws_sagemaker_notebook_instance.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the notebook instance",
+            "value": "${aws_sagemaker_notebook_instance.this.id}"
+        },
+        "network_interface_id": {
+            "description": "ID of the network interface for connectivity and security purposes",
+            "value": "${aws_sagemaker_notebook_instance.this.network_interface_id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for organizing and categorizing resources",
+            "value": "${aws_sagemaker_notebook_instance.this.tags_all}"
+        },
+        "url": {
+            "description": "Web URL for accessing the notebook instance's interface",
+            "value": "${aws_sagemaker_notebook_instance.this.url}"
+        }
+    }
+}

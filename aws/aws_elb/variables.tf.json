@@ -1,0 +1,123 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Name of the load balancer. This name must be unique within your AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Prefix for the name of the load balancer.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "access_logs": [
+      {
+        "description": "An Access Logs block containing S3 bucket configuration for access logs.",
+        "nullable": true,
+        "type": "list(object({ bucket:string, bucket_prefix:string, enabled:bool, interval:number}))"
+      }
+    ],
+    "availability_zones": [
+      {
+        "description": "List of availability zones to deploy the load balancer.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "security_groups": [
+      {
+        "description": "List of security group IDs to assign to the LB.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "subnets": [
+      {
+        "description": "List of subnet IDs to attach to the LB.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "instances": [
+      {
+        "description": "List of instance IDs to attach to the LB.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "internal": [
+      {
+        "description": "If true, the LB will be internal. Defaults to false.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "listener": [
+      {
+        "description": "A listener block containing the protocol and port configuration for the LB.",
+        "nullable": true,
+        "type": "list(object({ instance_port:number, instance_protocol:string, lb_port:number, lb_protocol:string, ssl_certificate_id:string }))"
+      }
+    ],
+    "health_check": [
+      {
+        "description": "A health check block containing the protocol and port configuration for the LB.",
+        "nullable": true,
+        "type": "list(object({ target:string, interval:number, timeout:number, healthy_threshold:number, unhealthy_threshold:number }))"
+      }
+    ],
+    "cross_zone_load_balancing": [
+      {
+        "description": "If true, cross-zone load balancing will be enabled.",
+        "nullable": true,
+        "type": "bool",
+        "default": true
+      }
+    ],
+    "idle_timeout": [
+      {
+        "description": "The time in seconds that the connection is allowed to be idle.",
+        "nullable": true,
+        "type": "number",
+        "default": 60
+      }
+    ],
+    "connection_draining": [
+      {
+        "description": "If true, connection draining will be enabled.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "connection_draining_timeout": [
+      {
+        "description": "The time in seconds to wait for a connection to drain.",
+        "nullable": true,
+        "type": "number",
+        "default": 300
+      }
+    ],
+    "desync_mitigation_mode": [
+        {
+            "description": "The desync mitigation mode for the LB.",
+            "nullable": true,
+            "type": "string",
+            "default": "defensive"
+        }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)",
+        "default": {}
+      }
+    ]
+  }
+} 

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "collection_arn": {
+            "description": "The Amazon Resource Name (ARN) for the geofence collection.",
+            "value": "${data.aws_location_geofence_collection.this.collection_arn}"
+        },
+        "create_time": {
+            "description": "The timestamp when the geofence collection was created.",
+            "value": "${data.aws_location_geofence_collection.this.create_time}"
+        },
+        "description": {
+            "description": "A brief description of the geofence collection.",
+            "value": "${data.aws_location_geofence_collection.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the geofence collection.",
+            "value": "${data.aws_location_geofence_collection.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS Key Management Service (KMS) key used to encrypt the geofence collection.",
+            "value": "${data.aws_location_geofence_collection.this.kms_key_id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the geofence collection.",
+            "value": "${data.aws_location_geofence_collection.this.tags}"
+        },
+        "update_time": {
+            "description": "The timestamp when the geofence collection was last updated.",
+            "value": "${data.aws_location_geofence_collection.this.update_time}"
+        }
+    }
+}

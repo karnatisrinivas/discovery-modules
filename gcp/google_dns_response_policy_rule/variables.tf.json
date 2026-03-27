@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "dns_name": [
+      {
+        "description": "Specifies the DNS name to which this rule applies; must be a valid DNS name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "local_data": [
+      {
+        "description": "Specifies the local data for the DNS response policy rule, including DNS resource records. Must be formatted as valid DNS resource record strings.",
+        "nullable": true,
+        "type": "list(object({local_datas: list(object({name: string,rrdatas: optional(list(string)),ttl: optional(number),type: string}))}))"
+      }
+    ],
+    "response_policy": [
+      {
+        "description": "Defines the response policy this rule applies to, must match an existing response policy in the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "rule_name": [
+      {
+        "description": "Name of the DNS response policy rule, must be unique within the policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for creating, reading, updating, or deleting the DNS response policy rule.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

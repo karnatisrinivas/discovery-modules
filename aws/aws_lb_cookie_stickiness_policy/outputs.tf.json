@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for the load balancer stickiness policy, used for configuration and monitoring",
+            "value": "${aws_lb_cookie_stickiness_policy.this.id}"
+        }
+    }
+}

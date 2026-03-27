@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for identifying the parameter group in AWS services",
+            "value": "${aws_rds_cluster_parameter_group.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the RDS cluster parameter group resource",
+            "value": "${aws_rds_cluster_parameter_group.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the parameter group for organization and management",
+            "value": "${aws_rds_cluster_parameter_group.this.tags_all}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API access",
+            "value": "${aws_comprehend_entity_recognizer.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the entity recognizer resource",
+            "value": "${aws_comprehend_entity_recognizer.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for organizing and filtering resources",
+            "value": "${aws_comprehend_entity_recognizer.this.tags_all}"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Network Subnet
+  node:
+    label:
+      static: Virtual Network Subnet
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_subnet
+  dnd_supported: false
+  data_source: data_azurerm_subnet
+  references:
+    virtual_network_name:
+      from: azurerm_virtual_network
+      output: name

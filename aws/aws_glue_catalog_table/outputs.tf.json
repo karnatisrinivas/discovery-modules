@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Glue Catalog Table, a unique identifier for the table in AWS.",
+            "value": "${aws_glue_catalog_table.this.arn}"
+        },
+        "catalog_id": {
+            "description": "The ID of the Glue Catalog that contains the table, typically the AWS account ID.",
+            "value": "${aws_glue_catalog_table.this.catalog_id}"
+        },
+        "id": {
+            "description": "The ID of the Glue Catalog Table, used to uniquely identify the table within the catalog.",
+            "value": "${aws_glue_catalog_table.this.id}"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MediaConvert queue.",
+            "value": "${data.aws_media_convert_queue.this.arn}"
+        },
+        "name": {
+            "description": "The name of the MediaConvert queue.",
+            "value": "${data.aws_media_convert_queue.this.name}"
+        },
+        "status": {
+            "description": "The current status of the MediaConvert queue.",
+            "value": "${data.aws_media_convert_queue.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MediaConvert queue.",
+            "value": "${data.aws_media_convert_queue.this.tags}"
+        }
+    }
+}

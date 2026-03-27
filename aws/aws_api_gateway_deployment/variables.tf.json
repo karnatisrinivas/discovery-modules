@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "A brief explanation or summary about the deployment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "The ID of the associated REST API.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage_description": [
+      {
+        "description": "A description for the stage of the deployment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "stage_name": [
+      {
+        "description": "The name of the stage for the deployment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "A map of arbitrary key-value pairs for deployment triggers.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "variables": [
+      {
+        "description": "A map of stage variables for the deployment.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

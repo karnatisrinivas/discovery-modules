@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the IPAM pool CIDRs data source.",
+            "value": "${data.aws_vpc_ipam_pool_cidrs.this.id}"
+        },
+        "ipam_pool_cidrs": {
+            "description": "A set of CIDR blocks within the IPAM pool and their respective states.",
+            "value": "${data.aws_vpc_ipam_pool_cidrs.this.ipam_pool_cidrs}"
+        }
+    }
+}

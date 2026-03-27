@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Secret Manager Secret Iam Member
+  node:
+    label:
+      static: Secret Manager Secret Iam Member
+      template: ${secret_id}
+    display_type: default
+
+discovery:
+  type: google_secret_manager_secret_iam_member
+  dnd_supported: false
+  references:
+    secret_id:
+      from: google_secret_manager_secret
+      output: secret_id

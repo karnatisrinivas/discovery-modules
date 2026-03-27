@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "attribute_condition": [
+      {
+        "description": "Condition that must be met for the attribute mapping to apply, expressed as a CEL expression.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "attribute_mapping": [
+      {
+        "description": "Defines the mapping of attributes between the identity provider and Google Cloud, required for workload identity federation.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "aws": [
+      {
+        "description": "Specifies the configuration for an AWS provider within a workload identity pool, including AWS account details and required attributes for authentication.",
+        "nullable": true,
+        "type": "list(object({account_id: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the detailed information about the workload identity pool provider, including its purpose and any constraints or requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Indicates whether the provider is disabled; if set to true, the provider will not be used for workload identity federation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies a human-readable name for the identity provider, with a maximum length of 32 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "oidc": [
+      {
+        "description": "Specifies the OIDC configuration for the workload identity pool provider, including issuer URL, client ID, and other settings. Must comply with OIDC standards.",
+        "nullable": true,
+        "type": "list(object({allowed_audiences: optional(list(string)),issuer_uri: string,jwks_json: optional(string)}))"
+      }
+    ],
+    "saml": [
+      {
+        "description": "Defines the SAML configuration for the workload identity pool provider, including the required attributes for integrating with the identity provider.",
+        "nullable": true,
+        "type": "list(object({idp_metadata_xml: string}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations, ensuring smooth lifecycle management of the workload identity pool provider.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "workload_identity_pool_id": [
+      {
+        "description": "Specifies the ID of the Workload Identity Pool to associate with the provider. Must be a valid identifier within the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "workload_identity_pool_provider_id": [
+      {
+        "description": "Unique identifier for the workload identity pool provider, must match the pattern `[a-z]([-a-z0-9]*[a-z0-9])?` and be between 4 and 32 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "x509": [
+      {
+        "description": "Specifies the configuration for an x509 certificate provider, including certificate details and validation settings.",
+        "nullable": true,
+        "type": "list(object({trust_store: list(object({intermediate_cas: list(object({pem_certificate: optional(string)})),trust_anchors: list(object({pem_certificate: optional(string)}))}))}))"
+      }
+    ]
+  }
+}

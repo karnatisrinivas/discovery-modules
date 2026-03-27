@@ -1,0 +1,12 @@
+{
+    "output": {
+        "fixed_price": {
+            "description": "The one-time fixed price charged for the reserved cache node offering.",
+            "value": "${data.aws_elasticache_reserved_cache_node_offering.this.fixed_price}"
+        },
+        "offering_id": {
+            "description": "The unique identifier for the specific reserved cache node offering.",
+            "value": "${data.aws_elasticache_reserved_cache_node_offering.this.offering_id}"
+        }
+    }
+}

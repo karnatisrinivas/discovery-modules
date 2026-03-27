@@ -1,0 +1,16 @@
+{
+    "output": {
+        "amazon_side_asn": {
+            "description": "The ASN (Autonomous System Number) on the Amazon side of a BGP session.",
+            "value": "${data.aws_dx_gateway.this.amazon_side_asn}"
+        },
+        "id": {
+            "description": "The unique identifier for the Direct Connect gateway.",
+            "value": "${data.aws_dx_gateway.this.id}"
+        },
+        "owner_account_id": {
+            "description": "The AWS account ID of the owner of the Direct Connect gateway.",
+            "value": "${data.aws_dx_gateway.this.owner_account_id}"
+        }
+    }
+}

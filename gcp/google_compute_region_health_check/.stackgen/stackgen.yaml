@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Region Health Check
+  node:
+    label:
+      static: Compute Region Health Check
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_region_health_check
+  dnd_supported: false

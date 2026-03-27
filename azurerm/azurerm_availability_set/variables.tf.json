@@ -1,0 +1,58 @@
+{
+  "variable": {
+    "managed": [
+      {
+        "description": "Indicates whether the availability set is managed. A managed availability set is used with virtual machines that are created with managed disks.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the availability set. This is a required field and it identifies the availability set within the resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "platform_fault_domain_count": [
+      {
+        "description": "The number of fault domains that the availability set can span. Fault domains define the group of virtual machines that share a common power source and network switch.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "platform_update_domain_count": [
+      {
+        "description": "The number of update domains that the availability set can span. Update domains are used for patching and maintenance tasks to ensure availability.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "proximity_placement_group_id": [
+      {
+        "description": "The ID of the proximity placement group to which the availability set should be assigned. This is used to ensure that resources are physically close to each other to reduce latency.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs for tagging the availability set. Tags are used for organizing resources and applying policies.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

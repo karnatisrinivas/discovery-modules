@@ -1,0 +1,158 @@
+{
+    "variable": {
+      "biglake_configuration": [
+        {
+          "description": "Defines the configuration for BigLake tables, including connection settings, file format, storage URI, and table format. Requires valid connection ID and supported file/table formats.",
+          "nullable": true,
+          "type": "list(object({connection_id: string,file_format: string,storage_uri: string,table_format: string}))"
+        }
+      ],
+      "clustering": [
+        {
+          "description": "Specifies the columns used for clustering in the table, which helps improve query performance. Columns must exist in the table schema.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "dataset_id": [
+        {
+          "description": "Identifies the dataset to which the table belongs. Must be a valid dataset ID within the project.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "deletion_protection": [
+        {
+          "description": "Enables or disables deletion protection for the table, preventing accidental deletion when set to true.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "description": [
+        {
+          "description": "Provides additional information or purpose of the table. Limited to 1,024 characters.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "encryption_configuration": [
+        {
+          "description": "Configures encryption for the table, including the KMS key name and optional key version. Requires access to the specified KMS key.",
+          "nullable": true,
+          "type": "list(object({kms_key_name: string,kms_key_version: optional(string)}))"
+        }
+      ],
+      "expiration_time": [
+        {
+          "description": "Sets the expiration time for the table in milliseconds since the Unix epoch. Must be a positive number.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "external_data_configuration": [
+        {
+          "description": "Defines configuration for external data sources, including connection, formats, and options for Avro, CSV, Bigtable, and other data types. Source URIs are required.",
+          "nullable": true,
+          "type": "list(object({autodetect: bool,compression: optional(string),connection_id: optional(string),file_set_spec_type: optional(string),ignore_unknown_values: optional(bool),json_extension: optional(string),max_bad_records: optional(number),metadata_cache_mode: optional(string),object_metadata: optional(string),reference_file_schema_uri: optional(string),schema: optional(string),source_format: optional(string),source_uris: list(string),avro_options: list(object({use_avro_logical_types: bool})),bigtable_options: list(object({ignore_unspecified_column_families: optional(bool),output_column_families_as_json: optional(bool),read_rowkey_as_string: optional(bool),column_family: list(object({encoding: optional(string),family_id: optional(string),only_read_latest: optional(bool),type: optional(string),column: list(object({encoding: optional(string),field_name: optional(string),only_read_latest: optional(bool),qualifier_encoded: optional(string),qualifier_string: optional(string),type: optional(string)}))}))})),csv_options: list(object({allow_jagged_rows: optional(bool),allow_quoted_newlines: optional(bool),encoding: optional(string),field_delimiter: optional(string),quote: string,skip_leading_rows: optional(number)})),google_sheets_options: list(object({range: optional(string),skip_leading_rows: optional(number)})),hive_partitioning_options: list(object({mode: optional(string),require_partition_filter: optional(bool),source_uri_prefix: optional(string)})),json_options: list(object({encoding: optional(string)})),parquet_options: list(object({enable_list_inference: optional(bool),enum_as_string: optional(bool)}))}))"
+        }
+      ],
+      "friendly_name": [
+        {
+          "description": "Specifies a user-friendly name for the table. Must be unique within the dataset and limited to 1,024 characters.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "labels": [
+        {
+          "description": "Defines key-value pairs for categorizing or tagging the table. Keys must be 1-63 characters, and values up to 63 characters.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "materialized_view": [
+        {
+          "description": "Defines a materialized view with refresh settings, query, and optional non-incremental definitions. Query must be valid SQL.",
+          "nullable": true,
+          "type": "list(object({allow_non_incremental_definition: optional(bool),enable_refresh: optional(bool),query: string,refresh_interval_ms: optional(number)}))"
+        }
+      ],
+      "max_staleness": [
+        {
+          "description": "Specifies the maximum staleness allowed for queries against the table. Must be a valid duration string.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "range_partitioning": [
+        {
+          "description": "Defines range partitioning for the table, including the field and range settings. Field must exist in the schema.",
+          "nullable": true,
+          "type": "list(object({field: string,range: list(object({end: number,interval: number,start: number}))}))"
+        }
+      ],
+      "require_partition_filter": [
+        {
+          "description": "Indicates whether queries on partitioned tables must include a partition filter. Improves query performance when enabled.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "resource_tags": [
+        {
+          "description": "Specifies resource tags for the table as key-value pairs. Tags must follow organizational policies.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "schema": [
+        {
+          "description": "Defines the schema for the table. Must be a valid JSON string representing the table's structure.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "table_constraints": [
+        {
+          "description": "Specifies table constraints, including primary keys and foreign keys. Constraints must match the schema and referenced tables.",
+          "nullable": true,
+          "type": "list(object({foreign_keys: list(object({name: optional(string),column_references: list(object({referenced_column: string,referencing_column: string})),referenced_table: list(object({dataset_id: string,project_id: string,table_id: string}))})),primary_key: list(object({columns: list(string)}))}))"
+        }
+      ],
+      "table_id": [
+        {
+          "description": "Specifies the unique name of the table within the dataset. Must follow naming conventions and be unique within the dataset.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "table_metadata_view": [
+        {
+          "description": "Defines a metadata view for the table. Typically used for managing or querying metadata.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "table_replication_info": [
+        {
+          "description": "Provides replication settings for the table, including source details and replication intervals. Source table must be accessible.",
+          "nullable": true,
+          "type": "list(object({replication_interval_ms: optional(number),source_dataset_id: string,source_project_id: string,source_table_id: string}))"
+        }
+      ],
+      "time_partitioning": [
+        {
+          "description": "Configures time-based partitioning for the table, including expiration, field, and partition type settings. Field must exist in the schema.",
+          "nullable": true,
+          "type": "list(object({expiration_ms: optional(number),field: optional(string),require_partition_filter: optional(bool),type: string}))"
+        }
+      ],
+      "view": [
+        {
+          "description": "Defines a SQL view for the table, including query and optional use of legacy SQL. Query must be valid SQL.",
+          "nullable": true,
+          "type": "list(object({query: string,use_legacy_sql: optional(bool)}))"
+        }
+      ]
+    }
+  }

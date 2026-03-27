@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "ARN assigned by AWS to the instance profile",
+            "value": "${aws_iam_instance_profile.this.arn}"
+        }
+    }
+}

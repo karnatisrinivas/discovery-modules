@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_versions.this.id}"
+        }
+    }
+}

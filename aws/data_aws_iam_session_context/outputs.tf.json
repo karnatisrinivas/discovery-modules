@@ -1,0 +1,24 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the IAM session context.",
+            "value": "${data.aws_iam_session_context.this.id}"
+        },
+        "issuer_arn": {
+            "description": "The Amazon Resource Name (ARN) of the entity that issued the IAM session.",
+            "value": "${data.aws_iam_session_context.this.issuer_arn}"
+        },
+        "issuer_id": {
+            "description": "The unique identifier of the entity that issued the IAM session.",
+            "value": "${data.aws_iam_session_context.this.issuer_id}"
+        },
+        "issuer_name": {
+            "description": "The name of the entity that issued the IAM session.",
+            "value": "${data.aws_iam_session_context.this.issuer_name}"
+        },
+        "session_name": {
+            "description": "The name assigned to the IAM session.",
+            "value": "${data.aws_iam_session_context.this.session_name}"
+        }
+    }
+}

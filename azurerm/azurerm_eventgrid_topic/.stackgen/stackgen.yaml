@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Event Grid Topic
+  node:
+    label:
+      static: Event Grid Topic
+      template: ${eventgrid_topic_name}
+    display_type: default
+
+discovery:
+  type: azurerm_eventgrid_topic
+  dnd_supported: false

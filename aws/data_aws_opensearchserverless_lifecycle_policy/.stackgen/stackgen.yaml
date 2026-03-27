@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Opensearchserverless Lifecycle Policy"
+  node:
+    label:
+      static: "[Data] Opensearchserverless Lifecycle Policy"
+      template: "[Data] Opensearchserverless Lifecycle Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_opensearchserverless_lifecycle_policy
+  dnd_supported: false

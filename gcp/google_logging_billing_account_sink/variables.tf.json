@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "bigquery_options": [
+      {
+        "description": "Specifies options for BigQuery as the destination, such as creating partitioned tables, when exporting logs to BigQuery.",
+        "nullable": true,
+        "type": "list(object({use_partitioned_tables: bool}))"
+      }
+    ],
+    "billing_account": [
+      {
+        "description": "Specifies the billing account ID where the logging sink will be created; must be in the format \"billingAccounts/{billing_account_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Detailed explanation of the purpose of the logging sink, its intended use, or any additional context.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination": [
+      {
+        "description": "Specifies the destination for the log entries, such as a Cloud Storage bucket, BigQuery dataset, or Pub/Sub topic. Must be a valid resource URI.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Determines whether the logging sink is disabled; set to true to disable the sink, false to enable it.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclusions": [
+      {
+        "description": "List of log exclusions that define specific log entries to be excluded from the sink; must adhere to valid exclusion filter syntax.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),disabled: optional(bool),filter: string,name: string}))"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the criteria for matching log entries, using a logging query language expression.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the logging sink for the billing account, must be compliant with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

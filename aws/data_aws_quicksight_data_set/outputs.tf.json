@@ -1,0 +1,68 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.aws_account_id}"
+        },
+        "column_groups": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.column_groups}"
+        },
+        "column_level_permission_rules": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.column_level_permission_rules}"
+        },
+        "data_set_usage_configuration": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.data_set_usage_configuration}"
+        },
+        "field_folders": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.field_folders}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.id}"
+        },
+        "import_mode": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.import_mode}"
+        },
+        "logical_table_map": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.logical_table_map}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.name}"
+        },
+        "permissions": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.permissions}"
+        },
+        "physical_table_map": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.physical_table_map}"
+        },
+        "row_level_permission_data_set": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.row_level_permission_data_set}"
+        },
+        "row_level_permission_tag_configuration": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.row_level_permission_tag_configuration}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.tags}"
+        },
+        "tags_all": {
+            "description": "",
+            "value": "${data.aws_quicksight_data_set.this.tags_all}"
+        }
+    }
+}

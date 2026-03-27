@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SES Domain Mail From
+  node:
+    label:
+      static: SES Domain Mail From
+      template: ${domain}
+    display_type: default
+
+discovery:
+  type: aws_ses_domain_mail_from
+  dnd_supported: false

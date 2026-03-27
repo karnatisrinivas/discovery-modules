@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Licensemanager Received License"
+  node:
+    label:
+      static: "[Data] Licensemanager Received License"
+      template: "[Data] Licensemanager Received License"
+    display_type: default
+
+discovery:
+  type: data_aws_licensemanager_received_license
+  dnd_supported: false

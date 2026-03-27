@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Connect"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Connect"
+      template: "[Data] Ec2 Transit Gateway Connect"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_connect
+  dnd_supported: false

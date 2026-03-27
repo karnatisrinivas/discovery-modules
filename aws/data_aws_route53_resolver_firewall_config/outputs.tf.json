@@ -1,0 +1,16 @@
+{
+    "output": {
+        "firewall_fail_open": {
+            "description": "Indicates if the firewall should allow DNS queries to proceed if the firewall can't be applied.",
+            "value": "${data.aws_route53_resolver_firewall_config.this.firewall_fail_open}"
+        },
+        "id": {
+            "description": "The unique identifier for the Route 53 Resolver firewall configuration.",
+            "value": "${data.aws_route53_resolver_firewall_config.this.id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID that owns the Route 53 Resolver firewall configuration.",
+            "value": "${data.aws_route53_resolver_firewall_config.this.owner_id}"
+        }
+    }
+}

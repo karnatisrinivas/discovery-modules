@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "ETag for optimistic concurrency control and resource versioning",
+            "value": "${google_cloud_run_service_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM binding on the Cloud Run service",
+            "value": "${google_cloud_run_service_iam_member.this.id}"
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the S3 bucket object.",
+            "value": "${data.aws_s3_bucket_object.this.arn}"
+        },
+        "body": {
+            "description": "The content of the S3 object as a string.",
+            "value": "${data.aws_s3_bucket_object.this.body}"
+        },
+        "bucket_key_enabled": {
+            "description": "Indicates if the bucket key is enabled for the S3 object.",
+            "value": "${data.aws_s3_bucket_object.this.bucket_key_enabled}"
+        },
+        "cache_control": {
+            "description": "Specifies caching behavior along the request/reply chain.",
+            "value": "${data.aws_s3_bucket_object.this.cache_control}"
+        },
+        "content_disposition": {
+            "description": "Specifies presentational information for the object.",
+            "value": "${data.aws_s3_bucket_object.this.content_disposition}"
+        },
+        "content_encoding": {
+            "description": "Specifies what content encodings have been applied to the object.",
+            "value": "${data.aws_s3_bucket_object.this.content_encoding}"
+        },
+        "content_language": {
+            "description": "The language the content is in.",
+            "value": "${data.aws_s3_bucket_object.this.content_language}"
+        },
+        "content_length": {
+            "description": "The size of the content in bytes.",
+            "value": "${data.aws_s3_bucket_object.this.content_length}"
+        },
+        "content_type": {
+            "description": "A standard MIME type describing the format of the object data.",
+            "value": "${data.aws_s3_bucket_object.this.content_type}"
+        },
+        "etag": {
+            "description": "The entity tag is an identifier for a specific version of the object.",
+            "value": "${data.aws_s3_bucket_object.this.etag}"
+        },
+        "expiration": {
+            "description": "The expiration date and rule for the object.",
+            "value": "${data.aws_s3_bucket_object.this.expiration}"
+        },
+        "expires": {
+            "description": "The date and time at which the object is no longer cacheable.",
+            "value": "${data.aws_s3_bucket_object.this.expires}"
+        },
+        "id": {
+            "description": "The unique identifier of the S3 object.",
+            "value": "${data.aws_s3_bucket_object.this.id}"
+        },
+        "last_modified": {
+            "description": "The date and time the object was last modified.",
+            "value": "${data.aws_s3_bucket_object.this.last_modified}"
+        },
+        "metadata": {
+            "description": "A map of metadata stored with the object in S3.",
+            "value": "${data.aws_s3_bucket_object.this.metadata}"
+        },
+        "object_lock_legal_hold_status": {
+            "description": "The legal hold status for the S3 object.",
+            "value": "${data.aws_s3_bucket_object.this.object_lock_legal_hold_status}"
+        },
+        "object_lock_mode": {
+            "description": "The lock mode that is being applied to this S3 object.",
+            "value": "${data.aws_s3_bucket_object.this.object_lock_mode}"
+        },
+        "object_lock_retain_until_date": {
+            "description": "The date until which the object is retained.",
+            "value": "${data.aws_s3_bucket_object.this.object_lock_retain_until_date}"
+        },
+        "server_side_encryption": {
+            "description": "The server-side encryption algorithm used when storing this object in S3.",
+            "value": "${data.aws_s3_bucket_object.this.server_side_encryption}"
+        },
+        "sse_kms_key_id": {
+            "description": "The ID of the AWS KMS key used for server-side encryption.",
+            "value": "${data.aws_s3_bucket_object.this.sse_kms_key_id}"
+        },
+        "storage_class": {
+            "description": "The storage class of the S3 object.",
+            "value": "${data.aws_s3_bucket_object.this.storage_class}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the object.",
+            "value": "${data.aws_s3_bucket_object.this.tags}"
+        },
+        "version_id": {
+            "description": "The version ID of the object.",
+            "value": "${data.aws_s3_bucket_object.this.version_id}"
+        },
+        "website_redirect_location": {
+            "description": "The URL to which a 301 redirect should be made for this object.",
+            "value": "${data.aws_s3_bucket_object.this.website_redirect_location}"
+        }
+    }
+}

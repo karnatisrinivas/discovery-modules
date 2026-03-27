@@ -1,0 +1,40 @@
+{
+    "output": {
+        "comment": {
+            "description": "A brief description or note about the CloudFront response headers policy.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.comment}"
+        },
+        "cors_config": {
+            "description": "Configuration for Cross-Origin Resource Sharing (CORS) settings, detailing what resources can be shared between different origins.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.cors_config}"
+        },
+        "custom_headers_config": {
+            "description": "Defines custom headers that CloudFront should add to HTTP responses.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.custom_headers_config}"
+        },
+        "etag": {
+            "description": "The entity tag (ETag) for the response headers policy, used for cache validation.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.etag}"
+        },
+        "id": {
+            "description": "The unique identifier for the CloudFront response headers policy.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.id}"
+        },
+        "name": {
+            "description": "The name of the CloudFront response headers policy.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.name}"
+        },
+        "remove_headers_config": {
+            "description": "Configuration specifying headers that should be removed from HTTP responses.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.remove_headers_config}"
+        },
+        "security_headers_config": {
+            "description": "Settings for security-related headers to protect your application from common web vulnerabilities.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.security_headers_config}"
+        },
+        "server_timing_headers_config": {
+            "description": "Configuration for server timing headers, which provide performance metrics about the request.",
+            "value": "${data.aws_cloudfront_response_headers_policy.this.server_timing_headers_config}"
+        }
+    }
+}

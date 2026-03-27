@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "addon_name": [
+      {
+        "description": "The name of the EKS addon to be installed or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "cluster_name": [
+      {
+        "description": "The name of the EKS cluster where the addon will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

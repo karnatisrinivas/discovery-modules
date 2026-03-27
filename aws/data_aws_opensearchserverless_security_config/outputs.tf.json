@@ -1,0 +1,20 @@
+{
+    "output": {
+        "config_version": {
+            "description": "The version of the security configuration for the OpenSearch Serverless service.",
+            "value": "${data.aws_opensearchserverless_security_config.this.config_version}"
+        },
+        "created_date": {
+            "description": "The date when the security configuration was initially created.",
+            "value": "${data.aws_opensearchserverless_security_config.this.created_date}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the security configuration.",
+            "value": "${data.aws_opensearchserverless_security_config.this.description}"
+        },
+        "last_modified_date": {
+            "description": "The date when the security configuration was last updated.",
+            "value": "${data.aws_opensearchserverless_security_config.this.last_modified_date}"
+        }
+    }
+}

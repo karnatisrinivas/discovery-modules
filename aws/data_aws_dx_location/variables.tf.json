@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "location_code": [
+      {
+        "description": "A unique identifier for the AWS Direct Connect location.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

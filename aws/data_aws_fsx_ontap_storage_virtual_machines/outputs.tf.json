@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of a specific FSx ONTAP storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machines.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all FSx ONTAP storage virtual machines in the specified context.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machines.this.ids}"
+        }
+    }
+}

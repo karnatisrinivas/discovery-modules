@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "ID of the PubSub Subscription",
+            "value": "${google_pubsub_subscription.this.id}"
+        }
+    }
+}

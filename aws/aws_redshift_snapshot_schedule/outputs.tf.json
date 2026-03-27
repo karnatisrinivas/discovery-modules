@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_redshift_snapshot_schedule.this.arn}"
+        },
+        "identifier": {
+            "description": "The value of the identifier output",
+            "value": "${aws_redshift_snapshot_schedule.this.identifier}"
+        }
+    }
+}

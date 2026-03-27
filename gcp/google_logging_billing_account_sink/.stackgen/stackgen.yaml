@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Logging Billing Account Sink
+  node:
+    label:
+      static: Logging Billing Account Sink
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_logging_billing_account_sink
+  dnd_supported: false

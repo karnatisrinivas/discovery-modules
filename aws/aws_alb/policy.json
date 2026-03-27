@@ -1,0 +1,15 @@
+{
+    "name": "aws_alb",
+    "policy" : {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": "elasticloadbalancing:*",
+                "Effect": "Allow",
+                "Resource": [
+                    "${module.module_name.arn}"
+                ]
+            }
+        ]
+    }
+}

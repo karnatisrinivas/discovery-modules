@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "get_password_data": [
+      {
+        "description": "Indicates whether to get the encrypted administrator password for the instance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "get_user_data": [
+      {
+        "description": "Indicates whether to get the user data for the instance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "The unique identifier for the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

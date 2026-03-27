@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "vpc_id": [
+      {
+        "description": "The ID of the VPC where the network ACL will be created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Mq Broker Instance Type Offerings"
+  node:
+    label:
+      static: "[Data] Mq Broker Instance Type Offerings"
+      template: "[Data] Mq Broker Instance Type Offerings"
+    display_type: default
+
+discovery:
+  type: data_aws_mq_broker_instance_type_offerings
+  dnd_supported: false

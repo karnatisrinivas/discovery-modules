@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Ha Vpn Gateway
+  node:
+    label:
+      static: Compute Ha Vpn Gateway
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_ha_vpn_gateway
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id

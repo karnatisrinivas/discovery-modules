@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID linking disk to resource policy, useful for dependency management",
+            "value": "${google_compute_disk_resource_policy_attachment.this.id}"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the target group.",
+            "value": "${data.aws_alb_target_group.this.arn}"
+        },
+        "arn_suffix": {
+            "description": "The ARN suffix for use with CloudWatch Metrics.",
+            "value": "${data.aws_alb_target_group.this.arn_suffix}"
+        },
+        "connection_termination": {
+            "description": "Indicates whether connection termination is enabled for the target group.",
+            "value": "${data.aws_alb_target_group.this.connection_termination}"
+        },
+        "deregistration_delay": {
+            "description": "The amount of time for Elastic Load Balancing to wait before deregistering a target.",
+            "value": "${data.aws_alb_target_group.this.deregistration_delay}"
+        },
+        "health_check": {
+            "description": "Configuration block for health check settings associated with the target group.",
+            "value": "${data.aws_alb_target_group.this.health_check}"
+        },
+        "id": {
+            "description": "The ID of the target group.",
+            "value": "${data.aws_alb_target_group.this.id}"
+        },
+        "lambda_multi_value_headers_enabled": {
+            "description": "Indicates whether multi-value headers are enabled for Lambda targets.",
+            "value": "${data.aws_alb_target_group.this.lambda_multi_value_headers_enabled}"
+        },
+        "load_balancer_arns": {
+            "description": "A set of ARNs of the load balancers associated with the target group.",
+            "value": "${data.aws_alb_target_group.this.load_balancer_arns}"
+        },
+        "load_balancing_algorithm_type": {
+            "description": "The load balancing algorithm used by the target group.",
+            "value": "${data.aws_alb_target_group.this.load_balancing_algorithm_type}"
+        },
+        "load_balancing_anomaly_mitigation": {
+            "description": "The type of anomaly mitigation applied to the load balancing.",
+            "value": "${data.aws_alb_target_group.this.load_balancing_anomaly_mitigation}"
+        },
+        "load_balancing_cross_zone_enabled": {
+            "description": "Indicates if cross-zone load balancing is enabled.",
+            "value": "${data.aws_alb_target_group.this.load_balancing_cross_zone_enabled}"
+        },
+        "name": {
+            "description": "The name of the target group.",
+            "value": "${data.aws_alb_target_group.this.name}"
+        },
+        "port": {
+            "description": "The port on which targets receive traffic.",
+            "value": "${data.aws_alb_target_group.this.port}"
+        },
+        "preserve_client_ip": {
+            "description": "Indicates whether client IP preservation is enabled.",
+            "value": "${data.aws_alb_target_group.this.preserve_client_ip}"
+        },
+        "protocol": {
+            "description": "The protocol used by the target group.",
+            "value": "${data.aws_alb_target_group.this.protocol}"
+        },
+        "protocol_version": {
+            "description": "The version of the protocol used by the target group.",
+            "value": "${data.aws_alb_target_group.this.protocol_version}"
+        },
+        "proxy_protocol_v2": {
+            "description": "Indicates if Proxy Protocol v2 is enabled.",
+            "value": "${data.aws_alb_target_group.this.proxy_protocol_v2}"
+        },
+        "slow_start": {
+            "description": "The duration of the slow start period for the target group.",
+            "value": "${data.aws_alb_target_group.this.slow_start}"
+        },
+        "stickiness": {
+            "description": "Settings for stickiness associated with the target group.",
+            "value": "${data.aws_alb_target_group.this.stickiness}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the target group.",
+            "value": "${data.aws_alb_target_group.this.tags}"
+        },
+        "target_type": {
+            "description": "The type of target that the target group is configured to receive.",
+            "value": "${data.aws_alb_target_group.this.target_type}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the target group is located.",
+            "value": "${data.aws_alb_target_group.this.vpc_id}"
+        }
+    }
+}

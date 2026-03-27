@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for managing permissions and API calls",
+            "value": "${aws_sagemaker_model.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the SageMaker model resource",
+            "value": "${aws_sagemaker_model.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for organizational and billing purposes",
+            "value": "${aws_sagemaker_model.this.tags_all}"
+        }
+    }
+}

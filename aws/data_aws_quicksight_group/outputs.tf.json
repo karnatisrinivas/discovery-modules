@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_group.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_group.this.aws_account_id}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_quicksight_group.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_quicksight_group.this.id}"
+        },
+        "principal_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_group.this.principal_id}"
+        }
+    }
+}

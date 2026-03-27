@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecr Repository Creation Template"
+  node:
+    label:
+      static: "[Data] Ecr Repository Creation Template"
+      template: "[Data] Ecr Repository Creation Template"
+    display_type: default
+
+discovery:
+  type: data_aws_ecr_repository_creation_template
+  dnd_supported: false

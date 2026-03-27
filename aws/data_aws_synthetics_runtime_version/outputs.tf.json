@@ -1,0 +1,24 @@
+{
+    "output": {
+        "deprecation_date": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_version.this.deprecation_date}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_version.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_version.this.id}"
+        },
+        "release_date": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_version.this.release_date}"
+        },
+        "version_name": {
+            "description": "",
+            "value": "${data.aws_synthetics_runtime_version.this.version_name}"
+        }
+    }
+}

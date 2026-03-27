@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "enabled_log": [
+      {
+        "description": "Defines log configurations including category, group, and retention policy",
+        "nullable": true,
+        "type": "list(object({category: optional(string),category_group: optional(string),retention_policy: list(object({days: optional(number),enabled: bool}))}))"
+      }
+    ],
+    "eventhub_authorization_rule_id": [
+      {
+        "description": "Specifies the ID for the Event Hub authorization rule",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "eventhub_name": [
+      {
+        "description": "Defines the name of the Event Hub for logging or metrics",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "log": [
+      {
+        "description": "Specifies log settings including category, group, and retention details",
+        "nullable": true,
+        "type": "list(object({category: optional(string),category_group: optional(string),enabled: optional(bool),retention_policy: list(object({days: optional(number),enabled: bool}))}))"
+      }
+    ],
+    "log_analytics_destination_type": [
+      {
+        "description": "Specifies the destination type for Log Analytics (e.g., AzureMonitor)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "log_analytics_workspace_id": [
+      {
+        "description": "ID of the Log Analytics workspace for metrics and logs",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "metric": [
+      {
+        "description": "Configures metrics with category, enable status, and retention settings",
+        "nullable": true,
+        "type": "list(object({category: string,enabled: optional(bool),retention_policy: list(object({days: optional(number),enabled: bool}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the resource (required and unique)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "partner_solution_id": [
+      {
+        "description": "Specifies the partner solution ID, if applicable",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_id": [
+      {
+        "description": "ID of the storage account for log or metric storage",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "target_resource_id": [
+      {
+        "description": "Specifies the ID of the target resource to configure",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines operation timeouts for create, read, update, and delete actions",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

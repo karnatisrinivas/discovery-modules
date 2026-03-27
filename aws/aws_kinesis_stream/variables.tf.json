@@ -1,0 +1,84 @@
+{
+    "variable": {
+        "encryption_type": [
+            {
+                "default": "KMS",
+                "description": "The encryption type to use.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "enforce_consumer_deletion": [
+            {
+                "default": false,
+                "description": "A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error.",
+                "type": "bool",
+                "nullable": true
+            }
+        ],
+        "kms_key_id": [
+            {
+                "description": "The GUID for the customer-managed KMS key to use for encryption.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "name": [
+            {
+                "description": "A name to identify the stream. This is unique to the AWS account and region the Stream is created in",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "retention_period": [
+            {
+                "default": 24,
+                "description": "Length of time data records are accessible after they are added to the stream.The maximum value of a stream's retention period is 8760 hours. Minimum value is 24.",
+                "type": "number",
+                "validation": [
+                    {
+                        "condition": "${(var.retention_period <= 8760 && var.retention_period >= 24)}",
+                        "error_message": "The retention_period value must be between 24-8760 hours."
+                    }
+                ],
+                "nullable": true
+            }
+        ],
+        "shard_count": [
+            {
+                "default": 1,
+                "description": "The number of shards that the stream will use",
+                "type": "number",
+                "nullable": true
+            }
+        ],
+        "shard_level_metrics": [
+            {
+                "description": "A list of shard-level CloudWatch metrics which can be enabled for the stream.",
+                "nullable": true,
+                "type": "list(string)"
+            }
+        ],
+        "stream_mode_details": [
+            {
+                "description": "Specifies the capacity mode of the stream.",
+                "nullable": true,
+                "type": "list(object({stream_mode: string}))"
+            }
+        ],
+        "tags": [
+            {
+                "description": "A mapping of tags to assign to the stream.",
+                "nullable": true,
+                "type": "map(string)"
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "Timeouts for the stream.",
+                "nullable": true,
+                "type": "object({create: optional(string), update: optional(string), delete: optional(string)})"
+            }
+        ]
+    }
+}

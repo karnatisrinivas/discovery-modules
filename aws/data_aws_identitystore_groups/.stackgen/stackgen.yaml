@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Identitystore Groups"
+  node:
+    label:
+      static: "[Data] Identitystore Groups"
+      template: "[Data] Identitystore Groups"
+    display_type: default
+
+discovery:
+  type: data_aws_identitystore_groups
+  dnd_supported: false

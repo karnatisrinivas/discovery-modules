@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Virtual Router"
+  node:
+    label:
+      static: "[Data] Appmesh Virtual Router"
+      template: "[Data] Appmesh Virtual Router"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_virtual_router
+  dnd_supported: false

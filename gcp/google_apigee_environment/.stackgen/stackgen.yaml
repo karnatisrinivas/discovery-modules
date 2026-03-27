@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Environment
+  node:
+    label:
+      static: Apigee Environment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_apigee_environment
+  dnd_supported: false
+  references:
+    org_id:
+      from: google_apigee_organization
+      output: id

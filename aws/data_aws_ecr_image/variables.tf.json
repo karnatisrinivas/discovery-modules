@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "image_tag": [
+      {
+        "description": "The specific tag of the Docker image to use. If not provided, it may default to the latest tag.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "A flag indicating whether to use the most recent image if multiple images have the same tag.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "repository_name": [
+      {
+        "description": "The name of the ECR repository where the Docker image is stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

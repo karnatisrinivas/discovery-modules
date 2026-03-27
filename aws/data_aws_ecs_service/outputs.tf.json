@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ECS service.",
+            "value": "${data.aws_ecs_service.this.arn}"
+        },
+        "availability_zone_rebalancing": {
+            "description": "Indicates whether availability zone rebalancing is enabled for the ECS service.",
+            "value": "${data.aws_ecs_service.this.availability_zone_rebalancing}"
+        },
+        "desired_count": {
+            "description": "The desired number of tasks to run in the service.",
+            "value": "${data.aws_ecs_service.this.desired_count}"
+        },
+        "id": {
+            "description": "The unique identifier of the ECS service.",
+            "value": "${data.aws_ecs_service.this.id}"
+        },
+        "launch_type": {
+            "description": "The type of launch for tasks in the service, such as EC2 or Fargate.",
+            "value": "${data.aws_ecs_service.this.launch_type}"
+        },
+        "scheduling_strategy": {
+            "description": "The strategy used for task placement in the ECS service, like REPLICA or DAEMON.",
+            "value": "${data.aws_ecs_service.this.scheduling_strategy}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the ECS service.",
+            "value": "${data.aws_ecs_service.this.tags}"
+        },
+        "task_definition": {
+            "description": "The task definition used by the ECS service.",
+            "value": "${data.aws_ecs_service.this.task_definition}"
+        }
+    }
+}

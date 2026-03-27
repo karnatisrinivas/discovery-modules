@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service.this.id}"
+        },
+        "service_code": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service.this.service_code}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Memorydb Snapshot"
+  node:
+    label:
+      static: "[Data] Memorydb Snapshot"
+      template: "[Data] Memorydb Snapshot"
+    display_type: default
+
+discovery:
+  type: data_aws_memorydb_snapshot
+  dnd_supported: false

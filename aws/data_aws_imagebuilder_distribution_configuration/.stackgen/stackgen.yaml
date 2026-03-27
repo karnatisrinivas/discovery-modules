@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Imagebuilder Distribution Configuration"
+  node:
+    label:
+      static: "[Data] Imagebuilder Distribution Configuration"
+      template: "[Data] Imagebuilder Distribution Configuration"
+    display_type: default
+
+discovery:
+  type: data_aws_imagebuilder_distribution_configuration
+  dnd_supported: false

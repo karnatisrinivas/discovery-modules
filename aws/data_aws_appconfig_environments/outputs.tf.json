@@ -1,0 +1,12 @@
+{
+    "output": {
+        "environment_ids": {
+            "description": "A collection of identifiers for the AWS AppConfig environments.",
+            "value": "${data.aws_appconfig_environments.this.environment_ids}"
+        },
+        "id": {
+            "description": "The unique identifier for a specific AWS AppConfig environment.",
+            "value": "${data.aws_appconfig_environments.this.id}"
+        }
+    }
+}

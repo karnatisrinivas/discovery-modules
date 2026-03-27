@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the EC2 CoIP pool.",
+            "value": "${data.aws_ec2_coip_pools.this.id}"
+        },
+        "pool_ids": {
+            "description": "A list of identifiers for the available EC2 CoIP pools.",
+            "value": "${data.aws_ec2_coip_pools.this.pool_ids}"
+        }
+    }
+}

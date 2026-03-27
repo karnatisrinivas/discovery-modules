@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "backup_pool": [
+      {
+        "description": "Specifies the name of the backup pool used in case the primary pool fails. Optional and can be null.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides additional information or context about the resource. Optional and can be null.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "failover_ratio": [
+      {
+        "description": "Defines the threshold for triggering failover, expressed as a number between 0 and 1. Optional and can be null.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "health_checks": [
+      {
+        "description": "Lists the identifiers of health checks associated with the resource. Must be strings. Optional and can be null.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "instances": [
+      {
+        "description": "Lists the instances included in the resource configuration. Must be strings. Optional and can be null.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the resource. Cannot be null and must be provided.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "session_affinity": [
+      {
+        "description": "Determines how sessions are managed for resource traffic, such as client IP-based or cookie-based affinity. Optional and can be null.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom time limits for create, delete, and update operations. Each timeout is optional and can be specified as a string. Optional and can be null.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

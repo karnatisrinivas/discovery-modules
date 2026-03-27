@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Azure Service Plan
+  node:
+    label:
+      static: Azure Service Plan
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_service_plan
+  dnd_supported: false
+  data_source: data_azurerm_service_plan

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AzureAD Application Password
+  node:
+    label:
+      static: AzureAD Application Password
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: azuread_application_password
+  dnd_supported: false

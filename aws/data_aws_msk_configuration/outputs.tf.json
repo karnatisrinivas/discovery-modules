@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MSK configuration.",
+            "value": "${data.aws_msk_configuration.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the MSK configuration.",
+            "value": "${data.aws_msk_configuration.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the MSK configuration.",
+            "value": "${data.aws_msk_configuration.this.id}"
+        },
+        "kafka_versions": {
+            "description": "A set of Apache Kafka versions that the MSK configuration supports.",
+            "value": "${data.aws_msk_configuration.this.kafka_versions}"
+        },
+        "latest_revision": {
+            "description": "The latest revision number of the MSK configuration.",
+            "value": "${data.aws_msk_configuration.this.latest_revision}"
+        },
+        "server_properties": {
+            "description": "The server properties configuration as a string for the MSK cluster.",
+            "value": "${data.aws_msk_configuration.this.server_properties}"
+        }
+    }
+}

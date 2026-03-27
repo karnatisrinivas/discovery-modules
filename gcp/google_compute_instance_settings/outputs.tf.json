@@ -1,0 +1,12 @@
+{
+    "output": {
+        "fingerprint": {
+            "description": "Unique identifier for tracking changes to the resource's settings",
+            "value": "${google_compute_instance_settings.this.fingerprint}"
+        },
+        "id": {
+            "description": "Unique ID for referencing the compute instance settings in configurations",
+            "value": "${google_compute_instance_settings.this.id}"
+        }
+    }
+}

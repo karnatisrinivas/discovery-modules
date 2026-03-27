@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The location for the resource."
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "Location to create this feature in."
+            }
+        ]
+    }
+}

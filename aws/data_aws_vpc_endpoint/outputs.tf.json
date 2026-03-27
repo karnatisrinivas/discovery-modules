@@ -1,0 +1,84 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.arn}"
+        },
+        "cidr_blocks": {
+            "description": "List of CIDR blocks for the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.cidr_blocks}"
+        },
+        "dns_entry": {
+            "description": "The DNS entries for the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.dns_entry}"
+        },
+        "dns_options": {
+            "description": "DNS options for the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.dns_options}"
+        },
+        "id": {
+            "description": "The ID of the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.id}"
+        },
+        "ip_address_type": {
+            "description": "The type of IP address used by the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.ip_address_type}"
+        },
+        "network_interface_ids": {
+            "description": "Set of network interface IDs associated with the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.network_interface_ids}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.owner_id}"
+        },
+        "policy": {
+            "description": "The policy document associated with the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.policy}"
+        },
+        "prefix_list_id": {
+            "description": "The prefix list ID for the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.prefix_list_id}"
+        },
+        "private_dns_enabled": {
+            "description": "Indicates whether private DNS is enabled for the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.private_dns_enabled}"
+        },
+        "requester_managed": {
+            "description": "Indicates if the VPC endpoint is managed by the requester.",
+            "value": "${data.aws_vpc_endpoint.this.requester_managed}"
+        },
+        "route_table_ids": {
+            "description": "Set of route table IDs associated with the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.route_table_ids}"
+        },
+        "security_group_ids": {
+            "description": "Set of security group IDs associated with the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.security_group_ids}"
+        },
+        "service_name": {
+            "description": "The name of the service to which the VPC endpoint is connected.",
+            "value": "${data.aws_vpc_endpoint.this.service_name}"
+        },
+        "state": {
+            "description": "The current state of the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.state}"
+        },
+        "subnet_ids": {
+            "description": "Set of subnet IDs associated with the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.tags}"
+        },
+        "vpc_endpoint_type": {
+            "description": "The type of the VPC endpoint.",
+            "value": "${data.aws_vpc_endpoint.this.vpc_endpoint_type}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the endpoint is located.",
+            "value": "${data.aws_vpc_endpoint.this.vpc_id}"
+        }
+    }
+}

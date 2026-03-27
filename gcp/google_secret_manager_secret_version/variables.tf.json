@@ -1,0 +1,61 @@
+{
+  "variable": {
+    "deletion_policy": [
+      {
+        "description": "Specifies the policy for deleting secret versions; options are 'DESTROY' to permanently delete or 'DISABLE' to disable prior to deletion.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Indicates whether the secret version is active and accessible.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "is_secret_data_base64": [
+      {
+        "description": "Indicates whether the secret data is provided as a base64-encoded string; must be true if the input is base64-encoded.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "secret": [
+      {
+        "description": "Defines the secret data to be stored in the secret version; must be a valid string or binary data.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_data_wo": [
+      {
+        "description": "Specifies the secret data to store in the Secret Manager, must be base64-encoded and comply with the size limits of Secret Manager.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "secret_data_wo_version": [
+      {
+        "description": "Defines the secret payload content, which must be a string or binary data, to be stored in Secret Manager.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "secret_data": [
+      {
+        "description": "Specifies the secret data to store in the Secret Manager, must be base64-encoded and comply with the size limits of Secret Manager.",
+        "nullable": true,
+        "type": "string",
+        "sensitive": true
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for operations like create, update, or delete actions on secret versions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

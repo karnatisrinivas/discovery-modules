@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Router Interface
+  node:
+    label:
+      static: Compute Router Interface
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_router_interface
+  dnd_supported: false
+  references:
+    subnetwork:
+      from: google_compute_subnetwork
+      output: self_link

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Mesh"
+  node:
+    label:
+      static: "[Data] Appmesh Mesh"
+      template: "[Data] Appmesh Mesh"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_mesh
+  dnd_supported: false

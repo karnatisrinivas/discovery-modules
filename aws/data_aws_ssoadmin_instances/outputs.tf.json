@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the AWS SSO instances.",
+            "value": "${data.aws_ssoadmin_instances.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS SSO instance.",
+            "value": "${data.aws_ssoadmin_instances.this.id}"
+        },
+        "identity_store_ids": {
+            "description": "A list of identity store IDs associated with the AWS SSO instances.",
+            "value": "${data.aws_ssoadmin_instances.this.identity_store_ids}"
+        }
+    }
+}

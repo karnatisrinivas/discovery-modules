@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional IAM condition that must be met for the binding to apply, using attributes like expression, title, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "database": [
+      {
+        "description": "Specifies the Spanner database to which the IAM binding will be applied. Must be in the format `projects/{project}/instances/{instance}/databases/{database}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance": [
+      {
+        "description": "The Spanner instance to which the IAM binding will be applied; must exist in the same project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to be bound to the specified role for the Spanner database.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to bind to members for the Spanner database. Must be a predefined Google Cloud role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SNS Topic
+  node:
+    label:
+      static: SNS Topic
+      template: SNS Topic
+    display_type: default
+
+variables:
+  tracing_config:
+    description: Tracing mode of an Amazon SNS topic.
+    type: string
+    options: 
+      - Active
+      - PassThrough
+    ui_control: select
+  fifo_topic:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is false)."
+  content_based_deduplication:
+    description: "Enables content-based deduplication for FIFO topics."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_sns_topic
+  dnd_supported: false
+  data_source: data_aws_sns_topic

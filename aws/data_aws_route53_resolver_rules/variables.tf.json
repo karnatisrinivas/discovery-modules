@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "name_regex": [
+      {
+        "description": "A regular expression to filter DNS resolver rules based on their names.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "owner_id": [
+      {
+        "description": "The AWS account ID of the owner of the resolver rule.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resolver_endpoint_id": [
+      {
+        "description": "The ID of the resolver endpoint that the rule is associated with.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "rule_type": [
+      {
+        "description": "The type of resolver rule, such as FORWARD or SYSTEM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "share_status": [
+      {
+        "description": "The sharing status of the resolver rule, indicating if it is shared with other AWS accounts.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

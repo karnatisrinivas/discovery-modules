@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "group_names": [
+      {
+        "description": "List of Auto Scaling group names to associate with the notification configuration.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "notifications": [
+      {
+        "description": "List of notification types to trigger actions for the Auto Scaling group (e.g., `autoscaling:EC2_INSTANCE_LAUNCH`); must be valid AWS notification types.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "topic_arn": [
+      {
+        "description": "ARN of the SNS topic to which Auto Scaling notifications will be sent; must be a valid SNS topic ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

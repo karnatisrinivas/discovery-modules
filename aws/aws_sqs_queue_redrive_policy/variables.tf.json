@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "queue_url": [
+            {
+                "description": "The URL of the SQS queue.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "redrive_policy":[
+            {
+                "description": "The redrive policy for the SQS queue.",
+                "type": "string",
+                "nullable": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "check_interval_sec": [
+      {
+        "description": "Defines the interval, in seconds, between health check probes. Must be a positive number.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides additional information or context about the resource. Can be any string value.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "grpc_health_check": [
+      {
+        "description": "Configures GRPC health checks, including optional parameters like service name, port, and port specifications. Use to monitor GRPC-based services.",
+        "nullable": true,
+        "type": "list(object({grpc_service_name: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string)}))"
+      }
+    ],
+    "healthy_threshold": [
+      {
+        "description": "Specifies the number of consecutive successful health checks required before marking a resource as healthy. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "http2_health_check": [
+      {
+        "description": "Defines settings for HTTP/2 health checks, including optional host, port, and request path configurations. Use to test HTTP/2 endpoints.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "http_health_check": [
+      {
+        "description": "Configures HTTP health checks, allowing optional parameters like host, port, and request path. Use for monitoring HTTP endpoints.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "https_health_check": [
+      {
+        "description": "Defines HTTPS health check settings, including optional host, port, and request path configurations. Use to verify HTTPS endpoints.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Configures logging settings for the resource, including whether logging is enabled. Accepts a boolean value.",
+        "nullable": true,
+        "type": "list(object({enable: optional(bool)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the resource's name. Required and must be unique within the scope of the resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_regions": [
+      {
+        "description": "Lists the regions from which traffic originates. Useful for geographically scoped configurations.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ssl_health_check": [
+      {
+        "description": "Defines SSL health check settings, including optional port, request, and response configurations. Use to monitor SSL-enabled endpoints.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "tcp_health_check": [
+      {
+        "description": "Configures TCP health check settings, including optional port and request parameters. Use for monitoring TCP-based services.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "Specifies the time, in seconds, to wait before marking a health check as failed. Must be a positive number.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout settings for resource operations, including creation, deletion, and updates. Values are expected in string format (e.g., '30m').",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "unhealthy_threshold": [
+      {
+        "description": "Specifies the number of consecutive failed health checks required before marking a resource as unhealthy. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

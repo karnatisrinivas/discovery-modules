@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Vpc Link"
+  node:
+    label:
+      static: "[Data] Api Gateway Vpc Link"
+      template: "[Data] Api Gateway Vpc Link"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_vpc_link
+  dnd_supported: false

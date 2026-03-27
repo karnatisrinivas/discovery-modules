@@ -1,0 +1,12 @@
+{
+    "output": {
+        "children": {
+            "description": "A list of organizational units (OUs) under the specified parent in AWS Organizations, including their ARN, ID, and name.",
+            "value": "${data.aws_organizations_organizational_units.this.children}"
+        },
+        "id": {
+            "description": "The unique identifier for the specified organizational unit (OU) in AWS Organizations.",
+            "value": "${data.aws_organizations_organizational_units.this.id}"
+        }
+    }
+}

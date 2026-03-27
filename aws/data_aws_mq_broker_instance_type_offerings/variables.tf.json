@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "engine_type": [
+      {
+        "description": "Specifies the type of message broker engine, such as ActiveMQ or RabbitMQ.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "host_instance_type": [
+      {
+        "description": "Defines the instance type for the message broker host, which determines the computing resources available.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_type": [
+      {
+        "description": "Indicates the type of storage used for the broker, like EBS or S3.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

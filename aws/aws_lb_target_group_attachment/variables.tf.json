@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "target_group_arn": [
+            {
+                "type": "string",
+                "description": "The ARN of the target group with which to register targets.",
+                "nullable": false
+            }
+        ],
+        "target_id": [
+            {
+                "type": "string",
+                "description": "The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container.",
+                "nullable": false
+            }
+        ],
+        "port": [
+            {
+                "type": "number",
+                "description": "The port on which targets receive traffic.",
+                "nullable": false
+            }
+        ],
+        "availability_zone": [
+            {
+                "type": "string",
+                "description": "The Availability Zone where the IP address of the target is to be registered.",
+                "nullable": true
+            }
+        ]
+    }
+}

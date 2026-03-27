@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Chatbot Slack Workspace"
+  node:
+    label:
+      static: "[Data] Chatbot Slack Workspace"
+      template: "[Data] Chatbot Slack Workspace"
+    display_type: default
+
+discovery:
+  type: data_aws_chatbot_slack_workspace
+  dnd_supported: false

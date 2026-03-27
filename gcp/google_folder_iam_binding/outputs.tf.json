@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for ensuring resource consistency during IAM updates",
+            "value": "${google_folder_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the folder IAM binding resource",
+            "value": "${google_folder_iam_binding.this.id}"
+        }
+    }
+}

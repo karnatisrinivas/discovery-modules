@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Load Balancer Backend Address Pool"
+  node:
+    label:
+      static: "[Data] Load Balancer Backend Address Pool"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_lb_backend_address_pool
+  dnd_supported: false

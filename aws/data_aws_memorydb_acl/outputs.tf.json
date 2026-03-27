@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB Access Control List (ACL).",
+            "value": "${data.aws_memorydb_acl.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the MemoryDB ACL.",
+            "value": "${data.aws_memorydb_acl.this.id}"
+        },
+        "minimum_engine_version": {
+            "description": "The minimum engine version required for the MemoryDB ACL.",
+            "value": "${data.aws_memorydb_acl.this.minimum_engine_version}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MemoryDB ACL, which are key-value pairs for organization and management.",
+            "value": "${data.aws_memorydb_acl.this.tags}"
+        },
+        "user_names": {
+            "description": "A set of user names that are associated with the MemoryDB ACL.",
+            "value": "${data.aws_memorydb_acl.this.user_names}"
+        }
+    }
+}

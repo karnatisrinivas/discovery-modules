@@ -1,0 +1,53 @@
+{
+    "variable": {
+        "application_rule_collection": [
+            {
+                "description": "Defines application-specific rules for traffic filtering",
+                "nullable": true,
+                "type": "list(object({action: string,name: string,priority: number,rule: list(object({description: optional(string),destination_addresses: optional(list(string)),destination_fqdn_tags: optional(list(string)),destination_fqdns: optional(list(string)),destination_urls: optional(list(string)),name: string,source_addresses: optional(list(string)),source_ip_groups: optional(list(string)),terminate_tls: optional(bool),web_categories: optional(list(string)),http_headers: list(object({name: string,value: string})),protocols: list(object({port: number,type: string}))}))}))"
+            }
+        ],
+        "firewall_policy_id": [
+            {
+                "description": "Specifies the ID of the associated firewall policy",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "name": [
+            {
+                "description": "Specifies the name of the resource (must be unique)",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "nat_rule_collection": [
+            {
+                "description": "Defines NAT rules for traffic redirection and translation",
+                "nullable": true,
+                "type": "list(object({action: string,name: string,priority: number,rule: list(object({description: optional(string),destination_address: optional(string),destination_ports: optional(list(string)),name: string,protocols: list(string),source_addresses: optional(list(string)),source_ip_groups: optional(list(string)),translated_address: optional(string),translated_fqdn: optional(string),translated_port: number}))}))"
+            }
+        ],
+        "network_rule_collection": [
+            {
+                "description": "Defines network-level rules for traffic control",
+                "nullable": true,
+                "type": "list(object({action: string,name: string,priority: number,rule: list(object({description: optional(string),destination_addresses: optional(list(string)),destination_fqdns: optional(list(string)),destination_ip_groups: optional(list(string)),destination_ports: list(string),name: string,protocols: list(string),source_addresses: optional(list(string)),source_ip_groups: optional(list(string))}))}))"
+            }
+        ],
+        "priority": [
+            {
+                "description": "Sets the rule collection priority (lower numbers indicate higher priority)",
+                "nullable": false,
+                "type": "number"
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "Configures timeouts for create, read, update, and delete operations",
+                "nullable": true,
+                "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+            }
+        ]
+    }
+}

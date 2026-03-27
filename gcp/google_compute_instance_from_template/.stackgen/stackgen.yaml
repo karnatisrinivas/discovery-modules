@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance From Template
+  node:
+    label:
+      static: Compute Instance From Template
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_from_template
+  dnd_supported: false
+  references:
+    source_instance_template:
+      from: google_compute_instance_template
+      output: self_link

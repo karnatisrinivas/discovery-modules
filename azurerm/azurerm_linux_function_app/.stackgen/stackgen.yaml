@@ -1,0 +1,28 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Linux Function App
+  node:
+    label:
+      static: Linux Function App
+      template: ${name}
+    display_type: default
+
+variables:
+  client_certificate_mode:
+    description: Client certificate mode.
+    type: string
+    options: 
+      - Required
+      - Optional
+      - OptionalInteractiveUser
+    ui_control: select
+
+discovery:
+  type: azurerm_linux_function_app
+  dnd_supported: false
+  references:
+    service_plan_id:
+      from: azurerm_service_plan
+      output: id

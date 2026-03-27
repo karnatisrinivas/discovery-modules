@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for associating NIC with security group in Azure",
+            "value": "${azurerm_network_interface_security_group_association.this.id}"
+        }
+    }
+}

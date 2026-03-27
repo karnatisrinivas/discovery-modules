@@ -1,0 +1,91 @@
+{
+    "variable": {
+        "availability_zone": [
+            {
+                "type": "string",
+                "description": "The AZ where the EBS volume will exist.",
+                "nullable": false
+            }
+        ],
+        "encrypted": [
+            {
+                "type": "bool",
+                "description": "If true, the disk will be encrypted.",
+                "default": true,
+                "nullable": true
+            }
+        ],
+        "final_snapshot": [
+            {
+                "type": "bool",
+                "description": "If true, snapshot will be created before volume deletion. Any tags on the volume will be migrated to the snapshot.",
+                "default": false,
+                "nullable": true
+            }
+        ],
+        "iops": [
+            {
+                "type": "number",
+                "description": "The amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.",
+                "nullable": true
+            }
+        ],
+        "multi_attach_enabled": [
+            {
+                "type": "bool",
+                "description": "Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported on `io1` and `io2` volumes.",
+                "nullable": true
+            }
+        ],
+        "size": [
+            {
+                "type": "number",
+                "description": "The size of the drive in GiBs.",
+                "nullable": true
+            }
+        ],
+        "snapshot_id": [
+            {
+                "type": "string",
+                "description": "The size of the drive in GiBs.",
+                "nullable": true
+            }
+        ],
+        "outpost_arn": [
+            {
+                "type": "string",
+                "description": "The Amazon Resource Name (ARN) of the Outpost.",
+                "nullable": true
+            }
+        ],
+        "type": [
+            {
+                "type": "string",
+                "description": "The type of EBS volume.",
+                "default": "gp2",
+                "nullable": true
+            }
+        ],
+        "kms_key_id": [
+            {
+                "type": "string",
+                "description": "The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true. Note: Terraform must be running with credentials which have the GenerateDataKeyWithoutPlaintext permission on the specified KMS key as required by the EBS KMS CMK volume provisioning process to prevent a volume from being created and almost immediately deleted.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ],
+        "throughput": [
+            {
+                "type": "number",
+                "description": "The throughput that the volume supports, in MiB/s.",
+                "nullable": true
+            }
+        ]
+    }
+}

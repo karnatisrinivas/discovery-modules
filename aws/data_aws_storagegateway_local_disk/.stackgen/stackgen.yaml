@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Storagegateway Local Disk"
+  node:
+    label:
+      static: "[Data] Storagegateway Local Disk"
+      template: "[Data] Storagegateway Local Disk"
+    display_type: default
+
+discovery:
+  type: data_aws_storagegateway_local_disk
+  dnd_supported: false

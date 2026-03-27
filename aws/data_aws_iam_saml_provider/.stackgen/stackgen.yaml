@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Saml Provider"
+  node:
+    label:
+      static: "[Data] Iam Saml Provider"
+      template: "[Data] Iam Saml Provider"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_saml_provider
+  dnd_supported: false

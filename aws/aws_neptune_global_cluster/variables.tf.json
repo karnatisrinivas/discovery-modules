@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "deletion_protection": [
+      {
+        "description": "Indicates whether deletion protection is enabled, preventing accidental deletion of the Neptune global cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the database engine for the Neptune global cluster, such as \"neptune\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine_version": [
+      {
+        "description": "Specifies the database engine version for the Neptune global cluster; must be compatible with Neptune global cluster requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "global_cluster_identifier": [
+      {
+        "description": "Unique identifier for the global Neptune cluster; must be unique across all existing clusters in the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_db_cluster_identifier": [
+      {
+        "description": "Identifier of the source Neptune DB cluster to use for creating the global cluster; must be a valid DB cluster ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_encrypted": [
+      {
+        "description": "Specifies whether the global cluster storage is encrypted. Must be set to true for encryption to be enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for creating, updating, and deleting the Neptune global cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

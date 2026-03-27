@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.arn}"
+        },
+        "aws_device": {
+            "description": "The AWS device associated with the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.aws_device}"
+        },
+        "bandwidth": {
+            "description": "The bandwidth of the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.bandwidth}"
+        },
+        "id": {
+            "description": "The unique identifier for the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.id}"
+        },
+        "location": {
+            "description": "The physical location where the Direct Connect connection is established.",
+            "value": "${data.aws_dx_connection.this.location}"
+        },
+        "owner_account_id": {
+            "description": "The AWS account ID of the owner of the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.owner_account_id}"
+        },
+        "partner_name": {
+            "description": "The name of the partner providing the Direct Connect service.",
+            "value": "${data.aws_dx_connection.this.partner_name}"
+        },
+        "provider_name": {
+            "description": "The name of the provider of the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.provider_name}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.tags}"
+        },
+        "vlan_id": {
+            "description": "The VLAN ID associated with the Direct Connect connection.",
+            "value": "${data.aws_dx_connection.this.vlan_id}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "allow_users_to_change_password": [
+      {
+        "description": "A boolean value that indicates whether users are allowed to change their own passwords.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "minimum_password_length": [
+      {
+        "description": "The minimum number of characters that a password must have.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

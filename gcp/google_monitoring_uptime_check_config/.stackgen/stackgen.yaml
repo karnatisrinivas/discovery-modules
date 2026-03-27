@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitoring Uptime Check Config
+  node:
+    label:
+      static: Monitoring Uptime Check Config
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: google_monitoring_uptime_check_config
+  dnd_supported: false

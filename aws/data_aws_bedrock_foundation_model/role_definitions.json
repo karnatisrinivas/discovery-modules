@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Reader",
+    "resource_type": "data_aws_bedrock_foundation_model",
+    "description": "Permissions that allow users to invoke AWS Bedrock foundation model",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream"
+          ],
+          "Resource": ["${module.module_name.foundation_model_arn}"]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "include_deprecated": [
+      {
+        "description": "Specifies whether to include deprecated secret versions in the results.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "secret_id": [
+      {
+        "description": "The unique identifier or ARN of the secret for which to list versions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

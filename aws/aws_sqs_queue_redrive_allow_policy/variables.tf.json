@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "redrive_allow_policy": [
+            {
+                "description": "The JSON redrive allow policy for the SQS queue.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "queue_url": [
+            {
+                "description": "The URL of the SQS queue.",
+                "type": "string",
+                "nullable": false
+            }
+        ]
+    }
+}

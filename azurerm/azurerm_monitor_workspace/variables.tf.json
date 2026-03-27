@@ -1,0 +1,29 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name which should be used for this Azure Monitor"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "type": "bool",
+        "description": "Is public network access enabled?",
+        "default": false
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

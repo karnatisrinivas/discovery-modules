@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Appautoscaling Target
+  node:
+    label:
+      static: Appautoscaling Target
+      template: ${resource_id}
+    display_type: default
+
+discovery:
+  type: aws_appautoscaling_target
+  dnd_supported: false
+  references:
+    role_arn:
+      from: aws_iam_role
+      output: arn

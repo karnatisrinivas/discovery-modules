@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "target_identifier": [
+      {
+        "description": "The unique identifier for the target resource or account in AWS Control Tower where controls will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Load Balancer Listener Rule
+  node:
+    label:
+      static: Load Balancer Listener Rule
+      template: Load Balancer Listener Rule
+    display_type: default
+
+discovery:
+  type: aws_lb_listener_rule
+  dnd_supported: false
+  data_source: data_aws_lb_listener_rule
+  references:
+    listener_arn:
+      from: aws_lb_listener
+      output: arn

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "engine": [
+      {
+        "description": "Specifies the database engine type for which the version is being defined, typically 'neptune'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_versions": [
+      {
+        "description": "A list of preferred engine versions to consider for the AWS Neptune database.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

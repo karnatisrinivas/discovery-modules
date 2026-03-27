@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "email_identity": [
+      {
+        "description": "The email address or domain to be verified with AWS SES for sending emails.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

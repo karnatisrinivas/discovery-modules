@@ -1,0 +1,19 @@
+{
+    "Name": "aws_elasticache_cluster",
+    "Policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "Default",
+          "Effect": "Allow",
+          "Action": [
+            "elasticache:Describe*"
+          ],
+          "Resource": [
+            "${module.module_name.arn}"
+          ]
+        }
+      ]
+    }
+  }
+  

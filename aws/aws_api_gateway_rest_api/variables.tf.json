@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "body": [
+      {
+        "description": "The OpenAPI specification that defines the structure and behavior of the API.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fail_on_warnings": [
+      {
+        "description": "A boolean flag to determine whether to fail the creation of the API if there are warnings present.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the REST API.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "A map of additional parameters to pass to the API Gateway.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "put_rest_api_mode": [
+      {
+        "description": "The mode of updating the REST API, such as 'merge' or 'overwrite'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the API for categorization and identification purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

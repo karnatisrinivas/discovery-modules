@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] S3control Multi Region Access Point"
+  node:
+    label:
+      static: "[Data] S3control Multi Region Access Point"
+      template: "[Data] S3control Multi Region Access Point"
+    display_type: default
+
+discovery:
+  type: data_aws_s3control_multi_region_access_point
+  dnd_supported: false

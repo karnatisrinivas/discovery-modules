@@ -1,0 +1,100 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for identifying the subnet in AWS operations",
+            "value": "${data.aws_subnet.this.arn}"
+        },
+        "assign_ipv6_address_on_creation": {
+            "description": "Indicates if IPv6 addresses are automatically assigned to instances in the subnet",
+            "value": "${data.aws_subnet.this.assign_ipv6_address_on_creation}"
+        },
+        "availability_zone": {
+            "description": "Availability zone of the subnet",
+            "value": "${data.aws_subnet.this.availability_zone}"
+        },
+        "availability_zone_id": {
+            "description": "ID of the availability zone of the subnet",
+            "value": "${data.aws_subnet.this.availability_zone_id}"
+        },
+        "available_ip_address_count": {
+            "description": "Number of unused IP addresses available in the subnet",
+            "value": "${data.aws_subnet.this.available_ip_address_count}"
+        },
+        "cidr_block": {
+            "description": "CIDR block of the subnet",
+            "value": "${data.aws_subnet.this.cidr_block}"
+        },
+        "customer_owned_ipv4_pool": {
+            "description": "Associated customer-owned IPv4 address pool for the subnet",
+            "value": "${data.aws_subnet.this.customer_owned_ipv4_pool}"
+        },
+        "default_for_az": {
+            "description": "Indicates if the subnet is the default subnet for the availability zone",
+            "value": "${data.aws_subnet.this.default_for_az}"
+        },
+        "enable_dns64": {
+            "description": "Specifies if DNS64 is enabled for the subnet to support IPv6-only workloads",
+            "value": "${data.aws_subnet.this.enable_dns64}"
+        },
+        "enable_lni_at_device_index": {
+            "description": "Index of the network interface card enabled for local network interfaces",
+            "value": "${data.aws_subnet.this.enable_lni_at_device_index}"
+        },
+        "enable_resource_name_dns_a_record_on_launch": {
+            "description": "Indicates if DNS A records are created for resources launched in the subnet",
+            "value": "${data.aws_subnet.this.enable_resource_name_dns_a_record_on_launch}"
+        },
+        "enable_resource_name_dns_aaaa_record_on_launch": {
+            "description": "Indicates if DNS AAAA records are created for resources launched in the subnet",
+            "value": "${data.aws_subnet.this.enable_resource_name_dns_aaaa_record_on_launch}"
+        },
+        "id": {
+            "description": "Unique identifier for the subnet used in configuration and resource referencing",
+            "value": "${data.aws_subnet.this.id}"
+        },
+        "ipv6_cidr_block": {
+            "description": "IPv6 CIDR block of the subnet",
+            "value": "${data.aws_subnet.this.ipv6_cidr_block}"
+        },
+        "ipv6_cidr_block_association_id": {
+            "description": "Identifier for the association of an IPv6 CIDR block with the subnet",
+            "value": "${data.aws_subnet.this.ipv6_cidr_block_association_id}"
+        },
+        "ipv6_native": {
+            "description": "Indicates if the subnet supports native IPv6 addressing",
+            "value": "${data.aws_subnet.this.ipv6_native}"
+        },
+        "map_customer_owned_ip_on_launch": {
+            "description": "Specifies if customer-owned IPs are assigned to instances launched in the subnet",
+            "value": "${data.aws_subnet.this.map_customer_owned_ip_on_launch}"
+        },
+        "map_public_ip_on_launch": {
+            "description": "Indicates if public IPs are automatically assigned to instances on launch",
+            "value": "${data.aws_subnet.this.map_public_ip_on_launch}"
+        },
+        "outpost_arn": {
+            "description": "Amazon Resource Name of the Outpost associated with the subnet, if any",
+            "value": "${data.aws_subnet.this.outpost_arn}"
+        },
+        "owner_id": {
+            "description": "AWS account ID of the owner of the subnet",
+            "value": "${data.aws_subnet.this.owner_id}"
+        },
+        "private_dns_hostname_type_on_launch": {
+            "description": "Specifies the type of private DNS hostname assigned to instances on launch",
+            "value": "${data.aws_subnet.this.private_dns_hostname_type_on_launch}"
+        },
+        "state": {
+            "description": "Current state of the subnet",
+            "value": "${data.aws_subnet.this.state}"
+        },
+        "tags": {
+            "description": "Map of tags assigned to the subnet",
+            "value": "${data.aws_subnet.this.tags}"
+        },
+        "vpc_id": {
+            "description": "ID of the VPC the subnet belongs to",
+            "value": "${data.aws_subnet.this.vpc_id}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The unique name assigned to the security policy for identification.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of security policy, which defines its purpose and scope, such as access or encryption.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

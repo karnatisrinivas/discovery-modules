@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the Image Builder container recipes.",
+            "value": "${data.aws_imagebuilder_container_recipes.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the specific Image Builder container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipes.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the Image Builder container recipes.",
+            "value": "${data.aws_imagebuilder_container_recipes.this.names}"
+        }
+    }
+}

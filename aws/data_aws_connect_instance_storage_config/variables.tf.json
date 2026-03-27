@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "association_id": [
+      {
+        "description": "A unique identifier for the storage configuration association within the AWS Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "The identifier of the AWS Connect instance to which the storage configuration is associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_type": [
+      {
+        "description": "The type of resource for the storage configuration, such as 'CALL_RECORDINGS' or 'CHAT_TRANSCRIPTS'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for billing project info, useful for integration and tracking purposes",
+            "value": "${google_billing_project_info.this.id}"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "output": {
+        "cidr_blocks": {
+            "description": "List of all CIDR blocks associated with Google's public IP ranges",
+            "value": "${data.google_netblock_ip_ranges.this.cidr_blocks}"
+        },
+        "cidr_blocks_ipv4": {
+            "description": "IPv4 CIDR blocks for Google's public IP ranges, useful for network configurations",
+            "value": "${data.google_netblock_ip_ranges.this.cidr_blocks_ipv4}"
+        },
+        "cidr_blocks_ipv6": {
+            "description": "IPv6 CIDR blocks for Google's public IP ranges, aiding in IPv6 network setups",
+            "value": "${data.google_netblock_ip_ranges.this.cidr_blocks_ipv6}"
+        },
+        "id": {
+            "description": "Unique identifier for the Google Netblock resource, useful for tracking and dependencies",
+            "value": "${data.google_netblock_ip_ranges.this.id}"
+        }
+    }
+}

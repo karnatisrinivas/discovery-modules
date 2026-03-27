@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssoadmin Application Providers"
+  node:
+    label:
+      static: "[Data] Ssoadmin Application Providers"
+      template: "[Data] Ssoadmin Application Providers"
+    display_type: default
+
+discovery:
+  type: data_aws_ssoadmin_application_providers
+  dnd_supported: false

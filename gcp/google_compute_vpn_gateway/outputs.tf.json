@@ -1,0 +1,20 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the VPN gateway was created",
+            "value": "${google_compute_vpn_gateway.this.creation_timestamp}"
+        },
+        "gateway_id": {
+            "description": "Unique identifier for the VPN gateway used in configurations",
+            "value": "${google_compute_vpn_gateway.this.gateway_id}"
+        },
+        "id": {
+            "description": "Resource ID for referencing the VPN gateway in scripts and APIs",
+            "value": "${google_compute_vpn_gateway.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the VPN gateway resource in Google Cloud",
+            "value": "${google_compute_vpn_gateway.this.self_link}"
+        }
+    }
+}

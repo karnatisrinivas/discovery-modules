@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "cluster_name": [
+      {
+        "description": "The name of the EKS cluster to which access is being managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "principal_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the IAM principal (user or role) requiring access to the EKS cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the EKS access entry, which can be used for identification and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

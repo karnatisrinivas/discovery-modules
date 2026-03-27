@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Security Server Tls Policy
+  node:
+    label:
+      static: Network Security Server Tls Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_network_security_server_tls_policy
+  dnd_supported: false

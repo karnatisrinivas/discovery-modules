@@ -1,0 +1,24 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Shield protection.",
+            "value": "${data.aws_shield_protection.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the AWS Shield protection.",
+            "value": "${data.aws_shield_protection.this.name}"
+        },
+        "protection_arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Shield protection.",
+            "value": "${data.aws_shield_protection.this.protection_arn}"
+        },
+        "protection_id": {
+            "description": "The unique protection ID assigned by AWS Shield.",
+            "value": "${data.aws_shield_protection.this.protection_id}"
+        },
+        "resource_arn": {
+            "description": "The ARN of the resource that is protected by AWS Shield.",
+            "value": "${data.aws_shield_protection.this.resource_arn}"
+        }
+    }
+}

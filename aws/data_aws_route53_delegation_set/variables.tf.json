@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the Route 53 delegation set.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

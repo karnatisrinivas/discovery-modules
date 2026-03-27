@@ -1,0 +1,214 @@
+{
+  "variable": {
+    "available_memory_mb": [
+      {
+        "description": "Amount of memory allocated to the Cloud Function, specified in megabytes; must be one of the supported values (e.g., 128, 256, 512, 1024, 2048, etc.).",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "build_environment_variables": [
+      {
+        "description": "Defines key-value pairs for environment variables that will be available during the build process of the Cloud Function.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "build_service_account": [
+      {
+        "description": "Service account used to execute the build process for the Cloud Function; must have appropriate permissions for Cloud Build.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "build_worker_pool": [
+      {
+        "description": "Specifies the Cloud Build worker pool to use for building the function, must be in the same project and region as the function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Detailed description of the Cloud Function's purpose and functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "docker_registry": [
+      {
+        "description": "Specifies the Docker registry hosting the container image, such as 'gcr.io', 'us-docker.pkg.dev', or 'eu.gcr.io'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "docker_repository": [
+      {
+        "description": "Specifies the Docker repository URL for the container image used by the Cloud Function; must be a valid repository in the format `gcr.io/project-id/image`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "entry_point": [
+      {
+        "description": "Specifies the name of the function to execute, required to match the exported function name in the source code.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "environment_variables": [
+      {
+        "description": "Specifies key-value pairs for environment variables to configure the Cloud Function, with a maximum of 4 KB in total size.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "event_trigger": [
+      {
+        "description": "Defines the event that triggers the Cloud Function, specifying the event type and resource.",
+        "nullable": true,
+        "type": "list(object({event_type: string,resource: string,failure_policy: list(object({retry: bool}))}))"
+      }
+    ],
+    "https_trigger_security_level": [
+      {
+        "description": "Specifies the security level for HTTPS trigger, determining whether requests from unverified sources are allowed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "https_trigger_url": [
+      {
+        "description": "URL endpoint for the HTTPS-triggered Cloud Function, automatically generated after deployment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ingress_settings": [
+      {
+        "description": "Determines the connectivity options for the function, specifying whether it allows internal traffic, external traffic, or both.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kms_key_name": [
+      {
+        "description": "Specifies the Cloud KMS key used to encrypt function environment variables, must be in the same region as the function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the Cloud Function, such as environment or team identifiers. Maximum 64 labels per resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "max_instances": [
+      {
+        "description": "Specifies the maximum number of instances that can be running for the function, limiting scalability to control resource usage.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "min_instances": [
+      {
+        "description": "Specifies the minimum number of function instances to keep idle, ensuring reduced cold starts; must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Cloud Function, must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "runtime": [
+      {
+        "description": "Specifies the runtime environment for the Cloud Function, such as Node.js or Python. Must match one of the supported runtime versions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_environment_variables": [
+      {
+        "description": "Specifies environment variables sourced from Secret Manager secrets, enabling secure storage and retrieval of sensitive data for the function.",
+        "nullable": true,
+        "type": "list(object({key: string,project_id: optional(string),secret: string,version: string}))"
+      }
+    ],
+    "secret_volumes": [
+      {
+        "description": "Defines the secret volumes configuration, specifying the names and paths for accessing secrets from Secret Manager within the Cloud Function.",
+        "nullable": true,
+        "type": "list(object({mount_path: string,project_id: optional(string),secret: string,versions: list(object({path: string,version: string}))}))"
+      }
+    ],
+    "service_account_email": [
+      {
+        "description": "Email address of the service account to associate with the Cloud Function, granting it permissions to access resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_archive_bucket": [
+      {
+        "description": "Specifies the Cloud Storage bucket containing the source code archive; must exist in the same project and region as the Cloud Function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_archive_object": [
+      {
+        "description": "Specifies the name of the object in the Cloud Storage bucket that contains the source code for the function; must be in the same project as the function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_repository": [
+      {
+        "description": "Specifies the Cloud Source Repository URL containing the function's source code; must be formatted as \"https://source.developers.google.com/projects/{project_id}/repos/{repo_name}/moveable-aliases/{branch_or_tag}\".",
+        "nullable": true,
+        "type": "list(object({deployed_url: optional(string),url: string}))"
+      }
+    ],
+    "timeout": [
+      {
+        "description": "Maximum duration, in seconds, for the function execution; must be between 1 and 540 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for the cloud function's execution, specifying the maximum time allowed for the function to complete its process.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "trigger_http": [
+      {
+        "description": "Determines whether the function is triggered via HTTP requests; must be set to true for HTTP-triggered functions.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "vpc_connector": [
+      {
+        "description": "Specifies the VPC access connector to enable the function to connect to a VPC network; must be the name of an existing VPC connector.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpc_connector_egress_settings": [
+      {
+        "description": "Defines the egress traffic behavior for the VPC connector, specifying whether traffic is routed only through the connector or uses the default internet route.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

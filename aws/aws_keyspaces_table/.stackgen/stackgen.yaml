@@ -1,0 +1,35 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Keyspaces Table
+  node:
+    label:
+      static: Keyspaces Table
+      template: Keyspaces Table
+    display_type: default
+
+variables:
+  throughput_mode:
+    options: 
+      - PAY_PER_REQUEST
+      - PROVISIONED
+    ui_control: select
+  status:
+    options: 
+      - DISABLED
+      - ENABLED
+    ui_control: select
+  order_by:
+    options: 
+      - ASC
+      - DESC
+    ui_control: select
+
+discovery:
+  type: aws_keyspaces_table
+  dnd_supported: false
+  references:
+    keyspace_name:
+      from: aws_keyspaces_keyspace
+      output: name

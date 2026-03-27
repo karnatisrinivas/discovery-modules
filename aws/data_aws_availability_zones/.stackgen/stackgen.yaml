@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Availability Zones"
+  node:
+    label:
+      static: "[Data] Availability Zones"
+      template: "[Data] Availability Zones"
+    display_type: default
+
+discovery:
+  type: data_aws_availability_zones
+  dnd_supported: false

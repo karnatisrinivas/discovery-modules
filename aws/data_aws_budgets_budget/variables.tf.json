@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the budget. This is a unique identifier for the budget.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "A prefix for the budget name. If set, this prefix will be prepended to the budget name.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

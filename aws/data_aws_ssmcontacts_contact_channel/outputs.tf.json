@@ -1,0 +1,24 @@
+{
+    "output": {
+        "activation_status": {
+            "description": "Indicates whether the contact channel is activated.",
+            "value": "${data.aws_ssmcontacts_contact_channel.this.activation_status}"
+        },
+        "contact_id": {
+            "description": "The unique identifier of the contact associated with this channel.",
+            "value": "${data.aws_ssmcontacts_contact_channel.this.contact_id}"
+        },
+        "delivery_address": {
+            "description": "The address where notifications are sent for this contact channel.",
+            "value": "${data.aws_ssmcontacts_contact_channel.this.delivery_address}"
+        },
+        "id": {
+            "description": "The unique identifier of this contact channel.",
+            "value": "${data.aws_ssmcontacts_contact_channel.this.id}"
+        },
+        "name": {
+            "description": "The name of the contact channel.",
+            "value": "${data.aws_ssmcontacts_contact_channel.this.name}"
+        }
+    }
+}

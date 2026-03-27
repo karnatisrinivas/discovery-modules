@@ -1,0 +1,36 @@
+{
+    "output": {
+        "approval_rule_template_id": {
+            "description": "The unique identifier for the approval rule template.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.approval_rule_template_id}"
+        },
+        "content": {
+            "description": "The content of the approval rule template, detailing the approval conditions.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.content}"
+        },
+        "creation_date": {
+            "description": "The date and time when the approval rule template was created.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.creation_date}"
+        },
+        "description": {
+            "description": "A brief summary or explanation of what the approval rule template is for.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.description}"
+        },
+        "id": {
+            "description": "The identifier for the approval rule template, often used in referencing.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.id}"
+        },
+        "last_modified_date": {
+            "description": "The date and time when the approval rule template was last modified.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.last_modified_date}"
+        },
+        "last_modified_user": {
+            "description": "The user who last modified the approval rule template.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.last_modified_user}"
+        },
+        "rule_content_sha256": {
+            "description": "The SHA256 hash of the rule content, used for integrity verification.",
+            "value": "${data.aws_codecommit_approval_rule_template.this.rule_content_sha256}"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "bgp_route_propagation_enabled": {
+            "description": "The BGP Route Propagation Enabled of the Route Table",
+            "value": "data.azurerm_route_table.this.bgp_route_propagation_enabled"
+        },
+        "id": {
+            "description": "The ID of the Route Table",
+            "value": "data.azurerm_route_table.this.id"
+        },
+        "location": {
+            "description": "The Location of the Route Table",
+            "value": "data.azurerm_route_table.this.location"
+        },
+        "route": {
+            "description": "The Route of the Route Table",
+            "value": "data.azurerm_route_table.this.route"
+        },
+        "subnets": {
+            "description": "The Subnets of the Route Table",
+            "value": "data.azurerm_route_table.this.subnets"
+        },
+        "tags": {
+            "description": "The Tags of the Route Table",
+            "value": "data.azurerm_route_table.this.tags"
+        }
+    }
+}

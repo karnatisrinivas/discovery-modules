@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "loadbalancer_id": [
+      {
+        "description": "The ID of the load balancer to which this backend address pool belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the backend address pool.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

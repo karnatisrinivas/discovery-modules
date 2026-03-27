@@ -1,0 +1,48 @@
+{
+    "output": {
+        "creation_time": {
+            "description": "Timestamp indicating when the BigQuery table was initially created",
+            "value": "${google_bigquery_table.this.creation_time}"
+        },
+        "effective_labels": {
+            "description": "Active labels reflecting the current state of the BigQuery table",
+            "value": "${google_bigquery_table.this.effective_labels}"
+        },
+        "etag": {
+            "description": "ETag used to track changes and ensure consistent updates",
+            "value": "${google_bigquery_table.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing this BigQuery table",
+            "value": "${google_bigquery_table.this.id}"
+        },
+        "last_modified_time": {
+            "description": "Timestamp of the most recent update to the BigQuery table",
+            "value": "${google_bigquery_table.this.last_modified_time}"
+        },
+        "location": {
+            "description": "Region where the BigQuery table's data is stored",
+            "value": "${google_bigquery_table.this.location}"
+        },
+        "num_bytes": {
+            "description": "Current storage size of the BigQuery table in bytes",
+            "value": "${google_bigquery_table.this.num_bytes}"
+        },
+        "num_long_term_bytes": {
+            "description": "Bytes stored in long-term storage for the table",
+            "value": "${google_bigquery_table.this.num_long_term_bytes}"
+        },
+        "num_rows": {
+            "description": "Count of rows currently stored in the BigQuery table",
+            "value": "${google_bigquery_table.this.num_rows}"
+        },
+        "self_link": {
+            "description": "Direct API endpoint for managing or querying the table",
+            "value": "${google_bigquery_table.this.self_link}"
+        },
+        "terraform_labels": {
+            "description": "Labels assigned via Terraform configuration for organization",
+            "value": "${google_bigquery_table.this.terraform_labels}"
+        }
+    }
+}

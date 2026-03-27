@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "query_string": [
+      {
+        "description": "The search query string used to find resources in AWS Resource Explorer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

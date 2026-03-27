@@ -1,0 +1,56 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp when the AlloyDB instance was created",
+            "value": "${google_alloydb_instance.this.create_time}"
+        },
+        "effective_annotations": {
+            "description": "Annotations applied to the instance for metadata purposes",
+            "value": "${google_alloydb_instance.this.effective_annotations}"
+        },
+        "effective_labels": {
+            "description": "Labels effectively applied to the instance for organization",
+            "value": "${google_alloydb_instance.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the AlloyDB instance",
+            "value": "${google_alloydb_instance.this.id}"
+        },
+        "ip_address": {
+            "description": "Primary private IP address of the instance",
+            "value": "${google_alloydb_instance.this.ip_address}"
+        },
+        "name": {
+            "description": "Fully qualified name of the AlloyDB instance",
+            "value": "${google_alloydb_instance.this.name}"
+        },
+        "outbound_public_ip_addresses": {
+            "description": "List of public IPs for outbound traffic from the instance",
+            "value": "${google_alloydb_instance.this.outbound_public_ip_addresses}"
+        },
+        "public_ip_address": {
+            "description": "Assigned public IP address for external access",
+            "value": "${google_alloydb_instance.this.public_ip_address}"
+        },
+        "reconciling": {
+            "description": "Indicates if the instance is in the process of updating",
+            "value": "${google_alloydb_instance.this.reconciling}"
+        },
+        "state": {
+            "description": "Current operational state of the instance",
+            "value": "${google_alloydb_instance.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in the Terraform configuration",
+            "value": "${google_alloydb_instance.this.terraform_labels}"
+        },
+        "uid": {
+            "description": "Globally unique identifier for the instance",
+            "value": "${google_alloydb_instance.this.uid}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update to the instance",
+            "value": "${google_alloydb_instance.this.update_time}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route Table Association
+  node:
+    label:
+      static: Route Table Association
+      template: Route Table Association
+    display_type: default
+
+discovery:
+  type: aws_route_table_association
+  dnd_supported: false
+  references:
+    route_table_id:
+      from: aws_route_table
+      output: id
+    subnet_id:
+      from: aws_subnet
+      output: id

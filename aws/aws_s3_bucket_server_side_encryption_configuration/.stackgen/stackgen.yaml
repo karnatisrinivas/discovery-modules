@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket Server Side Encryption Configuration
+  node:
+    label:
+      static: S3 Bucket Server Side Encryption Configuration
+      template: S3 Bucket Server Side Encryption Configuration
+    display_type: default
+
+discovery:
+  type: aws_s3_bucket_server_side_encryption_configuration
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: bucket

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Billing Project Info
+  node:
+    label:
+      static: Billing Project Info
+      template: ${billing_account}
+    display_type: default
+
+discovery:
+  type: google_billing_project_info
+  dnd_supported: false

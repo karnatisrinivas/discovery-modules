@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Databricks Workspace"
+  node:
+    label:
+      static: "[Data] Databricks Workspace"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_databricks_workspace
+  dnd_supported: false

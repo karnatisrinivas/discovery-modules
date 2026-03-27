@@ -1,0 +1,16 @@
+{
+    "output": {
+        "hostname": {
+            "description": "The DNS name assigned to the Redis Cache instance.",
+            "value": "${azurerm_redis_cache.this.hostname}"
+        },
+        "id": {
+            "description": "The unique identifier of the Redis Cache instance.",
+            "value": "${azurerm_redis_cache.this.id}"
+        },
+        "name": {
+            "description": "The name of the Redis Cache instance.",
+            "value": "${azurerm_redis_cache.this.name}"
+        }
+    }
+}

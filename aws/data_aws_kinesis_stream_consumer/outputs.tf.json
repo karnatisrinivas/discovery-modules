@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kinesis Stream Consumer.",
+            "value": "${data.aws_kinesis_stream_consumer.this.arn}"
+        },
+        "creation_timestamp": {
+            "description": "The timestamp indicating when the Kinesis Stream Consumer was created.",
+            "value": "${data.aws_kinesis_stream_consumer.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "The unique identifier of the Kinesis Stream Consumer.",
+            "value": "${data.aws_kinesis_stream_consumer.this.id}"
+        },
+        "name": {
+            "description": "The name of the Kinesis Stream Consumer.",
+            "value": "${data.aws_kinesis_stream_consumer.this.name}"
+        },
+        "status": {
+            "description": "The current status of the Kinesis Stream Consumer.",
+            "value": "${data.aws_kinesis_stream_consumer.this.status}"
+        }
+    }
+}

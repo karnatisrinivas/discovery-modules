@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Db Subnet Group"
+  node:
+    label:
+      static: "[Data] Db Subnet Group"
+      template: "[Data] Db Subnet Group"
+    display_type: default
+
+discovery:
+  type: data_aws_db_subnet_group
+  dnd_supported: false

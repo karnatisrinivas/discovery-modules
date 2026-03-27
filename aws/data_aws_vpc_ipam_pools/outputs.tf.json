@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pools.this.id}"
+        },
+        "ipam_pools": {
+            "description": "A set of attributes for each IPAM pool, detailing its properties like address family, netmask lengths, tags, and other configurations.",
+            "value": "${data.aws_vpc_ipam_pools.this.ipam_pools}"
+        }
+    }
+}

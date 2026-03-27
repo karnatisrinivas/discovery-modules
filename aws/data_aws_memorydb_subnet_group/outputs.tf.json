@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB subnet group.",
+            "value": "${data.aws_memorydb_subnet_group.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the MemoryDB subnet group.",
+            "value": "${data.aws_memorydb_subnet_group.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the MemoryDB subnet group.",
+            "value": "${data.aws_memorydb_subnet_group.this.id}"
+        },
+        "subnet_ids": {
+            "description": "A set of subnet IDs associated with the MemoryDB subnet group.",
+            "value": "${data.aws_memorydb_subnet_group.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MemoryDB subnet group.",
+            "value": "${data.aws_memorydb_subnet_group.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC that the MemoryDB subnet group is in.",
+            "value": "${data.aws_memorydb_subnet_group.this.vpc_id}"
+        }
+    }
+}

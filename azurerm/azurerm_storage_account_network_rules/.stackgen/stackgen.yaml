@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Account Network Rules
+  node:
+    label:
+      static: Storage Account Network Rules
+      template: ${storage_account_id}
+    display_type: default
+
+discovery:
+  type: azurerm_storage_account_network_rules
+  dnd_supported: false
+  references:
+    storage_account_id:
+      from: azurerm_storage_account_composite
+      output: storage_account_id

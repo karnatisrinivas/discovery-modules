@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redis Instance
+  node:
+    label:
+      static: Redis Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_redis_instance
+  dnd_supported: false
+  references:
+    authorized_network:
+      from: google_compute_network
+      output: name
+    customer_managed_key:
+      from: google_kms_crypto_key_composite
+      output: id

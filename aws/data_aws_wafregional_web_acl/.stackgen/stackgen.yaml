@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafregional Web Acl"
+  node:
+    label:
+      static: "[Data] Wafregional Web Acl"
+      template: "[Data] Wafregional Web Acl"
+    display_type: default
+
+discovery:
+  type: data_aws_wafregional_web_acl
+  dnd_supported: false

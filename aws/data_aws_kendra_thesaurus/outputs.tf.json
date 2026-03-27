@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.arn}"
+        },
+        "created_at": {
+            "description": "The date and time when the thesaurus was created.",
+            "value": "${data.aws_kendra_thesaurus.this.created_at}"
+        },
+        "description": {
+            "description": "A description of the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.description}"
+        },
+        "error_message": {
+            "description": "The error message if there was an issue with the thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.error_message}"
+        },
+        "file_size_bytes": {
+            "description": "The size of the thesaurus file in bytes.",
+            "value": "${data.aws_kendra_thesaurus.this.file_size_bytes}"
+        },
+        "id": {
+            "description": "The unique identifier for the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.id}"
+        },
+        "name": {
+            "description": "The name of the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role used by the thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.role_arn}"
+        },
+        "source_s3_path": {
+            "description": "The S3 path where the thesaurus file is stored.",
+            "value": "${data.aws_kendra_thesaurus.this.source_s3_path}"
+        },
+        "status": {
+            "description": "The current status of the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.status}"
+        },
+        "synonym_rule_count": {
+            "description": "The number of synonym rules in the thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.synonym_rule_count}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Kendra thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.tags}"
+        },
+        "term_count": {
+            "description": "The number of terms in the thesaurus.",
+            "value": "${data.aws_kendra_thesaurus.this.term_count}"
+        },
+        "updated_at": {
+            "description": "The date and time when the thesaurus was last updated.",
+            "value": "${data.aws_kendra_thesaurus.this.updated_at}"
+        }
+    }
+}

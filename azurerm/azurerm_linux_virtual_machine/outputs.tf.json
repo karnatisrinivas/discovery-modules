@@ -1,0 +1,28 @@
+{
+    "output": {
+        "id": {
+            "description": "The computed value of id",
+            "value": "${azurerm_linux_virtual_machine.this.id}"
+        },
+        "private_ip_address": {
+            "description": "The computed value of private_ip_address",
+            "value": "${azurerm_linux_virtual_machine.this.private_ip_address}"
+        },
+        "private_ip_addresses": {
+            "description": "The computed value of private_ip_addresses",
+            "value": "${azurerm_linux_virtual_machine.this.private_ip_addresses}"
+        },
+        "public_ip_address": {
+            "description": "The computed value of public_ip_address",
+            "value": "${azurerm_linux_virtual_machine.this.public_ip_address}"
+        },
+        "public_ip_addresses": {
+            "description": "The computed value of public_ip_addresses",
+            "value": "${azurerm_linux_virtual_machine.this.public_ip_addresses}"
+        },
+        "virtual_machine_id": {
+            "description": "The computed value of virtual_machine_id",
+            "value": "${azurerm_linux_virtual_machine.this.virtual_machine_id}"
+        }
+    }
+}

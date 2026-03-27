@@ -1,0 +1,28 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the serverless application.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.id}"
+        },
+        "name": {
+            "description": "The name of the serverless application.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.name}"
+        },
+        "required_capabilities": {
+            "description": "A set of capabilities that are required by the application.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.required_capabilities}"
+        },
+        "semantic_version": {
+            "description": "The version of the application using semantic versioning.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.semantic_version}"
+        },
+        "source_code_url": {
+            "description": "The URL to the source code of the application.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.source_code_url}"
+        },
+        "template_url": {
+            "description": "The URL to the application’s CloudFormation template.",
+            "value": "${data.aws_serverlessapplicationrepository_application.this.template_url}"
+        }
+    }
+}

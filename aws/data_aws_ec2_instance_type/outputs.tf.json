@@ -1,0 +1,192 @@
+{
+    "output": {
+        "auto_recovery_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.auto_recovery_supported}"
+        },
+        "bare_metal": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.bare_metal}"
+        },
+        "burstable_performance_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.burstable_performance_supported}"
+        },
+        "current_generation": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.current_generation}"
+        },
+        "dedicated_hosts_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.dedicated_hosts_supported}"
+        },
+        "default_cores": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.default_cores}"
+        },
+        "default_threads_per_core": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.default_threads_per_core}"
+        },
+        "default_vcpus": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.default_vcpus}"
+        },
+        "ebs_encryption_support": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_encryption_support}"
+        },
+        "ebs_nvme_support": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_nvme_support}"
+        },
+        "ebs_optimized_support": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_optimized_support}"
+        },
+        "ebs_performance_baseline_bandwidth": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_baseline_bandwidth}"
+        },
+        "ebs_performance_baseline_iops": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_baseline_iops}"
+        },
+        "ebs_performance_baseline_throughput": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_baseline_throughput}"
+        },
+        "ebs_performance_maximum_bandwidth": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_maximum_bandwidth}"
+        },
+        "ebs_performance_maximum_iops": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_maximum_iops}"
+        },
+        "ebs_performance_maximum_throughput": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ebs_performance_maximum_throughput}"
+        },
+        "efa_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.efa_supported}"
+        },
+        "ena_support": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ena_support}"
+        },
+        "encryption_in_transit_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.encryption_in_transit_supported}"
+        },
+        "fpgas": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.fpgas}"
+        },
+        "free_tier_eligible": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.free_tier_eligible}"
+        },
+        "gpus": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.gpus}"
+        },
+        "hibernation_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.hibernation_supported}"
+        },
+        "hypervisor": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.hypervisor}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.id}"
+        },
+        "inference_accelerators": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.inference_accelerators}"
+        },
+        "instance_disks": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.instance_disks}"
+        },
+        "instance_storage_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.instance_storage_supported}"
+        },
+        "ipv6_supported": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.ipv6_supported}"
+        },
+        "maximum_ipv4_addresses_per_interface": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.maximum_ipv4_addresses_per_interface}"
+        },
+        "maximum_ipv6_addresses_per_interface": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.maximum_ipv6_addresses_per_interface}"
+        },
+        "maximum_network_cards": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.maximum_network_cards}"
+        },
+        "maximum_network_interfaces": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.maximum_network_interfaces}"
+        },
+        "memory_size": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.memory_size}"
+        },
+        "network_performance": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.network_performance}"
+        },
+        "supported_architectures": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.supported_architectures}"
+        },
+        "supported_placement_strategies": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.supported_placement_strategies}"
+        },
+        "supported_root_device_types": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.supported_root_device_types}"
+        },
+        "supported_usages_classes": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.supported_usages_classes}"
+        },
+        "supported_virtualization_types": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.supported_virtualization_types}"
+        },
+        "sustained_clock_speed": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.sustained_clock_speed}"
+        },
+        "total_fpga_memory": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.total_fpga_memory}"
+        },
+        "total_gpu_memory": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.total_gpu_memory}"
+        },
+        "total_instance_storage": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.total_instance_storage}"
+        },
+        "valid_cores": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.valid_cores}"
+        },
+        "valid_threads_per_core": {
+            "description": "",
+            "value": "${data.aws_ec2_instance_type.this.valid_threads_per_core}"
+        }
+    }
+}

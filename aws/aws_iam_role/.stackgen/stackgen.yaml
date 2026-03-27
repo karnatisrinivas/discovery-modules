@@ -1,0 +1,45 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Role
+  node:
+    label:
+      static: IAM Role
+      template: ${name}
+    display_type: default
+
+variables:
+  force_detach_policies:
+    description: Specifies to force detaching any policies the role has before destroying it
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  inline_policy:
+    description: The policy document
+    attributes: 
+      name: 
+        label: Name
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      policy: 
+        label: Policy
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: json
+  assume_role_policy:
+    description: The policy that grants an entity permission to assume the role
+    type: string
+    ui_control: json
+
+discovery:
+  type: aws_iam_role
+  dnd_supported: false
+  data_source: data_aws_iam_role

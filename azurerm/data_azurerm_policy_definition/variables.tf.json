@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "description": "Defines the visible name for easier identification. Looking up policies by display_name is not recommended by the Azure Policy team as the property is not unique nor immutable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "management_group_name": [
+      {
+        "description": "Assigns the resource to a specific management group",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique identifier for the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures read operation duration; optional setting",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

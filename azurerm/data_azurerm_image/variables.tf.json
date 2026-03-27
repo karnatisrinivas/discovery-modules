@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of this SSH Public Key.",
+        "nullable": true
+      }
+    ],
+    "name_regex": [
+      {
+        "type": "string",
+        "description": "Regex pattern of the image to match.",
+        "nullable": true
+      }
+    ],
+    "sort_descending": [
+      {
+        "type": "string",
+        "description": "By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

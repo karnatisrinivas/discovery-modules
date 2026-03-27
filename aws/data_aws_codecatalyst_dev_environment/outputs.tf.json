@@ -1,0 +1,40 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS CodeCatalyst development environment.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.id}"
+        },
+        "ides": {
+            "description": "A list of Integrated Development Environments (IDEs) available in the development environment, including their names and runtime versions.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.ides}"
+        },
+        "inactivity_timeout_minutes": {
+            "description": "The number of minutes the development environment remains active without activity before timing out.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.inactivity_timeout_minutes}"
+        },
+        "instance_type": {
+            "description": "The type of instance used for the development environment, indicating its computational resources.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.instance_type}"
+        },
+        "last_updated_time": {
+            "description": "The timestamp of the last update made to the development environment.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.last_updated_time}"
+        },
+        "persistent_storage": {
+            "description": "Details about the persistent storage attached to the development environment, including its size in gigabytes.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.persistent_storage}"
+        },
+        "status": {
+            "description": "The current status of the development environment, such as active or inactive.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.status}"
+        },
+        "status_reason": {
+            "description": "A descriptive reason or message explaining the current status of the development environment.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.status_reason}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs used to tag the development environment for identification or organization purposes.",
+            "value": "${data.aws_codecatalyst_dev_environment.this.tags}"
+        }
+    }
+}

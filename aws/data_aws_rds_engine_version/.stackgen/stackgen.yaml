@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Rds Engine Version"
+  node:
+    label:
+      static: "[Data] Rds Engine Version"
+      template: "[Data] Rds Engine Version"
+    display_type: default
+
+discovery:
+  type: data_aws_rds_engine_version
+  dnd_supported: false

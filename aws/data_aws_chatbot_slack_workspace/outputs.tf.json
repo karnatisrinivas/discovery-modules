@@ -1,0 +1,8 @@
+{
+    "output": {
+        "slack_team_id": {
+            "description": "The unique identifier for the Slack workspace linked with AWS Chatbot.",
+            "value": "${data.aws_chatbot_slack_workspace.this.slack_team_id}"
+        }
+    }
+}

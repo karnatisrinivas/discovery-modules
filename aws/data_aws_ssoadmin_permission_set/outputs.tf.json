@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SSO permission set.",
+            "value": "${data.aws_ssoadmin_permission_set.this.arn}"
+        },
+        "created_date": {
+            "description": "The date when the SSO permission set was created.",
+            "value": "${data.aws_ssoadmin_permission_set.this.created_date}"
+        },
+        "description": {
+            "description": "A brief description of the SSO permission set.",
+            "value": "${data.aws_ssoadmin_permission_set.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the SSO permission set.",
+            "value": "${data.aws_ssoadmin_permission_set.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the SSO permission set.",
+            "value": "${data.aws_ssoadmin_permission_set.this.name}"
+        },
+        "relay_state": {
+            "description": "The relay state for the SSO permission set, used for redirecting users after login.",
+            "value": "${data.aws_ssoadmin_permission_set.this.relay_state}"
+        },
+        "session_duration": {
+            "description": "The duration of the session for the SSO permission set, typically specified in ISO 8601 format.",
+            "value": "${data.aws_ssoadmin_permission_set.this.session_duration}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the SSO permission set, used for categorization and management.",
+            "value": "${data.aws_ssoadmin_permission_set.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the contact channel.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

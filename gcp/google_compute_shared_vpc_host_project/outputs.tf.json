@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the shared VPC host project in configurations",
+            "value": "${google_compute_shared_vpc_host_project.this.id}"
+        }
+    }
+}

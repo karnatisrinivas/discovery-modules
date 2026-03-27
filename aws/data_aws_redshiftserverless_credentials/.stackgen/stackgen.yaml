@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshiftserverless Credentials"
+  node:
+    label:
+      static: "[Data] Redshiftserverless Credentials"
+      template: "[Data] Redshiftserverless Credentials"
+    display_type: default
+
+discovery:
+  type: data_aws_redshiftserverless_credentials
+  dnd_supported: false

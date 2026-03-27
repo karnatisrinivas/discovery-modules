@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "faq_id": [
+      {
+        "description": "A unique identifier for the FAQ within the Amazon Kendra service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "index_id": [
+      {
+        "description": "A unique identifier for the index that the FAQ is associated with in Amazon Kendra.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

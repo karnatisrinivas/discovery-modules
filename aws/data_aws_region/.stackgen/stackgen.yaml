@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Region"
+  node:
+    label:
+      static: "[Data] Region"
+      template: "[Data] Region"
+    display_type: default
+
+discovery:
+  type: data_aws_region
+  dnd_supported: false

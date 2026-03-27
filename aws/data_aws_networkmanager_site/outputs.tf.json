@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying the site.",
+            "value": "${data.aws_networkmanager_site.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the site.",
+            "value": "${data.aws_networkmanager_site.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the site.",
+            "value": "${data.aws_networkmanager_site.this.id}"
+        },
+        "location": {
+            "description": "The geographical location details of the site, including address, latitude, and longitude.",
+            "value": "${data.aws_networkmanager_site.this.location}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs associated with the site for categorization and management.",
+            "value": "${data.aws_networkmanager_site.this.tags}"
+        }
+    }
+}

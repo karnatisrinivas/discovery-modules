@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "app_engine_integration_mode": [
+      {
+        "description": "Specifies the App Engine integration mode for the Firestore database; must be either \"ENABLED\" or \"DISABLED\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cmek_config": [
+      {
+        "description": "Specifies the Customer Managed Encryption Key (CMEK) configuration for encrypting Firestore database data. Requires the full key resource name.",
+        "nullable": true,
+        "type": "list(object({active_key_version: optional(list(string)),kms_key_name: string}))"
+      }
+    ],
+    "concurrency_mode": [
+      {
+        "description": "Defines the concurrency control mode for Firestore transactions, either 'OPTIMISTIC' or 'PESSIMISTIC'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "database_edition": [
+      {
+        "description": "Specifies the Firestore database edition, such as 'CLOUD_FIRESTORE' or 'DATASTORE_MODE', required for configuring the database type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "delete_protection_state": [
+      {
+        "description": "Indicates whether the Firestore database is protected from accidental deletion; must be set to \"ENABLED\" or \"DISABLED\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deletion_policy": [
+      {
+        "description": "Specifies the policy for handling the database upon deletion, such as retaining or purging all data; must be set to \"retain\" or \"delete\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "location_id": [
+      {
+        "description": "Defines the geographic location where the Firestore database will be created. Must be a valid Google Cloud region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the unique identifier for the Firestore database. Must be globally unique and comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "point_in_time_recovery_enablement": [
+      {
+        "description": "Enables point-in-time recovery for the Firestore database; must be supported in the selected region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize the Firestore database resources, typically for identification or policy enforcement.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time limits for create, update, and delete operations on the Firestore database.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of Firestore database to create, either 'FIRESTORE_NATIVE' or 'DATASTORE_MODE'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

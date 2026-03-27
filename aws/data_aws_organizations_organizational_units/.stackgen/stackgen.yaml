@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Organizational Units"
+  node:
+    label:
+      static: "[Data] Organizations Organizational Units"
+      template: "[Data] Organizations Organizational Units"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_organizational_units
+  dnd_supported: false

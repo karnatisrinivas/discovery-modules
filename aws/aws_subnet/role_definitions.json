@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Reader",
+        "resource_type": "aws_subnet",
+        "description": "Read subnets",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:DescribeSubnets"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Writer",
+        "resource_type": "aws_subnet",
+        "description": "Create/Delete subnets, modify their attributes and associate/disassociate route tables",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:CreateSubnet",
+                        "ec2:DeleteSubnet",
+                        "ec2:ModifySubnetAttribute",
+                        "ec2:AssociateRouteTable",
+                        "ec2:DisassociateRouteTable"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Admin",
+        "resource_type": "aws_subnet",
+        "description": "Allows all actions",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "ec2:*"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    }
+]

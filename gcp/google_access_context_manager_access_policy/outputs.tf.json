@@ -1,0 +1,20 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the access policy was created",
+            "value": "${google_access_context_manager_access_policy.this.create_time}"
+        },
+        "id": {
+            "description": "Unique identifier for the access policy, useful for referencing in configurations",
+            "value": "${google_access_context_manager_access_policy.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the access policy for identification purposes",
+            "value": "${google_access_context_manager_access_policy.this.name}"
+        },
+        "update_time": {
+            "description": "Timestamp indicating the last modification of the access policy",
+            "value": "${google_access_context_manager_access_policy.this.update_time}"
+        }
+    }
+}

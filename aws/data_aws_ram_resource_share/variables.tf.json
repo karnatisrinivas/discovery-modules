@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "resource_owner": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_share_status": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

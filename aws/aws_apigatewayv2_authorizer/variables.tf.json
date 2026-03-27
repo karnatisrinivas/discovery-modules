@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "api_id": [
+      {
+        "description": "ID of the API Gateway v2 API to associate with the authorizer",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "authorizer_credentials_arn": [
+      {
+        "description": "ARN of the IAM role that API Gateway assumes when invoking the authorizer. Required if the authorizer requires AWS credentials.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "authorizer_payload_format_version": [
+      {
+        "description": "Specifies the payload format version for the authorizer, which determines the expected request and response format; valid values are '1.0' and '2.0'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "authorizer_result_ttl_in_seconds": [
+      {
+        "description": "Time-to-live (TTL) duration for cached authorizer results, in seconds; must be between 0 and 3600.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "authorizer_type": [
+      {
+        "description": "Specifies the type of authorizer, such as REQUEST or JWT, to control access to the API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "authorizer_uri": [
+      {
+        "description": "Specifies the URI of the Lambda function to be used for authorization, formatted as an ARN. Must be a valid Lambda function ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_simple_responses": [
+      {
+        "description": "Determines whether the authorizer will return simple responses compatible with HTTP APIs.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "identity_sources": [
+      {
+        "description": "Defines the identity sources for authorization, such as headers, query strings, or stage variables; must match the identity sources specified in the API Gateway route.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "jwt_configuration": [
+      {
+        "description": "Configuration settings for JWT authorizer, including issuer and audience, to validate tokens in API Gateway.",
+        "nullable": true,
+        "type": "list(object({audience: optional(list(string)),issuer: optional(string)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the API Gateway v2 authorizer, must be unique within the API.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeout settings for creating, updating, or deleting the authorizer, defining how long Terraform waits for each operation to complete.",
+        "nullable": true,
+        "type": "object({delete: optional(string)})"
+      }
+    ]
+  }
+}

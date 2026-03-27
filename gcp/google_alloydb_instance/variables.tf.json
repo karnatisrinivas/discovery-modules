@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "annotations": [
+      {
+        "description": "Key-value pairs used to annotate the AlloyDB instance, providing metadata for organizational or operational purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "availability_type": [
+      {
+        "description": "Defines the instance's availability type, specifying whether it is zonal or regional; defaults to zonal if not set.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "client_connection_config": [
+      {
+        "description": "Configuration for client connections, including settings for IP addresses, ports, and authorized networks.",
+        "nullable": true,
+        "type": "list(object({require_connectors: optional(bool),ssl_config: list(object({ssl_mode: optional(string)}))}))"
+      }
+    ],
+    "cluster": [
+      {
+        "description": "Specifies the cluster to which the AlloyDB instance belongs; must be an existing AlloyDB cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "database_flags": [
+      {
+        "description": "Specifies custom database flags for the AlloyDB instance, defined as key-value pairs, to configure database behavior.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Human-readable name for the AlloyDB instance, used for easier identification.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gce_zone": [
+      {
+        "description": "Specifies the Compute Engine zone where the AlloyDB instance will be created; must match the region of the associated cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "Unique identifier for the AlloyDB instance, must be a valid string that adheres to AlloyDB naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_type": [
+      {
+        "description": "Specifies the type of AlloyDB instance, such as primary or read pool, required for the database cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the instance, such as environment or department; must comply with Google's label format constraints.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "machine_config": [
+      {
+        "description": "Specifies the machine configuration for the AlloyDB instance, including CPU and memory settings.",
+        "nullable": true,
+        "type": "list(object({cpu_count: optional(number)}))"
+      }
+    ],
+    "network_config": [
+      {
+        "description": "Specifies the network configuration for the AlloyDB instance, including the network and IP address settings. Must reference a valid VPC network.",
+        "nullable": true,
+        "type": "list(object({enable_outbound_public_ip: optional(bool),enable_public_ip: optional(bool),authorized_external_networks: list(object({cidr_range: optional(string)}))}))"
+      }
+    ],
+    "psc_instance_config": [
+      {
+        "description": "Configuration for a Private Service Connect-enabled AlloyDB instance, specifying settings for private service connectivity.",
+        "nullable": true,
+        "type": "list(object({allowed_consumer_projects: optional(list(string)),psc_dns_name: optional(string),service_attachment_link: optional(string),psc_interface_configs: list(object({network_attachment_resource: optional(string)}))}))"
+      }
+    ],
+    "query_insights_config": [
+      {
+        "description": "Configuration for enabling and customizing query insights, including query string length, query plans, and performance insights.",
+        "nullable": true,
+        "type": "list(object({query_plans_per_minute: optional(number),query_string_length: optional(number),record_application_tags: optional(bool),record_client_address: optional(bool)}))"
+      }
+    ],
+    "read_pool_config": [
+      {
+        "description": "Defines the configuration for the read pool, including the number of read replicas and their properties, to optimize read performance.",
+        "nullable": true,
+        "type": "list(object({node_count: optional(number)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for create, update, and delete operations on the AlloyDB instance.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

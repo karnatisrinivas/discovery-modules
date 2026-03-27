@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "replication_group_id": [
+      {
+        "description": "A unique identifier for the ElastiCache replication group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

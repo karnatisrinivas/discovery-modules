@@ -1,0 +1,135 @@
+{
+  "variable": {
+    "capacity": [
+      {
+        "default": 0,
+        "description": "Specifies the capacity. When sku is Premium, capacity can be 1, 2, 4, 8 or 16. When sku is Basic or Standard, capacity can be 0 only.",
+        "type": "number",
+        "nullable": true
+      }
+    ],
+    "identity_id": [
+      {
+        "default": "",
+        "description": "The ID of the User Assigned Identity that has access to the key. Required when key_vault_key_id is set.",
+        "type": "string",
+        "nullable": true
+      }
+    ],
+    "user_managed_identities": [
+      {
+        "type": "list(string)",
+        "description": "List of user managed identities to assign to the namespace",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "ip_rules": [
+      {
+        "default": [],
+        "description": "One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.",
+        "type": "list(string)",
+        "nullable": true
+      }
+    ],
+    "key_vault_key_id": [
+      {
+        "default": "",
+        "description": "The dataplane ID of the Key Vault Key which should be used to Encrypt the data in this ServiceBus Namespace. Note: Once customer-managed key encryption has been enabled, it cannot be disabled.",
+        "type": "string"
+      }
+    ],
+    "local_auth_enabled": [
+      {
+        "default": true,
+        "description": "Whether or not SAS authentication is enabled for the Service Bus namespace. Defaults to true.",
+        "type": "bool"
+      }
+    ],
+    "minimum_tls_version": [
+      {
+        "default": "1.2",
+        "description": "The minimum supported TLS version for this Service Bus Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.",
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the ServiceBus Namespace resource . Changing this forces a new resource to be created.",
+        "type": "string"
+      }
+    ],
+    "network_rule_set_default_action": [
+      {
+        "default": "Deny",
+        "description": "Specifies the default action for the Network Rule Set. If allowed network ruleset will be created on resource.",
+        "type": "string",
+        "nullable": true
+      }
+    ],
+    "allowed_subnet_ids": [
+      {
+        "default": [],
+        "description": "List of subnet resource ids to allow access to the namespace. `public_network_access_enabled` must be set to true to allow traffic from these subnets.",
+        "type": "list(string)",
+        "nullable": true
+      }
+    ],
+    "premium_messaging_partitions": [
+      {
+        "default": 0,
+        "description": "Specifies the number messaging partitions. Only valid when sku is Premium and the minimum number is 1. Possible values include 0, 1, 2, and 4. Defaults to 0 for Standard, Basic namespace. Changing this forces a new resource to be created.",
+        "type": "number",
+        "nullable": true
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "default": true,
+        "description": "Enable public network access. Disabling it will allow database access only via private endpoints.",
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "default": "Standard",
+        "description": "Defines which tier to use. Options are Basic, Standard or Premium. Please note that setting this field to Premium will force the creation of a new resource.",
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "default": {},
+        "description": "A mapping of tags to assign to the resource.",
+        "type": "map(string)",
+        "nullable": true
+      }
+    ],
+    "trusted_services_allowed": [
+      {
+        "default": false,
+        "description": "Are Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration? See Trusted Microsoft Services - https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/service-bus-messaging/includes/service-bus-trusted-services.md",
+        "type": "bool"
+      }
+    ],
+    "zone_redundant": [
+      {
+        "default": false,
+        "description": "Whether or not this resource is zone redundant. sku needs to be Premium. Changing this forces a new resource to be created.",
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

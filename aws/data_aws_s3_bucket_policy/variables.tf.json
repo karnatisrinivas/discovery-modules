@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket to which the policy will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

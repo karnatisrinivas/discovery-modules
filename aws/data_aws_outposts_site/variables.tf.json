@@ -1,0 +1,19 @@
+{
+    "variable": {
+      "id": [
+        {
+          "description": "",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "name": [
+        {
+          "description": "",
+          "nullable": true,
+          "type": "string"
+        }
+      ]
+    }
+  }
+  

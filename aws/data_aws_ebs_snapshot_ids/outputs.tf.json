@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The identifier of a single EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot_ids.this.id}"
+        },
+        "ids": {
+            "description": "A list of identifiers for multiple EBS snapshots.",
+            "value": "${data.aws_ebs_snapshot_ids.this.ids}"
+        }
+    }
+}

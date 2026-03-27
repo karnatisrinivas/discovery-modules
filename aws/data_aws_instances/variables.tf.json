@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "instance_state_names": [
+      {
+        "description": "A set of instance state names to filter the AWS instances. This can include states like 'pending', 'running', 'shutting-down', 'terminated', 'stopping', or 'stopped'.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

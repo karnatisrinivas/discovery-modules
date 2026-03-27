@@ -1,0 +1,68 @@
+{
+    "variable": {
+        "domain": [
+            {
+                "type": "string",
+                "description": "Indicates if this EIP is for use in VPC",
+                "default": "vpc",
+                "nullable": true
+            }
+        ],
+        "address": [
+            {
+                "type": "string",
+                "description": "IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.",
+                "nullable": true
+            }
+        ],
+        "associate_with_private_ip": [
+            {
+                "type": "string",
+                "description": "User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.",
+                "nullable": true
+            }
+        ],
+        "customer_owned_ipv4_pool": [
+            {
+                "type": "string",
+                "description": "ID of a customer-owned address pool.",
+                "nullable": true
+            }
+        ],
+        "instance": [
+            {
+                "type": "string",
+                "description": "EC2 instance ID.",
+                "nullable": true
+            }
+        ],
+        "network_border_group": [
+            {
+                "type": "string",
+                "description": "Location from which the IP address is advertised. Use this parameter to limit the address to this location.",
+                "nullable": true
+            }
+        ],
+        "network_interface": [
+            {
+                "type": "string",
+                "description": "Network interface ID to associate with.",
+                "nullable": true
+            }
+        ],
+        "public_ipv4_pool": [
+            {
+                "type": "string",
+                "description": "EC2 IPv4 address pool identifier or amazon. This option is only available for VPC EIPs.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "Map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC. If configured with a provider default_tags configuration block present, tags with matching keys will overwrite those defined at the provider-level.",
+                "nullable": true
+            }
+        ]
+    }
+}

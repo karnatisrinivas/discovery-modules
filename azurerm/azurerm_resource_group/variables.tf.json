@@ -1,0 +1,30 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created."
+      }
+    ],
+    "managed_by": [
+      {
+        "type": "string",
+        "description": "The ID of the resource or application that manages this Resource Group.",
+        "nullable": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags which should be assigned to the Resource Group.",
+        "nullable": true
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

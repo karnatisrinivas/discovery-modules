@@ -1,0 +1,20 @@
+{
+    "output": {
+        "dataplane_id": {
+            "description": "The value of the dataplane_id output",
+            "value": "${azurerm_key_vault_key.this.id}"
+        },
+        "id": {
+            "description": "The value of the id output",
+            "value": "${azurerm_key_vault_key.this.resource_versionless_id}"
+        },
+        "resource_id": {
+            "description": "The value of the resource_id output",
+            "value": "${azurerm_key_vault_key.this.resource_id}"
+        },
+        "versionless_id": {
+            "description": "The value of the versionless_id output",
+            "value": "${azurerm_key_vault_key.this.versionless_id}"
+        }
+    }
+}

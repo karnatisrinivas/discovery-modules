@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cur Report Definition"
+  node:
+    label:
+      static: "[Data] Cur Report Definition"
+      template: "[Data] Cur Report Definition"
+    display_type: default
+
+discovery:
+  type: data_aws_cur_report_definition
+  dnd_supported: false

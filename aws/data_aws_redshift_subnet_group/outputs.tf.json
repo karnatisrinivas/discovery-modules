@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Redshift subnet group.",
+            "value": "${data.aws_redshift_subnet_group.this.arn}"
+        },
+        "description": {
+            "description": "A description of the Redshift subnet group.",
+            "value": "${data.aws_redshift_subnet_group.this.description}"
+        },
+        "id": {
+            "description": "The ID of the Redshift subnet group.",
+            "value": "${data.aws_redshift_subnet_group.this.id}"
+        },
+        "subnet_ids": {
+            "description": "A list of subnet IDs associated with the Redshift subnet group.",
+            "value": "${data.aws_redshift_subnet_group.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Redshift subnet group.",
+            "value": "${data.aws_redshift_subnet_group.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of a specific AWS route table.",
+            "value": "${data.aws_route_tables.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the AWS route tables.",
+            "value": "${data.aws_route_tables.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the AWS route tables.",
+            "value": "${data.aws_route_tables.this.tags}"
+        }
+    }
+}

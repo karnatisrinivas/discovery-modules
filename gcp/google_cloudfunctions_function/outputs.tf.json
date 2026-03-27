@@ -1,0 +1,28 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Labels applied to the function after merging defaults and user-defined labels",
+            "value": "${google_cloudfunctions_function.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the deployed Cloud Function",
+            "value": "${google_cloudfunctions_function.this.id}"
+        },
+        "name": {
+            "description": "The name of the Cloud Function",
+            "value": "${google_cloudfunctions_function.this.name}"
+        },
+        "status": {
+            "description": "Current deployment status of the Cloud Function",
+            "value": "${google_cloudfunctions_function.this.status}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly defined in the Terraform configuration",
+            "value": "${google_cloudfunctions_function.this.terraform_labels}"
+        },
+        "version_id": {
+            "description": "Version number for the deployed Cloud Function instance",
+            "value": "${google_cloudfunctions_function.this.version_id}"
+        }
+    }
+}

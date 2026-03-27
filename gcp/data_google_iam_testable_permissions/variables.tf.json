@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "custom_support_level": [
+      {
+        "description": "Defines the custom support level required for testing IAM permissions, such as basic or advanced support, based on organizational needs.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "full_resource_name": [
+      {
+        "description": "Specifies the full name of the resource for which testable permissions are retrieved, formatted as required by Google Cloud.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stages": [
+      {
+        "description": "Specifies the stages of permissions to include, such as ALPHA, BETA, or GA.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

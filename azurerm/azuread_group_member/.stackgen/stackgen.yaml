@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AzureAD Group Member
+  node:
+    label:
+      static: AzureAD Group Member
+      template: AzureAD Group Member
+    display_type: default
+
+discovery:
+  type: azuread_group_member
+  dnd_supported: false

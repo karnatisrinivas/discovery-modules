@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the storage table to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "storage_account_name": [
+      {
+        "description": "The name of the storage account where the table will be stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

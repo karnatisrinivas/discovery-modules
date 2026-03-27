@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for detecting changes to the IAM member resource",
+            "value": "${google_apigee_environment_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member in the Apigee environment",
+            "value": "${google_apigee_environment_iam_member.this.id}"
+        }
+    }
+}

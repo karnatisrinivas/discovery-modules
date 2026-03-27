@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "call_log_level": [
+      {
+        "description": "Specifies the logging level for workflow execution calls, such as 'none', 'log-all-calls', or 'errors-only'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "crypto_key_name": [
+      {
+        "description": "Specifies the name of the Cloud KMS crypto key used to encrypt workflow data, must follow the format projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deletion_protection": [
+      {
+        "description": "Defines whether the workflow is protected from accidental deletion; set to true to enable protection.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the workflow's description, providing context about its purpose and functionality; must not exceed 500 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "execution_history_level": [
+      {
+        "description": "Specifies the level of execution history to retain for the workflow; valid values are \"BASIC\" or \"FULL\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs used to organize and categorize the workflow, typically for identification, filtering, or grouping purposes. Maximum 64 labels, with keys and values limited to 63 characters each.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the workflow, must be compliant with Google Cloud's naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Defines the prefix to be used for naming the workflow, ensuring uniqueness and compliance with naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "service_account": [
+      {
+        "description": "Defines the IAM service account used to execute the workflow, requiring necessary permissions for resources accessed during workflow execution.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_contents": [
+      {
+        "description": "Defines the contents of the workflow source code, typically in YAML or JSON format. This must contain valid workflow logic.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize the workflow, with a maximum of 64 tags allowed.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for the workflow, specifying durations for create, update, and delete operations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_env_vars": [
+      {
+        "description": "Environment variables to be set for the workflow; must be key-value pairs in string format.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

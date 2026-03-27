@@ -1,0 +1,80 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Bus Subscription
+  node:
+    label:
+      static: Service Bus Subscription
+      template: ${name}
+    display_type: default
+
+variables:
+  dead_lettering_on_message_expiration:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Boolean flag which controls whether the Subscription has dead letter support when a message expires.
+    type: bool
+  dead_lettering_on_filter_evaluation_error:
+    description: Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to true.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  enable_batched_operations:
+    description: Boolean flag which controls whether the Subscription supports batched operations.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  requires_session:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Boolean flag which controls whether this Subscription supports the concept of a session. Changing this forces a new resource to be created.
+  client_scoped_subscription_enabled:
+    description: Whether the subscription is scoped to a client id. Defaults to false
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  is_client_scoped_subscription_shareable:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether the client scoped subscription is shareable. Defaults to true Changing this forces a new resource to be created. Only used if client_scoped_subscription_enabled is set to true.
+    type: bool
+  is_client_scoped_subscription_durable:
+    ui_control: select
+    description: Whether the client scoped subscription is durable. This property can only be controlled from the application side. Only used if client_scoped_subscription_enabled is set to true.
+    type: bool
+    options: 
+      - true
+      - false
+  status:
+    description: The status of the Subscription. Possible values are Active, ReceiveDisabled, or Disabled. Defaults to Active
+    type: string
+    options: 
+      - Active
+      - ReceiveDisabled
+      - Disabled
+    ui_control: select
+
+discovery:
+  type: azurerm_servicebus_subscription
+  dnd_supported: false
+  references:
+    topic_id:
+      from: azurerm_servicebus_topic
+      output: id
+    forward_to:
+      from: azurerm_servicebus_queue
+      output: id

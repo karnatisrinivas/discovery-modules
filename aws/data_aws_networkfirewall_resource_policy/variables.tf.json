@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "resource_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS Network Firewall resource for which the policy is being set.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

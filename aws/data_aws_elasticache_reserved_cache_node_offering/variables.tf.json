@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "cache_node_type": [
+      {
+        "description": "Specifies the type of cache node, for example, cache.t2.micro.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "duration": [
+      {
+        "description": "Indicates the reservation duration in years, such as 1 or 3.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "offering_type": [
+      {
+        "description": "Defines the type of offering, such as 'All Upfront' or 'Partial Upfront'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "product_description": [
+      {
+        "description": "Describes the product that is being reserved, like 'redis' or 'memcached'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

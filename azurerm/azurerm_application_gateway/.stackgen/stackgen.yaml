@@ -1,0 +1,289 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Application Gateway
+  node:
+    label:
+      static: Application Gateway
+      template: ${name}
+    display_type: default
+
+variables:
+  url_path_map:
+    attributes: 
+      name: 
+        label: Name
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+  frontend_ip_configuration:
+    attributes: 
+      private_ip_address_allocation: 
+        type: string
+        options: 
+          - Static
+          - Dynamic
+        ui_control: select
+        label: Private IP Address Allocation
+        validation: 
+          required: false
+          dataType: string
+    description: A list of frontend IP configurations.
+  backend_http_settings:
+    description: A list of backend HTTP settings.
+    attributes: 
+      name: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Name
+      protocol: 
+        label: Protocol
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Http
+          - Https
+        ui_control: select
+  request_routing_rule:
+    description: A list of request routing rules.
+    attributes: 
+      name: 
+        label: Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      rule_type: 
+        label: Rule Type
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Basic
+          - PathBasedRouting
+        ui_control: select
+      http_listener_name: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: HTTP Listener Name
+  redirect_configurations:
+    description: List of Redirect Configurations
+    attributes: 
+      redirect_type: 
+        label: Redirect Type
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Permanent
+          - Temporary
+          - Found
+          - SeeOther
+        ui_control: select
+      include_path: 
+        label: "Include Path?"
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - true
+          - false
+        ui_control: select
+      include_query_string: 
+        label: "Include Query String?"
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - true
+          - false
+        ui_control: select
+      name: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Name
+  ssl_certificates:
+    description: List of SSL Certificates to use for this Gateway
+    attributes: 
+      name: 
+        ui_control: text
+        label: Name
+        description: The Name of the SSL certificate that is unique within this Application Gateway
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      data: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+        label: Data
+        description: "The base64-encoded PFX certificate data. Required if `Key Vault Secret ID` is not set."
+      key_vault_secret_id: 
+        label: Key Vault Secret ID
+        description: "The Secret ID of the (base-64 encoded unencrypted pfx) Secret or Certificate object stored in Azure KeyVault. You need to enable soft delete for Key Vault to use this feature. Required if data is not set."
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+  sku:
+    description: A sku block.
+    attributes: 
+      name: 
+        label: Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      tier: 
+        label: Tier
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Basic
+          - Standard_v2
+          - WAF_v2
+        ui_control: select
+      capacity: 
+        label: Capacity
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+  probes:
+    description: Create probes for this resource.
+    attributes: 
+      path: 
+        type: string
+        ui_control: text
+        label: Path
+        validation: 
+          required: true
+          dataType: string
+      timeout: 
+        label: Timeout
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      unhealthy_threshold: 
+        label: Unhealthy Threshold
+        validation: 
+          dataType: number
+          required: true
+        type: number
+        ui_control: text
+      pick_host_name_from_backend_http_settings: 
+        label: "Pick Host Name from Backend HTTP Settings?"
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - true
+          - false
+        ui_control: select
+      interval: 
+        label: Interval
+        validation: 
+          dataType: number
+          required: true
+        type: number
+        ui_control: text
+      name: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Name
+      protocol: 
+        label: Protocol
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Http
+          - Https
+        ui_control: select
+  http_listener:
+    description: A list of HTTP listeners.
+    attributes: 
+      name: 
+        label: Name
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+      frontend_ip_configuration_name: 
+        label: Frontend IP Configuration Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      frontend_port_name: 
+        ui_control: text
+        label: Frontend Port Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      protocol: 
+        label: Protocol
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        options: 
+          - Http
+          - Https
+        ui_control: select
+      require_sni: 
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: "Require SNI?"
+        validation: 
+          dataType: string
+          required: false
+        type: string
+
+discovery:
+  type: azurerm_application_gateway
+  dnd_supported: false
+  data_source: data_azurerm_application_gateway
+  references:
+    identity_ids:
+      from: azurerm_user_assigned_identity
+      output: id

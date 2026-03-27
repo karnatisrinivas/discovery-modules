@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the OAM link.",
+            "value": "${data.aws_oam_link.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the OAM link.",
+            "value": "${data.aws_oam_link.this.id}"
+        },
+        "label": {
+            "description": "The label associated with the OAM link.",
+            "value": "${data.aws_oam_link.this.label}"
+        },
+        "label_template": {
+            "description": "The template used for the label of the OAM link.",
+            "value": "${data.aws_oam_link.this.label_template}"
+        },
+        "link_configuration": {
+            "description": "Configuration details for log group and metric settings of the OAM link.",
+            "value": "${data.aws_oam_link.this.link_configuration}"
+        },
+        "link_id": {
+            "description": "The ID used to identify the OAM link within AWS.",
+            "value": "${data.aws_oam_link.this.link_id}"
+        },
+        "resource_types": {
+            "description": "The types of resources associated with the OAM link.",
+            "value": "${data.aws_oam_link.this.resource_types}"
+        },
+        "sink_arn": {
+            "description": "The ARN of the sink resource connected to the OAM link.",
+            "value": "${data.aws_oam_link.this.sink_arn}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the OAM link.",
+            "value": "${data.aws_oam_link.this.tags}"
+        }
+    }
+}

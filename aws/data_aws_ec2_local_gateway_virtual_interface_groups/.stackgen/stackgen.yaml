@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Local Gateway Virtual Interface Groups"
+  node:
+    label:
+      static: "[Data] Ec2 Local Gateway Virtual Interface Groups"
+      template: "[Data] Ec2 Local Gateway Virtual Interface Groups"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_local_gateway_virtual_interface_groups
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Batch Job Definition"
+  node:
+    label:
+      static: "[Data] Batch Job Definition"
+      template: "[Data] Batch Job Definition"
+    display_type: default
+
+discovery:
+  type: data_aws_batch_job_definition
+  dnd_supported: false

@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "additional_notification_targets": [
+      {
+        "description": "List of email addresses to receive entitlement-related notifications; must be valid email addresses.",
+        "nullable": true,
+        "type": "list(object({admin_email_recipients: optional(list(string)),requester_email_recipients: optional(list(string))}))"
+      }
+    ],
+    "approval_workflow": [
+      {
+        "description": "Defines the approval workflow configuration for managing privileged access, specifying the steps and rules required for entitlement requests.",
+        "nullable": true,
+        "type": "list(object({manual_approvals: list(object({require_approver_justification: optional(bool),steps: list(object({approvals_needed: optional(number),approver_email_recipients: optional(list(string)),approvers: list(object({principals: list(string)}))}))}))}))"
+      }
+    ],
+    "eligible_users": [
+      {
+        "description": "List of users eligible to access the entitlement; must be provided as email addresses.",
+        "nullable": false,
+        "type": "list(object({principals: list(string)}))"
+      }
+    ],
+    "entitlement_id": [
+      {
+        "description": "Unique identifier for the entitlement resource, required to manage privileged access.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the Google Cloud region where the Privileged Access Manager entitlement will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "max_request_duration": [
+      {
+        "description": "Specifies the maximum duration, in seconds, for which access requests can remain active. Must be a positive integer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "Specifies the resource name of the parent folder or organization for the entitlement, formatted as `folders/{folder_id}` or `organizations/{organization_id}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "privileged_access": [
+      {
+        "description": "Determines whether privileged access is enabled for the specified entitlement; must be set to true or false.",
+        "nullable": false,
+        "type": "list(object({gcp_iam_access: list(object({resource: string,resource_type: string,role_bindings: list(object({condition_expression: optional(string),role: string}))}))}))"
+      }
+    ],
+    "requester_justification_config": [
+      {
+        "description": "Configuration for specifying justification requirements for privileged access requests.",
+        "nullable": false,
+        "type": "list(object({not_mandatory: list(object({})),unstructured: list(object({}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations. Specify in a format like \"30m\" for 30 minutes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

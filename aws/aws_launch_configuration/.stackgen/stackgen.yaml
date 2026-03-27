@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Launch Configuration
+  node:
+    label:
+      static: Launch Configuration
+      template: ${image_id}
+    display_type: default
+
+discovery:
+  type: aws_launch_configuration
+  dnd_supported: false
+  data_source: data_aws_launch_configuration

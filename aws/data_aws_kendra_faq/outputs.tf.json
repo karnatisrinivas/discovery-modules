@@ -1,0 +1,56 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.arn}"
+        },
+        "created_at": {
+            "description": "The date and time when the Kendra FAQ was created.",
+            "value": "${data.aws_kendra_faq.this.created_at}"
+        },
+        "description": {
+            "description": "A brief description of the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.description}"
+        },
+        "error_message": {
+            "description": "Error message if there was an issue with the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.error_message}"
+        },
+        "file_format": {
+            "description": "The format of the file used for the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.file_format}"
+        },
+        "id": {
+            "description": "The unique identifier of the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.id}"
+        },
+        "language_code": {
+            "description": "The language code of the Kendra FAQ content.",
+            "value": "${data.aws_kendra_faq.this.language_code}"
+        },
+        "name": {
+            "description": "The name of the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role used by Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.role_arn}"
+        },
+        "s3_path": {
+            "description": "The S3 path where the Kendra FAQ file is stored.",
+            "value": "${data.aws_kendra_faq.this.s3_path}"
+        },
+        "status": {
+            "description": "The current status of the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the Kendra FAQ.",
+            "value": "${data.aws_kendra_faq.this.tags}"
+        },
+        "updated_at": {
+            "description": "The date and time when the Kendra FAQ was last updated.",
+            "value": "${data.aws_kendra_faq.this.updated_at}"
+        }
+    }
+}

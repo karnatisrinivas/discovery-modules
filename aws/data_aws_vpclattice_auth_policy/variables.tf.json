@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "policy": [
+      {
+        "description": "A JSON-formatted string defining the authentication policy for the VPC Lattice.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_identifier": [
+      {
+        "description": "A unique string used to identify the specific VPC Lattice resource to which the policy will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "state": [
+      {
+        "description": "The current state of the VPC Lattice authentication policy, such as 'enabled' or 'disabled'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

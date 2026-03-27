@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: VPN Gateway
+  node:
+    label:
+      static: VPN Gateway
+      template: VPN Gateway
+    display_type: default
+
+discovery:
+  type: aws_vpn_gateway
+  dnd_supported: false
+  data_source: data_aws_vpn_gateway

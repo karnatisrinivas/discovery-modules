@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cognito User Group"
+  node:
+    label:
+      static: "[Data] Cognito User Group"
+      template: "[Data] Cognito User Group"
+    display_type: default
+
+discovery:
+  type: data_aws_cognito_user_group
+  dnd_supported: false

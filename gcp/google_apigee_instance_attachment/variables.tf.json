@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "environment": [
+      {
+        "description": "Specifies the Apigee environment to attach to the instance, must be a valid environment name within the Apigee organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "ID of the Apigee instance to attach to the specified environment; must be a valid Apigee instance identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations like creating, reading, updating, or deleting the instance attachment.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

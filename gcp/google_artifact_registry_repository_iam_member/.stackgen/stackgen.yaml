@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Artifact Registry Repository Iam Member
+  node:
+    label:
+      static: Artifact Registry Repository Iam Member
+      template: ${repository}
+    display_type: default
+
+discovery:
+  type: google_artifact_registry_repository_iam_member
+  dnd_supported: false
+  references:
+    repository:
+      from: google_artifact_registry_repository
+      output: name

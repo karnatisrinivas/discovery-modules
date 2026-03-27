@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Account Queue Properties
+  node:
+    label:
+      static: Storage Account Queue Properties
+      template: ${storage_account_id}
+    display_type: default
+
+discovery:
+  type: azurerm_storage_account_queue_properties
+  dnd_supported: false

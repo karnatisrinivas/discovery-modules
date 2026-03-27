@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the default service accounts in the Google project",
+            "value": "${google_project_default_service_accounts.this.id}"
+        },
+        "service_accounts": {
+            "description": "List of default service accounts created for the Google project",
+            "value": "${google_project_default_service_accounts.this.service_accounts}"
+        }
+    }
+}

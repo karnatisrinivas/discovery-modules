@@ -1,0 +1,104 @@
+{
+    "output": {
+        "certificate_arn": {
+            "description": "The Amazon Resource Name (ARN) of the SSL certificate used for the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.certificate_arn}"
+        },
+        "database_name": {
+            "description": "The name of the database to be used by the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.database_name}"
+        },
+        "elasticsearch_settings": {
+            "description": "Settings specific to Elasticsearch endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.elasticsearch_settings}"
+        },
+        "endpoint_arn": {
+            "description": "The Amazon Resource Name (ARN) of the DMS endpoint.",
+            "value": "${data.aws_dms_endpoint.this.endpoint_arn}"
+        },
+        "endpoint_type": {
+            "description": "The type of the endpoint, either source or target.",
+            "value": "${data.aws_dms_endpoint.this.endpoint_type}"
+        },
+        "engine_name": {
+            "description": "The database engine to use for the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.engine_name}"
+        },
+        "extra_connection_attributes": {
+            "description": "Additional connection attributes for the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.extra_connection_attributes}"
+        },
+        "id": {
+            "description": "The ID of the DMS endpoint.",
+            "value": "${data.aws_dms_endpoint.this.id}"
+        },
+        "kafka_settings": {
+            "description": "Settings specific to Kafka endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.kafka_settings}"
+        },
+        "kinesis_settings": {
+            "description": "Settings specific to Kinesis endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.kinesis_settings}"
+        },
+        "kms_key_arn": {
+            "description": "The ARN of the KMS key used for encryption.",
+            "value": "${data.aws_dms_endpoint.this.kms_key_arn}"
+        },
+        "mongodb_settings": {
+            "description": "Settings specific to MongoDB endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.mongodb_settings}"
+        },
+        "password": {
+            "description": "The password to use for connecting to the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.password}"
+        },
+        "port": {
+            "description": "The port used by the database engine.",
+            "value": "${data.aws_dms_endpoint.this.port}"
+        },
+        "postgres_settings": {
+            "description": "Settings specific to PostgreSQL endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.postgres_settings}"
+        },
+        "redis_settings": {
+            "description": "Settings specific to Redis endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.redis_settings}"
+        },
+        "redshift_settings": {
+            "description": "Settings specific to Redshift endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.redshift_settings}"
+        },
+        "s3_settings": {
+            "description": "Settings specific to S3 endpoint configuration.",
+            "value": "${data.aws_dms_endpoint.this.s3_settings}"
+        },
+        "secrets_manager_access_role_arn": {
+            "description": "The ARN of the role for accessing Secrets Manager.",
+            "value": "${data.aws_dms_endpoint.this.secrets_manager_access_role_arn}"
+        },
+        "secrets_manager_arn": {
+            "description": "The ARN of the Secrets Manager secret.",
+            "value": "${data.aws_dms_endpoint.this.secrets_manager_arn}"
+        },
+        "server_name": {
+            "description": "The name of the server where the endpoint is located.",
+            "value": "${data.aws_dms_endpoint.this.server_name}"
+        },
+        "service_access_role": {
+            "description": "The role that allows access to the service.",
+            "value": "${data.aws_dms_endpoint.this.service_access_role}"
+        },
+        "ssl_mode": {
+            "description": "The SSL mode for the connection.",
+            "value": "${data.aws_dms_endpoint.this.ssl_mode}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.tags}"
+        },
+        "username": {
+            "description": "The username for connecting to the endpoint.",
+            "value": "${data.aws_dms_endpoint.this.username}"
+        }
+    }
+}

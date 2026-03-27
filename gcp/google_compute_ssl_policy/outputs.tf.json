@@ -1,0 +1,24 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the SSL policy was created",
+            "value": "${google_compute_ssl_policy.this.creation_timestamp}"
+        },
+        "enabled_features": {
+            "description": "List of SSL features enabled in this policy for secure connections",
+            "value": "${google_compute_ssl_policy.this.enabled_features}"
+        },
+        "fingerprint": {
+            "description": "Unique hash for tracking changes to the SSL policy configuration",
+            "value": "${google_compute_ssl_policy.this.fingerprint}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the SSL policy in configurations",
+            "value": "${google_compute_ssl_policy.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the SSL policy resource in the Google Cloud API",
+            "value": "${google_compute_ssl_policy.this.self_link}"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the resource was created for auditing purposes",
+            "value": "${google_network_connectivity_service_connection_policy.this.create_time}"
+        },
+        "effective_labels": {
+            "description": "Inherited labels applied to the resource for organizational categorization",
+            "value": "${google_network_connectivity_service_connection_policy.this.effective_labels}"
+        },
+        "etag": {
+            "description": "Checksum for detecting changes to the resource state",
+            "value": "${google_network_connectivity_service_connection_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the resource used in other configurations",
+            "value": "${google_network_connectivity_service_connection_policy.this.id}"
+        },
+        "infrastructure": {
+            "description": "Type of infrastructure associated with the service connection policy",
+            "value": "${google_network_connectivity_service_connection_policy.this.infrastructure}"
+        },
+        "psc_connections": {
+            "description": "List of Private Service Connect connections tied to the policy",
+            "value": "${google_network_connectivity_service_connection_policy.this.psc_connections}"
+        },
+        "terraform_labels": {
+            "description": "Custom labels defined in Terraform for resource identification",
+            "value": "${google_network_connectivity_service_connection_policy.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update to the resource for tracking modifications",
+            "value": "${google_network_connectivity_service_connection_policy.this.update_time}"
+        }
+    }
+}

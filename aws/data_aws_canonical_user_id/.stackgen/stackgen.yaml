@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Canonical User Id"
+  node:
+    label:
+      static: "[Data] Canonical User Id"
+      template: "[Data] Canonical User Id"
+    display_type: default
+
+discovery:
+  type: data_aws_canonical_user_id
+  dnd_supported: false

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "ecr_repository_prefix": [
+      {
+        "description": "The prefix used for the ECR repository names to identify the pull through cache rule.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

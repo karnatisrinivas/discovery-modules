@@ -1,0 +1,389 @@
+{
+  "variable": {
+    "customer_gateway_id": [
+      {
+        "description": "ID of the customer gateway to establish the VPN connection with; must be a valid existing customer gateway ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "enable_acceleration": [
+      {
+        "description": "Specifies whether acceleration is enabled for the VPN connection; must be supported by the VPN gateway.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "local_ipv4_network_cidr": [
+      {
+        "description": "CIDR block for the local IPv4 network used in the VPN connection configuration. Must be in valid CIDR notation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "local_ipv6_network_cidr": [
+      {
+        "description": "Specifies the IPv6 CIDR block for the local network in the VPN connection. Must be in valid CIDR format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "outside_ip_address_type": [
+      {
+        "description": "Specifies the type of IP address used for the VPN connection's outside IP, either 'public' or 'private'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preshared_key_storage": [
+      {
+        "description": "Defines the storage location for the pre-shared key used in the VPN connection; must be securely managed to ensure confidentiality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "remote_ipv4_network_cidr": [
+      {
+        "description": "Specifies the IPv4 CIDR block of the remote network to be accessed through the VPN connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "remote_ipv6_network_cidr": [
+      {
+        "description": "Specifies the IPv6 CIDR block of the remote network to establish the VPN connection. Ensure the CIDR block is valid and routable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "static_routes_only": [
+      {
+        "description": "Indicates whether the VPN connection uses static routes exclusively. Set to true to disable dynamic routing.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Specifies key-value pairs to categorize and organize the VPN connection, with a maximum of 50 tags.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "transit_gateway_id": [
+      {
+        "description": "ID of the transit gateway to associate with the VPN connection; must be an existing transit gateway in the AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "transport_transit_gateway_attachment_id": [
+      {
+        "description": "ID of the transit gateway attachment used for VPN connection transport; must be associated with the specified transit gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel1_dpd_timeout_action": [
+      {
+        "description": "Specifies the action to take when Dead Peer Detection (DPD) timeout occurs for tunnel 1; valid values are \"Clear\", \"Restart\", or \"Hold\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel1_dpd_timeout_seconds": [
+      {
+        "description": "Specifies the Dead Peer Detection (DPD) timeout period in seconds for Tunnel 1; must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_enable_tunnel_lifecycle_control": [
+      {
+        "description": "Indicates whether lifecycle control for the first VPN tunnel is enabled, allowing manual control over tunnel status.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tunnel1_ike_versions": [
+      {
+        "description": "Specifies the supported IKE versions for the first VPN tunnel; must align with the VPN gateway configuration.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel1_inside_cidr": [
+      {
+        "description": "CIDR block for the inside IP range of the first VPN tunnel; must be a valid IPv4 CIDR and non-overlapping with the VPC CIDR.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel1_inside_ipv6_cidr": [
+      {
+        "description": "IPv6 CIDR block for the inside IP range of the first VPN tunnel; must be a valid /64 IPv6 CIDR.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel1_log_options": [
+      {
+        "description": "Configuration options for logging tunnel 1 activity, including parameters for log destination and log format.",
+        "nullable": true,
+        "type": "list(object({cloudwatch_log_options: list(object({log_enabled: optional(bool),log_group_arn: optional(string),log_output_format: optional(string)}))}))"
+      }
+    ],
+    "tunnel1_phase1_dh_group_numbers": [
+      {
+        "description": "Specifies the Diffie-Hellman group numbers for phase 1 of the first VPN tunnel; must be a list of valid group numbers supported by the VPN connection.",
+        "nullable": true,
+        "type": "list(number)"
+      }
+    ],
+    "tunnel1_phase1_encryption_algorithms": [
+      {
+        "description": "Specifies the encryption algorithms used for Phase 1 in the first VPN tunnel; must match the supported algorithms of the customer gateway.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel1_phase1_integrity_algorithms": [
+      {
+        "description": "Specifies the integrity algorithms used for phase 1 in tunnel 1 of the VPN connection. Must match the settings configured on the customer gateway.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel1_phase1_lifetime_seconds": [
+      {
+        "description": "Defines the lifetime in seconds for the first phase of IKE negotiations for Tunnel 1, ranging between 900 and 28,800 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_phase2_dh_group_numbers": [
+      {
+        "description": "Specifies the Diffie-Hellman group numbers for phase 2 of the first VPN tunnel; must be a list of valid group numbers supported by AWS.",
+        "nullable": true,
+        "type": "list(number)"
+      }
+    ],
+    "tunnel1_phase2_encryption_algorithms": [
+      {
+        "description": "Specifies the encryption algorithms for Phase 2 of the first VPN tunnel, ensuring data confidentiality during transmission.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel1_phase2_integrity_algorithms": [
+      {
+        "description": "Specifies the integrity algorithms used for Phase 2 of Tunnel 1. Must be supported by the VPN device.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel1_phase2_lifetime_seconds": [
+      {
+        "description": "Specifies the lifetime in seconds for the first tunnel's phase 2 encryption, must be between 3600 and 604800.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_preshared_key": [
+      {
+        "description": "Preshared key for authentication on the first VPN tunnel; must be a string between 8 and 64 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel1_rekey_fuzz_percentage": [
+      {
+        "description": "Percentage of phase 2 lifetime to allow for rekeying before the tunnel expires. Must be an integer between 0 and 100.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_rekey_margin_time_seconds": [
+      {
+        "description": "Specifies the time in seconds before a tunnel's rekey margin time is reached, triggering negotiation of a new security association. Must be less than the tunnel's lifetime.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_replay_window_size": [
+      {
+        "description": "Defines the maximum number of packets that can be replayed for tunnel 1, ensuring protection against replay attacks. Valid values range from 64 to 2048.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel1_startup_action": [
+      {
+        "description": "Specifies the action to take when Tunnel 1 starts, such as enabling or disabling the tunnel. Must be set to a valid startup action.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel2_dpd_timeout_action": [
+      {
+        "description": "Specifies the action to take when a Dead Peer Detection (DPD) timeout occurs for the second VPN tunnel.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel2_dpd_timeout_seconds": [
+      {
+        "description": "Specifies the timeout in seconds for Dead Peer Detection (DPD) on the second VPN tunnel; must be greater than or equal to the DPD timeout action interval.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_enable_tunnel_lifecycle_control": [
+      {
+        "description": "Controls the lifecycle management of the second VPN tunnel; set to true to enable manual control or false for automatic management.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tunnel2_ike_versions": [
+      {
+        "description": "Specifies the supported IKE versions for the second VPN tunnel; valid values are 1 and 2.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel2_inside_cidr": [
+      {
+        "description": "CIDR block for the inside IP address range of the second VPN tunnel; must be within the allowed private IP ranges.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel2_inside_ipv6_cidr": [
+      {
+        "description": "Specifies the IPv6 CIDR block for the second VPN tunnel's inside network; must be a /126 range.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel2_log_options": [
+      {
+        "description": "Defines logging options for the second VPN tunnel, specifying configurations for monitoring and troubleshooting.",
+        "nullable": true,
+        "type": "list(object({cloudwatch_log_options: list(object({log_enabled: optional(bool),log_group_arn: optional(string),log_output_format: optional(string)}))}))"
+      }
+    ],
+    "tunnel2_phase1_dh_group_numbers": [
+      {
+        "description": "Specifies the Diffie-Hellman group numbers for phase 1 of the second VPN tunnel; must be supported by the VPN device.",
+        "nullable": true,
+        "type": "list(number)"
+      }
+    ],
+    "tunnel2_phase1_encryption_algorithms": [
+      {
+        "description": "Defines the encryption algorithms for Phase 1 of Tunnel 2 during VPN connection setup; must be supported by both sides of the VPN.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel2_phase1_integrity_algorithms": [
+      {
+        "description": "Defines the integrity algorithms used in Phase 1 for Tunnel 2 during VPN connection setup; must be supported by both ends of the connection.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel2_phase1_lifetime_seconds": [
+      {
+        "description": "Defines the lifetime of the IKE phase 1 tunnel in seconds for the second VPN tunnel, with a valid range of 900 to 28,800 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_phase2_dh_group_numbers": [
+      {
+        "description": "Specifies the Diffie-Hellman group numbers for phase 2 of the second VPN tunnel, required for encryption key exchange.",
+        "nullable": true,
+        "type": "list(number)"
+      }
+    ],
+    "tunnel2_phase2_encryption_algorithms": [
+      {
+        "description": "Defines the encryption algorithms for phase 2 of the second VPN tunnel; must be supported by both ends of the connection.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel2_phase2_integrity_algorithms": [
+      {
+        "description": "Defines the integrity algorithms used for phase 2 of the second VPN tunnel; must match the configuration of the on-premises VPN device.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tunnel2_phase2_lifetime_seconds": [
+      {
+        "description": "Defines the lifetime of phase 2 security associations for the second VPN tunnel, in seconds. Must be between 180 and 3600.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_preshared_key": [
+      {
+        "description": "Pre-shared key for the second VPN tunnel, required for authentication and must be between 8 and 64 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel2_rekey_fuzz_percentage": [
+      {
+        "description": "Percentage of the lifetime for Phase 2 rekey fuzzing in the second VPN tunnel, used to randomize rekey timing. Must be between 0 and 100.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_rekey_margin_time_seconds": [
+      {
+        "description": "Specifies the time in seconds before the tunnel's rekey margin period ends, during which a new key negotiation should occur. Must be less than the lifetime of the tunnel.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_replay_window_size": [
+      {
+        "description": "Defines the maximum number of packets that can be replayed for the second VPN tunnel. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tunnel2_startup_action": [
+      {
+        "description": "Specifies the action to perform when the second VPN tunnel starts; must be either \"start\" or \"stop\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tunnel_inside_ip_version": [
+      {
+        "description": "Specifies the IP version (IPv4 or IPv6) for the inside tunnel traffic of the VPN connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of VPN connection, such as \"ipsec.1\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "vpn_gateway_id": [
+      {
+        "description": "ID of the VPN gateway to which the VPN connection will be attached; must be an existing gateway in the same region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

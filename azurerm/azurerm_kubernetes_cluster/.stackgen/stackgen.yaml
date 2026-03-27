@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kubernetes Cluster
+  node:
+    label:
+      static: Kubernetes Cluster
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_kubernetes_cluster
+  dnd_supported: false
+  data_source: data_azurerm_kubernetes_cluster

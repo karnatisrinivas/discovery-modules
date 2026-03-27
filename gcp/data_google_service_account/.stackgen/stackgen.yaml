@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Service Account"
+  node:
+    label:
+      static: "[Data] Service Account"
+      template: ${account_id}
+    display_type: default
+
+discovery:
+  type: data_google_service_account
+  dnd_supported: false

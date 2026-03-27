@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicecatalog Product"
+  node:
+    label:
+      static: "[Data] Servicecatalog Product"
+      template: "[Data] Servicecatalog Product"
+    display_type: default
+
+discovery:
+  type: data_aws_servicecatalog_product
+  dnd_supported: false

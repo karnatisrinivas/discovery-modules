@@ -1,0 +1,12 @@
+{
+    "output": {
+        "account_alias": {
+            "description": "The alias name set for the AWS IAM account.",
+            "value": "${data.aws_iam_account_alias.this.account_alias}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS IAM account alias.",
+            "value": "${data.aws_iam_account_alias.this.id}"
+        }
+    }
+}

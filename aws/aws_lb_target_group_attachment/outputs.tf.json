@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the target group attachment.",
+            "value": "${aws_lb_target_group_attachment.this.id}"
+        }
+    }
+}

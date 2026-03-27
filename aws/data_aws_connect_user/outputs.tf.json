@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Connect user.",
+            "value": "${data.aws_connect_user.this.arn}"
+        },
+        "directory_user_id": {
+            "description": "The unique identifier for the user in the directory service.",
+            "value": "${data.aws_connect_user.this.directory_user_id}"
+        },
+        "hierarchy_group_id": {
+            "description": "The ID of the hierarchy group that the user belongs to.",
+            "value": "${data.aws_connect_user.this.hierarchy_group_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Connect user.",
+            "value": "${data.aws_connect_user.this.id}"
+        },
+        "identity_info": {
+            "description": "Contains the user's identity information, including email, first name, and last name.",
+            "value": "${data.aws_connect_user.this.identity_info}"
+        },
+        "name": {
+            "description": "The name of the AWS Connect user.",
+            "value": "${data.aws_connect_user.this.name}"
+        },
+        "phone_config": {
+            "description": "Configuration settings for the user's phone, including work time limit, auto accept, desk phone number, and phone type.",
+            "value": "${data.aws_connect_user.this.phone_config}"
+        },
+        "routing_profile_id": {
+            "description": "The ID of the routing profile assigned to the user.",
+            "value": "${data.aws_connect_user.this.routing_profile_id}"
+        },
+        "security_profile_ids": {
+            "description": "A set of security profile IDs associated with the user.",
+            "value": "${data.aws_connect_user.this.security_profile_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Connect user.",
+            "value": "${data.aws_connect_user.this.tags}"
+        },
+        "user_id": {
+            "description": "The user ID for the AWS Connect user.",
+            "value": "${data.aws_connect_user.this.user_id}"
+        }
+    }
+}

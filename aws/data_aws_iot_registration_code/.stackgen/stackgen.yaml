@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iot Registration Code"
+  node:
+    label:
+      static: "[Data] Iot Registration Code"
+      template: "[Data] Iot Registration Code"
+    display_type: default
+
+discovery:
+  type: data_aws_iot_registration_code
+  dnd_supported: false

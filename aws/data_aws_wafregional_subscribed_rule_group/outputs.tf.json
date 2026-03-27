@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_wafregional_subscribed_rule_group.this.id}"
+        }
+    }
+}

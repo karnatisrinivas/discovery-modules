@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_rds_cluster_parameter_group.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_rds_cluster_parameter_group.this.description}"
+        },
+        "family": {
+            "description": "",
+            "value": "${data.aws_rds_cluster_parameter_group.this.family}"
+        }
+    }
+}

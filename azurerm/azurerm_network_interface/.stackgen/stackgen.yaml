@@ -1,0 +1,95 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Interface
+  node:
+    label:
+      static: Network Interface
+      template: ${name}
+    display_type: default
+
+variables:
+  auxiliary_sku:
+    description: Specifies the SKU for auxiliary settings.
+    type: string
+    options: 
+      - None
+      - A8
+      - A4
+      - A2
+      - A1
+    ui_control: select
+  ip_configuration:
+    description: A map of tags to assign to the resource.
+    attributes: 
+      primary: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Primary
+      private_ip_address: 
+        ui_control: text
+        label: Private IP Address
+        validation: 
+          required: false
+          dataType: string
+        type: string
+      private_ip_address_allocation: 
+        ui_control: select
+        label: Private IP Address Allocation
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - Dynamic
+          - Static
+      name: 
+        label: Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      gateway_load_balancer_frontend_ip_configuration_id: 
+        type: string
+        ui_control: text
+        label: Gateway Load Balancer Frontend IP Configuration ID
+        validation: 
+          required: false
+          dataType: string
+      subnet_id: 
+        type: string
+        ui_control: text
+        label: Subnet ID
+        validation: 
+          required: false
+          dataType: string
+      private_ip_address_version: 
+        label: Private IP Address Version
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - IPv4
+          - IPv6
+        ui_control: select
+      public_ip_address_id: 
+        label: Public IP Address ID
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+
+discovery:
+  type: azurerm_network_interface
+  dnd_supported: false
+  data_source: data_azurerm_network_interface

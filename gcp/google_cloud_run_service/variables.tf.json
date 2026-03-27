@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "autogenerate_revision_name": [
+      {
+        "description": "Determines whether a new revision name should be automatically generated for updates to the Cloud Run service.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the Google Cloud region where the Cloud Run service will be deployed. Must be a valid region for Cloud Run.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "metadata": [
+      {
+        "description": "Defines metadata for the Cloud Run service, including labels, annotations, and other resource attributes.",
+        "nullable": true,
+        "type": "list(object({annotations: optional(map(string)),effective_annotations: optional(map(string)),effective_labels: optional(map(string)),generation: optional(number),labels: optional(map(string)),namespace: optional(string),resource_version: optional(string),self_link: optional(string),terraform_labels: optional(map(string)),uid: optional(string)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "\"Specifies the name of the Cloud Run service; must be unique within the project and comply with RFC1035.\"",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "template": [
+      {
+        "description": "Defines the configuration for the Cloud Run service's container template, including specifications like container image, environment variables, and resource limits.",
+        "nullable": true,
+        "type": "list(object({metadata: list(object({annotations: optional(map(string)),generation: optional(number),labels: optional(map(string)),name: optional(string),namespace: optional(string),resource_version: optional(string),self_link: optional(string),uid: optional(string)})),spec: list(object({container_concurrency: optional(number),node_selector: optional(map(string)),service_account_name: optional(string),serving_state: optional(string),timeout_seconds: optional(number),containers: list(object({args: optional(list(string)),command: optional(list(string)),image: string,name: optional(string),working_dir: optional(string),env: list(object({name: optional(string),value: optional(string),value_from: list(object({secret_key_ref: list(object({key: string,name: string}))}))})),env_from: list(object({prefix: optional(string),config_map_ref: list(object({optional: optional(bool),local_object_reference: list(object({name: string}))})),secret_ref: list(object({optional: optional(bool),local_object_reference: list(object({name: string}))}))})),liveness_probe: list(object({failure_threshold: optional(number),initial_delay_seconds: optional(number),period_seconds: optional(number),timeout_seconds: optional(number),grpc: list(object({port: optional(number),service: optional(string)})),http_get: list(object({path: optional(string),port: optional(number),http_headers: list(object({name: string,value: optional(string)}))}))})),ports: list(object({container_port: optional(number),name: optional(string),protocol: optional(string)})),resources: list(object({limits: optional(map(string)),requests: optional(map(string))})),startup_probe: list(object({failure_threshold: optional(number),initial_delay_seconds: optional(number),period_seconds: optional(number),timeout_seconds: optional(number),grpc: list(object({port: optional(number),service: optional(string)})),http_get: list(object({path: optional(string),port: optional(number),http_headers: list(object({name: string,value: optional(string)}))})),tcp_socket: list(object({port: optional(number)}))})),volume_mounts: list(object({mount_path: string,name: string}))})),volumes: list(object({name: string,csi: list(object({driver: string,read_only: optional(bool),volume_attributes: optional(map(string))})),empty_dir: list(object({medium: optional(string),size_limit: optional(string)})),nfs: list(object({path: string,read_only: optional(bool),server: string})),secret: list(object({default_mode: optional(number),secret_name: string,items: list(object({key: string,mode: optional(number),path: string}))}))}))}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations for the Cloud Run service.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "traffic": [
+      {
+        "description": "Defines the traffic configuration for the Cloud Run service, specifying the percentage of traffic directed to each revision or tag.",
+        "nullable": true,
+        "type": "list(object({latest_revision: optional(bool),percent: number,revision_name: optional(string),tag: optional(string),url: optional(string)}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "created_date": {
+            "description": "The date and time when the security policy was created.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.created_date}"
+        },
+        "description": {
+            "description": "A brief explanation of what the security policy is used for.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the security policy.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.id}"
+        },
+        "last_modified_date": {
+            "description": "The date and time when the security policy was last updated.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.last_modified_date}"
+        },
+        "policy": {
+            "description": "The actual content or rules defined in the security policy.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.policy}"
+        },
+        "policy_version": {
+            "description": "The version number of the security policy.",
+            "value": "${data.aws_opensearchserverless_security_policy.this.policy_version}"
+        }
+    }
+}

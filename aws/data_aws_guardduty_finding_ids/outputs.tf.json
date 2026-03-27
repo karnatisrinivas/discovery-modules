@@ -1,0 +1,16 @@
+{
+    "output": {
+        "finding_ids": {
+            "description": "A list of IDs representing the findings detected by AWS GuardDuty.",
+            "value": "${data.aws_guardduty_finding_ids.this.finding_ids}"
+        },
+        "has_findings": {
+            "description": "A boolean indicating whether there are any findings detected by AWS GuardDuty.",
+            "value": "${data.aws_guardduty_finding_ids.this.has_findings}"
+        },
+        "id": {
+            "description": "The ID of the AWS GuardDuty detector used to retrieve findings.",
+            "value": "${data.aws_guardduty_finding_ids.this.id}"
+        }
+    }
+}

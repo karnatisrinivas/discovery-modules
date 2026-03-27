@@ -1,0 +1,24 @@
+{
+    "output": {
+        "block_public_acls": {
+            "description": "Indicates whether to block public access control lists (ACLs) for the S3 account.",
+            "value": "${data.aws_s3_account_public_access_block.this.block_public_acls}"
+        },
+        "block_public_policy": {
+            "description": "Indicates whether to block public bucket policies for the S3 account.",
+            "value": "${data.aws_s3_account_public_access_block.this.block_public_policy}"
+        },
+        "id": {
+            "description": "The unique identifier for the S3 account public access block configuration.",
+            "value": "${data.aws_s3_account_public_access_block.this.id}"
+        },
+        "ignore_public_acls": {
+            "description": "Indicates whether to ignore public ACLs for the S3 account.",
+            "value": "${data.aws_s3_account_public_access_block.this.ignore_public_acls}"
+        },
+        "restrict_public_buckets": {
+            "description": "Indicates whether to restrict public bucket policies for the S3 account.",
+            "value": "${data.aws_s3_account_public_access_block.this.restrict_public_buckets}"
+        }
+    }
+}

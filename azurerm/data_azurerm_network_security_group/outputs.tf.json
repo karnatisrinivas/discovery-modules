@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the Network Security Group.",
+            "value": "${data.azurerm_network_security_group.this.id}"
+        },
+        "location": {
+            "description": "The supported Azure location where the resource exists.",
+            "value": "${data.azurerm_network_security_group.this.location}"
+        },
+        "tags": {
+            "description": "A mapping of tags assigned to the resource.",
+            "value": "${data.azurerm_network_security_group.this.tags}"
+        }
+    }
+}

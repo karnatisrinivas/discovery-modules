@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.arn}"
+        },
+        "destination": {
+            "description": "The destination resource (such as a subnet or instance) for the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.destination}"
+        },
+        "destination_arn": {
+            "description": "The ARN of the destination resource.",
+            "value": "${data.aws_ec2_network_insights_path.this.destination_arn}"
+        },
+        "destination_ip": {
+            "description": "The IP address of the destination for the network path.",
+            "value": "${data.aws_ec2_network_insights_path.this.destination_ip}"
+        },
+        "destination_port": {
+            "description": "The port number of the destination.",
+            "value": "${data.aws_ec2_network_insights_path.this.destination_port}"
+        },
+        "id": {
+            "description": "The unique identifier for the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.id}"
+        },
+        "network_insights_path_id": {
+            "description": "The ID of the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.network_insights_path_id}"
+        },
+        "protocol": {
+            "description": "The protocol used for the network insights path (e.g., TCP, UDP).",
+            "value": "${data.aws_ec2_network_insights_path.this.protocol}"
+        },
+        "source": {
+            "description": "The source resource (such as a subnet or instance) for the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.source}"
+        },
+        "source_arn": {
+            "description": "The ARN of the source resource.",
+            "value": "${data.aws_ec2_network_insights_path.this.source_arn}"
+        },
+        "source_ip": {
+            "description": "The IP address of the source for the network path.",
+            "value": "${data.aws_ec2_network_insights_path.this.source_ip}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the network insights path.",
+            "value": "${data.aws_ec2_network_insights_path.this.tags}"
+        }
+    }
+}

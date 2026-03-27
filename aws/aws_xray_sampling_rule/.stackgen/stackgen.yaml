@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Xray Sampling Rule
+  node:
+    label:
+      static: Xray Sampling Rule
+      template: ${rule_name}
+    display_type: default
+
+discovery:
+  type: aws_xray_sampling_rule
+  dnd_supported: false

@@ -1,0 +1,56 @@
+{
+    "output": {
+        "availability_zone_id": {
+            "description": "The unique identifier of the availability zone where the mount target is located.",
+            "value": "${data.aws_efs_mount_target.this.availability_zone_id}"
+        },
+        "availability_zone_name": {
+            "description": "The name of the availability zone where the mount target is located.",
+            "value": "${data.aws_efs_mount_target.this.availability_zone_name}"
+        },
+        "dns_name": {
+            "description": "The DNS name for the mount target.",
+            "value": "${data.aws_efs_mount_target.this.dns_name}"
+        },
+        "file_system_arn": {
+            "description": "The Amazon Resource Name (ARN) of the EFS file system.",
+            "value": "${data.aws_efs_mount_target.this.file_system_arn}"
+        },
+        "file_system_id": {
+            "description": "The ID of the EFS file system for which the mount target is created.",
+            "value": "${data.aws_efs_mount_target.this.file_system_id}"
+        },
+        "id": {
+            "description": "The ID of the EFS mount target.",
+            "value": "${data.aws_efs_mount_target.this.id}"
+        },
+        "ip_address": {
+            "description": "The address at which the file system can be accessed.",
+            "value": "${data.aws_efs_mount_target.this.ip_address}"
+        },
+        "mount_target_dns_name": {
+            "description": "The DNS name for the mount target.",
+            "value": "${data.aws_efs_mount_target.this.mount_target_dns_name}"
+        },
+        "mount_target_id": {
+            "description": "The unique identifier of the mount target.",
+            "value": "${data.aws_efs_mount_target.this.mount_target_id}"
+        },
+        "network_interface_id": {
+            "description": "The ID of the network interface that Amazon EFS created when it created the mount target.",
+            "value": "${data.aws_efs_mount_target.this.network_interface_id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the mount target.",
+            "value": "${data.aws_efs_mount_target.this.owner_id}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the mount target.",
+            "value": "${data.aws_efs_mount_target.this.security_groups}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet in which the mount target is located.",
+            "value": "${data.aws_efs_mount_target.this.subnet_id}"
+        }
+    }
+}

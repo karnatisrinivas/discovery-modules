@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Backup Framework.",
+            "value": "${data.aws_backup_framework.this.arn}"
+        },
+        "control": {
+            "description": "A list of controls associated with the AWS Backup Framework, detailing their parameters and scope.",
+            "value": "${data.aws_backup_framework.this.control}"
+        },
+        "creation_time": {
+            "description": "The timestamp indicating when the AWS Backup Framework was created.",
+            "value": "${data.aws_backup_framework.this.creation_time}"
+        },
+        "deployment_status": {
+            "description": "The current deployment status of the AWS Backup Framework.",
+            "value": "${data.aws_backup_framework.this.deployment_status}"
+        },
+        "description": {
+            "description": "A brief description of the AWS Backup Framework.",
+            "value": "${data.aws_backup_framework.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Backup Framework.",
+            "value": "${data.aws_backup_framework.this.id}"
+        },
+        "status": {
+            "description": "The current status of the AWS Backup Framework.",
+            "value": "${data.aws_backup_framework.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Backup Framework for categorization and management.",
+            "value": "${data.aws_backup_framework.this.tags}"
+        }
+    }
+}

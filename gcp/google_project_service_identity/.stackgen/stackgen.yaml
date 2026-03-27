@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Service Identities
+  node:
+    label:
+      static: Project Service Identities
+      template: Project Service Identities
+    display_type: default
+
+discovery:
+  type: google_project_service_identity
+  dnd_supported: false

@@ -1,0 +1,47 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the user.",
+                "nullable": false
+            }
+        ],
+        "instance": [
+            {
+                "type": "string",
+                "description": "The name of the Cloud SQL instance.",
+                "nullable": false
+            }
+        ],
+        "type": [
+            {
+                "type": "string",
+                "description": "The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. ",
+                "nullable": true
+            }
+        ],
+        "password": [
+            {
+                "type": "string",
+                "description": "The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. Don't set this field for CLOUD_IAM_USER and CLOUD_IAM_SERVICE_ACCOUNT user types for any Cloud SQL instance",
+                "nullable": true
+            }
+        ],
+        "host": [
+            {
+                "type": "string",
+                "description": "The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address.",
+                "nullable": true
+            }
+        ],
+        "password_policy": [
+            {
+                "type": "list(object({allowed_failed_attempts: optional(number), password_expiration_duration: optional(number), enable_failed_attempts_check: optional(bool), enable_password_verification: optional(bool)}))",
+                "description": "A policy block for the passwords",
+                "nullable": true,
+                "default": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "variable": {
+        "cluster_identifier": [
+            {
+                "description": "The Cluster Identifier. Must be a lower case string.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "snapshot_identifier": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "A unique identifier for the snapshot that you are requesting. This identifier must be unique for all snapshots within the Amazon Web Services account."
+            }
+        ],
+        "manual_snapshot_retention_period": [
+            {
+                "type": "number",
+                "default": -1,
+                "description": "The default number of days to retain a manual snapshot. If the value is -1, the snapshot is retained indefinitely. This setting doesn't change the retention period of existing snapshots. Valid values are between -1 and 3653.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the cluster.",
+                "nullable": true
+            }
+        ]
+    }
+}

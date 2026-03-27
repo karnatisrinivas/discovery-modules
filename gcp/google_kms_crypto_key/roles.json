@@ -1,0 +1,70 @@
+[
+    {
+        "value": "roles/cloudkms.viewer",
+        "label": "Cloud KMS Viewer"
+    },
+    {
+        "value": "roles/cloudkms.admin",
+        "label": "Cloud KMS Admin"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyDecrypter",
+        "label": "Cloud KMS CryptoKey Decrypter"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyDecrypterViaDelegation",
+        "label": "Cloud KMS CryptoKey Decrypter Via Delegation"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyEncrypter",
+        "label": "Cloud KMS CryptoKey Encrypter"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+        "label": "Cloud KMS CryptoKey Encrypter/Decrypter"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyEncrypterDecrypterViaDelegation",
+        "label": "Cloud KMS CryptoKey Encrypter/Decrypter Via Delegation"
+    },
+    {
+        "value": "roles/cloudkms.cryptoKeyEncrypterViaDelegation",
+        "label": "Cloud KMS CryptoKey Encrypter Via Delegation"
+    },
+    {
+        "value": "roles/cloudkms.cryptoOperator",
+        "label": "Cloud KMS Crypto Operator"
+    },
+    {
+        "value": "roles/cloudkms.expertRawAesCbc",
+        "label": "Cloud KMS Expert Raw AES-CBC Key Manager"
+    },
+    {
+        "value": "roles/cloudkms.expertRawAesCtr",
+        "label": "Cloud KMS Expert Raw AES-CTR Key Manager"
+    },
+    {
+        "value": "roles/cloudkms.expertRawPKCS1",
+        "label": "Cloud KMS Expert Raw PKCS#1 Key Manager"
+    },
+    {
+        "value": "roles/cloudkms.importer",
+        "label": "Cloud KMS Importer"
+    },
+    {
+        "value": "roles/cloudkms.publicKeyViewer",
+        "label": "Cloud KMS Public Key Viewer"
+    },
+    {
+        "value": "roles/cloudkms.signer",
+        "label": "Cloud KMS Signer"
+    },
+    {
+        "value": "roles/cloudkms.signerVerifier",
+        "label": "Cloud KMS Signer/Verifier"
+    },
+    {
+        "value": "roles/cloudkms.verifier",
+        "label": "Cloud KMS Verifier"
+    }
+]

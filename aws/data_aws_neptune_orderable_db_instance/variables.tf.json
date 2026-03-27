@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "engine": [
+      {
+        "description": "The type of database engine for the Neptune instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "license_model": [
+      {
+        "description": "The licensing model for the Neptune database instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_instance_classes": [
+      {
+        "description": "A list of preferred instance classes for the Neptune database instance.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

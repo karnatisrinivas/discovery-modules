@@ -1,0 +1,20 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitoring Dashboard
+  node:
+    label:
+      static: Monitoring Dashboard
+      template: Monitoring Dashboard
+    display_type: default
+
+variables:
+  dashboard_json:
+    ui_control: json
+    description: "The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards."
+    type: string
+
+discovery:
+  type: google_monitoring_dashboard
+  dnd_supported: false

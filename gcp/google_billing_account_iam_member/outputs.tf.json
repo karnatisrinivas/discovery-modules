@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM member binding",
+            "value": "${google_billing_account_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member binding in the billing account",
+            "value": "${google_billing_account_iam_member.this.id}"
+        }
+    }
+}

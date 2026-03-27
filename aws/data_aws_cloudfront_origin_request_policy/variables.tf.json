@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the CloudFront origin request policy. It is used to reference the specific policy in other resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the CloudFront origin request policy. This is a user-friendly identifier that helps to recognize and manage the policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

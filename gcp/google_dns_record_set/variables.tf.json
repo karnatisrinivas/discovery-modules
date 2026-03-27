@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "managed_zone": [
+      {
+        "description": "Specifies the name of the managed zone within which the DNS record set will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the DNS record set, representing the fully qualified domain name for the record.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "routing_policy": [
+      {
+        "description": "Defines the DNS routing policy, specifying how traffic should be distributed among multiple IP addresses or endpoints.",
+        "nullable": true,
+        "type": "list(object({enable_geo_fencing: optional(bool),health_check: optional(string),geo: list(object({location: string,rrdatas: optional(list(string)),health_checked_targets: list(object({external_endpoints: optional(list(string)),internal_load_balancers: list(object({ip_address: string,ip_protocol: string,load_balancer_type: optional(string),network_url: string,port: string,project: string,region: optional(string)}))}))})),primary_backup: list(object({enable_geo_fencing_for_backups: optional(bool),trickle_ratio: optional(number),backup_geo: list(object({location: string,rrdatas: optional(list(string)),health_checked_targets: list(object({external_endpoints: optional(list(string)),internal_load_balancers: list(object({ip_address: string,ip_protocol: string,load_balancer_type: optional(string),network_url: string,port: string,project: string,region: optional(string)}))}))})),primary: list(object({external_endpoints: optional(list(string)),internal_load_balancers: list(object({ip_address: string,ip_protocol: string,load_balancer_type: optional(string),network_url: string,port: string,project: string,region: optional(string)}))}))})),wrr: list(object({rrdatas: optional(list(string)),weight: number,health_checked_targets: list(object({external_endpoints: optional(list(string)),internal_load_balancers: list(object({ip_address: string,ip_protocol: string,load_balancer_type: optional(string),network_url: string,port: string,project: string,region: optional(string)}))}))}))}))"
+      }
+    ],
+    "rrdatas": [
+      {
+        "description": "List of resource record data values for the DNS record; must match the type of the record (e.g., IP addresses for A records, domain names for CNAME records).",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ttl": [
+      {
+        "description": "Time-to-live value for the DNS record set, specifying how long DNS resolvers should cache the record, in seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the DNS record type, such as A, AAAA, CNAME, MX, etc., to define the format and purpose of the record.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

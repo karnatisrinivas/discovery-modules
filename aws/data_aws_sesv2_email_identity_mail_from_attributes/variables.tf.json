@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "email_identity": [
+      {
+        "description": "The email address or domain to configure the MAIL FROM attributes for in AWS SES.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

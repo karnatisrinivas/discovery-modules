@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "delete_protection": [
+      {
+        "description": "Enables protection against accidental resource deletion",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a human-readable description for the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption_configuration": [
+      {
+        "description": "Defines encryption settings, including type and optional key ID",
+        "nullable": true,
+        "type": "list(object({key_id: optional(string),type: string}))"
+      }
+    ],
+    "firewall_policy_arn": [
+      {
+        "description": "Specifies the ARN for the associated firewall policy",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "firewall_policy_change_protection": [
+      {
+        "description": "Prevents changes to the firewall policy configuration",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the resource",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnet_change_protection": [
+      {
+        "description": "Prevents modifications to the subnet mapping",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "subnet_mapping": [
+      {
+        "description": "Defines subnet associations, including optional IP address type",
+        "nullable": true,
+        "type": "list(object({ip_address_type: optional(string),subnet_id: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines key-value pairs for tagging and resource management",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies custom timeouts for create, update, and delete operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "vpc_id": [
+      {
+        "description": "Identifies the VPC where the resource is deployed",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

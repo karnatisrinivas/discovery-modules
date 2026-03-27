@@ -1,0 +1,16 @@
+{
+    "output": {
+        "fingerprint": {
+            "description": "Hash used to track updates to the security policy",
+            "value": "${google_compute_security_policy.this.fingerprint}"
+        },
+        "id": {
+            "description": "Unique identifier for the security policy in GCP",
+            "value": "${google_compute_security_policy.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the security policy in GCP",
+            "value": "${google_compute_security_policy.this.self_link}"
+        }
+    }
+}

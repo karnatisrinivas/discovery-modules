@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM roles and API calls",
+            "value": "${aws_networkfirewall_firewall.this.arn}"
+        },
+        "firewall_status": {
+            "description": "List of sync states for firewall's AZ attachments",
+            "value": "${aws_networkfirewall_firewall.this.firewall_status}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${aws_networkfirewall_firewall.this.id}"
+        },
+        "update_token": {
+            "description": "Token indicating version for firewall updates",
+            "value": "${aws_networkfirewall_firewall.this.update_token}"
+        }
+    }
+}

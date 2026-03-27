@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kendra Experience"
+  node:
+    label:
+      static: "[Data] Kendra Experience"
+      template: "[Data] Kendra Experience"
+    display_type: default
+
+discovery:
+  type: data_aws_kendra_experience
+  dnd_supported: false

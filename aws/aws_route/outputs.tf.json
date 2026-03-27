@@ -1,0 +1,24 @@
+{
+    "output": {
+        "id": {
+            "description": "The computed value of id",
+            "value": "${aws_route.this.id}"
+        },
+        "instance_id": {
+            "description": "Unique identifier for the route instance, useful for configuration reference",
+            "value": "${aws_route.this.instance_id}"
+        },
+        "instance_owner_id": {
+            "description": "AWS account ID owning the route, helpful for access control",
+            "value": "${aws_route.this.instance_owner_id}"
+        },
+        "origin": {
+            "description": "Source of the route, indicates how the route was created",
+            "value": "${aws_route.this.origin}"
+        },
+        "state": {
+            "description": "Current operational state of the route, important for monitoring",
+            "value": "${aws_route.this.state}"
+        }
+    }
+}

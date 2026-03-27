@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Security Hub standards control associations.",
+            "value": "${data.aws_securityhub_standards_control_associations.this.id}"
+        },
+        "standards_control_associations": {
+            "description": "A list detailing the associations between AWS Security Hub standards and their controls, including information such as status, related requirements, and descriptions.",
+            "value": "${data.aws_securityhub_standards_control_associations.this.standards_control_associations}"
+        }
+    }
+}

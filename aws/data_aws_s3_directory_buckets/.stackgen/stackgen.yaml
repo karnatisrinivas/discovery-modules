@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] S3 Directory Buckets"
+  node:
+    label:
+      static: "[Data] S3 Directory Buckets"
+      template: "[Data] S3 Directory Buckets"
+    display_type: default
+
+discovery:
+  type: data_aws_s3_directory_buckets
+  dnd_supported: false

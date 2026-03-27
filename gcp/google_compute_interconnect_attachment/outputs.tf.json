@@ -1,0 +1,64 @@
+{
+    "output": {
+        "cloud_router_ip_address": {
+            "description": "IP address assigned to the cloud router for routing traffic",
+            "value": "${google_compute_interconnect_attachment.this.cloud_router_ip_address}"
+        },
+        "cloud_router_ipv6_address": {
+            "description": "IPv6 address assigned to the cloud router for routing traffic",
+            "value": "${google_compute_interconnect_attachment.this.cloud_router_ipv6_address}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the attachment was created",
+            "value": "${google_compute_interconnect_attachment.this.creation_timestamp}"
+        },
+        "customer_router_ip_address": {
+            "description": "IP address of the customer's router connected to the attachment",
+            "value": "${google_compute_interconnect_attachment.this.customer_router_ip_address}"
+        },
+        "customer_router_ipv6_address": {
+            "description": "IPv6 address of the customer's router connected to the attachment",
+            "value": "${google_compute_interconnect_attachment.this.customer_router_ipv6_address}"
+        },
+        "effective_labels": {
+            "description": "Labels applied to the resource after merging with parent labels",
+            "value": "${google_compute_interconnect_attachment.this.effective_labels}"
+        },
+        "google_reference_id": {
+            "description": "Reference ID for the attachment used by Google systems",
+            "value": "${google_compute_interconnect_attachment.this.google_reference_id}"
+        },
+        "id": {
+            "description": "Unique identifier for the interconnect attachment resource",
+            "value": "${google_compute_interconnect_attachment.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint used to detect changes in the resource labels",
+            "value": "${google_compute_interconnect_attachment.this.label_fingerprint}"
+        },
+        "pairing_key": {
+            "description": "Key used for pairing with partner interconnect attachments",
+            "value": "${google_compute_interconnect_attachment.this.pairing_key}"
+        },
+        "partner_asn": {
+            "description": "ASN of the partner providing the interconnect attachment",
+            "value": "${google_compute_interconnect_attachment.this.partner_asn}"
+        },
+        "private_interconnect_info": {
+            "description": "Details about the private interconnect configuration",
+            "value": "${google_compute_interconnect_attachment.this.private_interconnect_info}"
+        },
+        "self_link": {
+            "description": "URL for accessing the resource in Google Cloud APIs",
+            "value": "${google_compute_interconnect_attachment.this.self_link}"
+        },
+        "state": {
+            "description": "Current operational state of the interconnect attachment",
+            "value": "${google_compute_interconnect_attachment.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in the Terraform configuration for the resource",
+            "value": "${google_compute_interconnect_attachment.this.terraform_labels}"
+        }
+    }
+}

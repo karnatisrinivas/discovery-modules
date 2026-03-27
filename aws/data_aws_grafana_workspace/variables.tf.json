@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "workspace_id": [
+      {
+        "description": "The unique identifier for the AWS Grafana workspace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

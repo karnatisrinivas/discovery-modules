@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EC2 Transit Gateway.",
+            "value": "${aws_ec2_transit_gateway.this.arn}"
+        },
+        "association_default_route_table_id": {
+            "description": "The ID of the default route table that is used for associations in the EC2 Transit Gateway.",
+            "value": "${aws_ec2_transit_gateway.this.association_default_route_table_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the EC2 Transit Gateway.",
+            "value": "${aws_ec2_transit_gateway.this.id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the EC2 Transit Gateway.",
+            "value": "${aws_ec2_transit_gateway.this.owner_id}"
+        },
+        "propagation_default_route_table_id": {
+            "description": "The ID of the default route table that is used for route propagation in the EC2 Transit Gateway.",
+            "value": "${aws_ec2_transit_gateway.this.propagation_default_route_table_id}"
+        }
+    }
+}

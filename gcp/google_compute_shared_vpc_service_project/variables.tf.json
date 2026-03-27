@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "deletion_policy": [
+      {
+        "description": "Specifies the policy for handling the service project when the shared VPC association is deleted; options are \"ABANDON\" or \"DELETE\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "host_project": [
+      {
+        "description": "Specifies the host project ID that the service project will be attached to within the Shared VPC configuration. Must be an existing project with Shared VPC enabled.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_project": [
+      {
+        "description": "ID of the service project to be attached to the host project for Shared VPC configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for operations related to the attachment of the service project to the shared VPC.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "availability_zone": {
+            "description": "The specific availability zone where the EC2 capacity block is offered.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.availability_zone}"
+        },
+        "capacity_block_offering_id": {
+            "description": "The unique identifier for the EC2 capacity block offering.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.capacity_block_offering_id}"
+        },
+        "currency_code": {
+            "description": "The currency code in which the pricing for the capacity block is defined.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.currency_code}"
+        },
+        "end_date_range": {
+            "description": "The end date until which the capacity block offering is valid.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.end_date_range}"
+        },
+        "start_date_range": {
+            "description": "The start date from which the capacity block offering becomes valid.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.start_date_range}"
+        },
+        "tenancy": {
+            "description": "The type of tenancy for the EC2 instances (e.g., default, dedicated) in the capacity block.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.tenancy}"
+        },
+        "upfront_fee": {
+            "description": "The upfront fee required for acquiring the EC2 capacity block.",
+            "value": "${data.aws_ec2_capacity_block_offering.this.upfront_fee}"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "output": {
+        "bundle_id": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.bundle_id}"
+        },
+        "computer_name": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.computer_name}"
+        },
+        "directory_id": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.directory_id}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.id}"
+        },
+        "ip_address": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.ip_address}"
+        },
+        "root_volume_encryption_enabled": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.root_volume_encryption_enabled}"
+        },
+        "state": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.state}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.tags}"
+        },
+        "user_name": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.user_name}"
+        },
+        "user_volume_encryption_enabled": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.user_volume_encryption_enabled}"
+        },
+        "volume_encryption_key": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.volume_encryption_key}"
+        },
+        "workspace_id": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.workspace_id}"
+        },
+        "workspace_properties": {
+            "description": "",
+            "value": "${data.aws_workspaces_workspace.this.workspace_properties}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Origin Request Policy"
+  node:
+    label:
+      static: "[Data] Cloudfront Origin Request Policy"
+      template: "[Data] Cloudfront Origin Request Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_origin_request_policy
+  dnd_supported: false

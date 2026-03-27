@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines the IAM condition for the member's role binding, specifying when and how the binding is applied. Must include title, expression, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Spanner instance to which the IAM policy member will be applied; must already exist.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM role will be applied, such as a user, group, or service account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Defines the IAM role to be assigned to the member for the Spanner instance (e.g., roles/spanner.databaseAdmin).",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

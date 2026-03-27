@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "rule_set_name": [
+      {
+        "description": "Name of the SES receipt rule set to manage, must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "output": {
+        "appliance_mode_support": {
+            "description": "Indicates whether appliance mode support is enabled for the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.appliance_mode_support}"
+        },
+        "dns_support": {
+            "description": "Indicates whether DNS support is enabled for the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.dns_support}"
+        },
+        "id": {
+            "description": "The ID of the EC2 Transit Gateway VPC Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.id}"
+        },
+        "ipv6_support": {
+            "description": "Indicates whether IPv6 support is enabled for the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.ipv6_support}"
+        },
+        "security_group_referencing_support": {
+            "description": "Indicates whether security group referencing is supported for the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.security_group_referencing_support}"
+        },
+        "subnet_ids": {
+            "description": "The IDs of the subnets involved in the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "The tags assigned to the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.tags}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the transit gateway associated with the VPC attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.transit_gateway_id}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC involved in the attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.vpc_id}"
+        },
+        "vpc_owner_id": {
+            "description": "The account ID of the owner of the VPC involved in the attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpc_attachment.this.vpc_owner_id}"
+        }
+    }
+}

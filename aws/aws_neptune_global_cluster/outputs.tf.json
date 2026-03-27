@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API operations",
+            "value": "${aws_neptune_global_cluster.this.arn}"
+        },
+        "global_cluster_members": {
+            "description": "List of cluster members for monitoring and management",
+            "value": "${aws_neptune_global_cluster.this.global_cluster_members}"
+        },
+        "global_cluster_resource_id": {
+            "description": "Resource ID for identifying the global cluster in logs and metrics",
+            "value": "${aws_neptune_global_cluster.this.global_cluster_resource_id}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the global cluster in configurations",
+            "value": "${aws_neptune_global_cluster.this.id}"
+        },
+        "status": {
+            "description": "Current operational status of the global cluster",
+            "value": "${aws_neptune_global_cluster.this.status}"
+        }
+    }
+}

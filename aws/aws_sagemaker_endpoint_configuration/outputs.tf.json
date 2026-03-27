@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name required for IAM policies and API calls targeting this endpoint configuration",
+            "value": "${aws_sagemaker_endpoint_configuration.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing and referencing the endpoint configuration in Terraform",
+            "value": "${aws_sagemaker_endpoint_configuration.this.id}"
+        },
+        "name": {
+            "description": "Name of the endpoint configuration",
+            "value": "${aws_sagemaker_endpoint_configuration.this.name}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the endpoint configuration for resource categorization and tracking",
+            "value": "${aws_sagemaker_endpoint_configuration.this.tags_all}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: GKE Feature
+  node:
+    label:
+      static: GKE Feature
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_gke_hub_feature
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Function"
+  node:
+    label:
+      static: "[Data] Cloudfront Function"
+      template: "[Data] Cloudfront Function"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_function
+  dnd_supported: false

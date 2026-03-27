@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Proximity Placement Group.",
+            "value": "${azurerm_proximity_placement_group.this.id}"
+        }
+    }
+}

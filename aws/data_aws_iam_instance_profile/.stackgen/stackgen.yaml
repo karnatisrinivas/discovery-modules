@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Instance Profile"
+  node:
+    label:
+      static: "[Data] Iam Instance Profile"
+      template: "[Data] Iam Instance Profile"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_instance_profile
+  dnd_supported: false

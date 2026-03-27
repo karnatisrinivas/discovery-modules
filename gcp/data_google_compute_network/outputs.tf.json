@@ -1,0 +1,28 @@
+{
+    "output": {
+        "description": {
+            "description": "Description of this network",
+            "value": "${data.google_compute_network.this.description}"
+        },
+        "gateway_ipv4": {
+            "description": "The IP address of the gateway",
+            "value": "${data.google_compute_network.this.gateway_ipv4}"
+        },
+        "id": {
+            "description": "An identifier for the resource with format projects/{{project}}/locations/{{location}}/networks/{{name}}",
+            "value": "${data.google_compute_network.this.id}"
+        },
+        "internal_ipv6_range": {
+            "description": "The ula internal ipv6 range assigned to this network",
+            "value": "${data.google_compute_network.this.internal_ipv6_range}"
+        },
+        "self_link": {
+            "description": "The URI of the created resource.",
+            "value": "${data.google_compute_network.this.self_link}"
+        },
+        "subnetworks_self_links": {
+            "description": "The list of subnetworks which belong to the network",
+            "value": "${data.google_compute_network.this.subnetworks_self_links}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Lake Formation permissions resource.",
+            "value": "${data.aws_lakeformation_permissions.this.id}"
+        },
+        "permissions": {
+            "description": "A list of permissions assigned to the Lake Formation resource.",
+            "value": "${data.aws_lakeformation_permissions.this.permissions}"
+        },
+        "permissions_with_grant_option": {
+            "description": "A list of permissions that include the grant option, allowing the holder to pass on these permissions to others.",
+            "value": "${data.aws_lakeformation_permissions.this.permissions_with_grant_option}"
+        }
+    }
+}

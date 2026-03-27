@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Organization Policy
+  node:
+    label:
+      static: Organization Policy
+      template: ${org_id}
+    display_type: default
+
+discovery:
+  type: google_organization_policy
+  dnd_supported: false

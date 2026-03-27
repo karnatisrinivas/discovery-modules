@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket to read objects from.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "delimiter": [
+      {
+        "description": "A character used to group keys (like folders in a file system).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encoding_type": [
+      {
+        "description": "Specifies the encoding method to use for the response, such as 'url'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fetch_owner": [
+      {
+        "description": "If true, includes the owner information of each object in the response.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "max_keys": [
+      {
+        "description": "The maximum number of keys to return in the response.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "prefix": [
+      {
+        "description": "Limits the response to keys that begin with the specified prefix.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "request_payer": [
+      {
+        "description": "Specifies who pays for the request and data transfer costs ('requester' or 'bucket-owner').",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "start_after": [
+      {
+        "description": "Specifies the key to start with when listing objects in a bucket.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

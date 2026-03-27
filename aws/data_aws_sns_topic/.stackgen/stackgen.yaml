@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sns Topic"
+  node:
+    label:
+      static: "[Data] Sns Topic"
+      template: "[Data] Sns Topic"
+    display_type: default
+
+discovery:
+  type: data_aws_sns_topic
+  dnd_supported: false

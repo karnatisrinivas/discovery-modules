@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Connect Peer"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Connect Peer"
+      template: "[Data] Ec2 Transit Gateway Connect Peer"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_connect_peer
+  dnd_supported: false

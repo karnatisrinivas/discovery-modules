@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the AWS OAM links.",
+            "value": "${data.aws_oam_links.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS OAM links data source.",
+            "value": "${data.aws_oam_links.this.id}"
+        }
+    }
+}

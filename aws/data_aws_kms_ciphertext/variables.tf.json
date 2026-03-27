@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "context": [
+      {
+        "description": "A map of key-value pairs that provide additional context to the encryption operation, used for encryption context in AWS KMS.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "key_id": [
+      {
+        "description": "The unique identifier of the AWS KMS key used for encryption, which can be the key ID, key ARN, alias name, or alias ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "plaintext": [
+      {
+        "description": "The plaintext data that needs to be encrypted using AWS KMS.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

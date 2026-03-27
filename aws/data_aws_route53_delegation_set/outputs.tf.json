@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_route53_delegation_set.this.arn}"
+        },
+        "caller_reference": {
+            "description": "",
+            "value": "${data.aws_route53_delegation_set.this.caller_reference}"
+        },
+        "name_servers": {
+            "description": "",
+            "value": "${data.aws_route53_delegation_set.this.name_servers}"
+        }
+    }
+}

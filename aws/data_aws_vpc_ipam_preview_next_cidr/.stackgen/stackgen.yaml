@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpc Ipam Preview Next Cidr"
+  node:
+    label:
+      static: "[Data] Vpc Ipam Preview Next Cidr"
+      template: "[Data] Vpc Ipam Preview Next Cidr"
+    display_type: default
+
+discovery:
+  type: data_aws_vpc_ipam_preview_next_cidr
+  dnd_supported: false

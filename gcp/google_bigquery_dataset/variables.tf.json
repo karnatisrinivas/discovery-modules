@@ -1,0 +1,123 @@
+{
+    "variable": {
+      "access": [
+        {
+          "description": "Defines access controls for the resource, specifying roles and permissions for users, groups, or domains, along with optional conditions and targeted datasets, routines, or views.",
+          "nullable": true,
+          "type": "list(object({domain: optional(string),group_by_email: optional(string),iam_member: optional(string),role: optional(string),special_group: optional(string),user_by_email: optional(string),condition: list(object({description: optional(string),expression: string,location: optional(string),title: optional(string)})),dataset: list(object({target_types: list(string),dataset: list(object({dataset_id: string,project_id: string}))})),routine: list(object({dataset_id: string,project_id: string,routine_id: string})),view: list(object({dataset_id: string,project_id: string,table_id: string}))}))"
+        }
+      ],
+      "dataset_id": [
+        {
+          "description": "Unique identifier for the dataset. This is required and must be a valid string.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "default_collation": [
+        {
+          "description": "Specifies the collation setting for tables in the dataset, if supported by the dataset's location.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "default_encryption_configuration": [
+        {
+          "description": "Defines the default encryption key for tables created in the dataset, using a Cloud KMS key.",
+          "nullable": true,
+          "type": "list(object({kms_key_name: string}))"
+        }
+      ],
+      "default_partition_expiration_ms": [
+        {
+          "description": "Sets the default partition expiration time in milliseconds for tables created in the dataset. Must be non-negative if specified.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "default_table_expiration_ms": [
+        {
+          "description": "Defines the default expiration time in milliseconds for tables created in the dataset. Must be non-negative if specified.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "delete_contents_on_destroy": [
+        {
+          "description": "Indicates whether the contents of the dataset should be deleted when the resource is destroyed. Defaults to false.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "description": [
+        {
+          "description": "Provides a detailed description of the dataset. Optional and can be used for documentation purposes.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "external_dataset_reference": [
+        {
+          "description": "Specifies the connection and external source details for linking to an external dataset.",
+          "nullable": true,
+          "type": "list(object({connection: string,external_source: string}))"
+        }
+      ],
+      "friendly_name": [
+        {
+          "description": "Defines a user-friendly name for the dataset, which can be displayed in interfaces. Optional.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "is_case_insensitive": [
+        {
+          "description": "Specifies whether the dataset allows case-insensitive table and column names. Optional.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "labels": [
+        {
+          "description": "Key-value pairs used for tagging the dataset to organize or filter resources. Optional.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "location": [
+        {
+          "description": "Specifies the geographic location where the dataset is stored, such as 'US' or 'EU'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "max_time_travel_hours": [
+        {
+          "description": "Defines the maximum time travel duration in hours for querying historical data in the dataset.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "resource_tags": [
+        {
+          "description": "Key-value tags applied to the dataset for resource organization. Optional.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "storage_billing_model": [
+        {
+          "description": "Specifies the billing model for storage usage in the dataset, such as 'logical' or 'physical'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Configures timeouts for resource operations, including create, delete, and update actions.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ]
+    }
+  }

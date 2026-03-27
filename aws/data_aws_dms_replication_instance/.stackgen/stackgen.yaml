@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dms Replication Instance"
+  node:
+    label:
+      static: "[Data] Dms Replication Instance"
+      template: "[Data] Dms Replication Instance"
+    display_type: default
+
+discovery:
+  type: data_aws_dms_replication_instance
+  dnd_supported: false

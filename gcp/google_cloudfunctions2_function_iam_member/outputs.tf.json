@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM policy binding",
+            "value": "${google_cloudfunctions2_function_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Fully qualified ID of the IAM binding for the Cloud Function",
+            "value": "${google_cloudfunctions2_function_iam_member.this.id}"
+        }
+    }
+}

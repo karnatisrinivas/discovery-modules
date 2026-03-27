@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Compute Region Ssl Certificate"
+  node:
+    label:
+      static: "[Data] Compute Region Ssl Certificate"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_google_compute_region_ssl_certificate
+  dnd_supported: false

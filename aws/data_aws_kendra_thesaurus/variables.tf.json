@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "index_id": [
+      {
+        "description": "The unique identifier for the Kendra index that the thesaurus is associated with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "thesaurus_id": [
+      {
+        "description": "The unique identifier for the thesaurus in the Kendra index.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

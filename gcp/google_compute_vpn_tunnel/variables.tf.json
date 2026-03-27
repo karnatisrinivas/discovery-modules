@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Description of the VPN tunnel, providing context or purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ike_version": [
+      {
+        "description": "Specifies the IKE protocol version to be used for the VPN tunnel, either 1 or 2.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the VPN tunnel; must comply with GCP label requirements.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "local_traffic_selector": [
+      {
+        "description": "Defines the CIDR ranges of traffic to be routed through the VPN tunnel from the local side; must be a valid IPv4 CIDR.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the unique name of the VPN tunnel, which must be 1-63 characters long and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "peer_external_gateway": [
+      {
+        "description": "Defines the external gateway used as the peer endpoint for the VPN tunnel, typically an IP address or a gateway resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "peer_external_gateway_interface": [
+      {
+        "description": "Specifies the interface ID of the peer external VPN gateway used for the tunnel. Must match a valid interface on the peer gateway.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "peer_gcp_gateway": [
+      {
+        "description": "Specifies the URI of the peer VPN gateway, required for establishing the VPN tunnel with another Google Cloud VPN gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "peer_ip": [
+      {
+        "description": "The public IP address of the peer VPN gateway for the tunnel connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "remote_traffic_selector": [
+      {
+        "description": "Specifies the IP ranges of traffic from the remote VPN gateway that will be routed through the VPN tunnel. Must be in CIDR format.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "router": [
+      {
+        "description": "Specifies the Google Cloud router associated with the VPN tunnel. Must be in the same region as the tunnel and properly configured for BGP routing.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "shared_secret": [
+      {
+        "description": "Pre-shared key used for authentication between VPN gateways; must be a string of 8-64 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "target_vpn_gateway": [
+      {
+        "description": "Specifies the target VPN gateway to associate with the VPN tunnel, must be in the same region as the tunnel.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the VPN tunnel creation, update, or deletion operations to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "vpn_gateway": [
+      {
+        "description": "Specifies the VPN gateway used to create the VPN tunnel; must be an existing gateway within the same project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpn_gateway_interface": [
+      {
+        "description": "Specifies the interface ID on the VPN gateway for establishing the tunnel; must be a valid interface number for the gateway.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a set of conditions that must be met for the IAM binding to be applied, such as attributes or expressions to control access.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of identities (e.g., users, groups, or service accounts) to which the specified IAM role will be applied.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be assigned to members for the Pub/Sub subscription. Must be a predefined role such as `roles/pubsub.viewer`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subscription": [
+      {
+        "description": "Defines the Pub/Sub subscription to which IAM bindings will be applied. Must be in the format `projects/{project}/subscriptions/{subscription_name}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

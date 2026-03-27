@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS CloudControl API resource.",
+            "value": "${data.aws_cloudcontrolapi_resource.this.id}"
+        },
+        "properties": {
+            "description": "The properties of the AWS CloudControl API resource in JSON format.",
+            "value": "${data.aws_cloudcontrolapi_resource.this.properties}"
+        }
+    }
+}

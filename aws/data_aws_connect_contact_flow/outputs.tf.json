@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the contact flow.",
+            "value": "${data.aws_connect_contact_flow.this.arn}"
+        },
+        "contact_flow_id": {
+            "description": "The unique identifier of the contact flow.",
+            "value": "${data.aws_connect_contact_flow.this.contact_flow_id}"
+        },
+        "content": {
+            "description": "The content of the contact flow, typically in JSON format.",
+            "value": "${data.aws_connect_contact_flow.this.content}"
+        },
+        "description": {
+            "description": "A brief description of the contact flow.",
+            "value": "${data.aws_connect_contact_flow.this.description}"
+        },
+        "id": {
+            "description": "The ID of the contact flow resource.",
+            "value": "${data.aws_connect_contact_flow.this.id}"
+        },
+        "name": {
+            "description": "The name of the contact flow.",
+            "value": "${data.aws_connect_contact_flow.this.name}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the contact flow.",
+            "value": "${data.aws_connect_contact_flow.this.tags}"
+        }
+    }
+}

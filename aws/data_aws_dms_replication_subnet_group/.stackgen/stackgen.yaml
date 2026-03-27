@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dms Replication Subnet Group"
+  node:
+    label:
+      static: "[Data] Dms Replication Subnet Group"
+      template: "[Data] Dms Replication Subnet Group"
+    display_type: default
+
+discovery:
+  type: data_aws_dms_replication_subnet_group
+  dnd_supported: false

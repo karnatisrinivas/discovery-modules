@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The hosted zone ID for the AWS Load Balancer, used to uniquely identify the DNS zone associated with the load balancer.",
+            "value": "${data.aws_lb_hosted_zone_id.this.id}"
+        }
+    }
+}

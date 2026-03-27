@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "certificate_manager_certificates": [
+      {
+        "description": "List of SSL certificates to associate with the HTTPS proxy; must be managed by Certificate Manager.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "certificate_map": [
+      {
+        "description": "Defines the certificate map to be used for SSL certificate management, specifying mappings for HTTPS requests. Must be the name or ID of an existing certificate map in Google Cloud.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines an optional text description for the HTTPS proxy, providing additional context or details about its purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_keep_alive_timeout_sec": [
+      {
+        "description": "Specifies the duration, in seconds, to keep an idle HTTPS connection open for reuse; must be between 1 and 3600.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Target HTTPS Proxy, must be unique within the project and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "proxy_bind": [
+      {
+        "description": "Determines whether the proxy will bind to the IP address specified by the forwarding rule. Must be set to true if global access is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "quic_override": [
+      {
+        "description": "Specifies the QUIC protocol policy for the HTTPS proxy. Valid values are 'NONE', 'ENABLE', and 'DISABLE'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "server_tls_policy": [
+      {
+        "description": "Specifies the TLS policy for the HTTPS proxy, determining the SSL features and protocols enforced. Must match an existing TLS policy in the same project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ssl_certificates": [
+      {
+        "description": "List of SSL certificate resources to associate with the HTTPS proxy; must be in the same project and region as the proxy.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ssl_policy": [
+      {
+        "description": "Specifies the SSL policy to apply to the HTTPS proxy, defining the SSL features and versions supported. Must be the name of an existing SSL policy in the same project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for operations on the HTTPS proxy, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "tls_early_data": [
+      {
+        "description": "Enables or disables TLS early data for the HTTPS proxy; requires proper client support and configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "url_map": [
+      {
+        "description": "Specifies the URL map resource to route requests based on URL patterns. Must be a valid resource name or ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

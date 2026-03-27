@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API integrations",
+            "value": "${aws_dx_gateway.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the Direct Connect Gateway resource",
+            "value": "${aws_dx_gateway.this.id}"
+        },
+        "owner_account_id": {
+            "description": "AWS account ID that owns the Direct Connect Gateway",
+            "value": "${aws_dx_gateway.this.owner_account_id}"
+        }
+    }
+}

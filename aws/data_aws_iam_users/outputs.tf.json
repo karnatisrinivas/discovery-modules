@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the specified IAM users.",
+            "value": "${data.aws_iam_users.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the data source instance of IAM users.",
+            "value": "${data.aws_iam_users.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the specified IAM users.",
+            "value": "${data.aws_iam_users.this.names}"
+        }
+    }
+}

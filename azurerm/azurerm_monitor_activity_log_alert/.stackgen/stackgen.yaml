@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitor Activity Log Alert
+  node:
+    label:
+      static: Monitor Activity Log Alert
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_monitor_activity_log_alert
+  dnd_supported: false

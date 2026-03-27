@@ -1,0 +1,52 @@
+{
+    "output": {
+        "group_name": {
+            "description": "The name of the availability zone group.",
+            "value": "${data.aws_availability_zone.this.group_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the availability zone.",
+            "value": "${data.aws_availability_zone.this.id}"
+        },
+        "name": {
+            "description": "The name of the availability zone.",
+            "value": "${data.aws_availability_zone.this.name}"
+        },
+        "name_suffix": {
+            "description": "The suffix of the availability zone name.",
+            "value": "${data.aws_availability_zone.this.name_suffix}"
+        },
+        "network_border_group": {
+            "description": "The network border group of the availability zone.",
+            "value": "${data.aws_availability_zone.this.network_border_group}"
+        },
+        "opt_in_status": {
+            "description": "The opt-in status of the availability zone.",
+            "value": "${data.aws_availability_zone.this.opt_in_status}"
+        },
+        "parent_zone_id": {
+            "description": "The ID of the parent availability zone, if applicable.",
+            "value": "${data.aws_availability_zone.this.parent_zone_id}"
+        },
+        "parent_zone_name": {
+            "description": "The name of the parent availability zone, if applicable.",
+            "value": "${data.aws_availability_zone.this.parent_zone_name}"
+        },
+        "region": {
+            "description": "The AWS region in which the availability zone is located.",
+            "value": "${data.aws_availability_zone.this.region}"
+        },
+        "state": {
+            "description": "The state of the availability zone (e.g., available).",
+            "value": "${data.aws_availability_zone.this.state}"
+        },
+        "zone_id": {
+            "description": "The ID of the availability zone.",
+            "value": "${data.aws_availability_zone.this.zone_id}"
+        },
+        "zone_type": {
+            "description": "The type of the availability zone (e.g., local, regional).",
+            "value": "${data.aws_availability_zone.this.zone_type}"
+        }
+    }
+}

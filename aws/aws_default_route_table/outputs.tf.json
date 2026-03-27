@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for identifying the default route table in API operations",
+            "value": "${aws_default_route_table.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the default route table in other configurations",
+            "value": "${aws_default_route_table.this.id}"
+        },
+        "owner_id": {
+            "description": "AWS account ID of the resource owner, useful for access control and auditing",
+            "value": "${aws_default_route_table.this.owner_id}"
+        },
+        "route": {
+            "description": "Details of the routes defined in the default route table for traffic management",
+            "value": "${aws_default_route_table.this.route}"
+        },
+        "tags_all": {
+            "description": "Comprehensive list of tags attached to the default route table for resource organization",
+            "value": "${aws_default_route_table.this.tags_all}"
+        },
+        "vpc_id": {
+            "description": "Identifier of the VPC linked to the default route table for network association",
+            "value": "${aws_default_route_table.this.vpc_id}"
+        }
+    }
+}

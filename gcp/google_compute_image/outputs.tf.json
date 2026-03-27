@@ -1,0 +1,32 @@
+{
+    "output": {
+        "archive_size_bytes": {
+            "description": "Size of the image archive in bytes, useful for storage planning",
+            "value": "${google_compute_image.this.archive_size_bytes}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the image was created, useful for auditing",
+            "value": "${google_compute_image.this.creation_timestamp}"
+        },
+        "effective_labels": {
+            "description": "Active labels applied to the image, useful for resource categorization",
+            "value": "${google_compute_image.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the image resource in configurations",
+            "value": "${google_compute_image.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint for tracking changes to the image's labels",
+            "value": "${google_compute_image.this.label_fingerprint}"
+        },
+        "self_link": {
+            "description": "URL for accessing the image resource via the API",
+            "value": "${google_compute_image.this.self_link}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform applied to the image, useful for organization",
+            "value": "${google_compute_image.this.terraform_labels}"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "origin": [
+      {
+        "description": "Specifies the origin of the lien, typically indicating the service or account responsible for creating it. Must be a valid string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "Specifies the parent resource (folder or organization) to which the lien is attached; must be in the format \"folders/{folder_id}\" or \"organizations/{organization_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "reason": [
+      {
+        "description": "Specifies the justification for creating the lien, detailing its purpose or necessity.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "restrictions": [
+      {
+        "description": "Specifies the actions and resources that are restricted by the lien; must be a valid list of constraints defined by Google Cloud.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations before timing out; must be specified in Terraform's timeout format.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

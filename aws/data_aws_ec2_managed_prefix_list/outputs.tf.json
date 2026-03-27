@@ -1,0 +1,40 @@
+{
+    "output": {
+        "address_family": {
+            "description": "The IP address family (IPv4 or IPv6) of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.address_family}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.arn}"
+        },
+        "entries": {
+            "description": "A set of CIDR block entries and their descriptions in the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.entries}"
+        },
+        "id": {
+            "description": "The unique identifier of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.id}"
+        },
+        "max_entries": {
+            "description": "The maximum number of entries allowed in the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.max_entries}"
+        },
+        "name": {
+            "description": "The name of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.name}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.owner_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.tags}"
+        },
+        "version": {
+            "description": "The current version number of the prefix list.",
+            "value": "${data.aws_ec2_managed_prefix_list.this.version}"
+        }
+    }
+}

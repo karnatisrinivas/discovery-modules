@@ -1,0 +1,56 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kendra query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.arn}"
+        },
+        "created_at": {
+            "description": "The date and time when the query suggestions block list was created.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.created_at}"
+        },
+        "description": {
+            "description": "A description of the Kendra query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.description}"
+        },
+        "error_message": {
+            "description": "An error message if there is an issue with the block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.error_message}"
+        },
+        "file_size_bytes": {
+            "description": "The size of the block list file in bytes.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.file_size_bytes}"
+        },
+        "id": {
+            "description": "The unique identifier of the Kendra query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.id}"
+        },
+        "item_count": {
+            "description": "The number of items in the query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.item_count}"
+        },
+        "name": {
+            "description": "The name of the Kendra query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role that gives Amazon Kendra permissions to access the block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.role_arn}"
+        },
+        "source_s3_path": {
+            "description": "The S3 path where the block list file is stored.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.source_s3_path}"
+        },
+        "status": {
+            "description": "The current status of the Kendra query suggestions block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags for categorizing and organizing the block list.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.tags}"
+        },
+        "updated_at": {
+            "description": "The date and time when the block list was last updated.",
+            "value": "${data.aws_kendra_query_suggestions_block_list.this.updated_at}"
+        }
+    }
+}

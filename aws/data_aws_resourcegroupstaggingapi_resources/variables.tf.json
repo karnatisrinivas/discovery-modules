@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "exclude_compliant_resources": [
+      {
+        "description": "Indicates whether to exclude resources that are compliant with specified tag policies.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "include_compliance_details": [
+      {
+        "description": "Determines if the compliance details for each resource should be included.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_arn_list": [
+      {
+        "description": "A list of Amazon Resource Names (ARNs) of the resources to be tagged.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_type_filters": [
+      {
+        "description": "A set of resource types to filter the resources that are returned.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

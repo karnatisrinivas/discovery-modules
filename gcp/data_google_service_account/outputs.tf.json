@@ -1,0 +1,32 @@
+{
+    "output": {
+        "disabled": {
+            "description": "Indicates if the service account is disabled; useful for managing account lifecycle.",
+            "value": "${data.google_service_account.this.disabled}"
+        },
+        "display_name": {
+            "description": "Human-readable name of the service account; useful for identification in UI or logs.",
+            "value": "${data.google_service_account.this.display_name}"
+        },
+        "email": {
+            "description": "Email address of the service account; required for authentication and API access.",
+            "value": "${data.google_service_account.this.email}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the service account in configurations.",
+            "value": "${data.google_service_account.this.id}"
+        },
+        "member": {
+            "description": "IAM member string for the service account; useful for role bindings.",
+            "value": "${data.google_service_account.this.member}"
+        },
+        "name": {
+            "description": "Fully qualified name of the service account; useful for API calls and resource linking.",
+            "value": "${data.google_service_account.this.name}"
+        },
+        "unique_id": {
+            "description": "Globally unique ID of the service account; critical for cross-project operations.",
+            "value": "${data.google_service_account.this.unique_id}"
+        }
+    }
+}

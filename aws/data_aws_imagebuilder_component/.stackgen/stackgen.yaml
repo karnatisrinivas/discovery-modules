@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Imagebuilder Component"
+  node:
+    label:
+      static: "[Data] Imagebuilder Component"
+      template: "[Data] Imagebuilder Component"
+    display_type: default
+
+discovery:
+  type: data_aws_imagebuilder_component
+  dnd_supported: false

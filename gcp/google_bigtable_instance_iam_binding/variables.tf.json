@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition that must be met for the binding to apply, specifying attributes like title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Bigtable instance to which the IAM binding will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to bind to the specified role, such as user accounts, service accounts, or groups.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to members for the Bigtable instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

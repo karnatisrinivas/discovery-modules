@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Codecatalyst Dev Environment"
+  node:
+    label:
+      static: "[Data] Codecatalyst Dev Environment"
+      template: "[Data] Codecatalyst Dev Environment"
+    display_type: default
+
+discovery:
+  type: data_aws_codecatalyst_dev_environment
+  dnd_supported: false

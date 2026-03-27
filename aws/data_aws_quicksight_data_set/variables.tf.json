@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "data_set_id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

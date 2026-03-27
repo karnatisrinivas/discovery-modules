@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Mskconnect Connector"
+  node:
+    label:
+      static: "[Data] Mskconnect Connector"
+      template: "[Data] Mskconnect Connector"
+    display_type: default
+
+discovery:
+  type: data_aws_mskconnect_connector
+  dnd_supported: false

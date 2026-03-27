@@ -1,0 +1,136 @@
+{
+  "variable": {
+    "access": [
+      {
+        "description": "Defines rule permission (allow or deny)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Optional description for the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_address_prefix": [
+      {
+        "description": "Specifies single destination IP range in CIDR",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_address_prefixes": [
+      {
+        "description": "List of destination IP ranges in CIDR format",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "destination_application_security_group_ids": [
+      {
+        "description": "List of destination application security group IDs",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "destination_port_range": [
+      {
+        "description": "Specifies single destination port or range (e.g., 80 or 100-200)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_port_ranges": [
+      {
+        "description": "List of destination ports or port ranges",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "direction": [
+      {
+        "description": "Specifies traffic direction (inbound or outbound)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the unique name of the security rule",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_security_group_name": [
+      {
+        "description": "Name of the associated network security group",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Controls rule priority (lower value has higher priority)",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "protocol": [
+      {
+        "description": "Specifies allowed protocol (e.g., TCP, UDP, or *)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_address_prefix": [
+      {
+        "description": "Specifies single source IP range in CIDR",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_address_prefixes": [
+      {
+        "description": "List of source IP ranges in CIDR format",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "source_application_security_group_ids": [
+      {
+        "description": "List of source application security group IDs",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "source_port_range": [
+      {
+        "description": "Specifies single source port or range (e.g., 22 or 3000-4000)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_port_ranges": [
+      {
+        "description": "List of source ports or port ranges",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures operation timeouts for create, read, update, and delete",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

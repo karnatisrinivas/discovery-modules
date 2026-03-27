@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the content of the notification channel, typically detailing its purpose or the type of information it conveys.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name of the notification channel displayed in the Google Cloud Console; must be unique within the project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Determines whether the notification channel is active or disabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "force_delete": [
+      {
+        "description": "Determines whether the notification channel should be forcibly deleted even if it is currently in use by other resources.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Custom labels to attach to the notification channel for organizational or filtering purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "sensitive_labels": [
+      {
+        "description": "Defines sensitive labels for the notification channel, such as authentication tokens or passwords, ensuring secure handling of confidential information.",
+        "nullable": true,
+        "type": "list(object({auth_token: optional(string),password: optional(string),service_key: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout settings for creating, updating, or deleting the notification channel.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of notification channel, such as email, SMS, or webhook. Must be a valid notification channel type supported by Google Cloud.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "user_labels": [
+      {
+        "description": "Custom labels to apply to the notification channel, used for organization and filtering purposes. Must be a map of key-value pairs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "configuration_profile_ids": {
+            "description": "A set of unique identifiers for the AWS AppConfig configuration profiles.",
+            "value": "${data.aws_appconfig_configuration_profiles.this.configuration_profile_ids}"
+        },
+        "id": {
+            "description": "The unique identifier for the specific AWS AppConfig configuration profile data source.",
+            "value": "${data.aws_appconfig_configuration_profiles.this.id}"
+        }
+    }
+}

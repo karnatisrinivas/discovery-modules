@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Public Ipv4 Pool"
+  node:
+    label:
+      static: "[Data] Ec2 Public Ipv4 Pool"
+      template: "[Data] Ec2 Public Ipv4 Pool"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_public_ipv4_pool
+  dnd_supported: false

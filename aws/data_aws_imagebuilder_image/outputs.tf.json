@@ -1,0 +1,68 @@
+{
+    "output": {
+        "build_version_arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the build version of the image.",
+            "value": "${data.aws_imagebuilder_image.this.build_version_arn}"
+        },
+        "container_recipe_arn": {
+            "description": "The ARN of the container recipe used to create the image.",
+            "value": "${data.aws_imagebuilder_image.this.container_recipe_arn}"
+        },
+        "date_created": {
+            "description": "The date when the image was created.",
+            "value": "${data.aws_imagebuilder_image.this.date_created}"
+        },
+        "distribution_configuration_arn": {
+            "description": "The ARN of the distribution configuration associated with the image.",
+            "value": "${data.aws_imagebuilder_image.this.distribution_configuration_arn}"
+        },
+        "enhanced_image_metadata_enabled": {
+            "description": "Indicates whether enhanced image metadata is enabled for the image.",
+            "value": "${data.aws_imagebuilder_image.this.enhanced_image_metadata_enabled}"
+        },
+        "id": {
+            "description": "The unique identifier for the image.",
+            "value": "${data.aws_imagebuilder_image.this.id}"
+        },
+        "image_recipe_arn": {
+            "description": "The ARN of the image recipe used to create the image.",
+            "value": "${data.aws_imagebuilder_image.this.image_recipe_arn}"
+        },
+        "image_scanning_configuration": {
+            "description": "Configuration settings for scanning the image, including details on ECR repositories and tags.",
+            "value": "${data.aws_imagebuilder_image.this.image_scanning_configuration}"
+        },
+        "image_tests_configuration": {
+            "description": "Configuration for testing the image, specifying if tests are enabled and the timeout duration.",
+            "value": "${data.aws_imagebuilder_image.this.image_tests_configuration}"
+        },
+        "infrastructure_configuration_arn": {
+            "description": "The ARN of the infrastructure configuration used during the image build.",
+            "value": "${data.aws_imagebuilder_image.this.infrastructure_configuration_arn}"
+        },
+        "name": {
+            "description": "The name of the image.",
+            "value": "${data.aws_imagebuilder_image.this.name}"
+        },
+        "os_version": {
+            "description": "The version of the operating system included in the image.",
+            "value": "${data.aws_imagebuilder_image.this.os_version}"
+        },
+        "output_resources": {
+            "description": "The resources produced by the image build, including AMIs and container images.",
+            "value": "${data.aws_imagebuilder_image.this.output_resources}"
+        },
+        "platform": {
+            "description": "The platform of the image, such as Linux or Windows.",
+            "value": "${data.aws_imagebuilder_image.this.platform}"
+        },
+        "tags": {
+            "description": "Key-value pairs assigned to the image for identification and organization.",
+            "value": "${data.aws_imagebuilder_image.this.tags}"
+        },
+        "version": {
+            "description": "The version number of the image.",
+            "value": "${data.aws_imagebuilder_image.this.version}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpclattice Auth Policy"
+  node:
+    label:
+      static: "[Data] Vpclattice Auth Policy"
+      template: "[Data] Vpclattice Auth Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_vpclattice_auth_policy
+  dnd_supported: false

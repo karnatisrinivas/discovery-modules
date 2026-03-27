@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Access Context Manager Access Level
+  node:
+    label:
+      static: Access Context Manager Access Level
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_access_context_manager_access_level
+  dnd_supported: false

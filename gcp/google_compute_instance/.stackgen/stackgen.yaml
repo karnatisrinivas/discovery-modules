@@ -1,0 +1,40 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance
+  node:
+    label:
+      static: Compute Instance
+      template: ${name}
+    display_type: default
+
+variables:
+  shielded_instance_config:
+    description: "Configures Shielded VM features for enhanced security, such as secure boot, vTPM, and integrity monitoring. Only applicable to Shielded VM-compatible machine types."
+    attributes: 
+      enable_integrity_monitoring: 
+        label: Enable Integrity Monitoring
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+      enable_secure_boot: 
+        label: Enable Secure Boot
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+      enable_vtpm: 
+        label: Enable VTPM
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+
+discovery:
+  type: google_compute_instance
+  dnd_supported: false

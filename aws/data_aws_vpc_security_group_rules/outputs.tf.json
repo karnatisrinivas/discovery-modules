@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the security group rule.",
+            "value": "${data.aws_vpc_security_group_rules.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for the security group rules.",
+            "value": "${data.aws_vpc_security_group_rules.this.ids}"
+        }
+    }
+}

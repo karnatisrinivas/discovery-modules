@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Route"
+  node:
+    label:
+      static: "[Data] Appmesh Route"
+      template: "[Data] Appmesh Route"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_route
+  dnd_supported: false

@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "consumer_accept_list": [
+      {
+        "description": "Defines the list of CIDR ranges that are allowed to access the Apigee instance, ensuring secure connectivity.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description of the Apigee instance, providing context or purpose for the instance; must not exceed 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disk_encryption_key_name": [
+      {
+        "description": "Specifies the name of the customer-managed encryption key (CMEK) used to encrypt the disk, requiring the key to exist in Cloud KMS within the same project and region as the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Defines the user-friendly name for the Apigee instance, which must be unique within the organization and adhere to naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_range": [
+      {
+        "description": "Specifies the CIDR block for the instance's private IP range. Must be a /22 block within an RFC 1918 address range and cannot overlap with existing networks.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the Compute Engine region where the Apigee instance will be created; must match the region of associated network resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Apigee instance, adhering to naming conventions and constraints.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Specifies the Apigee organization ID to associate with the instance; must be an existing organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "peering_cidr_range": [
+      {
+        "description": "Specifies the CIDR range for the peering network, must be a /16 range and cannot overlap with existing subnets in the network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the custom timeout settings for creating, updating, and deleting the Apigee instance.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

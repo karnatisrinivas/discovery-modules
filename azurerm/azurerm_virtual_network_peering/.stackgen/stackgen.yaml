@@ -1,0 +1,62 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Network Peering
+  node:
+    label:
+      static: Virtual Network Peering
+      template: ${name}
+    display_type: default
+
+variables:
+  allow_virtual_network_access:
+    description: Whether to allow virtual network access from the local virtual network to the remote virtual network
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  allow_forwarded_traffic:
+    ui_control: select
+    description: Controls if forwarded traffic from VMs in the remote virtual network is allowed
+    type: bool
+    options: 
+      - true
+      - false
+  allow_gateway_transit:
+    description: Controls if gateway links can be used in the remote virtual network
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  only_ipv6_peering_enabled:
+    description: Whether to enable only IPv6 peering
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  peer_complete_virtual_networks_enabled:
+    description: Whether to enable complete virtual network peering
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  use_remote_gateways:
+    description: Controls if remote gateways can be used in the local virtual network
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_virtual_network_peering
+  dnd_supported: false
+  references:
+    virtual_network_name:
+      from: azurerm_virtual_network
+      output: name

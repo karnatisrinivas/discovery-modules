@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssoadmin Application Assignments"
+  node:
+    label:
+      static: "[Data] Ssoadmin Application Assignments"
+      template: "[Data] Ssoadmin Application Assignments"
+    display_type: default
+
+discovery:
+  type: data_aws_ssoadmin_application_assignments
+  dnd_supported: false

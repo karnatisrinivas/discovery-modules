@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] IAM Policy Document"
+  node:
+    label:
+      static: "[Data] IAM Policy Document"
+      template: "[Data] IAM Policy Document"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_policy_document
+  dnd_supported: false
+  references:
+    policy_id:
+      from: aws_iam_policy
+      output: policy_id

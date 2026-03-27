@@ -1,0 +1,102 @@
+{
+  "variable": {
+    "api_key_selection_expression": [
+      {
+        "description": "Specifies the key selection expression for API key validation, used to determine which request header or query string parameter to use for identifying the API key.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "aws_apigatewayv2_api_version": [
+      {
+        "description": "Specifies the API version for the AWS API Gateway v2, typically \"HTTP\" or \"WEBSOCKET\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "body": [
+      {
+        "description": "Defines the OpenAPI specification for the API, provided as a JSON or YAML string. Required for creating an HTTP or WebSocket API.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cors_configuration": [
+      {
+        "description": "Defines the Cross-Origin Resource Sharing (CORS) settings for the API, including allowed origins, methods, headers, and other related configurations.",
+        "nullable": true,
+        "type": "list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origins: optional(list(string)),expose_headers: optional(list(string)),max_age: optional(number)}))"
+      }
+    ],
+    "credentials_arn": [
+      {
+        "description": "Specifies the ARN of an IAM role that API Gateway uses to invoke the integration, required for AWS service integrations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description of the API Gateway resource, providing details about its purpose or functionality. Optional and can be up to 1024 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_execute_api_endpoint": [
+      {
+        "description": "Specifies whether clients can invoke the API directly via the default endpoint. Set to true to disable the default endpoint.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "fail_on_warnings": [
+      {
+        "description": "Determines whether API creation should proceed if warnings are generated; set to true to fail on warnings.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the API, which must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "protocol_type": [
+      {
+        "description": "Defines the protocol for the API, such as HTTP or WEBSOCKET, which determines the type of API created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "route_key": [
+      {
+        "description": "Specifies the key used to identify the route, typically in the format \"HTTP method:path\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "route_selection_expression": [
+      {
+        "description": "Defines the selection expression used by the API Gateway to determine which route matches an incoming request, required for WebSocket APIs.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the API Gateway resource for organization, billing, or other purposes; optional.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "target": [
+      {
+        "description": "Specifies the integration target endpoint for the API, such as an AWS Lambda function URI, VPC link, or HTTP URL.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redshift Cluster
+  node:
+    label:
+      static: Redshift Cluster
+      template: Redshift Cluster
+    display_type: default
+
+variables:
+  availability_zone_relocation_enabled:
+    description: The cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Available for use on clusters from the RA3 instance family.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  allow_version_upgrade:
+    description: If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  cluster_type:
+    options: 
+      - "single-node"
+      - "multi-node"
+    ui_control: select
+    description: The cluster type to use
+    type: string
+  enhanced_vpc_routing:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Enhanced VPC routing is enabled.
+    type: bool
+  skip_final_snapshot:
+    description: Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  maintenance_track_name:
+    description: The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster.
+    type: string
+    options: 
+      - current
+      - trailing
+    ui_control: select
+  apply_immediately:
+    description: Specifies whether any cluster modifications are applied immediately, or during the next maintenance window.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  encrypted:
+    description: Whether to encrypt data in the cluster at rest.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  node_type:
+    description: The node type to be provisioned for the cluster.
+    type: string
+    options: 
+      - ra3.xlplus
+      - ra3.4xlarge
+      - ra3.16xlarge
+      - dc2.large
+      - dc2.8xlarge
+    ui_control: select
+
+discovery:
+  type: aws_redshift_cluster
+  dnd_supported: false
+  data_source: data_aws_redshift_cluster

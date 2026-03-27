@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the AWS Inspector rules packages.",
+            "value": "${data.aws_inspector_rules_packages.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Inspector rules package data source.",
+            "value": "${data.aws_inspector_rules_packages.this.id}"
+        }
+    }
+}

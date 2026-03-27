@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the Cloud Scheduler job in configurations",
+            "value": "${google_cloud_scheduler_job.this.id}"
+        },
+        "state": {
+            "description": "Current operational state of the Cloud Scheduler job",
+            "value": "${google_cloud_scheduler_job.this.state}"
+        }
+    }
+}

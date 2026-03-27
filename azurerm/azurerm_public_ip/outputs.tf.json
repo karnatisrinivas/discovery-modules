@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the public IP address resource.",
+            "value": "${azurerm_public_ip.this.id}"
+        },
+        "ip_address": {
+            "description": "The IP address of the public IP address resource.",
+            "value": "${azurerm_public_ip.this.ip_address}"
+        }
+    }
+}

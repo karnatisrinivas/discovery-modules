@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) is a unique identifier for an AWS resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

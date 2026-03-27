@@ -1,0 +1,12 @@
+{
+    "output": {
+        "delegated_administrators": {
+            "description": "A set containing details of AWS delegated administrators, including their ARN, email, ID, and other relevant information.",
+            "value": "${data.aws_organizations_delegated_administrators.this.delegated_administrators}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Organizations delegated administrators data source.",
+            "value": "${data.aws_organizations_delegated_administrators.this.id}"
+        }
+    }
+}

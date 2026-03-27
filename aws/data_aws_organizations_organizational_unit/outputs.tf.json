@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the organizational unit.",
+            "value": "${data.aws_organizations_organizational_unit.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the organizational unit.",
+            "value": "${data.aws_organizations_organizational_unit.this.id}"
+        }
+    }
+}

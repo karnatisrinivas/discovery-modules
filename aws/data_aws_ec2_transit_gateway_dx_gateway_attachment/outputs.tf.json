@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the EC2 Transit Gateway Direct Connect Gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_dx_gateway_attachment.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the EC2 Transit Gateway Direct Connect Gateway attachment.",
+            "value": "${data.aws_ec2_transit_gateway_dx_gateway_attachment.this.tags}"
+        }
+    }
+}

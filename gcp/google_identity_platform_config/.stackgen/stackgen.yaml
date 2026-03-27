@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Identity Platform Config
+  node:
+    label:
+      static: Identity Platform Config
+      template: Identity Platform Config
+    display_type: default
+
+discovery:
+  type: google_identity_platform_config
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Resource
+  node:
+    label:
+      static: IAM Resource
+      template: IAM Resource
+    display_type: default
+
+discovery:
+  type: google_iam_connection_resource
+  dnd_supported: false

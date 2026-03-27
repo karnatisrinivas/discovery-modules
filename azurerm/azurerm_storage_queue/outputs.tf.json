@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the storage queue.",
+            "value": "${azurerm_storage_queue.this.id}"
+        },
+        "resource_manager_id": {
+            "description": "The Resource Manager ID of the storage queue.",
+            "value": "${azurerm_storage_queue.this.resource_manager_id}"
+        }
+    }
+}

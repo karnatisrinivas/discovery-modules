@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elastic Beanstalk Hosted Zone"
+  node:
+    label:
+      static: "[Data] Elastic Beanstalk Hosted Zone"
+      template: "[Data] Elastic Beanstalk Hosted Zone"
+    display_type: default
+
+discovery:
+  type: data_aws_elastic_beanstalk_hosted_zone
+  dnd_supported: false

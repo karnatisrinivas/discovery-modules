@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigatewayv2 Integration
+  node:
+    label:
+      static: Apigatewayv2 Integration
+      template: ${api_id}
+    display_type: default
+
+discovery:
+  type: aws_apigatewayv2_integration
+  dnd_supported: false
+  references:
+    api_id:
+      from: aws_apigatewayv2_api
+      output: id
+    credentials_arn:
+      from: aws_iam_role
+      output: arn
+    integration_uri:
+      from: aws_lambda_function
+      output: invoke_arn

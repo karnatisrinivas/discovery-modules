@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Auditmanager Control"
+  node:
+    label:
+      static: "[Data] Auditmanager Control"
+      template: "[Data] Auditmanager Control"
+    display_type: default
+
+discovery:
+  type: data_aws_auditmanager_control
+  dnd_supported: false

@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Account Alias
+  node:
+    label:
+      static: IAM Account Alias
+      template: ${account_alias}
+    display_type: default
+
+discovery:
+  type: aws_iam_account_alias
+  dnd_supported: false
+  data_source: data_aws_iam_account_alias

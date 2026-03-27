@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Backup Vault.",
+            "value": "${data.aws_backup_vault.this.arn}"
+        },
+        "id": {
+            "description": "The ID of the AWS Backup Vault.",
+            "value": "${data.aws_backup_vault.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "The ARN of the KMS key used to encrypt the backup vault.",
+            "value": "${data.aws_backup_vault.this.kms_key_arn}"
+        },
+        "recovery_points": {
+            "description": "The number of recovery points stored in the backup vault.",
+            "value": "${data.aws_backup_vault.this.recovery_points}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Backup Vault.",
+            "value": "${data.aws_backup_vault.this.tags}"
+        }
+    }
+}

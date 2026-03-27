@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Managed Prefix Lists"
+  node:
+    label:
+      static: "[Data] Ec2 Managed Prefix Lists"
+      template: "[Data] Ec2 Managed Prefix Lists"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_managed_prefix_lists
+  dnd_supported: false

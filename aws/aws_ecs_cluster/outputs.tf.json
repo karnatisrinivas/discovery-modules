@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_ecs_cluster.this.arn}"
+        },
+        "name": {
+            "description": "The name of the ECS Cluster.",
+            "value": "${aws_ecs_cluster.this.name}"
+        }
+    }
+}

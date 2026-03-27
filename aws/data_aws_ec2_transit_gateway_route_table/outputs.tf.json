@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the transit gateway route table.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.arn}"
+        },
+        "default_association_route_table": {
+            "description": "Indicates whether this is the default association route table for the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.default_association_route_table}"
+        },
+        "default_propagation_route_table": {
+            "description": "Indicates whether this is the default propagation route table for the transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.default_propagation_route_table}"
+        },
+        "id": {
+            "description": "The ID of the transit gateway route table.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the transit gateway route table.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.tags}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the transit gateway to which the route table belongs.",
+            "value": "${data.aws_ec2_transit_gateway_route_table.this.transit_gateway_id}"
+        }
+    }
+}

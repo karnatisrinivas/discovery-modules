@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for managing lifecycle rules of the S3 bucket",
+            "value": "${aws_s3_bucket_lifecycle_configuration.this.id}"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Connect vocabulary.",
+            "value": "${data.aws_connect_vocabulary.this.arn}"
+        },
+        "content": {
+            "description": "The content of the AWS Connect vocabulary in JSON format.",
+            "value": "${data.aws_connect_vocabulary.this.content}"
+        },
+        "failure_reason": {
+            "description": "The reason for any failure that occurred during the vocabulary creation or update process.",
+            "value": "${data.aws_connect_vocabulary.this.failure_reason}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Connect vocabulary.",
+            "value": "${data.aws_connect_vocabulary.this.id}"
+        },
+        "language_code": {
+            "description": "The language code of the vocabulary, indicating the language it is used for.",
+            "value": "${data.aws_connect_vocabulary.this.language_code}"
+        },
+        "last_modified_time": {
+            "description": "The timestamp of when the vocabulary was last modified.",
+            "value": "${data.aws_connect_vocabulary.this.last_modified_time}"
+        },
+        "name": {
+            "description": "The name of the AWS Connect vocabulary.",
+            "value": "${data.aws_connect_vocabulary.this.name}"
+        },
+        "state": {
+            "description": "The current state of the vocabulary, such as 'ACTIVE' or 'FAILED'.",
+            "value": "${data.aws_connect_vocabulary.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the vocabulary for organizational purposes.",
+            "value": "${data.aws_connect_vocabulary.this.tags}"
+        },
+        "vocabulary_id": {
+            "description": "The ID of the vocabulary used to uniquely identify it within AWS Connect.",
+            "value": "${data.aws_connect_vocabulary.this.vocabulary_id}"
+        }
+    }
+}

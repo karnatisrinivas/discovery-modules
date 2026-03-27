@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the FSx OpenZFS snapshot.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the FSx OpenZFS snapshot was created.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.creation_time}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the FSx OpenZFS snapshot.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.id}"
+        },
+        "snapshot_id": {
+            "description": "The specific ID of the FSx OpenZFS snapshot.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.snapshot_id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the FSx OpenZFS snapshot.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.tags}"
+        },
+        "volume_id": {
+            "description": "The ID of the volume from which the FSx OpenZFS snapshot was created.",
+            "value": "${data.aws_fsx_openzfs_snapshot.this.volume_id}"
+        }
+    }
+}

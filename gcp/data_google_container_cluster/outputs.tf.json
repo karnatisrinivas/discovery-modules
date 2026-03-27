@@ -1,0 +1,308 @@
+{
+    "output": {
+        "addons_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.addons_config}"
+        },
+        "allow_net_admin": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.allow_net_admin}"
+        },
+        "authenticator_groups_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.authenticator_groups_config}"
+        },
+        "binary_authorization": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.binary_authorization}"
+        },
+        "cluster_autoscaling": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.cluster_autoscaling}"
+        },
+        "cluster_ipv4_cidr": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.cluster_ipv4_cidr}"
+        },
+        "confidential_nodes": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.confidential_nodes}"
+        },
+        "control_plane_endpoints_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.control_plane_endpoints_config}"
+        },
+        "cost_management_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.cost_management_config}"
+        },
+        "database_encryption": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.database_encryption}"
+        },
+        "datapath_provider": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.datapath_provider}"
+        },
+        "default_max_pods_per_node": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.default_max_pods_per_node}"
+        },
+        "default_snat_status": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.default_snat_status}"
+        },
+        "deletion_protection": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.deletion_protection}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.description}"
+        },
+        "disable_l4_lb_firewall_reconciliation": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.disable_l4_lb_firewall_reconciliation}"
+        },
+        "dns_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.dns_config}"
+        },
+        "effective_labels": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.effective_labels}"
+        },
+        "enable_autopilot": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_autopilot}"
+        },
+        "enable_cilium_clusterwide_network_policy": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_cilium_clusterwide_network_policy}"
+        },
+        "enable_fqdn_network_policy": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_fqdn_network_policy}"
+        },
+        "enable_intranode_visibility": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_intranode_visibility}"
+        },
+        "enable_k8s_beta_apis": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_k8s_beta_apis}"
+        },
+        "enable_kubernetes_alpha": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_kubernetes_alpha}"
+        },
+        "enable_l4_ilb_subsetting": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_l4_ilb_subsetting}"
+        },
+        "enable_legacy_abac": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_legacy_abac}"
+        },
+        "enable_multi_networking": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_multi_networking}"
+        },
+        "enable_shielded_nodes": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_shielded_nodes}"
+        },
+        "enable_tpu": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enable_tpu}"
+        },
+        "endpoint": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.endpoint}"
+        },
+        "enterprise_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.enterprise_config}"
+        },
+        "fleet": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.fleet}"
+        },
+        "gateway_api_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.gateway_api_config}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.id}"
+        },
+        "identity_service_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.identity_service_config}"
+        },
+        "initial_node_count": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.initial_node_count}"
+        },
+        "ip_allocation_policy": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.ip_allocation_policy}"
+        },
+        "label_fingerprint": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.label_fingerprint}"
+        },
+        "logging_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.logging_config}"
+        },
+        "logging_service": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.logging_service}"
+        },
+        "maintenance_policy": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.maintenance_policy}"
+        },
+        "master_auth": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.master_auth}"
+        },
+        "master_authorized_networks_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.master_authorized_networks_config}"
+        },
+        "master_version": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.master_version}"
+        },
+        "mesh_certificates": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.mesh_certificates}"
+        },
+        "min_master_version": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.min_master_version}"
+        },
+        "monitoring_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.monitoring_config}"
+        },
+        "monitoring_service": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.monitoring_service}"
+        },
+        "network": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.network}"
+        },
+        "network_policy": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.network_policy}"
+        },
+        "networking_mode": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.networking_mode}"
+        },
+        "node_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_config}"
+        },
+        "node_locations": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_locations}"
+        },
+        "node_pool": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_pool}"
+        },
+        "node_pool_auto_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_pool_auto_config}"
+        },
+        "node_pool_defaults": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_pool_defaults}"
+        },
+        "node_version": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.node_version}"
+        },
+        "notification_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.notification_config}"
+        },
+        "operation": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.operation}"
+        },
+        "private_cluster_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.private_cluster_config}"
+        },
+        "private_ipv6_google_access": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.private_ipv6_google_access}"
+        },
+        "release_channel": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.release_channel}"
+        },
+        "remove_default_node_pool": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.remove_default_node_pool}"
+        },
+        "resource_labels": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.resource_labels}"
+        },
+        "resource_usage_export_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.resource_usage_export_config}"
+        },
+        "secret_manager_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.secret_manager_config}"
+        },
+        "security_posture_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.security_posture_config}"
+        },
+        "self_link": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.self_link}"
+        },
+        "service_external_ips_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.service_external_ips_config}"
+        },
+        "services_ipv4_cidr": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.services_ipv4_cidr}"
+        },
+        "subnetwork": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.subnetwork}"
+        },
+        "terraform_labels": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.terraform_labels}"
+        },
+        "tpu_ipv4_cidr_block": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.tpu_ipv4_cidr_block}"
+        },
+        "user_managed_keys_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.user_managed_keys_config}"
+        },
+        "vertical_pod_autoscaling": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.vertical_pod_autoscaling}"
+        },
+        "workload_identity_config": {
+            "description": "",
+            "value": "${data.google_container_cluster.this.workload_identity_config}"
+        }
+    }
+}

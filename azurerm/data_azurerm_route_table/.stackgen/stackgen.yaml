@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route Table"
+  node:
+    label:
+      static: "[Data] Route Table"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_route_table
+  dnd_supported: false

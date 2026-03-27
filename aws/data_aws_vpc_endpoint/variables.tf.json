@@ -1,0 +1,14 @@
+{
+  "variable": {
+    "vpc_id": [{
+      "description": "The ID of the VPC",
+      "type": "string",
+      "nullable": false
+    }],
+    "service_name": [{
+      "description": "The name of the service",
+      "type": "string",
+      "nullable": false
+    }]
+  }
+}

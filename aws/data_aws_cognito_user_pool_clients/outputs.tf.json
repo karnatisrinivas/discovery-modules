@@ -1,0 +1,16 @@
+{
+    "output": {
+        "client_ids": {
+            "description": "A list of IDs for the Cognito user pool clients.",
+            "value": "${data.aws_cognito_user_pool_clients.this.client_ids}"
+        },
+        "client_names": {
+            "description": "A list of names for the Cognito user pool clients.",
+            "value": "${data.aws_cognito_user_pool_clients.this.client_names}"
+        },
+        "id": {
+            "description": "The ID of the Cognito user pool clients resource.",
+            "value": "${data.aws_cognito_user_pool_clients.this.id}"
+        }
+    }
+}

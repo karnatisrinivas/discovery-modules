@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Name of Log Analytics Workspace"
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true,
+        "default": {}
+      }
+    ],
+    "retention_in_days": [
+      {
+        "type": "number",
+        "description": "The retention period for the logs in days. Possible values range from 30 to 730.",
+        "default": 30,
+        "nullable": true
+      }
+    ],
+    "sku": [
+      {
+        "type": "string",
+        "description": "The SKU of the Log Analytics Workspace.",
+        "default": "PerGB2018",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

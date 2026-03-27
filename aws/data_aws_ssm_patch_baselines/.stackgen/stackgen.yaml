@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssm Patch Baselines"
+  node:
+    label:
+      static: "[Data] Ssm Patch Baselines"
+      template: "[Data] Ssm Patch Baselines"
+    display_type: default
+
+discovery:
+  type: data_aws_ssm_patch_baselines
+  dnd_supported: false

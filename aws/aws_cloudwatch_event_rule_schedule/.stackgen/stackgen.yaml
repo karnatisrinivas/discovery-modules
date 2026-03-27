@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "CloudWatch Event - Rule (Schedule)"
+  node:
+    label:
+      static: "CloudWatch Event - Rule (Schedule)"
+      template: ${rule_name}
+    display_type: default
+
+discovery:
+  type: aws_cloudwatch_event_rule_schedule
+  dnd_supported: false

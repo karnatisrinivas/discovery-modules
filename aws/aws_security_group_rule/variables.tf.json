@@ -1,0 +1,86 @@
+{
+    "variable": {
+        "security_group_id": [
+            {
+                "type": "string",
+                "description": " Security group to apply this rule to.",
+                "nullable": false
+            }
+        ],
+        "from_port": [
+            {
+                "type": "number",
+                "description": "Start port (or ICMP type number if protocol is `icmp` or `icmpv6`).",
+                "nullable": false
+            }
+        ],
+        "to_port": [
+            {
+                "type": "number",
+                "description": "End port (or ICMP code if protocol is `icmp`).",
+                "nullable": false
+            }
+        ],
+        "protocol": [
+            {
+                "type": "string",
+                "description": "Protocol. If not icmp, icmpv6, tcp, udp, use the protocol number",
+                "nullable": false
+            }
+        ],
+        "type": [
+            {
+                "type": "string",
+                "description": "Type of rule being created.",
+                "nullable": false
+            }
+        ],
+        "description": [
+            {
+                "type": "string",
+                "description": "Description of the rule.",
+                "nullable": true
+            }
+        ],
+        "self": [
+            {
+                "type": "bool",
+                "description": "Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `Cidr Blocks`, `Ipv6 Cidr Blocks`, or `Source Security Group Id`.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "source_security_group_id": [
+            {
+                "type": "string",
+                "description": "Security group id to allow access to/from, depending on the type. Cannot be specified with `Cidr Blocks`, `Ipv6 Cidr Blocks`, or `Self`.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "cidr_blocks": [
+            {
+                "type": "list(string)",
+                "description": "List of CIDR blocks. Cannot be specified with `Source Security Group Id` or `Self`.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "ipv6_cidr_blocks": [
+            {
+                "type": "list(string)",
+                "description": "List of IPv6 CIDR blocks. Cannot be specified with `Source Security Group Id` or `Self`.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "prefix_list_ids": [
+            {
+                "type": "list(string)",
+                "description": "List of prefix list IDs.",
+                "nullable": true,
+                "default": null
+            }
+        ]
+    }
+}

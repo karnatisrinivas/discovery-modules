@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "model_id": [
+      {
+        "description": "A unique identifier for the custom model in AWS Bedrock.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

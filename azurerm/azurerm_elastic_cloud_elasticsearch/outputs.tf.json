@@ -1,0 +1,8 @@
+{
+    "output": {
+        "elastic_cloud_elasticsearch_id": {
+            "description": "The value of the elastic_cloud_elasticsearch_id output",
+            "value": "${azurerm_elastic_cloud_elasticsearch.this.id}"
+        }
+    }
+}

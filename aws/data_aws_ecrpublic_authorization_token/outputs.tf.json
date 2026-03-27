@@ -1,0 +1,16 @@
+{
+    "output": {
+        "expires_at": {
+            "description": "",
+            "value": "${data.aws_ecrpublic_authorization_token.this.expires_at}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ecrpublic_authorization_token.this.id}"
+        },
+        "user_name": {
+            "description": "",
+            "value": "${data.aws_ecrpublic_authorization_token.this.user_name}"
+        }
+    }
+}

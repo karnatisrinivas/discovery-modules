@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kms Ciphertext"
+  node:
+    label:
+      static: "[Data] Kms Ciphertext"
+      template: "[Data] Kms Ciphertext"
+    display_type: default
+
+discovery:
+  type: data_aws_kms_ciphertext
+  dnd_supported: false

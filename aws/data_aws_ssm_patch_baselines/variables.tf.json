@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "default_baselines": [
+      {
+        "description": "Indicates whether to use the default patch baselines provided by AWS Systems Manager.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

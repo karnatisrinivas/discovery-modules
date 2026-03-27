@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "latest": [
+      {
+        "description": "Indicates whether to fetch only the latest version of the server certificate.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "A prefix to filter server certificates by name.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "path_prefix": [
+      {
+        "description": "A prefix to filter server certificates by path.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

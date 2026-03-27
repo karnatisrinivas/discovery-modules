@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Apigee environment, useful for linking and managing resources",
+            "value": "${google_apigee_environment.this.id}"
+        },
+        "name": {
+            "description": "Name of the Apigee environment",
+            "value": "${google_apigee_environment.this.name}"
+        }
+    }
+}

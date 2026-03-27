@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sfn Activity"
+  node:
+    label:
+      static: "[Data] Sfn Activity"
+      template: "[Data] Sfn Activity"
+    display_type: default
+
+discovery:
+  type: data_aws_sfn_activity
+  dnd_supported: false

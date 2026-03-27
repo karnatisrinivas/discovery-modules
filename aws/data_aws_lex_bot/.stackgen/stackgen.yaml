@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lex Bot"
+  node:
+    label:
+      static: "[Data] Lex Bot"
+      template: "[Data] Lex Bot"
+    display_type: default
+
+discovery:
+  type: data_aws_lex_bot
+  dnd_supported: false

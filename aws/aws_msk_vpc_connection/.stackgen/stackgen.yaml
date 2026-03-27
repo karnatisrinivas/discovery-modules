@@ -1,0 +1,25 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: MSK VPC Connection
+  node:
+    label:
+      static: MSK VPC Connection
+      template: MSK VPC Connection
+    display_type: default
+
+variables:
+  authentication:
+    ui_control: select
+    description: "The authentication type for the client VPC connection. Specify one of these auth type strings: SASL_IAM, SASL_SCRAM, or TLS."
+    type: string
+    options: 
+      - SASL_IAM
+      - SASL_SCRAM
+      - TLS
+
+discovery:
+  type: aws_msk_vpc_connection
+  dnd_supported: false
+  data_source: data_aws_msk_vpc_connection

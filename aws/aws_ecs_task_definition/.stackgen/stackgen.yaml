@@ -1,0 +1,41 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS ECS Task Definition
+  node:
+    label:
+      static: AWS ECS Task Definition
+      template: AWS ECS Task Definition
+    display_type: default
+
+variables:
+  ipc_mode:
+    type: string
+    options: 
+      - host
+      - task
+      - none
+    ui_control: select
+    description: IPC mode to use for the containers in the task
+  pid_mode:
+    description: PID mode to use for the containers in the task
+    type: string
+    options: 
+      - host
+      - task
+    ui_control: select
+  network_mode:
+    description: Docker networking mode to use for the containers in the task
+    type: string
+    options: 
+      - bridge
+      - host
+      - awsvpc
+      - none
+    ui_control: select
+
+discovery:
+  type: aws_ecs_task_definition
+  dnd_supported: false
+  data_source: data_aws_ecs_task_definition

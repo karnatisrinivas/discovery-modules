@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appintegrations Event Integration"
+  node:
+    label:
+      static: "[Data] Appintegrations Event Integration"
+      template: "[Data] Appintegrations Event Integration"
+    display_type: default
+
+discovery:
+  type: data_aws_appintegrations_event_integration
+  dnd_supported: false

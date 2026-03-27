@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the organizational unit to be created within the AWS Organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent_id": [
+      {
+        "description": "The unique identifier (ID) of the parent organizational unit or root under which the new organizational unit will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

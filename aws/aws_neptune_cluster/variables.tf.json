@@ -1,0 +1,221 @@
+{
+  "variable": {
+    "allow_major_version_upgrade": [
+      {
+        "description": "Indicates whether major version upgrades are allowed, which may involve significant changes to the database engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "apply_immediately": [
+      {
+        "description": "Determines whether modifications are applied immediately or during the next maintenance window.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "availability_zones": [
+      {
+        "description": "Specifies the availability zones where the cluster's instances will be created. Must be valid zones for the selected region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "backup_retention_period": [
+      {
+        "description": "The number of days to retain automated backups. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "cluster_identifier": [
+      {
+        "description": "A unique identifier for the cluster. Must be unique within the account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cluster_identifier_prefix": [
+      {
+        "description": "A prefix for the cluster identifier. The final identifier will include a random suffix.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "copy_tags_to_snapshot": [
+      {
+        "description": "Specifies whether tags assigned to the cluster are copied to snapshots.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "deletion_protection": [
+      {
+        "description": "Prevents the cluster from being deleted accidentally when enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_cloudwatch_logs_exports": [
+      {
+        "description": "A list of log types to export to CloudWatch Logs. Supported types depend on the database engine.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the database engine to use for the cluster (e.g., neptune).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine_version": [
+      {
+        "description": "The version of the database engine to use. Must be compatible with the selected engine.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "final_snapshot_identifier": [
+      {
+        "description": "The identifier for the final snapshot created before the cluster is deleted, if enabled.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "global_cluster_identifier": [
+      {
+        "description": "The identifier of the global database cluster if this cluster is part of a global setup.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "iam_database_authentication_enabled": [
+      {
+        "description": "Enables IAM database authentication for the cluster, allowing IAM users to authenticate.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "iam_roles": [
+      {
+        "description": "A list of IAM roles to associate with the cluster for additional permissions.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "kms_key_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the KMS key to encrypt the cluster's storage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "neptune_cluster_parameter_group_name": [
+      {
+        "description": "The name of the Neptune cluster parameter group to associate with the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "neptune_instance_parameter_group_name": [
+      {
+        "description": "The name of the Neptune instance parameter group to associate with the instances in the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "neptune_subnet_group_name": [
+      {
+        "description": "The name of the Neptune subnet group to associate with the cluster for network configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "port": [
+      {
+        "description": "The port number on which the database accepts connections. Must be valid for the engine type.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "preferred_backup_window": [
+      {
+        "description": "The daily time range (in UTC) during which automated backups are created. Format: hh24:mi-hh24:mi.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_maintenance_window": [
+      {
+        "description": "The weekly time range (in UTC) during which maintenance is performed. Format: ddd:hh24:mi-ddd:hh24:mi.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "replication_source_identifier": [
+      {
+        "description": "The identifier of the source cluster to replicate from, if creating a read replica.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "serverless_v2_scaling_configuration": [
+      {
+        "description": "Defines the scaling configuration for serverless v2 clusters, including optional min and max capacity.",
+        "nullable": true,
+        "type": "list(object({max_capacity: optional(number),min_capacity: optional(number)}))"
+      }
+    ],
+    "skip_final_snapshot": [
+      {
+        "description": "Specifies whether to skip creating a final snapshot when the cluster is deleted.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "snapshot_identifier": [
+      {
+        "description": "The identifier of an existing snapshot to restore when creating the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_encrypted": [
+      {
+        "description": "Indicates whether storage encryption is enabled for the cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "storage_type": [
+      {
+        "description": "Specifies the storage type to use for the cluster. Options vary by engine and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource for categorization or metadata purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeouts for create, update, and delete operations. Specify durations in string format (e.g., 30m).",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "vpc_security_group_ids": [
+      {
+        "description": "A list of VPC security group IDs to associate with the cluster for network security.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "collection_name": [
+      {
+        "description": "The name of the geofence collection in AWS Location Service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

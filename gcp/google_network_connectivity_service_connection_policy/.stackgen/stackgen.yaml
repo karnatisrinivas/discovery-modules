@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Connectivity Service Connection Policy
+  node:
+    label:
+      static: Network Connectivity Service Connection Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_network_connectivity_service_connection_policy
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id

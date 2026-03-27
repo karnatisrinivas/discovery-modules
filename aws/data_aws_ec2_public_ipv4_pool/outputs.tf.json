@@ -1,0 +1,32 @@
+{
+    "output": {
+        "description": {
+            "description": "A brief explanation of the public IPv4 pool.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the public IPv4 pool.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.id}"
+        },
+        "network_border_group": {
+            "description": "The group associated with the pool's network border.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.network_border_group}"
+        },
+        "pool_address_ranges": {
+            "description": "List of address ranges in the pool with additional details.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.pool_address_ranges}"
+        },
+        "tags": {
+            "description": "Tags assigned to the public IPv4 pool for identification.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.tags}"
+        },
+        "total_address_count": {
+            "description": "The total number of addresses in the pool.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.total_address_count}"
+        },
+        "total_available_address_count": {
+            "description": "The number of addresses currently available in the pool.",
+            "value": "${data.aws_ec2_public_ipv4_pool.this.total_available_address_count}"
+        }
+    }
+}

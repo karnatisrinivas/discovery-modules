@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.arn}"
+        },
+        "direction": {
+            "description": "The direction of traffic to or from the Route 53 Resolver endpoint (INBOUND or OUTBOUND).",
+            "value": "${data.aws_route53_resolver_endpoint.this.direction}"
+        },
+        "id": {
+            "description": "The unique identifier for the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.id}"
+        },
+        "ip_addresses": {
+            "description": "A set of IP addresses associated with the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.ip_addresses}"
+        },
+        "name": {
+            "description": "The name of the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.name}"
+        },
+        "protocols": {
+            "description": "The set of protocols used by the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.protocols}"
+        },
+        "resolver_endpoint_type": {
+            "description": "The type of the Route 53 Resolver endpoint (e.g., IPv4, IPv6).",
+            "value": "${data.aws_route53_resolver_endpoint.this.resolver_endpoint_type}"
+        },
+        "status": {
+            "description": "The current status of the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.status}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC associated with the Route 53 Resolver endpoint.",
+            "value": "${data.aws_route53_resolver_endpoint.this.vpc_id}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "type": [
+      {
+        "description": "Specifies the type of resource collection for AWS DevOps Guru, such as AWS CloudFormation stacks or AWS tags.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

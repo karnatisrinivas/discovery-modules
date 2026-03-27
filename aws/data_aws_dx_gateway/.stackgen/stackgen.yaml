@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dx Gateway"
+  node:
+    label:
+      static: "[Data] Dx Gateway"
+      template: "[Data] Dx Gateway"
+    display_type: default
+
+discovery:
+  type: data_aws_dx_gateway
+  dnd_supported: false

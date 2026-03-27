@@ -1,0 +1,100 @@
+{
+  "variable": {
+    "enclave_type": [
+      {
+        "description": "Specifies the type of enclave used for confidential computing, such as Virtualization-Based Security (VBS) or Intel SGX.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "license_type": [
+      {
+        "description": "Specifies the licensing model for the SQL elastic pool, either 'LicenseIncluded' or 'BasePrice'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "maintenance_configuration_name": [
+      {
+        "description": "Specifies the name of the maintenance configuration to apply to the elastic pool. Must be a valid maintenance configuration name in the region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "max_size_bytes": [
+      {
+        "description": "Specifies the maximum storage size for the elastic pool in bytes. Must be within the supported range for the selected service tier.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "max_size_gb": [
+      {
+        "description": "Specifies the maximum storage size in gigabytes for the elastic pool. Must be a valid size supported by the selected service tier.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Elastic Pool. Must be unique within the SQL Server and comply with Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "per_database_settings": [
+      {
+        "description": "Defines the minimum and maximum DTU settings for each database in the elastic pool.",
+        "nullable": false,
+        "type": "list(object({max_capacity: number,min_capacity: number}))"
+      }
+    ],
+    "server_name": [
+      {
+        "description": "Specifies the name of the SQL Server to associate with the Elastic Pool. This must exist in the same resource group and Azure region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Defines the pricing tier and performance level for the elastic pool, specifying the edition, family, and capacity.",
+        "nullable": false,
+        "type": "list(object({capacity: number,family: optional(string),name: string,tier: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize resources, supporting efficient management and cost tracking.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for create, update, and delete operations of the elastic pool.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone_redundant": [
+      {
+        "description": "Specifies whether the elastic pool should be zone-redundant, requiring availability zones to be enabled in the region.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

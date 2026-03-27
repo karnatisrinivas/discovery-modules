@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Group
+  node:
+    label:
+      static: IAM Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_group
+  dnd_supported: false
+  data_source: data_aws_iam_group

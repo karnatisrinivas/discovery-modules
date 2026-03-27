@@ -1,0 +1,72 @@
+{
+    "output": {
+        "address_family": {
+            "description": "The type of IP address, either IPv4 or IPv6.",
+            "value": "${data.aws_vpc_ipam_pool.this.address_family}"
+        },
+        "allocation_default_netmask_length": {
+            "description": "The default netmask length for IP allocations from this pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.allocation_default_netmask_length}"
+        },
+        "allocation_max_netmask_length": {
+            "description": "The maximum netmask length that can be allocated from this pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.allocation_max_netmask_length}"
+        },
+        "allocation_min_netmask_length": {
+            "description": "The minimum netmask length that can be allocated from this pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.allocation_min_netmask_length}"
+        },
+        "allocation_resource_tags": {
+            "description": "Tags applied to resources allocated from this pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.allocation_resource_tags}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.arn}"
+        },
+        "auto_import": {
+            "description": "Indicates whether resources in the pool are automatically imported.",
+            "value": "${data.aws_vpc_ipam_pool.this.auto_import}"
+        },
+        "aws_service": {
+            "description": "The AWS service associated with the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.aws_service}"
+        },
+        "description": {
+            "description": "A description of the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.description}"
+        },
+        "ipam_scope_id": {
+            "description": "The ID of the IPAM scope this pool belongs to.",
+            "value": "${data.aws_vpc_ipam_pool.this.ipam_scope_id}"
+        },
+        "ipam_scope_type": {
+            "description": "The type of IPAM scope, either public or private.",
+            "value": "${data.aws_vpc_ipam_pool.this.ipam_scope_type}"
+        },
+        "locale": {
+            "description": "The locale of the IPAM pool, indicating its region.",
+            "value": "${data.aws_vpc_ipam_pool.this.locale}"
+        },
+        "pool_depth": {
+            "description": "The depth of the pool in the IPAM hierarchy.",
+            "value": "${data.aws_vpc_ipam_pool.this.pool_depth}"
+        },
+        "publicly_advertisable": {
+            "description": "Indicates if the pool can be publicly advertised.",
+            "value": "${data.aws_vpc_ipam_pool.this.publicly_advertisable}"
+        },
+        "source_ipam_pool_id": {
+            "description": "The ID of the source IPAM pool, if applicable.",
+            "value": "${data.aws_vpc_ipam_pool.this.source_ipam_pool_id}"
+        },
+        "state": {
+            "description": "The current state of the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.state}"
+        },
+        "tags": {
+            "description": "Key-value pairs of tags associated with the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_pool.this.tags}"
+        }
+    }
+}

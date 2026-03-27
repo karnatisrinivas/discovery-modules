@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Alb Target Group Attachment
+  node:
+    label:
+      static: Alb Target Group Attachment
+      template: ${target_id}
+    display_type: default
+
+discovery:
+  type: aws_alb_target_group_attachment
+  dnd_supported: false
+  references:
+    target_group_arn:
+      from: aws_lb_target_group
+      output: arn

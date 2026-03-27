@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: GCP tfvars Resource
+  node:
+    label:
+      static: GCP tfvars Resource
+      template: GCP tfvars Resource
+    display_type: default
+
+discovery:
+  type: google_tfvars_resource
+  dnd_supported: false

@@ -1,0 +1,35 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the CDN Profile. Changing this forces a new resource to be created."
+      }
+    ],
+    "sku": [
+      {
+        "type": "string",
+        "description": "The pricing related information of current CDN profile. Changing this forces a new resource to be created."
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

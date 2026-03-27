@@ -1,0 +1,80 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ElastiCache replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.arn}"
+        },
+        "auth_token_enabled": {
+            "description": "Indicates whether an authentication token is enabled for the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.auth_token_enabled}"
+        },
+        "automatic_failover_enabled": {
+            "description": "Shows if automatic failover is enabled for the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.automatic_failover_enabled}"
+        },
+        "cluster_mode": {
+            "description": "The cluster mode of the ElastiCache replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.cluster_mode}"
+        },
+        "configuration_endpoint_address": {
+            "description": "The configuration endpoint address of the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.configuration_endpoint_address}"
+        },
+        "description": {
+            "description": "A description of the ElastiCache replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.description}"
+        },
+        "id": {
+            "description": "The ID of the ElastiCache replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.id}"
+        },
+        "log_delivery_configuration": {
+            "description": "The configuration for log delivery, including destination and format.",
+            "value": "${data.aws_elasticache_replication_group.this.log_delivery_configuration}"
+        },
+        "member_clusters": {
+            "description": "The list of member clusters in the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.member_clusters}"
+        },
+        "multi_az_enabled": {
+            "description": "Indicates if Multi-AZ is enabled for the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.multi_az_enabled}"
+        },
+        "node_type": {
+            "description": "The type of node used in the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.node_type}"
+        },
+        "num_cache_clusters": {
+            "description": "The number of cache clusters in the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.num_cache_clusters}"
+        },
+        "num_node_groups": {
+            "description": "The number of node groups (shards) in the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.num_node_groups}"
+        },
+        "port": {
+            "description": "The port number on which the replication group is accepting connections.",
+            "value": "${data.aws_elasticache_replication_group.this.port}"
+        },
+        "primary_endpoint_address": {
+            "description": "The primary endpoint address of the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.primary_endpoint_address}"
+        },
+        "reader_endpoint_address": {
+            "description": "The reader endpoint address of the replication group.",
+            "value": "${data.aws_elasticache_replication_group.this.reader_endpoint_address}"
+        },
+        "replicas_per_node_group": {
+            "description": "The number of replica nodes in each node group.",
+            "value": "${data.aws_elasticache_replication_group.this.replicas_per_node_group}"
+        },
+        "snapshot_retention_limit": {
+            "description": "The number of days for which ElastiCache retains automatic snapshots.",
+            "value": "${data.aws_elasticache_replication_group.this.snapshot_retention_limit}"
+        },
+        "snapshot_window": {
+            "description": "The daily time range during which automatic snapshots are created.",
+            "value": "${data.aws_elasticache_replication_group.this.snapshot_window}"
+        }
+    }
+}

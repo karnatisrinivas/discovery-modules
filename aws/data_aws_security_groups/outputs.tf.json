@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the security groups.",
+            "value": "${data.aws_security_groups.this.arns}"
+        },
+        "id": {
+            "description": "The ID of a specific security group.",
+            "value": "${data.aws_security_groups.this.id}"
+        },
+        "ids": {
+            "description": "A list of IDs for the security groups.",
+            "value": "${data.aws_security_groups.this.ids}"
+        },
+        "tags": {
+            "description": "A map containing the tags associated with the security groups.",
+            "value": "${data.aws_security_groups.this.tags}"
+        },
+        "vpc_ids": {
+            "description": "A list of VPC IDs where the security groups are located.",
+            "value": "${data.aws_security_groups.this.vpc_ids}"
+        }
+    }
+}

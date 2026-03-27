@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Group"
+  node:
+    label:
+      static: "[Data] Iam Group"
+      template: "[Data] Iam Group"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_group
+  dnd_supported: false

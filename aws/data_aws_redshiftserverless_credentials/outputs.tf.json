@@ -1,0 +1,16 @@
+{
+    "output": {
+        "db_user": {
+            "description": "The database user name associated with the Redshift Serverless credentials.",
+            "value": "${data.aws_redshiftserverless_credentials.this.db_user}"
+        },
+        "expiration": {
+            "description": "The expiration time for the Redshift Serverless credentials, indicating when they are no longer valid.",
+            "value": "${data.aws_redshiftserverless_credentials.this.expiration}"
+        },
+        "id": {
+            "description": "The unique identifier for the Redshift Serverless credentials resource.",
+            "value": "${data.aws_redshiftserverless_credentials.this.id}"
+        }
+    }
+}

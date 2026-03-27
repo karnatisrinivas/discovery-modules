@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssm Instances"
+  node:
+    label:
+      static: "[Data] Ssm Instances"
+      template: "[Data] Ssm Instances"
+    display_type: default
+
+discovery:
+  type: data_aws_ssm_instances
+  dnd_supported: false

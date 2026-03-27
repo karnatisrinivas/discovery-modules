@@ -1,0 +1,20 @@
+{
+    "output": {
+        "currency_code": {
+            "description": "The currency in which the reserved instance offering is priced.",
+            "value": "${data.aws_rds_reserved_instance_offering.this.currency_code}"
+        },
+        "fixed_price": {
+            "description": "The upfront cost of the reserved instance offering.",
+            "value": "${data.aws_rds_reserved_instance_offering.this.fixed_price}"
+        },
+        "id": {
+            "description": "The unique identifier of the reserved instance offering.",
+            "value": "${data.aws_rds_reserved_instance_offering.this.id}"
+        },
+        "offering_id": {
+            "description": "The specific identifier for the reserved instance offering.",
+            "value": "${data.aws_rds_reserved_instance_offering.this.offering_id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshiftserverless Namespace"
+  node:
+    label:
+      static: "[Data] Redshiftserverless Namespace"
+      template: "[Data] Redshiftserverless Namespace"
+    display_type: default
+
+discovery:
+  type: data_aws_redshiftserverless_namespace
+  dnd_supported: false

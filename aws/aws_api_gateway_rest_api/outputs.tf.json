@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway REST API.",
+            "value": "${aws_api_gateway_rest_api.this.arn}"
+        },
+        "execution_arn": {
+            "description": "The execution ARN used to reference the API Gateway REST API.",
+            "value": "${aws_api_gateway_rest_api.this.execution_arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the API Gateway REST API.",
+            "value": "${aws_api_gateway_rest_api.this.id}"
+        },
+        "root_resource_id": {
+            "description": "The root resource identifier of the API Gateway REST API.",
+            "value": "${aws_api_gateway_rest_api.this.root_resource_id}"
+        }
+    }
+}

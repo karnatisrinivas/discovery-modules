@@ -1,0 +1,79 @@
+{
+  "variable": {
+    "auto_key_rotation_enabled": [
+      {
+        "description": "Specifies whether automatic key rotation is enabled for the disk encryption set. Must be set to `true` or `false`.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "encryption_type": [
+      {
+        "description": "Specifies the type of encryption to be used for the disk encryption set, such as 'EncryptionAtRestWithPlatformKey' or 'EncryptionAtRestWithCustomerKey'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "federated_client_id": [
+      {
+        "description": "Specifies the client ID of the federated identity used for disk encryption set access. Must be associated with the Azure Key Vault's managed identity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Specifies the identity to be used for the disk encryption set, which must be a managed identity capable of accessing the required key vault.",
+        "nullable": false,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "key_vault_key_id": [
+      {
+        "description": "Specifies the ID of the Azure Key Vault key to be used for disk encryption. Must be in the format of a valid Azure Key Vault key URI.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed_hsm_key_id": [
+      {
+        "description": "Specifies the Azure Key Vault Managed HSM key ID to be used for encrypting the disk encryption set. Must be a valid key in a Managed HSM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the disk encryption set, which must be unique within the resource group and comply with Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Mapping of key-value pairs to organize and categorize resources, typically for management, billing, or compliance purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for create, update, and delete operations of the disk encryption set.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

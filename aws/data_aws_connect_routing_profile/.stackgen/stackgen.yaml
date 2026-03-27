@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Routing Profile"
+  node:
+    label:
+      static: "[Data] Connect Routing Profile"
+      template: "[Data] Connect Routing Profile"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_routing_profile
+  dnd_supported: false

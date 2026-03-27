@@ -1,0 +1,29 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Log Analytics Workspace
+  node:
+    label:
+      static: Log Analytics Workspace
+      template: ${name}
+    display_type: default
+
+variables:
+  sku:
+    ui_control: select
+    description: The SKU of the Log Analytics Workspace.
+    type: string
+    options: 
+      - PerNode
+      - Premium
+      - Standard
+      - Standalone
+      - Unlimited
+      - CapacityReservation
+      - PerGB2018
+
+discovery:
+  type: azurerm_log_analytics_workspace
+  dnd_supported: false
+  data_source: data_azurerm_log_analytics_workspace

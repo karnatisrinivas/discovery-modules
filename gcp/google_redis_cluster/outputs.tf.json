@@ -1,0 +1,48 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp marking when the Redis cluster was created",
+            "value": "${google_redis_cluster.this.create_time}"
+        },
+        "discovery_endpoints": {
+            "description": "List of endpoints for connecting to the Redis cluster nodes",
+            "value": "${google_redis_cluster.this.discovery_endpoints}"
+        },
+        "id": {
+            "description": "Unique identifier for the Redis cluster used in configurations",
+            "value": "${google_redis_cluster.this.id}"
+        },
+        "maintenance_schedule": {
+            "description": "Details of planned maintenance events for the Redis cluster",
+            "value": "${google_redis_cluster.this.maintenance_schedule}"
+        },
+        "precise_size_gb": {
+            "description": "Exact storage size of the Redis cluster in gigabytes",
+            "value": "${google_redis_cluster.this.precise_size_gb}"
+        },
+        "psc_connections": {
+            "description": "Private Service Connect connections established for the Redis cluster",
+            "value": "${google_redis_cluster.this.psc_connections}"
+        },
+        "psc_service_attachments": {
+            "description": "Service attachment references for Private Service Connect usage",
+            "value": "${google_redis_cluster.this.psc_service_attachments}"
+        },
+        "size_gb": {
+            "description": "Rounded storage size of the Redis cluster in gigabytes",
+            "value": "${google_redis_cluster.this.size_gb}"
+        },
+        "state": {
+            "description": "Current operational state of the Redis cluster",
+            "value": "${google_redis_cluster.this.state}"
+        },
+        "state_info": {
+            "description": "Additional details about the Redis cluster's state",
+            "value": "${google_redis_cluster.this.state_info}"
+        },
+        "uid": {
+            "description": "Globally unique ID for the Redis cluster across regions",
+            "value": "${google_redis_cluster.this.uid}"
+        }
+    }
+}

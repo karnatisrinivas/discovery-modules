@@ -1,0 +1,52 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Network
+  node:
+    label:
+      static: Compute Network
+      template: ${name}
+    display_type: default
+
+variables:
+  network_firewall_policy_enforcement_order:
+    description: Set the order that Firewall Rules and Firewall Policies are evaluated.
+    type: string
+    options: 
+      - AFTER_CLASSIC_FIREWALL
+      - BEFORE_CLASSIC_FIREWALL
+    ui_control: select
+  delete_default_routes_on_create:
+    description: If set to true, default routes (0.0.0.0/0) will be deleted immediately after network creation. Defaults to false.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  auto_create_subnetworks:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "When set to true, the network is created in \"auto subnet mode\" and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. When set to false, the network is created in \"custom subnet mode\" so the user can explicitly connect subnetwork resources."
+    type: bool
+  routing_mode:
+    options: 
+      - REGIONAL
+      - GLOBAL
+    ui_control: select
+    description: "The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will only advertise routes with subnetworks of this network in the same region as the router. If set to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this network, across regions."
+    type: string
+  enable_ula_internal_ipv6:
+    description: "Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: google_compute_network
+  dnd_supported: false
+  data_source: data_google_compute_network

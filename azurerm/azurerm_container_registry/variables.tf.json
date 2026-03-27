@@ -1,0 +1,93 @@
+{
+  "variable": {
+    "admin_enabled": [
+      {
+        "description": "Enable or disable admin user access.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "anonymous_pull_enabled": [
+      {
+        "description": "Allow anonymous pull access to the registry.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "data_endpoint_enabled": [
+      {
+        "description": "Enable data endpoint for the registry.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "export_policy_enabled": [
+      {
+        "description": "Enable export policy for the registry.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the container registry.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_rule_bypass_option": [
+      {
+        "description": "Options to bypass network rules.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Enable public network access to the registry.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "quarantine_policy_enabled": [
+      {
+        "description": "Enable quarantine policy for images.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "description": "The SKU of the container registry.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Tags to associate with the registry.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zone_redundancy_enabled": [
+      {
+        "description": "Enable zone redundancy for high availability.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

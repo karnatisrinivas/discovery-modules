@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "client_id": [
+      {
+        "description": "Unique identifier for the Azure AD application used to authenticate and access resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name of the application as it will appear in the Azure Active Directory. Must be unique within the tenant.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identifier_uri": [
+      {
+        "description": "Defines the unique URI used to identify the application within Azure AD. Must be a valid URI format and cannot exceed 256 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_id": [
+      {
+        "description": "Unique identifier of the Azure AD application, used for referencing the application in Azure AD.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for create, read, update, and delete operations on the application.",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

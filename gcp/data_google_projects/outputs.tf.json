@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Google Cloud project used in cross-resource linking",
+            "value": "${data.google_projects.this.id}"
+        },
+        "projects": {
+            "description": "List of Google Cloud projects for managing and organizing resources",
+            "value": "${data.google_projects.this.projects}"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "deletion_protection": [
+      {
+        "description": "Determines if the folder is protected from being deleted; set to true to enable protection.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies the display name of the folder, must be unique within the parent and can contain up to 30 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "Specifies the parent resource in which the folder will be created. Must be either a folder or organization in the format \"folders/{folder_id}\" or \"organizations/{organization_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "List of key-value pairs to organize and label the folder; must be a map.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeouts for creating, updating, and deleting the Google Folder, specified in a duration format (e.g., \"10m\").",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

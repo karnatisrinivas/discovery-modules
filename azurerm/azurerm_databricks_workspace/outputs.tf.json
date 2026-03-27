@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Databricks workspace.",
+            "value": "${azurerm_databricks_workspace.this.id}"
+        },
+        "managed_resource_group_id": {
+            "description": "The ID of the resource group that contains the managed resources for the Databricks workspace.",
+            "value": "${azurerm_databricks_workspace.this.managed_resource_group_id}"
+        },
+        "managed_resource_group_name": {
+            "description": "The name of the resource group that contains the managed resources for the Databricks workspace.",
+            "value": "${azurerm_databricks_workspace.this.managed_resource_group_name}"
+        },
+        "workspace_id": {
+            "description": "The identifier of the Databricks workspace instance.",
+            "value": "${azurerm_databricks_workspace.this.workspace_id}"
+        }
+    }
+}

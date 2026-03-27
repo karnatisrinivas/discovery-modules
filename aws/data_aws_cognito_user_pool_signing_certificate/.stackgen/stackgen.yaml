@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cognito User Pool Signing Certificate"
+  node:
+    label:
+      static: "[Data] Cognito User Pool Signing Certificate"
+      template: "[Data] Cognito User Pool Signing Certificate"
+    display_type: default
+
+discovery:
+  type: data_aws_cognito_user_pool_signing_certificate
+  dnd_supported: false

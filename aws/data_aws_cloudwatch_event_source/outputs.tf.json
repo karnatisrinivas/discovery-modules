@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_source.this.arn}"
+        },
+        "created_by": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_source.this.created_by}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_source.this.id}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_source.this.name}"
+        },
+        "state": {
+            "description": "",
+            "value": "${data.aws_cloudwatch_event_source.this.state}"
+        }
+    }
+}

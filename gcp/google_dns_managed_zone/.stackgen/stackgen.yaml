@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dns Managed Zone
+  node:
+    label:
+      static: Dns Managed Zone
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_dns_managed_zone
+  dnd_supported: false

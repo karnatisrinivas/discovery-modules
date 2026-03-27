@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Client Vpn Endpoint"
+  node:
+    label:
+      static: "[Data] Ec2 Client Vpn Endpoint"
+      template: "[Data] Ec2 Client Vpn Endpoint"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_client_vpn_endpoint
+  dnd_supported: false

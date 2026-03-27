@@ -1,0 +1,12 @@
+{
+    "output": {
+        "alarm_name": {
+            "description": "The value of the alarm_name output",
+            "value": "${aws_cloudwatch_metric_alarm.this.alarm_name}"
+        },
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_cloudwatch_metric_alarm.this.arn}"
+        }
+    }
+}

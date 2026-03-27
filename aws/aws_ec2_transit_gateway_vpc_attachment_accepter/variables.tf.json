@@ -1,0 +1,34 @@
+{
+    "variable": {
+        "transit_gateway_attachment_id": [
+            {
+                "type": "string",   
+                "description": "The ID of the transit gateway attachment.",
+                "nullable": false
+            }
+        ],
+        "transit_gateway_default_route_table_association": [
+            {
+                "type": "bool",
+                "description": "Whether to associate the transit gateway's default route table with the VPC.",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "transit_gateway_default_route_table_propagation": [
+            {
+                "type": "bool",
+                "description": "Whether to propagate the transit gateway's default route table to the VPC.",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

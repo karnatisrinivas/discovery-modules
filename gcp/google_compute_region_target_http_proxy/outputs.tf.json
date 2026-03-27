@@ -1,0 +1,20 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the HTTP proxy resource was created",
+            "value": "${google_compute_region_target_http_proxy.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the HTTP proxy resource in configurations",
+            "value": "${google_compute_region_target_http_proxy.this.id}"
+        },
+        "proxy_id": {
+            "description": "Internal ID used by Google Cloud to manage the HTTP proxy resource",
+            "value": "${google_compute_region_target_http_proxy.this.proxy_id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the HTTP proxy resource via Google Cloud APIs",
+            "value": "${google_compute_region_target_http_proxy.this.self_link}"
+        }
+    }
+}

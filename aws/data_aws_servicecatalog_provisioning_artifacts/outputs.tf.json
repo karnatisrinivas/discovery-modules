@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_provisioning_artifacts.this.id}"
+        },
+        "provisioning_artifact_details": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_provisioning_artifacts.this.provisioning_artifact_details}"
+        }
+    }
+}

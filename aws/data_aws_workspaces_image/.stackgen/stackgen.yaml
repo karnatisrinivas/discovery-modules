@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Workspaces Image"
+  node:
+    label:
+      static: "[Data] Workspaces Image"
+      template: "[Data] Workspaces Image"
+    display_type: default
+
+discovery:
+  type: data_aws_workspaces_image
+  dnd_supported: false

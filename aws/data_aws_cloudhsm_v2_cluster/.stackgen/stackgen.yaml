@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudhsm V2 Cluster"
+  node:
+    label:
+      static: "[Data] Cloudhsm V2 Cluster"
+      template: "[Data] Cloudhsm V2 Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudhsm_v2_cluster
+  dnd_supported: false

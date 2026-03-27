@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Server Certificate
+  node:
+    label:
+      static: IAM Server Certificate
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_server_certificate
+  dnd_supported: false
+  data_source: data_aws_iam_server_certificate

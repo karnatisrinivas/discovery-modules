@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the Auto Scaling groups.",
+            "value": "${data.aws_autoscaling_groups.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the Auto Scaling groups.",
+            "value": "${data.aws_autoscaling_groups.this.id}"
+        },
+        "names": {
+            "description": "A list of names for the Auto Scaling groups.",
+            "value": "${data.aws_autoscaling_groups.this.names}"
+        }
+    }
+}

@@ -1,0 +1,173 @@
+{
+    "variable": {
+        "min_size": [
+            {
+                "type": "number",
+                "description": "Minimum number of instances in the autoscaling group.",
+                "nullable": false
+            }
+        ],
+        "max_size": [
+            {
+                "type": "number",
+                "description": "Maximum number of instances in the autoscaling group.",
+                "nullable": false
+            }
+        ],
+        "ignore_failed_scaling_activities": [
+            {
+                "type": "bool",
+                "description": "Ignore failed scaling activities.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "desired_capacity": [
+            {
+                "type": "number",
+                "description": "Desired number of instances in the autoscaling group.",
+                "nullable": false
+            }
+        ],
+        "desired_capacity_type": [
+            {
+                "type": "string",
+                "description": "The unit of measurement for the desired capacity.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "vpc_zone_identifier": [
+            {
+                "type": "list(string)",
+                "description": "List of VPC zone identifiers.",
+                "nullable": true
+            }
+        ],
+        "health_check_type": [
+            {
+                "type": "string",
+                "default": "EC2",
+                "nullable": true
+            }
+        ],
+        "health_check_grace_period": [
+            {
+                "type": "number",
+                "default": 300,
+                "description": "The grace period for health check when using ELB as the health check type.",
+                "nullable": true
+            }
+        ],
+        "target_group_arns": [
+            {
+                "type": "list(string)",
+                "description": "List of target group ARNs to attach to the Auto Scaling Group.",
+                "nullable": true
+            }
+        ],
+
+        "launch_template": [
+            {
+                "type": "list(object({id: optional(string),name: optional(string), version: optional(string)}))",
+                "description": "Launch template to use for the autoscaling group.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "capacity_rebalance": [
+            {
+                "type": "bool",
+                "description": "Enable capacity rebalance for the autoscaling group.",
+                "nullable": true
+            }
+        ],
+        "force_delete": [
+            {
+                "type": "bool",
+                "description": "Force delete the autoscaling group.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "force_delete_warm_pool": [
+            {
+                "type": "bool",
+                "description": "Force delete the warm pool.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "termination_policies": [
+            {
+                "type": "list(string)",
+                "description": "List of termination policies to use for the autoscaling group.",
+                "nullable": true
+            }
+        ],
+        "wait_for_capacity_timeout": [
+            {
+                "type": "string",
+                "description": "Timeout value to wait for capacity.",
+                "nullable": true,
+                "default": "10m"
+            }
+        ],
+        "enabled_metrics": [
+            {
+                "type": "list(string)",
+                "description": "List of metrics to collect.",
+                "nullable": true
+            }
+        ],
+        "tag": [
+            {
+                "type": "list(object({key: string,value: string, propagate_at_launch: bool}))",
+                "description": "Extra tags to attach to the autoscaling group.",
+                "nullable": true
+            }
+        ],
+        "mixed_instances_policy": [
+            {
+                "type": "list(object({launch_template: list(object({launch_template_specification: list(object({launch_template_id: optional(string),launch_template_name: optional(string),version: optional(string)})),override: list(object({instance_type: string,weighted_capacity: optional(string)}))})),instances_distribution:list(object({on_demand_base_capacity: optional(number),on_demand_percentage_above_base_capacity: optional(number), spot_allocation_strategy: optional(string),spot_instance_pools: optional(number),spot_max_price: optional(string)}))}))",
+                "description": "Mixed instances policy to use for the autoscaling group.",
+                "nullable": true
+            }
+        ],
+        "launch_configuration": [
+            {
+                "type": "string",
+                "description": "Launch configuration to use for the autoscaling group.",
+                "nullable": true
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "A map of timeouts for the transit gateway.",
+                "nullable": true,
+                "type": "object({ delete: optional(string) })"
+            }
+        ],
+        "max_instance_lifetime": [
+            {
+                "type": "number",
+                "description": "Maximum instance lifetime.",
+                "nullable": true
+            }
+        ],
+        "protect_from_scale_in": [
+            {
+                "type": "bool",
+                "description": "Protect from scale in.",
+                "nullable": true
+            }
+        ],
+        "suspended_processes": [
+            {
+                "type": "list(string)",
+                "description": "Suspended processes.",
+                "nullable": true
+            }
+        ]
+    }
+}

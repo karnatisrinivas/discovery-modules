@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "advanced_event_selector": [
+      {
+        "description": "Defines the configuration for advanced event selectors, specifying filtering rules to control which CloudTrail events are logged.",
+        "nullable": true,
+        "type": "list(object({name: optional(string),field_selector: list(object({ends_with: optional(list(string)),equals: optional(list(string)),field: string,not_ends_with: optional(list(string)),not_equals: optional(list(string)),not_starts_with: optional(list(string)),starts_with: optional(list(string))}))}))"
+      }
+    ],
+    "cloud_watch_logs_group_arn": [
+      {
+        "description": "ARN of the CloudWatch Logs group to which CloudTrail logs will be delivered; must be in the same AWS region as the trail.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cloud_watch_logs_role_arn": [
+      {
+        "description": "ARN of the IAM role that allows CloudTrail to deliver events to CloudWatch Logs.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_log_file_validation": [
+      {
+        "description": "Indicates whether log file validation is enabled to ensure the integrity of CloudTrail log files.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_logging": [
+      {
+        "description": "Specifies whether logging is enabled for the CloudTrail to record API activity and events in the specified AWS account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "event_selector": [
+      {
+        "description": "Specifies configuration for logging read/write management events and data events, including resource ARNs and event types.",
+        "nullable": true,
+        "type": "list(object({exclude_management_event_sources: optional(list(string)),include_management_events: optional(bool),read_write_type: optional(string),data_resource: list(object({type: string,values: list(string)}))}))"
+      }
+    ],
+    "include_global_service_events": [
+      {
+        "description": "Determines whether global service events are included in the trail; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "insight_selector": [
+      {
+        "description": "Specifies the configuration for selecting AWS CloudTrail Insights events, allowing monitoring of unusual activity.",
+        "nullable": true,
+        "type": "list(object({insight_type: string}))"
+      }
+    ],
+    "is_multi_region_trail": [
+      {
+        "description": "Indicates whether the CloudTrail will log events across all regions in the AWS account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "is_organization_trail": [
+      {
+        "description": "Indicates whether the CloudTrail is an organization trail. Must be set to true for organization-wide logging.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "kms_key_id": [
+      {
+        "description": "Specifies the KMS key ID to encrypt CloudTrail log files, ensuring secure log storage. Must be a valid KMS key ID associated with your AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the CloudTrail. Must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "s3_bucket_name": [
+      {
+        "description": "Name of the S3 bucket where CloudTrail logs will be stored; must already exist and be in the same AWS region as the trail.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "s3_key_prefix": [
+      {
+        "description": "Specifies the S3 key prefix for the CloudTrail log files, used to organize logs within the S3 bucket.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sns_topic_name": [
+      {
+        "description": "Name of the SNS topic for delivering CloudTrail logs; must match an existing topic in the same AWS region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the resource, supporting metadata assignment and management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

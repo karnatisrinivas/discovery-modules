@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "db_cluster_identifier": [
+      {
+        "description": "The identifier of the DB cluster to retrieve the snapshot for.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "db_cluster_snapshot_identifier": [
+      {
+        "description": "The identifier of the specific DB cluster snapshot to retrieve.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_public": [
+      {
+        "description": "Whether to include public snapshots in the result.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "include_shared": [
+      {
+        "description": "Whether to include shared snapshots in the result.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "If true, selects the most recent snapshot.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "snapshot_type": [
+      {
+        "description": "The type of snapshots to be included (e.g., 'automated', 'manual').",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

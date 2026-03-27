@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "db_cluster_identifier": [
+      {
+        "description": "Identifier of the Neptune cluster to create the snapshot from; must match an existing cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "db_cluster_snapshot_identifier": [
+      {
+        "description": "Identifier for the Neptune cluster snapshot. Must be unique and can be the name of an existing snapshot for restoration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for create, update, and delete operations on the Neptune cluster snapshot.",
+        "nullable": true,
+        "type": "object({create: optional(string)})"
+      }
+    ]
+  }
+}

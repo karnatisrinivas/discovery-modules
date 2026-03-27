@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "router_type_identifier": [
+      {
+        "description": "A unique identifier for the type of router you are configuring.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "virtual_interface_id": [
+      {
+        "description": "The ID of the virtual interface associated with the router configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Reader",
+    "resource_type": "data_aws_ecr_image",
+    "description": "Permissions that allow users to pull ECR images",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "ecr:GetAuthorizationToken",
+            "ecr:BatchGetImage",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:BatchImportUpstreamImage"
+          ],
+          "Resource": ["${module.module_name.repository_arn}"]
+        }
+      ]
+    }
+  }
+]

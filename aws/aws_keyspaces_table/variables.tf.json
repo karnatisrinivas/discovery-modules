@@ -1,0 +1,81 @@
+{
+    "variable": {
+        "keyspace_name": [
+            {
+                "type": "string",
+                "description": "The name of the keyspace that the table is going to be created in.",
+                "nullable": false
+            }
+        ],
+        "table_name": [
+            {
+                "type": "string",
+                "description": "The name of the table.",
+                "nullable": false
+            }
+        ],
+        "default_time_to_live": [
+            {
+               "type": "number",
+               "description": "The default Time to Live setting in seconds for the table.",
+               "nullable": true 
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ],
+        "capacity_specification": [
+            {
+                "description": "Specifies the read/write throughput capacity mode for the table.",
+                "nullable": true,
+                "type": "list(object({read_capacity_units : number, throughput_mode : string, write_capacity_units : number}))"
+            }
+        ],
+        "client_side_timestamps": [
+            {
+                "description": "Enables client-side timestamps for the table.",
+                "nullable": true,
+                "type": "list(object({status : string}))"
+            }
+        ],
+        "comment": [
+            {
+                "description": "A description of the table.",
+                "nullable": true,
+                "type": "list(object({message : string}))"
+            }
+        ],
+        "encryption_specification": [
+            {
+                "description": " Specifies how the encryption key for encryption at rest is managed for the table.",
+                "nullable": true,
+                "type": "list(object({kms_key_identifier : string, type : string}))"
+            }
+        ],
+        "point_in_time_recovery": [
+            {
+                "description": "Specifies if point-in-time recovery is enabled or disabled for the table. ",
+                "nullable": true,
+                "type": "list(object({status : string}))"
+            }
+        ],
+        "schema_definition": [
+            {
+                "description": "Describes the schema of the table.",
+                "nullable": true,
+                "type": "list(object({column : object({name : string, type : string}), partition_key : object({name : string}), clustering_key : object({name : string, order_by : string}), static_column : object({name : string})}))"
+            }
+        ],
+        "ttl": [
+            {
+                "description": "Enables Time to Live custom settings for the table.",
+                "nullable": true,
+                "type": "list(object({status : string}))"
+            }
+        ]
+    }
+}

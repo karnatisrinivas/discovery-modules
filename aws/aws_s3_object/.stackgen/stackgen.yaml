@@ -1,0 +1,22 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Object
+  node:
+    label:
+      static: S3 Object
+      template: ${key}
+    display_type: default
+
+discovery:
+  type: aws_s3_object
+  dnd_supported: false
+  data_source: data_aws_s3_object
+  references:
+    kms_key_id:
+      from: aws_kms_key
+      output: arn
+    bucket:
+      from: aws_s3_bucket
+      output: id

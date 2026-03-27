@@ -1,0 +1,48 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Labels applied to the cluster after considering inheritance and overrides",
+            "value": "${google_container_cluster.this.effective_labels}"
+        },
+        "endpoint": {
+            "description": "Public IP address for accessing the Kubernetes API server",
+            "value": "${google_container_cluster.this.endpoint}"
+        },
+        "id": {
+            "description": "Unique identifier for the Kubernetes cluster resource",
+            "value": "${google_container_cluster.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint used for detecting changes to cluster labels",
+            "value": "${google_container_cluster.this.label_fingerprint}"
+        },
+        "master_version": {
+            "description": "Version of the Kubernetes master node software",
+            "value": "${google_container_cluster.this.master_version}"
+        },
+        "name": {
+            "description": "Name of the Kubernetes cluster resource",
+            "value": "${google_container_cluster.this.name}"
+        },
+        "operation": {
+            "description": "Name of the ongoing or most recent operation on the cluster",
+            "value": "${google_container_cluster.this.operation}"
+        },
+        "self_link": {
+            "description": "Fully qualified URL for the Kubernetes cluster resource",
+            "value": "${google_container_cluster.this.self_link}"
+        },
+        "services_ipv4_cidr": {
+            "description": "IPv4 CIDR block reserved for Kubernetes services",
+            "value": "${google_container_cluster.this.services_ipv4_cidr}"
+        },
+        "terraform_labels": {
+            "description": "Labels managed and applied by Terraform to the cluster",
+            "value": "${google_container_cluster.this.terraform_labels}"
+        },
+        "tpu_ipv4_cidr_block": {
+            "description": "IPv4 CIDR block reserved for Cloud TPU resources in the cluster",
+            "value": "${google_container_cluster.this.tpu_ipv4_cidr_block}"
+        }
+    }
+}

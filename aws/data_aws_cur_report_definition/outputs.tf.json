@@ -1,0 +1,52 @@
+{
+    "output": {
+        "additional_artifacts": {
+            "description": "Additional artifacts that are included in the report, such as metadata.",
+            "value": "${data.aws_cur_report_definition.this.additional_artifacts}"
+        },
+        "additional_schema_elements": {
+            "description": "Additional schema elements that are included in the report, like resources or tags.",
+            "value": "${data.aws_cur_report_definition.this.additional_schema_elements}"
+        },
+        "compression": {
+            "description": "The compression format used for the report, e.g., GZIP or ZIP.",
+            "value": "${data.aws_cur_report_definition.this.compression}"
+        },
+        "format": {
+            "description": "The format of the report, such as text or CSV.",
+            "value": "${data.aws_cur_report_definition.this.format}"
+        },
+        "id": {
+            "description": "A unique identifier for the report definition.",
+            "value": "${data.aws_cur_report_definition.this.id}"
+        },
+        "refresh_closed_reports": {
+            "description": "Indicates whether closed reports should be refreshed.",
+            "value": "${data.aws_cur_report_definition.this.refresh_closed_reports}"
+        },
+        "report_versioning": {
+            "description": "The versioning strategy for the report, such as CREATE_NEW_REPORT or OVERWRITE_REPORT.",
+            "value": "${data.aws_cur_report_definition.this.report_versioning}"
+        },
+        "s3_bucket": {
+            "description": "The name of the S3 bucket where the report is stored.",
+            "value": "${data.aws_cur_report_definition.this.s3_bucket}"
+        },
+        "s3_prefix": {
+            "description": "The prefix used in the S3 bucket for the report files.",
+            "value": "${data.aws_cur_report_definition.this.s3_prefix}"
+        },
+        "s3_region": {
+            "description": "The AWS region where the S3 bucket is located.",
+            "value": "${data.aws_cur_report_definition.this.s3_region}"
+        },
+        "tags": {
+            "description": "A set of tags associated with the report for identification and organization.",
+            "value": "${data.aws_cur_report_definition.this.tags}"
+        },
+        "time_unit": {
+            "description": "The time unit for the report, such as HOURLY or DAILY.",
+            "value": "${data.aws_cur_report_definition.this.time_unit}"
+        }
+    }
+}

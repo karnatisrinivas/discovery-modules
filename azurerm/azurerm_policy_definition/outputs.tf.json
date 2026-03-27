@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The computed value of id",
+            "value": "${azurerm_policy_definition.this.id}"
+        },
+        "role_definition_ids": {
+            "description": "The computed value of role_definition_ids",
+            "value": "${azurerm_policy_definition.this.role_definition_ids}"
+        }
+    }
+}

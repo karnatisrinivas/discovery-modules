@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "deployment_config": [
+      {
+        "description": "Configuration for deploying the endpoint, including settings for rollback and traffic shifting during updates.",
+        "nullable": true,
+        "type": "list(object({auto_rollback_configuration: list(object({alarms: list(object({alarm_name: string}))})),blue_green_update_policy: list(object({maximum_execution_timeout_in_seconds: optional(number),termination_wait_in_seconds: optional(number),traffic_routing_configuration: list(object({type: string,wait_interval_in_seconds: number,canary_size: list(object({type: string,value: number})),linear_step_size: list(object({type: string,value: number}))}))})),rolling_update_policy: list(object({maximum_execution_timeout_in_seconds: optional(number),wait_interval_in_seconds: number,maximum_batch_size: list(object({type: string,value: number})),rollback_maximum_batch_size: list(object({type: string,value: number}))}))}))"
+      }
+    ],
+    "endpoint_config_name": [
+      {
+        "description": "Name of the endpoint configuration to use for the SageMaker endpoint; must match an existing configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the SageMaker endpoint; must be between 1 and 63 characters and can include alphanumeric characters and hyphens.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the endpoint, supporting resource identification and management; must adhere to AWS tag naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

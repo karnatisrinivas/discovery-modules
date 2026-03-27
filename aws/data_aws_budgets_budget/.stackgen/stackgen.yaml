@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Budgets Budget"
+  node:
+    label:
+      static: "[Data] Budgets Budget"
+      template: "[Data] Budgets Budget"
+    display_type: default
+
+discovery:
+  type: data_aws_budgets_budget
+  dnd_supported: false

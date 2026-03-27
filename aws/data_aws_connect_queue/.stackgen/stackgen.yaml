@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Queue"
+  node:
+    label:
+      static: "[Data] Connect Queue"
+      template: "[Data] Connect Queue"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_queue
+  dnd_supported: false

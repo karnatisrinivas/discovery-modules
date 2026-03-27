@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the Cognito user pools.",
+            "value": "${data.aws_cognito_user_pools.this.arns}"
+        },
+        "id": {
+            "description": "The identifier for the Cognito user pool.",
+            "value": "${data.aws_cognito_user_pools.this.id}"
+        },
+        "ids": {
+            "description": "A list of identifiers for the Cognito user pools.",
+            "value": "${data.aws_cognito_user_pools.this.ids}"
+        }
+    }
+}

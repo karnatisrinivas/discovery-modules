@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific AWS EC2 Transit Gateway Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_attachments.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all AWS EC2 Transit Gateway Attachments.",
+            "value": "${data.aws_ec2_transit_gateway_attachments.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the AWS EC2 Transit Gateway Attachments.",
+            "value": "${data.aws_ec2_transit_gateway_attachments.this.tags}"
+        }
+    }
+}

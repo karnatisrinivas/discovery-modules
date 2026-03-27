@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the user-provided description for the response policy, which can be used for identification or documentation purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gke_clusters": [
+      {
+        "description": "List of GKE clusters for which the DNS response policy will apply.",
+        "nullable": true,
+        "type": "list(object({gke_cluster_name: string}))"
+      }
+    ],
+    "networks": [
+      {
+        "description": "List of VPC networks associated with the response policy, allowing DNS queries to be resolved based on this policy.",
+        "nullable": true,
+        "type": "list(object({network_url: string}))"
+      }
+    ],
+    "response_policy_name": [
+      {
+        "description": "Name of the DNS response policy to be created or managed; must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configuration block to specify the timeout duration for creating, updating, or deleting the response policy.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

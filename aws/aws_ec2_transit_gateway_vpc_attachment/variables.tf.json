@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "appliance_mode_support": [
+      {
+        "description": "Enables or disables appliance mode support for the VPC attachment, allowing traffic flow to virtual appliances.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns_support": [
+      {
+        "description": "Controls whether DNS resolution is supported for the VPC attachment; valid values are \"enable\" or \"disable\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipv6_support": [
+      {
+        "description": "Specifies whether IPv6 support is enabled for the VPC attachment; must be either `enable` or `disable`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_group_referencing_support": [
+      {
+        "description": "Enables or disables support for referencing security groups in the VPC attachment; must be compatible with the Transit Gateway configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subnet_ids": [
+      {
+        "description": "List of subnet IDs to associate with the VPC attachment; must belong to the specified VPC and reside in the same region as the transit gateway.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to assign as tags, used for identifying and organizing the VPC attachment.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "transit_gateway_default_route_table_association": [
+      {
+        "description": "Indicates whether the VPC is associated with the default route table of the transit gateway. Set to true to enable association, false to disable.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "transit_gateway_default_route_table_propagation": [
+      {
+        "description": "Determines whether the VPC attachment propagates routes to the transit gateway's default route table; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "transit_gateway_id": [
+      {
+        "description": "ID of the transit gateway to which the VPC will be attached.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "vpc_id": [
+      {
+        "description": "ID of the VPC to attach to the Transit Gateway; must be an existing VPC in the same AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

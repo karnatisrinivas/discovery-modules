@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the PostgreSQL database.",
+            "value": "${azurerm_postgresql_database.this.id}"
+        }
+    }
+}

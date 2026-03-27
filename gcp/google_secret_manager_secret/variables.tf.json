@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "secret_id": [
+            {
+                "type": "string",
+                "description": "This must be unique within the project."
+            }
+        ],
+        "replication": [
+            {
+                "type": "list(object({auto: list(object({customer_managed_encryption: list(object({kms_key_name: optional(string)}))})), user_managed: list(object({replicas: list(object({location: string, customer_managed_encryption: list(object({kms_key_name: optional(string)}))}))}))}))",
+                "description": "The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been created."
+            }
+        ]
+    }
+}

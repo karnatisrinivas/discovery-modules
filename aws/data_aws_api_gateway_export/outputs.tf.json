@@ -1,0 +1,20 @@
+{
+    "output": {
+        "body": {
+            "description": "The exported API definition in the chosen format.",
+            "value": "${data.aws_api_gateway_export.this.body}"
+        },
+        "content_disposition": {
+            "description": "The content disposition of the exported API, indicating how it should be presented to the user.",
+            "value": "${data.aws_api_gateway_export.this.content_disposition}"
+        },
+        "content_type": {
+            "description": "The content type of the exported API, such as application/json.",
+            "value": "${data.aws_api_gateway_export.this.content_type}"
+        },
+        "id": {
+            "description": "The unique identifier of the API Gateway export.",
+            "value": "${data.aws_api_gateway_export.this.id}"
+        }
+    }
+}

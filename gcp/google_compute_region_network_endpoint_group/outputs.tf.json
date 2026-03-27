@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the network endpoint group in configurations",
+            "value": "${google_compute_region_network_endpoint_group.this.id}"
+        },
+        "self_link": {
+            "description": "API URL for managing or accessing the network endpoint group",
+            "value": "${google_compute_region_network_endpoint_group.this.self_link}"
+        }
+    }
+}

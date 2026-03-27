@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: API Gateway Deployment
+  node:
+    label:
+      static: API Gateway Deployment
+      template: ${rest_api_id}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_deployment
+  dnd_supported: false

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Computed labels applied to the cluster, useful for tracking resources",
+            "value": "${google_dataproc_cluster.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the Dataproc cluster, used for resource management",
+            "value": "${google_dataproc_cluster.this.id}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for identifying and organizing the cluster",
+            "value": "${google_dataproc_cluster.this.terraform_labels}"
+        }
+    }
+}

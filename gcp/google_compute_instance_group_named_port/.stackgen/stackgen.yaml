@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance Group Named Port
+  node:
+    label:
+      static: Compute Instance Group Named Port
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_group_named_port
+  dnd_supported: false
+  references:
+    group:
+      from: google_compute_instance_group
+      output: name

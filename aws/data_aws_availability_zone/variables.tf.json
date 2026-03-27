@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "all_availability_zones": [
+      {
+        "description": "Indicates whether to include all available availability zones.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

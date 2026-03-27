@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "domain": [
+      {
+        "description": "The name of the CodeArtifact domain to which the authorization token will be associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "duration_seconds": [
+      {
+        "description": "The time in seconds for which the authorization token is valid. If not specified, a default value is used.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

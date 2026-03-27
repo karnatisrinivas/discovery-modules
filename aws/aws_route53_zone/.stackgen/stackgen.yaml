@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route 53 Zone
+  node:
+    label:
+      static: Route 53 Zone
+      template: ${name}
+    display_type: default
+
+variables:
+  force_destroy:
+    ui_control: select
+    description: Whether to destroy all records (possibly managed by other resources) in the zone when destroying the zone.
+    type: bool
+    options: 
+      - true
+      - false
+
+discovery:
+  type: aws_route53_zone
+  dnd_supported: false
+  data_source: data_aws_route53_zone

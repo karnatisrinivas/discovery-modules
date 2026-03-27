@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the secrets managed by AWS Secrets Manager.",
+            "value": "${data.aws_secretsmanager_secrets.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the collection of secrets retrieved from AWS Secrets Manager.",
+            "value": "${data.aws_secretsmanager_secrets.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the secrets managed by AWS Secrets Manager.",
+            "value": "${data.aws_secretsmanager_secrets.this.names}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Distribution"
+  node:
+    label:
+      static: "[Data] Cloudfront Distribution"
+      template: "[Data] Cloudfront Distribution"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_distribution
+  dnd_supported: false

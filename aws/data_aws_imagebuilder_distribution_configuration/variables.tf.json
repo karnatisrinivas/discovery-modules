@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Image Builder distribution configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

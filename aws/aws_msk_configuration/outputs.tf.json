@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing and identifying the MSK configuration",
+            "value": "${aws_msk_configuration.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the MSK configuration resource",
+            "value": "${aws_msk_configuration.this.id}"
+        },
+        "latest_revision": {
+            "description": "Current revision number for tracking configuration updates",
+            "value": "${aws_msk_configuration.this.latest_revision}"
+        }
+    }
+}

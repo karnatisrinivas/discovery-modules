@@ -1,0 +1,61 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Folder Organization Policy
+  node:
+    label:
+      static: Folder Organization Policy
+      template: ${folder}
+    display_type: default
+
+variables:
+  boolean_policy:
+    description: A boolean policy is a constraint that is either enforced or not.
+    attributes: 
+      enforced: 
+        validation: 
+          required: true
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Enforced
+  restore_policy:
+    description: A restore policy is a constraint to restore the default policy.
+    attributes: 
+      default: 
+        type: bool
+        options: 
+          - true
+        ui_control: select
+        label: Default
+        validation: 
+          required: true
+          dataType: bool
+  list_policy:
+    description: A policy that can define specific values that are allowed or denied for the given constraint.
+    attributes: 
+      inherit_from_parent: 
+        label: Inherit From Parent
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      suggested_value: 
+        label: Suggested Value
+        validation: 
+          dataType: bool
+          required: false
+        type: bool
+        ui_control: text
+
+discovery:
+  type: google_folder_organization_policy
+  dnd_supported: false

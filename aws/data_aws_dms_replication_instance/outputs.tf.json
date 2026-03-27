@@ -1,0 +1,72 @@
+{
+    "output": {
+        "allocated_storage": {
+            "description": "The amount of storage (in gigabytes) that is allocated for the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.allocated_storage}"
+        },
+        "auto_minor_version_upgrade": {
+            "description": "Indicates whether minor engine upgrades are applied automatically to the replication instance during the maintenance window.",
+            "value": "${data.aws_dms_replication_instance.this.auto_minor_version_upgrade}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the replication instance is located.",
+            "value": "${data.aws_dms_replication_instance.this.availability_zone}"
+        },
+        "engine_version": {
+            "description": "The engine version number of the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.engine_version}"
+        },
+        "id": {
+            "description": "The identifier for the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "The Amazon Resource Name (ARN) for the KMS encryption key used to encrypt the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.kms_key_arn}"
+        },
+        "multi_az": {
+            "description": "Specifies if the replication instance is a Multi-AZ deployment.",
+            "value": "${data.aws_dms_replication_instance.this.multi_az}"
+        },
+        "network_type": {
+            "description": "The type of network used by the replication instance (e.g., VPC).",
+            "value": "${data.aws_dms_replication_instance.this.network_type}"
+        },
+        "preferred_maintenance_window": {
+            "description": "The weekly time range during which system maintenance can occur, in UTC.",
+            "value": "${data.aws_dms_replication_instance.this.preferred_maintenance_window}"
+        },
+        "publicly_accessible": {
+            "description": "Indicates if the replication instance is publicly accessible.",
+            "value": "${data.aws_dms_replication_instance.this.publicly_accessible}"
+        },
+        "replication_instance_arn": {
+            "description": "The Amazon Resource Name (ARN) of the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.replication_instance_arn}"
+        },
+        "replication_instance_class": {
+            "description": "The compute and memory capacity of the replication instance as specified by the instance class.",
+            "value": "${data.aws_dms_replication_instance.this.replication_instance_class}"
+        },
+        "replication_instance_private_ips": {
+            "description": "A list of private IP addresses assigned to the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.replication_instance_private_ips}"
+        },
+        "replication_instance_public_ips": {
+            "description": "A list of public IP addresses assigned to the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.replication_instance_public_ips}"
+        },
+        "replication_subnet_group_id": {
+            "description": "The identifier of the subnet group associated with the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.replication_subnet_group_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.tags}"
+        },
+        "vpc_security_group_ids": {
+            "description": "A set of VPC security group IDs associated with the replication instance.",
+            "value": "${data.aws_dms_replication_instance.this.vpc_security_group_ids}"
+        }
+    }
+}

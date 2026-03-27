@@ -1,0 +1,12 @@
+{
+    "output": {
+        "display_name": {
+            "description": "The display name associated with the AWS account's canonical user ID.",
+            "value": "${data.aws_canonical_user_id.this.display_name}"
+        },
+        "id": {
+            "description": "The unique canonical user ID for the AWS account.",
+            "value": "${data.aws_canonical_user_id.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Capacity Reservation Group
+  node:
+    label:
+      static: Capacity Reservation Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_capacity_reservation_group
+  dnd_supported: false

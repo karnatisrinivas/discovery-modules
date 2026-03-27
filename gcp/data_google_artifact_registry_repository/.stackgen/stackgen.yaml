@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[DATA] Artifact Registry"
+  node:
+    label:
+      static: "[DATA] Artifact Registry"
+      template: "[DATA] Artifact Registry"
+    display_type: default
+
+discovery:
+  type: data_google_artifact_registry_repository
+  dnd_supported: false

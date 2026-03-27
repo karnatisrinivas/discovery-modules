@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Usage Export Bucket
+  node:
+    label:
+      static: Project Usage Export Bucket
+      template: ${bucket_name}
+    display_type: default
+
+discovery:
+  type: google_project_usage_export_bucket
+  dnd_supported: false
+  references:
+    bucket_name:
+      from: google_storage_bucket
+      output: name

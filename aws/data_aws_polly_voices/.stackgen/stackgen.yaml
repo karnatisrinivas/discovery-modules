@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Polly Voices"
+  node:
+    label:
+      static: "[Data] Polly Voices"
+      template: "[Data] Polly Voices"
+    display_type: default
+
+discovery:
+  type: data_aws_polly_voices
+  dnd_supported: false

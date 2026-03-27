@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kms Grant
+  node:
+    label:
+      static: Kms Grant
+      template: ${key_id}
+    display_type: default
+
+discovery:
+  type: aws_kms_grant
+  dnd_supported: false
+  references:
+    grantee_principal:
+      from: aws_iam_role
+      output: arn
+    key_id:
+      from: aws_kms_key
+      output: id

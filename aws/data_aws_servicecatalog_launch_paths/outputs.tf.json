@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Service Catalog launch path.",
+            "value": "${data.aws_servicecatalog_launch_paths.this.id}"
+        },
+        "summaries": {
+            "description": "A list of summaries that provide details about each launch path, including constraints, name, path ID, and associated tags.",
+            "value": "${data.aws_servicecatalog_launch_paths.this.summaries}"
+        }
+    }
+}

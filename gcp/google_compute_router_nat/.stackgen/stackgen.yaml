@@ -1,0 +1,69 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: NAT Router
+  node:
+    label:
+      static: NAT Router
+      template: ${name}
+    display_type: default
+
+variables:
+  source_subnetwork_ip_ranges_to_nat:
+    options: 
+      - ALL_SUBNETWORKS_ALL_IP_RANGES
+      - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES
+      - LIST_OF_SUBNETWORKS
+    ui_control: select
+    description: "Specifies which subnetwork IP ranges are NATed. Valid values are 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES'."
+    type: string
+  subnetwork:
+    description: List of subnetworks to configure for NAT, including secondary IP ranges and source ranges.
+    attributes: 
+      name: 
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+        label: Name
+  log_config:
+    description: Configuration for logging, including enablement and filter criteria.
+    attributes: 
+      enable: 
+        ui_control: select
+        label: Enable
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - true
+          - false
+      filter: 
+        label: Filter
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - ERROS_ONLY
+          - TRANSITIONS_ONLY
+          - ALL
+        ui_control: select
+  nat_ip_allocate_option:
+    description: "Specifies the allocation method for NAT IPs. Valid values are 'AUTO_ONLY' or 'MANUAL_ONLY'."
+    type: string
+    options: 
+      - AUTO_ONLY
+      - MANUAL_ONLY
+    ui_control: select
+
+discovery:
+  type: google_compute_router_nat
+  dnd_supported: false
+  references:
+    router:
+      from: google_compute_router
+      output: id

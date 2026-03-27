@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the OpenSearch Serverless security configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

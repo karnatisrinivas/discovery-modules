@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfunctions Function Iam Binding
+  node:
+    label:
+      static: Cloudfunctions Function Iam Binding
+      template: ${cloud_function}
+    display_type: default
+
+discovery:
+  type: google_cloudfunctions_function_iam_binding
+  dnd_supported: false
+  references:
+    cloud_function:
+      from: google_cloudfunctions_function
+      output: name

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the EFS file system policy, useful for resource linking and updates",
+            "value": "${aws_efs_file_system_policy.this.id}"
+        }
+    }
+}

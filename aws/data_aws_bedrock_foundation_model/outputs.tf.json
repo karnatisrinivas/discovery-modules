@@ -1,0 +1,40 @@
+{
+    "output": {
+        "customizations_supported": {
+            "description": "A list of customizations that the model supports, such as fine-tuning or model-specific settings.",
+            "value": "${data.aws_bedrock_foundation_model.this.customizations_supported}"
+        },
+        "id": {
+            "description": "The unique identifier of the Bedrock foundation model.",
+            "value": "${data.aws_bedrock_foundation_model.this.id}"
+        },
+        "inference_types_supported": {
+            "description": "The different types of inference operations that the model can perform.",
+            "value": "${data.aws_bedrock_foundation_model.this.inference_types_supported}"
+        },
+        "input_modalities": {
+            "description": "The various input formats or types that the model can accept for processing.",
+            "value": "${data.aws_bedrock_foundation_model.this.input_modalities}"
+        },
+        "model_arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the model.",
+            "value": "${data.aws_bedrock_foundation_model.this.model_arn}"
+        },
+        "model_name": {
+            "description": "The name of the Bedrock foundation model.",
+            "value": "${data.aws_bedrock_foundation_model.this.model_name}"
+        },
+        "output_modalities": {
+            "description": "The different output formats or types that the model can produce.",
+            "value": "${data.aws_bedrock_foundation_model.this.output_modalities}"
+        },
+        "provider_name": {
+            "description": "The name of the provider offering the foundation model.",
+            "value": "${data.aws_bedrock_foundation_model.this.provider_name}"
+        },
+        "response_streaming_supported": {
+            "description": "Indicates whether the model supports streaming responses for real-time processing.",
+            "value": "${data.aws_bedrock_foundation_model.this.response_streaming_supported}"
+        }
+    }
+}

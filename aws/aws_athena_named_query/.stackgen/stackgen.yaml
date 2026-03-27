@@ -1,0 +1,22 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Athena Named Query
+  node:
+    label:
+      static: Athena Named Query
+      template: Athena Named Query
+    display_type: default
+
+discovery:
+  type: aws_athena_named_query
+  dnd_supported: false
+  data_source: data_aws_athena_named_query
+  references:
+    database:
+      from: aws_athena_database
+      output: name
+    workgroup:
+      from: aws_athena_workgroup
+      output: name

@@ -1,0 +1,20 @@
+{
+  "Name": "aws_sns_topic",
+  "Policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Default",
+        "Effect": "Allow",
+        "Action": [
+          "sns:GetTopicAttributes",
+          "sns:ListTopics",
+          "sns:ListSubscriptionsByTopic"
+        ],
+        "Resource": [
+          "${module.module_name.arn}"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of a single EC2 Transit Gateway Peering Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachments.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for multiple EC2 Transit Gateway Peering Attachments.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachments.this.ids}"
+        }
+    }
+}

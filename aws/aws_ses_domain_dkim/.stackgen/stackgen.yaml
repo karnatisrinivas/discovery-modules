@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SES Domain DKIM
+  node:
+    label:
+      static: SES Domain DKIM
+      template: SES Domain DKIM
+    display_type: default
+
+discovery:
+  type: aws_ses_domain_dkim
+  dnd_supported: false
+  references:
+    domain:
+      from: aws_ses_domain_identity
+      output: domain

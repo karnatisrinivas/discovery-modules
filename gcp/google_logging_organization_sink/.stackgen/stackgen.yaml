@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Logging Organization Sink
+  node:
+    label:
+      static: Logging Organization Sink
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_logging_organization_sink
+  dnd_supported: false
+  references:
+    org_id:
+      from: data_google_organization
+      output: org_id

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Secretsmanager Secret Version"
+  node:
+    label:
+      static: "[Data] Secretsmanager Secret Version"
+      template: "[Data] Secretsmanager Secret Version"
+    display_type: default
+
+discovery:
+  type: data_aws_secretsmanager_secret_version
+  dnd_supported: false

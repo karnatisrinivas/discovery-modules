@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "key": [
+      {
+        "description": "Specifies the metadata key for the project, which must be unique and comply with Google's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "\"Defines the timeout duration for creating, updating, or deleting the project metadata item.\"",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "value": [
+      {
+        "description": "Value assigned to the metadata key; can be used to configure project-wide settings or custom scripts.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

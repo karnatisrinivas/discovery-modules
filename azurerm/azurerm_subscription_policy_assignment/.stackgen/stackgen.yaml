@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Subscription Policy Assignment
+  node:
+    label:
+      static: Subscription Policy Assignment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_subscription_policy_assignment
+  dnd_supported: false

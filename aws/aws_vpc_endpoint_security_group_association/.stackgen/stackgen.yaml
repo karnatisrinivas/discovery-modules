@@ -1,0 +1,30 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: VPC Endpoint Security Group Association
+  node:
+    label:
+      static: VPC Endpoint Security Group Association
+      template: VPC Endpoint Security Group Association
+    display_type: default
+
+variables:
+  replace_default_association:
+    description: "Whether this association should replace the association with the VPC's default security group that is created when no security groups are specified during VPC endpoint creation. At most 1 association per-VPC endpoint should be configured with `replace_default_association = true`."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_vpc_endpoint_security_group_association
+  dnd_supported: false
+  references:
+    security_group_id:
+      from: aws_security_group
+      output: id
+    vpc_endpoint_id:
+      from: aws_vpc_endpoint
+      output: id

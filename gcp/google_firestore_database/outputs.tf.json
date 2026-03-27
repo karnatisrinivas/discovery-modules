@@ -1,0 +1,40 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp when the Firestore database was created, useful for auditing and tracking.",
+            "value": "${google_firestore_database.this.create_time}"
+        },
+        "earliest_version_time": {
+            "description": "Earliest time for which database versions are retained, helpful for recovery purposes.",
+            "value": "${google_firestore_database.this.earliest_version_time}"
+        },
+        "etag": {
+            "description": "Entity tag used for concurrency control and detecting resource changes.",
+            "value": "${google_firestore_database.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the Firestore database, used to reference the resource.",
+            "value": "${google_firestore_database.this.id}"
+        },
+        "key_prefix": {
+            "description": "Prefix for database keys, useful for organizing and accessing stored data.",
+            "value": "${google_firestore_database.this.key_prefix}"
+        },
+        "name": {
+            "description": "Name of the Firestore database",
+            "value": "${google_firestore_database.this.name}"
+        },
+        "uid": {
+            "description": "Globally unique identifier for the Firestore database, essential for API operations.",
+            "value": "${google_firestore_database.this.uid}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last database update, useful for tracking changes.",
+            "value": "${google_firestore_database.this.update_time}"
+        },
+        "version_retention_period": {
+            "description": "Duration for retaining database versions, critical for compliance and recovery.",
+            "value": "${google_firestore_database.this.version_retention_period}"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "variable": {
+    "id": [{
+      "type": "string",
+      "description": "The ID of the VPN Gateway",
+      "nullable": false
+    }]
+  }
+}

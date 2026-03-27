@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Notification Hub
+  node:
+    label:
+      static: Notification Hub
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_notification_hub
+  dnd_supported: false
+  references:
+    namespace_name:
+      from: azurerm_notification_hub_namespace
+      output: name

@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "async_inference_config": [
+      {
+        "description": "Defines the asynchronous inference configuration for the SageMaker endpoint, including settings for output location, failure location, and optional parameters like maximum concurrency.",
+        "nullable": true,
+        "type": "list(object({client_config: list(object({max_concurrent_invocations_per_instance: optional(number)})),output_config: list(object({kms_key_id: optional(string),s3_failure_path: optional(string),s3_output_path: string,notification_config: list(object({error_topic: optional(string),include_inference_response_in: optional(list(string)),success_topic: optional(string)}))}))}))"
+      }
+    ],
+    "data_capture_config": [
+      {
+        "description": "Specifies the data capture configuration settings for the endpoint, including options for capturing input/output data and storage location.",
+        "nullable": true,
+        "type": "list(object({destination_s3_uri: string,enable_capture: optional(bool),initial_sampling_percentage: number,kms_key_id: optional(string),capture_content_type_header: list(object({csv_content_types: optional(list(string)),json_content_types: optional(list(string))})),capture_options: list(object({capture_mode: string}))}))"
+      }
+    ],
+    "kms_key_arn": [
+      {
+        "description": "ARN of the KMS key used to encrypt data on the endpoint, required for enabling encryption.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the SageMaker endpoint configuration; must be unique within the AWS account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Prefix used to generate a unique name for the SageMaker endpoint configuration; must be unique within the AWS region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "production_variants": [
+      {
+        "description": "Defines the settings for production variants, including instance type, model name, initial instance count, and other deployment parameters.",
+        "nullable": false,
+        "type": "list(object({accelerator_type: optional(string),container_startup_health_check_timeout_in_seconds: optional(number),enable_ssm_access: optional(bool),inference_ami_version: optional(string),initial_instance_count: optional(number),initial_variant_weight: optional(number),instance_type: optional(string),model_data_download_timeout_in_seconds: optional(number),model_name: string,variant_name: optional(string),volume_size_in_gb: optional(number),core_dump_config: list(object({destination_s3_uri: string,kms_key_id: optional(string)})),managed_instance_scaling: list(object({max_instance_count: optional(number),min_instance_count: optional(number),status: optional(string)})),routing_config: list(object({routing_strategy: string})),serverless_config: list(object({max_concurrency: number,memory_size_in_mb: number,provisioned_concurrency: optional(number)}))}))"
+      }
+    ],
+    "shadow_production_variants": [
+      {
+        "description": "Defines the production variants for shadow testing, including model details, instance type, and initial instance count.",
+        "nullable": true,
+        "type": "list(object({accelerator_type: optional(string),container_startup_health_check_timeout_in_seconds: optional(number),enable_ssm_access: optional(bool),inference_ami_version: optional(string),initial_instance_count: optional(number),initial_variant_weight: optional(number),instance_type: optional(string),model_data_download_timeout_in_seconds: optional(number),model_name: string,variant_name: optional(string),volume_size_in_gb: optional(number),core_dump_config: list(object({destination_s3_uri: string,kms_key_id: string})),managed_instance_scaling: list(object({max_instance_count: optional(number),min_instance_count: optional(number),status: optional(string)})),routing_config: list(object({routing_strategy: string})),serverless_config: list(object({max_concurrency: number,memory_size_in_mb: number,provisioned_concurrency: optional(number)}))}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the endpoint configuration; supports tagging for cost allocation and access control.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

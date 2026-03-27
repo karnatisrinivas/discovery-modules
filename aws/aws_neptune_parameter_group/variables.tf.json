@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the description for the Neptune parameter group, providing context for its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "family": [
+      {
+        "description": "Specifies the Neptune DB parameter group family, which determines the compatibility of the parameter group with a specific Neptune engine version.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Neptune parameter group, must be unique within the account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Defines a prefix for the name of the Neptune parameter group, which must be unique within the AWS account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameter": [
+      {
+        "description": "Defines the custom parameters for the Neptune database parameter group, specifying configuration settings to optimize database performance and behavior.",
+        "nullable": true,
+        "type": "list(object({apply_method: optional(string),name: string,value: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize, categorize, and manage the Neptune parameter group.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

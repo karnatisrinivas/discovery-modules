@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the policy assignment in Azure configurations",
+            "value": "${azurerm_subscription_policy_assignment.this.id}"
+        }
+    }
+}

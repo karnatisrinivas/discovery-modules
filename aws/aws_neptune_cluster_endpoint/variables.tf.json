@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "cluster_endpoint_identifier": [
+      {
+        "description": "Unique identifier for the Neptune cluster endpoint, used to differentiate this endpoint within the cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "cluster_identifier": [
+      {
+        "description": "Identifier of the Neptune cluster that the endpoint will be associated with; must match an existing cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "endpoint_type": [
+      {
+        "description": "Specifies the type of the Neptune cluster endpoint, such as reader or writer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "excluded_members": [
+      {
+        "description": "Specifies the list of cluster members that should be excluded from the endpoint. Must be valid instance identifiers within the cluster.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "static_members": [
+      {
+        "description": "Defines the list of Neptune DB instance identifiers that will be statically included as members of the endpoint. Must reference existing instances in the cluster.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to assign to the resource, supporting resource categorization and management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

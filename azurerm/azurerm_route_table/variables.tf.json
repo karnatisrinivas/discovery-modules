@@ -1,0 +1,52 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the route table. This is a unique identifier used within the resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "bgp_route_propagation_enabled": [
+      {
+        "description": "Whether to enable BGP route propagation.",
+        "nullable": true,
+        "type": "bool",
+        "default": true
+      }
+    ],
+    "route": [
+      {
+        "description": "A list of routes to be added to the route table.",
+        "nullable": true,
+        "type": "list(object({ name: string, address_prefix: string, next_hop_type: string, next_hop_in_ip_address: optional(string) }))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "A set of timeouts for the route table.",
+        "nullable": true,
+        "type": "object({ create: optional(string), read: optional(string), update: optional(string), delete: optional(string) })"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A set of key-value pairs that are used to organize and categorize resources, often useful for cost management, automation, and identifying ownership.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Azure Storage Table that has been created.",
+            "value": "${azurerm_storage_table.this.id}"
+        }
+    }
+}

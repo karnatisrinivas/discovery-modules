@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "engine": [
+      {
+        "description": "The database engine to use for the instance, such as 'docdb'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "license_model": [
+      {
+        "description": "The type of license to use for this database instance, e.g., 'license-included'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_instance_classes": [
+      {
+        "description": "A list of preferred instance classes for the database, specifying the hardware configurations.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

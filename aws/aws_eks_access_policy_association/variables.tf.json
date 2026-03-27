@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "access_scope": [
+      {
+        "description": "Defines the access scope for associating an IAM policy with an Amazon EKS cluster, specifying the level of permissions granted.",
+        "nullable": false,
+        "type": "list(object({namespaces: optional(list(string)),type: string}))"
+      }
+    ],
+    "cluster_name": [
+      {
+        "description": "Name of the EKS cluster to associate the access policy with; must match an existing cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_arn": [
+      {
+        "description": "ARN of the IAM policy to associate with the Amazon EKS cluster, must be a valid and existing policy ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "principal_arn": [
+      {
+        "description": "ARN of the IAM entity to associate with the EKS access policy; must be a valid and existing IAM principal.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for creating, updating, and deleting the EKS access policy association.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

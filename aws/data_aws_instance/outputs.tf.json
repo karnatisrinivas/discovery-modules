@@ -1,0 +1,180 @@
+{
+    "output": {
+        "ami": {
+            "description": "The ID of the Amazon Machine Image (AMI) used to launch the instance.",
+            "value": "${data.aws_instance.this.ami}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the instance.",
+            "value": "${data.aws_instance.this.arn}"
+        },
+        "associate_public_ip_address": {
+            "description": "Indicates whether the instance has a public IP address.",
+            "value": "${data.aws_instance.this.associate_public_ip_address}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the instance is located.",
+            "value": "${data.aws_instance.this.availability_zone}"
+        },
+        "credit_specification": {
+            "description": "The credit option for CPU usage of the instance.",
+            "value": "${data.aws_instance.this.credit_specification}"
+        },
+        "disable_api_stop": {
+            "description": "If true, the instance cannot be stopped through the API.",
+            "value": "${data.aws_instance.this.disable_api_stop}"
+        },
+        "disable_api_termination": {
+            "description": "If true, the instance cannot be terminated through the API.",
+            "value": "${data.aws_instance.this.disable_api_termination}"
+        },
+        "ebs_block_device": {
+            "description": "Block devices attached to the instance, including EBS volumes.",
+            "value": "${data.aws_instance.this.ebs_block_device}"
+        },
+        "ebs_optimized": {
+            "description": "Indicates whether the instance is optimized for EBS I/O.",
+            "value": "${data.aws_instance.this.ebs_optimized}"
+        },
+        "enclave_options": {
+            "description": "Options for enabling or disabling Nitro enclaves on the instance.",
+            "value": "${data.aws_instance.this.enclave_options}"
+        },
+        "ephemeral_block_device": {
+            "description": "Ephemeral (instance store) volumes attached to the instance.",
+            "value": "${data.aws_instance.this.ephemeral_block_device}"
+        },
+        "host_id": {
+            "description": "The ID of the dedicated host if applicable.",
+            "value": "${data.aws_instance.this.host_id}"
+        },
+        "host_resource_group_arn": {
+            "description": "The ARN of the resource group for the dedicated host.",
+            "value": "${data.aws_instance.this.host_resource_group_arn}"
+        },
+        "iam_instance_profile": {
+            "description": "The IAM instance profile associated with the instance.",
+            "value": "${data.aws_instance.this.iam_instance_profile}"
+        },
+        "id": {
+            "description": "The ID of the instance.",
+            "value": "${data.aws_instance.this.id}"
+        },
+        "instance_state": {
+            "description": "The current state of the instance.",
+            "value": "${data.aws_instance.this.instance_state}"
+        },
+        "instance_tags": {
+            "description": "Tags associated with the instance.",
+            "value": "${data.aws_instance.this.instance_tags}"
+        },
+        "instance_type": {
+            "description": "The type of instance (e.g., t2.micro).",
+            "value": "${data.aws_instance.this.instance_type}"
+        },
+        "ipv6_addresses": {
+            "description": "IPv6 addresses assigned to the instance.",
+            "value": "${data.aws_instance.this.ipv6_addresses}"
+        },
+        "key_name": {
+            "description": "The key name of the key pair used for SSH access to the instance.",
+            "value": "${data.aws_instance.this.key_name}"
+        },
+        "launch_time": {
+            "description": "The time when the instance was launched.",
+            "value": "${data.aws_instance.this.launch_time}"
+        },
+        "maintenance_options": {
+            "description": "Options for automatic recovery of the instance.",
+            "value": "${data.aws_instance.this.maintenance_options}"
+        },
+        "metadata_options": {
+            "description": "Options for configuring the instance metadata service.",
+            "value": "${data.aws_instance.this.metadata_options}"
+        },
+        "monitoring": {
+            "description": "Indicates whether monitoring is enabled for the instance.",
+            "value": "${data.aws_instance.this.monitoring}"
+        },
+        "network_interface_id": {
+            "description": "The ID of the network interface attached to the instance.",
+            "value": "${data.aws_instance.this.network_interface_id}"
+        },
+        "outpost_arn": {
+            "description": "The ARN of the Outpost if the instance is launched on an Outpost.",
+            "value": "${data.aws_instance.this.outpost_arn}"
+        },
+        "password_data": {
+            "description": "Encrypted password data for the instance.",
+            "value": "${data.aws_instance.this.password_data}"
+        },
+        "placement_group": {
+            "description": "The placement group in which the instance is launched.",
+            "value": "${data.aws_instance.this.placement_group}"
+        },
+        "placement_partition_number": {
+            "description": "The partition number of the placement group.",
+            "value": "${data.aws_instance.this.placement_partition_number}"
+        },
+        "private_dns": {
+            "description": "The private DNS name assigned to the instance.",
+            "value": "${data.aws_instance.this.private_dns}"
+        },
+        "private_dns_name_options": {
+            "description": "Options for DNS name resolution.",
+            "value": "${data.aws_instance.this.private_dns_name_options}"
+        },
+        "private_ip": {
+            "description": "The private IP address assigned to the instance.",
+            "value": "${data.aws_instance.this.private_ip}"
+        },
+        "public_dns": {
+            "description": "The public DNS name assigned to the instance.",
+            "value": "${data.aws_instance.this.public_dns}"
+        },
+        "public_ip": {
+            "description": "The public IP address assigned to the instance.",
+            "value": "${data.aws_instance.this.public_ip}"
+        },
+        "root_block_device": {
+            "description": "The root block device of the instance.",
+            "value": "${data.aws_instance.this.root_block_device}"
+        },
+        "secondary_private_ips": {
+            "description": "Secondary private IP addresses assigned to the instance.",
+            "value": "${data.aws_instance.this.secondary_private_ips}"
+        },
+        "security_groups": {
+            "description": "Security groups associated with the instance.",
+            "value": "${data.aws_instance.this.security_groups}"
+        },
+        "source_dest_check": {
+            "description": "Indicates whether source/destination checks are enabled.",
+            "value": "${data.aws_instance.this.source_dest_check}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet in which the instance is running.",
+            "value": "${data.aws_instance.this.subnet_id}"
+        },
+        "tags": {
+            "description": "Key-value pairs assigned to the instance.",
+            "value": "${data.aws_instance.this.tags}"
+        },
+        "tenancy": {
+            "description": "The tenancy of the instance (e.g., default, dedicated, host).",
+            "value": "${data.aws_instance.this.tenancy}"
+        },
+        "user_data": {
+            "description": "The user data script provided at instance launch.",
+            "value": "${data.aws_instance.this.user_data}"
+        },
+        "user_data_base64": {
+            "description": "The Base64-encoded version of the user data.",
+            "value": "${data.aws_instance.this.user_data_base64}"
+        },
+        "vpc_security_group_ids": {
+            "description": "The IDs of the VPC security groups associated with the instance.",
+            "value": "${data.aws_instance.this.vpc_security_group_ids}"
+        }
+    }
+}

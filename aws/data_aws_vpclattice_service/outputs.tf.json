@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.arn}"
+        },
+        "auth_type": {
+            "description": "The type of authentication used by the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.auth_type}"
+        },
+        "certificate_arn": {
+            "description": "The ARN of the certificate associated with the VPC Lattice service's custom domain.",
+            "value": "${data.aws_vpclattice_service.this.certificate_arn}"
+        },
+        "custom_domain_name": {
+            "description": "The custom domain name configured for the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.custom_domain_name}"
+        },
+        "dns_entry": {
+            "description": "DNS entries for the VPC Lattice service, including domain name and hosted zone ID.",
+            "value": "${data.aws_vpclattice_service.this.dns_entry}"
+        },
+        "id": {
+            "description": "The unique identifier for the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.id}"
+        },
+        "name": {
+            "description": "The name of the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.name}"
+        },
+        "service_identifier": {
+            "description": "The service identifier for the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.service_identifier}"
+        },
+        "status": {
+            "description": "The current status of the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC Lattice service.",
+            "value": "${data.aws_vpclattice_service.this.tags}"
+        }
+    }
+}

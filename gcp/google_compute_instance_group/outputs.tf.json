@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the instance group in configurations and dependencies",
+            "value": "${google_compute_instance_group.this.id}"
+        },
+        "name": {
+            "description": "Name of the instance group",
+            "value": "${google_compute_instance_group.this.name}"
+        },
+        "self_link": {
+            "description": "URL for API calls and direct access to the instance group resource",
+            "value": "${google_compute_instance_group.this.self_link}"
+        },
+        "size": {
+            "description": "Count of active instances in the group, useful for scaling and monitoring",
+            "value": "${google_compute_instance_group.this.size}"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigateway V2 Api
+  node:
+    label:
+      static: Apigateway V2 Api
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_apigatewayv2_api
+  dnd_supported: false
+  data_source: data_aws_apigatewayv2_api

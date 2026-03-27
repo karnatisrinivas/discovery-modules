@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafregional Ipset"
+  node:
+    label:
+      static: "[Data] Wafregional Ipset"
+      template: "[Data] Wafregional Ipset"
+    display_type: default
+
+discovery:
+  type: data_aws_wafregional_ipset
+  dnd_supported: false

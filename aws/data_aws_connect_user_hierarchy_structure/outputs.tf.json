@@ -1,0 +1,12 @@
+{
+    "output": {
+        "hierarchy_structure": {
+            "description": "Represents the hierarchy structure of AWS Connect users, organized into five levels, each containing details such as ARN, ID, and name.",
+            "value": "${data.aws_connect_user_hierarchy_structure.this.hierarchy_structure}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Connect user hierarchy structure.",
+            "value": "${data.aws_connect_user_hierarchy_structure.this.id}"
+        }
+    }
+}

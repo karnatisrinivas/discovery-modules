@@ -1,0 +1,20 @@
+{
+    "output": {
+        "default_hostname": {
+            "description": "",
+            "value": "${azurerm_linux_function_app.this.default_hostname}"
+        },
+        "hosting_environment_id": {
+            "description": "",
+            "value": "${azurerm_linux_function_app.this.hosting_environment_id}"
+        },
+        "id": {
+            "description": "",
+            "value": "${azurerm_linux_function_app.this.id}"
+        },
+        "key_vault_reference_identity_id": {
+            "description": "",
+            "value": "${azurerm_linux_function_app.this.key_vault_reference_identity_id}"
+        }
+    }
+}

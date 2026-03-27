@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM roles and API operations",
+            "value": "${aws_networkfirewall_firewall_policy.this.arn}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${aws_networkfirewall_firewall_policy.this.id}"
+        },
+        "update_token": {
+            "description": "Token to track and verify policy updates",
+            "value": "${aws_networkfirewall_firewall_policy.this.update_token}"
+        }
+    }
+}

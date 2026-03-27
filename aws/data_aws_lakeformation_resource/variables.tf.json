@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Lake Formation resource you want to manage.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

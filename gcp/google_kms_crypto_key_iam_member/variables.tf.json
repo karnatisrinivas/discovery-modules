@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition that specifies the attributes under which the IAM binding is applied, such as expression, title, and description. Required for conditional role bindings.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "crypto_key_id": [
+      {
+        "description": "ID of the KMS CryptoKey to which the IAM member will be bound; must be in the format `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}`",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the IAM identity to be granted the role, such as a user, service account, or group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member, such as roles/cloudkms.cryptoKeyEncrypterDecrypter.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

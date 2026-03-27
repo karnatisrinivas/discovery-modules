@@ -1,0 +1,499 @@
+{
+    "variable": {
+        "allocated_storage": [
+            {
+                "type": "number",
+                "description": "The amount of storage in gigabytes",
+                "nullable": true
+            }
+        ],
+        "allow_major_version_upgrade": [
+            {
+                "type": "bool",
+                "description": "Allow major version upgrade",
+                "nullable": true
+            }
+        ],
+        "apply_immediately": [
+            {
+                "type": "bool",
+                "description": "Apply immediately",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "auto_minor_version_upgrade": [
+            {
+                "type": "bool",
+                "description": "Auto minor version upgrade",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "availability_zone": [
+            {
+                "type": "string",
+                "description": "The availability zone",
+                "nullable": true
+            }
+        ],
+        "backup_retention_period": [
+            {
+                "type": "number",
+                "description": "The days to retain backups for. Must be between 0 and 35",
+                "nullable": true,
+                "default": 0
+            }
+        ],
+        "backup_target": [
+            {
+                "type": "string",
+                "description": "The backup target",
+                "nullable": true,
+                "default": "region"
+            }
+        ],
+        "backup_window": [
+            {
+                "type": "string",
+                "description": "The backup window",
+                "nullable": true
+            }
+        ],
+        "blue_green_update": [
+            {
+                "type": "list(object({enabled: bool}))",
+                "description": "The blue green update",
+                "nullable": true
+            }
+        ],
+        "ca_cert_identifier": [
+            {
+                "type": "string",
+                "description": "The CA certificate identifier",
+                "nullable": true
+            }
+        ],
+        "character_set_name": [
+            {
+                "type": "string",
+                "description": "The character set name",
+                "nullable": true
+            }
+        ],
+        "copy_tags_to_snapshot": [
+            {
+                "type": "bool",
+                "description": "Copy tags to snapshot",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "custom_iam_instance_profile": [
+            {
+                "type": "string",
+                "description": "The custom IAM instance profile",
+                "nullable": true
+            }
+        ],
+        "db_name": [
+            {
+                "type": "string",
+                "description": "The database name",
+                "nullable": true
+            }
+        ],
+        "db_subnet_group_name": [
+            {
+                "type": "string",
+                "description": "The database subnet group name",
+                "nullable": true
+            }
+        ],
+        "dedicated_log_volume": [
+            {
+                "type": "bool",
+                "description": "Dedicated log volume",
+                "nullable": true
+            }
+        ],
+        "delete_automated_backups": [
+            {
+                "type": "bool",
+                "description": "Delete automated backups",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "deletion_protection": [
+            {
+                "type": "bool",
+                "description": "Instance Deletion protection",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "domain": [
+            {
+                "type": "string",
+                "description": "The domain",
+                "nullable": true
+            }
+        ],
+        "domain_auth_secret_arn": [
+            {
+                "type": "string",
+                "description": "The domain auth secret ARN",
+                "nullable": true
+            }
+        ],
+        "domain_dns_ips": [
+            {
+                "type": "list(string)",
+                "description": "The domain DNS IPs",
+                "nullable": true
+            }
+        ],
+        "domain_fqdn": [
+            {
+                "type": "string",
+                "description": "The domain FQDN",
+                "nullable": true
+            }
+        ],
+        "domain_iam_role_name": [
+            {
+                "type": "string",
+                "description": "The domain IAM role name",
+                "nullable": true
+            }
+        ],
+        "domain_ou": [
+            {
+                "type": "string",
+                "description": "The domain OU",
+                "nullable": true
+            }
+        ],
+        "enabled_cloudwatch_logs_exports": [
+            {
+                "type": "list(string)",
+                "description": "The enabled CloudWatch logs exports",
+                "nullable": true
+            }
+        ],
+        "engine": [
+            {
+                "type": "string",
+                "description": "The engine",
+                "nullable": true
+            }
+        ],
+        "engine_version": [
+            {
+                "type": "string",
+                "description": "The engine version",
+                "nullable": true
+            }
+        ],
+        "engine_lifecycle_support": [
+            {
+                "type": "string",
+                "description": "The engine lifecycle support",
+                "nullable": true,
+                "default": "open-source-rds-extended-support"
+            }
+        ],
+        "final_snapshot_identifier": [
+            {
+                "type": "string",
+                "description": "The final snapshot identifier",
+                "nullable": true
+            }
+        ],
+        "iam_database_authentication_enabled": [
+            {
+                "type": "bool",
+                "description": "The IAM database authentication enabled",
+                "nullable": true
+            }
+        ],
+        "identifier": [
+            {
+                "type": "string",
+                "description": "The identifier",
+                "nullable": true
+            }
+        ],
+        "identifier_prefix": [
+            {
+                "type": "string",
+                "description": "The identifier prefix",
+                "nullable": true
+            }
+        ],
+        "instance_class": [
+            {
+                "type": "string",
+                "description": "The instance class",
+                "nullable": false
+            }
+        ],
+        "iops": [
+            {
+                "type": "number",
+                "description": "The IOPS",
+                "nullable": true
+            }
+        ],
+        "kms_key_id": [
+            {
+                "type": "string",
+                "description": "The KMS key ID",
+                "nullable": true
+            }
+        ],
+        "license_model": [
+            {
+                "type": "string",
+                "description": "The license model",
+                "nullable": true
+            }
+        ],
+        "maintenance_window": [
+            {
+                "type": "string",
+                "description": "The maintenance window",
+                "nullable": true
+            }
+        ],
+        "manage_master_user_password": [
+            {
+                "type": "bool",
+                "description": "Manage master user password",
+                "nullable": true
+            }
+        ],
+        "master_user_secret_kms_key_id": [
+            {
+                "type": "string",
+                "description": "The master user secret KMS key ID",
+                "nullable": true
+            }
+        ],
+        "max_allocated_storage": [
+            {
+                "type": "number",
+                "description": " Specifies the maximum storage (in GiB) that Amazon RDS can automatically scale to for this DB instance",
+                "nullable": true
+            }
+        ],
+        "monitoring_interval": [
+            {
+                "type": "number",
+                "description": "The monitoring interval",
+                "nullable": true,
+                "default": 0
+            }
+        ],
+        "monitoring_role_arn": [
+            {
+                "type": "string",
+                "description": "The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs",
+                "nullable": true
+            }
+        ],
+        "multi_az": [
+            {
+                "type": "bool",
+                "description": "Specifies if the RDS instance is multi-AZ",
+                "nullable": true
+            }
+        ],
+        "nchar_character_set_name": [
+            {
+                "type": "string",
+                "description": "The NCHAR character set name",
+                "nullable": true
+            }
+        ],
+        "network_type": [
+            {
+                "type": "string",
+                "description": "The network type",
+                "nullable": true
+            }
+        ],
+        "option_group_name": [
+            {
+                "type": "string",
+                "description": "The option group name",
+                "nullable": true
+            }
+        ],
+        "parameter_group_name": [
+            {
+                "type": "string",
+                "description": "The parameter group name",
+                "nullable": true
+            }
+        ],
+        "password": [
+            {
+                "type": "string",
+                "description": " Password for the master DB user.",
+                "nullable": true
+            }
+        ],
+        "performance_insights_enabled": [
+            {
+                "type": "bool",
+                "description": "Performance insights enabled",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "performance_insights_kms_key_id": [
+            {
+                "type": "string",
+                "description": "The performance insights KMS key ID",
+                "nullable": true
+            }
+        ],
+        "performance_insights_retention_period": [
+            {
+                "type": "number",
+                "description": "The performance insights retention period",
+                "nullable": true
+            }
+        ],
+        "port": [
+            {
+                "type": "number",
+                "description": "The port",
+                "nullable": true
+            }
+        ],
+        "publicly_accessible": [
+            {
+                "type": "bool",
+                "description": "Publicly accessible",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "replica_mode": [
+            {
+                "type": "string",
+                "description": "The replica mode",
+                "nullable": true
+            }
+        ],
+        "replicate_source_db": [
+            {
+                "type": "string",
+                "description": "The replicate source DB",
+                "nullable": true
+            }
+        ],
+        "upgrade_storage_config": [
+            {
+                "type": "bool",
+                "description": "The upgrade storage config",
+                "nullable": true
+            }
+        ],
+        "restore_to_point_in_time": [
+            {
+                "type": "list(object({restore_time: string, source_db_instance_identifier: string, source_db_instance_automated_backups_arn: string, source_dbi_resource_id: string, use_latest_restorable_time: bool}))",
+                "description": "The restore to point in time",
+                "nullable": true
+            }
+        ],
+        "skip_final_snapshot": [
+            {
+                "type": "bool",
+                "description": "Skip final snapshot",
+                "nullable": true
+            }
+        ],
+        "snapshot_identifier": [
+            {
+                "type": "string",
+                "description": "The snapshot identifier",
+                "nullable": true
+            }
+        ],
+        "storage_encrypted": [
+            {
+                "type": "bool",
+                "description": "The storage encrypted",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "storage_type": [
+            {
+                "type": "string",
+                "description": "The storage type",
+                "nullable": true
+            }
+        ],
+        "storage_throughput": [
+            {
+                "type": "number",
+                "description": "The storage throughput",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "The tags",
+                "nullable": true
+            }
+        ],
+        "timezone": [
+            {
+                "type": "string",
+                "description": "The timezone",
+                "nullable": true
+            }
+        ],
+        "username": [
+            {
+                "type": "string",
+                "description": "The username",
+                "nullable": true
+            }
+        ],
+        "vpc_security_group_ids": [
+            {
+                "type": "list(string)",
+                "description": "The VPC security group IDs",
+                "nullable": true
+            }
+        ],
+        "customer_owned_ip_enabled": [
+            {
+                "type": "bool",
+                "description": "The customer owned IP enabled",
+                "nullable": true
+            }
+        ],
+        "timeouts": [
+            {
+                "type": "object({create: optional(string), update: optional(string), delete: optional(string)})",
+                "description": "The timeouts",
+                "nullable": true
+            }
+        ],
+        "s3_import": [
+            {
+                "type": "list(object({bucket_name: string, bucket_prefix: optional(string), ingestion_role: string, source_engine: string, source_engine_version: string}))",
+                "description": "The S3 import",
+                "nullable": true
+            }
+        ]
+    }
+}

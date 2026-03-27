@@ -1,0 +1,68 @@
+{
+  "variable": {
+    "auxiliary_mode": [
+      {
+        "description": "Specifies the mode for auxiliary configurations.",
+        "nullable": true,
+        "type": "string",
+        "default": "None"
+      }
+    ],
+    "auxiliary_sku": [
+      {
+        "description": "Specifies the SKU for auxiliary settings.",
+        "nullable": true,
+        "type": "string",
+        "default": "None"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Defines the edge zone for the network interface.",
+        "nullable": true,
+        "type": "string",
+        "default": null
+      }
+    ],
+    "internal_dns_name_label": [
+      {
+        "description": "Sets the internal DNS name label for the interface.",
+        "nullable": true,
+        "type": "string",
+        "default": null
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the network interface.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "ip_configuration": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "type": "list(object({name: string, gateway_load_balancer_frontend_ip_configuration_id: string, subnet_id: string, private_ip_address_version: string, private_ip_address_allocation: string, public_ip_address_id: string, primary: bool, private_ip_address: string}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

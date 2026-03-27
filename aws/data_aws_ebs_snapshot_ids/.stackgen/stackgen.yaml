@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ebs Snapshot Ids"
+  node:
+    label:
+      static: "[Data] Ebs Snapshot Ids"
+      template: "[Data] Ebs Snapshot Ids"
+    display_type: default
+
+discovery:
+  type: data_aws_ebs_snapshot_ids
+  dnd_supported: false

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "comments": [
+      {
+        "description": "A set of strings containing comments or descriptions for CloudFront origin access identities.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

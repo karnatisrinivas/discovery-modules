@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the keyspace to be created.",
+                "nullable": false
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

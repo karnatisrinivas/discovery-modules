@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "file_system_id": [
+      {
+        "description": "The ID of the EFS file system for which the access point is being created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

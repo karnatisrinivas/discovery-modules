@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the DAX subnet group resource",
+            "value": "${aws_dax_subnet_group.this.id}"
+        },
+        "name": {
+            "description": "Name of the DAX subnet group",
+            "value": "${aws_dax_subnet_group.this.name}"
+        },
+        "vpc_id": {
+            "description": "ID of the VPC where the DAX subnet group is located",
+            "value": "${aws_dax_subnet_group.this.vpc_id}"
+        }
+    }
+}

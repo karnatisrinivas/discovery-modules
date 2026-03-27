@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Opensearchserverless Access Policy"
+  node:
+    label:
+      static: "[Data] Opensearchserverless Access Policy"
+      template: "[Data] Opensearchserverless Access Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_opensearchserverless_access_policy
+  dnd_supported: false

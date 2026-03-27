@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ami Launch Permission
+  node:
+    label:
+      static: Ami Launch Permission
+      template: ${image_id}
+    display_type: default
+
+discovery:
+  type: aws_ami_launch_permission
+  dnd_supported: false
+  references:
+    organization_arn:
+      from: data_aws_organizations_organization
+      output: arn

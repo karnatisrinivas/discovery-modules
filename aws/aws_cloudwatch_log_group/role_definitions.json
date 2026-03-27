@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Reader",
+    "resource_type": "aws_cloudwatch_log_group",
+    "description": "List log groups, resource policies, log streams, metric and subscriptions filters, retrieve and filter log events",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:DescribreLogStreams",
+            "logs:GetLogEvents",
+            "logs:FilterLogEvents",
+            "logs:DescribreMetricFilters",
+            "logs:DescribeSubscriptionFilters"
+          ],
+          "Resource": ["${module.module_name.arn}"]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Writer",
+    "resource_type": "aws_cloudwatch_log_group",
+    "description": "Create log groups, create log streams, put log events",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": ["logs:CreateLogGroup"],
+          "Resource": ["${module.module_name.arn}"]
+        },
+        {
+          "Effect": "Allow",
+          "Action": ["logs:CreateLogStream", "logs:PutLogEvents"],
+          "Resource": ["${module.module_name.arn}:*"]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Admin",
+    "resource_type": "aws_cloudwatch_log_group",
+    "description": "Allows all actions",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": ["logs:*"],
+          "Resource": ["${module.module_name.arn}"]
+        }
+      ]
+    }
+  }
+]

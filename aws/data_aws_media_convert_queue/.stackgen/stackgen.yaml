@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Media Convert Queue"
+  node:
+    label:
+      static: "[Data] Media Convert Queue"
+      template: "[Data] Media Convert Queue"
+    display_type: default
+
+discovery:
+  type: data_aws_media_convert_queue
+  dnd_supported: false

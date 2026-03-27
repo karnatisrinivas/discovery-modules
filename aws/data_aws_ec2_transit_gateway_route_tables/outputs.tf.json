@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific EC2 Transit Gateway Route Table.",
+            "value": "${data.aws_ec2_transit_gateway_route_tables.this.id}"
+        },
+        "ids": {
+            "description": "A list of identifiers for all EC2 Transit Gateway Route Tables.",
+            "value": "${data.aws_ec2_transit_gateway_route_tables.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EC2 Transit Gateway Route Tables, represented as key-value pairs.",
+            "value": "${data.aws_ec2_transit_gateway_route_tables.this.tags}"
+        }
+    }
+}

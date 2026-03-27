@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier assigned to the Google Compute Address resource.",
+            "value": "${google_compute_address.this.id}"
+        }
+    }
+}

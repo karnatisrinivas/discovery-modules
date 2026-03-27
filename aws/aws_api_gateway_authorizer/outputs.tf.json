@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API Gateway operations",
+            "value": "${aws_api_gateway_authorizer.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the API Gateway authorizer resource",
+            "value": "${aws_api_gateway_authorizer.this.id}"
+        }
+    }
+}

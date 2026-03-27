@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for managing and referencing the Apigee addons configuration",
+            "value": "${google_apigee_addons_config.this.id}"
+        }
+    }
+}

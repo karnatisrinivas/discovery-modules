@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the DNS record set, useful for linking or debugging configurations",
+            "value": "${google_dns_record_set.this.id}"
+        }
+    }
+}

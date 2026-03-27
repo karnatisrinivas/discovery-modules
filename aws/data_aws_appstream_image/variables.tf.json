@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "most_recent": [
+      {
+        "description": "Indicates whether to use the most recent version of the AppStream image.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name_regex": [
+      {
+        "description": "A regular expression to match the name of the AppStream image.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of the AppStream image, such as 'FLEET' or 'DESKTOP'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

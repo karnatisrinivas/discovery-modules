@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Globalaccelerator Accelerator"
+  node:
+    label:
+      static: "[Data] Globalaccelerator Accelerator"
+      template: "[Data] Globalaccelerator Accelerator"
+    display_type: default
+
+discovery:
+  type: data_aws_globalaccelerator_accelerator
+  dnd_supported: false

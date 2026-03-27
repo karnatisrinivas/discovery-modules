@@ -1,0 +1,8 @@
+{
+    "output": {
+        "cosmosdb_mongo_collection_id": {
+            "description": "The value of the cosmosdb_mongo_collection_id output",
+            "value": "${azurerm_cosmosdb_mongo_collection.this.id}"
+        }
+    }
+}

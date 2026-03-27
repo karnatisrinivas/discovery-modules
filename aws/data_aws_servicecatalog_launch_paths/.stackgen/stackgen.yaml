@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicecatalog Launch Paths"
+  node:
+    label:
+      static: "[Data] Servicecatalog Launch Paths"
+      template: "[Data] Servicecatalog Launch Paths"
+    display_type: default
+
+discovery:
+  type: data_aws_servicecatalog_launch_paths
+  dnd_supported: false

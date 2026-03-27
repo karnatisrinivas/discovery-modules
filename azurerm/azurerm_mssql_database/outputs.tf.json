@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the SQL database in configurations and dependencies",
+            "value": "${azurerm_mssql_database.this.id}"
+        }
+    }
+}

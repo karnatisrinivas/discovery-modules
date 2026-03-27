@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: ElastiCache Subnet Group
+  node:
+    label:
+      static: ElastiCache Subnet Group
+      template: ElastiCache Subnet Group
+    display_type: default
+
+discovery:
+  type: aws_elasticache_subnet_group
+  dnd_supported: false
+  data_source: data_aws_elasticache_subnet_group
+  references:
+    subnet_ids:
+      from: aws_subnet
+      output: id

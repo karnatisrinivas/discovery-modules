@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "Specifies the S3 bucket to apply the lifecycle configuration rules to; must be an existing bucket name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "expected_bucket_owner": [
+      {
+        "description": "Specifies the AWS account ID of the bucket owner. Required for cross-account operations to verify ownership.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "rule": [
+      {
+        "description": "Defines the lifecycle rules for managing the lifecycle of objects in the S3 bucket, including transitions, expirations, and deletions.",
+        "nullable": true,
+        "type": "list(object({id: string,prefix: optional(string),status: string,abort_incomplete_multipart_upload: list(object({days_after_initiation: optional(number)})),expiration: list(object({date: optional(string),days: optional(number),expired_object_delete_marker: optional(bool)})),filter: list(object({object_size_greater_than: optional(number),object_size_less_than: optional(number),prefix: optional(string),and: list(object({object_size_greater_than: optional(number),object_size_less_than: optional(number),prefix: optional(string),tags: optional(map(string))})),tag: list(object({key: string,value: string}))})),noncurrent_version_expiration: list(object({newer_noncurrent_versions: optional(number),noncurrent_days: number})),noncurrent_version_transition: list(object({newer_noncurrent_versions: optional(number),noncurrent_days: number,storage_class: string})),transition: list(object({date: optional(string),days: optional(number),storage_class: string}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the maximum duration to wait for the lifecycle configuration of the S3 bucket to be created, updated, or deleted.",
+        "nullable": true,
+        "type": "object({create: optional(string),update: optional(string)})"
+      }
+    ],
+    "transition_default_minimum_object_size": [
+      {
+        "description": "Specifies the minimum object size (in bytes) for applying the default transition rule in the bucket's lifecycle configuration. Must be a positive integer.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

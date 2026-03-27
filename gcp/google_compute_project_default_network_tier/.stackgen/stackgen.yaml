@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Project Default Network Tier
+  node:
+    label:
+      static: Compute Project Default Network Tier
+      template: ${network_tier}
+    display_type: default
+
+discovery:
+  type: google_compute_project_default_network_tier
+  dnd_supported: false

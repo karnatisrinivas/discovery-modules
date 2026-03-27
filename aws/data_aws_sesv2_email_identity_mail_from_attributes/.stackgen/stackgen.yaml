@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sesv2 Email Identity Mail From Attributes"
+  node:
+    label:
+      static: "[Data] Sesv2 Email Identity Mail From Attributes"
+      template: "[Data] Sesv2 Email Identity Mail From Attributes"
+    display_type: default
+
+discovery:
+  type: data_aws_sesv2_email_identity_mail_from_attributes
+  dnd_supported: false

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "access_policy_id": {
+            "description": "ID of the access policy governing the service perimeter",
+            "value": "${google_access_context_manager_service_perimeter_resource.this.access_policy_id}"
+        },
+        "etag": {
+            "description": "Etag for tracking changes to the service perimeter resource",
+            "value": "${google_access_context_manager_service_perimeter_resource.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for the service perimeter resource configuration",
+            "value": "${google_access_context_manager_service_perimeter_resource.this.id}"
+        }
+    }
+}

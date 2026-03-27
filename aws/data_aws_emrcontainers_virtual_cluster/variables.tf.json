@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "virtual_cluster_id": [
+      {
+        "description": "The unique identifier for the EMR Containers virtual cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

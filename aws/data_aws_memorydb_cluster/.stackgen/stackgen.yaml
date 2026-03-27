@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Memorydb Cluster"
+  node:
+    label:
+      static: "[Data] Memorydb Cluster"
+      template: "[Data] Memorydb Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_memorydb_cluster
+  dnd_supported: false

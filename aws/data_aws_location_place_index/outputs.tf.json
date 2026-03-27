@@ -1,0 +1,36 @@
+{
+    "output": {
+        "create_time": {
+            "description": "The timestamp when the place index was created.",
+            "value": "${data.aws_location_place_index.this.create_time}"
+        },
+        "data_source": {
+            "description": "The data source used for the place index.",
+            "value": "${data.aws_location_place_index.this.data_source}"
+        },
+        "data_source_configuration": {
+            "description": "Configuration details of the data source, including its intended use.",
+            "value": "${data.aws_location_place_index.this.data_source_configuration}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the place index.",
+            "value": "${data.aws_location_place_index.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the place index.",
+            "value": "${data.aws_location_place_index.this.id}"
+        },
+        "index_arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the place index.",
+            "value": "${data.aws_location_place_index.this.index_arn}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs used to organize and manage the place index.",
+            "value": "${data.aws_location_place_index.this.tags}"
+        },
+        "update_time": {
+            "description": "The timestamp when the place index was last updated.",
+            "value": "${data.aws_location_place_index.this.update_time}"
+        }
+    }
+}

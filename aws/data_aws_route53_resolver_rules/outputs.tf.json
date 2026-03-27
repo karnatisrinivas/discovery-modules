@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Route 53 Resolver rules.",
+            "value": "${data.aws_route53_resolver_rules.this.id}"
+        },
+        "resolver_rule_ids": {
+            "description": "A set of IDs representing the Route 53 Resolver rules.",
+            "value": "${data.aws_route53_resolver_rules.this.resolver_rule_ids}"
+        }
+    }
+}

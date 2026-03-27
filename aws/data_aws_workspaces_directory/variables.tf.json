@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "directory_id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

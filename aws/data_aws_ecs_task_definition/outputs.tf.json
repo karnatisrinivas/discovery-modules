@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the ECS task definition.",
+            "value": "${data.aws_ecs_task_definition.this.arn}"
+        },
+        "arn_without_revision": {
+            "description": "The ARN of the ECS task definition without the version number.",
+            "value": "${data.aws_ecs_task_definition.this.arn_without_revision}"
+        },
+        "execution_role_arn": {
+            "description": "The ARN of the IAM role that grants the ECS task the permissions to execute.",
+            "value": "${data.aws_ecs_task_definition.this.execution_role_arn}"
+        },
+        "family": {
+            "description": "The family name of the ECS task definition, which groups multiple versions.",
+            "value": "${data.aws_ecs_task_definition.this.family}"
+        },
+        "id": {
+            "description": "The unique ID of the ECS task definition.",
+            "value": "${data.aws_ecs_task_definition.this.id}"
+        },
+        "network_mode": {
+            "description": "The network mode associated with the ECS task definition.",
+            "value": "${data.aws_ecs_task_definition.this.network_mode}"
+        },
+        "revision": {
+            "description": "The revision number of the ECS task definition, indicating its version.",
+            "value": "${data.aws_ecs_task_definition.this.revision}"
+        },
+        "status": {
+            "description": "The status of the ECS task definition, such as 'ACTIVE' or 'INACTIVE'.",
+            "value": "${data.aws_ecs_task_definition.this.status}"
+        },
+        "task_role_arn": {
+            "description": "The ARN of the IAM role that the ECS task can assume.",
+            "value": "${data.aws_ecs_task_definition.this.task_role_arn}"
+        }
+    }
+}

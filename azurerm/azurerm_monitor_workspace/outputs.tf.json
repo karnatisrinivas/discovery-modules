@@ -1,0 +1,8 @@
+{
+    "output": {
+        "monitor_workspace_id": {
+            "description": "The value of the monitor_workspace_id output",
+            "value": "${azurerm_monitor_workspace.this.id}"
+        }
+    }
+}

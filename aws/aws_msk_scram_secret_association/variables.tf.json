@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "cluster_arn": [
+      {
+        "description": "ARN of the MSK cluster to associate with the SCRAM secret. Must be a valid Amazon Resource Name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_arn_list": [
+      {
+        "description": "List of Amazon Secrets Manager secret ARNs used for SASL/SCRAM authentication; each ARN must correspond to a secret containing SCRAM credentials.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

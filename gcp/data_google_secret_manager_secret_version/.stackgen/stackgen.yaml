@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Secret Manager Secret Version"
+  node:
+    label:
+      static: "[Data] Secret Manager Secret Version"
+      template: ${secret}
+    display_type: default
+
+discovery:
+  type: data_google_secret_manager_secret_version
+  dnd_supported: false

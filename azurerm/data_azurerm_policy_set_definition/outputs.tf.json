@@ -1,0 +1,36 @@
+{
+    "output": {
+        "description": {
+            "description": "Detailed explanation of the policy set's purpose",
+            "value": "${data.azurerm_policy_set_definition.this.description}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_policy_set_definition.this.id}"
+        },
+        "metadata": {
+            "description": "JSON formatted metadata providing additional context",
+            "value": "${data.azurerm_policy_set_definition.this.metadata}"
+        },
+        "parameters": {
+            "description": "Configuration parameters required for policy execution",
+            "value": "${data.azurerm_policy_set_definition.this.parameters}"
+        },
+        "policy_definition_group": {
+            "description": "List of policy groups with metadata for categorization",
+            "value": "${data.azurerm_policy_set_definition.this.policy_definition_group}"
+        },
+        "policy_definition_reference": {
+            "description": "References to individual policies within the set",
+            "value": "${data.azurerm_policy_set_definition.this.policy_definition_reference}"
+        },
+        "policy_definitions": {
+            "description": "Aggregate of all policies within the set definition",
+            "value": "${data.azurerm_policy_set_definition.this.policy_definitions}"
+        },
+        "policy_type": {
+            "description": "Classification of the policy set, e.g., Custom or Built-in",
+            "value": "${data.azurerm_policy_set_definition.this.policy_type}"
+        }
+    }
+}

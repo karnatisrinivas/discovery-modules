@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "owner": [
+      {
+        "description": "Specifies the owner of the image recipe, usually the AWS account ID or an alias.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

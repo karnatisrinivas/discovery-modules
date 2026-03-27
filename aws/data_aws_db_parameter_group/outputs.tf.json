@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the database parameter group.",
+            "value": "${data.aws_db_parameter_group.this.arn}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the database parameter group.",
+            "value": "${data.aws_db_parameter_group.this.description}"
+        },
+        "family": {
+            "description": "The database family to which this parameter group belongs, indicating compatibility.",
+            "value": "${data.aws_db_parameter_group.this.family}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the database parameter group.",
+            "value": "${data.aws_db_parameter_group.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Account Password Policy
+  node:
+    label:
+      static: IAM Account Password Policy
+      template: IAM Account Password Policy
+    display_type: default
+
+discovery:
+  type: aws_iam_account_password_policy
+  dnd_supported: false

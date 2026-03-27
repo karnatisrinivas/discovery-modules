@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the AWS Lex Intent, which is a unique identifier used to define the intent within the Lex service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

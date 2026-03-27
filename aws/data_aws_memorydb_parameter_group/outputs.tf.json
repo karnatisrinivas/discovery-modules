@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB parameter group.",
+            "value": "${data.aws_memorydb_parameter_group.this.arn}"
+        },
+        "description": {
+            "description": "A description of the MemoryDB parameter group.",
+            "value": "${data.aws_memorydb_parameter_group.this.description}"
+        },
+        "family": {
+            "description": "The name of the MemoryDB parameter group family.",
+            "value": "${data.aws_memorydb_parameter_group.this.family}"
+        },
+        "id": {
+            "description": "The ID of the MemoryDB parameter group.",
+            "value": "${data.aws_memorydb_parameter_group.this.id}"
+        },
+        "parameter": {
+            "description": "A set of parameters in the MemoryDB parameter group, each with a name and value.",
+            "value": "${data.aws_memorydb_parameter_group.this.parameter}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MemoryDB parameter group.",
+            "value": "${data.aws_memorydb_parameter_group.this.tags}"
+        }
+    }
+}

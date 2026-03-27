@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the AWS Kendra index.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

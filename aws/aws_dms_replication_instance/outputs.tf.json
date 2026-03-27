@@ -1,0 +1,24 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the DMS replication instance.",
+            "value": "${aws_dms_replication_instance.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "The Amazon Resource Name (ARN) of the KMS encryption key used to encrypt the replication instance.",
+            "value": "${aws_dms_replication_instance.this.kms_key_arn}"
+        },
+        "replication_instance_arn": {
+            "description": "The ARN of the DMS replication instance.",
+            "value": "${aws_dms_replication_instance.this.replication_instance_arn}"
+        },
+        "replication_subnet_group_id": {
+            "description": "The ID of the subnet group associated with the replication instance.",
+            "value": "${aws_dms_replication_instance.this.replication_subnet_group_id}"
+        },
+        "vpc_security_group_ids": {
+            "description": "A set of VPC security group IDs associated with the replication instance.",
+            "value": "${aws_dms_replication_instance.this.vpc_security_group_ids}"
+        }
+    }
+}

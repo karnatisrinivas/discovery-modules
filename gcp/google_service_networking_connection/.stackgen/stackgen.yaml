@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Networking Connection
+  node:
+    label:
+      static: Service Networking Connection
+      template: Service Networking Connection
+    display_type: default
+
+discovery:
+  type: google_service_networking_connection
+  dnd_supported: false
+  references:
+    reserved_peering_ranges:
+      from: google_compute_global_address
+      output: name
+    network:
+      from: google_compute_network
+      output: id

@@ -1,0 +1,108 @@
+{
+    "output": {
+        "auto_scaling_enabled": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.auto_scaling_enabled}"
+        },
+        "enable_auto_scaling": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.enable_auto_scaling}"
+        },
+        "enable_node_public_ip": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.enable_node_public_ip}"
+        },
+        "eviction_policy": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.eviction_policy}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.id}"
+        },
+        "max_count": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.max_count}"
+        },
+        "max_pods": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.max_pods}"
+        },
+        "min_count": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.min_count}"
+        },
+        "mode": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.mode}"
+        },
+        "node_count": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.node_count}"
+        },
+        "node_labels": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.node_labels}"
+        },
+        "node_public_ip_enabled": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.node_public_ip_enabled}"
+        },
+        "node_public_ip_prefix_id": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.node_public_ip_prefix_id}"
+        },
+        "node_taints": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.node_taints}"
+        },
+        "orchestrator_version": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.orchestrator_version}"
+        },
+        "os_disk_size_gb": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.os_disk_size_gb}"
+        },
+        "os_disk_type": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.os_disk_type}"
+        },
+        "os_type": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.os_type}"
+        },
+        "priority": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.priority}"
+        },
+        "proximity_placement_group_id": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.proximity_placement_group_id}"
+        },
+        "spot_max_price": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.spot_max_price}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.tags}"
+        },
+        "upgrade_settings": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.upgrade_settings}"
+        },
+        "vm_size": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.vm_size}"
+        },
+        "vnet_subnet_id": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.vnet_subnet_id}"
+        },
+        "zones": {
+            "description": "",
+            "value": "${data.azurerm_kubernetes_cluster_node_pool.this.zones}"
+        }
+    }
+}

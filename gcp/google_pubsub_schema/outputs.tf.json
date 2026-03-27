@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for identifying the Pub/Sub schema in configurations and operations",
+            "value": "${google_pubsub_schema.this.id}"
+        }
+    }
+}

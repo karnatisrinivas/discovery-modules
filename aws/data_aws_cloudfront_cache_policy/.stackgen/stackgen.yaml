@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Cache Policy"
+  node:
+    label:
+      static: "[Data] Cloudfront Cache Policy"
+      template: "[Data] Cloudfront Cache Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_cache_policy
+  dnd_supported: false

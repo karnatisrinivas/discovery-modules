@@ -1,0 +1,179 @@
+{
+  "variable": {
+    "all_ports": [
+      {
+        "description": "Specifies whether to forward all ports. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "allow_global_access": [
+      {
+        "description": "Specifies whether the forwarding rule allows access from clients worldwide. Set to true for global access or false for regional access.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "allow_psc_global_access": [
+      {
+        "description": "Controls whether global access is enabled for Private Service Connect connections; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "backend_service": [
+      {
+        "description": "Specifies the backend service to which the forwarding rule directs traffic. Must be the name or self_link of an existing backend service in the same region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the forwarding rule's purpose or function, detailing its role in directing traffic to a target resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "Specifies the static IP address to associate with the forwarding rule. Must be an existing regional or global IP address resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_collection": [
+      {
+        "description": "List of IP addresses or IP ranges to be used by the forwarding rule; must be valid and conform to the required format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_protocol": [
+      {
+        "description": "Specifies the IP protocol for the forwarding rule; must be one of TCP, UDP, ESP, AH, SCTP, ICMP, or L3_DEFAULT.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_version": [
+      {
+        "description": "Specifies the IP version for the forwarding rule; must be either IPV4 or IPV6.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "is_mirroring_collector": [
+      {
+        "description": "Indicates if the forwarding rule is used as a mirroring collector; must be set to true for packet mirroring configurations.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs for organizing and categorizing resources, such as by environment or project; must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "load_balancing_scheme": [
+      {
+        "description": "Defines the load balancing configuration, specifying whether the forwarding rule is internal or external.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the forwarding rule, which must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network to which the forwarding rule is attached. Must be a valid network resource in the same project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "network_tier": [
+      {
+        "description": "Specifies the network tier for the forwarding rule, such as PREMIUM or STANDARD.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "no_automate_dns_zone": [
+      {
+        "description": "Indicates whether DNS records are automatically managed for the forwarding rule; set to false to manage DNS manually.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "port_range": [
+      {
+        "description": "Defines the range of ports for the forwarding rule, specified as a single port or a range (e.g., \"80\" or \"3000-4000\"). Must be valid TCP/UDP ports.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ports": [
+      {
+        "description": "List of ports for forwarding traffic; must be specified as a range or individual values.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "recreate_closed_psc": [
+      {
+        "description": "Controls whether the forwarding rule should be recreated when its target service is closed. Set to true to force recreation in such scenarios.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "service_directory_registrations": [
+      {
+        "description": "Controls whether Service Directory registrations are enabled for the forwarding rule; requires Service Directory API to be enabled.",
+        "nullable": true,
+        "type": "list(object({namespace: optional(string),service: optional(string)}))"
+      }
+    ],
+    "service_label": [
+      {
+        "description": "Specifies a label to identify the forwarding rule's service, used for organizing and managing resources. Must be unique within the region and comply with label naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_ip_ranges": [
+      {
+        "description": "Defines the CIDR IP ranges that are allowed to access the forwarding rule, ensuring traffic matches specified source addresses.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork to associate with the forwarding rule; must exist in the same region as the forwarding rule.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "target": [
+      {
+        "description": "Specifies the target resource to which traffic is directed; must be a valid target proxy or target pool.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration for creating, updating, or deleting the forwarding rule; supports custom timeout settings to ensure operations complete within the specified limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

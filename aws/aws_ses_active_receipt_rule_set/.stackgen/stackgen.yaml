@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SES Active Receipt Rule Set
+  node:
+    label:
+      static: SES Active Receipt Rule Set
+      template: ${rule_set_name}
+    display_type: default
+
+discovery:
+  type: aws_ses_active_receipt_rule_set
+  dnd_supported: false
+  data_source: data_aws_ses_active_receipt_rule_set

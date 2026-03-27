@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the supported instance types in the AWS EMR service.",
+            "value": "${data.aws_emr_supported_instance_types.this.id}"
+        }
+    }
+}

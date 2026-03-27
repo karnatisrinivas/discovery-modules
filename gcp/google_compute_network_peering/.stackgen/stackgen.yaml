@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Network Peering
+  node:
+    label:
+      static: Compute Network Peering
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_network_peering
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: self_link

@@ -1,0 +1,80 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network interface.",
+            "value": "${data.aws_network_interface.this.arn}"
+        },
+        "association": {
+            "description": "Information about the association of the network interface with an Elastic IP, if any.",
+            "value": "${data.aws_network_interface.this.association}"
+        },
+        "attachment": {
+            "description": "Details about the attachment of the network interface to an instance.",
+            "value": "${data.aws_network_interface.this.attachment}"
+        },
+        "availability_zone": {
+            "description": "The Availability Zone in which the network interface is located.",
+            "value": "${data.aws_network_interface.this.availability_zone}"
+        },
+        "description": {
+            "description": "The description of the network interface.",
+            "value": "${data.aws_network_interface.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the network interface.",
+            "value": "${data.aws_network_interface.this.id}"
+        },
+        "interface_type": {
+            "description": "The type of network interface (e.g., 'interface', 'efa').",
+            "value": "${data.aws_network_interface.this.interface_type}"
+        },
+        "ipv6_addresses": {
+            "description": "The IPv6 addresses associated with the network interface.",
+            "value": "${data.aws_network_interface.this.ipv6_addresses}"
+        },
+        "mac_address": {
+            "description": "The MAC address of the network interface.",
+            "value": "${data.aws_network_interface.this.mac_address}"
+        },
+        "outpost_arn": {
+            "description": "The ARN of the Outpost the network interface is associated with, if applicable.",
+            "value": "${data.aws_network_interface.this.outpost_arn}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the network interface.",
+            "value": "${data.aws_network_interface.this.owner_id}"
+        },
+        "private_dns_name": {
+            "description": "The private DNS name assigned to the network interface.",
+            "value": "${data.aws_network_interface.this.private_dns_name}"
+        },
+        "private_ip": {
+            "description": "The primary private IPv4 address of the network interface.",
+            "value": "${data.aws_network_interface.this.private_ip}"
+        },
+        "private_ips": {
+            "description": "A list of all private IPv4 addresses assigned to the network interface.",
+            "value": "${data.aws_network_interface.this.private_ips}"
+        },
+        "requester_id": {
+            "description": "The ID of the entity that requested the network interface.",
+            "value": "${data.aws_network_interface.this.requester_id}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the network interface.",
+            "value": "${data.aws_network_interface.this.security_groups}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet to which the network interface is attached.",
+            "value": "${data.aws_network_interface.this.subnet_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the network interface.",
+            "value": "${data.aws_network_interface.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the network interface resides.",
+            "value": "${data.aws_network_interface.this.vpc_id}"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the KMS alias.",
+            "value": "${data.aws_kms_alias.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the KMS alias.",
+            "value": "${data.aws_kms_alias.this.id}"
+        },
+        "target_key_arn": {
+            "description": "The ARN of the target key associated with the KMS alias.",
+            "value": "${data.aws_kms_alias.this.target_key_arn}"
+        },
+        "target_key_id": {
+            "description": "The unique identifier of the target key associated with the KMS alias.",
+            "value": "${data.aws_kms_alias.this.target_key_id}"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: API Gateway REST API
+  node:
+    label:
+      static: API Gateway REST API
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_rest_api
+  dnd_supported: false
+  data_source: data_aws_api_gateway_rest_api

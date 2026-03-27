@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM and API operations",
+            "value": "${aws_organizations_policy.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the policy within AWS Organizations",
+            "value": "${aws_organizations_policy.this.id}"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "output": {
+        "api": {
+            "description": "",
+            "value": "${data.azuread_application.this.api}"
+        },
+        "app_role_ids": {
+            "description": "",
+            "value": "${data.azuread_application.this.app_role_ids}"
+        },
+        "app_roles": {
+            "description": "",
+            "value": "${data.azuread_application.this.app_roles}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.azuread_application.this.description}"
+        },
+        "device_only_auth_enabled": {
+            "description": "",
+            "value": "${data.azuread_application.this.device_only_auth_enabled}"
+        },
+        "disabled_by_microsoft": {
+            "description": "",
+            "value": "${data.azuread_application.this.disabled_by_microsoft}"
+        },
+        "fallback_public_client_enabled": {
+            "description": "",
+            "value": "${data.azuread_application.this.fallback_public_client_enabled}"
+        },
+        "feature_tags": {
+            "description": "",
+            "value": "${data.azuread_application.this.feature_tags}"
+        },
+        "group_membership_claims": {
+            "description": "",
+            "value": "${data.azuread_application.this.group_membership_claims}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.azuread_application.this.id}"
+        },
+        "identifier_uris": {
+            "description": "",
+            "value": "${data.azuread_application.this.identifier_uris}"
+        },
+        "logo_url": {
+            "description": "",
+            "value": "${data.azuread_application.this.logo_url}"
+        },
+        "marketing_url": {
+            "description": "",
+            "value": "${data.azuread_application.this.marketing_url}"
+        },
+        "notes": {
+            "description": "",
+            "value": "${data.azuread_application.this.notes}"
+        },
+        "oauth2_permission_scope_ids": {
+            "description": "",
+            "value": "${data.azuread_application.this.oauth2_permission_scope_ids}"
+        },
+        "oauth2_post_response_required": {
+            "description": "",
+            "value": "${data.azuread_application.this.oauth2_post_response_required}"
+        },
+        "optional_claims": {
+            "description": "",
+            "value": "${data.azuread_application.this.optional_claims}"
+        },
+        "owners": {
+            "description": "",
+            "value": "${data.azuread_application.this.owners}"
+        },
+        "privacy_statement_url": {
+            "description": "",
+            "value": "${data.azuread_application.this.privacy_statement_url}"
+        },
+        "public_client": {
+            "description": "",
+            "value": "${data.azuread_application.this.public_client}"
+        },
+        "publisher_domain": {
+            "description": "",
+            "value": "${data.azuread_application.this.publisher_domain}"
+        },
+        "required_resource_access": {
+            "description": "",
+            "value": "${data.azuread_application.this.required_resource_access}"
+        },
+        "service_management_reference": {
+            "description": "",
+            "value": "${data.azuread_application.this.service_management_reference}"
+        },
+        "sign_in_audience": {
+            "description": "",
+            "value": "${data.azuread_application.this.sign_in_audience}"
+        },
+        "single_page_application": {
+            "description": "",
+            "value": "${data.azuread_application.this.single_page_application}"
+        },
+        "support_url": {
+            "description": "",
+            "value": "${data.azuread_application.this.support_url}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.azuread_application.this.tags}"
+        },
+        "terms_of_service_url": {
+            "description": "",
+            "value": "${data.azuread_application.this.terms_of_service_url}"
+        },
+        "web": {
+            "description": "",
+            "value": "${data.azuread_application.this.web}"
+        }
+    }
+}

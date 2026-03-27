@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Transfer Connector"
+  node:
+    label:
+      static: "[Data] Transfer Connector"
+      template: "[Data] Transfer Connector"
+    display_type: default
+
+discovery:
+  type: data_aws_transfer_connector
+  dnd_supported: false

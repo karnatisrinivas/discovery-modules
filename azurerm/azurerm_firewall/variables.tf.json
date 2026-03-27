@@ -1,0 +1,114 @@
+{
+  "variable": {
+    "dns_proxy_enabled": [
+      {
+        "description": "Enables DNS proxy functionality for the resource",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "dns_servers": [
+      {
+        "description": "List of custom DNS server IPs to configure (IPv4 format required)",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "firewall_policy_id": [
+      {
+        "description": "ID of the associated firewall policy (must be a valid resource ID)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_configuration": [
+      {
+        "description": "Details for IP configuration including private/public IPs and subnet IDs",
+        "nullable": true,
+        "type": "list(object({name: string,private_ip_address: optional(string),public_ip_address_id: optional(string),subnet_id: optional(string)}))"
+      }
+    ],
+    "management_ip_configuration": [
+      {
+        "description": "Management IP settings with required public IP and subnet IDs",
+        "nullable": true,
+        "type": "list(object({name: string,private_ip_address: optional(string),public_ip_address_id: string,subnet_id: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "User-defined name for the resource (must be unique within the scope)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "private_ip_ranges": [
+      {
+        "description": "List of IP ranges in CIDR notation for private networks",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "Specifies SKU name (e.g., Standard, Premium; case-sensitive)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "sku_tier": [
+      {
+        "description": "Defines SKU tier (e.g., Free, Standard, Premium; case-sensitive)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for resource metadata and categorization",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "threat_intel_mode": [
+      {
+        "description": "Specifies threat intelligence mode (e.g., Alert, Deny, Off)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Timeout settings for resource operations (create, read, update, delete)",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "virtual_hub": [
+      {
+        "description": "Configuration for a virtual hub including IP details and hub ID",
+        "nullable": true,
+        "type": "list(object({private_ip_address: optional(string),public_ip_addresses: optional(list(string)),public_ip_count: optional(number),virtual_hub_id: string}))"
+      }
+    ],
+    "zones": [
+      {
+        "description": "List of availability zones for deploying the resource",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

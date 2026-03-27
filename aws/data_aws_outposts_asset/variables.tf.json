@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS Outposts asset.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "asset_id": [
+      {
+        "description": "The unique identifier for the AWS Outposts asset.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

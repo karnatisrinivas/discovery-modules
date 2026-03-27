@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Reader",
+        "resource_type": "aws_cloudwatch_event_rule_schedule",
+        "description": "Read rules and event buses",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "events:DescribeRule",
+                        "events:ListRules",
+                        "events:ListTargetsByRule",
+                        "events:ListEventBuses",
+                        "events:DescribeEventBus",
+                        "events:ListEventSources"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Writer",
+        "resource_type": "aws_cloudwatch_event_rule_schedule",
+        "description": "Create/Delete/Update rules, targets and events",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "events:PutRule",
+                        "events:DeleteRule",
+                        "events:PutTargets",
+                        "events:RemoveTargets",
+                        "events:EnableRule",
+                        "events:DisableRule",
+                        "events:PutEvents"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "Admin",
+        "resource_type": "aws_cloudwatch_event_rule_schedule",
+        "description": "Allows all actions",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "events:*"
+                    ],
+                    "Resource": [
+                        "${module.module_name.arn}"
+                    ]
+                }
+            ]
+        }
+    }
+]

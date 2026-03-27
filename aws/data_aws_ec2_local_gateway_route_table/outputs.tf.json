@@ -1,0 +1,28 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the local gateway route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.id}"
+        },
+        "local_gateway_id": {
+            "description": "The ID of the local gateway associated with the route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.local_gateway_id}"
+        },
+        "local_gateway_route_table_id": {
+            "description": "The ID of the local gateway route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.local_gateway_route_table_id}"
+        },
+        "outpost_arn": {
+            "description": "The Amazon Resource Name (ARN) of the Outpost associated with the route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.outpost_arn}"
+        },
+        "state": {
+            "description": "The current state of the local gateway route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the local gateway route table.",
+            "value": "${data.aws_ec2_local_gateway_route_table.this.tags}"
+        }
+    }
+}

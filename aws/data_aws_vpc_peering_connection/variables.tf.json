@@ -1,0 +1,14 @@
+{
+    "variable": {
+        "vpc_id": [{
+            "description": "vpc id",
+            "type": "string",
+            "nullable": false
+        }],
+        "peer_cidr_block": [{
+            "description": "The CIDR block of the peer VPC.",
+            "type": "string",
+            "nullable": false
+        }]
+    }
+}

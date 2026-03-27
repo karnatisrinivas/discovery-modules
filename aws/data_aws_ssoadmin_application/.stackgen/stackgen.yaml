@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssoadmin Application"
+  node:
+    label:
+      static: "[Data] Ssoadmin Application"
+      template: "[Data] Ssoadmin Application"
+    display_type: default
+
+discovery:
+  type: data_aws_ssoadmin_application
+  dnd_supported: false

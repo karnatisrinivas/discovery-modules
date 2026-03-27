@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CloudWatch Event Bus.",
+            "value": "${data.aws_cloudwatch_event_bus.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the CloudWatch Event Bus.",
+            "value": "${data.aws_cloudwatch_event_bus.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the CloudWatch Event Bus.",
+            "value": "${data.aws_cloudwatch_event_bus.this.id}"
+        },
+        "kms_key_identifier": {
+            "description": "The identifier for the AWS KMS key associated with the Event Bus.",
+            "value": "${data.aws_cloudwatch_event_bus.this.kms_key_identifier}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM and API operations",
+            "value": "${aws_elastic_beanstalk_application.this.arn}"
+        },
+        "tags_all": {
+            "description": "A map of tags assigned to the resource.",
+            "value": "${aws_elastic_beanstalk_application.this.tags_all}"
+        }
+    }
+}

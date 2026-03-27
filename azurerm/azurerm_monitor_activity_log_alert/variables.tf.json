@@ -1,0 +1,72 @@
+{
+  "variable": {
+    "action": [
+      {
+        "description": "Defines alert actions, including action group IDs and optional webhook properties",
+        "nullable": true,
+        "type": "list(object({action_group_id: string,webhook_properties: optional(map(string))}))"
+      }
+    ],
+    "criteria": [
+      {
+        "description": "Specifies alert criteria like category, resource details, and health conditions",
+        "nullable": true,
+        "type": "list(object({caller: optional(string),category: string,level: optional(string),levels: optional(list(string)),operation_name: optional(string),recommendation_category: optional(string),recommendation_impact: optional(string),recommendation_type: optional(string),resource_group: optional(string),resource_groups: optional(list(string)),resource_id: optional(string),resource_ids: optional(list(string)),resource_provider: optional(string),resource_providers: optional(list(string)),resource_type: optional(string),resource_types: optional(list(string)),status: optional(string),statuses: optional(list(string)),sub_status: optional(string),sub_statuses: optional(list(string)),resource_health: list(object({current: optional(list(string)),previous: optional(list(string)),reason: optional(list(string))})),service_health: list(object({events: optional(list(string)),locations: optional(list(string)),services: optional(list(string))}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a summary or details about the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Indicates whether the resource is active (true) or inactive (false)",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the resource (required)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scopes": [
+      {
+        "description": "Lists scope identifiers for the resource (e.g., subscriptions or resource groups)",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines metadata as key-value pairs for organization and management",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures operation timeouts for create, read, update, or delete actions",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

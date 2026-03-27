@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecs Container Definition"
+  node:
+    label:
+      static: "[Data] Ecs Container Definition"
+      template: "[Data] Ecs Container Definition"
+    display_type: default
+
+discovery:
+  type: data_aws_ecs_container_definition
+  dnd_supported: false

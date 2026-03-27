@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Internet Gateway
+  node:
+    label:
+      static: Internet Gateway
+      template: Internet Gateway
+    display_type: default
+
+discovery:
+  type: aws_internet_gateway
+  dnd_supported: false
+  data_source: data_aws_internet_gateway
+  references:
+    vpc_id:
+      from: aws_vpc
+      output: id

@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Api Gateway Authorizer
+  node:
+    label:
+      static: Api Gateway Authorizer
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_authorizer
+  dnd_supported: false
+  references:
+    authorizer_credentials:
+      from: aws_iam_role
+      output: arn
+    authorizer_uri:
+      from: aws_lambda_function
+      output: invoke_arn
+    rest_api_id:
+      from: aws_api_gateway_rest_api
+      output: id

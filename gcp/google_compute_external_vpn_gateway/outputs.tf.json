@@ -1,0 +1,24 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Active labels applied to the VPN gateway for resource categorization",
+            "value": "${google_compute_external_vpn_gateway.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the VPN gateway used in configurations",
+            "value": "${google_compute_external_vpn_gateway.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Checksum to track changes to resource labels",
+            "value": "${google_compute_external_vpn_gateway.this.label_fingerprint}"
+        },
+        "self_link": {
+            "description": "URL for accessing the VPN gateway in the Google Cloud API",
+            "value": "${google_compute_external_vpn_gateway.this.self_link}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly defined for the VPN gateway in Terraform",
+            "value": "${google_compute_external_vpn_gateway.this.terraform_labels}"
+        }
+    }
+}

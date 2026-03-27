@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Search Service
+  node:
+    label:
+      static: Search Service
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_search_service
+  dnd_supported: false

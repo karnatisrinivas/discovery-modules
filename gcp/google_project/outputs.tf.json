@@ -1,0 +1,20 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Final set of labels applied to the project after merging defaults and overrides",
+            "value": "${google_project.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the project, useful for referencing in configurations",
+            "value": "${google_project.this.id}"
+        },
+        "number": {
+            "description": "Project number used for billing and API operations",
+            "value": "${google_project.this.number}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for organizing and managing the project",
+            "value": "${google_project.this.terraform_labels}"
+        }
+    }
+}

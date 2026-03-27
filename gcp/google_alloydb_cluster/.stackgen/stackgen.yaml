@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Alloydb Cluster
+  node:
+    label:
+      static: Alloydb Cluster
+      template: ${cluster_id}
+    display_type: default
+
+discovery:
+  type: google_alloydb_cluster
+  dnd_supported: false

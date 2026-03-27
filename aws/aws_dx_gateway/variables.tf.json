@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "amazon_side_asn": [
+      {
+        "description": "Defines the ASN (Autonomous System Number) for the Amazon side of a Direct Connect gateway; must be in the private ASN range (64512–65534 or 4200000000–4294967294).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Direct Connect gateway; must be unique within the AWS account and up to 256 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout settings for creating, updating, and deleting the Direct Connect gateway.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

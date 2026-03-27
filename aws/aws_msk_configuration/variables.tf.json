@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies the description of the MSK configuration, providing context or details about its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kafka_versions": [
+      {
+        "description": "Specifies the Kafka versions that the configuration is compatible with; must match supported versions in AWS MSK.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the MSK configuration, which must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_properties": [
+      {
+        "description": "Defines the server properties for the MSK configuration, provided as a JSON or text-encoded string; must adhere to Kafka configuration requirements.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

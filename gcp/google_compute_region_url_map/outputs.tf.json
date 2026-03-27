@@ -1,0 +1,24 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the resource was created",
+            "value": "${google_compute_region_url_map.this.creation_timestamp}"
+        },
+        "fingerprint": {
+            "description": "Unique hash for tracking updates to the resource",
+            "value": "${google_compute_region_url_map.this.fingerprint}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the URL map in configurations",
+            "value": "${google_compute_region_url_map.this.id}"
+        },
+        "map_id": {
+            "description": "Identifier used to distinguish this URL map within the region",
+            "value": "${google_compute_region_url_map.this.map_id}"
+        },
+        "self_link": {
+            "description": "Fully qualified URL for accessing the resource",
+            "value": "${google_compute_region_url_map.this.self_link}"
+        }
+    }
+}

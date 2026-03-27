@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition to apply, specifying attributes like expression, title, and description that must be met for the binding to be applied.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the role will be assigned, such as a user, group, or service account; must be in the format \"user:email\", \"group:email\", or \"serviceAccount:email\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member; must be a predefined Pub/Sub role or a custom role within the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subscription": [
+      {
+        "description": "Specifies the Pub/Sub subscription to which the IAM member binding will be applied. Must be in the format `projects/{project}/subscriptions/{subscription}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

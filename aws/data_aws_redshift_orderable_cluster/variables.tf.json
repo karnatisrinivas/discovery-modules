@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "preferred_node_types": [
+      {
+        "description": "A list of preferred node types for the Redshift cluster, which determines the hardware configuration and performance characteristics of the nodes.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DLM Lifecycle Policy
+  node:
+    label:
+      static: DLM Lifecycle Policy
+      template: DLM Lifecycle Policy
+    display_type: default
+
+discovery:
+  type: aws_dlm_lifecycle_policy
+  dnd_supported: false
+  references:
+    execution_role_arn:
+      from: aws_iam_role
+      output: arn

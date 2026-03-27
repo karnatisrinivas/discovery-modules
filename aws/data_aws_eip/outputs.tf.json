@@ -1,0 +1,76 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Elastic IP.",
+            "value": "${data.aws_eip.this.arn}"
+        },
+        "association_id": {
+            "description": "The ID representing the association of the Elastic IP with an instance or network interface.",
+            "value": "${data.aws_eip.this.association_id}"
+        },
+        "carrier_ip": {
+            "description": "The Carrier IP address associated with the Elastic IP, if applicable.",
+            "value": "${data.aws_eip.this.carrier_ip}"
+        },
+        "customer_owned_ip": {
+            "description": "The customer-owned IP address associated with the Elastic IP, if applicable.",
+            "value": "${data.aws_eip.this.customer_owned_ip}"
+        },
+        "customer_owned_ipv4_pool": {
+            "description": "The ID of the customer-owned IPv4 pool from which the IP address is allocated.",
+            "value": "${data.aws_eip.this.customer_owned_ipv4_pool}"
+        },
+        "domain": {
+            "description": "Indicates whether the Elastic IP is for EC2 Classic or VPC.",
+            "value": "${data.aws_eip.this.domain}"
+        },
+        "id": {
+            "description": "The ID of the Elastic IP.",
+            "value": "${data.aws_eip.this.id}"
+        },
+        "instance_id": {
+            "description": "The ID of the instance the Elastic IP is associated with, if applicable.",
+            "value": "${data.aws_eip.this.instance_id}"
+        },
+        "ipam_pool_id": {
+            "description": "The ID of the IP Address Manager (IPAM) pool used for this Elastic IP.",
+            "value": "${data.aws_eip.this.ipam_pool_id}"
+        },
+        "network_interface_id": {
+            "description": "The ID of the network interface the Elastic IP is associated with, if applicable.",
+            "value": "${data.aws_eip.this.network_interface_id}"
+        },
+        "network_interface_owner_id": {
+            "description": "The ID of the owner of the network interface associated with the Elastic IP.",
+            "value": "${data.aws_eip.this.network_interface_owner_id}"
+        },
+        "private_dns": {
+            "description": "The private DNS name associated with the Elastic IP, if applicable.",
+            "value": "${data.aws_eip.this.private_dns}"
+        },
+        "private_ip": {
+            "description": "The private IP address associated with the Elastic IP, if applicable.",
+            "value": "${data.aws_eip.this.private_ip}"
+        },
+        "ptr_record": {
+            "description": "The pointer (PTR) record for reverse DNS lookup associated with the Elastic IP.",
+            "value": "${data.aws_eip.this.ptr_record}"
+        },
+        "public_dns": {
+            "description": "The public DNS name associated with the Elastic IP.",
+            "value": "${data.aws_eip.this.public_dns}"
+        },
+        "public_ip": {
+            "description": "The public IP address of the Elastic IP.",
+            "value": "${data.aws_eip.this.public_ip}"
+        },
+        "public_ipv4_pool": {
+            "description": "The ID of the public IPv4 pool from which the IP address is allocated.",
+            "value": "${data.aws_eip.this.public_ipv4_pool}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Elastic IP.",
+            "value": "${data.aws_eip.this.tags}"
+        }
+    }
+}

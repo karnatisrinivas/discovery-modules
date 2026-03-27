@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Role Policy Attachment
+  node:
+    label:
+      static: IAM Role Policy Attachment
+      template: IAM Role Policy Attachment
+    display_type: default
+
+discovery:
+  type: aws_iam_role_policy_attachment
+  dnd_supported: false
+  references:
+    policy_arn:
+      from: aws_iam_policy
+      output: arn
+    role:
+      from: aws_iam_role
+      output: name

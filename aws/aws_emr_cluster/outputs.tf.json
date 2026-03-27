@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for the EMR cluster",
+            "value": "${aws_emr_cluster.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the EMR cluster.",
+            "value": "${aws_emr_cluster.this.id}"
+        },
+        "master_public_dns": {
+            "description": "Public DNS name of the EMR cluster's master node for SSH and API access",
+            "value": "${aws_emr_cluster.this.master_public_dns}"
+        }
+    }
+}

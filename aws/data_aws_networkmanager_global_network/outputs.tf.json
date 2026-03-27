@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the global network.",
+            "value": "${data.aws_networkmanager_global_network.this.arn}"
+        },
+        "description": {
+            "description": "The description of the global network.",
+            "value": "${data.aws_networkmanager_global_network.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the global network.",
+            "value": "${data.aws_networkmanager_global_network.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the global network.",
+            "value": "${data.aws_networkmanager_global_network.this.tags}"
+        }
+    }
+}

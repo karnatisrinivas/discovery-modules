@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "bucket_name": [
+      {
+        "description": "Name of the Cloud Storage bucket where usage reports will be exported. Must be an existing bucket in the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "prefix": [
+      {
+        "description": "Defines the prefix for the usage export file names in the Cloud Storage bucket, ensuring proper organization of exported data.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeout configuration for creating, updating, or deleting the usage export bucket.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

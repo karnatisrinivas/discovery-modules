@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: ApiGatewayV2 Stage
+  node:
+    label:
+      static: ApiGatewayV2 Stage
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_apigatewayv2_stage
+  dnd_supported: false
+  references:
+    api_id:
+      from: aws_apigatewayv2_api
+      output: id
+    deployment_id:
+      from: aws_apigatewayv2_deployment
+      output: id

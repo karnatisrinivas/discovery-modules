@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "repository_name": [
+      {
+        "description": "The name of the CodeCommit repository to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

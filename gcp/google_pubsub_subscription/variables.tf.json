@@ -1,0 +1,45 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "Name of the subscription."
+            }
+        ],
+        "topic": [
+            {
+                "type": "string",
+                "description": "Name of the topic."
+            }
+        ],
+        "ack_deadline_seconds": [
+            {
+                "type": "number",
+                "description": "This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-effort basis). The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.",
+                "default": 10,
+                "nullable": true,
+                "validation": [
+                    {
+                        "condition": "${var.ack_deadline_seconds >= 10 && var.ack_deadline_seconds <= 600}",
+                        "error_message": "The ACK deadline must be between 10 and 600."
+                    }
+                ]
+            }
+        ],
+        "message_retention_duration": [
+            {
+                "type": "string",
+                "description": "How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. Defaults to 7 days. Cannot be more than 31 days (2678400s) or less than 10 minutes (600s). A duration in seconds with up to nine fractional digits.",
+                "default": "604800s",
+                "nullable": true
+            }
+        ],
+        "push_config": [
+            {
+                "type": "list(object({push_endpoint: string}))",
+                "description": "If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods.",
+                "nullable": true
+            }
+        ]
+    }
+}

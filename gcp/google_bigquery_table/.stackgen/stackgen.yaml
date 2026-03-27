@@ -1,0 +1,117 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: BigQuery Table
+  node:
+    label:
+      static: BigQuery Table
+      template: ${table_id}
+    display_type: default
+
+variables:
+  external_data_configuration:
+    description: Defines configuration for external data sources, including connection, formats, and options for Avro, CSV, Bigtable, and other data types. Source URIs are required.
+    attributes: 
+      max_bad_records: 
+        label: Max Bad Records
+        description: " The maximum number of bad records that BigQuery can ignore when reading data."
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      source_format: 
+        ui_control: select
+        label: Source Format
+        description: The format of the data source.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - GOOGLE_SHEETS
+          - DATASTORE_BACKUP
+          - ICEBERG
+          - BIGTABLE
+          - CSV
+          - NEWLINE_DELIMITED_JSON
+          - AVRO
+          - ORC
+          - PARQUET
+      source_uris: 
+        type: list(string)
+        ui_control: text_list
+        label: Source URIs
+        description: "The fully-qualified URIs that point to your data in Google Cloud Storage."
+        validation: 
+          required: true
+          dataType: list(string)
+      schema: 
+        label: Schema
+        description: The schema of the data source.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        ui_control: json
+      autodetect: 
+        label: Autodetect
+        description: Whether to automatically infer the schema from a file.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - true
+          - false
+        ui_control: select
+      compression: 
+        ui_control: select
+        label: Compression
+        description: The compression type of the data source.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - NONE
+          - GZIP
+      connection_id: 
+        description: The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+        label: Connection ID
+      ignore_unknown_values: 
+        label: Ignore Unknown Values
+        description: Whether to allow extra values that are not represented in the table schema.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - true
+          - false
+        ui_control: select
+  schema:
+    description: "Defines the schema for the table. Must be a valid JSON string representing the table's structure."
+    type: string
+    ui_control: json
+  deletion_protection:
+    ui_control: select
+    description: Enables or disables deletion protection for the table, preventing accidental deletion when set to true.
+    type: bool
+    options: 
+      - true
+      - false
+
+discovery:
+  type: google_bigquery_table
+  dnd_supported: false
+  references:
+    dataset_id:
+      from: google_bigquery_dataset
+      output: id

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for identifying the instance attachment in configurations and operations",
+            "value": "${google_apigee_instance_attachment.this.id}"
+        },
+        "name": {
+            "description": "Name of the instance attachment for easier identification and management",
+            "value": "${google_apigee_instance_attachment.this.name}"
+        }
+    }
+}

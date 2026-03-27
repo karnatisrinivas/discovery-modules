@@ -1,0 +1,40 @@
+{
+    "variable": {
+        "subnet_ids": [
+            {
+                "type": "list(string)",
+                "description": "A list of VPC subnet IDs",
+                "nullable": true
+            }
+        ],
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the DB subnet group. If omitted, Terraform will assign a random, unique name.",
+                "nullable": true
+            }
+        ],
+        "name_prefix": [
+            {
+                "type": "string",
+                "description": "Creates a unique name beginning with the specified prefix. Conflicts with `name`.",
+                "nullable": true
+            }
+        ],
+        "description": [
+            {
+                "type": "string",
+                "description": "The description of the DB subnet group.",
+                "default": "Managed by Terraform",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": " A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

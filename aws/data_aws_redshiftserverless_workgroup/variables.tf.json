@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "workgroup_name": [
+      {
+        "description": "The name of the Redshift Serverless workgroup to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "addresses": {
+            "description": "",
+            "value": "${data.aws_wafv2_ip_set.this.addresses}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_wafv2_ip_set.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_wafv2_ip_set.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_wafv2_ip_set.this.id}"
+        },
+        "ip_address_version": {
+            "description": "",
+            "value": "${data.aws_wafv2_ip_set.this.ip_address_version}"
+        }
+    }
+}

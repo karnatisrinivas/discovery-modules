@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "service_network_identifier": [
+      {
+        "description": "A unique identifier for the VPC Lattice service network used to specify which network the service should be associated with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

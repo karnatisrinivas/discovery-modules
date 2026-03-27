@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Realtime Log Config"
+  node:
+    label:
+      static: "[Data] Cloudfront Realtime Log Config"
+      template: "[Data] Cloudfront Realtime Log Config"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_realtime_log_config
+  dnd_supported: false

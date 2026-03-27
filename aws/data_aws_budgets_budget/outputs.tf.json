@@ -1,0 +1,68 @@
+{
+    "output": {
+        "account_id": {
+            "description": "The unique identifier for the AWS account associated with the budget.",
+            "value": "${data.aws_budgets_budget.this.account_id}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the budget.",
+            "value": "${data.aws_budgets_budget.this.arn}"
+        },
+        "auto_adjust_data": {
+            "description": "Details about the automatic adjustments made to the budget, such as type and historical options.",
+            "value": "${data.aws_budgets_budget.this.auto_adjust_data}"
+        },
+        "budget_exceeded": {
+            "description": "Indicates whether the actual spending has exceeded the defined budget.",
+            "value": "${data.aws_budgets_budget.this.budget_exceeded}"
+        },
+        "budget_limit": {
+            "description": "The set financial limit for the budget, including the amount and currency unit.",
+            "value": "${data.aws_budgets_budget.this.budget_limit}"
+        },
+        "budget_type": {
+            "description": "Specifies the type of budget, such as cost, usage, or RI utilization.",
+            "value": "${data.aws_budgets_budget.this.budget_type}"
+        },
+        "calculated_spend": {
+            "description": "The actual spending calculated for the budget, including the amount and currency unit.",
+            "value": "${data.aws_budgets_budget.this.calculated_spend}"
+        },
+        "cost_filter": {
+            "description": "Filters applied to the budget to include specific costs.",
+            "value": "${data.aws_budgets_budget.this.cost_filter}"
+        },
+        "cost_types": {
+            "description": "The types of costs included or excluded in the budget calculations.",
+            "value": "${data.aws_budgets_budget.this.cost_types}"
+        },
+        "id": {
+            "description": "The unique identifier of the budget within AWS.",
+            "value": "${data.aws_budgets_budget.this.id}"
+        },
+        "notification": {
+            "description": "Notification settings for the budget, including comparison operators, thresholds, and subscriber information.",
+            "value": "${data.aws_budgets_budget.this.notification}"
+        },
+        "planned_limit": {
+            "description": "The planned spending limit over time, including amount, start time, and currency unit.",
+            "value": "${data.aws_budgets_budget.this.planned_limit}"
+        },
+        "tags": {
+            "description": "Key-value pairs used to categorize and organize the budget.",
+            "value": "${data.aws_budgets_budget.this.tags}"
+        },
+        "time_period_end": {
+            "description": "The end date for the budget's time period.",
+            "value": "${data.aws_budgets_budget.this.time_period_end}"
+        },
+        "time_period_start": {
+            "description": "The start date for the budget's time period.",
+            "value": "${data.aws_budgets_budget.this.time_period_start}"
+        },
+        "time_unit": {
+            "description": "The unit of time (e.g., monthly, quarterly) used for the budget's time period.",
+            "value": "${data.aws_budgets_budget.this.time_unit}"
+        }
+    }
+}

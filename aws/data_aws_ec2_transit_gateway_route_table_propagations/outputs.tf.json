@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the transit gateway route table propagation.",
+            "value": "${data.aws_ec2_transit_gateway_route_table_propagations.this.id}"
+        },
+        "ids": {
+            "description": "A list of identifiers for all the transit gateway route table propagations.",
+            "value": "${data.aws_ec2_transit_gateway_route_table_propagations.this.ids}"
+        }
+    }
+}

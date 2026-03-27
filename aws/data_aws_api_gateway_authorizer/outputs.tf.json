@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway authorizer.",
+            "value": "${data.aws_api_gateway_authorizer.this.arn}"
+        },
+        "authorizer_credentials": {
+            "description": "The credentials required for the authorizer, such as a role ARN.",
+            "value": "${data.aws_api_gateway_authorizer.this.authorizer_credentials}"
+        },
+        "authorizer_result_ttl_in_seconds": {
+            "description": "Time-to-live (TTL) in seconds for caching the authorizer results.",
+            "value": "${data.aws_api_gateway_authorizer.this.authorizer_result_ttl_in_seconds}"
+        },
+        "authorizer_uri": {
+            "description": "The URI of the authorizer's Lambda function.",
+            "value": "${data.aws_api_gateway_authorizer.this.authorizer_uri}"
+        },
+        "id": {
+            "description": "The unique identifier of the API Gateway authorizer.",
+            "value": "${data.aws_api_gateway_authorizer.this.id}"
+        },
+        "identity_source": {
+            "description": "The source of the identity, such as headers or query strings.",
+            "value": "${data.aws_api_gateway_authorizer.this.identity_source}"
+        },
+        "identity_validation_expression": {
+            "description": "A validation expression for the incoming identity.",
+            "value": "${data.aws_api_gateway_authorizer.this.identity_validation_expression}"
+        },
+        "name": {
+            "description": "The name of the API Gateway authorizer.",
+            "value": "${data.aws_api_gateway_authorizer.this.name}"
+        },
+        "provider_arns": {
+            "description": "A list of provider ARNs for the authorizer.",
+            "value": "${data.aws_api_gateway_authorizer.this.provider_arns}"
+        }
+    }
+}

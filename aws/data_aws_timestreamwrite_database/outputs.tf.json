@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_timestreamwrite_database.this.arn}"
+        },
+        "created_time": {
+            "description": "",
+            "value": "${data.aws_timestreamwrite_database.this.created_time}"
+        },
+        "kms_key_id": {
+            "description": "",
+            "value": "${data.aws_timestreamwrite_database.this.kms_key_id}"
+        },
+        "last_updated_time": {
+            "description": "",
+            "value": "${data.aws_timestreamwrite_database.this.last_updated_time}"
+        },
+        "table_count": {
+            "description": "",
+            "value": "${data.aws_timestreamwrite_database.this.table_count}"
+        }
+    }
+}

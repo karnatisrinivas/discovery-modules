@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the SSH key.",
+            "value": "${data.azurerm_ssh_public_key.this.id}"
+        },
+        "public_key": {
+            "description": "The SSH public key used to authenticate to a virtual machine through ssh..",
+            "value": "${data.azurerm_ssh_public_key.this.public_key}"
+        }
+    }
+}

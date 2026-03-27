@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Provides a brief summary of the VPC Link's purpose or functionality; required when creating the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the VPC link for identifying the resource in AWS API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Tags to assign to the VPC link for categorization or identification purposes; must be key-value pairs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "target_arns": [
+      {
+        "description": "Specifies the ARNs of the network load balancers used for the VPC link. Must be valid AWS NLB ARNs.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "family": [
+      {
+        "description": "Specifies the image family to which this image belongs, enabling access to the latest non-deprecated image in the family.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the filter expression to select specific Compute Engine images based on labels or properties; must follow the Google Cloud filter syntax.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "Specifies whether to use the most recent image matching the family name. Must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the image; must be unique within the project and comply with naming conventions (lowercase letters, numbers, and hyphens, starting with a letter).",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

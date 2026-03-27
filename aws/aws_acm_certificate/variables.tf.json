@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "certificate_authority_arn": [
+      {
+        "description": "ARN of the certificate authority to issue the certificate, required if using private CA.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "certificate_body": [
+      {
+        "description": "PEM-encoded certificate body for the ACM certificate; must include the public key certificate.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "certificate_chain": [
+      {
+        "description": "Certificate chain in PEM format, including intermediate certificates, required for certificate validation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "domain_name": [
+      {
+        "description": "Fully qualified domain name (FQDN) for the certificate; must be a valid domain that you own or control.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "early_renewal_duration": [
+      {
+        "description": "Defines the number of days before expiration to automatically renew the certificate, ensuring uninterrupted service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key_algorithm": [
+      {
+        "description": "Specifies the key algorithm used when requesting the certificate; must be either RSA_2048, RSA_4096, or EC_prime256v1.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "options": [
+      {
+        "description": "Specifies additional certificate options, such as enabling or disabling certificate transparency logging.",
+        "nullable": true,
+        "type": "list(object({certificate_transparency_logging_preference: optional(string)}))"
+      }
+    ],
+    "private_key": [
+      {
+        "description": "Private key used for the certificate request; must be in PEM format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subject_alternative_names": [
+      {
+        "description": "Additional domain names to be included in the certificate, such as subdomains; must be fully qualified domain names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines key-value pairs to categorize and organize the ACM certificate; keys must be unique and values can be null, but should align with AWS tagging standards.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "validation_method": [
+      {
+        "description": "Method used to validate the domain for the certificate; must be one of \"EMAIL\" or \"DNS\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "validation_option": [
+      {
+        "description": "Specifies the method for validating the certificate, such as DNS or EMAIL.",
+        "nullable": true,
+        "type": "list(object({domain_name: string,validation_domain: string}))"
+      }
+    ]
+  }
+}

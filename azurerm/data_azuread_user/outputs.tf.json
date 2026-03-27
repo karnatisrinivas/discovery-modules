@@ -1,0 +1,164 @@
+{
+    "output": {
+        "account_enabled": {
+            "description": "Indicates if the user account is enabled (boolean)",
+            "value": "${data.azuread_user.this.account_enabled}"
+        },
+        "age_group": {
+            "description": "The user's age group as a string (e.g., 'Adult', 'Minor')",
+            "value": "${data.azuread_user.this.age_group}"
+        },
+        "business_phones": {
+            "description": "List of business phone numbers associated with the user",
+            "value": "${data.azuread_user.this.business_phones}"
+        },
+        "city": {
+            "description": "City of the user's physical address (string)",
+            "value": "${data.azuread_user.this.city}"
+        },
+        "company_name": {
+            "description": "Name of the company the user is associated with (string)",
+            "value": "${data.azuread_user.this.company_name}"
+        },
+        "consent_provided_for_minor": {
+            "description": "Indicates if consent has been provided for a minor (string)",
+            "value": "${data.azuread_user.this.consent_provided_for_minor}"
+        },
+        "cost_center": {
+            "description": "Cost center associated with the user (string)",
+            "value": "${data.azuread_user.this.cost_center}"
+        },
+        "country": {
+            "description": "Country or region of the user's address (string)",
+            "value": "${data.azuread_user.this.country}"
+        },
+        "creation_type": {
+            "description": "Specifies how the user was created (e.g., 'Invitation')",
+            "value": "${data.azuread_user.this.creation_type}"
+        },
+        "department": {
+            "description": "Department name the user belongs to (string)",
+            "value": "${data.azuread_user.this.department}"
+        },
+        "display_name": {
+            "description": "Full display name of the user (string)",
+            "value": "${data.azuread_user.this.display_name}"
+        },
+        "division": {
+            "description": "Division name where the user works (string)",
+            "value": "${data.azuread_user.this.division}"
+        },
+        "employee_hire_date": {
+            "description": "The hire date of the employee (string in ISO 8601 format)",
+            "value": "${data.azuread_user.this.employee_hire_date}"
+        },
+        "employee_type": {
+            "description": "Employee type, such as 'FullTime' or 'Contractor' (string)",
+            "value": "${data.azuread_user.this.employee_type}"
+        },
+        "external_user_state": {
+            "description": "State of an external user (e.g., 'Accepted', 'Pending')",
+            "value": "${data.azuread_user.this.external_user_state}"
+        },
+        "fax_number": {
+            "description": "Fax number associated with the user (string)",
+            "value": "${data.azuread_user.this.fax_number}"
+        },
+        "given_name": {
+            "description": "First name of the user (string)",
+            "value": "${data.azuread_user.this.given_name}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azuread_user.this.id}"
+        },
+        "im_addresses": {
+            "description": "List of instant messaging addresses for the user",
+            "value": "${data.azuread_user.this.im_addresses}"
+        },
+        "job_title": {
+            "description": "Job title of the user (string)",
+            "value": "${data.azuread_user.this.job_title}"
+        },
+        "manager_id": {
+            "description": "Unique identifier of the user's manager (string)",
+            "value": "${data.azuread_user.this.manager_id}"
+        },
+        "mobile_phone": {
+            "description": "Mobile phone number of the user (string)",
+            "value": "${data.azuread_user.this.mobile_phone}"
+        },
+        "office_location": {
+            "description": "Physical office location of the user (string)",
+            "value": "${data.azuread_user.this.office_location}"
+        },
+        "onpremises_distinguished_name": {
+            "description": "Distinguished name from on-premises Active Directory (string)",
+            "value": "${data.azuread_user.this.onpremises_distinguished_name}"
+        },
+        "onpremises_domain_name": {
+            "description": "Domain name from on-premises Active Directory (string)",
+            "value": "${data.azuread_user.this.onpremises_domain_name}"
+        },
+        "onpremises_immutable_id": {
+            "description": "Immutable ID for synchronization with on-premises AD (string)",
+            "value": "${data.azuread_user.this.onpremises_immutable_id}"
+        },
+        "onpremises_sam_account_name": {
+            "description": "SAM account name in on-premises Active Directory (string)",
+            "value": "${data.azuread_user.this.onpremises_sam_account_name}"
+        },
+        "onpremises_security_identifier": {
+            "description": "Security identifier from on-premises Active Directory (string)",
+            "value": "${data.azuread_user.this.onpremises_security_identifier}"
+        },
+        "onpremises_sync_enabled": {
+            "description": "Indicates if on-premises sync is enabled (boolean)",
+            "value": "${data.azuread_user.this.onpremises_sync_enabled}"
+        },
+        "onpremises_user_principal_name": {
+            "description": "User principal name from on-premises AD (string)",
+            "value": "${data.azuread_user.this.onpremises_user_principal_name}"
+        },
+        "other_mails": {
+            "description": "List of additional email addresses for the user",
+            "value": "${data.azuread_user.this.other_mails}"
+        },
+        "postal_code": {
+            "description": "Postal code of the user's physical address (string)",
+            "value": "${data.azuread_user.this.postal_code}"
+        },
+        "preferred_language": {
+            "description": "Preferred language of the user (e.g., 'en-US')",
+            "value": "${data.azuread_user.this.preferred_language}"
+        },
+        "proxy_addresses": {
+            "description": "List of proxy email addresses for the user",
+            "value": "${data.azuread_user.this.proxy_addresses}"
+        },
+        "show_in_address_list": {
+            "description": "Indicates if the user appears in the address list (boolean)",
+            "value": "${data.azuread_user.this.show_in_address_list}"
+        },
+        "state": {
+            "description": "State or province of the user's address (string)",
+            "value": "${data.azuread_user.this.state}"
+        },
+        "street_address": {
+            "description": "Street address of the user (string)",
+            "value": "${data.azuread_user.this.street_address}"
+        },
+        "surname": {
+            "description": "Last name or family name of the user (string)",
+            "value": "${data.azuread_user.this.surname}"
+        },
+        "usage_location": {
+            "description": "Country code indicating the user's usage location (string)",
+            "value": "${data.azuread_user.this.usage_location}"
+        },
+        "user_type": {
+            "description": "Type of user (e.g., 'Member', 'Guest')",
+            "value": "${data.azuread_user.this.user_type}"
+        }
+    }
+}

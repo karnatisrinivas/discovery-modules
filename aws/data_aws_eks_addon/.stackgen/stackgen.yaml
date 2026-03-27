@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eks Addon"
+  node:
+    label:
+      static: "[Data] Eks Addon"
+      template: "[Data] Eks Addon"
+    display_type: default
+
+discovery:
+  type: data_aws_eks_addon
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "endpoint_address": {
+            "description": "The address of the AWS IoT endpoint used to connect IoT devices.",
+            "value": "${data.aws_iot_endpoint.this.endpoint_address}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS IoT endpoint.",
+            "value": "${data.aws_iot_endpoint.this.id}"
+        }
+    }
+}

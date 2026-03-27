@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpc Endpoint Service"
+  node:
+    label:
+      static: "[Data] Vpc Endpoint Service"
+      template: "[Data] Vpc Endpoint Service"
+    display_type: default
+
+discovery:
+  type: data_aws_vpc_endpoint_service
+  dnd_supported: false

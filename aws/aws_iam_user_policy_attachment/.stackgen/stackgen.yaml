@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM User Policy Attachment
+  node:
+    label:
+      static: IAM User Policy Attachment
+      template: IAM User Policy Attachment
+    display_type: default
+
+discovery:
+  type: aws_iam_user_policy_attachment
+  dnd_supported: false
+  references:
+    user:
+      from: aws_iam_user
+      output: name
+    policy_arn:
+      from: aws_iam_policy
+      output: arn

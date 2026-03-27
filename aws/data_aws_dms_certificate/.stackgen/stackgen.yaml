@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dms Certificate"
+  node:
+    label:
+      static: "[Data] Dms Certificate"
+      template: "[Data] Dms Certificate"
+    display_type: default
+
+discovery:
+  type: data_aws_dms_certificate
+  dnd_supported: false

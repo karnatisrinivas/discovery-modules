@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a conditional expression that determines when the IAM policy binding is applied. Constraints include specifying title, description, and expression fields.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "env_id": [
+      {
+        "description": "ID of the Apigee environment where IAM policy bindings will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM role will be assigned, such as a user, group, or service account in the format `user:email` or `serviceAccount:email`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Specifies the ID of the Apigee organization where the IAM policy for the environment is applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member within the Apigee environment, such as 'roles/apigee.environmentAdmin'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

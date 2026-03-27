@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cognito Identity Pool"
+  node:
+    label:
+      static: "[Data] Cognito Identity Pool"
+      template: "[Data] Cognito Identity Pool"
+    display_type: default
+
+discovery:
+  type: data_aws_cognito_identity_pool
+  dnd_supported: false

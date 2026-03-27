@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Instance Storage Config"
+  node:
+    label:
+      static: "[Data] Connect Instance Storage Config"
+      template: "[Data] Connect Instance Storage Config"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_instance_storage_config
+  dnd_supported: false

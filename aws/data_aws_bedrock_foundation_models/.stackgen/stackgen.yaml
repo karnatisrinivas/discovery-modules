@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Bedrock Foundation Models"
+  node:
+    label:
+      static: "[Data] Bedrock Foundation Models"
+      template: "[Data] Bedrock Foundation Models"
+    display_type: default
+
+discovery:
+  type: data_aws_bedrock_foundation_models
+  dnd_supported: false

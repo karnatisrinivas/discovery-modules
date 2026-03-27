@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "authorization_mode": [
+      {
+        "description": "Defines the access control mode for the Redis cluster, specifying whether users need authentication to access the cluster. Valid values are 'AUTH' or 'UNAUTHENTICATED'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "automated_backup_config": [
+      {
+        "description": "Configuration for automated backups, including schedule, retention period, and related settings.",
+        "nullable": true,
+        "type": "list(object({retention: string,fixed_frequency_schedule: list(object({start_time: list(object({hours: number}))}))}))"
+      }
+    ],
+    "cross_cluster_replication_config": [
+      {
+        "description": "Configuration for cross-region replication, specifying the source region and cluster ID for data replication setup.",
+        "nullable": true,
+        "type": "list(object({cluster_role: optional(string),membership: optional(list(object({primary_cluster:list(object({cluster:string,uid:string})),secondary_clusters:list(object({cluster:string,uid:string}))}))),update_time: optional(string),primary_cluster: list(object({cluster: optional(string),uid: optional(string)})),secondary_clusters: list(object({cluster: optional(string),uid: optional(string)}))}))"
+      }
+    ],
+    "deletion_protection_enabled": [
+      {
+        "description": "Enables or disables protection against accidental deletion of the Redis cluster. Set to true to prevent deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "kms_key": [
+      {
+        "description": "Specifies the Cloud KMS key used to encrypt data at rest, must be in the same region as the Redis cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "maintenance_policy": [
+      {
+        "description": "Defines the maintenance policy for the Redis cluster, specifying maintenance window preferences and any required configurations.",
+        "nullable": true,
+        "type": "list(object({create_time: optional(string),update_time: optional(string),weekly_maintenance_window: list(object({day: string,duration: optional(string),start_time: list(object({hours: optional(number),minutes: optional(number),nanos: optional(number),seconds: optional(number)}))}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Redis cluster; must be unique within the project and comply with naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "node_type": [
+      {
+        "description": "Specifies the type of Redis node to use, determining the compute and memory capacity; must match available types in the selected region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "persistence_config": [
+      {
+        "description": "Defines the persistence settings for the Redis cluster, including options for periodic snapshots and data durability.",
+        "nullable": true,
+        "type": "list(object({mode: optional(string),aof_config: list(object({append_fsync: optional(string)})),rdb_config: list(object({rdb_snapshot_period: optional(string),rdb_snapshot_start_time: optional(string)}))}))"
+      }
+    ],
+    "psc_configs": [
+      {
+        "description": "Specifies the Private Service Connect configurations for the Redis cluster, enabling secure private communication with the service.",
+        "nullable": true,
+        "type": "list(object({network: string}))"
+      }
+    ],
+    "redis_configs": [
+      {
+        "description": "Defines Redis configuration settings, such as memory policies or timeout values, to customize the behavior of the Redis cluster.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "replica_count": [
+      {
+        "description": "Number of replica nodes in the Redis cluster; must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "shard_count": [
+      {
+        "description": "Specifies the number of shards in the Redis cluster. Must be a positive integer.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout durations for create, update, and delete operations on the Redis cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "transit_encryption_mode": [
+      {
+        "description": "Specifies the encryption mode for data in transit between Redis clients and the cluster, with options such as 'SERVER_AUTHENTICATION' or 'DISABLED'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "zone_distribution_config": [
+      {
+        "description": "Defines the configuration for distributing nodes across zones, specifying the number of nodes per zone and ensuring high availability.",
+        "nullable": true,
+        "type": "list(object({mode: optional(string),zone: optional(string)}))"
+      }
+    ]
+  }
+}

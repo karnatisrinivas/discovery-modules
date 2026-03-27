@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Autoscaling Group"
+  node:
+    label:
+      static: "[Data] Autoscaling Group"
+      template: "[Data] Autoscaling Group"
+    display_type: default
+
+discovery:
+  type: data_aws_autoscaling_group
+  dnd_supported: false

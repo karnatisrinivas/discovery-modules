@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Spanner Database Iam Binding
+  node:
+    label:
+      static: Spanner Database Iam Binding
+      template: ${database}
+    display_type: default
+
+discovery:
+  type: google_spanner_database_iam_binding
+  dnd_supported: false
+  references:
+    database:
+      from: google_spanner_database
+      output: name
+    instance:
+      from: google_spanner_instance
+      output: name

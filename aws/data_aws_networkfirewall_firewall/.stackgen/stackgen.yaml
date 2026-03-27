@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkfirewall Firewall"
+  node:
+    label:
+      static: "[Data] Networkfirewall Firewall"
+      template: "[Data] Networkfirewall Firewall"
+    display_type: default
+
+discovery:
+  type: data_aws_networkfirewall_firewall
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for integrating with IAM policies or API calls",
+            "value": "${aws_sns_platform_application.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the SNS platform application resource",
+            "value": "${aws_sns_platform_application.this.id}"
+        }
+    }
+}

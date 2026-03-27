@@ -1,0 +1,40 @@
+{
+    "output": {
+        "authorization_type": {
+            "description": "The method of authorization used for accessing the Lambda function URL.",
+            "value": "${data.aws_lambda_function_url.this.authorization_type}"
+        },
+        "cors": {
+            "description": "Configuration for Cross-Origin Resource Sharing (CORS) settings for the Lambda function URL.",
+            "value": "${data.aws_lambda_function_url.this.cors}"
+        },
+        "creation_time": {
+            "description": "The timestamp of when the Lambda function URL was created.",
+            "value": "${data.aws_lambda_function_url.this.creation_time}"
+        },
+        "function_arn": {
+            "description": "The Amazon Resource Name (ARN) of the Lambda function associated with the URL.",
+            "value": "${data.aws_lambda_function_url.this.function_arn}"
+        },
+        "function_url": {
+            "description": "The URL endpoint for invoking the Lambda function.",
+            "value": "${data.aws_lambda_function_url.this.function_url}"
+        },
+        "id": {
+            "description": "A unique identifier for the Lambda function URL configuration.",
+            "value": "${data.aws_lambda_function_url.this.id}"
+        },
+        "invoke_mode": {
+            "description": "The mode of invocation for the Lambda function URL, such as synchronous or asynchronous.",
+            "value": "${data.aws_lambda_function_url.this.invoke_mode}"
+        },
+        "last_modified_time": {
+            "description": "The timestamp of the last modification made to the Lambda function URL configuration.",
+            "value": "${data.aws_lambda_function_url.this.last_modified_time}"
+        },
+        "url_id": {
+            "description": "A unique identifier for the URL of the Lambda function.",
+            "value": "${data.aws_lambda_function_url.this.url_id}"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EIP
+  node:
+    label:
+      static: EIP
+      template: EIP
+    display_type: default
+
+discovery:
+  type: aws_eip
+  dnd_supported: false
+  data_source: data_aws_eip
+  references:
+    instance:
+      from: aws_instance
+      output: id
+    network_interface:
+      from: aws_network_interface
+      output: id

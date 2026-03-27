@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sqs Queue"
+  node:
+    label:
+      static: "[Data] Sqs Queue"
+      template: "[Data] Sqs Queue"
+    display_type: default
+
+discovery:
+  type: data_aws_sqs_queue
+  dnd_supported: false

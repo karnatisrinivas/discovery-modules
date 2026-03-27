@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "detector_id": [
+      {
+        "description": "A unique identifier for the AWS GuardDuty detector, which is needed to retrieve finding IDs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Sagemaker Notebook Instance
+  node:
+    label:
+      static: Sagemaker Notebook Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_sagemaker_notebook_instance
+  dnd_supported: false
+  references:
+    role_arn:
+      from: aws_iam_role
+      output: arn
+    default_code_repository:
+      from: aws_sagemaker_code_repository
+      output: code_repository_name

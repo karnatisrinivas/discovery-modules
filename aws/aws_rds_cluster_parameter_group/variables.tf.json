@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the description of the RDS cluster parameter group, providing context for its purpose or usage. Maximum length is 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "family": [
+      {
+        "description": "Specifies the database family this parameter group is compatible with; must match the version of the database cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the RDS cluster parameter group to create or manage; must be unique within the AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Prefix for the name of the RDS cluster parameter group; must be unique and cannot exceed 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameter": [
+      {
+        "description": "Defines the parameters for an RDS cluster, specifying database engine settings and configuration values.",
+        "nullable": true,
+        "type": "list(object({apply_method: optional(string),name: string,value: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the resource for organization, management, or cost tracking purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

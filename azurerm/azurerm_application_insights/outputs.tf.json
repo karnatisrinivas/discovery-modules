@@ -1,0 +1,16 @@
+{
+    "output": {
+        "app_id": {
+            "description": "The unique application ID of the Azure Application Insights resource.",
+            "value": "${azurerm_application_insights.this.app_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Azure Application Insights resource.",
+            "value": "${azurerm_application_insights.this.id}"
+        },
+        "instrumentation_key": {
+            "description": "The Instrumentation Key for this Application Insights resource.",
+            "value": "${azurerm_application_insights.this.instrumentation_key}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CloudWatch Event Target
+  node:
+    label:
+      static: CloudWatch Event Target
+      template: ${target_id}
+    display_type: default
+
+discovery:
+  type: aws_cloudwatch_event_target
+  dnd_supported: false
+  references:
+    rule:
+      from: aws_cloudwatch_event_rule_schedule
+      output: rule_name
+    arn:
+      from: aws_lambda
+      output: invoke_arn

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Workbench Instance
+  node:
+    label:
+      static: Workbench Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_workbench_instance
+  dnd_supported: false

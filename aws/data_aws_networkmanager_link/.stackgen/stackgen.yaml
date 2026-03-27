@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkmanager Link"
+  node:
+    label:
+      static: "[Data] Networkmanager Link"
+      template: "[Data] Networkmanager Link"
+    display_type: default
+
+discovery:
+  type: data_aws_networkmanager_link
+  dnd_supported: false

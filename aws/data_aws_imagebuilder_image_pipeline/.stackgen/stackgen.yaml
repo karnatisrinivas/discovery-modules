@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Imagebuilder Image Pipeline"
+  node:
+    label:
+      static: "[Data] Imagebuilder Image Pipeline"
+      template: "[Data] Imagebuilder Image Pipeline"
+    display_type: default
+
+discovery:
+  type: data_aws_imagebuilder_image_pipeline
+  dnd_supported: false

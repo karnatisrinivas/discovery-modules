@@ -1,0 +1,36 @@
+{
+    "output": {
+        "create_time": {
+            "description": "The time when the location tracker was created.",
+            "value": "${data.aws_location_tracker.this.create_time}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the location tracker.",
+            "value": "${data.aws_location_tracker.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the location tracker.",
+            "value": "${data.aws_location_tracker.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS KMS key used for encrypting the location data.",
+            "value": "${data.aws_location_tracker.this.kms_key_id}"
+        },
+        "position_filtering": {
+            "description": "The type of position filtering used by the tracker, affecting how positions are processed.",
+            "value": "${data.aws_location_tracker.this.position_filtering}"
+        },
+        "tags": {
+            "description": "A set of tags associated with the location tracker for organization and management.",
+            "value": "${data.aws_location_tracker.this.tags}"
+        },
+        "tracker_arn": {
+            "description": "The Amazon Resource Name (ARN) of the location tracker.",
+            "value": "${data.aws_location_tracker.this.tracker_arn}"
+        },
+        "update_time": {
+            "description": "The time when the location tracker was last updated.",
+            "value": "${data.aws_location_tracker.this.update_time}"
+        }
+    }
+}

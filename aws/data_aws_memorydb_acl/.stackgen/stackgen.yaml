@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Memorydb Acl"
+  node:
+    label:
+      static: "[Data] Memorydb Acl"
+      template: "[Data] Memorydb Acl"
+    display_type: default
+
+discovery:
+  type: data_aws_memorydb_acl
+  dnd_supported: false

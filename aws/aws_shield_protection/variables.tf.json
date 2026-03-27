@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Unique identifier for the Shield Protection resource, used to assign DDoS protection to a specific AWS resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_arn": [
+      {
+        "description": "ARN of the AWS resource to protect with Shield Advanced. Must be a valid and existing resource ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the Shield protection resource, used for categorization and identification.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

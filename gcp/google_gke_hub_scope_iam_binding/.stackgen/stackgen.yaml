@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Scope IAM Binding
+  node:
+    label:
+      static: Scope IAM Binding
+      template: Scope IAM Binding
+    display_type: default
+
+discovery:
+  type: google_gke_hub_scope_iam_binding
+  dnd_supported: false
+  references:
+    scope_id:
+      from: google_gke_hub_scope
+      output: scope_id

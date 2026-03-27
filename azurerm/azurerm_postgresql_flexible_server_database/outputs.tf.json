@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the PostgreSQL Flexible Server Database.",
+            "value": "${azurerm_postgresql_flexible_server_database.this.id}"
+        }
+    }
+}

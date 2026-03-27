@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Policy
+  node:
+    label:
+      static: IAM Policy
+      template: IAM Policy
+    display_type: default
+
+discovery:
+  type: aws_iam_policy
+  dnd_supported: false
+  data_source: data_aws_iam_policy

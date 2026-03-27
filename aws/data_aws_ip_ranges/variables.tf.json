@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "regions": [
+      {
+        "description": "A set of AWS regions to filter IP ranges for. Can be left empty to include all regions.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "services": [
+      {
+        "description": "A set of AWS services to filter IP ranges for. This cannot be empty and must include at least one service.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "url": [
+      {
+        "description": "The URL from which to download the AWS IP ranges data. Can be left empty to use the default URL.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

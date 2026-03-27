@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecrpublic Authorization Token"
+  node:
+    label:
+      static: "[Data] Ecrpublic Authorization Token"
+      template: "[Data] Ecrpublic Authorization Token"
+    display_type: default
+
+discovery:
+  type: data_aws_ecrpublic_authorization_token
+  dnd_supported: false

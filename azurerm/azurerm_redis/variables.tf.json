@@ -1,0 +1,100 @@
+{
+  "variable": {
+    "capacity": [
+      {
+        "description": "The size of the Redis cache instance, represented by a number.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "non_ssl_port_enabled": [
+      {
+        "description": "Indicates if the non-SSL port should be enabled for Redis cache.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "family": [
+      {
+        "description": "The family of the SKU to use for the Redis cache.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "minimum_tls_version": [
+      {
+        "description": "The minimum TLS version required for connections.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Redis cache instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Determines if public network access is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "shard_count": [
+      {
+        "description": "The number of shards to be created on the Redis cluster.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "The SKU name specifying the pricing tier for the Redis cache.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnet_id": [
+      {
+        "description": "The ID of the subnet in which to deploy the Redis cache.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the Redis cache resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tenant_settings": [
+      {
+        "description": "A map of tenant settings for the Redis instance.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zones": [
+      {
+        "description": "The availability zones for the Redis cache.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

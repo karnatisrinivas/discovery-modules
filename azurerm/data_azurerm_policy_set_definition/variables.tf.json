@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "description": "User-friendly name for display purposes, can be null. As display_name is not unique errors may occur when there are multiple policy set definitions with same display name.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "management_group_name": [
+      {
+        "description": "Name of the management group, can be null",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the resource's unique name, can be null",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Timeout settings for read operations, can be null",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

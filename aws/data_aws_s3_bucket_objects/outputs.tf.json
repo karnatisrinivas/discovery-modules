@@ -1,0 +1,20 @@
+{
+    "output": {
+        "common_prefixes": {
+            "description": "A list of common prefixes (folders) in the S3 bucket.",
+            "value": "${data.aws_s3_bucket_objects.this.common_prefixes}"
+        },
+        "id": {
+            "description": "The ID of the S3 bucket objects data source.",
+            "value": "${data.aws_s3_bucket_objects.this.id}"
+        },
+        "keys": {
+            "description": "A list of keys (object names) in the S3 bucket.",
+            "value": "${data.aws_s3_bucket_objects.this.keys}"
+        },
+        "owners": {
+            "description": "A list of owner IDs for the objects in the S3 bucket.",
+            "value": "${data.aws_s3_bucket_objects.this.owners}"
+        }
+    }
+}

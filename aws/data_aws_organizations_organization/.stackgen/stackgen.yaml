@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Organization"
+  node:
+    label:
+      static: "[Data] Organizations Organization"
+      template: "[Data] Organizations Organization"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_organization
+  dnd_supported: false

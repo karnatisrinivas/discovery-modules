@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the domain list was created.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.creation_time}"
+        },
+        "creator_request_id": {
+            "description": "A unique string used to identify the request that created the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.creator_request_id}"
+        },
+        "domain_count": {
+            "description": "The number of domains in the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.domain_count}"
+        },
+        "id": {
+            "description": "The identifier of the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.id}"
+        },
+        "managed_owner_name": {
+            "description": "The name of the owner managing the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.managed_owner_name}"
+        },
+        "modification_time": {
+            "description": "The time when the domain list was last modified.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.modification_time}"
+        },
+        "name": {
+            "description": "The name of the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.name}"
+        },
+        "status": {
+            "description": "The current status of the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.status}"
+        },
+        "status_message": {
+            "description": "A message providing more details about the status of the domain list.",
+            "value": "${data.aws_route53_resolver_firewall_domain_list.this.status_message}"
+        }
+    }
+}

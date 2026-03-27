@@ -1,0 +1,120 @@
+{
+    "variable": {
+        "auto_delete_on_idle": [
+            {
+                "description": "The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "client_id": [
+            {
+                "description": "Specifies the Client ID of the application that created the client-scoped subscription. Changing this forces a new resource to be created. NOTE: Client ID can be null or empty, but it must match the client ID set on the JMS client application. From the Azure Service Bus perspective, a null client ID and an empty client id have the same behavior. If the client ID is set to null or empty, it is only accessible to client applications whose client ID is also set to null or empty.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "client_scoped_subscription_enabled": [
+            {
+                "default": false,
+                "description": "Whether the subscription is scoped to a client id. Defaults to false",
+                "type": "bool"
+            }
+        ],
+        "dead_lettering_on_filter_evaluation_error": [
+            {
+                "default": true,
+                "description": "Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to true.",
+                "type": "bool"
+            }
+        ],
+        "dead_lettering_on_message_expiration": [
+            {
+                "default": false,
+                "description": "Boolean flag which controls whether the Subscription has dead letter support when a message expires.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "default_message_ttl": [
+            {
+                "description": "The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "enable_batched_operations": [
+            {
+                "default": false,
+                "description": "Boolean flag which controls whether the Subscription supports batched operations.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "forward_to": [
+            {
+                "description": "The name of the Queue or Topic to forward messages to",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "is_client_scoped_subscription_durable": [
+            {
+                "description": "Whether the client scoped subscription is durable. This property can only be controlled from the application side. Only used if client_scoped_subscription_enabled is set to true.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "is_client_scoped_subscription_shareable": [
+            {
+                "default": true,
+                "description": "Whether the client scoped subscription is shareable. Defaults to true Changing this forces a new resource to be created. Only used if client_scoped_subscription_enabled is set to true.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "lock_duration": [
+            {
+                "default": "P0DT0H1M0S",
+                "description": "The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "max_delivery_count": [
+            {
+                "default": 5,
+                "description": "The maximum number of deliveries",
+                "type": "number"
+            }
+        ],
+        "name": [
+            {
+                "description": "The name of the Service Bus Subscription",
+                "type": "string"
+            }
+        ],
+        "requires_session": [
+            {
+                "default": false,
+                "description": "Boolean flag which controls whether this Subscription supports the concept of a session. Changing this forces a new resource to be created.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "status": [
+            {
+                "default": "Active",
+                "description": "The status of the Subscription. Possible values are Active, ReceiveDisabled, or Disabled. Defaults to Active",
+                "type": "string"
+            }
+        ],
+        "topic_id": [
+            {
+                "description": "The ID of the Service Bus Topic to subscribe to",
+                "nullable": false,
+                "type": "string"
+            }
+        ]
+    }
+}

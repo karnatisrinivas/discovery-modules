@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Mskconnect Custom Plugin"
+  node:
+    label:
+      static: "[Data] Mskconnect Custom Plugin"
+      template: "[Data] Mskconnect Custom Plugin"
+    display_type: default
+
+discovery:
+  type: data_aws_mskconnect_custom_plugin
+  dnd_supported: false

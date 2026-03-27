@@ -1,0 +1,53 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Public IP
+  node:
+    label:
+      static: Public IP
+      template: ${name}
+    display_type: default
+
+variables:
+  ddos_protection_mode:
+    ui_control: select
+    description: Specifies the DDoS protection mode for the public IP.
+    type: string
+    options: 
+      - Disabled
+      - Enabled
+      - VirtualNetworkInherited
+  ip_version:
+    description: Specifies the IP version (IPv4 or IPv6) of the public IP.
+    type: string
+    options: 
+      - IPv4
+      - IPv6
+    ui_control: select
+  sku:
+    description: The SKU of the public IP (Basic or Standard).
+    type: string
+    options: 
+      - Standard
+      - Basic
+    ui_control: select
+  sku_tier:
+    description: The tier of the SKU for the public IP, if applicable.
+    type: string
+    options: 
+      - Regional
+      - Global
+    ui_control: select
+  allocation_method:
+    description: Defines how the public IP address is allocated (Static or Dynamic).
+    type: string
+    options: 
+      - Dynamic
+      - Static
+    ui_control: select
+
+discovery:
+  type: azurerm_public_ip
+  dnd_supported: false
+  data_source: data_azurerm_public_ip

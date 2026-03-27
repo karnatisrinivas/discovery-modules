@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Resolver Firewall Domain List"
+  node:
+    label:
+      static: "[Data] Route53 Resolver Firewall Domain List"
+      template: "[Data] Route53 Resolver Firewall Domain List"
+    display_type: default
+
+discovery:
+  type: data_aws_route53_resolver_firewall_domain_list
+  dnd_supported: false

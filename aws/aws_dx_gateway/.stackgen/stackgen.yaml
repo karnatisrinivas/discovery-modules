@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dx Gateway
+  node:
+    label:
+      static: Dx Gateway
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_dx_gateway
+  dnd_supported: false

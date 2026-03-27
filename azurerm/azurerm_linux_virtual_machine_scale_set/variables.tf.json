@@ -1,0 +1,276 @@
+{
+  "variable": {
+    "admin_password": [
+      {
+        "description": "Password for the admin user.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "admin_username": [
+      {
+        "description": "Username for the admin user.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "caching": [
+      {
+        "description": "The caching type for the OS disk.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "capacity_reservation_group_id": [
+      {
+        "description": "ID of the capacity reservation group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "custom_data": [
+      {
+        "description": "Custom data for the virtual machine.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_password_authentication": [
+      {
+        "description": "Disable password authentication flag.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "do_not_run_extensions_on_overprovisioned_machines": [
+      {
+        "description": "Flag to skip extensions on overprovisioned VMs.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the edge zone for the VM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption_at_host_enabled": [
+      {
+        "description": "Flag to enable encryption at host.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "eviction_policy": [
+      {
+        "description": "Policy for evicting Spot instances.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "extensions_time_budget": [
+      {
+        "description": "Time budget for VM extensions.",
+        "nullable": true,
+        "type": "string",
+        "default": "PT1H30M"
+      }
+    ],
+    "health_probe_id": [
+      {
+        "description": "ID of the health probe.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "host_group_id": [
+      {
+        "description": "ID of the dedicated host group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instances": [
+      {
+        "description": "Number of VM instances.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "max_bid_price": [
+      {
+        "description": "Maximum bid price for Spot instances.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the scale set.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "offer": [
+      {
+        "description": "Offer of the image used to create the virtual machines.",
+        "nullable": true,
+        "type": "string",
+        "default": "UbuntuServer"
+      }
+    ],
+    "os_sku": [
+      {
+        "description": "SKU of the image used to create the virtual machines.",
+        "nullable": true,
+        "type": "string",
+        "default": "18.04-LTS"
+      }
+    ],
+    "os_version": [
+      {
+        "description": "Version of the image used to create the virtual machines.",
+        "nullable": true,
+        "type": "string",
+        "default": "latest"
+      }
+    ],
+    "overprovision": [
+      {
+        "description": "Flag to enable overprovisioning.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Priority level of the VMs.",
+        "nullable": true,
+        "type": "string",
+        "default": "Regular"
+      }
+    ],
+    "provision_vm_agent": [
+      {
+        "description": "Flag to provision VM agent.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "proximity_placement_group_id": [
+      {
+        "description": "ID of the proximity placement group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "publisher": [
+      {
+        "description": "Publisher of the image used to create the virtual machines.",
+        "nullable": true,
+        "type": "string",
+        "default": "Canonical"
+      }
+    ],
+    "secure_boot_enabled": [
+      {
+        "description": "Flag to enable secure boot.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "single_placement_group": [
+      {
+        "description": "Flag to use single placement group.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "description": "SKU of the virtual machine.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_image_id": [
+      {
+        "description": "ID of the source image.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_account_type": [
+      {
+        "description": "The storage account type for the OS disk.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnet_id": [
+      {
+        "description": "ID of the subnet where VMSS will be present.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Tags assigned to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "upgrade_mode": [
+      {
+        "description": "Mode of upgrading the VMs.",
+        "nullable": true,
+        "type": "string",
+        "default": "Manual"
+      }
+    ],
+    "user_data": [
+      {
+        "description": "User data for the VM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vtpm_enabled": [
+      {
+        "description": "Flag to enable vTPM.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "zone_balance": [
+      {
+        "description": "Flag to balance across zones.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "zones": [
+      {
+        "description": "Set of availability zones.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

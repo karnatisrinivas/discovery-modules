@@ -1,0 +1,136 @@
+{
+    "output": {
+        "architecture": {
+            "description": "The CPU architecture of the AMI, such as x86_64 or arm64.",
+            "value": "${data.aws_ami.this.architecture}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AMI.",
+            "value": "${data.aws_ami.this.arn}"
+        },
+        "block_device_mappings": {
+            "description": "Details about the block device mappings of the AMI.",
+            "value": "${data.aws_ami.this.block_device_mappings}"
+        },
+        "boot_mode": {
+            "description": "The boot mode of the AMI, such as legacy BIOS or UEFI.",
+            "value": "${data.aws_ami.this.boot_mode}"
+        },
+        "creation_date": {
+            "description": "The date and time when the AMI was created.",
+            "value": "${data.aws_ami.this.creation_date}"
+        },
+        "deprecation_time": {
+            "description": "The date and time when the AMI will be deprecated.",
+            "value": "${data.aws_ami.this.deprecation_time}"
+        },
+        "description": {
+            "description": "A description of the AMI.",
+            "value": "${data.aws_ami.this.description}"
+        },
+        "ena_support": {
+            "description": "Indicates whether enhanced networking with ENA is enabled.",
+            "value": "${data.aws_ami.this.ena_support}"
+        },
+        "hypervisor": {
+            "description": "The hypervisor type of the AMI, such as xen or nitro.",
+            "value": "${data.aws_ami.this.hypervisor}"
+        },
+        "id": {
+            "description": "The unique identifier of the AMI.",
+            "value": "${data.aws_ami.this.id}"
+        },
+        "image_id": {
+            "description": "The ID of the AMI.",
+            "value": "${data.aws_ami.this.image_id}"
+        },
+        "image_location": {
+            "description": "The location of the AMI within Amazon EC2.",
+            "value": "${data.aws_ami.this.image_location}"
+        },
+        "image_owner_alias": {
+            "description": "The alias of the owner of the AMI.",
+            "value": "${data.aws_ami.this.image_owner_alias}"
+        },
+        "image_type": {
+            "description": "The type of the AMI, such as machine or kernel.",
+            "value": "${data.aws_ami.this.image_type}"
+        },
+        "imds_support": {
+            "description": "Indicates whether Instance Metadata Service (IMDS) support is enabled.",
+            "value": "${data.aws_ami.this.imds_support}"
+        },
+        "kernel_id": {
+            "description": "The kernel ID associated with the AMI, if applicable.",
+            "value": "${data.aws_ami.this.kernel_id}"
+        },
+        "name": {
+            "description": "The name of the AMI.",
+            "value": "${data.aws_ami.this.name}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the AMI.",
+            "value": "${data.aws_ami.this.owner_id}"
+        },
+        "platform": {
+            "description": "The platform of the AMI, such as Windows.",
+            "value": "${data.aws_ami.this.platform}"
+        },
+        "platform_details": {
+            "description": "Additional details about the platform of the AMI.",
+            "value": "${data.aws_ami.this.platform_details}"
+        },
+        "product_codes": {
+            "description": "The product codes associated with the AMI, if applicable.",
+            "value": "${data.aws_ami.this.product_codes}"
+        },
+        "public": {
+            "description": "Indicates whether the AMI is publicly available.",
+            "value": "${data.aws_ami.this.public}"
+        },
+        "ramdisk_id": {
+            "description": "The RAM disk ID associated with the AMI, if applicable.",
+            "value": "${data.aws_ami.this.ramdisk_id}"
+        },
+        "root_device_name": {
+            "description": "The name of the root device for the AMI instance.",
+            "value": "${data.aws_ami.this.root_device_name}"
+        },
+        "root_device_type": {
+            "description": "The type of root device used by the AMI, such as ebs or instance-store.",
+            "value": "${data.aws_ami.this.root_device_type}"
+        },
+        "root_snapshot_id": {
+            "description": "The snapshot ID of the root device of the AMI.",
+            "value": "${data.aws_ami.this.root_snapshot_id}"
+        },
+        "sriov_net_support": {
+            "description": "Indicates whether enhanced networking with SR-IOV is supported.",
+            "value": "${data.aws_ami.this.sriov_net_support}"
+        },
+        "state": {
+            "description": "The current state of the AMI, such as available or pending.",
+            "value": "${data.aws_ami.this.state}"
+        },
+        "state_reason": {
+            "description": "The reason for the current state of the AMI.",
+            "value": "${data.aws_ami.this.state_reason}"
+        },
+        "tags": {
+            "description": "The tags associated with the AMI.",
+            "value": "${data.aws_ami.this.tags}"
+        },
+        "tpm_support": {
+            "description": "Indicates whether TPM support is enabled for the AMI.",
+            "value": "${data.aws_ami.this.tpm_support}"
+        },
+        "usage_operation": {
+            "description": "The operation associated with the usage of the AMI.",
+            "value": "${data.aws_ami.this.usage_operation}"
+        },
+        "virtualization_type": {
+            "description": "The type of virtualization used by the AMI, such as hvm or paravirtual.",
+            "value": "${data.aws_ami.this.virtualization_type}"
+        }
+    }
+}

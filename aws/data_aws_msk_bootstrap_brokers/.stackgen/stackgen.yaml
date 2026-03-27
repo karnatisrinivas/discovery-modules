@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Msk Bootstrap Brokers"
+  node:
+    label:
+      static: "[Data] Msk Bootstrap Brokers"
+      template: "[Data] Msk Bootstrap Brokers"
+    display_type: default
+
+discovery:
+  type: data_aws_msk_bootstrap_brokers
+  dnd_supported: false

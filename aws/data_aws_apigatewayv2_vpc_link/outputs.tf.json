@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.id}"
+        },
+        "name": {
+            "description": "The name given to the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.name}"
+        },
+        "security_group_ids": {
+            "description": "A list of security group IDs associated with the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.security_group_ids}"
+        },
+        "subnet_ids": {
+            "description": "A list of subnet IDs associated with the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC link.",
+            "value": "${data.aws_apigatewayv2_vpc_link.this.tags}"
+        }
+    }
+}

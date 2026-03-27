@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC Lattice listener.",
+            "value": "${data.aws_vpclattice_listener.this.arn}"
+        },
+        "created_at": {
+            "description": "The date and time when the listener was created.",
+            "value": "${data.aws_vpclattice_listener.this.created_at}"
+        },
+        "default_action": {
+            "description": "The default action that the listener takes for incoming requests.",
+            "value": "${data.aws_vpclattice_listener.this.default_action}"
+        },
+        "id": {
+            "description": "The unique identifier for the VPC Lattice listener.",
+            "value": "${data.aws_vpclattice_listener.this.id}"
+        },
+        "last_updated_at": {
+            "description": "The date and time when the listener was last updated.",
+            "value": "${data.aws_vpclattice_listener.this.last_updated_at}"
+        },
+        "listener_id": {
+            "description": "The identifier of the listener.",
+            "value": "${data.aws_vpclattice_listener.this.listener_id}"
+        },
+        "name": {
+            "description": "The name of the listener.",
+            "value": "${data.aws_vpclattice_listener.this.name}"
+        },
+        "port": {
+            "description": "The port on which the listener is listening.",
+            "value": "${data.aws_vpclattice_listener.this.port}"
+        },
+        "protocol": {
+            "description": "The protocol that the listener uses (e.g., HTTP, HTTPS).",
+            "value": "${data.aws_vpclattice_listener.this.protocol}"
+        },
+        "service_arn": {
+            "description": "The ARN of the service associated with the listener.",
+            "value": "${data.aws_vpclattice_listener.this.service_arn}"
+        },
+        "service_id": {
+            "description": "The identifier of the service associated with the listener.",
+            "value": "${data.aws_vpclattice_listener.this.service_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the listener.",
+            "value": "${data.aws_vpclattice_listener.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Lambda alias.",
+            "value": "${data.aws_lambda_alias.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the Lambda alias.",
+            "value": "${data.aws_lambda_alias.this.description}"
+        },
+        "function_version": {
+            "description": "The version of the Lambda function that the alias points to.",
+            "value": "${data.aws_lambda_alias.this.function_version}"
+        },
+        "id": {
+            "description": "The identifier of the Lambda alias.",
+            "value": "${data.aws_lambda_alias.this.id}"
+        },
+        "invoke_arn": {
+            "description": "The ARN used to invoke the Lambda function via the alias.",
+            "value": "${data.aws_lambda_alias.this.invoke_arn}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "server_id": [
+      {
+        "description": "The unique identifier for the AWS Transfer Family server.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

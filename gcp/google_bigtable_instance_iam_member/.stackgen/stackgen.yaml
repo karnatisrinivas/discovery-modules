@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Bigtable Instance Iam Member
+  node:
+    label:
+      static: Bigtable Instance Iam Member
+      template: ${instance}
+    display_type: default
+
+discovery:
+  type: google_bigtable_instance_iam_member
+  dnd_supported: false
+  references:
+    instance:
+      from: google_bigtable_instance
+      output: id

@@ -1,0 +1,54 @@
+{
+    "variable": {
+        "description": [
+            {
+                "type": "string",
+                "nullable": true,
+                "description": "Description of the configuration."
+            }
+        ],
+        "name": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "Name of the configuration."
+            }
+        ],
+        "engine_type": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "Type of broker engine. Currently, Valid values are ActiveMQ and RabbitMQ."
+            }
+        ],
+        "engine_version": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "Version of the broker engine."
+            }
+        ],
+        "data": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ."
+            }
+        ],
+        "authentication_strategy": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "The authentication strategy used to secure the broker."
+            }
+        ],
+        "tags": [
+            {
+                "default": {},
+                "description": "A mapping of AWS tags to assign.",
+                "type": "map(string)",
+                "nullable": false
+            }
+        ]
+    }
+}

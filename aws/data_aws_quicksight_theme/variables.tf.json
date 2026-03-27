@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "theme_id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

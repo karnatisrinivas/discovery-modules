@@ -1,0 +1,37 @@
+{
+    "variable": {
+        "role_id": [
+            {
+                "type": "string",
+                "description": "The camel case role id to use for this role. Cannot contain `-`."
+            }
+        ],
+        "title": [
+            {
+                "type": "string",
+                "description": "A human-readable title for the role."
+            }
+        ],
+        "permissions": [
+            {
+                "type": "list(string)",
+                "description": "The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified."
+            }
+        ],
+        "description": [
+            {
+                "type": "string",
+                "description": "A human-readable description for the role.",
+                "nullable": true
+            }
+        ],
+        "stage": [
+            {
+                "type": "string",
+                "description": "The current launch stage of the role.",
+                "nullable": true,
+                "default": "GA"
+            }
+        ]
+    }
+}

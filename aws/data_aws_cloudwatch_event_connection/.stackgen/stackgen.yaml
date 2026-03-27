@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudwatch Event Connection"
+  node:
+    label:
+      static: "[Data] Cloudwatch Event Connection"
+      template: "[Data] Cloudwatch Event Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudwatch_event_connection
+  dnd_supported: false

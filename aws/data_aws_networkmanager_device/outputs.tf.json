@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.arn}"
+        },
+        "aws_location": {
+            "description": "The AWS location details, including subnet ARN and availability zone, of the device.",
+            "value": "${data.aws_networkmanager_device.this.aws_location}"
+        },
+        "description": {
+            "description": "A user-defined description of the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.id}"
+        },
+        "location": {
+            "description": "The geographical location of the device, including address, latitude, and longitude.",
+            "value": "${data.aws_networkmanager_device.this.location}"
+        },
+        "model": {
+            "description": "The model of the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.model}"
+        },
+        "serial_number": {
+            "description": "The serial number of the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.serial_number}"
+        },
+        "site_id": {
+            "description": "The site identifier where the network manager device is located.",
+            "value": "${data.aws_networkmanager_device.this.site_id}"
+        },
+        "tags": {
+            "description": "A map of key-value pairs assigned to the network manager device for organization and categorization.",
+            "value": "${data.aws_networkmanager_device.this.tags}"
+        },
+        "vendor": {
+            "description": "The vendor or manufacturer of the network manager device.",
+            "value": "${data.aws_networkmanager_device.this.vendor}"
+        }
+    }
+}

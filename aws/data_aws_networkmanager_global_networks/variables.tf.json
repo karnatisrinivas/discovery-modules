@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A map of key-value pairs to label or categorize the global network resources. Tags help in organizing and managing resources within AWS.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

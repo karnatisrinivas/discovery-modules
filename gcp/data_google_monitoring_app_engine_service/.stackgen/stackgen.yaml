@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[DATA] Monitoring App Engine Service"
+  node:
+    label:
+      static: "[DATA] Monitoring App Engine Service"
+      template: "[DATA] Monitoring App Engine Service"
+    display_type: default
+
+discovery:
+  type: data_google_monitoring_app_engine_service
+  dnd_supported: false

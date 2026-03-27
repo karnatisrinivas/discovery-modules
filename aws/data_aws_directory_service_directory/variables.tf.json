@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "directory_id": [
+      {
+        "description": "The unique identifier of the AWS Directory Service directory.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

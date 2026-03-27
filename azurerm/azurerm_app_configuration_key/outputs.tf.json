@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The computed value of id",
+            "value": "${azurerm_app_configuration_key.this.id}"
+        }
+    }
+}

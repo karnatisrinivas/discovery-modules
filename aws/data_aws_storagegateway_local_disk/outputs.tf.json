@@ -1,0 +1,20 @@
+{
+    "output": {
+        "disk_id": {
+            "description": "The unique identifier of the local disk in the AWS Storage Gateway.",
+            "value": "${data.aws_storagegateway_local_disk.this.disk_id}"
+        },
+        "disk_node": {
+            "description": "The device node of the local disk, representing its location in the system.",
+            "value": "${data.aws_storagegateway_local_disk.this.disk_node}"
+        },
+        "disk_path": {
+            "description": "The file system path to the local disk on the AWS Storage Gateway.",
+            "value": "${data.aws_storagegateway_local_disk.this.disk_path}"
+        },
+        "id": {
+            "description": "The unique identifier for the local disk data source.",
+            "value": "${data.aws_storagegateway_local_disk.this.id}"
+        }
+    }
+}

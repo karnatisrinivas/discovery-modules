@@ -1,0 +1,20 @@
+{
+  "Name": "aws_rds_cluster",
+  "Policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Default",
+        "Effect": "Allow",
+        "Action": [
+          "rds:DescribeDBInstances",
+          "rds:ListTagsForResource",
+          "rds:List*"
+        ],
+        "Resource": [
+          "${module.module_name.arn}"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Route 53 traffic policy document.",
+            "value": "${data.aws_route53_traffic_policy_document.this.id}"
+        },
+        "json": {
+            "description": "The JSON representation of the Route 53 traffic policy document.",
+            "value": "${data.aws_route53_traffic_policy_document.this.json}"
+        }
+    }
+}

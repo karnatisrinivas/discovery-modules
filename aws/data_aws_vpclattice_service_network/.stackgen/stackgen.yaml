@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpclattice Service Network"
+  node:
+    label:
+      static: "[Data] Vpclattice Service Network"
+      template: "[Data] Vpclattice Service Network"
+    display_type: default
+
+discovery:
+  type: data_aws_vpclattice_service_network
+  dnd_supported: false

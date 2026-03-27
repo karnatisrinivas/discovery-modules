@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "app_engine": [
+      {
+        "description": "Defines the App Engine service or version for the network endpoint group. Must be specified if the group is associated with App Engine.",
+        "nullable": true,
+        "type": "list(object({service: optional(string),url_mask: optional(string),version: optional(string)}))"
+      }
+    ],
+    "cloud_function": [
+      {
+        "description": "Specifies the serverless Cloud Function to associate with the regional network endpoint group, must be deployed in the same region.",
+        "nullable": true,
+        "type": "list(object({function: optional(string),url_mask: optional(string)}))"
+      }
+    ],
+    "cloud_run": [
+      {
+        "description": "Specifies the Cloud Run service to associate with the regional network endpoint group, required for serverless NEG configurations.",
+        "nullable": true,
+        "type": "list(object({service: optional(string),tag: optional(string),url_mask: optional(string)}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the purpose or usage of the regional network endpoint group, providing context for its role within the infrastructure.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the regional network endpoint group, must be 1-63 characters and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the self-link or name of the VPC network to which the regional network endpoint group belongs. Must be an existing network in the same project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "network_endpoint_type": [
+      {
+        "description": "Specifies the type of network endpoints in the group, such as SERVERLESS, INTERNET_IP_PORT, or GCE_VM_IP_PORT; must match the backends used in the group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "psc_data": [
+      {
+        "description": "Specifies whether the network endpoint group is for Private Service Connect, requiring the PSC service attachment.",
+        "nullable": true,
+        "type": "list(object({producer_port: optional(string)}))"
+      }
+    ],
+    "psc_target_service": [
+      {
+        "description": "Specifies the fully qualified name of the private service connect target service to associate with the regional network endpoint group. Must be in the same region as the group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork where the network endpoint group will be deployed. Must be in the same region as the network endpoint group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout durations for create, update, and delete operations of the regional network endpoint group.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

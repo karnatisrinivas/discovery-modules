@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Redis firewall rule.",
+            "value": "${azurerm_redis_firewall_rule.this.id}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance Group Membership
+  node:
+    label:
+      static: Compute Instance Group Membership
+      template: ${instance}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_group_membership
+  dnd_supported: false
+  references:
+    instance_group:
+      from: google_compute_instance_group
+      output: self_link
+    instance:
+      from: google_compute_instance
+      output: id

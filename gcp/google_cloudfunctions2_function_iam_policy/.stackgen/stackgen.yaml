@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfunctions2 Function Iam Policy
+  node:
+    label:
+      static: Cloudfunctions2 Function Iam Policy
+      template: ${cloud_function}
+    display_type: default
+
+discovery:
+  type: google_cloudfunctions2_function_iam_policy
+  dnd_supported: false
+  references:
+    cloud_function:
+      from: google_cloudfunctions2_function
+      output: name

@@ -1,0 +1,59 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Interface
+  node:
+    label:
+      static: Network Interface
+      template: Network Interface
+    display_type: default
+
+variables:
+  private_ip_list_enabled:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Whether `Private IP List` is allowed and controls the IPs to assign to the ENI and `Private IPs` and `Private IPs Count` become read-only."
+    type: bool
+  source_dest_check:
+    description: Whether to enable source destination checking for the ENI.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  attachment:
+    description: Configuration block to define the attachment of the ENI.
+    attributes: 
+      instance: 
+        ui_control: text
+        label: Instance
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      device_index: 
+        label: Device Index
+        validation: 
+          required: true
+          dataType: number
+        type: number
+        ui_control: text
+  ipv6_address_list_enabled:
+    description: "Whether `IPv6 Address List` is allowed and controls the IPs to assign to the ENI and `IPv6 Addresses` and `IPv6 Address Count` become read-only."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_network_interface
+  dnd_supported: false
+  data_source: data_aws_network_interface
+  references:
+    subnet_id:
+      from: aws_subnet
+      output: id

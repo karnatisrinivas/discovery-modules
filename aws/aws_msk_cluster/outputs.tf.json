@@ -1,0 +1,72 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API interactions",
+            "value": "${aws_msk_cluster.this.arn}"
+        },
+        "bootstrap_brokers": {
+            "description": "Comma-separated list of broker endpoints for plain text clients",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers}"
+        },
+        "bootstrap_brokers_public_sasl_iam": {
+            "description": "Public broker endpoints with SASL/IAM authentication for secure access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_public_sasl_iam}"
+        },
+        "bootstrap_brokers_public_sasl_scram": {
+            "description": "Public broker endpoints with SASL/SCRAM authentication for secure access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_public_sasl_scram}"
+        },
+        "bootstrap_brokers_public_tls": {
+            "description": "Public broker endpoints with TLS encryption for secure communication",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_public_tls}"
+        },
+        "bootstrap_brokers_sasl_iam": {
+            "description": "Private broker endpoints with SASL/IAM authentication for internal access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_sasl_iam}"
+        },
+        "bootstrap_brokers_sasl_scram": {
+            "description": "Private broker endpoints with SASL/SCRAM authentication for internal access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_sasl_scram}"
+        },
+        "bootstrap_brokers_tls": {
+            "description": "Private broker endpoints with TLS encryption for secure communication",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_tls}"
+        },
+        "bootstrap_brokers_vpc_connectivity_sasl_iam": {
+            "description": "VPC broker endpoints with SASL/IAM for private network access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_vpc_connectivity_sasl_iam}"
+        },
+        "bootstrap_brokers_vpc_connectivity_sasl_scram": {
+            "description": "VPC broker endpoints with SASL/SCRAM for private network access",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_vpc_connectivity_sasl_scram}"
+        },
+        "bootstrap_brokers_vpc_connectivity_tls": {
+            "description": "VPC broker endpoints with TLS encryption for private network communication",
+            "value": "${aws_msk_cluster.this.bootstrap_brokers_vpc_connectivity_tls}"
+        },
+        "cluster_uuid": {
+            "description": "Unique identifier of the MSK cluster for tracking and management",
+            "value": "${aws_msk_cluster.this.cluster_uuid}"
+        },
+        "current_version": {
+            "description": "Current configuration version of the MSK cluster",
+            "value": "${aws_msk_cluster.this.current_version}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the MSK cluster in Terraform",
+            "value": "${aws_msk_cluster.this.id}"
+        },
+        "tags_all": {
+            "description": "All tags associated with the MSK cluster for organization and filtering",
+            "value": "${aws_msk_cluster.this.tags_all}"
+        },
+        "zookeeper_connect_string": {
+            "description": "Comma-separated list of Zookeeper endpoints for plain text connections",
+            "value": "${aws_msk_cluster.this.zookeeper_connect_string}"
+        },
+        "zookeeper_connect_string_tls": {
+            "description": "Comma-separated list of Zookeeper endpoints with TLS encryption",
+            "value": "${aws_msk_cluster.this.zookeeper_connect_string_tls}"
+        }
+    }
+}

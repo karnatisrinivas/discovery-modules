@@ -1,0 +1,10 @@
+{
+    "variable": {
+        "module_id": [
+            {
+                "type": "string",
+                "description": "The ID of the App Engine module underlying this service. Corresponds to the moduleId resource label in the gae_app monitored resource, or the service/module name."
+            }
+        ]
+    } 
+}

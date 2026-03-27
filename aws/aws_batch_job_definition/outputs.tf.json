@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Batch job definition, a unique identifier for the job definition in AWS.",
+            "value": "${aws_batch_job_definition.this.arn}"
+        },
+        "arn_prefix": {
+            "description": "The prefix of the ARN for the Batch job definition, which is useful for identifying resources with a common prefix.",
+            "value": "${aws_batch_job_definition.this.arn_prefix}"
+        },
+        "id": {
+            "description": "The unique ID of the Batch job definition, used to reference the job definition in AWS.",
+            "value": "${aws_batch_job_definition.this.id}"
+        }
+    }
+}

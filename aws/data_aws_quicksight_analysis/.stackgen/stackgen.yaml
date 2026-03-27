@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Quicksight Analysis"
+  node:
+    label:
+      static: "[Data] Quicksight Analysis"
+      template: "[Data] Quicksight Analysis"
+    display_type: default
+
+discovery:
+  type: data_aws_quicksight_analysis
+  dnd_supported: false

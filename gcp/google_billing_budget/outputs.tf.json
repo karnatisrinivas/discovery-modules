@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the billing budget resource in Google Cloud",
+            "value": "${google_billing_budget.this.id}"
+        },
+        "name": {
+            "description": "Name of the billing budget for easy identification and management",
+            "value": "${google_billing_budget.this.name}"
+        }
+    }
+}

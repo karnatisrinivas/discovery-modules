@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Secret Manager Secret Version
+  node:
+    label:
+      static: Secret Manager Secret Version
+      template: ${secret}
+    display_type: default
+
+discovery:
+  type: google_secret_manager_secret_version
+  dnd_supported: false
+  data_source: data_google_secret_manager_secret_version
+  references:
+    secret:
+      from: google_secret_manager_secret
+      output: id

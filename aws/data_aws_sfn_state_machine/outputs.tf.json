@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the state machine.",
+            "value": "${data.aws_sfn_state_machine.this.arn}"
+        },
+        "creation_date": {
+            "description": "The date and time when the state machine was created.",
+            "value": "${data.aws_sfn_state_machine.this.creation_date}"
+        },
+        "definition": {
+            "description": "The JSON or YAML representation of the state machine's workflow.",
+            "value": "${data.aws_sfn_state_machine.this.definition}"
+        },
+        "description": {
+            "description": "A user-provided description of the state machine.",
+            "value": "${data.aws_sfn_state_machine.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the state machine.",
+            "value": "${data.aws_sfn_state_machine.this.id}"
+        },
+        "revision_id": {
+            "description": "The identifier for the current revision of the state machine.",
+            "value": "${data.aws_sfn_state_machine.this.revision_id}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role that is used by the state machine for execution.",
+            "value": "${data.aws_sfn_state_machine.this.role_arn}"
+        },
+        "status": {
+            "description": "The current status of the state machine, such as ACTIVE or DELETING.",
+            "value": "${data.aws_sfn_state_machine.this.status}"
+        }
+    }
+}

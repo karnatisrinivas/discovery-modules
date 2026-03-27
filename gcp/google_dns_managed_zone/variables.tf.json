@@ -1,0 +1,88 @@
+{
+  "variable": {
+    "cloud_logging_config": [
+      {
+        "description": "Specifies the configuration for logging DNS queries. Must be a map with keys such as 'enableLogging' indicating whether query logging is enabled.",
+        "nullable": true,
+        "type": "list(object({enable_logging: bool}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies a user-defined description for the DNS managed zone. Can be up to 1024 characters long.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns_name": [
+      {
+        "description": "The DNS name for the managed zone, must end with a dot (e.g., 'example.com.').",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "dnssec_config": [
+      {
+        "description": "Configuration for DNSSEC settings, including key signing and zone signing details for the managed DNS zone.",
+        "nullable": true,
+        "type": "list(object({kind: optional(string),non_existence: optional(string),state: optional(string),default_key_specs: list(object({algorithm: optional(string),key_length: optional(number),key_type: optional(string),kind: optional(string)}))}))"
+      }
+    ],
+    "force_destroy": [
+      {
+        "description": "Determines whether to permanently delete the managed zone and all its associated resources, bypassing the recycle bin.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "forwarding_config": [
+      {
+        "description": "Configuration for forwarding DNS queries to specific target name servers; requires valid target name servers for setup.",
+        "nullable": true,
+        "type": "list(object({target_name_servers: list(object({forwarding_path: optional(string),ipv4_address: string}))}))"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize resources, typically for filtering, grouping, or identifying purposes; must be unique within the project.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the DNS managed zone, which must be unique within the project and adhere to Google's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "peering_config": [
+      {
+        "description": "Specifies the network peering configuration for the managed zone, required when creating a private zone that uses a network.",
+        "nullable": true,
+        "type": "list(object({target_network: list(object({network_url: string}))}))"
+      }
+    ],
+    "private_visibility_config": [
+      {
+        "description": "Defines the visibility settings for the managed zone, specifying configurations for private DNS zones, including associated networks.",
+        "nullable": true,
+        "type": "list(object({gke_clusters: list(object({gke_cluster_name: string})),networks: list(object({network_url: string}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout settings for the creation, update, and deletion operations of the DNS managed zone.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "visibility": [
+      {
+        "description": "Specifies whether the managed zone is publicly visible or private.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

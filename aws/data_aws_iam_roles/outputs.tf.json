@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the IAM roles.",
+            "value": "${data.aws_iam_roles.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the IAM roles data source.",
+            "value": "${data.aws_iam_roles.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the IAM roles.",
+            "value": "${data.aws_iam_roles.this.names}"
+        }
+    }
+}

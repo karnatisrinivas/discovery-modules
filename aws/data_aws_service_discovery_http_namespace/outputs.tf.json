@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the HTTP namespace.",
+            "value": "${data.aws_service_discovery_http_namespace.this.arn}"
+        },
+        "description": {
+            "description": "A user-defined description of the HTTP namespace.",
+            "value": "${data.aws_service_discovery_http_namespace.this.description}"
+        },
+        "http_name": {
+            "description": "The name of the HTTP namespace.",
+            "value": "${data.aws_service_discovery_http_namespace.this.http_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the HTTP namespace.",
+            "value": "${data.aws_service_discovery_http_namespace.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the HTTP namespace.",
+            "value": "${data.aws_service_discovery_http_namespace.this.tags}"
+        }
+    }
+}

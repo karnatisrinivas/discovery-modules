@@ -1,0 +1,80 @@
+{
+  "variable": {
+    "client_id": [{
+      "type": "string",
+      "description": "The client ID of the application for which to create a service principal"
+    }],
+    "account_enabled": [{
+      "type": "bool",
+      "description": "Whether or not the service principal account is enabled",
+      "default": true,
+      "nullable": true
+    }],
+    "alternative_names": [{
+      "type": "list(string)",
+      "description": "A list of alternative names for the service principal",
+      "default": [],
+      "nullable": true
+    }],
+    "description": [{
+      "type": "string",
+      "description": "Description of the service principal provided for internal end-users",
+      "default": null,
+      "nullable": true
+    }],
+    "login_url": [{
+      "type": "string",
+      "description": "The URL where the service provider redirects the user to Azure AD to authenticate",
+      "default": null,
+      "nullable": true
+    }],
+    "notes": [{
+      "type": "string",
+      "description": "Notes for internal end-users",
+      "default": null,
+      "nullable": true
+    }],
+    "notification_email_addresses": [{
+      "type": "list(string)",
+      "description": "List of email addresses where Azure AD sends a notification when the active certificate is near the expiration date",
+      "default": [],
+      "nullable": true
+    }],
+    "preferred_single_sign_on_mode": [{
+      "type": "string",
+      "description": "The single sign-on mode configured for this application",
+      "default": null,
+      "nullable": true
+    }],
+    "use_existing": [{
+      "type": "bool",
+      "description": "When true, any existing service principal linked to the same application will be automatically imported",
+      "default": false,
+      "nullable": true
+    }],
+    "tags": [{
+      "type": "list(string)",
+      "description": "A list of tags to apply to the service principal",
+      "default": [],
+      "nullable": true
+    }],
+    "feature_tags": [{
+      "type": "list(object({custom_single_sign_on:bool,enterprise:bool,gallery:bool,hide:bool}))",
+      "description": "Feature tags configuration for the service principal",
+      "default": null,
+      "nullable": true
+    }],
+    "saml_single_sign_on": [{
+      "type": "list(object({relay_state:string}))",
+      "description": "SAML single sign-on configuration for the service principal",
+      "default": null,
+      "nullable": true
+    }],
+    "app_role_assignment_required": [{
+      "type": "bool",
+      "description": "Whether the service principal has app role assignment enabled",
+      "default": false,
+      "nullable": true
+    }]
+  }
+}

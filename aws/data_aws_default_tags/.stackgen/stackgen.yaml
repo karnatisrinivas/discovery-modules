@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Default Tags"
+  node:
+    label:
+      static: "[Data] Default Tags"
+      template: "[Data] Default Tags"
+    display_type: default
+
+discovery:
+  type: data_aws_default_tags
+  dnd_supported: false

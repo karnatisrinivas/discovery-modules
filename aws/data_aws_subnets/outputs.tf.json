@@ -1,0 +1,8 @@
+{
+    "output": {
+        "ids": {
+            "description": "A list containing the unique identifiers of all AWS subnets.",
+            "value": "${data.aws_subnets.this.ids}"
+        }
+    }
+}

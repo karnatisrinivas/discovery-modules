@@ -1,0 +1,52 @@
+{
+    "variable": {
+        "content_type": [
+            {
+                "nullable": true,
+                "description": "The content type of the secret, such as 'password' or 'application/x-pkcs12'.",
+                "type": "string"
+            }
+        ],
+        "expiration_date": [
+            {
+                "nullable": true,
+                "description": "Key not usable after the provided UTC datetime (Y-m-d'T'H:M:S'Z').",
+                "type": "string"
+            }
+        ],
+        "key_vault_id": [
+            {
+                "description": "The id of the Key Vault Key.",
+                "type": "string"
+            }
+        ],
+        "not_before_date": [
+            {
+                "nullable": true,
+                "description": "Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').",
+                "type": "string"
+            }
+        ],
+        "secret_name": [
+            {
+                "description": "The name of the secret to create",
+                "type": "string"
+            }
+        ],
+        "secret_value": [
+            {
+                "description": "The value of the secret to store in the Key Vault",
+                "sensitive": true,
+                "type": "string"
+            }
+        ],
+        "tags": [
+            {
+                "default": null,
+                "description": "A mapping of tags to assign to the resource.",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ]
+    }
+}

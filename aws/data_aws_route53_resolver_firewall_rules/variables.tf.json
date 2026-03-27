@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "action": [
+      {
+        "description": "Specifies the action to take on DNS queries that match the rule (e.g., allow, block).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "firewall_rule_group_id": [
+      {
+        "description": "The unique identifier of the firewall rule group to which the rule belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Indicates the priority of the rule within the firewall rule group, determining the order of rule evaluation.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

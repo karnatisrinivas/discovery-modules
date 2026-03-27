@@ -1,0 +1,16 @@
+{
+    "output": {
+        "all_allowed": {
+            "description": "Indicates whether all actions requested are allowed by the policy simulation.",
+            "value": "${data.aws_iam_principal_policy_simulation.this.all_allowed}"
+        },
+        "id": {
+            "description": "The unique identifier of the policy simulation.",
+            "value": "${data.aws_iam_principal_policy_simulation.this.id}"
+        },
+        "results": {
+            "description": "Detailed results of the policy simulation, including actions tested, their permissions, and the resources they apply to.",
+            "value": "${data.aws_iam_principal_policy_simulation.this.results}"
+        }
+    }
+}

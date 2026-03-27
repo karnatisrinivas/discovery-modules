@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "pool_name": [
+      {
+        "description": "Name of the tape pool, must be unique within the account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "retention_lock_time_in_days": [
+      {
+        "description": "Specifies the number of days for the retention lock, ensuring tapes cannot be deleted or modified during this period. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "retention_lock_type": [
+      {
+        "description": "\"Specifies the type of retention lock for the tape pool; valid values are 'COMPLIANCE' or 'GOVERNANCE'.\"",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_class": [
+      {
+        "description": "Specifies the storage class for the tape pool; must be either \"DEEP_ARCHIVE\" or \"GLACIER\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the tape pool, used to organize and manage resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

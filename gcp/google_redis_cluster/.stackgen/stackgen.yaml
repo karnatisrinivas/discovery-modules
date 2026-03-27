@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redis Cluster
+  node:
+    label:
+      static: Redis Cluster
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_redis_cluster
+  dnd_supported: false

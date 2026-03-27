@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "The language code for the language to be used. It determines the language in which the information is presented.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "id": [
+      {
+        "description": "The unique identifier for the service catalog portfolio.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

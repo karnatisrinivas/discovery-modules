@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_ses_email_identity.this.arn}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ses_email_identity.this.id}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_wafv2_web_acl.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_wafv2_web_acl.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_wafv2_web_acl.this.id}"
+        }
+    }
+}

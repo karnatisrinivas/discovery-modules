@@ -1,0 +1,11 @@
+{
+    "variable": {
+        "rule_set_name": [
+            {
+                "type": "string",
+                "description": "The name of the rule set.",
+                "nullable": false
+            }
+        ]
+    }
+}

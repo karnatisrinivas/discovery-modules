@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the IAM role.",
+            "value": "${data.aws_iam_role.this.arn}"
+        },
+        "assume_role_policy": {
+            "description": "The policy that grants an entity permission to assume the role.",
+            "value": "${data.aws_iam_role.this.assume_role_policy}"
+        },
+        "create_date": {
+            "description": "The date and time when the IAM role was created.",
+            "value": "${data.aws_iam_role.this.create_date}"
+        },
+        "description": {
+            "description": "A description of the IAM role's purpose.",
+            "value": "${data.aws_iam_role.this.description}"
+        },
+        "id": {
+            "description": "The ID of the IAM role.",
+            "value": "${data.aws_iam_role.this.id}"
+        },
+        "max_session_duration": {
+            "description": "The maximum session duration (in seconds) for the role.",
+            "value": "${data.aws_iam_role.this.max_session_duration}"
+        },
+        "path": {
+            "description": "The path to the IAM role.",
+            "value": "${data.aws_iam_role.this.path}"
+        },
+        "permissions_boundary": {
+            "description": "The ARN of the policy that is used to set the permissions boundary for the role.",
+            "value": "${data.aws_iam_role.this.permissions_boundary}"
+        },
+        "role_last_used": {
+            "description": "Information about the last time the role was used, including date and region.",
+            "value": "${data.aws_iam_role.this.role_last_used}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the IAM role.",
+            "value": "${data.aws_iam_role.this.tags}"
+        },
+        "unique_id": {
+            "description": "The unique identifier for the IAM role.",
+            "value": "${data.aws_iam_role.this.unique_id}"
+        }
+    }
+}

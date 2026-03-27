@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "license_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the received license in AWS License Manager.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

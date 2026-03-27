@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Checksum to detect changes in IAM binding configuration",
+            "value": "${google_secret_manager_secret_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM binding within Secret Manager",
+            "value": "${google_secret_manager_secret_iam_binding.this.id}"
+        }
+    }
+}

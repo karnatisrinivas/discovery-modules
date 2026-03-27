@@ -1,0 +1,59 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project IAM Policy
+  node:
+    label:
+      static: Project IAM Policy
+      template: Project IAM Policy
+    display_type: default
+
+variables:
+  bindings:
+    description: (WILL OVERRIDE HIGHER LEVEL POLICIES) Defines a binding to be included in the policy document. Cannot be used in conjunction with Project IAM Member. To add a condition, you need to indicate the title and expression.
+    attributes: 
+      role: 
+        ui_control: text
+        label: Role
+        description: "The role/permission that will be granted to the members. Note that custom roles must be of the format [projects|organizations]/{parent-name}/roles/{role-name}."
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      members: 
+        type: list(string)
+        ui_control: text_list
+        label: Members
+        description: "An array of identities that will be granted the privilege in the role. Valid values: allUsers, AllAuthenticatedUsers, user:{emailid}, serviceAccount:{emailid}, group:{emailid}, domain:{domain}"
+        validation: 
+          required: true
+          dataType: list(string)
+      condition_expression: 
+        label: Condition Expression
+        description: Textual representation of an expression in Common Expression Language syntax. If you wish to use a condition, you must add an Expression and a Title
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      condition_title: 
+        type: string
+        ui_control: text
+        label: Condition Title
+        description: A title for the expression, i.e. a short string describing its purpose. If you wish to use a condition, you must add an Expression and a Title
+        validation: 
+          required: false
+          dataType: string
+      condition_description: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+        label: Condition Description
+        description: An optional description of the expression.
+
+discovery:
+  type: google_project_iam_policy
+  dnd_supported: false

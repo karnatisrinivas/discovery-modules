@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

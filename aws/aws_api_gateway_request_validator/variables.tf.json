@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Defines the name of the API Gateway request validator, which must be unique within the API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "ID of the associated REST API, required for linking the request validator to the correct API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "validate_request_body": [
+      {
+        "description": "Determines whether the request body should be validated against the API's schema. Set to true to enable validation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "validate_request_parameters": [
+      {
+        "description": "Specifies whether to validate request parameters in API Gateway. Set to true to enable validation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

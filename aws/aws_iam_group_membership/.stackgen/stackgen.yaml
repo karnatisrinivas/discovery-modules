@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Group Membership
+  node:
+    label:
+      static: IAM Group Membership
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_group_membership
+  dnd_supported: false
+  references:
+    users:
+      from: aws_iam_user
+      output: name

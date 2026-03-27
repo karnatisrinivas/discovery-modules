@@ -1,0 +1,16 @@
+{
+    "output": {
+        "log_analytics_workspace_customer_id": {
+            "description": "The value of the log_analytics_workspace_customer_id output",
+            "value": "${azurerm_log_analytics_workspace.this.workspace_id}"
+        },
+        "log_analytics_workspace_name": {
+            "description": "The value of the log_analytics_workspace_name output",
+            "value": "${azurerm_log_analytics_workspace.this.name}"
+        },
+        "log_analytics_workspace_resource_id": {
+            "description": "The value of the log_analytics_workspace_resource_id output",
+            "value": "${azurerm_log_analytics_workspace.this.id}"
+        }
+    }
+}

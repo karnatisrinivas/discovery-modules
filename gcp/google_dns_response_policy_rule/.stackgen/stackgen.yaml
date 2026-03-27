@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dns Response Policy Rule
+  node:
+    label:
+      static: Dns Response Policy Rule
+      template: ${rule_name}
+    display_type: default
+
+discovery:
+  type: google_dns_response_policy_rule
+  dnd_supported: false
+  references:
+    response_policy:
+      from: google_dns_response_policy
+      output: name

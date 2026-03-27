@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Kubernetes cluster in Azure.",
+            "value": "${data.azurerm_kubernetes_cluster.this.id}"
+        }
+    }
+}

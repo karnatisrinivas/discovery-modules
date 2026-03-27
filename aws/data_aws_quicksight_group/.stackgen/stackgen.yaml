@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Quicksight Group"
+  node:
+    label:
+      static: "[Data] Quicksight Group"
+      template: "[Data] Quicksight Group"
+    display_type: default
+
+discovery:
+  type: data_aws_quicksight_group
+  dnd_supported: false

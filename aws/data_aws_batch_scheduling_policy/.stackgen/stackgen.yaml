@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Batch Scheduling Policy"
+  node:
+    label:
+      static: "[Data] Batch Scheduling Policy"
+      template: "[Data] Batch Scheduling Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_batch_scheduling_policy
+  dnd_supported: false

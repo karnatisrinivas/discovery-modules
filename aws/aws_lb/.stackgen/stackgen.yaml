@@ -1,0 +1,73 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Load Balancer
+  node:
+    label:
+      static: Load Balancer
+      template: ${name}
+    display_type: default
+
+variables:
+  access_logs:
+    description: Configuration block for access logs
+    attributes: 
+      enabled: 
+        validation: 
+          dataType: bool
+          required: false
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Enabled
+      bucket: 
+        label: Bucket
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+  load_balancer_type:
+    description: The type of load balancer to create. Possible values are application or network
+    type: string
+    options: 
+      - application
+      - network
+      - gateway
+    ui_control: select
+  internal:
+    description: Whether the ALB should be internal
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  enable_deletion_protection:
+    description: If true, deletion of the load balancer will be disabled
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  enable_http2:
+    description: If true, the LB will support HTTP/2
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_lb
+  dnd_supported: false
+  data_source: data_aws_lb
+  references:
+    security_groups:
+      from: aws_security_group
+      output: id
+    subnets:
+      from: aws_subnet
+      output: id

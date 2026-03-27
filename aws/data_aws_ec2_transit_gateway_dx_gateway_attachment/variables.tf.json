@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "dx_gateway_id": [
+      {
+        "description": "The ID of the Direct Connect gateway to attach to the transit gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "transit_gateway_id": [
+      {
+        "description": "The ID of the transit gateway to which the Direct Connect gateway is being attached.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

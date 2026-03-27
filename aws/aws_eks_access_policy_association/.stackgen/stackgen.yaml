@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Eks Access Policy Association
+  node:
+    label:
+      static: Eks Access Policy Association
+      template: "${`cluster_name`}"
+    display_type: default
+
+discovery:
+  type: aws_eks_access_policy_association
+  dnd_supported: false
+  references:
+    cluster_name:
+      from: aws_eks_cluster
+      output: name
+    policy_arn:
+      from: aws_iam_policy
+      output: arn
+    principal_arn:
+      from: aws_iam_user
+      output: arn

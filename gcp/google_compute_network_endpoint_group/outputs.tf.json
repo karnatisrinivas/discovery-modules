@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the network endpoint group in other configurations",
+            "value": "${google_compute_network_endpoint_group.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the network endpoint group via the Google Cloud API",
+            "value": "${google_compute_network_endpoint_group.this.self_link}"
+        },
+        "size": {
+            "description": "Number of endpoints within the network endpoint group",
+            "value": "${google_compute_network_endpoint_group.this.size}"
+        }
+    }
+}

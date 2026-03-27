@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Lb Cookie Stickiness Policy
+  node:
+    label:
+      static: Lb Cookie Stickiness Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_lb_cookie_stickiness_policy
+  dnd_supported: false
+  references:
+    load_balancer:
+      from: aws_lb
+      output: name

@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] ECR Image"
+  node:
+    label:
+      static: "[Data] ECR Image"
+      template: "[Data] ECR Image"
+    display_type: default
+
+variables:
+  most_recent:
+    description: A flag indicating whether to use the most recent image if multiple images have the same tag.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: data_aws_ecr_image
+  dnd_supported: false

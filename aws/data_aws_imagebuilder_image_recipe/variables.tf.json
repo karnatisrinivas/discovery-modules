@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the image recipe.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

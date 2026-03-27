@@ -1,0 +1,16 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the lien was created, useful for auditing changes.",
+            "value": "${google_resource_manager_lien.this.create_time}"
+        },
+        "id": {
+            "description": "Unique identifier for the lien, essential for managing or referencing it.",
+            "value": "${google_resource_manager_lien.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the lien, helpful for identifying its purpose.",
+            "value": "${google_resource_manager_lien.this.name}"
+        }
+    }
+}

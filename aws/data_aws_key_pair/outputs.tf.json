@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the key pair.",
+            "value": "${data.aws_key_pair.this.arn}"
+        },
+        "create_time": {
+            "description": "The date and time when the key pair was created.",
+            "value": "${data.aws_key_pair.this.create_time}"
+        },
+        "fingerprint": {
+            "description": "A unique identifier for the key pair, typically used for verification.",
+            "value": "${data.aws_key_pair.this.fingerprint}"
+        },
+        "id": {
+            "description": "The ID of the key pair.",
+            "value": "${data.aws_key_pair.this.id}"
+        },
+        "key_type": {
+            "description": "The type of the key pair, such as RSA or ED25519.",
+            "value": "${data.aws_key_pair.this.key_type}"
+        },
+        "public_key": {
+            "description": "The public key material of the key pair.",
+            "value": "${data.aws_key_pair.this.public_key}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the key pair.",
+            "value": "${data.aws_key_pair.this.tags}"
+        }
+    }
+}

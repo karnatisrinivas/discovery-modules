@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "capacity_duration_hours": [
+      {
+        "description": "The number of hours for which the EC2 capacity is reserved.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "instance_count": [
+      {
+        "description": "The number of EC2 instances you want to reserve.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "instance_type": [
+      {
+        "description": "The type of EC2 instance you want to reserve.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

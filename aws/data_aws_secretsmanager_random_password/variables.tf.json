@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "exclude_characters": [
+      {
+        "description": "A string of specific characters to be excluded from the password.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "exclude_lowercase": [
+      {
+        "description": "A boolean to exclude lowercase letters from the password if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclude_numbers": [
+      {
+        "description": "A boolean to exclude numbers from the password if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclude_punctuation": [
+      {
+        "description": "A boolean to exclude punctuation characters from the password if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclude_uppercase": [
+      {
+        "description": "A boolean to exclude uppercase letters from the password if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "include_space": [
+      {
+        "description": "A boolean to include spaces in the password if set to true.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "password_length": [
+      {
+        "description": "The desired length of the generated password.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "require_each_included_type": [
+      {
+        "description": "A boolean to require at least one character from each included character type.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

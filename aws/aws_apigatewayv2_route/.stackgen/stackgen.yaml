@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigatewayv2 Route
+  node:
+    label:
+      static: Apigatewayv2 Route
+      template: ${route_key}
+    display_type: default
+
+discovery:
+  type: aws_apigatewayv2_route
+  dnd_supported: false
+  references:
+    authorizer_id:
+      from: aws_apigatewayv2_authorizer
+      output: id
+    api_id:
+      from: aws_apigatewayv2_api
+      output: id

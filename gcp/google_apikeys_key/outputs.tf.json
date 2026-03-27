@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the API key resource used in configurations",
+            "value": "${google_apikeys_key.this.id}"
+        },
+        "key_string": {
+            "description": "The actual API key string for authenticating requests",
+            "value": "${google_apikeys_key.this.key_string}"
+        },
+        "uid": {
+            "description": "Unique identifier for tracking the API key within Google Cloud",
+            "value": "${google_apikeys_key.this.uid}"
+        }
+    }
+}

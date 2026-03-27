@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "status": [
+      {
+        "description": "Specifies the status of the compute zone, such as UP or DOWN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "device_id": [
+      {
+        "description": "The unique identifier for the network device within the AWS Network Manager.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "global_network_id": [
+      {
+        "description": "The identifier for the global network that the device is associated with in AWS Network Manager.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

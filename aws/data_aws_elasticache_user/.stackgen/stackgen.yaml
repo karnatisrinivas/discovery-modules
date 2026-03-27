@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elasticache User"
+  node:
+    label:
+      static: "[Data] Elasticache User"
+      template: "[Data] Elasticache User"
+    display_type: default
+
+discovery:
+  type: data_aws_elasticache_user
+  dnd_supported: false

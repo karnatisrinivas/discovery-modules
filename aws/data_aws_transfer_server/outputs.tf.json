@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.arn}"
+        },
+        "certificate": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.certificate}"
+        },
+        "domain": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.domain}"
+        },
+        "endpoint": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.endpoint}"
+        },
+        "endpoint_type": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.endpoint_type}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.id}"
+        },
+        "identity_provider_type": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.identity_provider_type}"
+        },
+        "invocation_role": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.invocation_role}"
+        },
+        "logging_role": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.logging_role}"
+        },
+        "protocols": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.protocols}"
+        },
+        "security_policy_name": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.security_policy_name}"
+        },
+        "structured_log_destinations": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.structured_log_destinations}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.tags}"
+        },
+        "url": {
+            "description": "",
+            "value": "${data.aws_transfer_server.this.url}"
+        }
+    }
+}

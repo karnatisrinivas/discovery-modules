@@ -1,0 +1,16 @@
+{
+    "output": {
+        "endpoint": {
+            "description": "The URL to access the ServiceBus Namespace.",
+            "value": "${azurerm_servicebus_namespace.this.endpoint}"
+        },
+        "id": {
+            "description": "The ServiceBus Namespace Resource ID.",
+            "value": "${azurerm_servicebus_namespace.this.id}"
+        },
+        "identity": {
+            "description": "A identity block exports the following: principal_id - The Principal ID for the Service Principal associated with the Managed Service Identity of this ServiceBus Namespace. tenant_id - The Tenant ID for the Service Principal associated with the Managed Service Identity of this ServiceBus Namespace.",
+            "value": "${azurerm_servicebus_namespace.this.identity}"
+        }
+    }
+}

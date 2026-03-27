@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Glue registry.",
+            "value": "${data.aws_glue_registry.this.arn}"
+        },
+        "description": {
+            "description": "A brief text describing the Glue registry.",
+            "value": "${data.aws_glue_registry.this.description}"
+        }
+    }
+}

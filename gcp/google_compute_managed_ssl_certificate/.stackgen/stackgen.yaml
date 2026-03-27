@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Managed Ssl Certificate
+  node:
+    label:
+      static: Compute Managed Ssl Certificate
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_managed_ssl_certificate
+  dnd_supported: false

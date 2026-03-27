@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "parent_id": [
+      {
+        "description": "The unique identifier (ID) of the parent organizational unit (OU) or root under which the new organizational unit will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

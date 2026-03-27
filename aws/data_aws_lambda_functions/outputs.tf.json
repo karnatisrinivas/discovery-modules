@@ -1,0 +1,16 @@
+{
+    "output": {
+        "function_arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the specified AWS Lambda functions.",
+            "value": "${data.aws_lambda_functions.this.function_arns}"
+        },
+        "function_names": {
+            "description": "A list of names for the specified AWS Lambda functions.",
+            "value": "${data.aws_lambda_functions.this.function_names}"
+        },
+        "id": {
+            "description": "The unique identifier for the set of AWS Lambda functions.",
+            "value": "${data.aws_lambda_functions.this.id}"
+        }
+    }
+}

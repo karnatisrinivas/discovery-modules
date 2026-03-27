@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eip"
+  node:
+    label:
+      static: "[Data] Eip"
+      template: "[Data] Eip"
+    display_type: default
+
+discovery:
+  type: data_aws_eip
+  dnd_supported: false

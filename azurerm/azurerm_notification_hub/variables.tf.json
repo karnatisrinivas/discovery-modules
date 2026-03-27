@@ -1,0 +1,58 @@
+{
+  "variable": {
+    "apns_credential": [
+      {
+        "description": "APNs credential required for sending push notifications to Apple devices; must include valid certificate and key.",
+        "type": "list(object({application_mode: string,bundle_id: string,key_id: string,team_id: string,token: string}))",
+        "default": []
+      }
+    ],
+    "gcm_credential": [
+      {
+        "description": "Google Cloud Messaging (GCM) credentials required for sending push notifications to Android devices via the notification hub.",
+        "type": "list(object({api_key: string}))",
+        "default": []
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Notification Hub, which must be unique within the Azure region and comply with Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "namespace_name": [
+      {
+        "description": "Specifies the name of the namespace within which the notification hub resides; must be unique within the resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for categorizing and organizing the notification hub. Constraints: keys must be unique and values must be non-empty.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for create, read, update, and delete operations on the notification hub resource.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

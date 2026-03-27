@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cluster_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the MSK cluster for which you want to obtain the bootstrap brokers.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "certificate": [
+      {
+        "description": "Specifies the SSL certificate in PEM format to be used for the regional SSL certificate resource; required and must be valid.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Detailed description of the regional SSL certificate, such as its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the regional SSL certificate, must be unique within the region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Defines the prefix for the SSL certificate name, which must be unique within the region and comply with Google Cloud naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "private_key": [
+      {
+        "description": "PEM-encoded private key required for the SSL certificate; must match the associated certificate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the allowed duration for operations related to the regional SSL certificate, such as creation or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

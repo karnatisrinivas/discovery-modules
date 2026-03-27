@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "bypass_policy_lockout_safety_check": [
+      {
+        "description": "Enables bypassing the policy lockout safety check, allowing updates to the file system policy that could prevent access; use with caution.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "file_system_id": [
+      {
+        "description": "ID of the EFS file system to which the policy will be applied; must be a valid file system ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy": [
+      {
+        "description": "Defines the JSON-formatted IAM policy for the EFS file system, specifying access permissions and controls.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Azure Storage Account.",
+            "value": "${data.azurerm_storage_account.this.id}"
+        }
+    }
+}

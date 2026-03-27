@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ivs Stream Key"
+  node:
+    label:
+      static: "[Data] Ivs Stream Key"
+      template: "[Data] Ivs Stream Key"
+    display_type: default
+
+discovery:
+  type: data_aws_ivs_stream_key
+  dnd_supported: false

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the router interface, useful for linking resources or troubleshooting",
+            "value": "${google_compute_router_interface.this.id}"
+        }
+    }
+}

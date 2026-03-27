@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "filter": [
+      {
+        "description": "This variable specifies the criteria to filter the AWS Organizations policies that are applied to a target.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "target_id": [
+      {
+        "description": "This variable represents the unique identifier of the AWS Organizations target (e.g., account, organizational unit) to which the policies are applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

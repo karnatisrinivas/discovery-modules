@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "rest_api_id": [
+      {
+        "description": "The identifier of the REST API for which the authorizer is being created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

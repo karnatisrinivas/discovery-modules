@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "identity_pool_name": [
+      {
+        "description": "A unique name for the Cognito Identity Pool.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Api Gateway Method
+  node:
+    label:
+      static: Api Gateway Method
+      template: ${resource_id}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_method
+  dnd_supported: false
+  references:
+    authorizer_id:
+      from: aws_api_gateway_authorizer
+      output: id
+    resource_id:
+      from: aws_api_gateway_resource
+      output: id
+    rest_api_id:
+      from: aws_api_gateway_rest_api
+      output: id

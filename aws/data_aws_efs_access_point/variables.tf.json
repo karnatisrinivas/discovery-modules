@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "access_point_id": [
+      {
+        "description": "The unique identifier for the EFS access point.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

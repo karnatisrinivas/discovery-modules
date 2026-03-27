@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Resource Manager Lien
+  node:
+    label:
+      static: Resource Manager Lien
+      template: ${origin}
+    display_type: default
+
+discovery:
+  type: google_resource_manager_lien
+  dnd_supported: false

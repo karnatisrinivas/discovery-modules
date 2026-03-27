@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "engine": [
+      {
+        "description": "The database engine to use, such as 'mysql', 'postgres', or 'oracle'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "engine_latest_version": [
+      {
+        "description": "Set to true if you want to use the latest version of the specified database engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "preferred_engine_versions": [
+      {
+        "description": "A list of specific database engine versions you prefer to use.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "preferred_instance_classes": [
+      {
+        "description": "A list of preferred RDS instance classes, such as 'db.t2.micro' or 'db.m5.large'.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

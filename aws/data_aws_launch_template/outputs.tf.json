@@ -1,0 +1,156 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the launch template.",
+            "value": "${data.aws_launch_template.this.arn}"
+        },
+        "block_device_mappings": {
+            "description": "Block device mappings of the launch template specifying the volumes to attach to the instance.",
+            "value": "${data.aws_launch_template.this.block_device_mappings}"
+        },
+        "capacity_reservation_specification": {
+            "description": "Specification for capacity reservations in the launch template.",
+            "value": "${data.aws_launch_template.this.capacity_reservation_specification}"
+        },
+        "cpu_options": {
+            "description": "CPU options for the instance, such as the number of cores and threads per core.",
+            "value": "${data.aws_launch_template.this.cpu_options}"
+        },
+        "credit_specification": {
+            "description": "Credit specification for burstable performance instances.",
+            "value": "${data.aws_launch_template.this.credit_specification}"
+        },
+        "default_version": {
+            "description": "The default version of the launch template.",
+            "value": "${data.aws_launch_template.this.default_version}"
+        },
+        "description": {
+            "description": "Description of the launch template.",
+            "value": "${data.aws_launch_template.this.description}"
+        },
+        "disable_api_stop": {
+            "description": "If true, the instance cannot be stopped using the API.",
+            "value": "${data.aws_launch_template.this.disable_api_stop}"
+        },
+        "disable_api_termination": {
+            "description": "If true, the instance cannot be terminated using the API.",
+            "value": "${data.aws_launch_template.this.disable_api_termination}"
+        },
+        "ebs_optimized": {
+            "description": "Indicates whether the instance is optimized for Amazon EBS I/O.",
+            "value": "${data.aws_launch_template.this.ebs_optimized}"
+        },
+        "elastic_gpu_specifications": {
+            "description": "Specifications for elastic GPUs to attach to the instance.",
+            "value": "${data.aws_launch_template.this.elastic_gpu_specifications}"
+        },
+        "elastic_inference_accelerator": {
+            "description": "Configuration for elastic inference accelerators.",
+            "value": "${data.aws_launch_template.this.elastic_inference_accelerator}"
+        },
+        "enclave_options": {
+            "description": "Options for enabling or disabling enclave options for the instance.",
+            "value": "${data.aws_launch_template.this.enclave_options}"
+        },
+        "hibernation_options": {
+            "description": "Options for enabling or disabling hibernation for the instance.",
+            "value": "${data.aws_launch_template.this.hibernation_options}"
+        },
+        "iam_instance_profile": {
+            "description": "The IAM instance profile associated with the instance.",
+            "value": "${data.aws_launch_template.this.iam_instance_profile}"
+        },
+        "id": {
+            "description": "The ID of the launch template.",
+            "value": "${data.aws_launch_template.this.id}"
+        },
+        "image_id": {
+            "description": "The ID of the AMI to use for the instance.",
+            "value": "${data.aws_launch_template.this.image_id}"
+        },
+        "instance_initiated_shutdown_behavior": {
+            "description": "The behavior when an instance is shut down: stop or terminate.",
+            "value": "${data.aws_launch_template.this.instance_initiated_shutdown_behavior}"
+        },
+        "instance_market_options": {
+            "description": "Options for configuring the market (such as Spot) for the instance.",
+            "value": "${data.aws_launch_template.this.instance_market_options}"
+        },
+        "instance_requirements": {
+            "description": "Specifications for the instance requirements, such as memory, CPU, and storage.",
+            "value": "${data.aws_launch_template.this.instance_requirements}"
+        },
+        "instance_type": {
+            "description": "The type of instance to use.",
+            "value": "${data.aws_launch_template.this.instance_type}"
+        },
+        "kernel_id": {
+            "description": "The ID of the kernel to use for the instance.",
+            "value": "${data.aws_launch_template.this.kernel_id}"
+        },
+        "key_name": {
+            "description": "The name of the key pair to use for the instance.",
+            "value": "${data.aws_launch_template.this.key_name}"
+        },
+        "latest_version": {
+            "description": "The latest version of the launch template.",
+            "value": "${data.aws_launch_template.this.latest_version}"
+        },
+        "license_specification": {
+            "description": "The license configurations to associate with the instance.",
+            "value": "${data.aws_launch_template.this.license_specification}"
+        },
+        "maintenance_options": {
+            "description": "Options for instance maintenance, such as auto-recovery.",
+            "value": "${data.aws_launch_template.this.maintenance_options}"
+        },
+        "metadata_options": {
+            "description": "Options for instance metadata service configuration.",
+            "value": "${data.aws_launch_template.this.metadata_options}"
+        },
+        "monitoring": {
+            "description": "Indicates whether detailed monitoring is enabled for the instance.",
+            "value": "${data.aws_launch_template.this.monitoring}"
+        },
+        "name": {
+            "description": "The name of the launch template.",
+            "value": "${data.aws_launch_template.this.name}"
+        },
+        "network_interfaces": {
+            "description": "Configuration options for network interfaces to attach to the instance.",
+            "value": "${data.aws_launch_template.this.network_interfaces}"
+        },
+        "placement": {
+            "description": "Placement options for the instance, such as availability zone and tenancy.",
+            "value": "${data.aws_launch_template.this.placement}"
+        },
+        "private_dns_name_options": {
+            "description": "Options for the private DNS name of the instance.",
+            "value": "${data.aws_launch_template.this.private_dns_name_options}"
+        },
+        "ram_disk_id": {
+            "description": "The ID of the RAM disk to use for the instance.",
+            "value": "${data.aws_launch_template.this.ram_disk_id}"
+        },
+        "security_group_names": {
+            "description": "Names of the security groups associated with the instance.",
+            "value": "${data.aws_launch_template.this.security_group_names}"
+        },
+        "tag_specifications": {
+            "description": "Tag specifications to apply to resources created by the launch template.",
+            "value": "${data.aws_launch_template.this.tag_specifications}"
+        },
+        "tags": {
+            "description": "Tags assigned to the launch template.",
+            "value": "${data.aws_launch_template.this.tags}"
+        },
+        "user_data": {
+            "description": "User data script to configure the instance at launch.",
+            "value": "${data.aws_launch_template.this.user_data}"
+        },
+        "vpc_security_group_ids": {
+            "description": "IDs of the VPC security groups associated with the instance.",
+            "value": "${data.aws_launch_template.this.vpc_security_group_ids}"
+        }
+    }
+}

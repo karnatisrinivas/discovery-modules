@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "bypass_policy_lockout_safety_check": [
+      {
+        "description": "Determines whether the key policy lockout safety check is bypassed, allowing removal of the default policy without restrictions; set to true with caution to avoid losing access to the key.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "key_id": [
+      {
+        "description": "Identifier for the KMS key to which the policy will be attached; must be a valid KMS key ID or ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy": [
+      {
+        "description": "Defines the JSON policy document that specifies permissions and access controls for the KMS key. Must be a valid IAM policy JSON.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

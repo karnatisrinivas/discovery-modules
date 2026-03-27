@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "agent_id": [
+      {
+        "description": "A unique identifier for the agent in AWS Bedrock.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "cidr": {
+            "description": "The CIDR block that is previewed to be the next available in the IPAM pool.",
+            "value": "${data.aws_vpc_ipam_preview_next_cidr.this.cidr}"
+        },
+        "id": {
+            "description": "The unique identifier for the CIDR block previewed by the IPAM.",
+            "value": "${data.aws_vpc_ipam_preview_next_cidr.this.id}"
+        }
+    }
+}

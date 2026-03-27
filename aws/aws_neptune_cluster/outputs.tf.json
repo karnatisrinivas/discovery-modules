@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API operations",
+            "value": "${aws_neptune_cluster.this.arn}"
+        },
+        "cluster_members": {
+            "description": "List of instances currently part of the Neptune cluster",
+            "value": "${aws_neptune_cluster.this.cluster_members}"
+        },
+        "cluster_resource_id": {
+            "description": "Internal resource ID for tracking the Neptune cluster",
+            "value": "${aws_neptune_cluster.this.cluster_resource_id}"
+        },
+        "endpoint": {
+            "description": "Main endpoint to connect to the Neptune cluster for queries",
+            "value": "${aws_neptune_cluster.this.endpoint}"
+        },
+        "hosted_zone_id": {
+            "description": "DNS hosted zone ID for managing Neptune cluster records",
+            "value": "${aws_neptune_cluster.this.hosted_zone_id}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune cluster resource",
+            "value": "${aws_neptune_cluster.this.id}"
+        },
+        "reader_endpoint": {
+            "description": "Dedicated endpoint for load-balanced read operations",
+            "value": "${aws_neptune_cluster.this.reader_endpoint}"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing and accessing the EFS access point",
+            "value": "${aws_efs_access_point.this.arn}"
+        },
+        "file_system_arn": {
+            "description": "ARN of the associated EFS file system for referencing in policies and configurations",
+            "value": "${aws_efs_access_point.this.file_system_arn}"
+        },
+        "id": {
+            "description": "Unique identifier of the EFS access point for resource management",
+            "value": "${aws_efs_access_point.this.id}"
+        },
+        "owner_id": {
+            "description": "AWS account ID of the owner for identifying resource ownership",
+            "value": "${aws_efs_access_point.this.owner_id}"
+        },
+        "tags_all": {
+            "description": "Consolidated list of tags applied to the EFS access point for organization and filtering",
+            "value": "${aws_efs_access_point.this.tags_all}"
+        }
+    }
+}

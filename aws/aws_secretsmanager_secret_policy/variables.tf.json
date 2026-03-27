@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "block_public_policy": [
+      {
+        "description": "Indicates whether to block resource policies that allow broad public access, ensuring the secret's policy is restricted to trusted identities.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "policy": [
+      {
+        "description": "Defines the permissions policy for the Secrets Manager secret, specifying who can access and manage the secret. Must be a valid JSON policy document.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_arn": [
+      {
+        "description": "ARN of the Secrets Manager secret to which the policy will be applied; must be a valid Amazon Resource Name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

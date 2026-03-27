@@ -1,0 +1,42 @@
+{
+    "variable": {
+        "vpc_id": [
+            {
+                "description": "The ID of the associated VPC",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "subnet_ids": [
+            {
+                "description": "A list of Subnet IDs to apply the ACL to",
+                "nullable": true,
+                "type": "list(string)"
+            }
+        ],
+        "egress": [
+            {
+                "description": "Configuration block for egress rules. Can be specified multiple times for each egress rule.",
+                "type": "list(object({ action: string, from_port: number, to_port: number, protocol: string, cidr_block: string,rule_no: number}))",
+                "default": [],
+                "nullable": true
+            }
+        ],
+        "ingress": [
+            {
+                "description": "Configuration block for ingress rules. Can be specified multiple times for each ingress rule.",
+                "type": "list(object({ action: string, from_port: number, to_port: number, protocol: string, cidr_block: string,rule_no: number}))",
+                "default": [],
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to the resource",
+                "type": "map(string)",
+                "nullable": true,
+                "default": {}
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Controltower Controls"
+  node:
+    label:
+      static: "[Data] Controltower Controls"
+      template: "[Data] Controltower Controls"
+    display_type: default
+
+discovery:
+  type: data_aws_controltower_controls
+  dnd_supported: false

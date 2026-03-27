@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_cloudwatch_event_rule.schedule.arn}"
+        },
+        "rule_name": {
+            "description": "The value of the rule_name output",
+            "value": "${aws_cloudwatch_event_rule.schedule.name}"
+        }
+    }
+}

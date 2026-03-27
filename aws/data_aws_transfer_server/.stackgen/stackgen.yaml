@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Transfer Server"
+  node:
+    label:
+      static: "[Data] Transfer Server"
+      template: "[Data] Transfer Server"
+    display_type: default
+
+discovery:
+  type: data_aws_transfer_server
+  dnd_supported: false

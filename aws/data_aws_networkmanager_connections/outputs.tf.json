@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for a single AWS Network Manager connection.",
+            "value": "${data.aws_networkmanager_connections.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for multiple AWS Network Manager connections.",
+            "value": "${data.aws_networkmanager_connections.this.ids}"
+        }
+    }
+}

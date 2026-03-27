@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Quicksight User"
+  node:
+    label:
+      static: "[Data] Quicksight User"
+      template: "[Data] Quicksight User"
+    display_type: default
+
+discovery:
+  type: data_aws_quicksight_user
+  dnd_supported: false

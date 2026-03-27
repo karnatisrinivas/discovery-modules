@@ -1,0 +1,92 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MQ broker.",
+            "value": "${data.aws_mq_broker.this.arn}"
+        },
+        "authentication_strategy": {
+            "description": "The authentication strategy used by the broker, such as SIMPLE or LDAP.",
+            "value": "${data.aws_mq_broker.this.authentication_strategy}"
+        },
+        "auto_minor_version_upgrade": {
+            "description": "Indicates whether automatic minor version upgrades are enabled for the broker.",
+            "value": "${data.aws_mq_broker.this.auto_minor_version_upgrade}"
+        },
+        "broker_id": {
+            "description": "The unique identifier of the MQ broker.",
+            "value": "${data.aws_mq_broker.this.broker_id}"
+        },
+        "broker_name": {
+            "description": "The name of the MQ broker.",
+            "value": "${data.aws_mq_broker.this.broker_name}"
+        },
+        "configuration": {
+            "description": "The configuration settings applied to the broker, including ID and revision number.",
+            "value": "${data.aws_mq_broker.this.configuration}"
+        },
+        "deployment_mode": {
+            "description": "The deployment mode of the broker, such as SINGLE_INSTANCE or ACTIVE_STANDBY_MULTI_AZ.",
+            "value": "${data.aws_mq_broker.this.deployment_mode}"
+        },
+        "encryption_options": {
+            "description": "The encryption settings for the broker, including KMS key ID and whether to use AWS-owned key.",
+            "value": "${data.aws_mq_broker.this.encryption_options}"
+        },
+        "engine_type": {
+            "description": "The type of broker engine, such as ACTIVEMQ or RABBITMQ.",
+            "value": "${data.aws_mq_broker.this.engine_type}"
+        },
+        "engine_version": {
+            "description": "The version of the broker engine.",
+            "value": "${data.aws_mq_broker.this.engine_version}"
+        },
+        "host_instance_type": {
+            "description": "The type of host instance for the broker.",
+            "value": "${data.aws_mq_broker.this.host_instance_type}"
+        },
+        "id": {
+            "description": "The ID of the MQ broker.",
+            "value": "${data.aws_mq_broker.this.id}"
+        },
+        "instances": {
+            "description": "Details of broker instances, including console URL, endpoints, and IP address.",
+            "value": "${data.aws_mq_broker.this.instances}"
+        },
+        "ldap_server_metadata": {
+            "description": "The LDAP server settings used for authentication, including host details and search criteria.",
+            "value": "${data.aws_mq_broker.this.ldap_server_metadata}"
+        },
+        "logs": {
+            "description": "The logging configuration for the broker, specifying audit and general log settings.",
+            "value": "${data.aws_mq_broker.this.logs}"
+        },
+        "maintenance_window_start_time": {
+            "description": "The scheduled maintenance window for the broker, including day, time, and timezone.",
+            "value": "${data.aws_mq_broker.this.maintenance_window_start_time}"
+        },
+        "publicly_accessible": {
+            "description": "Indicates if the broker is publicly accessible.",
+            "value": "${data.aws_mq_broker.this.publicly_accessible}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the broker.",
+            "value": "${data.aws_mq_broker.this.security_groups}"
+        },
+        "storage_type": {
+            "description": "The type of storage used by the broker, such as EBS or EFS.",
+            "value": "${data.aws_mq_broker.this.storage_type}"
+        },
+        "subnet_ids": {
+            "description": "The IDs of subnets associated with the broker.",
+            "value": "${data.aws_mq_broker.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the broker.",
+            "value": "${data.aws_mq_broker.this.tags}"
+        },
+        "user": {
+            "description": "Details about users who have access to the broker, including console access and group memberships.",
+            "value": "${data.aws_mq_broker.this.user}"
+        }
+    }
+}

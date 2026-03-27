@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for resource share, used for permissions and API actions",
+            "value": "${aws_ram_resource_share.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the resource share, useful for referencing in configurations",
+            "value": "${aws_ram_resource_share.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for the resource share, useful for tracking and management",
+            "value": "${aws_ram_resource_share.this.tags_all}"
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Optional description providing context for the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Human-readable name for the resource (cannot be null)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "management_group_id": [
+      {
+        "description": "Specifies the management group this resource belongs to",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "metadata": [
+      {
+        "description": "Optional metadata for additional resource context",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "mode": [
+      {
+        "description": "Defines the policy mode; must be compliant with supported types",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the resource (cannot be null)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "Optional parameters for policy customization",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "policy_rule": [
+      {
+        "description": "Defines the JSON policy rule configuration",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "policy_type": [
+      {
+        "description": "Specifies the policy type (e.g., BuiltIn, Custom, or NotSpecified)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Custom timeout settings for resource operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

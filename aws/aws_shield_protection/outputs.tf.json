@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for Shield Protection API and IAM operations",
+            "value": "${aws_shield_protection.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the Shield Protection resource",
+            "value": "${aws_shield_protection.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the Shield Protection resource",
+            "value": "${aws_shield_protection.this.tags_all}"
+        }
+    }
+}

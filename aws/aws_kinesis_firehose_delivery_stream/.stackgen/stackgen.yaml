@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kinesis Firehose Delivery Stream
+  node:
+    label:
+      static: Kinesis Firehose Delivery Stream
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_kinesis_firehose_delivery_stream
+  dnd_supported: false
+  data_source: data_aws_kinesis_firehose_delivery_stream

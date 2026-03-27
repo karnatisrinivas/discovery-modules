@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ECS cluster.",
+            "value": "${data.aws_ecs_cluster.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the ECS cluster.",
+            "value": "${data.aws_ecs_cluster.this.id}"
+        },
+        "pending_tasks_count": {
+            "description": "The number of tasks in the cluster that are in the pending state.",
+            "value": "${data.aws_ecs_cluster.this.pending_tasks_count}"
+        },
+        "registered_container_instances_count": {
+            "description": "The number of container instances registered with the cluster.",
+            "value": "${data.aws_ecs_cluster.this.registered_container_instances_count}"
+        },
+        "running_tasks_count": {
+            "description": "The number of tasks in the cluster that are in the running state.",
+            "value": "${data.aws_ecs_cluster.this.running_tasks_count}"
+        },
+        "service_connect_defaults": {
+            "description": "The default service connect configurations for the cluster.",
+            "value": "${data.aws_ecs_cluster.this.service_connect_defaults}"
+        },
+        "setting": {
+            "description": "The settings applied to the ECS cluster, such as container insights.",
+            "value": "${data.aws_ecs_cluster.this.setting}"
+        },
+        "status": {
+            "description": "The current status of the ECS cluster.",
+            "value": "${data.aws_ecs_cluster.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the ECS cluster.",
+            "value": "${data.aws_ecs_cluster.this.tags}"
+        }
+    }
+}

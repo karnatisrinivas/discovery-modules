@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "db_instance_class": [
+      {
+        "description": "Specifies the type of database instance, determining the computing and memory capacity.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "duration": [
+      {
+        "description": "The length of the reservation in seconds, representing the commitment period for the reserved instance.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "multi_az": [
+      {
+        "description": "Indicates whether the reserved instance is configured for Multi-AZ deployment, which provides high availability.",
+        "nullable": false,
+        "type": "bool"
+      }
+    ],
+    "offering_type": [
+      {
+        "description": "The pricing model for the reserved instance, such as 'No Upfront' or 'Partial Upfront'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "product_description": [
+      {
+        "description": "A description of the reserved instance product, often detailing the database engine and license model.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

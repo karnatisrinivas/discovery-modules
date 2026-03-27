@@ -1,0 +1,32 @@
+{
+    "output": {
+        "application_account": {
+            "description": "The AWS account associated with the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.application_account}"
+        },
+        "application_provider_arn": {
+            "description": "The ARN of the provider for the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.application_provider_arn}"
+        },
+        "description": {
+            "description": "A brief description of the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.id}"
+        },
+        "instance_arn": {
+            "description": "The ARN of the instance where the SSO application is deployed.",
+            "value": "${data.aws_ssoadmin_application.this.instance_arn}"
+        },
+        "name": {
+            "description": "The name of the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.name}"
+        },
+        "status": {
+            "description": "The current status of the SSO application.",
+            "value": "${data.aws_ssoadmin_application.this.status}"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "route_table_id": [
+            {
+                "type": "string",
+                "description": "The ID of the routing table to associate with.",
+                "nullable": false
+            }
+        ],
+        "subnet_id": [
+            {
+                "type": "string",
+                "description": "The subnet ID to create an association. Conflicts with `Gateway ID`, and one of them is required.",
+                "nullable": true
+            }
+        ],
+        "gateway_id": [
+            {
+                "type": "string",
+                "description": "The gateway ID to create an association. Conflicts with subnet_id, and one of them is required.",
+                "nullable": true
+            }
+        ]
+    }
+}

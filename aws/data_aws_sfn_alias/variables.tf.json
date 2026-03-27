@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "A brief explanation or details about the specific resource or configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the AWS Step Function alias being created or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "statemachine_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Step Function state machine that the alias points to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

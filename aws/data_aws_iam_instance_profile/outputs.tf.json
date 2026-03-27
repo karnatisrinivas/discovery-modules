@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) assigned to the IAM instance profile.",
+            "value": "${data.aws_iam_instance_profile.this.arn}"
+        },
+        "create_date": {
+            "description": "The date when the IAM instance profile was created.",
+            "value": "${data.aws_iam_instance_profile.this.create_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the IAM instance profile.",
+            "value": "${data.aws_iam_instance_profile.this.id}"
+        },
+        "path": {
+            "description": "The path under which the IAM instance profile is stored.",
+            "value": "${data.aws_iam_instance_profile.this.path}"
+        },
+        "role_arn": {
+            "description": "The ARN of the role associated with the IAM instance profile.",
+            "value": "${data.aws_iam_instance_profile.this.role_arn}"
+        },
+        "role_id": {
+            "description": "The unique identifier for the role associated with the IAM instance profile.",
+            "value": "${data.aws_iam_instance_profile.this.role_id}"
+        },
+        "role_name": {
+            "description": "The name of the role associated with the IAM instance profile.",
+            "value": "${data.aws_iam_instance_profile.this.role_name}"
+        }
+    }
+}

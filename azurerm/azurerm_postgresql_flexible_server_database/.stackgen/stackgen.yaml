@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Postgresql Flexible Server Database
+  node:
+    label:
+      static: Postgresql Flexible Server Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_postgresql_flexible_server_database
+  dnd_supported: false
+  references:
+    server_id:
+      from: azurerm_postgresql_flexible_server
+      output: id

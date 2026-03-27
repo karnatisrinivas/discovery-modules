@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier of the Amazon Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "routing_profile_id": [
+      {
+        "description": "The unique identifier of the routing profile. If not provided, a new routing profile will be created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the routing profile.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

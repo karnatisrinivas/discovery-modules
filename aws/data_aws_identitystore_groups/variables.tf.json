@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "identity_store_id": [
+      {
+        "description": "The unique identifier for the AWS Identity Store associated with the groups.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

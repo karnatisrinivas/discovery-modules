@@ -1,0 +1,24 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Defines the resource name; cannot be null",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures read operation timeout; optional string",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

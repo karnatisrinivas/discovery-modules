@@ -1,0 +1,80 @@
+{
+    "output": {
+        "access_config": {
+            "description": "Configuration settings for accessing the EKS cluster, including authentication mode and admin permissions for the creator.",
+            "value": "${data.aws_eks_cluster.this.access_config}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.arn}"
+        },
+        "certificate_authority": {
+            "description": "The certificate authority data for the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.certificate_authority}"
+        },
+        "cluster_id": {
+            "description": "The unique identifier for the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.cluster_id}"
+        },
+        "created_at": {
+            "description": "The timestamp when the EKS cluster was created.",
+            "value": "${data.aws_eks_cluster.this.created_at}"
+        },
+        "enabled_cluster_log_types": {
+            "description": "A set of log types that are enabled for the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.enabled_cluster_log_types}"
+        },
+        "endpoint": {
+            "description": "The endpoint URL for the EKS cluster API server.",
+            "value": "${data.aws_eks_cluster.this.endpoint}"
+        },
+        "id": {
+            "description": "The unique identifier for the EKS cluster, similar to the cluster_id.",
+            "value": "${data.aws_eks_cluster.this.id}"
+        },
+        "identity": {
+            "description": "Identity configuration for the EKS cluster, including OIDC issuer.",
+            "value": "${data.aws_eks_cluster.this.identity}"
+        },
+        "kubernetes_network_config": {
+            "description": "Network configuration settings for the Kubernetes cluster within EKS.",
+            "value": "${data.aws_eks_cluster.this.kubernetes_network_config}"
+        },
+        "outpost_config": {
+            "description": "Configuration for using AWS Outposts with the EKS cluster, including instance types and placements.",
+            "value": "${data.aws_eks_cluster.this.outpost_config}"
+        },
+        "platform_version": {
+            "description": "The platform version of the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.platform_version}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role associated with the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.role_arn}"
+        },
+        "status": {
+            "description": "The current status of the EKS cluster (e.g., ACTIVE, CREATING).",
+            "value": "${data.aws_eks_cluster.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.tags}"
+        },
+        "upgrade_policy": {
+            "description": "Policies related to upgrades of the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.upgrade_policy}"
+        },
+        "version": {
+            "description": "The Kubernetes version running on the EKS cluster.",
+            "value": "${data.aws_eks_cluster.this.version}"
+        },
+        "vpc_config": {
+            "description": "Configuration for the VPC associated with the EKS cluster, including security groups and subnets.",
+            "value": "${data.aws_eks_cluster.this.vpc_config}"
+        },
+        "zonal_shift_config": {
+            "description": "Configuration for zonal shifts in the EKS cluster, indicating whether it is enabled.",
+            "value": "${data.aws_eks_cluster.this.zonal_shift_config}"
+        }
+    }
+}

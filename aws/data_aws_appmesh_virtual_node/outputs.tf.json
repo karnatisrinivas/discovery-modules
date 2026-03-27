@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the virtual node.",
+            "value": "${data.aws_appmesh_virtual_node.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the virtual node was created.",
+            "value": "${data.aws_appmesh_virtual_node.this.created_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the virtual node.",
+            "value": "${data.aws_appmesh_virtual_node.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the virtual node was last updated.",
+            "value": "${data.aws_appmesh_virtual_node.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "The AWS account ID of the service mesh owner.",
+            "value": "${data.aws_appmesh_virtual_node.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "The AWS account ID of the resource owner.",
+            "value": "${data.aws_appmesh_virtual_node.this.resource_owner}"
+        },
+        "spec": {
+            "description": "The specification details of the virtual node, including backend services, listeners, logging, and service discovery settings.",
+            "value": "${data.aws_appmesh_virtual_node.this.spec}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the virtual node.",
+            "value": "${data.aws_appmesh_virtual_node.this.tags}"
+        }
+    }
+}

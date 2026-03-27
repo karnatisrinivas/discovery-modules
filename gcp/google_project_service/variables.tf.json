@@ -1,0 +1,26 @@
+{
+  "variable": {
+    "disable_dependent_services": [
+      {
+        "description": "Indicates whether to disable services that are dependent on this service when it is disabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "disable_on_destroy": [
+      {
+        "description": "Specifies whether the service should be disabled when the Terraform resource is destroyed.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "service": [
+      {
+        "description": "The name of the Google Cloud service to be enabled or disabled in the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "bundle_id": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "owner": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the API Gateway integration resource",
+            "value": "${aws_apigatewayv2_integration.this.id}"
+        },
+        "integration_response_selection_expression": {
+            "description": "Expression to determine the integration response for incoming requests",
+            "value": "${aws_apigatewayv2_integration.this.integration_response_selection_expression}"
+        }
+    }
+}

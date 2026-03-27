@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the SQS queues.",
+            "value": "${data.aws_sqs_queues.this.id}"
+        },
+        "queue_urls": {
+            "description": "A set of URLs for the SQS queues.",
+            "value": "${data.aws_sqs_queues.this.queue_urls}"
+        }
+    }
+}

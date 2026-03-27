@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kms Key"
+  node:
+    label:
+      static: "[Data] Kms Key"
+      template: "[Data] Kms Key"
+    display_type: default
+
+discovery:
+  type: data_aws_kms_key
+  dnd_supported: false

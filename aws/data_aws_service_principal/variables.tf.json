@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "service_name": [
+      {
+        "description": "The name of the AWS service for which the service principal is being defined.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

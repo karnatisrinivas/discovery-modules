@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dms Endpoint"
+  node:
+    label:
+      static: "[Data] Dms Endpoint"
+      template: "[Data] Dms Endpoint"
+    display_type: default
+
+discovery:
+  type: data_aws_dms_endpoint
+  dnd_supported: false

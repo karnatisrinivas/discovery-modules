@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Origin Access Identity"
+  node:
+    label:
+      static: "[Data] Cloudfront Origin Access Identity"
+      template: "[Data] Cloudfront Origin Access Identity"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_origin_access_identity
+  dnd_supported: false

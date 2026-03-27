@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "inference_profile_id": [
+      {
+        "description": "A unique identifier for the AWS Bedrock inference profile, used to specify and manage the configuration settings for machine learning inference tasks.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

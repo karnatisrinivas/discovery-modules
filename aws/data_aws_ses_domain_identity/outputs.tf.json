@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SES domain identity.",
+            "value": "${data.aws_ses_domain_identity.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the SES domain identity.",
+            "value": "${data.aws_ses_domain_identity.this.id}"
+        },
+        "verification_token": {
+            "description": "The token that needs to be added to the domain's DNS settings for verification with SES.",
+            "value": "${data.aws_ses_domain_identity.this.verification_token}"
+        }
+    }
+}

@@ -1,0 +1,104 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: MQ Broker
+  node:
+    label:
+      static: MQ Broker
+      template: MQ Broker
+    display_type: default
+
+variables:
+  publicly_accessible:
+    description: "Whether to enable connections from applications outside of the VPC that hosts the broker's subnets."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  apply_immediately:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Specifies whether any broker modifications are applied immediately, or during the next maintenance window.
+    type: bool
+  authentication_strategy:
+    options: 
+      - simple
+      - ldap
+    ui_control: select
+    description: Authentication strategy used to secure the broker. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.
+    type: string
+  auto_minor_version_upgrade:
+    description: Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  replication_user:
+    options: 
+      - true
+      - false
+    ui_control: select
+  use_aws_owned_key:
+    options: 
+      - true
+      - false
+    ui_control: select
+  engine_type:
+    description: Type of broker engine.
+    type: string
+    options: 
+      - ActiveMQ
+      - RabbitMQ
+    ui_control: select
+  host_instance_type:
+    description: "Broker's instance type."
+    type: string
+    options: 
+      - mq.t2.micro
+      - mq.t3.micro
+      - mq.m4.large
+      - mq.m5.large
+      - mq.m5.xlarge
+      - mq.m5.2xlarge
+      - mq.m5.4xlarge
+    ui_control: select
+  console_access:
+    options: 
+      - true
+      - false
+    ui_control: select
+  audit:
+    options: 
+      - true
+      - false
+    ui_control: select
+  deployment_mode:
+    type: string
+    options: 
+      - SINGLE_INSTANCE
+      - ACTIVE_STANDBY_MULTI_AZ
+      - CLUSTER_MULTI_AZ
+    ui_control: select
+    description: Deployment mode of the broker.
+  general:
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_mq_broker
+  dnd_supported: false
+  data_source: data_aws_mq_broker
+  references:
+    id:
+      from: aws_mq_configuration
+      output: id
+    security_groups:
+      from: aws_security_group
+      output: id

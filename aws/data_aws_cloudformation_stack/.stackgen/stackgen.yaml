@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudformation Stack"
+  node:
+    label:
+      static: "[Data] Cloudformation Stack"
+      template: "[Data] Cloudformation Stack"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudformation_stack
+  dnd_supported: false

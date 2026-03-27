@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.arn}"
+        },
+        "code": {
+            "description": "The source code of the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.code}"
+        },
+        "comment": {
+            "description": "The comment or description provided for the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.comment}"
+        },
+        "etag": {
+            "description": "The ETag identifier for the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.etag}"
+        },
+        "id": {
+            "description": "The unique identifier for the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.id}"
+        },
+        "key_value_store_associations": {
+            "description": "The set of key-value store associations linked to the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.key_value_store_associations}"
+        },
+        "last_modified_time": {
+            "description": "The timestamp of when the CloudFront function was last modified.",
+            "value": "${data.aws_cloudfront_function.this.last_modified_time}"
+        },
+        "runtime": {
+            "description": "The runtime environment of the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.runtime}"
+        },
+        "status": {
+            "description": "The current status of the CloudFront function.",
+            "value": "${data.aws_cloudfront_function.this.status}"
+        }
+    }
+}

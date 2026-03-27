@@ -1,0 +1,38 @@
+{
+    "variable": {
+        "scope_rbac_role_binding_id": [
+            {
+                "type": "string",
+                "description": "The client-provided identifier of the RBAC Role Binding."
+            }
+        ],
+        "scope_id": [
+            {
+                "type": "string",
+                "description": "Id of the scope"
+            }
+        ],
+        "predefined_role": [
+            {
+                "type": "string",
+                "description": "PredefinedRole is an ENUM representation of the default Kubernetes Roles",
+                "nullable": true,
+                "default": ""
+            }
+        ],
+        "labels": [
+            {
+                "type": "map(string)",
+                "description": "Labels for this Scope RBAC RoleBinding.",
+                "nullable": true
+            }
+        ],
+        "user": [
+            {
+                "type": "string",
+                "description": "Principal that is be authorized in the cluster (at least of one the oneof is required). Updating one will unset the other automatically. user is the name of the user as seen by the kubernetes cluster, example \"alice\" or \"alice@domain.tld\"",
+                "nullable": true
+            }
+        ]
+    }
+}

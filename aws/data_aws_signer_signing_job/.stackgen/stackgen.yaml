@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Signer Signing Job"
+  node:
+    label:
+      static: "[Data] Signer Signing Job"
+      template: "[Data] Signer Signing Job"
+    display_type: default
+
+discovery:
+  type: data_aws_signer_signing_job
+  dnd_supported: false

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Bucket Iam Policy
+  node:
+    label:
+      static: Storage Bucket Iam Policy
+      template: ${bucket}
+    display_type: default
+
+discovery:
+  type: google_storage_bucket_iam_policy
+  dnd_supported: false
+  data_source: data_google_storage_bucket_iam_policy
+  references:
+    bucket:
+      from: google_storage_bucket
+      output: name

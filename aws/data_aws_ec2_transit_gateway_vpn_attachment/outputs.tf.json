@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the EC2 Transit Gateway VPN Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpn_attachment.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EC2 Transit Gateway VPN Attachment.",
+            "value": "${data.aws_ec2_transit_gateway_vpn_attachment.this.tags}"
+        }
+    }
+}

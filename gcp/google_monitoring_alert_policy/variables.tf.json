@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "alert_strategy": [
+      {
+        "description": "Defines the conditions and behavior for notifications when an alert is triggered, including notification rate limits and auto-close configurations.",
+        "nullable": true,
+        "type": "list(object({auto_close: optional(string),notification_prompts: optional(list(string)),notification_channel_strategy: list(object({notification_channel_names: optional(list(string)),renotify_interval: optional(string)})),notification_rate_limit: list(object({period: optional(string)}))}))"
+      }
+    ],
+    "combiner": [
+      {
+        "description": "Specifies how the conditions of the alert policy are combined to determine if the policy should trigger an alert; valid values are AND, OR, or AND_WITH_MATCHING.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "conditions": [
+      {
+        "description": "Defines the criteria for triggering an alert, specifying the metrics, thresholds, and other conditions required to activate the policy.",
+        "nullable": false,
+        "type": "list(object({display_name: string,name: optional(string),condition_absent: list(object({duration: string,filter: optional(string),aggregations: list(object({alignment_period: optional(string),cross_series_reducer: optional(string),group_by_fields: optional(list(string)),per_series_aligner: optional(string)})),trigger: list(object({count: optional(number),percent: optional(number)}))})),condition_matched_log: list(object({filter: string,label_extractors: optional(map(string))})),condition_monitoring_query_language: list(object({duration: string,evaluation_missing_data: optional(string),query: string,trigger: list(object({count: optional(number),percent: optional(number)}))})),condition_prometheus_query_language: list(object({alert_rule: optional(string),disable_metric_validation: optional(bool),duration: optional(string),evaluation_interval: optional(string),labels: optional(map(string)),query: string,rule_group: optional(string)})),condition_sql: list(object({query: string,boolean_test: list(object({column: string})),daily: list(object({periodicity: number,execution_time: list(object({hours: optional(number),minutes: optional(number),nanos: optional(number),seconds: optional(number)}))})),hourly: list(object({minute_offset: optional(number),periodicity: number})),minutes: list(object({periodicity: number})),row_count_test: list(object({comparison: string,threshold: number}))})),condition_threshold: list(object({comparison: string,denominator_filter: optional(string),duration: string,evaluation_missing_data: optional(string),filter: optional(string),threshold_value: optional(number),aggregations: list(object({alignment_period: optional(string),cross_series_reducer: optional(string),group_by_fields: optional(list(string)),per_series_aligner: optional(string)})),denominator_aggregations: list(object({alignment_period: optional(string),cross_series_reducer: optional(string),group_by_fields: optional(list(string)),per_series_aligner: optional(string)})),forecast_options: list(object({forecast_horizon: string})),trigger: list(object({count: optional(number),percent: optional(number)}))}))}))"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Defines the user-friendly name for the alert policy, which must be unique within the project and can include up to 512 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "documentation": [
+      {
+        "description": "Specifies the documentation content to include with the alert, such as a summary or troubleshooting guide. This should be a valid Markdown string.",
+        "nullable": true,
+        "type": "list(object({content: optional(string),mime_type: optional(string),subject: optional(string),links: list(object({display_name: optional(string),url: optional(string)}))}))"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Determines whether the alert policy is active; set to true to enable or false to disable.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "notification_channels": [
+      {
+        "description": "List of notification channels to use for alerting, specified by their resource names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "severity": [
+      {
+        "description": "Defines the severity level for the alert policy, such as critical, warning, or info, to indicate the urgency of the alert.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for creating, updating, and deleting the alert policy, specifying the maximum duration for each operation.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_labels": [
+      {
+        "description": "Defines custom labels to apply to the alert policy for organization or categorization purposes. Must be a map of key-value pairs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

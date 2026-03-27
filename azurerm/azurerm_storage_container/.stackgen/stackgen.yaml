@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Container
+  node:
+    label:
+      static: Storage Container
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_storage_container
+  dnd_supported: false
+  references:
+    storage_account_name:
+      from: azurerm_storage_account
+      output: name

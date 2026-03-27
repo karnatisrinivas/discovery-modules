@@ -1,0 +1,104 @@
+{
+    "output": {
+        "acl_name": {
+            "description": "The name of the Access Control List (ACL) associated with the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.acl_name}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.arn}"
+        },
+        "auto_minor_version_upgrade": {
+            "description": "Indicates whether minor engine upgrades are applied automatically to the MemoryDB cluster during the maintenance window.",
+            "value": "${data.aws_memorydb_cluster.this.auto_minor_version_upgrade}"
+        },
+        "cluster_endpoint": {
+            "description": "The connection endpoints for the MemoryDB cluster, including address and port.",
+            "value": "${data.aws_memorydb_cluster.this.cluster_endpoint}"
+        },
+        "data_tiering": {
+            "description": "Indicates if data tiering is enabled for the MemoryDB cluster, which allows moving less frequently accessed data to a cost-effective storage layer.",
+            "value": "${data.aws_memorydb_cluster.this.data_tiering}"
+        },
+        "description": {
+            "description": "A user-defined description of the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.description}"
+        },
+        "engine_patch_version": {
+            "description": "The patch version of the MemoryDB engine used by the cluster.",
+            "value": "${data.aws_memorydb_cluster.this.engine_patch_version}"
+        },
+        "engine_version": {
+            "description": "The version of the MemoryDB engine used by the cluster.",
+            "value": "${data.aws_memorydb_cluster.this.engine_version}"
+        },
+        "final_snapshot_name": {
+            "description": "The name of the final snapshot that will be created when the MemoryDB cluster is deleted.",
+            "value": "${data.aws_memorydb_cluster.this.final_snapshot_name}"
+        },
+        "id": {
+            "description": "The unique identifier of the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "The ARN of the KMS key used to encrypt the data in the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.kms_key_arn}"
+        },
+        "maintenance_window": {
+            "description": "The time window during which maintenance updates to the MemoryDB cluster are performed.",
+            "value": "${data.aws_memorydb_cluster.this.maintenance_window}"
+        },
+        "node_type": {
+            "description": "The type of node used in the MemoryDB cluster, which determines the computing power and memory capacity.",
+            "value": "${data.aws_memorydb_cluster.this.node_type}"
+        },
+        "num_replicas_per_shard": {
+            "description": "The number of replica nodes per shard in the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.num_replicas_per_shard}"
+        },
+        "num_shards": {
+            "description": "The number of shards in the MemoryDB cluster, which helps distribute data across multiple nodes.",
+            "value": "${data.aws_memorydb_cluster.this.num_shards}"
+        },
+        "parameter_group_name": {
+            "description": "The name of the parameter group associated with the MemoryDB cluster, which defines configuration settings.",
+            "value": "${data.aws_memorydb_cluster.this.parameter_group_name}"
+        },
+        "port": {
+            "description": "The port number on which the MemoryDB cluster accepts connections.",
+            "value": "${data.aws_memorydb_cluster.this.port}"
+        },
+        "security_group_ids": {
+            "description": "The IDs of the security groups associated with the MemoryDB cluster, which control inbound and outbound traffic.",
+            "value": "${data.aws_memorydb_cluster.this.security_group_ids}"
+        },
+        "shards": {
+            "description": "Details about the shards within the MemoryDB cluster, including names, nodes, and their configurations.",
+            "value": "${data.aws_memorydb_cluster.this.shards}"
+        },
+        "snapshot_retention_limit": {
+            "description": "The number of days for which automatic snapshots are retained before being deleted.",
+            "value": "${data.aws_memorydb_cluster.this.snapshot_retention_limit}"
+        },
+        "snapshot_window": {
+            "description": "The daily time range during which automatic snapshots are created for the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.snapshot_window}"
+        },
+        "sns_topic_arn": {
+            "description": "The ARN of the SNS topic used for publishing notifications related to the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.sns_topic_arn}"
+        },
+        "subnet_group_name": {
+            "description": "The name of the subnet group associated with the MemoryDB cluster, defining the VPC subnets.",
+            "value": "${data.aws_memorydb_cluster.this.subnet_group_name}"
+        },
+        "tags": {
+            "description": "The tags assigned to the MemoryDB cluster for organization and identification purposes.",
+            "value": "${data.aws_memorydb_cluster.this.tags}"
+        },
+        "tls_enabled": {
+            "description": "Indicates whether Transport Layer Security (TLS) is enabled for connections to the MemoryDB cluster.",
+            "value": "${data.aws_memorydb_cluster.this.tls_enabled}"
+        }
+    }
+}

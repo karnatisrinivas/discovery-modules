@@ -1,0 +1,12 @@
+{
+    "output": {
+        "certificate": {
+            "description": "The signing certificate of the AWS Cognito User Pool, used to verify the signature of the tokens.",
+            "value": "${data.aws_cognito_user_pool_signing_certificate.this.certificate}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Cognito User Pool signing certificate resource.",
+            "value": "${data.aws_cognito_user_pool_signing_certificate.this.id}"
+        }
+    }
+}

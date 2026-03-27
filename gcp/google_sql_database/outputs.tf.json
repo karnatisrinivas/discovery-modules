@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the database.",
+            "value": "${google_sql_database.this.id}"
+        }
+    }
+}

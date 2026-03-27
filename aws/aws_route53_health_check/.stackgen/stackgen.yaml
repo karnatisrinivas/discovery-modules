@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route53 Health Check
+  node:
+    label:
+      static: Route53 Health Check
+      template: ${type}
+    display_type: default
+
+discovery:
+  type: aws_route53_health_check
+  dnd_supported: false
+  references:
+    cloudwatch_alarm_name:
+      from: aws_cloudwatch_metric_alarm
+      output: alarm_name

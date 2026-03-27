@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS CodeBuild fleet.",
+            "value": "${data.aws_codebuild_fleet.this.arn}"
+        },
+        "base_capacity": {
+            "description": "The initial number of compute resources allocated to the AWS CodeBuild fleet.",
+            "value": "${data.aws_codebuild_fleet.this.base_capacity}"
+        },
+        "compute_type": {
+            "description": "The type of compute resources used by the AWS CodeBuild fleet, such as BUILD_GENERAL1_SMALL.",
+            "value": "${data.aws_codebuild_fleet.this.compute_type}"
+        },
+        "created": {
+            "description": "The date and time when the AWS CodeBuild fleet was created.",
+            "value": "${data.aws_codebuild_fleet.this.created}"
+        },
+        "environment_type": {
+            "description": "The type of environment used by the AWS CodeBuild fleet, such as LINUX_CONTAINER.",
+            "value": "${data.aws_codebuild_fleet.this.environment_type}"
+        },
+        "fleet_service_role": {
+            "description": "The IAM role that AWS CodeBuild assumes during execution of the fleet.",
+            "value": "${data.aws_codebuild_fleet.this.fleet_service_role}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS CodeBuild fleet.",
+            "value": "${data.aws_codebuild_fleet.this.id}"
+        },
+        "image_id": {
+            "description": "The ID of the Docker image used for builds in the AWS CodeBuild fleet.",
+            "value": "${data.aws_codebuild_fleet.this.image_id}"
+        },
+        "last_modified": {
+            "description": "The date and time when the AWS CodeBuild fleet was last modified.",
+            "value": "${data.aws_codebuild_fleet.this.last_modified}"
+        },
+        "overflow_behavior": {
+            "description": "The behavior of the fleet when it reaches its maximum capacity, such as QUEUE or CANCEL.",
+            "value": "${data.aws_codebuild_fleet.this.overflow_behavior}"
+        },
+        "scaling_configuration": {
+            "description": "The configuration for scaling the AWS CodeBuild fleet, including desired capacity and scaling strategies.",
+            "value": "${data.aws_codebuild_fleet.this.scaling_configuration}"
+        },
+        "status": {
+            "description": "The current status of the AWS CodeBuild fleet, including any messages and status codes.",
+            "value": "${data.aws_codebuild_fleet.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS CodeBuild fleet for identification and organization.",
+            "value": "${data.aws_codebuild_fleet.this.tags}"
+        },
+        "vpc_config": {
+            "description": "The VPC configuration for the AWS CodeBuild fleet, including security groups and subnets.",
+            "value": "${data.aws_codebuild_fleet.this.vpc_config}"
+        }
+    }
+}

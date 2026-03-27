@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "function_name": [
+      {
+        "description": "The name you want to assign to your AWS Lambda function.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "qualifier": [
+      {
+        "description": "An optional version or alias to specify a particular instance of the AWS Lambda function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

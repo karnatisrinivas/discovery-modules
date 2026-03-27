@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Launch Configuration"
+  node:
+    label:
+      static: "[Data] Launch Configuration"
+      template: "[Data] Launch Configuration"
+    display_type: default
+
+discovery:
+  type: data_aws_launch_configuration
+  dnd_supported: false

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "endpoint_attachment_id": [
+      {
+        "description": "Unique identifier for the Apigee endpoint attachment, required for associating the attachment with a specific Apigee instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the region where the endpoint attachment will be created; must match the region of the associated Apigee environment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Specifies the Apigee organization ID to associate with the endpoint attachment; must be a valid and existing organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_attachment": [
+      {
+        "description": "The name of the service attachment in the consumer project used to connect to the Apigee endpoint; must be a valid service attachment resource identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for creating, updating, and deleting the endpoint attachment, allowing control over operation duration.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

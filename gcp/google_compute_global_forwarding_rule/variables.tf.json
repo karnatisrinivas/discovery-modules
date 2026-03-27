@@ -1,0 +1,130 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies a general description for the resource; can be null if not provided.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "Assigns a specific IP address to the resource; ensure it is valid and not already in use.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_protocol": [
+      {
+        "description": "Defines the IP protocol type such as TCP or UDP; ensure compatibility with services used.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_version": [
+      {
+        "description": "Specifies the IP version, either IPv4 or IPv6; must be compatible with the network configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Associates key-value pairs for resource categorization; keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "load_balancing_scheme": [
+      {
+        "description": "Determines the load balancing method, typically 'EXTERNAL' or 'INTERNAL'; affects traffic routing.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "metadata_filters": [
+      {
+        "description": "Applies filters based on metadata; must define filter criteria and corresponding labels.",
+        "nullable": true,
+        "type": "list(object({filter_match_criteria: string,filter_labels: list(object({name: string,value: string}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Sets the resource name, must be unique within the project and non-null.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network to which the resource is connected; ensure it exists and is correctly named.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "network_tier": [
+      {
+        "description": "Indicates the network tier, such as 'PREMIUM' or 'STANDARD'; impacts performance and cost.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "no_automate_dns_zone": [
+      {
+        "description": "If true, disables automatic DNS zone management; use with caution to avoid DNS conflicts.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "port_range": [
+      {
+        "description": "Defines the range of ports for the resource; format must be 'start-end' or a single port number.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "project": [
+      {
+        "description": "Specifies the project within which the resource is managed; ensure it matches the intended scope.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "service_directory_registrations": [
+      {
+        "description": "Lists service directory registrations, including optional namespace and region; useful for service discovery.",
+        "nullable": true,
+        "type": "list(object({namespace: optional(string),service_directory_region: optional(string)}))"
+      }
+    ],
+    "source_ip_ranges": [
+      {
+        "description": "Defines the list of source IP ranges allowed; must be valid CIDR blocks.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork for resource allocation; ensure it is part of the defined network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "target": [
+      {
+        "description": "Identifies the target resource or service; must be non-null and correctly configured.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures operation timeouts with optional values for create, delete, and update operations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

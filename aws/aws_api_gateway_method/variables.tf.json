@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "api_key_required": [
+      {
+        "description": "Indicates whether an API key is required for the method; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "authorization": [
+      {
+        "description": "Specifies the type of authorization for the API method, such as NONE, AWS_IAM, or a custom authorizer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "authorization_scopes": [
+      {
+        "description": "Specifies the authorization scopes required for the method, applicable only when using a Cognito user pool authorizer.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "authorizer_id": [
+      {
+        "description": "Specifies the ID of the authorizer to use for the method, required if authorization type is set to \"CUSTOM\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_method": [
+      {
+        "description": "Specifies the HTTP method type (e.g., GET, POST, PUT) for the API Gateway method; must be valid according to the API Gateway standards.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "operation_name": [
+      {
+        "description": "Specifies the name of the operation for the API Gateway method, used for identifying the method in logs and monitoring.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "request_models": [
+      {
+        "description": "Defines the mapping of request payloads to models for different content types in the API Gateway method; must include valid content type keys and model names.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "request_parameters": [
+      {
+        "description": "Defines the request parameters required by the method, with keys as parameter names and values as Boolean indicating whether the parameter is required.",
+        "nullable": true,
+        "type": "map(bool)"
+      }
+    ],
+    "request_validator_id": [
+      {
+        "description": "Specifies the ID of the request validator to use for validating request parameters and body.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_id": [
+      {
+        "description": "ID of the associated API Gateway resource that this method applies to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "Specifies the ID of the associated API Gateway REST API.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

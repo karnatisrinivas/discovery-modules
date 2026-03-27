@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "group": [
+      {
+        "description": "The name of the IAM group to which the policy will be attached.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the IAM policy to attach to the group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

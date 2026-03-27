@@ -1,0 +1,41 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Notification Hub Authorization Rule
+  node:
+    label:
+      static: Notification Hub Authorization Rule
+      template: ${name}
+    display_type: default
+
+variables:
+  listen:
+    ui_control: select
+    description: "Does this rule have listen access?"
+    type: bool
+    options: 
+      - true
+      - false
+  manage:
+    ui_control: select
+    description: "Does this rule have manage access?"
+    type: bool
+    options: 
+      - true
+      - false
+  send:
+    description: "Does this rule have send access?"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_notification_hub_authorization_rule
+  dnd_supported: false
+  references:
+    namespace_name:
+      from: azurerm_notification_hub_namespace
+      output: name

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tracker_name": [
+      {
+        "description": "The name of the location tracker to be created or managed in AWS.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

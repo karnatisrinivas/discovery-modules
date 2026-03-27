@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "analysis_id": [
+      {
+        "description": "A unique identifier for the QuickSight analysis resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

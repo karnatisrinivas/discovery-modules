@@ -1,0 +1,103 @@
+{
+  "variable": {
+    "database_name": [
+      {
+        "description": "The name of the database in the AWS Glue Data Catalog where the table is located.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "A brief description of the table, which can provide context about its contents or purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the table in the AWS Glue Data Catalog.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "owner": [
+      {
+        "description": "The owner of the table, which could be a person, team, or department responsible for the table.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "A set of key-value pairs that provide additional metadata or configuration for the table.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "retention": [
+      {
+        "description": "The number of days to retain the table data, after which it may be automatically deleted.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "table_type": [
+      {
+        "description": "The type of the table, such as 'EXTERNAL_TABLE' or 'VIRTUAL_VIEW', indicating how the table is managed or accessed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "view_expanded_text": [
+      {
+        "description": "The SQL text of the expanded view, representing how the view is defined in terms of underlying tables.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "view_original_text": [
+      {
+        "description": "The original SQL text used to define the view, which may include variables and expressions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "open_table_format_input": [
+      {
+        "description": "Configuration for the open_table_format_input block containing iceberg_input settings.",
+        "nullable": true,
+        "type": "list(object({ iceberg_input: object({ metadata_operation: string, version: string }) }))"
+      }
+    ],
+    "partition_index": [
+      {
+        "description": "List of partition_index configurations, each containing index_name and keys.",
+        "nullable": true,
+        "type": "list(object({ index_name: string, keys: list(string) }))"
+      }
+    ],
+    "partition_keys": [
+      {
+        "description": "List of partition_keys configurations with an optional comment and type, and a required name.",
+        "nullable": true,
+        "type": "list(object({ comment : string, name : string, type : string }))"
+      }
+    ],
+    "storage_descriptor": [
+      {
+        "description": "Configuration for the storage_descriptor block including storage details, columns, schema_reference, ser_de_info, skewed_info, and sort_columns.",
+        "nullable": true,
+        "type": "list(object({ additional_locations: optional(list(string)), bucket_columns: optional(list(string)), compressed: optional(bool), input_format: optional(string), location: optional(string), number_of_buckets: optional(number), output_format: optional(string), parameters: optional(map(string)), stored_as_sub_directories: optional(bool), columns: optional(list(object({ comment: optional(string), name: string, parameters: optional(map(string)), type: string }))), schema_reference: optional(list(object({ schema_version_number: number, schema_id: object({ schema_arn: string }) }))), ser_de_info: optional(list(object({ name: string, parameters: optional(map(string)), serialization_library: optional(string) }))), skewed_info: optional(list(object({ skewed_column_names: list(string), skewed_column_value_location_maps: map(string), skewed_column_values: list(string) }))), sort_columns: optional(list(object({ column: string, sort_order: number }))) }))"
+
+      }
+    ],
+    "target_table": [
+      {
+        "description": "Configuration for the target_table block specifying the target table details.",
+        "nullable": true,
+        "type": "list(object({ catalog_id: string, database_name: string, name: string, region: string }))"
+      }
+    ]
+  }
+}

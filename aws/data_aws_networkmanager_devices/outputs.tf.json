@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific Network Manager device.",
+            "value": "${data.aws_networkmanager_devices.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all Network Manager devices.",
+            "value": "${data.aws_networkmanager_devices.this.ids}"
+        }
+    }
+}

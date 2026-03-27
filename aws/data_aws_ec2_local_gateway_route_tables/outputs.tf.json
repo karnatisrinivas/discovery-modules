@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the local gateway route table.",
+            "value": "${data.aws_ec2_local_gateway_route_tables.this.id}"
+        },
+        "ids": {
+            "description": "A list of identifiers for the local gateway route tables.",
+            "value": "${data.aws_ec2_local_gateway_route_tables.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the local gateway route tables.",
+            "value": "${data.aws_ec2_local_gateway_route_tables.this.tags}"
+        }
+    }
+}

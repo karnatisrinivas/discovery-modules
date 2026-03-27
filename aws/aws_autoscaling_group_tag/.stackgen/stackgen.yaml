@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Autoscaling Group Tag
+  node:
+    label:
+      static: Autoscaling Group Tag
+      template: ${autoscaling_group_name}
+    display_type: default
+
+discovery:
+  type: aws_autoscaling_group_tag
+  dnd_supported: false
+  references:
+    autoscaling_group_name:
+      from: aws_autoscaling_group
+      output: autoscaling_group_name

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "Specifies the name of the storage bucket where resources will be stored. Must be globally unique and follow naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "condition": [
+      {
+        "description": "Defines optional conditions for policies, consisting of a list of objects with attributes for description, expression, and title. Conditions must be valid expressions for policy evaluation.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Identifies the entity to which access or permissions are granted. Typically formatted as an email address or service account ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Defines the access level or permissions granted to the member. Must correspond to predefined roles within the system.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

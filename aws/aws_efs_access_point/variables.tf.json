@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "file_system_id": [
+      {
+        "description": "Identifier of the EFS file system to associate with the access point; must be an existing file system.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "posix_user": [
+      {
+        "description": "Specifies the POSIX user information for the access point, including user ID, group ID, and secondary group IDs.",
+        "nullable": true,
+        "type": "list(object({gid: number,secondary_gids: optional(list(number)),uid: number}))"
+      }
+    ],
+    "root_directory": [
+      {
+        "description": "Defines the configuration for the root directory of the EFS access point, specifying ownership, permissions, and path; must adhere to EFS directory structure.",
+        "nullable": true,
+        "type": "list(object({path: optional(string),creation_info: list(object({owner_gid: number,owner_uid: number,permissions: string}))}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the access point; useful for identifying, categorizing, and managing resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

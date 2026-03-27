@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MSK Connect connector.",
+            "value": "${data.aws_mskconnect_connector.this.arn}"
+        },
+        "description": {
+            "description": "A brief text description of the MSK Connect connector.",
+            "value": "${data.aws_mskconnect_connector.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the MSK Connect connector.",
+            "value": "${data.aws_mskconnect_connector.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MSK Connect connector.",
+            "value": "${data.aws_mskconnect_connector.this.tags}"
+        },
+        "version": {
+            "description": "The version of the MSK Connect connector.",
+            "value": "${data.aws_mskconnect_connector.this.version}"
+        }
+    }
+}

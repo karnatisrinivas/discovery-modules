@@ -1,0 +1,32 @@
+{
+    "output": {
+        "amazon_side_asn": {
+            "description": "The ASN (Autonomous System Number) for the Amazon side of the VPN connection.",
+            "value": "${data.aws_vpn_gateway.this.amazon_side_asn}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPN gateway.",
+            "value": "${data.aws_vpn_gateway.this.arn}"
+        },
+        "attached_vpc_id": {
+            "description": "The ID of the VPC to which the VPN gateway is attached.",
+            "value": "${data.aws_vpn_gateway.this.attached_vpc_id}"
+        },
+        "availability_zone": {
+            "description": "The availability zone of the VPN gateway.",
+            "value": "${data.aws_vpn_gateway.this.availability_zone}"
+        },
+        "id": {
+            "description": "The unique ID of the VPN gateway.",
+            "value": "${data.aws_vpn_gateway.this.id}"
+        },
+        "state": {
+            "description": "The current state of the VPN gateway (e.g., available, pending).",
+            "value": "${data.aws_vpn_gateway.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPN gateway.",
+            "value": "${data.aws_vpn_gateway.this.tags}"
+        }
+    }
+}

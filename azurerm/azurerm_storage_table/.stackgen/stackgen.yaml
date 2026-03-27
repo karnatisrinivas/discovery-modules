@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Table
+  node:
+    label:
+      static: Storage Table
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_storage_table
+  dnd_supported: false

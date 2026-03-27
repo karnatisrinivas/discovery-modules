@@ -1,0 +1,45 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the virtual network link.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "private_dns_zone_name": [
+      {
+        "description": "The name of the private DNS zone to link with the virtual network.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "registration_enabled": [
+      {
+        "description": "Indicates whether registration is enabled for the virtual network.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "virtual_network_id": [
+      {
+        "description": "The ID of the virtual network to be linked.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

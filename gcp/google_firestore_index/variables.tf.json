@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "api_scope": [
+      {
+        "description": "Defines the API scope for the Firestore index, specifying the range of access permissions required for the index operations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "collection": [
+      {
+        "description": "Specifies the Firestore collection to create the index for; must match an existing collection name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "database": [
+      {
+        "description": "Specifies the Firestore database ID where the index will be created, typically 'default' for most use cases.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "density": [
+      {
+        "description": "Defines the specific field level density to optimize query performance for Firestore indexes; ensure alignment with query requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fields": [
+      {
+        "description": "Defines the document fields to be indexed, including their order and query scope; must specify field paths and indexing modes.",
+        "nullable": false,
+        "type": "list(object({array_config: optional(string),field_path: optional(string),order: optional(string),vector_config: list(object({dimension: optional(number),flat: list(object({}))}))}))"
+      }
+    ],
+    "multikey": [
+      {
+        "description": "Specifies the fields for a composite index, allowing multi-field queries. At least two fields are required.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "query_scope": [
+      {
+        "description": "Defines the scope of the query for the Firestore index, such as \"COLLECTION\" or \"COLLECTION_GROUP\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for creating, updating, or deleting the Firestore index, ensuring operations complete within the specified duration.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

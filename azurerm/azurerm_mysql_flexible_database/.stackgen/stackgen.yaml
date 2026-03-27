@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: MySQL Flexible Database
+  node:
+    label:
+      static: MySQL Flexible Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_mysql_flexible_database
+  dnd_supported: false
+  references:
+    server_name:
+      from: azurerm_mysql_flexible_server
+      output: name

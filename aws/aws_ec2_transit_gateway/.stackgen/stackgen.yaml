@@ -1,0 +1,59 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EC2 Transit Gateway
+  node:
+    label:
+      static: EC2 Transit Gateway
+      template: ${amazon_side_asn}
+    display_type: default
+
+variables:
+  default_route_table_propagation:
+    ui_control: select
+    description: Whether resource attachments automatically propagate routes to the default propagation route table.
+    type: string
+    options: 
+      - enable
+      - disable
+  dns_support:
+    description: Enable or disable DNS support for the transit gateway.
+    type: string
+    options: 
+      - enable
+      - disable
+    ui_control: select
+  multicast_support:
+    ui_control: select
+    description: Enable or disable multicast support on the transit gateway.
+    type: string
+    options: 
+      - enable
+      - disable
+  vpn_ecmp_support:
+    description: "Enable or disable Equal-Cost Multi-Path (ECMP) routing support for VPN connections."
+    type: string
+    options: 
+      - enable
+      - disable
+    ui_control: select
+  auto_accept_shared_attachments:
+    description: "Whether to automatically accept cross-account attachments for the transit gateway."
+    type: string
+    options: 
+      - enable
+      - disable
+    ui_control: select
+  default_route_table_association:
+    type: string
+    options: 
+      - enable
+      - disable
+    ui_control: select
+    description: Whether resource attachments are automatically associated with the default association route table.
+
+discovery:
+  type: aws_ec2_transit_gateway
+  dnd_supported: false
+  data_source: data_aws_ec2_transit_gateway

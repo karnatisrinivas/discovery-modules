@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Alloydb Instance
+  node:
+    label:
+      static: Alloydb Instance
+      template: ${instance_id}
+    display_type: default
+
+discovery:
+  type: google_alloydb_instance
+  dnd_supported: false
+  references:
+    cluster:
+      from: google_alloydb_cluster
+      output: name

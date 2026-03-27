@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a condition under which the IAM binding applies, specifying attributes like title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to be granted the IAM role, such as a user, group, or service account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Defines the IAM role assigned to the member for the Pub/Sub topic, specifying their level of access.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "topic": [
+      {
+        "description": "Defines the Pub/Sub topic to which the IAM policy member will be applied; must be the name or fully qualified identifier of an existing topic.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

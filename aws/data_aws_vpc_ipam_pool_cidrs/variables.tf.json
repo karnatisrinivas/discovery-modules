@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "ipam_pool_id": [
+      {
+        "description": "The unique identifier for the IPAM pool from which IP address ranges are allocated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

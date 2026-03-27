@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific AWS EBS volume.",
+            "value": "${data.aws_ebs_volumes.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the AWS EBS volumes.",
+            "value": "${data.aws_ebs_volumes.this.ids}"
+        }
+    }
+}

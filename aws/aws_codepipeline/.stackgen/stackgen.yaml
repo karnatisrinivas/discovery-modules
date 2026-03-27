@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Codepipeline
+  node:
+    label:
+      static: Codepipeline
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_codepipeline
+  dnd_supported: false

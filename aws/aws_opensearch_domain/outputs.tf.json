@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_opensearch_domain.this.arn}"
+        },
+        "domain_name": {
+            "description": "The value of the domain_name output",
+            "value": "${aws_opensearch_domain.this.domain_name}"
+        }
+    }
+}

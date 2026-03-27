@@ -1,0 +1,24 @@
+{
+    "output": {
+        "certificate_id": {
+            "description": "Unique identifier for the SSL certificate in Google Cloud",
+            "value": "${google_compute_ssl_certificate.this.certificate_id}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the SSL certificate was created",
+            "value": "${google_compute_ssl_certificate.this.creation_timestamp}"
+        },
+        "expire_time": {
+            "description": "Expiration date and time of the SSL certificate",
+            "value": "${google_compute_ssl_certificate.this.expire_time}"
+        },
+        "id": {
+            "description": "Resource ID for managing and referencing the SSL certificate",
+            "value": "${google_compute_ssl_certificate.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the SSL certificate resource in Google Cloud",
+            "value": "${google_compute_ssl_certificate.this.self_link}"
+        }
+    }
+}

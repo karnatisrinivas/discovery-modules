@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Db Event Categories"
+  node:
+    label:
+      static: "[Data] Db Event Categories"
+      template: "[Data] Db Event Categories"
+    display_type: default
+
+discovery:
+  type: data_aws_db_event_categories
+  dnd_supported: false

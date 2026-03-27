@@ -1,0 +1,52 @@
+{
+    "output": {
+        "approval_rule": {
+            "description": "A set of rules that define when patches should be approved and applied, including conditions like days after release and specific compliance levels.",
+            "value": "${data.aws_ssm_patch_baseline.this.approval_rule}"
+        },
+        "approved_patches": {
+            "description": "A list of patches that are approved for installation based on your patching strategy.",
+            "value": "${data.aws_ssm_patch_baseline.this.approved_patches}"
+        },
+        "approved_patches_compliance_level": {
+            "description": "The compliance level for approved patches, indicating the level of strictness or priority.",
+            "value": "${data.aws_ssm_patch_baseline.this.approved_patches_compliance_level}"
+        },
+        "approved_patches_enable_non_security": {
+            "description": "A boolean value indicating if non-security related patches should be included in the approved patches list.",
+            "value": "${data.aws_ssm_patch_baseline.this.approved_patches_enable_non_security}"
+        },
+        "description": {
+            "description": "A textual description of the patch baseline, detailing its purpose and scope.",
+            "value": "${data.aws_ssm_patch_baseline.this.description}"
+        },
+        "global_filter": {
+            "description": "A global set of filters that apply to patches, used to narrow down the list of applicable patches by certain criteria like product or classification.",
+            "value": "${data.aws_ssm_patch_baseline.this.global_filter}"
+        },
+        "id": {
+            "description": "The unique identifier of the patch baseline in AWS Systems Manager.",
+            "value": "${data.aws_ssm_patch_baseline.this.id}"
+        },
+        "json": {
+            "description": "The JSON representation of the patch baseline, detailing its configuration and settings.",
+            "value": "${data.aws_ssm_patch_baseline.this.json}"
+        },
+        "name": {
+            "description": "The name assigned to the patch baseline, used for identification purposes.",
+            "value": "${data.aws_ssm_patch_baseline.this.name}"
+        },
+        "rejected_patches": {
+            "description": "A list of patches that are explicitly rejected and not allowed to be installed, regardless of approval rules.",
+            "value": "${data.aws_ssm_patch_baseline.this.rejected_patches}"
+        },
+        "rejected_patches_action": {
+            "description": "The action to take on rejected patches, such as allowing them to be overridden by approved patches.",
+            "value": "${data.aws_ssm_patch_baseline.this.rejected_patches_action}"
+        },
+        "source": {
+            "description": "Information about the source of the patches, including configuration details and applicable products.",
+            "value": "${data.aws_ssm_patch_baseline.this.source}"
+        }
+    }
+}

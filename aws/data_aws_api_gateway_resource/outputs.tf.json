@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the API Gateway resource.",
+            "value": "${data.aws_api_gateway_resource.this.id}"
+        },
+        "parent_id": {
+            "description": "The identifier of the parent resource in the API Gateway.",
+            "value": "${data.aws_api_gateway_resource.this.parent_id}"
+        },
+        "path_part": {
+            "description": "The last part of the resource's path in the API Gateway.",
+            "value": "${data.aws_api_gateway_resource.this.path_part}"
+        }
+    }
+}

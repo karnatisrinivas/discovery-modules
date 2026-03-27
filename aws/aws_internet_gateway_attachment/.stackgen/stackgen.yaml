@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Internet Gateway Attachment
+  node:
+    label:
+      static: Internet Gateway Attachment
+      template: Internet Gateway Attachment
+    display_type: default
+
+discovery:
+  type: aws_internet_gateway_attachment
+  dnd_supported: false
+  references:
+    internet_gateway_id:
+      from: aws_internet_gateway
+      output: id
+    vpc_id:
+      from: aws_vpc
+      output: id

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the notification hub in configurations",
+            "value": "${azurerm_notification_hub.this.id}"
+        }
+    }
+}

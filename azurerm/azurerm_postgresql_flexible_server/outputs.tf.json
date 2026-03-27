@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the PostgreSQL Flexible Server.",
+            "value": "${azurerm_postgresql_flexible_server.this.id}"
+        },
+        "private_dns_zone_id": {
+            "description": "The ID of the private DNS zone associated with the server.",
+            "value": "${azurerm_postgresql_flexible_server.this.private_dns_zone_id}"
+        },
+        "sku_name": {
+            "description": "The SKU name that specifies the performance and pricing tier of the server.",
+            "value": "${azurerm_postgresql_flexible_server.this.sku_name}"
+        }
+    }
+}

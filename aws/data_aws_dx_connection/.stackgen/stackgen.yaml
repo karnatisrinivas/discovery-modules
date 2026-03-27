@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dx Connection"
+  node:
+    label:
+      static: "[Data] Dx Connection"
+      template: "[Data] Dx Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_dx_connection
+  dnd_supported: false

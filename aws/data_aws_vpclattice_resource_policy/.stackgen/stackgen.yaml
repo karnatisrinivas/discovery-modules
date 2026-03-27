@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpclattice Resource Policy"
+  node:
+    label:
+      static: "[Data] Vpclattice Resource Policy"
+      template: "[Data] Vpclattice Resource Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_vpclattice_resource_policy
+  dnd_supported: false

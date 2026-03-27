@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the Network Watcher.",
+            "value": "${azurerm_network_watcher.this.id}"
+        },
+        "name": {
+            "description": "The Name of the Network Watcher.",
+            "value": "${azurerm_network_watcher.this.name}"
+        }
+    }
+}

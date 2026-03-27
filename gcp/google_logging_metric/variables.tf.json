@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "bucket_name": [
+      {
+        "description": "Name of the Cloud Storage bucket used for exporting logs, required for metrics with export functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "bucket_options": [
+      {
+        "description": "Defines the bucket options for distribution metrics, specifying bucket boundaries and layout for histogram data.",
+        "nullable": true,
+        "type": "list(object({explicit_buckets: list(object({bounds: list(number)})),exponential_buckets: list(object({growth_factor: number,num_finite_buckets: number,scale: number})),linear_buckets: list(object({num_finite_buckets: number,offset: number,width: number}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the human-readable description for the logging metric; used to explain the metric's purpose or details.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Determines whether the logging metric is disabled; set to true to disable the metric, otherwise false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the criteria used to match log entries for the metric; must be a valid logging filter expression.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "label_extractors": [
+      {
+        "description": "Defines a mapping of labels extracted from log entries to labels included in the metric, requiring valid label keys and values.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "metric_descriptor": [
+      {
+        "description": "Defines the configuration for the metric descriptor, including type, labels, and description, used to describe the metric's schema and purpose.",
+        "nullable": true,
+        "type": "list(object({display_name: optional(string),metric_kind: string,unit: optional(string),value_type: string,labels: list(object({description: optional(string),key: string,value_type: optional(string)}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the logging metric, which must be unique within the project and adhere to Google's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the creation, update, or deletion of the logging metric.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "value_extractor": [
+      {
+        "description": "Defines a value extraction expression used to extract a value from log entries, required for distribution metrics or when using advanced field extraction.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

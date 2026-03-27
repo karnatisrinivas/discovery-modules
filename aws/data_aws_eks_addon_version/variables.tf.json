@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "addon_name": [
+      {
+        "description": "The name of the EKS addon to manage.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kubernetes_version": [
+      {
+        "description": "The version of Kubernetes that the EKS cluster is running.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "A boolean indicating whether to use the most recent version of the addon.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

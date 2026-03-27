@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "attributes": [
+      {
+        "description": "Defines the key-value pairs used for matching requests to the sampling rule, such as HTTP method, URL path, or service name. Constraints depend on the rule's intended purpose.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "aws_xray_sampling_rule_version": [
+      {
+        "description": "Defines the version of the sampling rule, typically set to 1 for the current API.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "fixed_rate": [
+      {
+        "description": "Defines the percentage of matching requests to be sampled, expressed as a decimal between 0 and 1.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "host": [
+      {
+        "description": "Specifies the hostname or IP address that the sampling rule applies to, supporting patterns and wildcards.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "http_method": [
+      {
+        "description": "Specifies the HTTP method for requests to match, such as GET, POST, or DELETE.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Determines the order in which sampling rules are evaluated, with lower values being given higher precedence. Must be an integer between 1 and 1000.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "reservoir_size": [
+      {
+        "description": "Defines the maximum number of requests per second to sample, setting the reservoir size for the sampling rule.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "resource_arn": [
+      {
+        "description": "Defines the ARN of the resource associated with the sampling rule, such as a service or application. Must be a valid AWS ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "rule_name": [
+      {
+        "description": "Name of the sampling rule to be applied for tracing requests. Must be unique within the AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "service_name": [
+      {
+        "description": "Specifies the name of the service to which the sampling rule applies, must be a non-empty string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_type": [
+      {
+        "description": "Specifies the type of service to match for the sampling rule, such as AWS::EC2::Instance or AWS::ElasticBeanstalk::Environment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to assign to the sampling rule for identification and organization; supports tagging for cost allocation and resource management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "url_path": [
+      {
+        "description": "Defines the URL path used for matching incoming requests to the sampling rule; must follow the pattern of a valid URL path.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

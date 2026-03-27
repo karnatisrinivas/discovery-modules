@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the Image Builder distribution configurations.",
+            "value": "${data.aws_imagebuilder_distribution_configurations.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the Image Builder distribution configurations.",
+            "value": "${data.aws_imagebuilder_distribution_configurations.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the Image Builder distribution configurations.",
+            "value": "${data.aws_imagebuilder_distribution_configurations.this.names}"
+        }
+    }
+}

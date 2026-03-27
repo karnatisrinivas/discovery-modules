@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "Secrets Manager - Secret"
+  node:
+    label:
+      static: "Secrets Manager - Secret"
+      template: "Secrets Manager - Secret"
+    display_type: default
+
+discovery:
+  type: aws_secretsmanager_secret
+  dnd_supported: false
+  data_source: data_aws_secretsmanager_secret

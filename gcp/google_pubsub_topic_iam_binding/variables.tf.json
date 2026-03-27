@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional IAM condition that must be met for the policy binding to apply, specifying attributes such as title, expression, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to be assigned the specified roles for the Pub/Sub topic.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be assigned to members, defining their level of access to the Pub/Sub topic.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "topic": [
+      {
+        "description": "Specifies the Pub/Sub topic for which IAM binding is applied; must be an existing topic in the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

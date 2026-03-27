@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudbuild Trigger
+  node:
+    label:
+      static: Cloudbuild Trigger
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloudbuild_trigger
+  dnd_supported: false
+  references:
+    service_account:
+      from: google_service_account
+      output: id

@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Elasticache Serverless Cache
+  node:
+    label:
+      static: Elasticache Serverless Cache
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_elasticache_serverless_cache
+  dnd_supported: false
+  references:
+    kms_key_id:
+      from: aws_kms_key
+      output: arn
+    security_group_ids:
+      from: aws_security_group
+      output: id
+    subnet_ids:
+      from: aws_subnet
+      output: id

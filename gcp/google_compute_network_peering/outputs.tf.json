@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the network peering resource, useful for cross-resource references",
+            "value": "${google_compute_network_peering.this.id}"
+        },
+        "state": {
+            "description": "Current status of the network peering, useful for monitoring connectivity",
+            "value": "${google_compute_network_peering.this.state}"
+        },
+        "state_details": {
+            "description": "Detailed information about the peering status, helpful for troubleshooting issues",
+            "value": "${google_compute_network_peering.this.state_details}"
+        }
+    }
+}

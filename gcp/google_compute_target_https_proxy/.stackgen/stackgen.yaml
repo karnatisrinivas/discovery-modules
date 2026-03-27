@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Target Https Proxy
+  node:
+    label:
+      static: Compute Target Https Proxy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_target_https_proxy
+  dnd_supported: false
+  references:
+    server_tls_policy:
+      from: google_network_security_server_tls_policy
+      output: id
+    ssl_certificates:
+      from: google_compute_ssl_certificate
+      output: id
+    url_map:
+      from: google_compute_url_map
+      output: id

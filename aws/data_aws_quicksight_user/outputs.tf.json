@@ -1,0 +1,36 @@
+{
+    "output": {
+        "active": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.active}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.aws_account_id}"
+        },
+        "email": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.email}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.id}"
+        },
+        "identity_type": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.identity_type}"
+        },
+        "principal_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.principal_id}"
+        },
+        "user_role": {
+            "description": "",
+            "value": "${data.aws_quicksight_user.this.user_role}"
+        }
+    }
+}

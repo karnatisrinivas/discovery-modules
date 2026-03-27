@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Backend Service
+  node:
+    label:
+      static: Compute Backend Service
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_backend_service
+  dnd_supported: false
+  references:
+    health_checks:
+      from: google_compute_health_check
+      output: id

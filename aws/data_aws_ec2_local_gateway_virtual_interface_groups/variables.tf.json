@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A set of key-value pairs to assign to the resource for organizational purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

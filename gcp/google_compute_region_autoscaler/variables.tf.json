@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "autoscaling_policy": [
+      {
+        "description": "Defines the configuration for scaling instances automatically based on metrics such as CPU utilization or custom signals; requires specifying scaling thresholds, limits, and metric types.",
+        "nullable": false,
+        "type": "list(object({cooldown_period: optional(number),max_replicas: number,min_replicas: number,mode: optional(string),cpu_utilization: list(object({predictive_method: optional(string),target: number})),load_balancing_utilization: list(object({target: number})),metric: list(object({filter: optional(string),name: string,single_instance_assignment: optional(number),target: optional(number),type: optional(string)})),scale_in_control: list(object({time_window_sec: optional(number),max_scaled_in_replicas: list(object({fixed: optional(number),percent: optional(number)}))})),scaling_schedules: list(object({description: optional(string),disabled: optional(bool),duration_sec: number,min_required_replicas: number,name: string,schedule: string,time_zone: optional(string)}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the purpose or additional details for the autoscaler, providing context for its use in the specified region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the regional autoscaler, must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "target": [
+      {
+        "description": "The resource or instance group that the autoscaler will manage within the specified region. Must be a valid regional target.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout durations for create, update, and delete operations on the regional autoscaler.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

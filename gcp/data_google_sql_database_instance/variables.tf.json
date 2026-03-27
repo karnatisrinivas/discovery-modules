@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the Cloud SQL instance, must be unique within the project and adhere to naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

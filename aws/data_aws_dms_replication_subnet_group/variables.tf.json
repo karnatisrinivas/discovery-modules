@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "replication_subnet_group_id": [
+      {
+        "description": "The identifier for the DMS replication subnet group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

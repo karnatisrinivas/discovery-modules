@@ -1,0 +1,64 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The queue name."
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "The queue name."
+            }
+        ],
+        "max_concurrent_dispatches": [
+            {
+                "type": "number",
+                "description": "The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases.",
+                "nullable": true
+            }
+        ],
+        "max_dispatches_per_second": [
+            {
+                "type": "number",
+                "description": "The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default.",
+                "nullable": true
+            }
+        ],
+        "max_attempts": [
+            {
+                "type": "number",
+                "description": "Number of attempts per task. Cloud Tasks will attempt the task `Max Attempt` times (that is, if the first attempt fails, then there will be max attempts - 1 retries). Must be >= -1. -1 indicates unlimited attempts.",
+                "default": -1,
+                "validation": [
+                    {
+                        "condition": "${var.max_attempts >= -1}",
+                        "error_message": "Max Attempts should be equal or bigger than -1."
+                    }
+                ]
+            }
+        ],
+        "max_retry_duration": [
+            {
+                "type": "number",
+                "description": "If positive, maxRetryDuration specifies (in seconds) the time limit for retrying a failed task, measured from when the task was first attempted. Once maxRetryDuration time has passed and the task has been attempted maxAttempts times, no further attempts will be made and the task will be deleted. If zero, then the task age is unlimited.",
+                "default": 0,
+                "nullable": true,
+                "validation": [
+                    {
+                        "condition": "${var.max_retry_duration >= 0}",
+                        "error_message": "Max Retry Duration should be positive."
+                    }
+                ]
+            }
+        ],
+        "iam_roles": [
+            {
+                "type": "list(object({role: string, member: string}))",
+                "description": "Defines a binding to be included for this resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

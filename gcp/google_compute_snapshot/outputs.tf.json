@@ -1,0 +1,44 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the snapshot was created",
+            "value": "${google_compute_snapshot.this.creation_timestamp}"
+        },
+        "disk_size_gb": {
+            "description": "Size of the disk in GB from which the snapshot was created",
+            "value": "${google_compute_snapshot.this.disk_size_gb}"
+        },
+        "effective_labels": {
+            "description": "Computed labels applied to the snapshot for metadata and organization",
+            "value": "${google_compute_snapshot.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the snapshot in configurations",
+            "value": "${google_compute_snapshot.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint of the labels used for optimistic locking",
+            "value": "${google_compute_snapshot.this.label_fingerprint}"
+        },
+        "licenses": {
+            "description": "List of licenses attached to the snapshot for compliance and usage",
+            "value": "${google_compute_snapshot.this.licenses}"
+        },
+        "self_link": {
+            "description": "URL for accessing the snapshot resource in the GCP API",
+            "value": "${google_compute_snapshot.this.self_link}"
+        },
+        "snapshot_id": {
+            "description": "Numeric ID assigned by GCP for uniquely identifying the snapshot",
+            "value": "${google_compute_snapshot.this.snapshot_id}"
+        },
+        "storage_bytes": {
+            "description": "Size of the snapshot's storage used, in bytes",
+            "value": "${google_compute_snapshot.this.storage_bytes}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for organizing and filtering resources",
+            "value": "${google_compute_snapshot.this.terraform_labels}"
+        }
+    }
+}

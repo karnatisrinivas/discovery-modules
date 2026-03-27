@@ -1,0 +1,56 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 Resolver firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the firewall rule group association was created.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.creation_time}"
+        },
+        "creator_request_id": {
+            "description": "A unique string that identifies the request that created the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.creator_request_id}"
+        },
+        "firewall_rule_group_id": {
+            "description": "The ID of the firewall rule group that is associated with the VPC.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.firewall_rule_group_id}"
+        },
+        "id": {
+            "description": "The ID of the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.id}"
+        },
+        "managed_owner_name": {
+            "description": "The name of the AWS account that manages the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.managed_owner_name}"
+        },
+        "modification_time": {
+            "description": "The time when the firewall rule group association was last modified.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.modification_time}"
+        },
+        "mutation_protection": {
+            "description": "Indicates whether mutation protection is enabled for the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.mutation_protection}"
+        },
+        "name": {
+            "description": "The name of the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.name}"
+        },
+        "priority": {
+            "description": "The priority of the firewall rule group association. Lower values indicate higher priority.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.priority}"
+        },
+        "status": {
+            "description": "The current status of the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.status}"
+        },
+        "status_message": {
+            "description": "A message that provides additional information about the status of the firewall rule group association.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.status_message}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC that is associated with the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group_association.this.vpc_id}"
+        }
+    }
+}

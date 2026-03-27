@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "description": "The display name for the notification channel, visible in the Google Cloud Console and used to identify the channel.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Additional metadata for the notification channel in key-value format; keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of notification channel, such as email, SMS, or webhook; must match a supported channel type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "user_labels": [
+      {
+        "description": "Custom labels to apply to the notification channel for organizational purposes. Must be a key-value pair.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

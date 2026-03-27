@@ -1,0 +1,60 @@
+{
+    "output": {
+        "carrier_gateway_id": {
+            "description": "The ID of the carrier gateway associated with the route.",
+            "value": "${data.aws_route.this.carrier_gateway_id}"
+        },
+        "core_network_arn": {
+            "description": "The Amazon Resource Name (ARN) of the core network associated with the route.",
+            "value": "${data.aws_route.this.core_network_arn}"
+        },
+        "destination_cidr_block": {
+            "description": "The IPv4 CIDR block that the route will cover.",
+            "value": "${data.aws_route.this.destination_cidr_block}"
+        },
+        "destination_ipv6_cidr_block": {
+            "description": "The IPv6 CIDR block that the route will cover.",
+            "value": "${data.aws_route.this.destination_ipv6_cidr_block}"
+        },
+        "destination_prefix_list_id": {
+            "description": "The ID of the prefix list the route will cover.",
+            "value": "${data.aws_route.this.destination_prefix_list_id}"
+        },
+        "egress_only_gateway_id": {
+            "description": "The ID of the egress-only internet gateway associated with the route.",
+            "value": "${data.aws_route.this.egress_only_gateway_id}"
+        },
+        "gateway_id": {
+            "description": "The ID of the gateway associated with the route.",
+            "value": "${data.aws_route.this.gateway_id}"
+        },
+        "id": {
+            "description": "The ID of the route.",
+            "value": "${data.aws_route.this.id}"
+        },
+        "instance_id": {
+            "description": "The ID of the instance associated with the route.",
+            "value": "${data.aws_route.this.instance_id}"
+        },
+        "local_gateway_id": {
+            "description": "The ID of the local gateway associated with the route.",
+            "value": "${data.aws_route.this.local_gateway_id}"
+        },
+        "nat_gateway_id": {
+            "description": "The ID of the NAT gateway associated with the route.",
+            "value": "${data.aws_route.this.nat_gateway_id}"
+        },
+        "network_interface_id": {
+            "description": "The ID of the network interface associated with the route.",
+            "value": "${data.aws_route.this.network_interface_id}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the transit gateway associated with the route.",
+            "value": "${data.aws_route.this.transit_gateway_id}"
+        },
+        "vpc_peering_connection_id": {
+            "description": "The ID of the VPC peering connection associated with the route.",
+            "value": "${data.aws_route.this.vpc_peering_connection_id}"
+        }
+    }
+}

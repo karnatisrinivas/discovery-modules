@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "container": [
+      {
+        "description": "Specifies the container definition, including the image, model data, and environment variables required for the SageMaker model.",
+        "nullable": true,
+        "type": "list(object({container_hostname: optional(string),environment: optional(map(string)),image: optional(string),inference_specification_name: optional(string),mode: optional(string),model_data_url: optional(string),model_package_name: optional(string),image_config: list(object({repository_access_mode: string,repository_auth_config: list(object({repository_credentials_provider_arn: string}))})),model_data_source: list(object({s3_data_source: list(object({compression_type: string,s3_data_type: string,s3_uri: string,model_access_config: list(object({accept_eula: bool}))}))})),multi_model_config: list(object({model_cache_setting: optional(string)}))}))"
+      }
+    ],
+    "enable_network_isolation": [
+      {
+        "description": "Specifies whether the model's container has no inbound or outbound network access. Set to true for network isolation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "execution_role_arn": [
+      {
+        "description": "ARN of the IAM role that SageMaker assumes to access resources during model deployment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "inference_execution_config": [
+      {
+        "description": "Configuration for controlling the execution behavior of the inference container, including settings for model optimization and performance.",
+        "nullable": true,
+        "type": "list(object({mode: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the SageMaker model; must be between 1 and 63 characters, and can include alphanumeric characters and hyphens.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "primary_container": [
+      {
+        "description": "Defines the primary container configuration for the model, including the image, environment variables, and model data location.",
+        "nullable": true,
+        "type": "list(object({container_hostname: optional(string),environment: optional(map(string)),image: optional(string),inference_specification_name: optional(string),mode: optional(string),model_data_url: optional(string),model_package_name: optional(string),image_config: list(object({repository_access_mode: string,repository_auth_config: list(object({repository_credentials_provider_arn: string}))})),model_data_source: list(object({s3_data_source: list(object({compression_type: string,s3_data_type: string,s3_uri: string,model_access_config: list(object({accept_eula: bool}))}))})),multi_model_config: list(object({model_cache_setting: optional(string)}))}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the SageMaker model for resource categorization and identification.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "vpc_config": [
+      {
+        "description": "Configuration details for the VPC, including subnets and security groups, used to control network access to the model.",
+        "nullable": true,
+        "type": "list(object({security_group_ids: list(string),subnets: list(string)}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_ses_active_receipt_rule_set.this.arn}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ses_active_receipt_rule_set.this.id}"
+        },
+        "rule_set_name": {
+            "description": "",
+            "value": "${data.aws_ses_active_receipt_rule_set.this.rule_set_name}"
+        }
+    }
+}

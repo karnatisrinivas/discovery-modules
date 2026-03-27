@@ -1,0 +1,16 @@
+{
+    "output": {
+        "blueprint_provider": {
+            "description": "The provider of the blueprint for the AWS DataZone environment.",
+            "value": "${data.aws_datazone_environment_blueprint.this.blueprint_provider}"
+        },
+        "description": {
+            "description": "A brief explanation of what the AWS DataZone environment blueprint is used for.",
+            "value": "${data.aws_datazone_environment_blueprint.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS DataZone environment blueprint.",
+            "value": "${data.aws_datazone_environment_blueprint.this.id}"
+        }
+    }
+}

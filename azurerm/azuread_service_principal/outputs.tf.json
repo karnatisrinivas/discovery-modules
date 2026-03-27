@@ -1,0 +1,32 @@
+{
+    "output": {
+        "app_role_ids": {
+            "description": "A map of application role IDs associated with the service principal.",
+            "value": "${azuread_service_principal.this.app_role_ids}"
+        },
+        "application_tenant_id": {
+            "description": "The tenant ID where the application is registered.",
+            "value": "${azuread_service_principal.this.application_tenant_id}"
+        },
+        "display_name": {
+            "description": "The display name of the service principal.",
+            "value": "${azuread_service_principal.this.display_name}"
+        },
+        "id": {
+            "description": "The unique ID of the service principal.",
+            "value": "${azuread_service_principal.this.id}"
+        },
+        "oauth2_permission_scope_ids": {
+            "description": "A map of OAuth2 permission scope IDs associated with the service principal.",
+            "value": "${azuread_service_principal.this.oauth2_permission_scope_ids}"
+        },
+        "object_id": {
+            "description": "The object ID of the service principal in Azure Active Directory.",
+            "value": "${azuread_service_principal.this.object_id}"
+        },
+        "service_principal_names": {
+            "description": "A list of names for the service principal.",
+            "value": "${azuread_service_principal.this.service_principal_names}"
+        }
+    }
+}

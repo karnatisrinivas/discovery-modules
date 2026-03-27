@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Lambda code signing configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

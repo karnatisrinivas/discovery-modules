@@ -1,0 +1,25 @@
+{
+    "variable": {
+      "group": [
+        {
+          "description": "The name of the IAM group to which users will be added.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "name": [
+        {
+          "description": "The name for the IAM group membership resource. This is used as an identifier.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "users": [
+        {
+          "description": "A set of usernames to be included in the specified IAM group.",
+          "nullable": false,
+          "type": "list(string)"
+        }
+      ]
+    }
+}

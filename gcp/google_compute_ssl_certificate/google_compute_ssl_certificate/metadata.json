@@ -1,0 +1,10 @@
+{
+  "resourceType": "google_compute_ssl_certificate",
+  "templateType": "atomic",
+  "label": "Compute Ssl Certificate",
+  "icon": "",
+  "provider": "gcp",
+  "iacType": "Terraform",
+  "allowDnD": false,
+  "nameVariable": "certificate"
+}

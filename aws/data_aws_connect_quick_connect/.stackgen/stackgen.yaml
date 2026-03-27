@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Quick Connect"
+  node:
+    label:
+      static: "[Data] Connect Quick Connect"
+      template: "[Data] Connect Quick Connect"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_quick_connect
+  dnd_supported: false

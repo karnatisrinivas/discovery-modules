@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the notification channel, useful for linking resources",
+            "value": "${google_monitoring_notification_channel.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the notification channel for easy identification",
+            "value": "${google_monitoring_notification_channel.this.name}"
+        },
+        "verification_status": {
+            "description": "Current verification state of the notification channel, indicating readiness for use",
+            "value": "${google_monitoring_notification_channel.this.verification_status}"
+        }
+    }
+}

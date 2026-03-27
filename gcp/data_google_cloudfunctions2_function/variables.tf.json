@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "location": [
+      {
+        "description": "Specifies the region where the Cloud Function will be deployed; must be a valid GCP region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Cloud Function, which must be unique within the project and match the pattern `^[a-z]([-a-z0-9]*[a-z0-9])?$`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Event Hub.",
+            "value": "${azurerm_eventhub.this.id}"
+        },
+        "partition_ids": {
+            "description": "The list of partition IDs for the Event Hub.",
+            "value": "${azurerm_eventhub.this.partition_ids}"
+        }
+    }
+}

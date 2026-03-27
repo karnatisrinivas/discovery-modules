@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "parent": [
+      {
+        "description": "The parent resource in the Cloud Resource Hierarchy, such as an organization, that the access policy is associated with. Must be in the format \"organizations/{organization_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scopes": [
+      {
+        "description": "Specifies the G Suite or Cloud Identity organizations that the access policy applies to; must be provided in the format `organizations/{org_id}`.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the time duration for create, update, and delete operations on the access policy.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "title": [
+      {
+        "description": "Specifies the human-readable title of the access policy, must be unique within the organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

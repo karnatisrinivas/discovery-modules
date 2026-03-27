@@ -1,0 +1,40 @@
+{
+    "output": {
+        "admin_username": {
+            "description": "The username of the admin user for the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.admin_username}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.arn}"
+        },
+        "db_name": {
+            "description": "The name of the database within the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.db_name}"
+        },
+        "default_iam_role_arn": {
+            "description": "The ARN of the default IAM role associated with the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.default_iam_role_arn}"
+        },
+        "iam_roles": {
+            "description": "A set of IAM role ARNs associated with the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.iam_roles}"
+        },
+        "id": {
+            "description": "The identifier for the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The KMS key ID used for encryption within the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.kms_key_id}"
+        },
+        "log_exports": {
+            "description": "A set of log types that are exported from the Redshift Serverless namespace.",
+            "value": "${data.aws_redshiftserverless_namespace.this.log_exports}"
+        },
+        "namespace_id": {
+            "description": "The unique identifier for the namespace in Redshift Serverless.",
+            "value": "${data.aws_redshiftserverless_namespace.this.namespace_id}"
+        }
+    }
+}

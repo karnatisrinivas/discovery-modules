@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition that determines the circumstances under which the IAM policy member has access, requiring attributes like title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "database": [
+      {
+        "description": "Specifies the name of the Spanner database to which the IAM member will be applied. Must already exist within the given instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Spanner instance to which the IAM policy member will be applied. Must be an existing instance in the same Google Cloud project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM role will be applied, such as a user, group, or service account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to be assigned, such as roles/spanner.databaseAdmin.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

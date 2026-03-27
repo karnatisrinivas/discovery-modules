@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "preferred_versions": [
+      {
+        "description": "A list of preferred Kafka versions to be used for AWS MSK (Managed Streaming for Apache Kafka).",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

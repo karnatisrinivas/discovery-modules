@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "secret_id": [
+      {
+        "description": "The unique identifier or ARN of the secret to which the secret version belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "version_stage": [
+      {
+        "description": "The stage label that marks the version of the secret. It is optional and can be used to track different versions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

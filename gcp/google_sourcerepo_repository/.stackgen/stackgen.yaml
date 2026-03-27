@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Source Code Repository
+  node:
+    label:
+      static: Source Code Repository
+      template: Source Code Repository
+    display_type: default
+
+variables:
+  message_format:
+    type: string
+    options: 
+      - JSON
+      - PROTOBUF
+    ui_control: select
+    description: The format of the message.
+
+discovery:
+  type: google_sourcerepo_repository
+  dnd_supported: false

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Private DNS Zone VNet Link
+  node:
+    label:
+      static: Private DNS Zone VNet Link
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_private_dns_zone_virtual_network_link
+  dnd_supported: false
+  references:
+    private_dns_zone_name:
+      from: azurerm_private_dns_zone
+      output: name
+    virtual_network_id:
+      from: azurerm_virtual_network
+      output: id

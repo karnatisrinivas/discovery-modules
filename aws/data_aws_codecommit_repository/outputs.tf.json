@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CodeCommit repository.",
+            "value": "${data.aws_codecommit_repository.this.arn}"
+        },
+        "clone_url_http": {
+            "description": "The URL to use for cloning the repository over HTTP.",
+            "value": "${data.aws_codecommit_repository.this.clone_url_http}"
+        },
+        "clone_url_ssh": {
+            "description": "The URL to use for cloning the repository over SSH.",
+            "value": "${data.aws_codecommit_repository.this.clone_url_ssh}"
+        },
+        "id": {
+            "description": "The ID of the CodeCommit repository.",
+            "value": "${data.aws_codecommit_repository.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS KMS key used to encrypt the repository.",
+            "value": "${data.aws_codecommit_repository.this.kms_key_id}"
+        },
+        "repository_id": {
+            "description": "The unique identifier for the CodeCommit repository.",
+            "value": "${data.aws_codecommit_repository.this.repository_id}"
+        }
+    }
+}

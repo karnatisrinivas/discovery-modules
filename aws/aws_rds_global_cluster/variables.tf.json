@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "database_name": [
+      {
+        "description": "Specifies the name of the database within the global cluster, must be unique within the cluster and adhere to RDS naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deletion_protection": [
+      {
+        "description": "Enables or disables deletion protection for the RDS global cluster to prevent accidental deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the database engine type for the global cluster, such as Aurora. Must match the engine of associated DB clusters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine_lifecycle_support": [
+      {
+        "description": "Specifies the engine lifecycle support for the global database cluster (e.g., Aurora MySQL or Aurora PostgreSQL); must match the supported lifecycle of the chosen engine.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine_version": [
+      {
+        "description": "Specifies the database engine version for the global cluster; must match a valid version for the selected database engine.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_destroy": [
+      {
+        "description": "Indicates whether to allow the deletion of the global cluster even if it contains associated databases.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "global_cluster_identifier": [
+      {
+        "description": "Unique identifier for the RDS global cluster; must be unique across all global clusters in the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_db_cluster_identifier": [
+      {
+        "description": "Identifier of the source DB cluster to use for creating the global database; must be an Amazon Aurora cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_encrypted": [
+      {
+        "description": "Specifies whether storage encryption is enabled for the global database cluster. Must be true for encrypted clusters.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize resources; requires unique keys and supports filtering in AWS services.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for specific operations such as creation, update, and deletion of the global database cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

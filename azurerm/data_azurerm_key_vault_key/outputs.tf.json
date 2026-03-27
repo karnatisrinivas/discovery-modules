@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for this specific version of the key.",
+            "value": "${data.azurerm_key_vault_key.this.id}"
+        },
+        "resource_id": {
+            "description": "The full Azure resource ID for the key, including the version.",
+            "value": "${data.azurerm_key_vault_key.this.resource_id}"
+        },
+        "resource_versionless_id": {
+            "description": "The Azure resource ID for the key without the version.",
+            "value": "${data.azurerm_key_vault_key.this.resource_versionless_id}"
+        },
+        "versionless_id": {
+            "description": "The identifier for the key without specifying a version.",
+            "value": "${data.azurerm_key_vault_key.this.versionless_id}"
+        }
+    }
+}

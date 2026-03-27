@@ -1,0 +1,158 @@
+{
+  "variable": {
+    "annotations": [
+      {
+        "description": "Key-value pairs used to annotate the cluster, providing metadata for identification or organization purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "automated_backup_policy": [
+      {
+        "description": "Defines the automated backup policy for the AlloyDB cluster, including schedule, retention, and other settings.",
+        "nullable": true,
+        "type": "list(object({backup_window: optional(string),enabled: optional(bool),labels: optional(map(string)),location: optional(string),encryption_config: list(object({kms_key_name: optional(string)})),quantity_based_retention: list(object({count: optional(number)})),time_based_retention: list(object({retention_period: optional(string)})),weekly_schedule: list(object({days_of_week: optional(list(string)),start_times: list(object({hours: optional(number),minutes: optional(number),nanos: optional(number),seconds: optional(number)}))}))}))"
+      }
+    ],
+    "cluster_id": [
+      {
+        "description": "Unique identifier for the AlloyDB cluster; must be compliant with naming constraints such as being alphanumeric and between 1-63 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "cluster_type": [
+      {
+        "description": "Specifies the type of AlloyDB cluster, such as 'PRIMARY' for primary clusters or 'SECONDARY' for read replicas, with constraints based on the cluster architecture.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "continuous_backup_config": [
+      {
+        "description": "Configures continuous backup settings, specifying retention policies and enabling point-in-time recovery for the AlloyDB cluster.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),recovery_window_days: optional(number),encryption_config: list(object({kms_key_name: optional(string)}))}))"
+      }
+    ],
+    "database_version": [
+      {
+        "description": "Specifies the database engine version for the AlloyDB cluster, must be a supported version.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deletion_policy": [
+      {
+        "description": "Defines the behavior for managing cluster resources upon deletion, such as retaining or removing associated data.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "The user-friendly name for the AlloyDB cluster, must be unique within the project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption_config": [
+      {
+        "description": "Defines the encryption settings for the AlloyDB cluster, specifying the CMEK key to use for data encryption. Requires a valid Google Cloud KMS key.",
+        "nullable": true,
+        "type": "list(object({kms_key_name: optional(string)}))"
+      }
+    ],
+    "etag": [
+      {
+        "description": "Checksum used to ensure the cluster configuration has not been modified during updates.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "initial_user": [
+      {
+        "description": "Specifies the initial user account for the AlloyDB cluster, including username and password requirements.",
+        "nullable": true,
+        "type": "list(object({password: string,user: optional(string)}))"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize resources; must be unique within the project and adhere to Google's label format requirements.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the regional location for the AlloyDB cluster, must match the region of associated resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "maintenance_update_policy": [
+      {
+        "description": "Specifies the maintenance update policy for the AlloyDB cluster, including the update window and frequency.",
+        "nullable": true,
+        "type": "list(object({maintenance_windows: list(object({day: string,start_time: list(object({hours: number,minutes: optional(number),nanos: optional(number),seconds: optional(number)}))}))}))"
+      }
+    ],
+    "network_config": [
+      {
+        "description": "Defines the network configuration for the AlloyDB cluster, specifying the private network to which the cluster is connected. Must be a valid VPC network in the same project and region as the cluster.",
+        "nullable": true,
+        "type": "list(object({allocated_ip_range: optional(string),network: optional(string)}))"
+      }
+    ],
+    "psc_config": [
+      {
+        "description": "Specifies the private service connect configuration for the cluster, including the consumer and producer service attachments.",
+        "nullable": true,
+        "type": "list(object({psc_enabled: optional(bool),service_owned_project_number: optional(number)}))"
+      }
+    ],
+    "restore_backup_source": [
+      {
+        "description": "Specifies the backup source to restore the AlloyDB cluster from, including the backup ID and location. Required when creating a cluster from a backup.",
+        "nullable": true,
+        "type": "list(object({backup_name: string}))"
+      }
+    ],
+    "restore_continuous_backup_source": [
+      {
+        "description": "Specifies the source for restoring a cluster from a continuous backup. Required when creating a cluster from a backup.",
+        "nullable": true,
+        "type": "list(object({cluster: string,point_in_time: string}))"
+      }
+    ],
+    "secondary_config": [
+      {
+        "description": "Configuration settings for a secondary cluster, including replication and read-only properties.",
+        "nullable": true,
+        "type": "list(object({primary_cluster_name: string}))"
+      }
+    ],
+    "skip_await_major_version_upgrade": [
+      {
+        "description": "Determines whether the cluster should skip waiting for a major version upgrade to complete during creation or updates.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "subscription_type": [
+      {
+        "description": "Specifies the type of subscription for the AlloyDB cluster, such as \"on-demand\" or \"committed use\". Ensure it matches the billing plan for your project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time durations for create, update, and delete operations on the AlloyDB cluster, ensuring operations complete within specified limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

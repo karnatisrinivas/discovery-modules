@@ -1,0 +1,102 @@
+{
+  "variable": {
+    "alias": [
+      {
+        "description": "Specifies the alias for the directory, which must be unique within the AWS account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "connect_settings": [
+      {
+        "description": "Defines the configuration for a directory's connection settings, including VPC information and subnet IDs, required for creating a Simple AD or Microsoft AD directory.",
+        "nullable": true,
+        "type": "list(object({availability_zones: optional(list(string)),connect_ips: optional(list(string)),customer_dns_ips: list(string),customer_username: string,subnet_ids: list(string),vpc_id: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies a textual description for the directory, providing additional context or information; optional but useful for identification.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "desired_number_of_domain_controllers": [
+      {
+        "description": "Specifies the number of domain controllers for the directory, must be between 2 and 20.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "edition": [
+      {
+        "description": "Specifies the edition of the directory, such as Standard or Enterprise; must align with the intended use case and supported AWS Directory Service options.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_sso": [
+      {
+        "description": "Indicates whether single sign-on (SSO) is enabled for the directory; set to true to enable SSO functionality.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the directory; must be unique within the AWS account and comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "password": [
+      {
+        "description": "Password for the directory administrator account; must meet the AWS Directory Service complexity requirements.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "short_name": [
+      {
+        "description": "Specifies the short name of the directory, used for identifying resources within the directory; must be unique within the directory and is required for certain configurations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "size": [
+      {
+        "description": "Defines the desired size for the directory, specifying either 'Small' or 'Large' based on the expected performance and capacity requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the resource; used for categorization and identification purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the duration for each phase of the directory service lifecycle, including create, update, and delete operations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of directory to create, such as 'SimpleAD' or 'MicrosoftAD'; must be a valid Directory Service type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpc_settings": [
+      {
+        "description": "Configuration block that specifies the VPC and subnets for the directory, requiring at least two subnets in different Availability Zones.",
+        "nullable": true,
+        "type": "list(object({availability_zones: optional(list(string)),subnet_ids: list(string),vpc_id: string}))"
+      }
+    ]
+  }
+}

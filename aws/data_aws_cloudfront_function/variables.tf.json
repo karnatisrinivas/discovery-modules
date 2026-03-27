@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the CloudFront function to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage": [
+      {
+        "description": "The deployment stage of the CloudFront function, such as 'development' or 'production'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "most_recent": [
+      {
+        "description": "If set to true, it will select the most recent version of the Elastic Beanstalk solution stack.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name_regex": [
+      {
+        "description": "A regular expression to match against the names of available Elastic Beanstalk solution stacks.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

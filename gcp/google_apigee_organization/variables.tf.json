@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "analytics_region": [
+      {
+        "description": "Specifies the GCP region for storing Apigee analytics data; must be a supported region for Apigee analytics.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "api_consumer_data_encryption_key_name": [
+      {
+        "description": "Specifies the name of the Cloud KMS key used for encrypting consumer data, required for enhanced security of sensitive information.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "api_consumer_data_location": [
+      {
+        "description": "Specifies the geographic location where Apigee stores consumer-managed data, such as analytics and trace data. Must match the valid GCP regions for Apigee organizations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "authorized_network": [
+      {
+        "description": "Specifies the Google Cloud VPC network to connect the Apigee organization to, required for private service access. Must be in the same project as the organization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "billing_type": [
+      {
+        "description": "Defines the billing type for the Apigee organization, specifying whether it uses a trial, pay-as-you-go, or subscription model.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "control_plane_encryption_key_name": [
+      {
+        "description": "Specifies the Cloud KMS key name used for encrypting the control plane, must be in the format projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description for the Apigee organization, providing context or purpose for its usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_vpc_peering": [
+      {
+        "description": "Indicates whether VPC peering should be disabled for the Apigee organization; set to true to disable.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies the user-friendly name for the Apigee organization; must be unique and can contain up to 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "properties": [
+      {
+        "description": "Defines key-value pairs for configuring the organization's runtime behavior, such as analytics, features, and other settings.",
+        "nullable": true,
+        "type": "list(object({property: list(object({name: optional(string),value: optional(string)}))}))"
+      }
+    ],
+    "retention": [
+      {
+        "description": "Specifies the number of days to retain analytics data; must be between 1 and 3650 days.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "runtime_database_encryption_key_name": [
+      {
+        "description": "Specifies the Cloud KMS key name used to encrypt the runtime database, must follow the format `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "runtime_type": [
+      {
+        "description": "Specifies the runtime type for the Apigee organization, such as 'CLOUD' or 'HYBRID'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the durations for create, update, and delete operations, allowing customization of execution time limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "project_id":[
+      {
+        "description": "The ID of the project to create.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

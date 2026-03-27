@@ -1,0 +1,36 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Load Balancer Target Group
+  node:
+    label:
+      static: Load Balancer Target Group
+      template: ${name}
+    display_type: default
+
+variables:
+  target_type:
+    description: The type of target that you must specify when registering targets with this target group.
+    type: string
+    options: 
+      - ip
+      - instance
+    ui_control: select
+  protocol:
+    options: 
+      - GENEVE
+      - HTTP
+      - HTTPS
+      - TCP
+      - TCP_UDP
+      - TLS
+      - UDP
+    ui_control: select
+    description: Protocol to use for routing traffic to the targets
+    type: string
+
+discovery:
+  type: aws_alb_target_group
+  dnd_supported: false
+  data_source: data_aws_alb_target_group

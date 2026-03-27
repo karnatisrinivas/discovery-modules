@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Provides a detailed explanation of the service perimeter's purpose and scope.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name of the Service Perimeter, adhering to the format `accessPolicies/{access_policy_id}/servicePerimeters/{service_perimeter_id}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "The resource within which the service perimeter is defined, typically an access policy in the format \"accessPolicies/{policy_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "perimeter_type": [
+      {
+        "description": "Specifies the type of the service perimeter, either \"PERIMETER_TYPE_REGULAR\" or \"PERIMETER_TYPE_BRIDGE\"; \"PERIMETER_TYPE_BRIDGE\" allows resources to be shared across regular perimeters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "spec": [
+      {
+        "description": "Defines the configuration for the service perimeter, including resources, access levels, and restricted services.",
+        "nullable": true,
+        "type": "list(object({access_levels: optional(list(string)),resources: optional(list(string)),restricted_services: optional(list(string)),egress_policies: list(object({title: optional(string),egress_from: list(object({identities: optional(list(string)),identity_type: optional(string),source_restriction: optional(string),sources: list(object({access_level: optional(string),resource: optional(string)}))})),egress_to: list(object({external_resources: optional(list(string)),resources: optional(list(string)),roles: optional(list(string)),operations: list(object({service_name: optional(string),method_selectors: list(object({method: optional(string),permission: optional(string)}))}))}))})),ingress_policies: list(object({title: optional(string),ingress_from: list(object({identities: optional(list(string)),identity_type: optional(string),sources: list(object({access_level: optional(string),resource: optional(string)}))})),ingress_to: list(object({resources: optional(list(string)),roles: optional(list(string)),operations: list(object({service_name: optional(string),method_selectors: list(object({method: optional(string),permission: optional(string)}))}))}))})),vpc_accessible_services: list(object({allowed_services: optional(list(string)),enable_restriction: optional(bool)}))}))"
+      }
+    ],
+    "status": [
+      {
+        "description": "Defines the configuration for the Service Perimeter's status, specifying access levels, resources, and restricted services within the perimeter.",
+        "nullable": true,
+        "type": "list(object({access_levels: optional(list(string)),resources: optional(list(string)),restricted_services: optional(list(string)),egress_policies: list(object({title: optional(string),egress_from: list(object({identities: optional(list(string)),identity_type: optional(string),source_restriction: optional(string),sources: list(object({access_level: optional(string),resource: optional(string)}))})),egress_to: list(object({external_resources: optional(list(string)),resources: optional(list(string)),roles: optional(list(string)),operations: list(object({service_name: optional(string),method_selectors: list(object({method: optional(string),permission: optional(string)}))}))}))})),ingress_policies: list(object({title: optional(string),ingress_from: list(object({identities: optional(list(string)),identity_type: optional(string),sources: list(object({access_level: optional(string),resource: optional(string)}))})),ingress_to: list(object({resources: optional(list(string)),roles: optional(list(string)),operations: list(object({service_name: optional(string),method_selectors: list(object({method: optional(string),permission: optional(string)}))}))}))})),vpc_accessible_services: list(object({allowed_services: optional(list(string)),enable_restriction: optional(bool)}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for operations like create, update, or delete of the service perimeter; must comply with acceptable timeout values.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "title": [
+      {
+        "description": "The user-defined name for the service perimeter, must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "use_explicit_dry_run_spec": [
+      {
+        "description": "Indicates whether the service perimeter uses an explicit dry-run specification for testing changes without enforcing them.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

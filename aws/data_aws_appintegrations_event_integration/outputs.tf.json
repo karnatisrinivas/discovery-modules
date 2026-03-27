@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the event integration.",
+            "value": "${data.aws_appintegrations_event_integration.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the event integration.",
+            "value": "${data.aws_appintegrations_event_integration.this.description}"
+        },
+        "event_filter": {
+            "description": "The filter used to determine which events are processed by the integration.",
+            "value": "${data.aws_appintegrations_event_integration.this.event_filter}"
+        },
+        "eventbridge_bus": {
+            "description": "The name of the EventBridge bus associated with the event integration.",
+            "value": "${data.aws_appintegrations_event_integration.this.eventbridge_bus}"
+        },
+        "id": {
+            "description": "The unique identifier for the event integration.",
+            "value": "${data.aws_appintegrations_event_integration.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the event integration for categorization and management.",
+            "value": "${data.aws_appintegrations_event_integration.this.tags}"
+        }
+    }
+}

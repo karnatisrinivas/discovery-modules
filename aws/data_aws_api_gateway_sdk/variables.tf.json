@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "parameters": [
+      {
+        "description": "A map of additional parameters to customize the SDK generation.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "The identifier of the REST API for which to generate the SDK.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "sdk_type": [
+      {
+        "description": "The type of SDK to generate, such as 'javascript', 'android', or 'ios'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage_name": [
+      {
+        "description": "The name of the stage of the API for which the SDK is being generated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

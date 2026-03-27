@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the IAM role, useful for referencing in other resources",
+            "value": "${data.google_iam_role.this.id}"
+        },
+        "included_permissions": {
+            "description": "List of permissions assigned to the role, helpful for auditing and validation",
+            "value": "${data.google_iam_role.this.included_permissions}"
+        },
+        "stage": {
+            "description": "Deployment stage of the role, indicating its lifecycle status",
+            "value": "${data.google_iam_role.this.stage}"
+        },
+        "title": {
+            "description": "Human-readable name of the role, aiding in identification and management",
+            "value": "${data.google_iam_role.this.title}"
+        }
+    }
+}

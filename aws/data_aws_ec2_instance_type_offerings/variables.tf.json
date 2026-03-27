@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "location_type": [
+      {
+        "description": "Specifies the type of location to filter EC2 instance type offerings, such as availability zone or region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

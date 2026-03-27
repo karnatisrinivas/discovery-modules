@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eks Cluster"
+  node:
+    label:
+      static: "[Data] Eks Cluster"
+      template: "[Data] Eks Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_eks_cluster
+  dnd_supported: false

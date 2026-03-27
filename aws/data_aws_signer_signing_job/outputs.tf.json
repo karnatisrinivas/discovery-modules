@@ -1,0 +1,68 @@
+{
+    "output": {
+        "completed_at": {
+            "description": "The timestamp when the signing job was completed.",
+            "value": "${data.aws_signer_signing_job.this.completed_at}"
+        },
+        "created_at": {
+            "description": "The timestamp when the signing job was created.",
+            "value": "${data.aws_signer_signing_job.this.created_at}"
+        },
+        "id": {
+            "description": "The unique identifier for the signing job.",
+            "value": "${data.aws_signer_signing_job.this.id}"
+        },
+        "job_invoker": {
+            "description": "The entity that initiated the signing job.",
+            "value": "${data.aws_signer_signing_job.this.job_invoker}"
+        },
+        "job_owner": {
+            "description": "The owner of the signing job.",
+            "value": "${data.aws_signer_signing_job.this.job_owner}"
+        },
+        "platform_display_name": {
+            "description": "The display name of the platform used for signing.",
+            "value": "${data.aws_signer_signing_job.this.platform_display_name}"
+        },
+        "platform_id": {
+            "description": "The identifier of the platform used for signing.",
+            "value": "${data.aws_signer_signing_job.this.platform_id}"
+        },
+        "profile_name": {
+            "description": "The name of the signing profile.",
+            "value": "${data.aws_signer_signing_job.this.profile_name}"
+        },
+        "profile_version": {
+            "description": "The version of the signing profile.",
+            "value": "${data.aws_signer_signing_job.this.profile_version}"
+        },
+        "requested_by": {
+            "description": "The entity that requested the signing job.",
+            "value": "${data.aws_signer_signing_job.this.requested_by}"
+        },
+        "revocation_record": {
+            "description": "Details of the revocation, including reason, timestamp, and who revoked it.",
+            "value": "${data.aws_signer_signing_job.this.revocation_record}"
+        },
+        "signature_expires_at": {
+            "description": "The timestamp when the signature will expire.",
+            "value": "${data.aws_signer_signing_job.this.signature_expires_at}"
+        },
+        "signed_object": {
+            "description": "Information about the signed object stored in S3.",
+            "value": "${data.aws_signer_signing_job.this.signed_object}"
+        },
+        "source": {
+            "description": "Source information of the object to be signed, stored in S3.",
+            "value": "${data.aws_signer_signing_job.this.source}"
+        },
+        "status": {
+            "description": "The current status of the signing job.",
+            "value": "${data.aws_signer_signing_job.this.status}"
+        },
+        "status_reason": {
+            "description": "The reason for the current status of the signing job.",
+            "value": "${data.aws_signer_signing_job.this.status_reason}"
+        }
+    }
+}

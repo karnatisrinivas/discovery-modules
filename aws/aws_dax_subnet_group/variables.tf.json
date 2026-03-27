@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Provides a brief explanation of the subnet group’s purpose or role within the DAX cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the DAX subnet group, must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnet_ids": [
+      {
+        "description": "List of subnet IDs to associate with the DAX subnet group; must be in the same VPC.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

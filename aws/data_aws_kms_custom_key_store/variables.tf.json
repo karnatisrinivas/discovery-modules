@@ -1,0 +1,9 @@
+{
+  "variable": {
+    "custom_key_store_name": [{
+      "description": "The name to lookup for the custom key store",
+      "type": "string",
+      "nullable": false
+    }]
+  }
+}

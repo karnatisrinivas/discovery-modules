@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafregional Subscribed Rule Group"
+  node:
+    label:
+      static: "[Data] Wafregional Subscribed Rule Group"
+      template: "[Data] Wafregional Subscribed Rule Group"
+    display_type: default
+
+discovery:
+  type: data_aws_wafregional_subscribed_rule_group
+  dnd_supported: false

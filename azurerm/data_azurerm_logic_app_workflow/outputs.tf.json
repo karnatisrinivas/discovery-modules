@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Logic App Workflow.",
+            "value": "${data.azurerm_logic_app_workflow.this.id}"
+        },
+        "identity": {
+            "description": "The identity details of the Logic App Workflow, including identity IDs, principal ID, tenant ID, and type.",
+            "value": "${data.azurerm_logic_app_workflow.this.identity}"
+        },
+        "logic_app_integration_account_id": {
+            "description": "The ID of the integration account associated with the Logic App Workflow.",
+            "value": "${data.azurerm_logic_app_workflow.this.logic_app_integration_account_id}"
+        }
+    }
+}

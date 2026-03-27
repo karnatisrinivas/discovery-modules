@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Directory Service Directory
+  node:
+    label:
+      static: Directory Service Directory
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_directory_service_directory
+  dnd_supported: false
+  data_source: data_aws_directory_service_directory

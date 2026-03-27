@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the dedicated IP pool.",
+            "value": "${data.aws_sesv2_dedicated_ip_pool.this.arn}"
+        },
+        "dedicated_ips": {
+            "description": "A list of dedicated IPs in the pool, each with its warm-up percentage and status.",
+            "value": "${data.aws_sesv2_dedicated_ip_pool.this.dedicated_ips}"
+        },
+        "id": {
+            "description": "The unique identifier for the dedicated IP pool.",
+            "value": "${data.aws_sesv2_dedicated_ip_pool.this.id}"
+        },
+        "scaling_mode": {
+            "description": "The scaling mode of the dedicated IP pool, indicating how it scales its resources.",
+            "value": "${data.aws_sesv2_dedicated_ip_pool.this.scaling_mode}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the dedicated IP pool.",
+            "value": "${data.aws_sesv2_dedicated_ip_pool.this.tags}"
+        }
+    }
+}

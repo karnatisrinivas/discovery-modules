@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the usage export bucket in the project configuration",
+            "value": "${google_project_usage_export_bucket.this.id}"
+        }
+    }
+}

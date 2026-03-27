@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "all_availability_zones": [
+      {
+        "description": "A boolean value that determines whether to include all available availability zones.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclude_names": [
+      {
+        "description": "A set of availability zone names to exclude from the selection.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "exclude_zone_ids": [
+      {
+        "description": "A set of availability zone IDs to exclude from the selection.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "state": [
+      {
+        "description": "The state of the availability zones to consider, such as 'available'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

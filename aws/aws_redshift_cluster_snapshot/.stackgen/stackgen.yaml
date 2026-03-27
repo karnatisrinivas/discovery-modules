@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redshift Cluster Snapshot
+  node:
+    label:
+      static: Redshift Cluster Snapshot
+      template: Redshift Cluster Snapshot
+    display_type: default
+
+discovery:
+  type: aws_redshift_cluster_snapshot
+  dnd_supported: false
+  references:
+    cluster_identifier:
+      from: aws_redshift_cluster
+      output: cluster_identifier

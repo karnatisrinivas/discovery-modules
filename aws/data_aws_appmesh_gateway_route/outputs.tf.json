@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the App Mesh gateway route.",
+            "value": "${data.aws_appmesh_gateway_route.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the App Mesh gateway route was created.",
+            "value": "${data.aws_appmesh_gateway_route.this.created_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the App Mesh gateway route.",
+            "value": "${data.aws_appmesh_gateway_route.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the App Mesh gateway route was last updated.",
+            "value": "${data.aws_appmesh_gateway_route.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "The AWS account ID of the service mesh owner.",
+            "value": "${data.aws_appmesh_gateway_route.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "The AWS account ID of the resource owner.",
+            "value": "${data.aws_appmesh_gateway_route.this.resource_owner}"
+        },
+        "spec": {
+            "description": "The specifications for the App Mesh gateway route, including routing rules and actions.",
+            "value": "${data.aws_appmesh_gateway_route.this.spec}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the App Mesh gateway route.",
+            "value": "${data.aws_appmesh_gateway_route.this.tags}"
+        }
+    }
+}

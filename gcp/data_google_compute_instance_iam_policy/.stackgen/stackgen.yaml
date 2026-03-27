@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Compute Instance Iam Policy"
+  node:
+    label:
+      static: "[Data] Compute Instance Iam Policy"
+      template: ${instance_name}
+    display_type: default
+
+discovery:
+  type: data_google_compute_instance_iam_policy
+  dnd_supported: false
+  references:
+    instance_name:
+      from: google_compute_instance
+      output: name

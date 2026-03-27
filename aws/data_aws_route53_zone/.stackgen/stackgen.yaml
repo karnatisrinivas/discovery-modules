@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Zone"
+  node:
+    label:
+      static: "[Data] Route53 Zone"
+      template: ${name}
+    display_type: default
+
+variables:
+  private_zone:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Specifies whether the Route 53 zone is private. Set to 'true' for private zones and 'false' for public zones."
+    type: bool
+
+discovery:
+  type: data_aws_route53_zone
+  dnd_supported: false

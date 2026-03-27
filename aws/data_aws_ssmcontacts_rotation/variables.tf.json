@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) that uniquely identifies the AWS SSM contacts rotation.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

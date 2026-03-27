@@ -1,0 +1,76 @@
+{
+    "output": {
+        "container_recipe_arn": {
+            "description": "The Amazon Resource Name (ARN) of the container recipe associated with the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.container_recipe_arn}"
+        },
+        "date_created": {
+            "description": "The date when the image pipeline was created.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.date_created}"
+        },
+        "date_last_run": {
+            "description": "The date when the image pipeline was last run.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.date_last_run}"
+        },
+        "date_next_run": {
+            "description": "The date when the image pipeline is scheduled to run next.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.date_next_run}"
+        },
+        "date_updated": {
+            "description": "The date when the image pipeline was last updated.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.date_updated}"
+        },
+        "description": {
+            "description": "A brief description of the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.description}"
+        },
+        "distribution_configuration_arn": {
+            "description": "The ARN of the distribution configuration associated with the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.distribution_configuration_arn}"
+        },
+        "enhanced_image_metadata_enabled": {
+            "description": "Indicates if enhanced image metadata is enabled for the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.enhanced_image_metadata_enabled}"
+        },
+        "id": {
+            "description": "The unique identifier of the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.id}"
+        },
+        "image_recipe_arn": {
+            "description": "The ARN of the image recipe associated with the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.image_recipe_arn}"
+        },
+        "image_scanning_configuration": {
+            "description": "Configuration details for image scanning in the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.image_scanning_configuration}"
+        },
+        "image_tests_configuration": {
+            "description": "Configuration details for image tests, including whether tests are enabled and the timeout period.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.image_tests_configuration}"
+        },
+        "infrastructure_configuration_arn": {
+            "description": "The ARN of the infrastructure configuration associated with the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.infrastructure_configuration_arn}"
+        },
+        "name": {
+            "description": "The name of the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.name}"
+        },
+        "platform": {
+            "description": "The platform for which the image is created (e.g., Windows or Linux).",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.platform}"
+        },
+        "schedule": {
+            "description": "Details of the schedule on which the image pipeline runs, including start conditions and expressions.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.schedule}"
+        },
+        "status": {
+            "description": "The current status of the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the image pipeline.",
+            "value": "${data.aws_imagebuilder_image_pipeline.this.tags}"
+        }
+    }
+}

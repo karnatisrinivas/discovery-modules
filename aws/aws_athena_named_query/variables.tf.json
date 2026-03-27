@@ -1,0 +1,40 @@
+{
+    "variable": {
+        "database": [
+            {
+                "description": "The database to which the query belongs.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "query": [
+            {
+                "description": "The query string.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "description": [
+            {
+                "description": "The description for the named query.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "name": [
+            {
+                "description": "The name of the query.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "workgroup": [
+            {
+                "default": "primary",
+                "description": "The workgroup to which the query belongs. Defaults to 'primary'",
+                "type": "string",
+                "nullable": true
+            }
+        ]
+    }
+}

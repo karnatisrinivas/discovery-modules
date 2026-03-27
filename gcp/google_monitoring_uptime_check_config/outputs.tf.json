@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the uptime check resource within Google Monitoring",
+            "value": "${google_monitoring_uptime_check_config.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the uptime check configuration for easy identification",
+            "value": "${google_monitoring_uptime_check_config.this.name}"
+        },
+        "uptime_check_id": {
+            "description": "System-generated ID used for managing the uptime check configuration in APIs",
+            "value": "${google_monitoring_uptime_check_config.this.uptime_check_id}"
+        }
+    }
+}

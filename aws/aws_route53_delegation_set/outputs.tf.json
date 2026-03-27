@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN of the Route 53 Delegation Set.",
+            "value": "${aws_route53_delegation_set.this.arn}"
+        }
+    }
+}

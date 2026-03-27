@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Glue Catalog Database.",
+            "value": "${aws_glue_catalog_database.this.arn}"
+        },
+        "catalog_id": {
+            "description": "The ID of the Glue Catalog to which the database belongs.",
+            "value": "${aws_glue_catalog_database.this.catalog_id}"
+        },
+        "id": {
+            "description": "The name or unique identifier of the Glue Catalog Database.",
+            "value": "${aws_glue_catalog_database.this.id}"
+        },
+        "name": {
+            "description": "The name of the Glue Catalog Database.",
+            "value": "${aws_glue_catalog_database.this.name}"
+        }
+    }
+}

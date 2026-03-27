@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "The language code to use for user interface and API responses. If not specified, defaults to English.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "portfolio_id": [
+      {
+        "description": "The unique identifier for the portfolio to which the constraint will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "product_id": [
+      {
+        "description": "The unique identifier for the product within the portfolio. If not specified, constraints apply to all products in the portfolio.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

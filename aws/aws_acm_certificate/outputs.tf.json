@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API calls",
+            "value": "${aws_acm_certificate.this.arn}"
+        },
+        "domain_validation_options": {
+            "description": "Details for validating the domain ownership for the certificate",
+            "value": "${aws_acm_certificate.this.domain_validation_options}"
+        },
+        "id": {
+            "description": "Unique identifier for tracking the certificate resource",
+            "value": "${aws_acm_certificate.this.id}"
+        },
+        "not_after": {
+            "description": "Expiration date indicating when the certificate becomes invalid",
+            "value": "${aws_acm_certificate.this.not_after}"
+        },
+        "not_before": {
+            "description": "Start date indicating when the certificate becomes valid",
+            "value": "${aws_acm_certificate.this.not_before}"
+        },
+        "pending_renewal": {
+            "description": "Flag indicating if the certificate renewal is in progress",
+            "value": "${aws_acm_certificate.this.pending_renewal}"
+        },
+        "renewal_eligibility": {
+            "description": "Indicates whether the certificate is eligible for automatic renewal",
+            "value": "${aws_acm_certificate.this.renewal_eligibility}"
+        },
+        "renewal_summary": {
+            "description": "Summary of the renewal status and associated actions",
+            "value": "${aws_acm_certificate.this.renewal_summary}"
+        },
+        "status": {
+            "description": "Current operational state of the certificate",
+            "value": "${aws_acm_certificate.this.status}"
+        },
+        "tags_all": {
+            "description": "All tags applied to the certificate for organizational purposes",
+            "value": "${aws_acm_certificate.this.tags_all}"
+        },
+        "validation_emails": {
+            "description": "Email addresses used for domain validation process",
+            "value": "${aws_acm_certificate.this.validation_emails}"
+        }
+    }
+}

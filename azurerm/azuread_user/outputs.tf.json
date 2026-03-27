@@ -1,0 +1,40 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure AD user.",
+            "value": "${azuread_user.this.id}"
+        },
+        "mail_nickname": {
+            "description": "The mail alias or nickname for the Azure AD user.",
+            "value": "${azuread_user.this.mail_nickname}"
+        },
+        "object_id": {
+            "description": "The unique object ID of the Azure AD user.",
+            "value": "${azuread_user.this.object_id}"
+        },
+        "onpremises_distinguished_name": {
+            "description": "The distinguished name of the user in an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_distinguished_name}"
+        },
+        "onpremises_domain_name": {
+            "description": "The domain name of the user in an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_domain_name}"
+        },
+        "onpremises_immutable_id": {
+            "description": "The immutable ID of the user for synchronization with an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_immutable_id}"
+        },
+        "onpremises_sam_account_name": {
+            "description": "The SAM account name of the user in an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_sam_account_name}"
+        },
+        "onpremises_security_identifier": {
+            "description": "The security identifier (SID) of the user in an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_security_identifier}"
+        },
+        "onpremises_user_principal_name": {
+            "description": "The user principal name (UPN) of the user in an on-premises directory.",
+            "value": "${azuread_user.this.onpremises_user_principal_name}"
+        }
+    }
+}

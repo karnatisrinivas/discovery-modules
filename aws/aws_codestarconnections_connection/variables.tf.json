@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "host_arn": [
+      {
+        "description": "Specifies the ARN of the host resource used for the connection. Must be a valid ARN of an existing AWS CodeStar Connections host.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the CodeStar Connections connection, which must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "provider_type": [
+      {
+        "description": "Specifies the authentication provider type for the connection, such as Bitbucket or GitHub.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize the resource, supporting up to 50 tags.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

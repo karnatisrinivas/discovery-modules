@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "resource_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS resource to which the policy will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

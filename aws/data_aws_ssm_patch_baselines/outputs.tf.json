@@ -1,0 +1,8 @@
+{
+    "output": {
+        "baseline_identities": {
+            "description": "A list of objects representing AWS SSM patch baselines, each including details such as the description, ID, name, whether it is the default baseline, and the operating system it applies to.",
+            "value": "${data.aws_ssm_patch_baselines.this.baseline_identities}"
+        }
+    }
+}

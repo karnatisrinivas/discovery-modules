@@ -1,0 +1,52 @@
+{
+    "output": {
+        "active_directory_configuration": {
+            "description": "Details about the Active Directory configuration for the storage virtual machine, including NetBIOS name and self-managed Active Directory settings.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.active_directory_configuration}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.arn}"
+        },
+        "creation_time": {
+            "description": "The date and time when the storage virtual machine was created.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.creation_time}"
+        },
+        "endpoints": {
+            "description": "The network endpoints for accessing the storage virtual machine via different protocols like iSCSI, NFS, SMB, and management interfaces.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.endpoints}"
+        },
+        "file_system_id": {
+            "description": "The ID of the file system associated with the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.file_system_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.id}"
+        },
+        "lifecycle_status": {
+            "description": "The current status of the storage virtual machine, indicating its state in the lifecycle.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.lifecycle_status}"
+        },
+        "lifecycle_transition_reason": {
+            "description": "The reason for the last lifecycle status transition of the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.lifecycle_transition_reason}"
+        },
+        "name": {
+            "description": "The name assigned to the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.name}"
+        },
+        "subtype": {
+            "description": "The subtype of the storage virtual machine, defining its specific characteristics or configuration.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.subtype}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the storage virtual machine, used for organization and management.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.tags}"
+        },
+        "uuid": {
+            "description": "The universally unique identifier (UUID) for the storage virtual machine.",
+            "value": "${data.aws_fsx_ontap_storage_virtual_machine.this.uuid}"
+        }
+    }
+}

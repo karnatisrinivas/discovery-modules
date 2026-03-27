@@ -1,0 +1,52 @@
+{
+    "output": {
+        "accounts": {
+            "description": "A list of accounts within the AWS organization, including details like ARN, email, ID, name, and status.",
+            "value": "${data.aws_organizations_organization.this.accounts}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) associated with the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.arn}"
+        },
+        "aws_service_access_principals": {
+            "description": "A set of AWS service principals that have access to the organization.",
+            "value": "${data.aws_organizations_organization.this.aws_service_access_principals}"
+        },
+        "enabled_policy_types": {
+            "description": "A set of policy types that are enabled within the organization.",
+            "value": "${data.aws_organizations_organization.this.enabled_policy_types}"
+        },
+        "feature_set": {
+            "description": "The feature set enabled for the AWS organization, such as 'ALL' or 'CONSOLIDATED_BILLING'.",
+            "value": "${data.aws_organizations_organization.this.feature_set}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.id}"
+        },
+        "master_account_arn": {
+            "description": "The ARN of the master account in the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.master_account_arn}"
+        },
+        "master_account_email": {
+            "description": "The email address associated with the master account of the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.master_account_email}"
+        },
+        "master_account_id": {
+            "description": "The account ID of the master account in the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.master_account_id}"
+        },
+        "master_account_name": {
+            "description": "The name of the master account in the AWS organization.",
+            "value": "${data.aws_organizations_organization.this.master_account_name}"
+        },
+        "non_master_accounts": {
+            "description": "A list of non-master accounts in the organization, with details like ARN, email, ID, name, and status.",
+            "value": "${data.aws_organizations_organization.this.non_master_accounts}"
+        },
+        "roots": {
+            "description": "A list of root entities in the organization, each containing information like ARN, ID, name, and associated policy types.",
+            "value": "${data.aws_organizations_organization.this.roots}"
+        }
+    }
+}

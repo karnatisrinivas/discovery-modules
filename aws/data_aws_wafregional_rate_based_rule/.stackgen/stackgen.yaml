@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafregional Rate Based Rule"
+  node:
+    label:
+      static: "[Data] Wafregional Rate Based Rule"
+      template: "[Data] Wafregional Rate Based Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_wafregional_rate_based_rule
+  dnd_supported: false

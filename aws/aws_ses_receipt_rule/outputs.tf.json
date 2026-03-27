@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The name of the receipt rule",
+            "value": "aws_ses_receipt_rule.this.arn"
+        }
+    }
+}

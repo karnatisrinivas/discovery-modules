@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Virtual Node"
+  node:
+    label:
+      static: "[Data] Appmesh Virtual Node"
+      template: "[Data] Appmesh Virtual Node"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_virtual_node
+  dnd_supported: false

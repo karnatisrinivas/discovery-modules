@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "authentication_profile_name": [
+            {
+                "type": "string",
+                "nullable": true,
+                "description": "The name of the authentication profile."
+            }
+        ],
+        "authentication_profile_content": [
+            {
+                "type": "string",
+                "nullable": true,
+                "description": "The content of the authentication profile in JSON format. The maximum length of the JSON string is determined by a quota for your account."
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appconfig Configuration Profiles"
+  node:
+    label:
+      static: "[Data] Appconfig Configuration Profiles"
+      template: "[Data] Appconfig Configuration Profiles"
+    display_type: default
+
+discovery:
+  type: data_aws_appconfig_configuration_profiles
+  dnd_supported: false

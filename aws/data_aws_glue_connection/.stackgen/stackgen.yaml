@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Glue Connection"
+  node:
+    label:
+      static: "[Data] Glue Connection"
+      template: "[Data] Glue Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_glue_connection
+  dnd_supported: false

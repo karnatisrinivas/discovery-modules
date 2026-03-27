@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "load_balancer_type": [
+      {
+        "description": "Specifies the type of load balancer to create, such as 'application' or 'network'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

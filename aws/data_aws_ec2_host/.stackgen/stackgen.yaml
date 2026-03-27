@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Host"
+  node:
+    label:
+      static: "[Data] Ec2 Host"
+      template: "[Data] Ec2 Host"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_host
+  dnd_supported: false

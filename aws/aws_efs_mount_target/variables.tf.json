@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "file_system_id": [
+      {
+        "description": "Specifies the ID of the EFS file system for which the mount target will be created; must be an existing file system ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "Specifies the IPv4 address within the subnet for the mount target. Must be a valid, unused address within the subnet's CIDR block.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_groups": [
+      {
+        "description": "Specifies the IDs of the security groups to associate with the mount target. At least one security group must be specified.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "subnet_id": [
+      {
+        "description": "ID of the subnet in which to create the mount target; must be within the VPC of the file system.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeouts for creating, updating, and deleting the EFS mount target, with constraints on format as a map including keys 'create', 'update', and 'delete', each accepting a duration string (e.g., \"30m\" for 30 minutes).",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

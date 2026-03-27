@@ -1,0 +1,84 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for use in IAM policies and API operations",
+            "value": "${aws_vpn_connection.this.arn}"
+        },
+        "core_network_arn": {
+            "description": "ARN of the core network associated with the VPN connection",
+            "value": "${aws_vpn_connection.this.core_network_arn}"
+        },
+        "core_network_attachment_arn": {
+            "description": "ARN of the core network attachment linked to the VPN connection",
+            "value": "${aws_vpn_connection.this.core_network_attachment_arn}"
+        },
+        "customer_gateway_configuration": {
+            "description": "XML configuration for the customer gateway to establish VPN tunnels",
+            "value": "${aws_vpn_connection.this.customer_gateway_configuration}"
+        },
+        "id": {
+            "description": "Unique identifier for the VPN connection resource",
+            "value": "${aws_vpn_connection.this.id}"
+        },
+        "preshared_key_arn": {
+            "description": "ARN of the preshared key used for VPN authentication",
+            "value": "${aws_vpn_connection.this.preshared_key_arn}"
+        },
+        "routes": {
+            "description": "List of routes defined for the VPN connection",
+            "value": "${aws_vpn_connection.this.routes}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the VPN connection resource",
+            "value": "${aws_vpn_connection.this.tags_all}"
+        },
+        "transit_gateway_attachment_id": {
+            "description": "ID of the attachment linking the VPN to the transit gateway",
+            "value": "${aws_vpn_connection.this.transit_gateway_attachment_id}"
+        },
+        "tunnel1_address": {
+            "description": "Public IP address of the first VPN tunnel",
+            "value": "${aws_vpn_connection.this.tunnel1_address}"
+        },
+        "tunnel1_bgp_asn": {
+            "description": "BGP ASN for the first VPN tunnel used in routing",
+            "value": "${aws_vpn_connection.this.tunnel1_bgp_asn}"
+        },
+        "tunnel1_bgp_holdtime": {
+            "description": "BGP hold time for the first VPN tunnel in seconds",
+            "value": "${aws_vpn_connection.this.tunnel1_bgp_holdtime}"
+        },
+        "tunnel1_cgw_inside_address": {
+            "description": "Internal IP address for the customer gateway on tunnel 1",
+            "value": "${aws_vpn_connection.this.tunnel1_cgw_inside_address}"
+        },
+        "tunnel1_vgw_inside_address": {
+            "description": "Internal IP address for the virtual gateway on tunnel 1",
+            "value": "${aws_vpn_connection.this.tunnel1_vgw_inside_address}"
+        },
+        "tunnel2_address": {
+            "description": "Public IP address of the second VPN tunnel",
+            "value": "${aws_vpn_connection.this.tunnel2_address}"
+        },
+        "tunnel2_bgp_asn": {
+            "description": "BGP ASN for the second VPN tunnel used in routing",
+            "value": "${aws_vpn_connection.this.tunnel2_bgp_asn}"
+        },
+        "tunnel2_bgp_holdtime": {
+            "description": "BGP hold time for the second VPN tunnel in seconds",
+            "value": "${aws_vpn_connection.this.tunnel2_bgp_holdtime}"
+        },
+        "tunnel2_cgw_inside_address": {
+            "description": "Internal IP address for the customer gateway on tunnel 2",
+            "value": "${aws_vpn_connection.this.tunnel2_cgw_inside_address}"
+        },
+        "tunnel2_vgw_inside_address": {
+            "description": "Internal IP address for the virtual gateway on tunnel 2",
+            "value": "${aws_vpn_connection.this.tunnel2_vgw_inside_address}"
+        },
+        "vgw_telemetry": {
+            "description": "Diagnostic information about the virtual gateway performance",
+            "value": "${aws_vpn_connection.this.vgw_telemetry}"
+        }
+    }
+}

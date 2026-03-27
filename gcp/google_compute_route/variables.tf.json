@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Optional identifier for the resource, used for referencing other resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dest_range": [
+      {
+        "description": "Specifies the destination IP range in CIDR format for the route. Must be a valid CIDR block.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the route resource, must be unique within the project and adhere to naming constraints.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "The network to which this route applies. Must be a valid network resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "next_hop_gateway": [
+      {
+        "description": "Specifies the gateway for the next hop. Use a valid gateway resource identifier.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_ilb": [
+      {
+        "description": "Internal load balancer to use as the next hop, if applicable. Must be a valid resource identifier.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_instance": [
+      {
+        "description": "Specifies the instance to use as the next hop. Provide a valid instance resource identifier.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_instance_zone": [
+      {
+        "description": "The zone of the next hop instance. Must match the zone of the specified instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_ip": [
+      {
+        "description": "The IP address of the next hop. Must be a valid IP address within the same network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_vpn_tunnel": [
+      {
+        "description": "Specifies the VPN tunnel to use as the next hop. Must reference a valid VPN tunnel resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Defines the priority of the route. Lower values indicate higher priority. Must be a non-negative number.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A list of instance tags that this route applies to. Tags must be strings and unique within the list.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies custom create and delete operation timeouts. Provide values as strings in duration format (e.g., '30m').",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

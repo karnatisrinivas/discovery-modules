@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Access Key
+  node:
+    label:
+      static: IAM Access Key
+      template: IAM Access Key
+    display_type: default
+
+variables:
+  status:
+    description: The status of the access key.
+    type: string
+    options: 
+      - Active
+      - Inactive
+    ui_control: select
+
+discovery:
+  type: aws_iam_access_key
+  dnd_supported: false
+  references:
+    user:
+      from: aws_iam_user
+      output: name

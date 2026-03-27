@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Multicast Domain"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Multicast Domain"
+      template: "[Data] Ec2 Transit Gateway Multicast Domain"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_multicast_domain
+  dnd_supported: false

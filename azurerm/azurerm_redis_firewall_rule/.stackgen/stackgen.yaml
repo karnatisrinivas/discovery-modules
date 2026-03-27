@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redis Cache Firewall Rule
+  node:
+    label:
+      static: Redis Cache Firewall Rule
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_redis_firewall_rule
+  dnd_supported: false
+  references:
+    redis_cache_name:
+      from: azurerm_redis
+      output: name

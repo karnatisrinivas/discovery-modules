@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Neptune Parameter Group
+  node:
+    label:
+      static: Neptune Parameter Group
+      template: ${family}
+    display_type: default
+
+discovery:
+  type: aws_neptune_parameter_group
+  dnd_supported: false

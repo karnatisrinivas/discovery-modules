@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "enable_monitoring": [
+      {
+        "description": "Indicates whether detailed monitoring is enabled for the instance. When true, detailed monitoring is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "iam_instance_profile": [
+      {
+        "description": "The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "image_id": [
+      {
+        "description": "The ID of the Amazon Machine Image (AMI) to use for the instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_type": [
+      {
+        "description": "The type of instance to start, such as t2.micro or m5.large.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "placement_tenancy": [
+      {
+        "description": "The tenancy of the instance, which can be 'default' for shared tenancy or 'dedicated' for single-tenant hardware.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_groups": [
+      {
+        "description": "A set of security group names or IDs to associate with the instance.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "spot_price": [
+      {
+        "description": "The maximum hourly price you're willing to pay for the Spot Instances.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "user_data": [
+      {
+        "description": "The user data to provide when launching the instance, usually used for configuration scripts.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "user_data_base64": [
+      {
+        "description": "The base64-encoded user data to provide when launching the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ebs_block_device": [
+      {
+        "description": "Configuration for EBS block devices to attach to the instance.",
+        "nullable": true,
+        "type": "list(object({delete_on_termination:bool,device_name:string,encrypted:bool,iops:number,no_device:bool,snapshot_id:string,throughput:number,volume_size:number,volume_type:string}))"
+      }
+    ],
+    "ephemeral_block_device": [
+      {
+        "description": "Configuration for ephemeral block devices to attach to the instance.",
+        "nullable": true,
+        "type": "list(object({device_name:string,no_device:bool,virtual_name:string}))"
+      }
+    ],
+    "metadata_options": [
+      {
+        "description": "Configuration for instance metadata options.",
+        "nullable": true,
+        "type": "list(object({http_endpoint:string,http_put_response_hop_limit:number,http_tokens:string}))"
+      }
+    ],
+    "root_block_device": [
+      {
+        "description": "Configuration for the root block device to attach to the instance.",
+        "nullable": true,
+        "type": "list(object({delete_on_termination:bool,encrypted:bool,iops:number,throughput:number,volume_size:number,volume_type:string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the launch configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "The prefix name of the launch configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

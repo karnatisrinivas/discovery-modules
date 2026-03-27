@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the load balancer listener rule.",
+            "value": "${data.aws_lb_listener_rule.this.arn}"
+        },
+        "listener_arn": {
+            "description": "The ARN of the listener to which the rule is associated.",
+            "value": "${data.aws_lb_listener_rule.this.listener_arn}"
+        },
+        "priority": {
+            "description": "The priority of the rule, determining the order in which rules are evaluated.",
+            "value": "${data.aws_lb_listener_rule.this.priority}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the load balancer listener rule.",
+            "value": "${data.aws_lb_listener_rule.this.tags}"
+        }
+    }
+}

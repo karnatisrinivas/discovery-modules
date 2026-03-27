@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpc Peering Connection"
+  node:
+    label:
+      static: "[Data] Vpc Peering Connection"
+      template: "[Data] Vpc Peering Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_vpc_peering_connection
+  dnd_supported: false

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the Amazon Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "hierarchy_group_id": [
+      {
+        "description": "The identifier for the specific user hierarchy group. This can be left undefined to create a new group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the user hierarchy group. This is used to identify the group within the Connect instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

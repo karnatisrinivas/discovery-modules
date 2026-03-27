@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "namespace_name": [
+      {
+        "description": "The unique name assigned to the Redshift Serverless Namespace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

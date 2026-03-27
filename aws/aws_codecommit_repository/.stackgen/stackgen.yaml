@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Codecommit Repository
+  node:
+    label:
+      static: Codecommit Repository
+      template: ${repository_name}
+    display_type: default
+
+discovery:
+  type: aws_codecommit_repository
+  dnd_supported: false
+  data_source: data_aws_codecommit_repository
+  references:
+    kms_key_id:
+      from: aws_kms_key
+      output: arn

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_redshift_cluster.this.arn}"
+        },
+        "cluster_identifier": {
+            "description": "The value of the cluster_identifier output",
+            "value": "${aws_redshift_cluster.this.cluster_identifier}"
+        }
+    }
+}

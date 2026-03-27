@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance Group Manager
+  node:
+    label:
+      static: Compute Instance Group Manager
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_group_manager
+  dnd_supported: false
+  references:
+    base_instance_name:
+      from: google_compute_instance
+      output: name
+    target_pools:
+      from: google_compute_target_pool
+      output: self_link

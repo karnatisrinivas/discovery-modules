@@ -1,0 +1,20 @@
+{
+    "output": {
+        "account_id": {
+            "description": "The AWS account ID associated with the current credentials.",
+            "value": "${data.aws_caller_identity.this.account_id}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) associated with the current AWS identity.",
+            "value": "${data.aws_caller_identity.this.arn}"
+        },
+        "id": {
+            "description": "An identifier that combines the AWS account ID and user ID.",
+            "value": "${data.aws_caller_identity.this.id}"
+        },
+        "user_id": {
+            "description": "The unique identifier for the IAM user or role making the call.",
+            "value": "${data.aws_caller_identity.this.user_id}"
+        }
+    }
+}

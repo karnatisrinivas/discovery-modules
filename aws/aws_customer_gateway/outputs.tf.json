@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for use in API calls and IAM policies",
+            "value": "${aws_customer_gateway.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the customer gateway resource",
+            "value": "${aws_customer_gateway.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated set of tags applied to the customer gateway",
+            "value": "${aws_customer_gateway.this.tags_all}"
+        }
+    }
+}

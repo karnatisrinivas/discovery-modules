@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Public IP"
+  node:
+    label:
+      static: "[Data] Public IP"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_public_ip
+  dnd_supported: false

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Log Analytics Solution
+  node:
+    label:
+      static: Log Analytics Solution
+      template: ${solution_name}
+    display_type: default
+
+discovery:
+  type: azurerm_log_analytics_solution
+  dnd_supported: false
+  references:
+    workspace_resource_id:
+      from: azurerm_log_analytics_workspace
+      output: log_analytics_workspace_resource_id
+    workspace_name:
+      from: azurerm_log_analytics_workspace
+      output: log_analytics_workspace_name

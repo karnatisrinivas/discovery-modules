@@ -1,0 +1,30 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Network Gateway
+  node:
+    label:
+      static: Virtual Network Gateway
+      template: ${name}
+    display_type: default
+
+variables:
+  vpn_type:
+    type: string
+    options: 
+      - RouteBased
+      - PolicyBased
+    ui_control: select
+    description: Specifies the type of VPN (e.g., PolicyBased or RouteBased).
+  type:
+    description: The type of the virtual network gateway (e.g., VPN or ExpressRoute).
+    type: string
+    options: 
+      - Vpn
+      - ExpressRoute
+    ui_control: select
+
+discovery:
+  type: azurerm_virtual_network_gateway
+  dnd_supported: false

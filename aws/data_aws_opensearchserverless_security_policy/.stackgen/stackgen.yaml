@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Opensearchserverless Security Policy"
+  node:
+    label:
+      static: "[Data] Opensearchserverless Security Policy"
+      template: "[Data] Opensearchserverless Security Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_opensearchserverless_security_policy
+  dnd_supported: false

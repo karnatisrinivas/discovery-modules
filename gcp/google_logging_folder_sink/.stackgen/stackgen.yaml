@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Logging Folder Sink
+  node:
+    label:
+      static: Logging Folder Sink
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_logging_folder_sink
+  dnd_supported: false
+  references:
+    folder:
+      from: google_folder
+      output: name

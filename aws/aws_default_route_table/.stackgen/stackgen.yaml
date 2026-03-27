@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Default Route Table
+  node:
+    label:
+      static: Default Route Table
+      template: ${default_route_table_id}
+    display_type: default
+
+discovery:
+  type: aws_default_route_table
+  dnd_supported: false
+  references:
+    default_route_table_id:
+      from: aws_vpc
+      output: default_route_table_id

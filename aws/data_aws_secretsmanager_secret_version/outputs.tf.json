@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the secret version.",
+            "value": "${data.aws_secretsmanager_secret_version.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the secret version was created.",
+            "value": "${data.aws_secretsmanager_secret_version.this.created_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the secret version.",
+            "value": "${data.aws_secretsmanager_secret_version.this.id}"
+        },
+        "version_id": {
+            "description": "The unique version identifier of the secret.",
+            "value": "${data.aws_secretsmanager_secret_version.this.version_id}"
+        },
+        "version_stages": {
+            "description": "The list of staging labels currently attached to the version.",
+            "value": "${data.aws_secretsmanager_secret_version.this.version_stages}"
+        }
+    }
+}

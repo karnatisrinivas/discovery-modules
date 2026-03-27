@@ -1,0 +1,49 @@
+{
+    "variable": {
+        "description": [
+            {
+                "description": "The description of the workgroup.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "force_destroy": [
+            {
+                "default": false,
+                "description": "Option to delete the workgroup and its contents even if the workgroup contains any named queries.",
+                "nullable": false,
+                "type": "bool"
+            }
+        ],
+        "name": [
+            {
+                "description": "The name of the workgroup.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "state": [
+            {
+                "default": "ENABLED",
+                "description": "The state of the workgroup.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "tags": [
+            {
+                "default": {},
+                "description": "A map of tags to apply to the resources",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "configuration": [
+            {
+                "description": "The configuration of the workgroup.",
+                "nullable": false,
+                "type": "list(object({requester_pays_enabled: optional(bool), bytes_scanned_cutoff_per_query: optional(number), enforce_workgroup_configuration: optional(bool), execution_role:optional(string), publish_cloudwatch_metrics_enabled:optional(bool), engine_version: list(object({selected_engine_version: string})) , result_configuration:list(object({ encryption_configuration:list(object({encryption_option:string, kms_key_arn:string})), acl_configuration:list(object({s3_acl_option:string})), output_location:string, expected_bucket_owner:string }))}))"
+            }
+        ]
+    }
+}

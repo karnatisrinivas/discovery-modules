@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "default_only": [
+      {
+        "description": "Indicates whether to only include the default version for the RDS engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the type of the database engine, such as MySQL, PostgreSQL, etc.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "has_major_target": [
+      {
+        "description": "Indicates if there is a major version upgrade available for the engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "has_minor_target": [
+      {
+        "description": "Indicates if there is a minor version upgrade available for the engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "include_all": [
+      {
+        "description": "Determines whether to include all available versions for the RDS engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "latest": [
+      {
+        "description": "Indicates whether to select the latest version available for the RDS engine.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "preferred_major_targets": [
+      {
+        "description": "A list of preferred major versions to which the engine can be upgraded.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "preferred_upgrade_targets": [
+      {
+        "description": "A list of preferred versions for upgrading the engine.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "preferred_versions": [
+      {
+        "description": "A list of preferred specific versions of the engine to be used.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

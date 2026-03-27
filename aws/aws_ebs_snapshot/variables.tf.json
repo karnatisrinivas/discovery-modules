@@ -1,0 +1,54 @@
+{
+    "variable": {
+        "volume_id": [
+            {
+                "type": "string",
+                "description": "The ID of the volume to snapshot",
+                "nullable": false
+            }
+        ],
+        "description": [
+            {
+                "type": "string",   
+                "description": "The description of the snapshot",
+                "nullable": true
+            }
+        ],
+        "outpost_arn": [
+            {
+                "type": "string",
+                "description": "The ARN of the outpost to snapshot",
+                "nullable": true
+            }
+        ],
+        "storage_tier": [
+            {
+                "type": "string",
+                "description": "The storage tier of the snapshot",
+                "nullable": true,
+                "default": "standard"
+            }
+        ],
+        "permanent_restore": [
+            {
+                "type": "bool",
+                "description": "Whether to restore the snapshot permanently",
+                "nullable": true
+            }
+        ],
+        "temporary_restore_days": [
+            {
+                "type": "number",
+                "description": "The number of days to restore the snapshot temporarily",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "The tags of the snapshot",
+                "nullable": true
+            }
+        ]
+    }
+}

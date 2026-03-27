@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for detecting changes in IAM policy bindings for consistency checks",
+            "value": "${google_secret_manager_secret_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member binding on the secret resource",
+            "value": "${google_secret_manager_secret_iam_member.this.id}"
+        }
+    }
+}

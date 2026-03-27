@@ -1,0 +1,40 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Node Pool
+  node:
+    label:
+      static: Node Pool
+      template: ${name}
+    display_type: default
+
+variables:
+  management:
+    description: "Node management configuration, wherein auto-repair and auto-upgrade is configured."
+    attributes: 
+      auto_repair: 
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Auto Repair
+        type: select
+      auto_upgrade: 
+        label: Auto Upgrade
+        type: select
+        options: 
+          - true
+          - false
+        ui_control: select
+
+discovery:
+  type: google_container_node_pool
+  dnd_supported: false
+  references:
+    cluster:
+      from: google_container_cluster
+      output: name
+    service_account:
+      from: google_service_account_composite
+      output: email

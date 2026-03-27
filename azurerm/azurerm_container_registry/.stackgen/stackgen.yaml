@@ -1,0 +1,32 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Container Registry
+  node:
+    label:
+      static: Container Registry
+      template: ${name}
+    display_type: default
+
+variables:
+  network_rule_bypass_option:
+    ui_control: select
+    description: Options to bypass network rules.
+    type: string
+    options: 
+      - None
+      - AzureServices
+  sku:
+    description: The SKU of the container registry.
+    type: string
+    options: 
+      - Basic
+      - Standard
+      - Premium
+    ui_control: select
+
+discovery:
+  type: azurerm_container_registry
+  dnd_supported: false
+  data_source: data_azurerm_container_registry

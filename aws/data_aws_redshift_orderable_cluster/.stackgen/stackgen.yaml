@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshift Orderable Cluster"
+  node:
+    label:
+      static: "[Data] Redshift Orderable Cluster"
+      template: "[Data] Redshift Orderable Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_redshift_orderable_cluster
+  dnd_supported: false

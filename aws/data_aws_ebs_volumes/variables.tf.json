@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A map of key-value pairs to assign to the AWS EBS volumes for identification and organization purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

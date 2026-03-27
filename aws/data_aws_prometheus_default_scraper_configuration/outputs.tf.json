@@ -1,0 +1,8 @@
+{
+    "output": {
+        "configuration": {
+            "description": "",
+            "value": "${data.aws_prometheus_default_scraper_configuration.this.configuration}"
+        }
+    }
+}

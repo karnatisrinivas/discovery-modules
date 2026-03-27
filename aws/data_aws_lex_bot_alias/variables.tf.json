@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "bot_name": [
+      {
+        "description": "The name of the Amazon Lex bot that the alias points to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the alias for the Amazon Lex bot.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

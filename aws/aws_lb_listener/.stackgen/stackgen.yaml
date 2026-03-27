@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Load Balancer Listener
+  node:
+    label:
+      static: Load Balancer Listener
+      template: ${port}
+    display_type: default
+
+variables:
+  protocol:
+    options: 
+      - HTTP
+      - HTTPS
+      - TCP
+      - UDP
+      - TLS
+    ui_control: select
+    description: The protocol for connections from clients to the load balancer
+    type: string
+
+discovery:
+  type: aws_lb_listener
+  dnd_supported: false
+  data_source: data_aws_lb_listener
+  references:
+    load_balancer_arn:
+      from: aws_lb
+      output: arn

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Partition"
+  node:
+    label:
+      static: "[Data] Partition"
+      template: "[Data] Partition"
+    display_type: default
+
+discovery:
+  type: data_aws_partition
+  dnd_supported: false

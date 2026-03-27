@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Backup Plan"
+  node:
+    label:
+      static: "[Data] Backup Plan"
+      template: "[Data] Backup Plan"
+    display_type: default
+
+discovery:
+  type: data_aws_backup_plan
+  dnd_supported: false

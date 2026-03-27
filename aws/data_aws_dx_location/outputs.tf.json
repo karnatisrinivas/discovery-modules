@@ -1,0 +1,24 @@
+{
+    "output": {
+        "available_macsec_port_speeds": {
+            "description": "List of MACsec-enabled port speeds that are available at the Direct Connect location.",
+            "value": "${data.aws_dx_location.this.available_macsec_port_speeds}"
+        },
+        "available_port_speeds": {
+            "description": "List of port speeds that are available at the Direct Connect location.",
+            "value": "${data.aws_dx_location.this.available_port_speeds}"
+        },
+        "available_providers": {
+            "description": "List of network providers that offer services at the Direct Connect location.",
+            "value": "${data.aws_dx_location.this.available_providers}"
+        },
+        "id": {
+            "description": "The unique identifier for the Direct Connect location.",
+            "value": "${data.aws_dx_location.this.id}"
+        },
+        "location_name": {
+            "description": "The name of the Direct Connect location.",
+            "value": "${data.aws_dx_location.this.location_name}"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the FSx ONTAP file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.arn}"
+        },
+        "automatic_backup_retention_days": {
+            "description": "The number of days to retain automatic backups.",
+            "value": "${data.aws_fsx_ontap_file_system.this.automatic_backup_retention_days}"
+        },
+        "daily_automatic_backup_start_time": {
+            "description": "The time of day when automatic backups are scheduled to start.",
+            "value": "${data.aws_fsx_ontap_file_system.this.daily_automatic_backup_start_time}"
+        },
+        "deployment_type": {
+            "description": "The type of deployment for the file system, such as MULTI_AZ or SINGLE_AZ.",
+            "value": "${data.aws_fsx_ontap_file_system.this.deployment_type}"
+        },
+        "disk_iops_configuration": {
+            "description": "The configuration for disk IOPS (Input/Output Operations Per Second), including IOPS value and mode.",
+            "value": "${data.aws_fsx_ontap_file_system.this.disk_iops_configuration}"
+        },
+        "dns_name": {
+            "description": "The DNS name of the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.dns_name}"
+        },
+        "endpoint_ip_address_range": {
+            "description": "The IP address range for the file system's endpoint.",
+            "value": "${data.aws_fsx_ontap_file_system.this.endpoint_ip_address_range}"
+        },
+        "endpoints": {
+            "description": "The endpoints for intercluster and management access, including DNS names and IP addresses.",
+            "value": "${data.aws_fsx_ontap_file_system.this.endpoints}"
+        },
+        "ha_pairs": {
+            "description": "The number of high availability (HA) pairs configured for the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.ha_pairs}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS Key Management Service (KMS) key used for encryption.",
+            "value": "${data.aws_fsx_ontap_file_system.this.kms_key_id}"
+        },
+        "network_interface_ids": {
+            "description": "The IDs of the network interfaces associated with the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.network_interface_ids}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.owner_id}"
+        },
+        "preferred_subnet_id": {
+            "description": "The ID of the preferred subnet for the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.preferred_subnet_id}"
+        },
+        "route_table_ids": {
+            "description": "The IDs of the route tables associated with the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.route_table_ids}"
+        },
+        "storage_capacity": {
+            "description": "The storage capacity of the file system, measured in gigabytes.",
+            "value": "${data.aws_fsx_ontap_file_system.this.storage_capacity}"
+        },
+        "storage_type": {
+            "description": "The type of storage used by the file system, such as SSD or HDD.",
+            "value": "${data.aws_fsx_ontap_file_system.this.storage_type}"
+        },
+        "subnet_ids": {
+            "description": "The IDs of the subnets in which the file system is located.",
+            "value": "${data.aws_fsx_ontap_file_system.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "The tags associated with the file system.",
+            "value": "${data.aws_fsx_ontap_file_system.this.tags}"
+        },
+        "throughput_capacity": {
+            "description": "The throughput capacity of the file system, measured in megabytes per second.",
+            "value": "${data.aws_fsx_ontap_file_system.this.throughput_capacity}"
+        },
+        "throughput_capacity_per_ha_pair": {
+            "description": "The throughput capacity per high availability (HA) pair, measured in megabytes per second.",
+            "value": "${data.aws_fsx_ontap_file_system.this.throughput_capacity_per_ha_pair}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the file system is located.",
+            "value": "${data.aws_fsx_ontap_file_system.this.vpc_id}"
+        },
+        "weekly_maintenance_start_time": {
+            "description": "The start time for the weekly maintenance window.",
+            "value": "${data.aws_fsx_ontap_file_system.this.weekly_maintenance_start_time}"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "output": {
+        "current_kubernetes_version": {
+            "description": "Specifies the current Kubernetes version running on the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.current_kubernetes_version}"
+        },
+        "fqdn": {
+            "description": "The fully qualified domain name used to access the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.fqdn}"
+        },
+        "http_application_routing_zone_name": {
+            "description": "DNS zone name for HTTP application routing in the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.http_application_routing_zone_name}"
+        },
+        "id": {
+            "description": "Unique identifier for the Kubernetes cluster resource",
+            "value": "${azurerm_kubernetes_cluster.this.id}"
+        },
+        "kube_admin_config": {
+            "description": "Admin configuration for interacting with the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.kube_admin_config}"
+        },
+        "kube_admin_config_raw": {
+            "description": "Raw admin configuration data for API requests to the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.kube_admin_config_raw}"
+        },
+        "kube_config": {
+            "description": "User configuration for accessing and managing the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.kube_config}"
+        },
+        "kube_config_raw": {
+            "description": "Raw user configuration data for direct Kubernetes API interaction",
+            "value": "${azurerm_kubernetes_cluster.this.kube_config_raw}"
+        },
+        "kubernetes_cluster_name": {
+            "description": "Name of the Kubernetes cluster",
+            "value": "${azurerm_kubernetes_cluster.this.name}"
+        },
+        "node_resource_group_id": {
+            "description": "Identifier for the resource group containing cluster nodes",
+            "value": "${azurerm_kubernetes_cluster.this.node_resource_group_id}"
+        },
+        "oidc_issuer_url": {
+            "description": "OIDC issuer URL for identity integration in the cluster",
+            "value": "${azurerm_kubernetes_cluster.this.oidc_issuer_url}"
+        },
+        "portal_fqdn": {
+            "description": "Portal domain name for accessing the cluster dashboard",
+            "value": "${azurerm_kubernetes_cluster.this.portal_fqdn}"
+        },
+        "private_fqdn": {
+            "description": "Private fully qualified domain name for internal cluster access",
+            "value": "${azurerm_kubernetes_cluster.this.private_fqdn}"
+        }
+    }
+}

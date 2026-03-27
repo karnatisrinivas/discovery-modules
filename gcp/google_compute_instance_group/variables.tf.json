@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines a detailed description or metadata for the resource being created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instances": [
+      {
+        "description": "Specifies a list of instance IDs to associate with the resource. Each ID must be a valid string.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the resource, which is mandatory and cannot be null.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "named_port": [
+      {
+        "description": "Specifies a list of named port objects, each containing a name (string) and a port number (integer).",
+        "nullable": true,
+        "type": "list(object({name: string,port: number}))"
+      }
+    ],
+    "network": [
+      {
+        "description": "Defines the network to which the resource is attached.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures timeout settings for resource operations, including create, delete, and update actions. Each timeout value can be specified as an optional string.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone where the resource resides. Must be a valid string if provided.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "application_id": [
+      {
+        "description": "The unique identifier for the serverless application in the AWS Serverless Application Repository.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

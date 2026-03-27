@@ -1,0 +1,90 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the autoscale setting. This is a unique identifier for the autoscale configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A set of key-value pairs that can be used to organize and categorize the autoscale setting resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "target_resource_id": [
+      {
+        "description": "The ID of the resource that the autoscale setting will target. This is the resource that will be scaled.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "capacity_default": [
+      {
+        "description": "The default capacity of the resource.",
+        "nullable": false,
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "capacity_minimum": [
+      {
+        "description": "The minimum capacity of the resource.",
+        "nullable": false,
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "capacity_maximum": [
+      {
+        "description": "The maximum capacity of the resource.",
+        "nullable": false,
+        "type": "number",
+        "default": 10
+      }
+    ],
+    "scale_mode": [
+      {
+        "description": " Specifies the predictive scale mode. Possible values are Enabled or ForecastOnly.",
+        "nullable": false,
+        "type": "string",
+        "default": "Enabled"
+      }
+    ],
+    "look_ahead_time": [
+      {
+        "description": "The amount of time to look ahead when calculating the prediction.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "email_ids_for_notifications": [
+      {
+        "description": "A list of email addresses to send notifications to when autoscale conditions are triggered.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "rules": [
+      {
+        "description": "One or more (up to 10) rule blocks",
+        "nullable": true,
+        "type": "list(object({metric_name: string, metric_resource_id: string, time_grain: string, statistic: string, time_window: string, time_aggregation: string, operator: string, threshold: number, metric_namespace: string, metric_dimension_name: string, metric_dimension_operator: string, metric_dimension_values: list(string), scale_action_direction: string, scale_action_type: string, scale_action_value: number, scale_action_cooldown: string}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

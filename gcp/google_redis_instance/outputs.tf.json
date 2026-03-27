@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the instance.",
+            "value": "${google_redis_instance.this.id}"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "custom_features": [
+      {
+        "description": "Defines the custom SSL features to enable for the SSL policy; only applicable if the policy profile is set to CUSTOM.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description of the SSL policy, providing context or details about its purpose or configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "min_tls_version": [
+      {
+        "description": "Specifies the minimum TLS version that the SSL policy will support; must be one of `TLS_1_0`, `TLS_1_1`, `TLS_1_2`, or `TLS_1_3`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the SSL policy, adhering to Google Cloud naming conventions (1-63 characters, lowercase letters, numbers, and hyphens).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "profile": [
+      {
+        "description": "Specifies the SSL profile to use, which determines the set of SSL features and ciphers; options include COMPATIBLE, MODERN, RESTRICTED, or CUSTOM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for create, update, and delete operations on the SSL policy.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

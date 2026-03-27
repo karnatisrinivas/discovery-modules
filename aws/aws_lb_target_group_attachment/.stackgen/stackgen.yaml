@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS ALB Target Group Attachment
+  node:
+    label:
+      static: AWS ALB Target Group Attachment
+      template: ${url}
+    display_type: default
+
+discovery:
+  type: aws_lb_target_group_attachment
+  dnd_supported: false

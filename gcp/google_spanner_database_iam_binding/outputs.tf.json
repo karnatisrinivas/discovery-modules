@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to IAM policy bindings",
+            "value": "${google_spanner_database_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for identifying the IAM binding resource",
+            "value": "${google_spanner_database_iam_binding.this.id}"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.arn}"
+        },
+        "auto_resolve_best_voices_enabled": {
+            "description": "Indicates if the feature to automatically select the best voice is enabled.",
+            "value": "${data.aws_connect_instance.this.auto_resolve_best_voices_enabled}"
+        },
+        "contact_flow_logs_enabled": {
+            "description": "Indicates if logging for contact flows is enabled.",
+            "value": "${data.aws_connect_instance.this.contact_flow_logs_enabled}"
+        },
+        "contact_lens_enabled": {
+            "description": "Indicates if the Contact Lens feature is enabled for the instance.",
+            "value": "${data.aws_connect_instance.this.contact_lens_enabled}"
+        },
+        "created_time": {
+            "description": "The time when the AWS Connect instance was created.",
+            "value": "${data.aws_connect_instance.this.created_time}"
+        },
+        "early_media_enabled": {
+            "description": "Indicates if early media is enabled, allowing callers to hear media before the call is connected.",
+            "value": "${data.aws_connect_instance.this.early_media_enabled}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.id}"
+        },
+        "identity_management_type": {
+            "description": "The type of identity management used by the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.identity_management_type}"
+        },
+        "inbound_calls_enabled": {
+            "description": "Indicates if the instance is configured to handle inbound calls.",
+            "value": "${data.aws_connect_instance.this.inbound_calls_enabled}"
+        },
+        "instance_alias": {
+            "description": "The alias or name assigned to the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.instance_alias}"
+        },
+        "instance_id": {
+            "description": "The identifier for the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.instance_id}"
+        },
+        "multi_party_conference_enabled": {
+            "description": "Indicates if multi-party conference calls are enabled.",
+            "value": "${data.aws_connect_instance.this.multi_party_conference_enabled}"
+        },
+        "outbound_calls_enabled": {
+            "description": "Indicates if the instance is configured to handle outbound calls.",
+            "value": "${data.aws_connect_instance.this.outbound_calls_enabled}"
+        },
+        "service_role": {
+            "description": "The service role associated with the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.service_role}"
+        },
+        "status": {
+            "description": "The current status of the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Connect instance.",
+            "value": "${data.aws_connect_instance.this.tags}"
+        }
+    }
+}

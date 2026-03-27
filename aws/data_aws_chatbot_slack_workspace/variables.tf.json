@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "slack_team_name": [
+      {
+        "description": "The name of the Slack workspace where the AWS Chatbot will be integrated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.arn}"
+        },
+        "auth_type": {
+            "description": "The type of authentication used by the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.auth_type}"
+        },
+        "created_at": {
+            "description": "The timestamp indicating when the VPC Lattice service network was created.",
+            "value": "${data.aws_vpclattice_service_network.this.created_at}"
+        },
+        "id": {
+            "description": "The unique identifier of the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.id}"
+        },
+        "last_updated_at": {
+            "description": "The timestamp indicating the last time the VPC Lattice service network was updated.",
+            "value": "${data.aws_vpclattice_service_network.this.last_updated_at}"
+        },
+        "name": {
+            "description": "The name of the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.name}"
+        },
+        "number_of_associated_services": {
+            "description": "The number of services associated with the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.number_of_associated_services}"
+        },
+        "number_of_associated_vpcs": {
+            "description": "The number of VPCs associated with the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.number_of_associated_vpcs}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC Lattice service network.",
+            "value": "${data.aws_vpclattice_service_network.this.tags}"
+        }
+    }
+}

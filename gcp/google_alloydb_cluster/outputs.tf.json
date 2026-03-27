@@ -1,0 +1,56 @@
+{
+    "output": {
+        "backup_source": {
+            "description": "Details about the backup source used for cluster restoration",
+            "value": "${google_alloydb_cluster.this.backup_source}"
+        },
+        "continuous_backup_info": {
+            "description": "Information about continuous backup configurations and status",
+            "value": "${google_alloydb_cluster.this.continuous_backup_info}"
+        },
+        "effective_annotations": {
+            "description": "Annotations applied to the cluster, including inherited ones",
+            "value": "${google_alloydb_cluster.this.effective_annotations}"
+        },
+        "effective_labels": {
+            "description": "Effective labels assigned to the cluster for organization and filtering",
+            "value": "${google_alloydb_cluster.this.effective_labels}"
+        },
+        "encryption_info": {
+            "description": "Encryption details for data protection in the cluster",
+            "value": "${google_alloydb_cluster.this.encryption_info}"
+        },
+        "id": {
+            "description": "Unique identifier for the AlloyDB cluster resource",
+            "value": "${google_alloydb_cluster.this.id}"
+        },
+        "migration_source": {
+            "description": "Details about the source of migration for the cluster, if applicable",
+            "value": "${google_alloydb_cluster.this.migration_source}"
+        },
+        "name": {
+            "description": "Fully qualified name of the AlloyDB cluster",
+            "value": "${google_alloydb_cluster.this.name}"
+        },
+        "reconciling": {
+            "description": "Indicates if the cluster is undergoing reconciliation",
+            "value": "${google_alloydb_cluster.this.reconciling}"
+        },
+        "state": {
+            "description": "Current operational state of the AlloyDB cluster",
+            "value": "${google_alloydb_cluster.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for resource management",
+            "value": "${google_alloydb_cluster.this.terraform_labels}"
+        },
+        "trial_metadata": {
+            "description": "Metadata related to trial usage of the AlloyDB cluster",
+            "value": "${google_alloydb_cluster.this.trial_metadata}"
+        },
+        "uid": {
+            "description": "Globally unique identifier for the AlloyDB cluster",
+            "value": "${google_alloydb_cluster.this.uid}"
+        }
+    }
+}

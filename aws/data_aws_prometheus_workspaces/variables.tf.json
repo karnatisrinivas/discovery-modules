@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "alias_prefix": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

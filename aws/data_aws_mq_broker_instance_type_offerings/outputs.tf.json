@@ -1,0 +1,12 @@
+{
+    "output": {
+        "broker_instance_options": {
+            "description": "A list of broker instance options, each containing details about availability zones, engine type, host instance type, storage type, supported deployment modes, and supported engine versions.",
+            "value": "${data.aws_mq_broker_instance_type_offerings.this.broker_instance_options}"
+        },
+        "id": {
+            "description": "The unique identifier for the MQ broker instance type offerings data.",
+            "value": "${data.aws_mq_broker_instance_type_offerings.this.id}"
+        }
+    }
+}

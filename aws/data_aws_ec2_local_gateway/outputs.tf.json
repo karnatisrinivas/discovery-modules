@@ -1,0 +1,24 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the local gateway.",
+            "value": "${data.aws_ec2_local_gateway.this.id}"
+        },
+        "outpost_arn": {
+            "description": "The Amazon Resource Name (ARN) of the Outpost associated with the local gateway.",
+            "value": "${data.aws_ec2_local_gateway.this.outpost_arn}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID that owns the local gateway.",
+            "value": "${data.aws_ec2_local_gateway.this.owner_id}"
+        },
+        "state": {
+            "description": "The current state of the local gateway.",
+            "value": "${data.aws_ec2_local_gateway.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the local gateway.",
+            "value": "${data.aws_ec2_local_gateway.this.tags}"
+        }
+    }
+}

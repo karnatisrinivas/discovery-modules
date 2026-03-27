@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Defines the resource name, must be unique within scope",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "role_definition_id": [
+      {
+        "description": "Specifies the role definition's unique ID, required for role assignments",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "scope": [
+      {
+        "description": "Defines the scope for resource application, formatted as a string",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Sets operation timeouts, read is optional",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

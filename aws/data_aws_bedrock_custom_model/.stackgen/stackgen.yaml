@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Bedrock Custom Model"
+  node:
+    label:
+      static: "[Data] Bedrock Custom Model"
+      template: "[Data] Bedrock Custom Model"
+    display_type: default
+
+discovery:
+  type: data_aws_bedrock_custom_model
+  dnd_supported: false

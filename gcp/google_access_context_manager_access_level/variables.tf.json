@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "basic": [
+      {
+        "description": "Defines the basic access level criteria, specifying conditions under which access is granted based on attributes such as device security status, IP subnet, or user identity.",
+        "nullable": true,
+        "type": "list(object({combining_function: optional(string),conditions: list(object({ip_subnetworks: optional(list(string)),members: optional(list(string)),negate: optional(bool),regions: optional(list(string)),required_access_levels: optional(list(string)),device_policy: list(object({allowed_device_management_levels: optional(list(string)),allowed_encryption_statuses: optional(list(string)),require_admin_approval: optional(bool),require_corp_owned: optional(bool),require_screen_lock: optional(bool),os_constraints: list(object({minimum_version: optional(string),os_type: string,require_verified_chrome_os: optional(bool)}))})),vpc_network_sources: list(object({vpc_subnetwork: list(object({network: string,vpc_ip_subnetworks: optional(list(string))}))}))}))}))"
+      }
+    ],
+    "custom": [
+      {
+        "description": "Defines whether the access level is a custom access level or a predefined one. Must be set to true for custom access levels.",
+        "nullable": true,
+        "type": "list(object({expr: list(object({description: optional(string),expression: string,location: optional(string),title: optional(string)}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the details and purpose of the access level, supporting up to 256 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the access level, must be a string and comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "Specifies the parent resource in the format \"accessPolicies/{policy_id}\", under which the access level is created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for operations to complete before timing out, applicable to create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "title": [
+      {
+        "description": "Specifies the human-readable name for the access level, must be unique within the access policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

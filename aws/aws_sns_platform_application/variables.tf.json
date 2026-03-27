@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "apple_platform_bundle_id": [
+      {
+        "description": "Specifies the Apple platform bundle ID associated with the application, required for APNs integration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "apple_platform_team_id": [
+      {
+        "description": "Specifies the Apple Developer Team ID associated with the credentials used for the APNs platform application.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "event_delivery_failure_topic_arn": [
+      {
+        "description": "ARN of the SNS topic to which notifications about delivery failures are sent.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "event_endpoint_created_topic_arn": [
+      {
+        "description": "ARN of the SNS topic to notify when a new endpoint is created for the platform application.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "event_endpoint_deleted_topic_arn": [
+      {
+        "description": "ARN of the SNS topic to notify when an endpoint is deleted; must be a valid SNS topic ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "event_endpoint_updated_topic_arn": [
+      {
+        "description": "ARN of the SNS topic to notify when an endpoint is updated, must be in the same AWS account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "failure_feedback_role_arn": [
+      {
+        "description": "IAM role ARN used for failure feedback from the platform application, required for logging delivery status of failed messages.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the SNS platform application, must be unique within the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "platform": [
+      {
+        "description": "Specifies the platform type for the SNS application, such as APNS, GCM, or ADM. Ensure the value matches the supported platform for your use case.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "platform_credential": [
+      {
+        "description": "The credential required for the platform application, such as API key or password, depending on the platform type.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "platform_principal": [
+      {
+        "description": "ARN or identifier of the principal used for the platform-specific credentials, required for creating the SNS platform application.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "success_feedback_role_arn": [
+      {
+        "description": "IAM role ARN used to give Amazon SNS write access to CloudWatch Logs for success feedback.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "success_feedback_sample_rate": [
+      {
+        "description": "Defines the percentage of successfully delivered messages for which Amazon SNS will write success feedback logs, specified as an integer between 0 and 100.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

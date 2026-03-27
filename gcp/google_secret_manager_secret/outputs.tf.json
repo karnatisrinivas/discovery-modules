@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "ID of the secret.",
+            "value": "${google_secret_manager_secret.this.id}"
+        },
+        "secret_id": {
+            "description": "The resource name of the secret version in the format projects/*/secrets/*/versions/*.",
+            "value": "${google_secret_manager_secret.this.secret_id}"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "hostnames": [
+      {
+        "description": "List of hostnames associated with the environment group; must be unique within Apigee and formatted as domain names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Apigee environment group to be created or managed, required to be unique within the Apigee organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Specifies the Apigee organization ID where the environment group will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations for the Apigee environment group.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

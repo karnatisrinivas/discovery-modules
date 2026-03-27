@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific API Gateway authorizer.",
+            "value": "${data.aws_api_gateway_authorizers.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the API Gateway authorizers.",
+            "value": "${data.aws_api_gateway_authorizers.this.ids}"
+        }
+    }
+}

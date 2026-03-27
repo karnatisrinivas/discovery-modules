@@ -1,0 +1,102 @@
+{
+  "variable": {
+    "cache_usage_limits": [
+      {
+        "description": "Defines the maximum memory usage limits for the serverless cache, specifying the range of memory allocation in GB required for scaling.",
+        "nullable": true,
+        "type": "list(object({data_storage: list(object({maximum: optional(number),minimum: optional(number),unit: string})),ecpu_per_second: list(object({maximum: optional(number),minimum: optional(number)}))}))"
+      }
+    ],
+    "daily_snapshot_time": [
+      {
+        "description": "Time of day (in UTC) to create a daily snapshot, formatted as HH:MM.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a brief explanation of the serverless cache, its purpose, or any relevant details for identification or documentation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the type of caching engine to be used, such as Redis, for the serverless cache.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kms_key_id": [
+      {
+        "description": "Specifies the KMS key ARN to encrypt data at rest for the serverless ElastiCache cluster; must be a valid AWS KMS key.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "major_engine_version": [
+      {
+        "description": "Specifies the major version of the database engine to be used for the serverless cache. Must be compatible with the Elasticache serverless service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Amazon ElastiCache Serverless cache cluster, must be unique within the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "security_group_ids": [
+      {
+        "description": "List of security group IDs to associate with the serverless cache, enabling network access control.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "snapshot_arns_to_restore": [
+      {
+        "description": "List of Amazon Resource Names (ARNs) for snapshots to restore into the serverless cache during creation.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "snapshot_retention_limit": [
+      {
+        "description": "Defines the number of days to retain snapshots before automatic deletion; must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "subnet_ids": [
+      {
+        "description": "List of subnet IDs for the cache, required for VPC network placement. Ensure subnets belong to the same VPC.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to assign to the resource for tagging and identification purposes; supports custom metadata and must comply with AWS tag naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the duration settings for create, update, and delete operations, ensuring adequate time for provisioning or modifications.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_group_id": [
+      {
+        "description": "ID of the user group to associate with the serverless cache, used for access control; must reference an existing Elasticache user group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

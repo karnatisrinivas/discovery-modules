@@ -1,0 +1,28 @@
+{
+    "output": {
+        "create_date": {
+            "description": "The date when the SAML provider was created.",
+            "value": "${data.aws_iam_saml_provider.this.create_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the SAML provider.",
+            "value": "${data.aws_iam_saml_provider.this.id}"
+        },
+        "name": {
+            "description": "The name given to the SAML provider.",
+            "value": "${data.aws_iam_saml_provider.this.name}"
+        },
+        "saml_metadata_document": {
+            "description": "The XML document containing the SAML provider's metadata.",
+            "value": "${data.aws_iam_saml_provider.this.saml_metadata_document}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the SAML provider.",
+            "value": "${data.aws_iam_saml_provider.this.tags}"
+        },
+        "valid_until": {
+            "description": "The date until which the SAML provider is valid.",
+            "value": "${data.aws_iam_saml_provider.this.valid_until}"
+        }
+    }
+}

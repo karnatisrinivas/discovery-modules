@@ -1,0 +1,24 @@
+{
+    "output": {
+        "cidr_blocks": {
+            "description": "A list of CIDR blocks for IPv4 addresses provided by AWS.",
+            "value": "${data.aws_ip_ranges.this.cidr_blocks}"
+        },
+        "create_date": {
+            "description": "The date when the AWS IP ranges data was created.",
+            "value": "${data.aws_ip_ranges.this.create_date}"
+        },
+        "id": {
+            "description": "The identifier for the AWS IP ranges data.",
+            "value": "${data.aws_ip_ranges.this.id}"
+        },
+        "ipv6_cidr_blocks": {
+            "description": "A list of CIDR blocks for IPv6 addresses provided by AWS.",
+            "value": "${data.aws_ip_ranges.this.ipv6_cidr_blocks}"
+        },
+        "sync_token": {
+            "description": "A token indicating the version of the AWS IP ranges data.",
+            "value": "${data.aws_ip_ranges.this.sync_token}"
+        }
+    }
+}

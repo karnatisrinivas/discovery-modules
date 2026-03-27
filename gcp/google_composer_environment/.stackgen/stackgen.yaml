@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Composer Environment
+  node:
+    label:
+      static: Composer Environment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_composer_environment
+  dnd_supported: false

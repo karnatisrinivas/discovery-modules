@@ -1,0 +1,65 @@
+{
+  "variable": {
+    "edge_zone": [
+      {
+        "description": "Specifies the edge zone for the load balancer, which is a regional extension to deploy resources closer to users. Must be supported in the selected region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "frontend_ip_configuration": [
+      {
+        "description": "Defines the frontend IP configuration for the Azure Load Balancer, specifying the IP address or addresses to be used for incoming traffic. Must include parameters such as name, subnet ID, and optionally, a public IP address.",
+        "nullable": true,
+        "type": "list(object({gateway_load_balancer_frontend_ip_configuration_id: optional(string),id: optional(string),inbound_nat_rules: optional(list(string)),load_balancer_rules: optional(list(string)),name: string,outbound_rules: optional(list(string)),private_ip_address: optional(string),private_ip_address_allocation: optional(string),private_ip_address_version: optional(string),public_ip_address_id: optional(string),public_ip_prefix_id: optional(string),subnet_id: optional(string),zones: optional(list(string))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Azure Load Balancer, which must be unique within the resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Defines the SKU tier for the Azure Load Balancer, which determines the features and scale capabilities. Options include \"Basic\" or \"Standard\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku_tier": [
+      {
+        "description": "Specifies the SKU tier for the Azure Load Balancer; options are 'Basic' or 'Standard'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the load balancer, supporting up to 15 tags.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeouts for creating, updating, and deleting the load balancer, allowing customization of operation durations.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

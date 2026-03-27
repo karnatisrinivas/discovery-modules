@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user_project": [
+      {
+        "description": "Specifies the project ID for which the service account is generated; must be a valid Google Cloud project ID.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

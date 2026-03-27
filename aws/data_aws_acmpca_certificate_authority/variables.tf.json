@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS Certificate Manager Private Certificate Authority.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

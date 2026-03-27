@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the transit gateway route table, used for identifying and organizing resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "transit_gateway_id": [
+      {
+        "description": "ID of the transit gateway to associate with the route table; must be an existing transit gateway ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "certificate": {
+            "description": "The actual certificate data issued by the private certificate authority.",
+            "value": "${data.aws_acmpca_certificate.this.certificate}"
+        },
+        "certificate_chain": {
+            "description": "The chain of certificates that leads to the root certificate authority.",
+            "value": "${data.aws_acmpca_certificate.this.certificate_chain}"
+        },
+        "id": {
+            "description": "The unique identifier for the certificate.",
+            "value": "${data.aws_acmpca_certificate.this.id}"
+        }
+    }
+}

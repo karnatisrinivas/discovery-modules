@@ -1,0 +1,137 @@
+{
+  "variable": {
+    "apply_immediately": [
+      {
+        "description": "Indicates whether changes to the instance should be applied immediately or during the next maintenance window.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "auto_minor_version_upgrade": [
+      {
+        "description": "Indicates whether minor engine upgrades are applied automatically during the maintenance window.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "availability_zone": [
+      {
+        "description": "Specifies the Availability Zone where the Neptune cluster instance will be launched. Must match one of the available zones in the region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cluster_identifier": [
+      {
+        "description": "Identifier of the Neptune cluster to associate the instance with; must match an existing cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "engine": [
+      {
+        "description": "Specifies the database engine to be used for the Neptune cluster instance, such as 'neptune'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine_version": [
+      {
+        "description": "Specifies the version of the Neptune database engine; must be compatible with the associated Neptune cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identifier": [
+      {
+        "description": "Unique identifier for the Neptune cluster instance; must be unique within the region and cannot be changed after creation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identifier_prefix": [
+      {
+        "description": "Specifies a prefix for the unique identifier of the Neptune cluster instance; must be unique and cannot exceed 63 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instance_class": [
+      {
+        "description": "Specifies the instance class for the Neptune cluster instance, such as db.r5.large; must be compatible with Neptune.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "neptune_parameter_group_name": [
+      {
+        "description": "Specifies the name of the Neptune parameter group associated with the cluster instance. Must match an existing parameter group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "neptune_subnet_group_name": [
+      {
+        "description": "Name of the Neptune subnet group to associate with the instance; must exist in the same region as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "port": [
+      {
+        "description": "Specifies the port number for the Neptune cluster instance; must match the port of the associated Neptune cluster.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "preferred_backup_window": [
+      {
+        "description": "Specifies the daily time range during which automated backups are created, formatted as hh24:mi-hh24:mi in UTC.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_maintenance_window": [
+      {
+        "description": "Specifies the weekly time range during which system maintenance can occur, formatted as ddd:hh24:mi-ddd:hh24:mi, where ddd is the day of the week.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "promotion_tier": [
+      {
+        "description": "Specifies the failover priority of the instance, with lower values having higher priority. Must be between 0 and 15.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "publicly_accessible": [
+      {
+        "description": "Specifies whether the instance is publicly accessible. Set to true for public access or false for private access.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "skip_final_snapshot": [
+      {
+        "description": "Determines whether a final DB snapshot is created before the instance is deleted; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the Neptune cluster instance for organizational purposes or cost allocation.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout settings for creating, updating, and deleting the Neptune cluster instance.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connections.this.id}"
+        },
+        "ids": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connections.this.ids}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connections.this.tags}"
+        }
+    }
+}

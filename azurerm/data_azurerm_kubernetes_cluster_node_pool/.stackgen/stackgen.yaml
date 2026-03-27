@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kubernetes Cluster Node Pool"
+  node:
+    label:
+      static: "[Data] Kubernetes Cluster Node Pool"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_kubernetes_cluster_node_pool
+  dnd_supported: false
+  references:
+    kubernetes_cluster_name:
+      from: azurerm_kubernetes_cluster
+      output: kubernetes_cluster_name

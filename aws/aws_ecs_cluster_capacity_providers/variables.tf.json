@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "cluster_name": [
+            {
+                "type": "string",
+                "description": "Name of the ECS cluster to manage capacity providers for.",
+                "nullable": false
+            }
+        ],
+        "capacity_providers": [
+            {
+                "type": "list(string)",
+                "description": "Set of names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.",
+                "nullable": true
+            }
+        ],
+        "default_capacity_provider_strategy": [
+            {
+                "type": "list(object({capacity_provider: string, weight: number, base: number}))",
+                "description": "Set of capacity provider strategies to use by default for the cluster.",
+                "nullable": true
+            }
+        ]
+    }
+}

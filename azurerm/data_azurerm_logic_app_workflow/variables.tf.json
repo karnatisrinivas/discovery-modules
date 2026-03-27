@@ -1,0 +1,17 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the Logic App Workflow. This is a unique identifier for the workflow within the Azure resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Detailed information about the certificate, such as its purpose or usage context.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs for organizing and categorizing the certificate; must be compliant with Google's labeling requirements.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the geographic location where the certificate will be created, such as a Google Cloud region or multi-region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed": [
+      {
+        "description": "Specifies whether the certificate is a managed certificate automatically provisioned and renewed by Google Certificate Manager.",
+        "nullable": true,
+        "type": "list(object({authorization_attempt_info: optional(list(object({details:string,domain:string,failure_reason:string,state:string}))),dns_authorizations: optional(list(string)),domains: optional(list(string)),issuance_config: optional(string),provisioning_issue: optional(list(object({details:string,reason:string}))),state: optional(string)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the certificate, which must be unique within the project and region, and comply with RFC1035 naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scope": [
+      {
+        "description": "Specifies the geographical scope for the certificate, either global or regional, determining where the certificate resources will be available.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "self_managed": [
+      {
+        "description": "Defines the configuration for a self-managed SSL certificate, including the private key and certificate chain. Required for certificates not managed by Google.",
+        "nullable": true,
+        "type": "list(object({certificate_pem: optional(string),pem_certificate: optional(string),pem_private_key: optional(string),private_key_pem: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations on the certificate, including create, update, and delete processes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

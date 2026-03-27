@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Firestore index for configuration or troubleshooting",
+            "value": "${google_firestore_index.this.id}"
+        },
+        "name": {
+            "description": "Name of the Firestore index, useful for referencing or display purposes",
+            "value": "${google_firestore_index.this.name}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS regions data source.",
+            "value": "${data.aws_regions.this.id}"
+        },
+        "names": {
+            "description": "A list of names representing all available AWS regions.",
+            "value": "${data.aws_regions.this.names}"
+        }
+    }
+}

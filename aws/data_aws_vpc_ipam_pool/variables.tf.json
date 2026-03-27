@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "A unique identifier for the IPAM pool resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipam_pool_id": [
+      {
+        "description": "The ID of the IPAM pool in which to allocate an address.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

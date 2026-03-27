@@ -1,0 +1,19 @@
+
+{
+    "variable": {
+        "bucket": [
+            {
+                "description": "The name of the S3 bucket.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "cors_rule": [
+            {
+                "type": "list(object({ allowed_headers : optional(list(string),null), allowed_methods : optional(list(string), null), allowed_origins : optional(list(string), null), max_age_seconds : optional(number,null), expose_headers : optional(list(string), null)}))",
+                "nullable": false,
+                "description": "A list of CORS rules."
+            }
+        ]
+    }
+}

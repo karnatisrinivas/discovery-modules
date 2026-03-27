@@ -1,0 +1,8 @@
+{
+    "output": {
+        "groups": {
+            "description": "A list of AWS Identity Store groups, including details such as group description, display name, external identifiers, group ID, and identity store ID.",
+            "value": "${data.aws_identitystore_groups.this.groups}"
+        }
+    }
+}

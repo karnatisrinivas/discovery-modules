@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Efs Access Point
+  node:
+    label:
+      static: Efs Access Point
+      template: ${file_system_id}
+    display_type: default
+
+discovery:
+  type: aws_efs_access_point
+  dnd_supported: false
+  data_source: data_aws_efs_access_point
+  references:
+    file_system_id:
+      from: aws_efs_file_system
+      output: id

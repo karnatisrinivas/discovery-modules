@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Rds Cluster Parameter Group"
+  node:
+    label:
+      static: "[Data] Rds Cluster Parameter Group"
+      template: "[Data] Rds Cluster Parameter Group"
+    display_type: default
+
+discovery:
+  type: data_aws_rds_cluster_parameter_group
+  dnd_supported: false

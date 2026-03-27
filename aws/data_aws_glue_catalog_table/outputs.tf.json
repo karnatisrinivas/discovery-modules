@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Glue Catalog Table.",
+            "value": "${data.aws_glue_catalog_table.this.arn}"
+        },
+        "catalog_id": {
+            "description": "The ID of the Glue Catalog in which the table resides.",
+            "value": "${data.aws_glue_catalog_table.this.catalog_id}"
+        },
+        "description": {
+            "description": "A user-defined description of the Glue Catalog Table.",
+            "value": "${data.aws_glue_catalog_table.this.description}"
+        },
+        "id": {
+            "description": "The ID of the Glue Catalog Table.",
+            "value": "${data.aws_glue_catalog_table.this.id}"
+        },
+        "owner": {
+            "description": "The owner of the Glue Catalog Table.",
+            "value": "${data.aws_glue_catalog_table.this.owner}"
+        },
+        "parameters": {
+            "description": "A set of key-value pairs that define parameters for the table.",
+            "value": "${data.aws_glue_catalog_table.this.parameters}"
+        },
+        "partition_index": {
+            "description": "A list of partition indexes associated with the table.",
+            "value": "${data.aws_glue_catalog_table.this.partition_index}"
+        },
+        "partition_keys": {
+            "description": "A list of partition keys for the table with details.",
+            "value": "${data.aws_glue_catalog_table.this.partition_keys}"
+        },
+        "retention": {
+            "description": "The retention period for the table in days.",
+            "value": "${data.aws_glue_catalog_table.this.retention}"
+        },
+        "storage_descriptor": {
+            "description": "Details the storage information of the table including columns, formats, and locations.",
+            "value": "${data.aws_glue_catalog_table.this.storage_descriptor}"
+        },
+        "table_type": {
+            "description": "The type of the table (e.g., EXTERNAL_TABLE, VIRTUAL_VIEW).",
+            "value": "${data.aws_glue_catalog_table.this.table_type}"
+        },
+        "target_table": {
+            "description": "Details of the target table including catalog ID, database name, and region.",
+            "value": "${data.aws_glue_catalog_table.this.target_table}"
+        },
+        "view_expanded_text": {
+            "description": "The expanded text of the view if the table is a view.",
+            "value": "${data.aws_glue_catalog_table.this.view_expanded_text}"
+        },
+        "view_original_text": {
+            "description": "The original text of the view if the table is a view.",
+            "value": "${data.aws_glue_catalog_table.this.view_original_text}"
+        }
+    }
+}

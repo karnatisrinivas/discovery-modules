@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute External Vpn Gateway
+  node:
+    label:
+      static: Compute External Vpn Gateway
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_external_vpn_gateway
+  dnd_supported: false

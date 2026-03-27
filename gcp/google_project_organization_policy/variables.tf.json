@@ -1,0 +1,40 @@
+{
+  "variable": {
+    "constraint": [
+      {
+        "description": "The specific policy constraint to be applied to the Google Cloud Project. This defines the rules or restrictions that will be enforced.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_version": [
+      {
+        "description": "Version of the Policy.",
+        "nullable": true,
+        "type": "number",
+        "default": 0
+      }
+    ],
+    "boolean_policy": [
+      {
+        "description": "A boolean policy is a constraint that is either enforced or not.",
+        "nullable": true,
+        "type": "list(object({enforced: bool}))"
+      }
+    ],
+    "list_policy": [
+      {
+        "description": "A policy that can define specific values that are allowed or denied for the given constraint.",
+        "nullable": true,
+        "type": "list(object({allow: list(object({all: bool, values: list(string)})), deny: list(object({all: bool, values: list(string)})), suggested_value: string, inherit_from_parent: bool}))"
+      }
+    ],
+    "restore_policy": [
+      {
+        "description": "A restore policy is a constraint to restore the default policy.",
+        "nullable": true,
+        "type": "list(object({default: bool}))"
+      }
+    ]
+  }
+}

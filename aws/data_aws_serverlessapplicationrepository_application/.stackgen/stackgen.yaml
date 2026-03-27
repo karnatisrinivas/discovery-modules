@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Serverlessapplicationrepository Application"
+  node:
+    label:
+      static: "[Data] Serverlessapplicationrepository Application"
+      template: "[Data] Serverlessapplicationrepository Application"
+    display_type: default
+
+discovery:
+  type: data_aws_serverlessapplicationrepository_application
+  dnd_supported: false

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the App Mesh virtual router.",
+            "value": "${data.aws_appmesh_virtual_router.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the App Mesh virtual router was created.",
+            "value": "${data.aws_appmesh_virtual_router.this.created_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the App Mesh virtual router.",
+            "value": "${data.aws_appmesh_virtual_router.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the App Mesh virtual router was last updated.",
+            "value": "${data.aws_appmesh_virtual_router.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "The AWS account ID of the owner of the service mesh.",
+            "value": "${data.aws_appmesh_virtual_router.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "The AWS account ID of the resource owner.",
+            "value": "${data.aws_appmesh_virtual_router.this.resource_owner}"
+        },
+        "spec": {
+            "description": "The specifications of the App Mesh virtual router, including listener and port mapping details.",
+            "value": "${data.aws_appmesh_virtual_router.this.spec}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the App Mesh virtual router.",
+            "value": "${data.aws_appmesh_virtual_router.this.tags}"
+        }
+    }
+}

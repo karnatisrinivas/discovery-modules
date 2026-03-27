@@ -1,0 +1,16 @@
+{
+    "output": {
+        "client_id": {
+            "description": "The ID of the Azure client making the request.",
+            "value": "${data.azuread_client_config.this.client_id}"
+        },
+        "object_id": {
+            "description": "The object ID of the Azure client.",
+            "value": "${data.azuread_client_config.this.object_id}"
+        },
+        "tenant_id": {
+            "description": "The ID of the Azure tenant.",
+            "value": "${data.azuread_client_config.this.tenant_id}"
+        }
+    }
+}

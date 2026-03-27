@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for managing subscription pricing in Azure Security Center",
+            "value": "${azurerm_security_center_subscription_pricing.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudcontrolapi Resource"
+  node:
+    label:
+      static: "[Data] Cloudcontrolapi Resource"
+      template: "[Data] Cloudcontrolapi Resource"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudcontrolapi_resource
+  dnd_supported: false

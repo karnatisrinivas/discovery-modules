@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: KMS Key
+  node:
+    label:
+      static: KMS Key
+      template: KMS Key
+    display_type: default
+
+discovery:
+  type: aws_kms_key
+  dnd_supported: false
+  data_source: data_aws_kms_key

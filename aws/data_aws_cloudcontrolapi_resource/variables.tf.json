@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "identifier": [
+      {
+        "description": "A unique identifier for the resource, used to distinguish it from others.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the IAM role to assume when provisioning the resource. It's optional.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "type_name": [
+      {
+        "description": "The name of the resource type you want to manage, such as 'AWS::S3::Bucket'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type_version_id": [
+      {
+        "description": "The version ID of the resource type, used when you want to specify a particular version. It's optional.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

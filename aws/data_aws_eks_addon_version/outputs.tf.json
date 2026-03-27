@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the EKS addon version.",
+            "value": "${data.aws_eks_addon_version.this.id}"
+        },
+        "version": {
+            "description": "The specific version number of the EKS addon.",
+            "value": "${data.aws_eks_addon_version.this.version}"
+        }
+    }
+}

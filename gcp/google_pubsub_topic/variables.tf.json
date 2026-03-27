@@ -1,0 +1,61 @@
+{
+    "variable": {
+      "ingestion_data_source_settings": [
+        {
+          "description": "Configuration settings for the data source that publishes messages to the Pub/Sub topic; must align with the ingestion requirements.",
+          "nullable": true,
+          "type": "list(object({aws_kinesis: list(object({aws_role_arn: string,consumer_arn: string,gcp_service_account: string,stream_arn: string})),aws_msk: list(object({aws_role_arn: string,cluster_arn: string,gcp_service_account: string,topic: string})),azure_event_hubs: list(object({client_id: optional(string),event_hub: optional(string),gcp_service_account: optional(string),namespace: optional(string),resource_group: optional(string),subscription_id: optional(string),tenant_id: optional(string)})),cloud_storage: list(object({bucket: string,match_glob: optional(string),minimum_object_create_time: optional(string),avro_format: list(object({})),pubsub_avro_format: list(object({})),text_format: list(object({delimiter: optional(string)}))})),confluent_cloud: list(object({bootstrap_server: string,cluster_id: optional(string),gcp_service_account: string,identity_pool_id: string,topic: string})),platform_logs_settings: list(object({severity: optional(string)}))}))"
+        }
+      ],
+      "kms_key_name": [
+        {
+          "description": "Specifies the Cloud KMS key name to be used for encrypting messages in the Pub/Sub topic, must be in the format projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "labels": [
+        {
+          "description": "Key-value pairs to organize and categorize the Pub/Sub topic, with a maximum of 64 characters per key and value.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "message_retention_duration": [
+        {
+          "description": "Defines the duration for which messages are retained in the topic, measured in seconds. Must be between 10 minutes and 7 days.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "message_storage_policy": [
+        {
+          "description": "Defines the regions where messages can be stored, restricting message storage to specific Cloud regions; must be a list of valid GCP region identifiers.",
+          "nullable": true,
+          "type": "list(object({allowed_persistence_regions: list(string),enforce_in_transit: optional(bool)}))"
+        }
+      ],
+      "name": [
+        {
+          "description": "Specifies the name of the Pub/Sub topic, which must be unique within the project and adhere to Google Cloud's naming constraints.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "schema_settings": [
+        {
+          "description": "Configures schema settings for the Pub/Sub topic, including schema type and validation options.",
+          "nullable": true,
+          "type": "list(object({encoding: optional(string),schema: string}))"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Defines the duration for create, update, and delete operations, specifying timeouts for managing the Pub/Sub topic.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elb"
+  node:
+    label:
+      static: "[Data] Elb"
+      template: "[Data] Elb"
+    display_type: default
+
+discovery:
+  type: data_aws_elb
+  dnd_supported: false

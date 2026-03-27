@@ -1,0 +1,23 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SES Receipt Rule
+  node:
+    label:
+      static: SES Receipt Rule
+      template: ${name}
+    display_type: default
+
+variables:
+  tls_policy:
+    description: The TLS policy to apply to the receipt rule
+    type: string
+    options: 
+      - Require
+      - Optional
+    ui_control: select
+
+discovery:
+  type: aws_ses_receipt_rule
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Azure Private DNS Zone"
+  node:
+    label:
+      static: "[Data] Azure Private DNS Zone"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_private_dns_zone
+  dnd_supported: false

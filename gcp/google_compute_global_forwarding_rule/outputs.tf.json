@@ -1,0 +1,40 @@
+{
+    "output": {
+        "base_forwarding_rule": {
+            "description": "Base name for identifying global forwarding rules",
+            "value": "${google_compute_global_forwarding_rule.this.base_forwarding_rule}"
+        },
+        "effective_labels": {
+            "description": "Labels used for organizational management of the rule",
+            "value": "${google_compute_global_forwarding_rule.this.effective_labels}"
+        },
+        "forwarding_rule_id": {
+            "description": "Internal ID for tracking the forwarding rule",
+            "value": "${google_compute_global_forwarding_rule.this.forwarding_rule_id}"
+        },
+        "id": {
+            "description": "Unique identifier for the global forwarding rule",
+            "value": "${google_compute_global_forwarding_rule.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Identifier for label change detection",
+            "value": "${google_compute_global_forwarding_rule.this.label_fingerprint}"
+        },
+        "psc_connection_id": {
+            "description": "Unique ID for Private Service Connect linkage",
+            "value": "${google_compute_global_forwarding_rule.this.psc_connection_id}"
+        },
+        "psc_connection_status": {
+            "description": "Status of the Private Service Connect link",
+            "value": "${google_compute_global_forwarding_rule.this.psc_connection_status}"
+        },
+        "self_link": {
+            "description": "API URL for accessing the forwarding rule",
+            "value": "${google_compute_global_forwarding_rule.this.self_link}"
+        },
+        "terraform_labels": {
+            "description": "User-defined labels for rule configuration",
+            "value": "${google_compute_global_forwarding_rule.this.terraform_labels}"
+        }
+    }
+}

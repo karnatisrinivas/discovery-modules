@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Shared Vpc Host Project
+  node:
+    label:
+      static: Compute Shared Vpc Host Project
+      template: ${project}
+    display_type: default
+
+discovery:
+  type: google_compute_shared_vpc_host_project
+  dnd_supported: false

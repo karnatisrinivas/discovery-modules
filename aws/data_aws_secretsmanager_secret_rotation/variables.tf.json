@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "secret_id": [
+      {
+        "description": "The unique identifier or ARN of the secret that you want to rotate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

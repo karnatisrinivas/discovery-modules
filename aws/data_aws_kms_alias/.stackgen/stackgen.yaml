@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kms Alias"
+  node:
+    label:
+      static: "[Data] Kms Alias"
+      template: "[Data] Kms Alias"
+    display_type: default
+
+discovery:
+  type: data_aws_kms_alias
+  dnd_supported: false

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "access_policies": [
+      {
+        "description": "Defines the access control policies for the Elasticsearch domain, specifying permissions and restrictions for IAM users and roles.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "domain_name": [
+      {
+        "description": "Specifies the name of the Elasticsearch domain to which the access policy will be applied. Must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout settings for create, update, and delete operations on the Elasticsearch domain policy.",
+        "nullable": true,
+        "type": "object({delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

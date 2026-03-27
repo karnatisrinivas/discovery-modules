@@ -1,0 +1,64 @@
+{
+    "output": {
+        "applications": {
+            "description": "A list of applications associated with the AppStream image, including their details such as ARN, display name, and launch parameters.",
+            "value": "${data.aws_appstream_image.this.applications}"
+        },
+        "appstream_agent_version": {
+            "description": "The version of the AppStream agent that is installed on the image.",
+            "value": "${data.aws_appstream_image.this.appstream_agent_version}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AppStream image.",
+            "value": "${data.aws_appstream_image.this.arn}"
+        },
+        "base_image_arn": {
+            "description": "The ARN of the base image used to create this AppStream image.",
+            "value": "${data.aws_appstream_image.this.base_image_arn}"
+        },
+        "created_time": {
+            "description": "The date and time when the AppStream image was created.",
+            "value": "${data.aws_appstream_image.this.created_time}"
+        },
+        "description": {
+            "description": "A description of the AppStream image.",
+            "value": "${data.aws_appstream_image.this.description}"
+        },
+        "display_name": {
+            "description": "The display name of the AppStream image.",
+            "value": "${data.aws_appstream_image.this.display_name}"
+        },
+        "image_builder_name": {
+            "description": "The name of the image builder used to create the AppStream image.",
+            "value": "${data.aws_appstream_image.this.image_builder_name}"
+        },
+        "image_builder_supported": {
+            "description": "Indicates whether the image is supported for use with an image builder.",
+            "value": "${data.aws_appstream_image.this.image_builder_supported}"
+        },
+        "image_permissions": {
+            "description": "Permissions associated with the AppStream image, specifying if it's allowed for use in fleets and with image builders.",
+            "value": "${data.aws_appstream_image.this.image_permissions}"
+        },
+        "name": {
+            "description": "The name of the AppStream image.",
+            "value": "${data.aws_appstream_image.this.name}"
+        },
+        "platform": {
+            "description": "The platform type of the AppStream image, such as Windows or Linux.",
+            "value": "${data.aws_appstream_image.this.platform}"
+        },
+        "public_base_image_released_date": {
+            "description": "The release date of the public base image from which this AppStream image was created.",
+            "value": "${data.aws_appstream_image.this.public_base_image_released_date}"
+        },
+        "state": {
+            "description": "The current state of the AppStream image, such as 'AVAILABLE' or 'PENDING'.",
+            "value": "${data.aws_appstream_image.this.state}"
+        },
+        "state_change_reason": {
+            "description": "The reason for the last state change of the AppStream image, including a code and message.",
+            "value": "${data.aws_appstream_image.this.state_change_reason}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Devopsguru Resource Collection"
+  node:
+    label:
+      static: "[Data] Devopsguru Resource Collection"
+      template: "[Data] Devopsguru Resource Collection"
+    display_type: default
+
+discovery:
+  type: data_aws_devopsguru_resource_collection
+  dnd_supported: false

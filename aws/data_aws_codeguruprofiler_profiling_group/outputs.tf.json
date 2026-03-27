@@ -1,0 +1,36 @@
+{
+    "output": {
+        "agent_orchestration_config": {
+            "description": "Configuration that indicates whether profiling is enabled for the agent.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.agent_orchestration_config}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the profiling group.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.arn}"
+        },
+        "compute_platform": {
+            "description": "The compute platform on which the profiling group is running, such as AWS Lambda or EC2.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.compute_platform}"
+        },
+        "created_at": {
+            "description": "The date and time when the profiling group was created.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.created_at}"
+        },
+        "id": {
+            "description": "The identifier of the profiling group.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.id}"
+        },
+        "profiling_status": {
+            "description": "The current profiling status, including details about the latest agent orchestration and aggregated profiles.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.profiling_status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the profiling group.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.tags}"
+        },
+        "updated_at": {
+            "description": "The date and time when the profiling group was last updated.",
+            "value": "${data.aws_codeguruprofiler_profiling_group.this.updated_at}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "network_tier": [
+      {
+        "description": "Defines the default network tier for resources in the project, specifying the quality and cost of network services. Valid options are 'PREMIUM' or 'STANDARD'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the custom timeouts for create, update, and delete operations, specified as a map of duration strings (e.g., \"5m\" for 5 minutes).",
+        "nullable": true,
+        "type": "object({create: optional(string)})"
+      }
+    ]
+  }
+}

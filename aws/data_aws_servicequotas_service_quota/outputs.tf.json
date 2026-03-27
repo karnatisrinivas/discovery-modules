@@ -1,0 +1,44 @@
+{
+    "output": {
+        "adjustable": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.adjustable}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.arn}"
+        },
+        "default_value": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.default_value}"
+        },
+        "global_quota": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.global_quota}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.id}"
+        },
+        "quota_code": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.quota_code}"
+        },
+        "quota_name": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.quota_name}"
+        },
+        "service_name": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.service_name}"
+        },
+        "usage_metric": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.usage_metric}"
+        },
+        "value": {
+            "description": "",
+            "value": "${data.aws_servicequotas_service_quota.this.value}"
+        }
+    }
+}

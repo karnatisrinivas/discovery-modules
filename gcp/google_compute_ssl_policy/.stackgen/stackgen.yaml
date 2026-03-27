@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Ssl Policy
+  node:
+    label:
+      static: Compute Ssl Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_ssl_policy
+  dnd_supported: false

@@ -1,0 +1,76 @@
+{
+    "output": {
+        "ami_type": {
+            "description": "The type of Amazon Machine Image (AMI) used by the node group.",
+            "value": "${data.aws_eks_node_group.this.ami_type}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the node group.",
+            "value": "${data.aws_eks_node_group.this.arn}"
+        },
+        "capacity_type": {
+            "description": "The capacity type of the node group, such as 'ON_DEMAND' or 'SPOT'.",
+            "value": "${data.aws_eks_node_group.this.capacity_type}"
+        },
+        "disk_size": {
+            "description": "The disk size in gigabytes for the node group.",
+            "value": "${data.aws_eks_node_group.this.disk_size}"
+        },
+        "id": {
+            "description": "The ID of the node group.",
+            "value": "${data.aws_eks_node_group.this.id}"
+        },
+        "instance_types": {
+            "description": "The list of instance types for the node group.",
+            "value": "${data.aws_eks_node_group.this.instance_types}"
+        },
+        "labels": {
+            "description": "A map of labels to assign to the node group.",
+            "value": "${data.aws_eks_node_group.this.labels}"
+        },
+        "launch_template": {
+            "description": "Details of the launch template used by the node group, including ID, name, and version.",
+            "value": "${data.aws_eks_node_group.this.launch_template}"
+        },
+        "node_role_arn": {
+            "description": "The ARN of the IAM role assigned to the node group.",
+            "value": "${data.aws_eks_node_group.this.node_role_arn}"
+        },
+        "release_version": {
+            "description": "The release version of the node group.",
+            "value": "${data.aws_eks_node_group.this.release_version}"
+        },
+        "remote_access": {
+            "description": "Configuration for remote access to the nodes, including SSH key and security group IDs.",
+            "value": "${data.aws_eks_node_group.this.remote_access}"
+        },
+        "resources": {
+            "description": "Details of the resources associated with the node group, such as autoscaling groups and security group ID.",
+            "value": "${data.aws_eks_node_group.this.resources}"
+        },
+        "scaling_config": {
+            "description": "The scaling configuration of the node group, including desired, maximum, and minimum sizes.",
+            "value": "${data.aws_eks_node_group.this.scaling_config}"
+        },
+        "status": {
+            "description": "The current status of the node group.",
+            "value": "${data.aws_eks_node_group.this.status}"
+        },
+        "subnet_ids": {
+            "description": "The IDs of the subnets associated with the node group.",
+            "value": "${data.aws_eks_node_group.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags to assign to the node group.",
+            "value": "${data.aws_eks_node_group.this.tags}"
+        },
+        "taints": {
+            "description": "A list of Kubernetes taints to apply to the nodes in the group.",
+            "value": "${data.aws_eks_node_group.this.taints}"
+        },
+        "version": {
+            "description": "The Kubernetes version of the node group.",
+            "value": "${data.aws_eks_node_group.this.version}"
+        }
+    }
+}

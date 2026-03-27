@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the IAM group, which is a unique identifier used to manage permissions for a collection of users.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "path": [
+      {
+        "description": "The path to the IAM group in the AWS directory, which allows for organizational structure and grouping, defaults to '/' if not specified.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

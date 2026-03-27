@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Specifies the unique name of the signing profile, which must be alphanumeric and up to 64 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Specifies the prefix to use for the signing profile name; must be unique within the AWS account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "platform_id": [
+      {
+        "description": "Specifies the platform to use for signing, such as AWS-managed or custom platforms. Must match a valid platform ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "signature_validity_period": [
+      {
+        "description": "Specifies the duration for which the signature is valid, in days, months, or years; must be between 1 day and 135 months.",
+        "nullable": true,
+        "type": "list(object({type: string,value: number}))"
+      }
+    ],
+    "signing_material": [
+      {
+        "description": "Specifies the certificate ARN to be used for signing, required to create the signing profile.",
+        "nullable": true,
+        "type": "list(object({certificate_arn: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and manage the signing profile, supporting metadata such as environment or project.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

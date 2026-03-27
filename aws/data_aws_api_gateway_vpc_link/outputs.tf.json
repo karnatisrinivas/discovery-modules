@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.id}"
+        },
+        "status": {
+            "description": "The current status of the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.status}"
+        },
+        "status_message": {
+            "description": "Additional details about the status of the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.status_message}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.tags}"
+        },
+        "target_arns": {
+            "description": "The list of target ARNs associated with the VPC link.",
+            "value": "${data.aws_api_gateway_vpc_link.this.target_arns}"
+        }
+    }
+}

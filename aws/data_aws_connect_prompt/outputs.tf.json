@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Connect prompt.",
+            "value": "${data.aws_connect_prompt.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Connect prompt.",
+            "value": "${data.aws_connect_prompt.this.id}"
+        },
+        "prompt_id": {
+            "description": "The specific ID associated with the AWS Connect prompt.",
+            "value": "${data.aws_connect_prompt.this.prompt_id}"
+        }
+    }
+}

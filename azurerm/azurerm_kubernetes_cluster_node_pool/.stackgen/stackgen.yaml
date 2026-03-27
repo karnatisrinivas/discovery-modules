@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kubernetes Cluster Node Pool
+  node:
+    label:
+      static: Kubernetes Cluster Node Pool
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_kubernetes_cluster_node_pool
+  dnd_supported: false
+  references:
+    kubernetes_cluster_id:
+      from: azurerm_kubernetes_cluster
+      output: id
+    proximity_placement_group_id:
+      from: azurerm_proximity_placement_group
+      output: id
+    pod_subnet_id:
+      from: azurerm_subnet
+      output: id
+    vnet_subnet_id:
+      from: azurerm_subnet
+      output: id

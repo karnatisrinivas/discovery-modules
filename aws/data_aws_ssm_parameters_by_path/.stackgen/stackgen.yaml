@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssm Parameters By Path"
+  node:
+    label:
+      static: "[Data] Ssm Parameters By Path"
+      template: "[Data] Ssm Parameters By Path"
+    display_type: default
+
+discovery:
+  type: data_aws_ssm_parameters_by_path
+  dnd_supported: false

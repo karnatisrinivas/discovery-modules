@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[DATA] Compute Subnetworks"
+  node:
+    label:
+      static: "[DATA] Compute Subnetworks"
+      template: "[DATA] Compute Subnetworks"
+    display_type: default
+
+discovery:
+  type: data_google_compute_subnetworks
+  dnd_supported: false

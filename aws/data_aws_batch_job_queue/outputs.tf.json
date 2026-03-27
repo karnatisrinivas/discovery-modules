@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Batch job queue.",
+            "value": "${data.aws_batch_job_queue.this.arn}"
+        },
+        "compute_environment_order": {
+            "description": "A list specifying the order of compute environments in which jobs are submitted.",
+            "value": "${data.aws_batch_job_queue.this.compute_environment_order}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Batch job queue.",
+            "value": "${data.aws_batch_job_queue.this.id}"
+        },
+        "job_state_time_limit_action": {
+            "description": "A list of actions to take when a job exceeds its state time limit.",
+            "value": "${data.aws_batch_job_queue.this.job_state_time_limit_action}"
+        },
+        "priority": {
+            "description": "The priority of the AWS Batch job queue, determining the order of job execution.",
+            "value": "${data.aws_batch_job_queue.this.priority}"
+        },
+        "scheduling_policy_arn": {
+            "description": "The ARN of the scheduling policy associated with the job queue.",
+            "value": "${data.aws_batch_job_queue.this.scheduling_policy_arn}"
+        },
+        "state": {
+            "description": "The current state of the AWS Batch job queue (e.g., ENABLED or DISABLED).",
+            "value": "${data.aws_batch_job_queue.this.state}"
+        },
+        "status": {
+            "description": "The current status of the AWS Batch job queue, providing more detail than the state.",
+            "value": "${data.aws_batch_job_queue.this.status}"
+        },
+        "status_reason": {
+            "description": "The reason for the current status of the AWS Batch job queue, if applicable.",
+            "value": "${data.aws_batch_job_queue.this.status_reason}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Batch job queue, useful for categorization and management.",
+            "value": "${data.aws_batch_job_queue.this.tags}"
+        }
+    }
+}

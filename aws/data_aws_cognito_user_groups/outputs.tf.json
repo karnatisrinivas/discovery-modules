@@ -1,0 +1,12 @@
+{
+    "output": {
+        "groups": {
+            "description": "A list of Cognito user groups, each containing details such as description, group name, precedence, and associated role ARN.",
+            "value": "${data.aws_cognito_user_groups.this.groups}"
+        },
+        "id": {
+            "description": "The unique identifier for the collection of Cognito user groups.",
+            "value": "${data.aws_cognito_user_groups.this.id}"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the backend service was created",
+            "value": "${google_compute_region_backend_service.this.creation_timestamp}"
+        },
+        "fingerprint": {
+            "description": "Unique hash for tracking changes to the backend service",
+            "value": "${google_compute_region_backend_service.this.fingerprint}"
+        },
+        "generated_id": {
+            "description": "System-generated identifier for the backend service",
+            "value": "${google_compute_region_backend_service.this.generated_id}"
+        },
+        "id": {
+            "description": "Resource ID for referencing the backend service in configurations",
+            "value": "${google_compute_region_backend_service.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the backend service in the Google Cloud Console",
+            "value": "${google_compute_region_backend_service.this.self_link}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Keyspace
+  node:
+    label:
+      static: Keyspace
+      template: Keyspace
+    display_type: default
+
+discovery:
+  type: aws_keyspaces_keyspace
+  dnd_supported: false

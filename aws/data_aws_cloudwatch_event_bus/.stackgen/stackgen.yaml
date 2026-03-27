@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudwatch Event Bus"
+  node:
+    label:
+      static: "[Data] Cloudwatch Event Bus"
+      template: "[Data] Cloudwatch Event Bus"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudwatch_event_bus
+  dnd_supported: false

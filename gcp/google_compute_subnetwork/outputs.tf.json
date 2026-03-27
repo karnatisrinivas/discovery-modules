@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "An identifier for the resource with format projects/{{project}}/regions/{{region}}/subnetworks/{{name}}",
+            "value": "${google_compute_subnetwork.this.id}"
+        },
+        "name": {
+            "description": "The name of the subnetwork",
+            "value": "${google_compute_subnetwork.this.name}"
+        },
+        "self_link": {
+            "description": "The URI of the created resource",
+            "value": "${google_compute_subnetwork.this.self_link}"
+        }
+    }
+}

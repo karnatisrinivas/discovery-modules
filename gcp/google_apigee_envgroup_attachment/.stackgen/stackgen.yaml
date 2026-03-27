@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Envgroup Attachment
+  node:
+    label:
+      static: Apigee Envgroup Attachment
+      template: ${envgroup_id}
+    display_type: default
+
+discovery:
+  type: google_apigee_envgroup_attachment
+  dnd_supported: false
+  references:
+    environment:
+      from: google_apigee_environment
+      output: name
+    envgroup_id:
+      from: google_apigee_envgroup
+      output: id

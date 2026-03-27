@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "desired_state": [
+      {
+        "description": "Specifies the desired operational state of the Workbench instance, such as `ACTIVE` or `DELETED`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_proxy_access": [
+      {
+        "description": "Determines whether proxy access is disabled for the Workbench instance. Set to true to block proxy connections; false allows proxy access.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_third_party_identity": [
+      {
+        "description": "Determines whether third-party identity providers can be used for authentication in the Workbench instance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "gce_setup": [
+      {
+        "description": "Defines the GCE setup configuration for the Workbench instance, including machine type, boot disk, and network settings.",
+        "nullable": true,
+        "type": "list(object({disable_public_ip: optional(bool),enable_ip_forwarding: optional(bool),machine_type: optional(string),metadata: optional(map(string)),tags: optional(list(string)),accelerator_configs: list(object({core_count: optional(string),type: optional(string)})),boot_disk: list(object({disk_encryption: optional(string),disk_size_gb: optional(string),disk_type: optional(string),kms_key: optional(string)})),confidential_instance_config: list(object({confidential_instance_type: optional(string)})),container_image: list(object({repository: string,tag: optional(string)})),data_disks: list(object({disk_encryption: optional(string),disk_size_gb: optional(string),disk_type: optional(string),kms_key: optional(string)})),network_interfaces: list(object({network: optional(string),nic_type: optional(string),subnet: optional(string),access_configs: list(object({external_ip: string}))})),service_accounts: list(object({email: optional(string),scopes: optional(list(string))})),shielded_instance_config: list(object({enable_integrity_monitoring: optional(bool),enable_secure_boot: optional(bool),enable_vtpm: optional(bool)})),vm_image: list(object({family: optional(string),name: optional(string),project: optional(string)}))}))"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "Unique identifier for the Workbench instance, must be alphanumeric and conform to resource naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instance_owners": [
+      {
+        "description": "List of email addresses for users who are granted owner access to the Workbench instance; must be valid Google account emails.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Defines key-value pairs to organize and categorize the instance, such as environment or team, with a maximum of 64 entries and keys up to 63 characters.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the geographic region where the Workbench instance will be created; must be a supported Google Cloud region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the instance, must be compliant with GCP naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, or delete operations; must be specified in a valid time format (e.g., \"30m\", \"1h\").",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

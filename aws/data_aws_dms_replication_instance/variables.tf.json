@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "replication_instance_id": [
+      {
+        "description": "The unique identifier for the DMS replication instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

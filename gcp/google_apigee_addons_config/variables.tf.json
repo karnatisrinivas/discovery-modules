@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "addons_config": [
+      {
+        "description": "Configuration settings for enabling or disabling specific Apigee add-ons, such as Advanced API Security or Monetization.",
+        "nullable": true,
+        "type": "list(object({advanced_api_ops_config: list(object({enabled: optional(bool)})),api_security_config: list(object({enabled: optional(bool),expires_at: optional(string)})),connectors_platform_config: list(object({enabled: optional(bool),expires_at: optional(string)})),integration_config: list(object({enabled: optional(bool)})),monetization_config: list(object({enabled: optional(bool)}))}))"
+      }
+    ],
+    "org": [
+      {
+        "description": "Specifies the Apigee organization to apply the addons configuration. Must be a valid existing Apigee organization name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for creating, updating, or deleting the Apigee add-ons configuration.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

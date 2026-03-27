@@ -1,0 +1,312 @@
+{
+  "variable": {
+    "capacity_reservation_group_id": [
+      {
+        "description": "Specifies the ID of the capacity reservation group to associate with the node pool, ensuring reserved compute capacity for nodes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "custom_ca_trust_enabled": [
+      {
+        "description": "Indicates whether custom Certificate Authority (CA) trust is enabled for the node pool.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_auto_scaling": [
+      {
+        "description": "Determines whether the node pool should automatically scale the number of nodes based on workload demand.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_host_encryption": [
+      {
+        "description": "Determines whether host encryption is enabled for the node pool, ensuring additional data security.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_node_public_ip": [
+      {
+        "description": "Determines whether public IP addresses are assigned to the nodes in the node pool. Must be `true` or `false`.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "eviction_policy": [
+      {
+        "description": "Defines the eviction behavior for nodes, determining whether they are cordoned and drained before deletion or immediately removed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fips_enabled": [
+      {
+        "description": "Enables FIPS compliance for the node pool; requires FIPS-enabled nodes and compatible OS configurations.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "gpu_instance": [
+      {
+        "description": "Defines the VM size for GPU-enabled nodes in the node pool, optimized for compute-intensive workloads requiring GPU acceleration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "host_group_id": [
+      {
+        "description": "Specifies the ID of the dedicated host group to assign the node pool to, requiring that the cluster uses a VM size compatible with the host group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kubelet_config": [
+      {
+        "description": "Defines the configuration settings for the kubelet on the node pool, including performance tuning and resource management parameters.",
+        "nullable": true,
+        "type": "list(object({allowed_unsafe_sysctls: optional(list(string)),container_log_max_line: optional(number),container_log_max_size_mb: optional(number),cpu_cfs_quota_enabled: optional(bool),cpu_cfs_quota_period: optional(string),cpu_manager_policy: optional(string),image_gc_high_threshold: optional(number),image_gc_low_threshold: optional(number),pod_max_pid: optional(number),topology_manager_policy: optional(string)}))"
+      }
+    ],
+    "kubelet_disk_type": [
+      {
+        "description": "Specifies the type of disk used by the kubelet; acceptable values are 'OS' or 'Temporary'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kubernetes_cluster_id": [
+      {
+        "description": "Specifies the ID of the Kubernetes cluster to attach the node pool to; must be an existing Azure Kubernetes Service cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "linux_os_config": [
+      {
+        "description": "Specifies the configuration settings for the Linux operating system on the node pool, including customizations like SSH access and file system options.",
+        "nullable": true,
+        "type": "list(object({swap_file_size_mb: optional(number),transparent_huge_page_defrag: optional(string),transparent_huge_page_enabled: optional(string),sysctl_config: list(object({fs_aio_max_nr: optional(number),fs_file_max: optional(number),fs_inotify_max_user_watches: optional(number),fs_nr_open: optional(number),kernel_threads_max: optional(number),net_core_netdev_max_backlog: optional(number),net_core_optmem_max: optional(number),net_core_rmem_default: optional(number),net_core_rmem_max: optional(number),net_core_somaxconn: optional(number),net_core_wmem_default: optional(number),net_core_wmem_max: optional(number),net_ipv4_ip_local_port_range_max: optional(number),net_ipv4_ip_local_port_range_min: optional(number),net_ipv4_neigh_default_gc_thresh1: optional(number),net_ipv4_neigh_default_gc_thresh2: optional(number),net_ipv4_neigh_default_gc_thresh3: optional(number),net_ipv4_tcp_fin_timeout: optional(number),net_ipv4_tcp_keepalive_intvl: optional(number),net_ipv4_tcp_keepalive_probes: optional(number),net_ipv4_tcp_keepalive_time: optional(number),net_ipv4_tcp_max_syn_backlog: optional(number),net_ipv4_tcp_max_tw_buckets: optional(number),net_ipv4_tcp_tw_reuse: optional(bool),net_netfilter_nf_conntrack_buckets: optional(number),net_netfilter_nf_conntrack_max: optional(number),vm_max_map_count: optional(number),vm_swappiness: optional(number),vm_vfs_cache_pressure: optional(number)}))}))"
+      }
+    ],
+    "max_count": [
+      {
+        "description": "Maximum number of nodes allowed in the node pool for scaling operations; must be greater than or equal to the initial node count.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "max_pods": [
+      {
+        "description": "Defines the maximum number of pods that can be scheduled on a single node in the node pool.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "message_of_the_day": [
+      {
+        "description": "Specifies the message displayed to users upon logging into the nodes; must be a non-empty string.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "min_count": [
+      {
+        "description": "Specifies the minimum number of nodes in the node pool. Must be less than or equal to `max_count` and greater than or equal to 0.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "mode": [
+      {
+        "description": "Defines the operating mode of the node pool, such as \"System\" for critical system pods or \"User\" for general application workloads.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the node pool; must be unique within the Kubernetes cluster and adhere to Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "node_count": [
+      {
+        "description": "Specifies the number of nodes to provision in the node pool, must be greater than or equal to the minimum node count.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "node_labels": [
+      {
+        "description": "Specifies key-value pairs to label nodes in the pool, used for organizing and categorizing resources; keys must conform to Kubernetes label syntax.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "node_network_profile": [
+      {
+        "description": "Defines the network configuration for the node pool, including settings for pod CIDR, service CIDR, and DNS policy. Must align with the cluster's network profile.",
+        "nullable": true,
+        "type": "list(object({application_security_group_ids: optional(list(string)),node_public_ip_tags: optional(map(string)),allowed_host_ports: list(object({port_end: optional(number),port_start: optional(number),protocol: optional(string)}))}))"
+      }
+    ],
+    "node_public_ip_prefix_id": [
+      {
+        "description": "Specifies the ID of the public IP prefix to assign public IPs to the nodes in the node pool. Must be in the same region as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "node_taints": [
+      {
+        "description": "Defines custom scheduling constraints for nodes in the pool, specifying key-value pairs and effects to control which pods can run on the nodes.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "orchestrator_version": [
+      {
+        "description": "Specifies the Kubernetes version for the node pool. Must match a supported version for the cluster's region and API.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "os_disk_size_gb": [
+      {
+        "description": "Specifies the size of the OS disk in gigabytes for each node in the pool; must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "os_disk_type": [
+      {
+        "description": "Specifies the type of disk to use for the operating system, such as 'Managed' or 'Ephemeral'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "os_sku": [
+      {
+        "description": "Specifies the operating system SKU for the nodes in the Kubernetes cluster node pool.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "os_type": [
+      {
+        "description": "Specifies the operating system type for the node pool, such as Linux or Windows.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "pod_subnet_id": [
+      {
+        "description": "Specifies the ID of the subnet where pods will be deployed, ensuring network isolation for the node pool. Must belong to the same virtual network as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Defines the priority level for the node pool, specifying whether it is a regular or spot node pool for cost optimization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "proximity_placement_group_id": [
+      {
+        "description": "Specifies the ID of the proximity placement group to optimize node pool latency. Must be an existing proximity placement group in the same region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "scale_down_mode": [
+      {
+        "description": "Specifies the behavior for scaling down nodes in the node pool, such as whether to delete or deallocate nodes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "snapshot_id": [
+      {
+        "description": "Specifies the ID of the snapshot to use when creating the node pool. Must be an existing snapshot ID in the same region as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "spot_max_price": [
+      {
+        "description": "Defines the maximum hourly price willing to pay for a spot instance in the node pool. Must be greater than zero and specified in USD.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Specifies custom tags to assign to the node pool resources for categorization or identification purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom time durations for operations like create, update, and delete actions for the Kubernetes node pool.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "ultra_ssd_enabled": [
+      {
+        "description": "Specifies whether UltraSSD is enabled for the node pool; requires compatible VM sizes and regions.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "upgrade_settings": [
+      {
+        "description": "Configuration settings for node pool upgrades, including mode and surge options.",
+        "nullable": true,
+        "type": "list(object({drain_timeout_in_minutes: optional(number),max_surge: string,node_soak_duration_in_minutes: optional(number)}))"
+      }
+    ],
+    "vm_size": [
+      {
+        "description": "Defines the size of the virtual machines used for the nodes in the pool; must be a valid Azure VM SKU.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "vnet_subnet_id": [
+      {
+        "description": "Specifies the ID of the subnet within the virtual network where the node pool will be deployed. Must be within the same region as the Kubernetes cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "windows_profile": [
+      {
+        "description": "Configures Windows settings for the node pool, including credentials and other Windows-specific parameters.",
+        "nullable": true,
+        "type": "list(object({outbound_nat_enabled: optional(bool)}))"
+      }
+    ],
+    "workload_runtime": [
+      {
+        "description": "Defines the runtime used for container workloads, specifying compatibility (e.g., \"Linux\" or \"Windows\"). Ensure the chosen runtime matches workload requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "zones": [
+      {
+        "description": "Specifies the availability zones for the node pool. Must be a list of valid Azure zone identifiers for the region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

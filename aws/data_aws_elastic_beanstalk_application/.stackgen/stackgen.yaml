@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elastic Beanstalk Application"
+  node:
+    label:
+      static: "[Data] Elastic Beanstalk Application"
+      template: "[Data] Elastic Beanstalk Application"
+    display_type: default
+
+discovery:
+  type: data_aws_elastic_beanstalk_application
+  dnd_supported: false

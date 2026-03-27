@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the IAM policy.",
+            "value": "${data.aws_iam_policy.this.arn}"
+        },
+        "attachment_count": {
+            "description": "The number of entities (users, groups, roles) that the policy is attached to.",
+            "value": "${data.aws_iam_policy.this.attachment_count}"
+        },
+        "description": {
+            "description": "A brief explanation or summary of the IAM policy.",
+            "value": "${data.aws_iam_policy.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the IAM policy.",
+            "value": "${data.aws_iam_policy.this.id}"
+        },
+        "name": {
+            "description": "The name of the IAM policy.",
+            "value": "${data.aws_iam_policy.this.name}"
+        },
+        "path": {
+            "description": "The path to the IAM policy in AWS.",
+            "value": "${data.aws_iam_policy.this.path}"
+        },
+        "policy": {
+            "description": "The JSON formatted content of the IAM policy.",
+            "value": "${data.aws_iam_policy.this.policy}"
+        },
+        "policy_id": {
+            "description": "The unique policy identifier for the IAM policy.",
+            "value": "${data.aws_iam_policy.this.policy_id}"
+        },
+        "tags": {
+            "description": "A map of key-value pairs assigned as tags to the IAM policy.",
+            "value": "${data.aws_iam_policy.this.tags}"
+        }
+    }
+}

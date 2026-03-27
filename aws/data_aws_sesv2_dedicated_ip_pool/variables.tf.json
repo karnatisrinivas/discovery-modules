@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "pool_name": [
+      {
+        "description": "The name assigned to the dedicated IP pool in AWS SES, used for organizing and managing dedicated IP addresses.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

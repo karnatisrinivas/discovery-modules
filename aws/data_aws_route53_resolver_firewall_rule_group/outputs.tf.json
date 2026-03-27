@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 Resolver firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.arn}"
+        },
+        "creation_time": {
+            "description": "The date and time when the firewall rule group was created.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.creation_time}"
+        },
+        "creator_request_id": {
+            "description": "A unique string that identifies the request that created the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.creator_request_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.id}"
+        },
+        "modification_time": {
+            "description": "The date and time when the firewall rule group was last modified.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.modification_time}"
+        },
+        "name": {
+            "description": "The name of the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.name}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.owner_id}"
+        },
+        "rule_count": {
+            "description": "The number of rules in the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.rule_count}"
+        },
+        "share_status": {
+            "description": "Indicates whether the firewall rule group is shared with other accounts.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.share_status}"
+        },
+        "status": {
+            "description": "The current status of the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.status}"
+        },
+        "status_message": {
+            "description": "Additional information about the status of the firewall rule group.",
+            "value": "${data.aws_route53_resolver_firewall_rule_group.this.status_message}"
+        }
+    }
+}

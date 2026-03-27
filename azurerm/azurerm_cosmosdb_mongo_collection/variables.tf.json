@@ -1,0 +1,72 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of the Cosmos DB Mongo Collection",
+        "nullable": false
+      }
+    ],
+    "account_name": [
+      {
+        "type": "string",
+        "description": "The name of the Cosmos DB Mongo Account",
+        "nullable": false
+      }
+    ],
+    "database_name": [
+      {
+        "type": "string",
+        "description": "The name of the Cosmos DB Mongo Database",
+        "nullable": false
+      }
+    ],
+    "shard_key": [
+      {
+        "type": "string",
+        "description": "The name of the key to partition on for sharding. There must not be any other unique index keys.",
+        "nullable": false
+      }
+    ],
+    "default_ttl_seconds": [
+      {
+        "type": "number",
+        "description": "The default time to live for the Cosmos DB Mongo Collection",
+        "nullable": true,
+        "default": 1000
+      }
+    ],
+    "throughput": [
+      {
+        "type": "number",
+        "description": "The throughput for the Cosmos DB Mongo Collection",
+        "nullable": true,
+        "default": 400
+      }
+    ],
+    "keys": [
+      {
+        "type": "list(string)",
+        "description": "Specifies the list of user settable index keys for each Cosmos DB Mongo Collections",
+        "nullable": false,
+        "default": [
+          "_id"
+        ]
+      }
+    ],
+    "unique": [
+      {
+        "type": "bool",
+        "description": "Are the index keys unique or not?",
+        "nullable": true,
+        "default": false
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

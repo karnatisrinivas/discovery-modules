@@ -1,0 +1,50 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: ElastiCache Cluster
+  node:
+    label:
+      static: ElastiCache Cluster
+      template: ${cluster_id}
+    display_type: default
+
+variables:
+  log_type:
+    options: 
+      - "engine-log"
+      - "slow-log"
+    ui_control: select
+  log_format:
+    options: 
+      - json
+      - text
+    ui_control: select
+  az_mode:
+    description: Specifies whether the cluster is created in a single availability zone or across multiple availability zones.
+    type: string
+    options: 
+      - "single-az"
+      - "cross-az"
+    ui_control: select
+
+discovery:
+  type: aws_elasticache_cluster
+  dnd_supported: false
+  data_source: data_aws_elasticache_cluster
+  references:
+    subnet_group_name:
+      from: aws_elasticache_subnet_group
+      output: name
+    replication_group_id:
+      from: aws_elasticache_replication_group
+      output: id
+    notification_topic_arn:
+      from: aws_sns_topic
+      output: arn
+    preferred_outpost_arn:
+      from: data_aws_outposts_outpost
+      output: arn
+    parameter_group_name:
+      from: aws_elasticache_parameter_group
+      output: name

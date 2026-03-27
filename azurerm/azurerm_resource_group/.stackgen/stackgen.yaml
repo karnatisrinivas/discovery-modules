@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Resource Group
+  node:
+    label:
+      static: Resource Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_resource_group
+  dnd_supported: false
+  data_source: data_azurerm_resource_group

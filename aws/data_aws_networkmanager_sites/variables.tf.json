@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier of the global network with which the site is associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs to assign as tags to the site for identification and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

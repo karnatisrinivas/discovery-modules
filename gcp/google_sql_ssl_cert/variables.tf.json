@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "common_name": [
+      {
+        "description": "Specifies the common name for the SSL certificate, typically used to identify the client or server; must be unique within the database instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance": [
+      {
+        "description": "Specifies the Cloud SQL instance to associate with the SSL certificate; must be the name or ID of an existing instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout durations for operations like creation, update, and deletion of the SSL certificate.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

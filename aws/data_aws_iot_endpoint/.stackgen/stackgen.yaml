@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iot Endpoint"
+  node:
+    label:
+      static: "[Data] Iot Endpoint"
+      template: "[Data] Iot Endpoint"
+    display_type: default
+
+discovery:
+  type: data_aws_iot_endpoint
+  dnd_supported: false

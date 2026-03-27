@@ -1,0 +1,181 @@
+{
+    "variable": {
+        "cluster_identifier": [
+            {
+                "description": "Unique identifier for the cluster. if omitted, a random unique identifier will be generated",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "availability_zones": [
+            {
+                "default": [],
+                "description": "A list of EC2 Availability Zones that instances in the DB cluster can be created in",
+                "nullable": true,
+                "type": "list(string)"
+            }
+        ],
+        "backup_retention_period": [
+            {
+                "default": 9,
+                "description": "The days to retain backups for, must be between 1 and 35. Defaults to 1. Set to 0 to disable backups. Must be greater than 0 if storage_encrypted is true. If storage_encrypted is false then this attribute is ignored",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "database_name": [
+            {
+                "description": "The name for your database of up to 64 alpha-numeric characters",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "db_subnet_group_name": [
+            {
+                "default": "default",
+                "description": "The DB subnet group to associate with this RDS cluster",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "enable_global_write_forwarding": [
+            {
+                "description": "Specifies whether to enable global write forwarding for the DB cluster",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "enable_local_write_forwarding": [
+            {
+                "description": "Specifies whether to enable local write forwarding for the DB cluster",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "engine": [
+            {
+                "description": "The name of the database engine to be used for this DB cluster",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "engine_mode": [
+            {
+                "description": "The DB engine mode of the DB cluster",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "engine_version": [
+            {
+                "description": "The engine version to use for the new DB cluster",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "master_password": [
+            {
+                "description": "Password for the master DB user",
+                "nullable": true,
+                "type": "string",
+                "sensitive": true
+            }
+        ],
+        "master_username": [
+            {
+                "description": "Username for the master DB user",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "preferred_backup_window": [
+            {
+                "default": "07:00-09:00",
+                "description": "The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "preferred_maintenance_window": [
+            {
+                "default": "sun:05:00-sun:06:00",
+                "description": "The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC)",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "scaling_configuration": [
+            {
+                "description": "Configuration block for scaling settings",
+                "nullable": true,
+                "type": "list(object({auto_pause: bool, max_capacity: number, min_capacity: number, seconds_before_timeout: number, seconds_until_auto_pause: number, timeout_action: string}))"
+            }
+        ],
+        "serverlessv2_scaling_configuration": [
+            {
+                "description": "Configuration block for scaling settings",
+                "nullable": true,
+                "type": "list(object({max_capacity: number, min_capacity: number, seconds_until_auto_pause: number}))"
+            }
+        ],
+        "storage_encrypted": [
+            {
+                "default": true,
+                "description": "Specifies whether the DB cluster is encrypted",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "vpc_security_group_ids": [
+            {
+                "nullable": true,
+                "description": "List of VPC security groups to associate with the Cluster",
+                "type": "list(string)"
+            }
+        ],
+        "kms_key_id": [
+            {
+                "nullable": true,
+                "description": "value of the KMS key to use for encryption",
+                "type": "string"
+            }
+        ],
+        "global_cluster_identifier": [
+            {
+                "nullable": true,
+                "description": "The global cluster identifier",
+                "type": "string"
+            }
+        ],
+        "tags": [
+            {
+                "default": {},
+                "description": "A mapping of AWS tags to assign.",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "skip_final_snapshot": [
+            {
+                "description": "If true, skip the creation of a final snapshot",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "enabled_cloudwatch_logs_exports": [
+            {
+                "description": "List of log types to export to cloudwatch",
+                "nullable": true,
+                "type": "list(string)"
+            }
+        ],
+        "copy_tags_to_snapshot": [
+            {
+                "description": "Copy all DB cluster tags to snapshots",
+                "nullable": true,
+                "type": "bool",
+                "default": false
+            }
+        ]
+    }
+}

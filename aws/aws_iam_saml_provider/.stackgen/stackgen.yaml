@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS IAM SAML Provider
+  node:
+    label:
+      static: AWS IAM SAML Provider
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_iam_saml_provider
+  dnd_supported: false
+  data_source: data_aws_iam_saml_provider

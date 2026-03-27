@@ -1,0 +1,175 @@
+{
+  "variable": {
+    "backend_address_pool": [
+      {
+        "description": "A list of backend address pools.",
+        "nullable": false,
+        "type": "list(object({name : string, fqdns : list(string), ip_addresses : list(string)}))"
+      }
+    ],
+    "backend_http_settings": [
+      {
+        "description": "A list of backend HTTP settings.",
+        "nullable": false,
+        "type": "list(object({name : string, path: string, port : number, protocol : string, request_timeout : number, affinity_cookie_name: string, probe_name: string, host_name: string, drain_timeout_sec: number}))"
+      }
+    ],
+    "enable_http2": [
+      {
+        "description": "Enable or disable HTTP/2 support for the application gateway.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "fips_enabled": [
+      {
+        "description": "Enable or disable FIPS (Federal Information Processing Standards) compliance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "firewall_policy_id": [
+      {
+        "description": "The ID of the firewall policy to associate with the application gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_firewall_policy_association": [
+      {
+        "description": "Force the association of a firewall policy with the application gateway.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "frontend_ip_configuration": [
+      {
+        "description": "A list of frontend IP configurations.",
+        "nullable": false,
+        "type": "list(object({name : string, public_ip_address_id : string, private_ip_address : string, subnet_id : string, private_ip_address_allocation: string}))"
+      }
+    ],
+    "frontend_port": [
+      {
+        "description": "A list of frontend ports.",
+        "nullable": false,
+        "type": "list(object({name : string, port : number}))"
+      }
+    ],
+    "gateway_ip_configuration": [
+      {
+        "description": "A list of gateway IP configurations.",
+        "nullable": false,
+        "type": "list(object({name : string, subnet_id : string}))"
+      }
+    ],
+    "http_listener": [
+      {
+        "description": "A list of HTTP listeners.",
+        "nullable": false,
+        "type": "list(object({name : string, frontend_ip_configuration_name : string, frontend_port_name : string, protocol : string, host_name: string, require_sni: bool, ssl_certificate_name: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the application gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "sku": [
+      {
+        "description": "A sku block.",
+        "nullable": false,
+        "type": "list(object({name: string, tier: string, capacity: number}))"
+      }
+    ],
+    "request_routing_rule": [
+      {
+        "description": "A list of request routing rules.",
+        "nullable": false,
+        "type": "list(object({name : string, rule_type : string, priority : number, http_listener_name : string, backend_address_pool_name : string, backend_http_settings_name : string, redirect_configuration_name: string, url_path_map_name: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the application gateway.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zones": [
+      {
+        "description": "The availability zones to which the application gateway should be deployed.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "identity_ids": [
+      {
+        "type": "list(string)",
+        "description": "Specifies a list of User Assigned Managed Identity IDs to be assigned to this Application Gateway.",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "ssl_certificates": [
+      {
+        "type": "list(object({name: string, data: string, password: string, key_vault_secret_id: string}))",
+        "description": "List of SSL Certificates to use for this Gateway",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "probes": [
+      {
+        "type": "list(object({name: string, interval: number, path: string, protocol: string, timeout: number, unhealthy_threshold: number, host: string, port: number, pick_host_name_from_backend_http_settings: bool}))",
+        "description": "Create probes for this resource.",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "redirect_configurations": [
+      {
+        "type": "list(object({name: string, redirect_type: string, target_listener_name: string, target_url: string, include_path: bool, include_query_string: bool}))",
+        "description": "List of Redirect Configurations",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "autoscale_min_capacity": [
+      {
+        "type": "number",
+        "description": "Minimum capacity for autoscaling. Accepted values are in the range 0 to 100. Not required if you want to enable autoscaling",
+        "nullable": true
+      }
+    ],
+    "autoscale_max_capacity": [
+      {
+        "type": "number",
+        "description": "Maximum capacity for autoscaling. Accepted values are in the range 0 to 100. Required if you want to enable autoscaling",
+        "nullable": true
+      }
+    ],
+    "url_path_maps": [
+      {
+        "type": "list(object({name: string, default_backend_http_settings_name: string, default_backend_address_pool_name: string, path_rules: list(object({name: string, backend_address_pool_name: string, backend_http_settings_name: string, paths: list(string)}))}))",
+        "description": "List of URL Path Maps for this resource.",
+        "default": [],
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

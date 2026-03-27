@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Client Config"
+  node:
+    label:
+      static: "[Data] Client Config"
+      template: "[Data] Client Config"
+    display_type: default
+
+discovery:
+  type: data_azurerm_client_config
+  dnd_supported: false

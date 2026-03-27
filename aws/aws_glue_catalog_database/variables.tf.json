@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "A detailed explanation or purpose of the Glue catalog database.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Glue catalog database. This is a unique identifier for the database within AWS Glue.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "A map of key-value pairs to define the parameters of the Glue catalog database. These can be additional configurations or settings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs for tagging the Glue catalog database. Tags are used for categorizing and organizing resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "create_table_default_permission": [
+      {
+        "description": "The default permission for creating tables in the Glue catalog database.",
+        "nullable": true,
+        "type": "list(object({ permissions: list(string), principal: list(object({ data_lake_principal_identifier: string })) }))"
+      }
+    ],
+    "federated_database": [
+      {
+        "description": "A list of federated databases to be created in the Glue catalog database.",
+        "nullable": true,
+        "type": "list(object({ connection_name: string, identifier: string }))"
+      }
+    ],
+    "target_database": [
+      {
+        "description": "A list of target databases to be created in the Glue catalog database.",
+        "nullable": true,
+        "type": "list(object({ catalog_id: string, database_name: string, region: string }))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for managing access control via APIs or IAM policies",
+            "value": "${aws_cloudfront_origin_access_control.this.arn}"
+        },
+        "etag": {
+            "description": "ETag for tracking resource changes and ensuring consistency",
+            "value": "${aws_cloudfront_origin_access_control.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the CloudFront origin access control resource",
+            "value": "${aws_cloudfront_origin_access_control.this.id}"
+        }
+    }
+}

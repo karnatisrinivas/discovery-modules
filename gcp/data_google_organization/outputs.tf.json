@@ -1,0 +1,28 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the organization was created",
+            "value": "${data.google_organization.this.create_time}"
+        },
+        "directory_customer_id": {
+            "description": "Customer ID used for directory-related operations in Google Workspace",
+            "value": "${data.google_organization.this.directory_customer_id}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the organization resource in configurations",
+            "value": "${data.google_organization.this.id}"
+        },
+        "lifecycle_state": {
+            "description": "Current state of the organization, e.g., active or deleted",
+            "value": "${data.google_organization.this.lifecycle_state}"
+        },
+        "name": {
+            "description": "Resource name for the organization, useful for API calls",
+            "value": "${data.google_organization.this.name}"
+        },
+        "org_id": {
+            "description": "Organization ID for managing resources within the hierarchy",
+            "value": "${data.google_organization.this.org_id}"
+        }
+    }
+}

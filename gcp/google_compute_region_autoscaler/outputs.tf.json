@@ -1,0 +1,16 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the autoscaler was created in Google Cloud.",
+            "value": "${google_compute_region_autoscaler.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for the autoscaler resource, useful for referencing in configurations.",
+            "value": "${google_compute_region_autoscaler.this.id}"
+        },
+        "self_link": {
+            "description": "Fully qualified URL for accessing the autoscaler via API or console.",
+            "value": "${google_compute_region_autoscaler.this.self_link}"
+        }
+    }
+}

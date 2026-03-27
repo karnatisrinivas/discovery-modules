@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Description of the HA VPN gateway, used for identification and documentation purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gateway_ip_version": [
+      {
+        "description": "Specifies the IP version for the VPN gateway, either IPv4 or IPv6.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the VPN gateway, such as by environment or team; must comply with GCP label naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the HA VPN gateway, must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network to which the HA VPN gateway belongs; must be an existing network in the same project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stack_type": [
+      {
+        "description": "Defines the deployment stack type, such as production, staging, or development, to distinguish environments for the HA VPN gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies timeout settings for creating, updating, and deleting the HA VPN gateway.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "vpn_interfaces": [
+      {
+        "description": "Defines the configuration of interfaces for the HA VPN gateway, including their associated IP addresses and peer VPN gateway connections; requires at least one interface and supports up to two.",
+        "nullable": true,
+        "type": "list(object({id: optional(number),interconnect_attachment: optional(string),ip_address: optional(string)}))"
+      }
+    ]
+  }
+}

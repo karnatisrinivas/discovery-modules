@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Default Network Acl
+  node:
+    label:
+      static: Default Network Acl
+      template: ${default_network_acl_id}
+    display_type: default
+
+discovery:
+  type: aws_default_network_acl
+  dnd_supported: false
+  references:
+    subnet_ids:
+      from: aws_subnet
+      output: id
+    default_network_acl_id:
+      from: aws_vpc
+      output: default_network_acl_id

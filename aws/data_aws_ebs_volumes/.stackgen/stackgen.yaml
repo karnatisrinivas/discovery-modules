@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ebs Volumes"
+  node:
+    label:
+      static: "[Data] Ebs Volumes"
+      template: "[Data] Ebs Volumes"
+    display_type: default
+
+discovery:
+  type: data_aws_ebs_volumes
+  dnd_supported: false

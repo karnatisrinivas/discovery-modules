@@ -1,0 +1,59 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of the notification hub namespace",
+        "nullable": false
+      }
+    ],
+    "namespace_type": [
+      {
+        "type": "string",
+        "description": "The type of the notification hub namespace",
+        "nullable": false
+      }
+    ],
+    "sku_name": [
+      {
+        "type": "string",
+        "description": "The sku name of the notification hub namespace",
+        "nullable": false
+      }
+    ],
+    "enabled": [
+      {
+        "type": "bool",
+        "description": "The enabled status of the notification hub namespace",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "The tags of the notification hub namespace",
+        "nullable": true
+      }
+    ],
+    "timeouts": [
+      {
+        "type": "object({create: optional(string), delete: optional(string), read: optional(string), update: optional(string)})",
+        "description": "The timeouts of the notification hub namespace",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

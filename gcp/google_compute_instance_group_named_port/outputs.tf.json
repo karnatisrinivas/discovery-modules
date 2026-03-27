@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for identifying the named port in the instance group configuration",
+            "value": "${google_compute_instance_group_named_port.this.id}"
+        }
+    }
+}

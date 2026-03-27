@@ -1,0 +1,46 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EFS
+  node:
+    label:
+      static: EFS
+      template: EFS
+    display_type: default
+
+variables:
+  throughput_mode:
+    description: The throughput mode for the file system.
+    type: string
+    options: 
+      - bursting
+      - provisioned
+      - elastic
+    ui_control: select
+  protection:
+    attributes: 
+      replication_overwrite: 
+        ui_control: select
+        label: Replication Overwrite
+        description: Whether to enable replication overwrites
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - ENABLED
+          - DISABLED
+    description: The file system protection policy for the file system.
+  performance_mode:
+    ui_control: select
+    description: The file system performance mode to set.
+    type: string
+    options: 
+      - generalPurpose
+      - maxIO
+
+discovery:
+  type: aws_efs_file_system
+  dnd_supported: false
+  data_source: data_aws_efs_file_system

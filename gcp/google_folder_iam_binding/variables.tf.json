@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines a condition under which the IAM binding applies, using attributes such as expression, title, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "folder": [
+      {
+        "description": "Specifies the folder ID where the IAM binding will be applied. Must be a valid folder ID in the Google Cloud hierarchy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of IAM members to be granted the specified role in the folder. Must be in the format 'user:email', 'serviceAccount:email', 'group:email', or 'domain:domain'.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the members, such as roles/editor. Must be a predefined Google Cloud role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: ECR Lifecycle Policy
+  node:
+    label:
+      static: ECR Lifecycle Policy
+      template: ECR Lifecycle Policy
+    display_type: default
+
+discovery:
+  type: aws_ecr_lifecycle_policy
+  dnd_supported: false
+  references:
+    repository:
+      from: aws_ecr_repository
+      output: name

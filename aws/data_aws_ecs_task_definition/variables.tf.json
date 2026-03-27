@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "task_definition": [
+      {
+        "description": "The name or family of the ECS task definition to be used, which specifies the container configurations.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

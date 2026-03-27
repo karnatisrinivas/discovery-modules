@@ -1,0 +1,32 @@
+{
+    "output": {
+        "checksum": {
+            "description": "A unique identifier that represents the current state of the slot type and its properties.",
+            "value": "${data.aws_lex_slot_type.this.checksum}"
+        },
+        "created_date": {
+            "description": "The date and time when the slot type was created.",
+            "value": "${data.aws_lex_slot_type.this.created_date}"
+        },
+        "description": {
+            "description": "A brief explanation or details about what the slot type represents or its purpose.",
+            "value": "${data.aws_lex_slot_type.this.description}"
+        },
+        "enumeration_value": {
+            "description": "A list of possible values for the slot type, including synonyms for each value.",
+            "value": "${data.aws_lex_slot_type.this.enumeration_value}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the slot type.",
+            "value": "${data.aws_lex_slot_type.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the slot type was last modified.",
+            "value": "${data.aws_lex_slot_type.this.last_updated_date}"
+        },
+        "value_selection_strategy": {
+            "description": "The strategy used by AWS Lex to select a value for the slot when multiple values are possible.",
+            "value": "${data.aws_lex_slot_type.this.value_selection_strategy}"
+        }
+    }
+}

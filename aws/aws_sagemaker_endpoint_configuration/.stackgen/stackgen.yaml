@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Sagemaker Endpoint Configuration
+  node:
+    label:
+      static: Sagemaker Endpoint Configuration
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_sagemaker_endpoint_configuration
+  dnd_supported: false
+  references:
+    kms_key_arn:
+      from: aws_kms_key
+      output: arn

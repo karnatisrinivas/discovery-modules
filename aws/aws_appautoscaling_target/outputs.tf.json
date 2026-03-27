@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing scaling configurations and API access",
+            "value": "${aws_appautoscaling_target.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for linking the scaling target to other resources",
+            "value": "${aws_appautoscaling_target.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the scaling target for organization and filtering",
+            "value": "${aws_appautoscaling_target.this.tags_all}"
+        }
+    }
+}

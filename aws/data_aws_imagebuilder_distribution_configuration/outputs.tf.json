@@ -1,0 +1,32 @@
+{
+    "output": {
+        "date_created": {
+            "description": "The date when the distribution configuration was created.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.date_created}"
+        },
+        "date_updated": {
+            "description": "The date when the distribution configuration was last updated.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.date_updated}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the distribution configuration.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.description}"
+        },
+        "distribution": {
+            "description": "The configuration details for distributing images across different regions and accounts.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.distribution}"
+        },
+        "id": {
+            "description": "The unique identifier for the distribution configuration.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the distribution configuration.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.name}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs associated with the distribution configuration for organizational purposes.",
+            "value": "${data.aws_imagebuilder_distribution_configuration.this.tags}"
+        }
+    }
+}

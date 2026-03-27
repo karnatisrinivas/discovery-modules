@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project
+  node:
+    label:
+      static: Project
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_project
+  dnd_supported: false

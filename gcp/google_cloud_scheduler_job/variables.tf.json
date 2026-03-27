@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "app_engine_http_target": [
+      {
+        "description": "Defines the configuration for App Engine HTTP target, specifying the App Engine service and HTTP path to invoke for the job.",
+        "nullable": true,
+        "type": "list(object({body: optional(string),headers: optional(map(string)),http_method: optional(string),relative_uri: string,app_engine_routing: list(object({instance: optional(string),service: optional(string),version: optional(string)}))}))"
+      }
+    ],
+    "attempt_deadline": [
+      {
+        "description": "Specifies the maximum duration for a job attempt, must be between 15 seconds and 30 minutes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description of the Cloud Scheduler job, providing details about its purpose or functionality; must not exceed 500 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_target": [
+      {
+        "description": "Defines the HTTP target configuration for the Cloud Scheduler job, specifying the URL, HTTP method, headers, and optional payload for the HTTP request.",
+        "nullable": true,
+        "type": "list(object({body: optional(string),headers: optional(map(string)),http_method: optional(string),uri: string,oauth_token: list(object({scope: optional(string),service_account_email: string})),oidc_token: list(object({audience: optional(string),service_account_email: string}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the Cloud Scheduler job, must be between 1 and 500 characters and match the regex pattern `[a-zA-Z0-9_-]+`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "paused": [
+      {
+        "description": "Indicates whether the Cloud Scheduler job is paused. When set to true, the job will not execute until unpaused.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "pubsub_target": [
+      {
+        "description": "Specifies the Pub/Sub target configuration for the job, including the topic name and optional message payload.",
+        "nullable": true,
+        "type": "list(object({attributes: optional(map(string)),data: optional(string),topic_name: string}))"
+      }
+    ],
+    "retry_config": [
+      {
+        "description": "Defines the retry policy for failed job attempts, including maximum retry attempts and minimum retry interval.",
+        "nullable": true,
+        "type": "list(object({max_backoff_duration: optional(string),max_doublings: optional(number),max_retry_duration: optional(string),min_backoff_duration: optional(string),retry_count: optional(number)}))"
+      }
+    ],
+    "schedule": [
+      {
+        "description": "Defines the frequency at which the job executes, using a cron expression or App Engine standard schedule format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "time_zone": [
+      {
+        "description": "Specifies the time zone for the job schedule, using IANA time zone identifiers (e.g., \"America/New_York\").",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom time durations for create, update, and delete operations for the Cloud Scheduler job.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "timeouts": [
+      {
+        "description": "Defines the duration for operations such as creating, updating, or deleting the shared VPC host project.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

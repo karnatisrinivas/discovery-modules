@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "email": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

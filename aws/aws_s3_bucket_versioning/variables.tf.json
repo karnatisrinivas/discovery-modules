@@ -1,0 +1,33 @@
+{
+    "variable": {
+        "bucket": [
+            {
+                "default": "",
+                "description": "Name of the S3 bucket",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "versioning_configuration": [
+            {
+                "default": [
+                    {
+                        "status": "Enabled",
+                        "mfa_delete": "Enabled"
+                    }
+                ],
+                "description": "Versioning configuration for the S3 bucket",
+                "type": "list(object({ status: string, mfa_delete: string}))",
+                "nullable": false
+            }
+        ],
+        "mfa": [
+            {
+                "default": "",
+                "description": "Required if versioning configuration mfa_delete is enabled) Concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device",
+                "type": "string",
+                "nullable": true
+            }
+        ]
+    }
+}

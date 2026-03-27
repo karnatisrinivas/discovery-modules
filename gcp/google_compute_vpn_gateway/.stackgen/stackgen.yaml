@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Vpn Gateway
+  node:
+    label:
+      static: Compute Vpn Gateway
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_vpn_gateway
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id

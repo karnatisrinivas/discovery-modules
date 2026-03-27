@@ -1,0 +1,104 @@
+{
+    "output": {
+        "assignable_to_role": {
+            "description": "",
+            "value": "${data.azuread_group.this.assignable_to_role}"
+        },
+        "auto_subscribe_new_members": {
+            "description": "",
+            "value": "${data.azuread_group.this.auto_subscribe_new_members}"
+        },
+        "behaviors": {
+            "description": "",
+            "value": "${data.azuread_group.this.behaviors}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.azuread_group.this.description}"
+        },
+        "dynamic_membership": {
+            "description": "",
+            "value": "${data.azuread_group.this.dynamic_membership}"
+        },
+        "external_senders_allowed": {
+            "description": "",
+            "value": "${data.azuread_group.this.external_senders_allowed}"
+        },
+        "hide_from_address_lists": {
+            "description": "",
+            "value": "${data.azuread_group.this.hide_from_address_lists}"
+        },
+        "hide_from_outlook_clients": {
+            "description": "",
+            "value": "${data.azuread_group.this.hide_from_outlook_clients}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.azuread_group.this.id}"
+        },
+        "mail": {
+            "description": "",
+            "value": "${data.azuread_group.this.mail}"
+        },
+        "members": {
+            "description": "",
+            "value": "${data.azuread_group.this.members}"
+        },
+        "onpremises_domain_name": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_domain_name}"
+        },
+        "onpremises_group_type": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_group_type}"
+        },
+        "onpremises_netbios_name": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_netbios_name}"
+        },
+        "onpremises_sam_account_name": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_sam_account_name}"
+        },
+        "onpremises_security_identifier": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_security_identifier}"
+        },
+        "onpremises_sync_enabled": {
+            "description": "",
+            "value": "${data.azuread_group.this.onpremises_sync_enabled}"
+        },
+        "owners": {
+            "description": "",
+            "value": "${data.azuread_group.this.owners}"
+        },
+        "preferred_language": {
+            "description": "",
+            "value": "${data.azuread_group.this.preferred_language}"
+        },
+        "provisioning_options": {
+            "description": "",
+            "value": "${data.azuread_group.this.provisioning_options}"
+        },
+        "proxy_addresses": {
+            "description": "",
+            "value": "${data.azuread_group.this.proxy_addresses}"
+        },
+        "theme": {
+            "description": "",
+            "value": "${data.azuread_group.this.theme}"
+        },
+        "types": {
+            "description": "",
+            "value": "${data.azuread_group.this.types}"
+        },
+        "visibility": {
+            "description": "",
+            "value": "${data.azuread_group.this.visibility}"
+        },
+        "writeback_enabled": {
+            "description": "",
+            "value": "${data.azuread_group.this.writeback_enabled}"
+        }
+    }
+}

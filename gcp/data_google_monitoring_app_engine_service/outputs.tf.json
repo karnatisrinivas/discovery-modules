@@ -1,0 +1,16 @@
+{
+    "output": {
+        "display_name": {
+            "description": "Name used for UI elements listing this (Monitoring) Service.",
+            "value": "${data.google_monitoring_app_engine_service.this.display_name}"
+        },
+        "name": {
+            "description": " The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].",
+            "value": "${data.google_monitoring_app_engine_service.this.name}"
+        },
+        "telemetry": {
+            "description": "Configuration for how to query telemetry on the Service.",
+            "value": "${data.google_monitoring_app_engine_service.this.telemetry}"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Quick Connect.",
+            "value": "${data.aws_connect_quick_connect.this.arn}"
+        },
+        "description": {
+            "description": "A brief explanation or details about the Quick Connect.",
+            "value": "${data.aws_connect_quick_connect.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the Quick Connect.",
+            "value": "${data.aws_connect_quick_connect.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the Quick Connect.",
+            "value": "${data.aws_connect_quick_connect.this.name}"
+        },
+        "quick_connect_config": {
+            "description": "Configuration details for the Quick Connect, including phone, queue, and user settings.",
+            "value": "${data.aws_connect_quick_connect.this.quick_connect_config}"
+        },
+        "quick_connect_id": {
+            "description": "The unique ID of the Quick Connect within AWS Connect.",
+            "value": "${data.aws_connect_quick_connect.this.quick_connect_id}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs assigned to the Quick Connect for organization and categorization purposes.",
+            "value": "${data.aws_connect_quick_connect.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Hours Of Operation"
+  node:
+    label:
+      static: "[Data] Connect Hours Of Operation"
+      template: "[Data] Connect Hours Of Operation"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_hours_of_operation
+  dnd_supported: false

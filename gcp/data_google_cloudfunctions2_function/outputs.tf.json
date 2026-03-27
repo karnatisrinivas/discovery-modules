@@ -1,0 +1,56 @@
+{
+    "output": {
+        "build_config": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.build_config}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.description}"
+        },
+        "effective_labels": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.effective_labels}"
+        },
+        "environment": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.environment}"
+        },
+        "event_trigger": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.event_trigger}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.id}"
+        },
+        "kms_key_name": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.kms_key_name}"
+        },
+        "labels": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.labels}"
+        },
+        "service_config": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.service_config}"
+        },
+        "state": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.state}"
+        },
+        "terraform_labels": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.update_time}"
+        },
+        "url": {
+            "description": "",
+            "value": "${data.google_cloudfunctions2_function.this.url}"
+        }
+    }
+}

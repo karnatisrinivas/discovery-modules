@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cluster_name": [
+      {
+        "description": "The name to assign to the AWS MSK cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

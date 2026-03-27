@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "metric_name": [
+      {
+        "description": "The name of the CloudWatch metric to associate with the WAF rule group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the WAF rule group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SSM Parameter
+  node:
+    label:
+      static: SSM Parameter
+      template: SSM Parameter
+    display_type: default
+
+variables:
+  tier:
+    description: Parameter tier to assign to the parameter. If not specified, will use the default parameter tier for the region.
+    type: string
+    options: 
+      - Standard
+      - Advanced
+      - "Intelligent-Tiering"
+    ui_control: select
+  data_type:
+    ui_control: select
+    description: Data type of the parameter.
+    type: string
+    options: 
+      - text
+      - "aws:ssm:integration"
+      - "aws:ec2:image"
+  type:
+    description: The type of the parameter. Valid types are String, StringList and SecureString.
+    type: string
+    options: 
+      - String
+      - StringList
+      - SecureString
+    ui_control: select
+
+discovery:
+  type: aws_ssm_parameter
+  dnd_supported: false
+  data_source: data_aws_ssm_parameter

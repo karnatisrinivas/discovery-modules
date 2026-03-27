@@ -1,0 +1,72 @@
+{
+    "output": {
+        "encryption": {
+            "description": "List detailing encryption identity and key vault identifier",
+            "value": "${data.azurerm_app_configuration.this.encryption}"
+        },
+        "endpoint": {
+            "description": "String URL for connecting to the app configuration",
+            "value": "${data.azurerm_app_configuration.this.endpoint}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_app_configuration.this.id}"
+        },
+        "identity": {
+            "description": "List with identity details including IDs and tenant information",
+            "value": "${data.azurerm_app_configuration.this.identity}"
+        },
+        "local_auth_enabled": {
+            "description": "Boolean indicating if local authentication is enabled",
+            "value": "${data.azurerm_app_configuration.this.local_auth_enabled}"
+        },
+        "location": {
+            "description": "String representing the geographical location of the resource",
+            "value": "${data.azurerm_app_configuration.this.location}"
+        },
+        "primary_read_key": {
+            "description": "List containing primary read access credentials and connection details",
+            "value": "${data.azurerm_app_configuration.this.primary_read_key}"
+        },
+        "primary_write_key": {
+            "description": "List containing primary write access credentials and connection details",
+            "value": "${data.azurerm_app_configuration.this.primary_write_key}"
+        },
+        "public_network_access": {
+            "description": "String indicating public network access status",
+            "value": "${data.azurerm_app_configuration.this.public_network_access}"
+        },
+        "public_network_access_enabled": {
+            "description": "Boolean indicating if public network access is enabled",
+            "value": "${data.azurerm_app_configuration.this.public_network_access_enabled}"
+        },
+        "purge_protection_enabled": {
+            "description": "Boolean indicating if purge protection is enabled",
+            "value": "${data.azurerm_app_configuration.this.purge_protection_enabled}"
+        },
+        "replica": {
+            "description": "List detailing replica endpoints and location information",
+            "value": "${data.azurerm_app_configuration.this.replica}"
+        },
+        "secondary_read_key": {
+            "description": "List containing secondary read access credentials and connection details",
+            "value": "${data.azurerm_app_configuration.this.secondary_read_key}"
+        },
+        "secondary_write_key": {
+            "description": "List containing secondary write access credentials and connection details",
+            "value": "${data.azurerm_app_configuration.this.secondary_write_key}"
+        },
+        "sku": {
+            "description": "String defining the SKU tier of the app configuration",
+            "value": "${data.azurerm_app_configuration.this.sku}"
+        },
+        "soft_delete_retention_days": {
+            "description": "Number of days for soft delete retention period",
+            "value": "${data.azurerm_app_configuration.this.soft_delete_retention_days}"
+        },
+        "tags": {
+            "description": "Map of tags assigned to the resource for categorization",
+            "value": "${data.azurerm_app_configuration.this.tags}"
+        }
+    }
+}

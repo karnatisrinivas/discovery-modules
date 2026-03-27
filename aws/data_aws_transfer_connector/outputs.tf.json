@@ -1,0 +1,40 @@
+{
+    "output": {
+        "access_role": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.access_role}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.arn}"
+        },
+        "as2_config": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.as2_config}"
+        },
+        "logging_role": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.logging_role}"
+        },
+        "security_policy_name": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.security_policy_name}"
+        },
+        "service_managed_egress_ip_addresses": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.service_managed_egress_ip_addresses}"
+        },
+        "sftp_config": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.sftp_config}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.tags}"
+        },
+        "url": {
+            "description": "",
+            "value": "${data.aws_transfer_connector.this.url}"
+        }
+    }
+}

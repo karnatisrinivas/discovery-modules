@@ -1,0 +1,24 @@
+{
+    "output": {
+        "access_url": {
+            "description": "URL for accessing the directory with administrative tools",
+            "value": "${aws_directory_service_directory.this.access_url}"
+        },
+        "dns_ip_addresses": {
+            "description": "List of DNS IPs for the directory to configure network settings",
+            "value": "${aws_directory_service_directory.this.dns_ip_addresses}"
+        },
+        "id": {
+            "description": "Unique identifier for the directory service resource",
+            "value": "${aws_directory_service_directory.this.id}"
+        },
+        "security_group_id": {
+            "description": "ID of the security group controlling directory network access",
+            "value": "${aws_directory_service_directory.this.security_group_id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the directory for resource organization",
+            "value": "${aws_directory_service_directory.this.tags_all}"
+        }
+    }
+}

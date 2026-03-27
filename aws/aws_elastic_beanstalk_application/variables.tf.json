@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "appversion_lifecycle": [
+      {
+        "description": "Defines the lifecycle policies for managing application versions, including optional deletion of the source from S3, maximum age in days, maximum count, and a required IAM service role.",
+        "nullable": true,
+        "type": "list(object({delete_source_from_s3: optional(bool),max_age_in_days: optional(number),max_count: optional(number),service_role: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a detailed explanation or metadata about the resource being defined, typically used for documentation or identification purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the required name of the resource, which must be unique and is used to identify it within the system.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines key-value pairs for custom metadata to categorize or organize the resource, allowing for optional tagging.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

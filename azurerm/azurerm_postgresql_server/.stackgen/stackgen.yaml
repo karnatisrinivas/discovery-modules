@@ -1,0 +1,64 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: PostgreSQL DB Server
+  node:
+    label:
+      static: PostgreSQL DB Server
+      template: ${name}
+    display_type: default
+
+variables:
+  postgresql_version:
+    description: The version of the postgresql server.
+    type: string
+    options: 
+      - 9.5
+      - 9.6
+      - 10
+      - 10.2
+      - 11
+    ui_control: select
+  geo_redundant_backup_enabled:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Enables geo-redundant backups."
+  auto_grow_enabled:
+    description: "Determines if storage auto-grow is enabled."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  public_network_access_enabled:
+    description: Allows public network access to the server.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  ssl_enforcement_enabled:
+    description: Enforces SSL connection to the server.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  ssl_minimal_tls_version_enforced:
+    options: 
+      - TLS1_0
+      - TLS1_1
+      - TLS1_2
+      - TLSEnforcementDisabled
+    ui_control: select
+    description: The minimum TLS version for SSL enforcement.
+    type: string
+
+discovery:
+  type: azurerm_postgresql_server
+  dnd_supported: false
+  data_source: data_azurerm_postgresql_server

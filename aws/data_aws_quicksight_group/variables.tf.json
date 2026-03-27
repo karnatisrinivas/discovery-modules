@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "group_name": [
+      {
+        "description": "The name of the QuickSight group you want to create or manage.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "namespace": [
+      {
+        "description": "The namespace to which the QuickSight group belongs. If not specified, the default namespace is used.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

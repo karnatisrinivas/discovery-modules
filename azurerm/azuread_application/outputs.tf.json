@@ -1,0 +1,28 @@
+{
+    "output": {
+        "app_role_ids": {
+            "description": "A map containing the IDs of the application roles defined in the Azure Active Directory application.",
+            "value": "${azuread_application.this.app_role_ids}"
+        },
+        "application_id": {
+            "description": "The unique identifier for the Azure Active Directory application, also known as the Client ID.",
+            "value": "${azuread_application.this.application_id}"
+        },
+        "id": {
+            "description": "The unique Terraform identifier for the Azure Active Directory application resource.",
+            "value": "${azuread_application.this.id}"
+        },
+        "oauth2_permission_scope_ids": {
+            "description": "A map containing the IDs of the OAuth2 permission scopes defined in the Azure Active Directory application.",
+            "value": "${azuread_application.this.oauth2_permission_scope_ids}"
+        },
+        "object_id": {
+            "description": "The unique object identifier for the Azure Active Directory application within the directory.",
+            "value": "${azuread_application.this.object_id}"
+        },
+        "template_id": {
+            "description": "The ID of the application template used for creating the Azure Active Directory application, if applicable.",
+            "value": "${azuread_application.this.template_id}"
+        }
+    }
+}

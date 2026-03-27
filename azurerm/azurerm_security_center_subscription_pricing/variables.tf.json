@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "extension": [
+      {
+        "description": "Defines a list of extension objects, each containing optional additional properties and a mandatory name. Use to configure specific extensions for the resource.",
+        "nullable": true,
+        "type": "list(object({additional_extension_properties: optional(map(string)),name: string}))"
+      }
+    ],
+    "resource_type": [
+      {
+        "description": "Indicates the type of resource to be managed. This value must match the type required by the provider.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subplan": [
+      {
+        "description": "Identifies the subplan associated with the resource. Must match valid subplans defined for the resource type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tier": [
+      {
+        "description": "Specifies the service tier for the resource. This is a required field and must be a valid tier supported by the provider.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures custom timeout durations for create, read, update, and delete operations. Each value must be a valid duration string, e.g., '30m'.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

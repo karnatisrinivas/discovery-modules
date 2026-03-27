@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to IAM membership bindings",
+            "value": "${google_cloudfunctions_function_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for referencing IAM membership bindings in configurations",
+            "value": "${google_cloudfunctions_function_iam_member.this.id}"
+        }
+    }
+}

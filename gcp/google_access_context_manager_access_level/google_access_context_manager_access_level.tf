@@ -1,0 +1,87 @@
+resource "google_access_context_manager_access_level" "this" {
+  description = var.description
+  name        = var.name
+  parent      = var.parent
+  title       = var.title
+
+  dynamic "basic" {
+    for_each = var.basic
+    content {
+      combining_function = basic.value.combining_function
+
+      dynamic "conditions" {
+        for_each = basic.value.conditions
+        content {
+          ip_subnetworks         = conditions.value.ip_subnetworks
+          members                = conditions.value.members
+          negate                 = conditions.value.negate
+          regions                = conditions.value.regions
+          required_access_levels = conditions.value.required_access_levels
+
+          dynamic "device_policy" {
+            for_each = conditions.value.device_policy
+            content {
+              allowed_device_management_levels = device_policy.value.allowed_device_management_levels
+              allowed_encryption_statuses      = device_policy.value.allowed_encryption_statuses
+              require_admin_approval           = device_policy.value.require_admin_approval
+              require_corp_owned               = device_policy.value.require_corp_owned
+              require_screen_lock              = device_policy.value.require_screen_lock
+
+              dynamic "os_constraints" {
+                for_each = device_policy.value.os_constraints
+                content {
+                  minimum_version            = os_constraints.value.minimum_version
+                  os_type                    = os_constraints.value.os_type
+                  require_verified_chrome_os = os_constraints.value.require_verified_chrome_os
+                }
+              }
+
+            }
+          }
+
+          dynamic "vpc_network_sources" {
+            for_each = conditions.value.vpc_network_sources
+            content {
+              dynamic "vpc_subnetwork" {
+                for_each = vpc_network_sources.value.vpc_subnetwork
+                content {
+                  network            = vpc_subnetwork.value.network
+                  vpc_ip_subnetworks = vpc_subnetwork.value.vpc_ip_subnetworks
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+  dynamic "custom" {
+    for_each = var.custom
+    content {
+      dynamic "expr" {
+        for_each = custom.value.expr
+        content {
+          description = expr.value.description
+          expression  = expr.value.expression
+          location    = expr.value.location
+          title       = expr.value.title
+        }
+      }
+
+    }
+  }
+
+  dynamic "timeouts" {
+    for_each = var.timeouts != null ? [var.timeouts] : []
+    content {
+      create = lookup(timeouts.value, "create", null)
+      delete = lookup(timeouts.value, "delete", null)
+      update = lookup(timeouts.value, "update", null)
+    }
+  }
+
+}

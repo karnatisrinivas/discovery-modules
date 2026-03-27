@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect User Hierarchy Group"
+  node:
+    label:
+      static: "[Data] Connect User Hierarchy Group"
+      template: "[Data] Connect User Hierarchy Group"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_user_hierarchy_group
+  dnd_supported: false

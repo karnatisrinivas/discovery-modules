@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Specifies the name of the MSK Connect Worker Configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Inspector Rules Packages"
+  node:
+    label:
+      static: "[Data] Inspector Rules Packages"
+      template: "[Data] Inspector Rules Packages"
+    display_type: default
+
+discovery:
+  type: data_aws_inspector_rules_packages
+  dnd_supported: false

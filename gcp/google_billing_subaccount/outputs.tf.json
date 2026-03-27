@@ -1,0 +1,20 @@
+{
+    "output": {
+        "billing_account_id": {
+            "description": "Unique ID for identifying the billing subaccount in Google Cloud",
+            "value": "${google_billing_subaccount.this.billing_account_id}"
+        },
+        "id": {
+            "description": "Unique resource ID for the Google billing subaccount",
+            "value": "${google_billing_subaccount.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name for the billing subaccount in Google Cloud",
+            "value": "${google_billing_subaccount.this.name}"
+        },
+        "open": {
+            "description": "Boolean indicating if the billing subaccount is active and open",
+            "value": "${google_billing_subaccount.this.open}"
+        }
+    }
+}

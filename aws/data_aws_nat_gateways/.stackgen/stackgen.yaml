@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Nat Gateways"
+  node:
+    label:
+      static: "[Data] Nat Gateways"
+      template: "[Data] Nat Gateways"
+    display_type: default
+
+discovery:
+  type: data_aws_nat_gateways
+  dnd_supported: false

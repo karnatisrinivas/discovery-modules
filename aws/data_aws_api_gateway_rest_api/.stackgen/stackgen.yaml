@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Rest Api"
+  node:
+    label:
+      static: "[Data] Api Gateway Rest Api"
+      template: "[Data] Api Gateway Rest Api"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_rest_api
+  dnd_supported: false

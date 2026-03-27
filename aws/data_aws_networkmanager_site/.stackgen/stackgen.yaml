@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkmanager Site"
+  node:
+    label:
+      static: "[Data] Networkmanager Site"
+      template: "[Data] Networkmanager Site"
+    display_type: default
+
+discovery:
+  type: data_aws_networkmanager_site
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for a single network manager link.",
+            "value": "${data.aws_networkmanager_links.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for multiple network manager links.",
+            "value": "${data.aws_networkmanager_links.this.ids}"
+        }
+    }
+}

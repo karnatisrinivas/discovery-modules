@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] App Service Plan"
+  node:
+    label:
+      static: "[Data] App Service Plan"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_app_service_plan
+  dnd_supported: false

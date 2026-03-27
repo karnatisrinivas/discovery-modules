@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53profiles Profiles"
+  node:
+    label:
+      static: "[Data] Route53profiles Profiles"
+      template: "[Data] Route53profiles Profiles"
+    display_type: default
+
+discovery:
+  type: data_aws_route53profiles_profiles
+  dnd_supported: false

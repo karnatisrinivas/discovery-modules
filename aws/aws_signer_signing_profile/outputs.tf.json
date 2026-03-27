@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM and API interactions with the signing profile",
+            "value": "${aws_signer_signing_profile.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the signing profile, used for resource referencing",
+            "value": "${aws_signer_signing_profile.this.id}"
+        },
+        "platform_display_name": {
+            "description": "Human-readable name for the platform associated with the signing profile",
+            "value": "${aws_signer_signing_profile.this.platform_display_name}"
+        },
+        "revocation_record": {
+            "description": "Details about revocation, useful for audit and compliance checks",
+            "value": "${aws_signer_signing_profile.this.revocation_record}"
+        },
+        "status": {
+            "description": "Current status of the signing profile, indicating availability or revocation",
+            "value": "${aws_signer_signing_profile.this.status}"
+        },
+        "tags_all": {
+            "description": "All tags applied to the signing profile for organization and categorization",
+            "value": "${aws_signer_signing_profile.this.tags_all}"
+        },
+        "version": {
+            "description": "Specific version of the signing profile for tracking changes",
+            "value": "${aws_signer_signing_profile.this.version}"
+        },
+        "version_arn": {
+            "description": "Amazon Resource Name for the specific version of the signing profile",
+            "value": "${aws_signer_signing_profile.this.version_arn}"
+        }
+    }
+}

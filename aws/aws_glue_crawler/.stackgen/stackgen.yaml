@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Glue Crawler
+  node:
+    label:
+      static: Glue Crawler
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_glue_crawler
+  dnd_supported: false
+  references:
+    database_name:
+      from: aws_glue_catalog_database
+      output: name
+    role:
+      from: aws_iam_role
+      output: arn

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the DNS response policy rule, useful for resource tracking and updates",
+            "value": "${google_dns_response_policy_rule.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: PostgreSQL Flexible Server
+  node:
+    label:
+      static: PostgreSQL Flexible Server
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_postgresql_flexible_server
+  dnd_supported: false

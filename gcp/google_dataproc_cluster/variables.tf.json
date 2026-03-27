@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "cluster_config": [
+      {
+        "description": "Defines the configuration for the Dataproc cluster, including settings for master and worker nodes, network, and optional components.",
+        "nullable": true,
+        "type": "list(object({bucket: optional(string),staging_bucket: optional(string),temp_bucket: optional(string),autoscaling_config: list(object({policy_uri: string})),auxiliary_node_groups: list(object({node_group_id: optional(string),node_group: list(object({name: optional(string),roles: list(string),node_group_config: list(object({instance_names: optional(list(string)),machine_type: optional(string),min_cpu_platform: optional(string),num_instances: optional(number),accelerators: list(object({accelerator_count: number,accelerator_type: string})),disk_config: list(object({boot_disk_size_gb: optional(number),boot_disk_type: optional(string),local_ssd_interface: optional(string),num_local_ssds: optional(number)}))}))}))})),dataproc_metric_config: list(object({metrics: list(object({metric_overrides: optional(list(string)),metric_source: string}))})),encryption_config: list(object({kms_key_name: string})),endpoint_config: list(object({enable_http_port_access: bool,http_ports: optional(map(string))})),gce_cluster_config: list(object({internal_ip_only: optional(bool),metadata: optional(map(string)),network: optional(string),service_account: optional(string),service_account_scopes: optional(list(string)),subnetwork: optional(string),tags: optional(list(string)),zone: optional(string),confidential_instance_config: list(object({enable_confidential_compute: optional(bool)})),node_group_affinity: list(object({node_group_uri: string})),reservation_affinity: list(object({consume_reservation_type: optional(string),key: optional(string),values: optional(list(string))})),shielded_instance_config: list(object({enable_integrity_monitoring: optional(bool),enable_secure_boot: optional(bool),enable_vtpm: optional(bool)}))})),initialization_action: list(object({script: string,timeout_sec: optional(number)})),lifecycle_config: list(object({auto_delete_time: optional(string),idle_delete_ttl: optional(string),idle_start_time: optional(string)})),master_config: list(object({image_uri: optional(string),instance_names: optional(list(string)),machine_type: optional(string),min_cpu_platform: optional(string),num_instances: optional(number),accelerators: list(object({accelerator_count: number,accelerator_type: string})),disk_config: list(object({boot_disk_size_gb: optional(number),boot_disk_type: optional(string),local_ssd_interface: optional(string),num_local_ssds: optional(number)}))})),metastore_config: list(object({dataproc_metastore_service: string})),preemptible_worker_config: list(object({instance_names: optional(list(string)),num_instances: optional(number),preemptibility: optional(string),disk_config: list(object({boot_disk_size_gb: optional(number),boot_disk_type: optional(string),local_ssd_interface: optional(string),num_local_ssds: optional(number)})),instance_flexibility_policy: list(object({instance_selection_results: optional(list(object({machine_type:string,vm_count:number}))),instance_selection_list: list(object({machine_types: optional(list(string)),rank: optional(number)})),provisioning_model_mix: list(object({standard_capacity_base: optional(number),standard_capacity_percent_above_base: optional(number)}))}))})),security_config: list(object({kerberos_config: list(object({cross_realm_trust_admin_server: optional(string),cross_realm_trust_kdc: optional(string),cross_realm_trust_realm: optional(string),cross_realm_trust_shared_password_uri: optional(string),enable_kerberos: optional(bool),kdc_db_key_uri: optional(string),key_password_uri: optional(string),keystore_password_uri: optional(string),keystore_uri: optional(string),kms_key_uri: string,realm: optional(string),root_principal_password_uri: string,tgt_lifetime_hours: optional(number),truststore_password_uri: optional(string),truststore_uri: optional(string)}))})),software_config: list(object({image_version: optional(string),optional_components: optional(list(string)),override_properties: optional(map(string)),properties: optional(map(string))})),worker_config: list(object({image_uri: optional(string),instance_names: optional(list(string)),machine_type: optional(string),min_cpu_platform: optional(string),min_num_instances: optional(number),num_instances: optional(number),accelerators: list(object({accelerator_count: number,accelerator_type: string})),disk_config: list(object({boot_disk_size_gb: optional(number),boot_disk_type: optional(string),local_ssd_interface: optional(string),num_local_ssds: optional(number)}))}))}))"
+      }
+    ],
+    "graceful_decommission_timeout": [
+      {
+        "description": "Duration to wait for node decommissioning during cluster scaling or deletion, must be a valid duration string (e.g., \"10m\", \"1h\").",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the cluster, such as environment or project identifiers.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the Dataproc cluster, must comply with Google Cloud naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the maximum duration for specific operations on the Dataproc cluster, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "virtual_cluster_config": [
+      {
+        "description": "Defines the configuration for a virtual cluster, including Kubernetes settings and software configurations, required for running Dataproc workloads.",
+        "nullable": true,
+        "type": "list(object({staging_bucket: optional(string),auxiliary_services_config: list(object({metastore_config: list(object({dataproc_metastore_service: optional(string)})),spark_history_server_config: list(object({dataproc_cluster: optional(string)}))})),kubernetes_cluster_config: list(object({kubernetes_namespace: optional(string),gke_cluster_config: list(object({gke_cluster_target: optional(string),node_pool_target: list(object({node_pool: string,roles: list(string),node_pool_config: list(object({locations: list(string),autoscaling: list(object({max_node_count: optional(number),min_node_count: optional(number)})),config: list(object({local_ssd_count: optional(number),machine_type: optional(string),min_cpu_platform: optional(string),preemptible: optional(bool),spot: optional(bool)}))}))}))})),kubernetes_software_config: list(object({component_version: map(string),properties: optional(map(string))}))}))}))"
+      }
+    ]
+  }
+}

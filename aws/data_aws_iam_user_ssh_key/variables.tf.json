@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "encoding": [
+      {
+        "description": "Specifies the encoding type for the SSH key, typically 'SSH' for standard SSH key encoding.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ssh_public_key_id": [
+      {
+        "description": "The unique identifier for the SSH public key associated with the IAM user.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "username": [
+      {
+        "description": "The name of the IAM user to which the SSH public key is associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

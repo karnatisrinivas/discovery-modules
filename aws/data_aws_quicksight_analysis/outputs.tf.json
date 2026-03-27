@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.aws_account_id}"
+        },
+        "created_time": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.created_time}"
+        },
+        "definition": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.definition}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.id}"
+        },
+        "last_published_time": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.last_published_time}"
+        },
+        "last_updated_time": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.last_updated_time}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.name}"
+        },
+        "permissions": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.permissions}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.status}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.tags}"
+        },
+        "theme_arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_analysis.this.theme_arn}"
+        }
+    }
+}

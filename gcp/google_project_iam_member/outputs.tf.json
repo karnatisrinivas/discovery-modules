@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag used to prevent concurrent updates to IAM policies",
+            "value": "${google_project_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for identifying the IAM member within the project",
+            "value": "${google_project_iam_member.this.id}"
+        }
+    }
+}

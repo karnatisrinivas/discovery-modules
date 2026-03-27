@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route
+  node:
+    label:
+      static: Route
+      template: ${route_table_id}
+    display_type: default
+
+discovery:
+  type: aws_route
+  dnd_supported: false
+  data_source: data_aws_route
+  references:
+    route_table_id:
+      from: aws_route_table
+      output: id

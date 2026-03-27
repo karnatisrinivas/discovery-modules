@@ -1,0 +1,24 @@
+{
+    "output": {
+        "asset_type": {
+            "description": "Specifies the type of asset in the AWS Outposts.",
+            "value": "${data.aws_outposts_asset.this.asset_type}"
+        },
+        "host_id": {
+            "description": "The unique identifier for the host associated with the asset.",
+            "value": "${data.aws_outposts_asset.this.host_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Outposts asset.",
+            "value": "${data.aws_outposts_asset.this.id}"
+        },
+        "rack_elevation": {
+            "description": "The vertical position of the asset within the rack, measured in units.",
+            "value": "${data.aws_outposts_asset.this.rack_elevation}"
+        },
+        "rack_id": {
+            "description": "The unique identifier for the rack in which the asset is located.",
+            "value": "${data.aws_outposts_asset.this.rack_id}"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route Table
+  node:
+    label:
+      static: Route Table
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_route_table
+  dnd_supported: false
+  data_source: data_azurerm_route_table

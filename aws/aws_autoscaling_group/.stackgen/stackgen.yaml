@@ -1,0 +1,44 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Auto Scaling Group
+  node:
+    label:
+      static: Auto Scaling Group
+      template: Auto Scaling Group
+    display_type: default
+
+variables:
+  tag:
+    description: Extra tags to attach to the autoscaling group.
+    attributes: 
+      key: 
+        ui_control: text
+        label: Key
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      value: 
+        label: Value
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      propagate_at_launch: 
+        label: Propagate at Launch
+        validation: 
+          required: true
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+
+discovery:
+  type: aws_autoscaling_group
+  dnd_supported: false
+  data_source: data_aws_autoscaling_group

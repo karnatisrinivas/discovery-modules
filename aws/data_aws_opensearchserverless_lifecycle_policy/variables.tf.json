@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The unique name of the lifecycle policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of lifecycle policy, such as 'hot' or 'cold'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

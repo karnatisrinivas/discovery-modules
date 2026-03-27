@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Sagemaker Code Repository
+  node:
+    label:
+      static: Sagemaker Code Repository
+      template: ${code_repository_name}
+    display_type: default
+
+discovery:
+  type: aws_sagemaker_code_repository
+  dnd_supported: false

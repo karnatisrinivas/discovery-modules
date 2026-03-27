@@ -1,0 +1,24 @@
+{
+  "variable": {
+    "min_tls_version": [
+      {
+        "description": "Specifies the minimum allowed TLS version for the storage account. TLS (Transport Layer Security) helps secure data being sent over the internet.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The unique name of the storage account. This name needs to be globally unique across Azure and comply with Azure's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

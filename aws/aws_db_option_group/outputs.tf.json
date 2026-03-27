@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM and API operations",
+            "value": "${aws_db_option_group.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the option group in other configurations",
+            "value": "${aws_db_option_group.this.id}"
+        }
+    }
+}

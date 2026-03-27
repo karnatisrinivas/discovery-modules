@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Compute Zones"
+  node:
+    label:
+      static: "[Data] Compute Zones"
+      template: "[Data] Compute Zones"
+    display_type: default
+
+discovery:
+  type: data_google_compute_zones
+  dnd_supported: false

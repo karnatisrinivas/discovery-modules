@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the compute zone resource in GCP",
+            "value": "${data.google_compute_zones.this.id}"
+        },
+        "names": {
+            "description": "List of available compute zone names for deploying resources",
+            "value": "${data.google_compute_zones.this.names}"
+        }
+    }
+}

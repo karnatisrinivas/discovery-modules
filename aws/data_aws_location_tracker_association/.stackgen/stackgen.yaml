@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Location Tracker Association"
+  node:
+    label:
+      static: "[Data] Location Tracker Association"
+      template: "[Data] Location Tracker Association"
+    display_type: default
+
+discovery:
+  type: data_aws_location_tracker_association
+  dnd_supported: false

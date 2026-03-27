@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ami"
+  node:
+    label:
+      static: "[Data] Ami"
+      template: "[Data] Ami"
+    display_type: default
+
+discovery:
+  type: data_aws_ami
+  dnd_supported: false

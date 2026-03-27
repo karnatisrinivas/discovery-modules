@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the NAT Gateway.",
+            "value": "${data.aws_nat_gateways.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the NAT Gateways.",
+            "value": "${data.aws_nat_gateways.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the NAT Gateways.",
+            "value": "${data.aws_nat_gateways.this.tags}"
+        }
+    }
+}

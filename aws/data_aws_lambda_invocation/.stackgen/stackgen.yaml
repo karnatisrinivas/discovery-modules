@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lambda Invocation"
+  node:
+    label:
+      static: "[Data] Lambda Invocation"
+      template: "[Data] Lambda Invocation"
+    display_type: default
+
+discovery:
+  type: data_aws_lambda_invocation
+  dnd_supported: false

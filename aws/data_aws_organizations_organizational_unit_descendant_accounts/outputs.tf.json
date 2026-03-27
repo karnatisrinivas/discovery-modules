@@ -1,0 +1,12 @@
+{
+    "output": {
+        "accounts": {
+            "description": "A list of accounts that are descendants of the specified organizational unit, including details such as ARN, email, ID, name, and status.",
+            "value": "${data.aws_organizations_organizational_unit_descendant_accounts.this.accounts}"
+        },
+        "id": {
+            "description": "The unique identifier of the specified organizational unit for which descendant accounts are retrieved.",
+            "value": "${data.aws_organizations_organizational_unit_descendant_accounts.this.id}"
+        }
+    }
+}

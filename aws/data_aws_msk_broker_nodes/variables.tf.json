@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cluster_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the MSK cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

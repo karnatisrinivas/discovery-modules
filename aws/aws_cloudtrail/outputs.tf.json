@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for identifying the CloudTrail in IAM policies and API calls",
+            "value": "${aws_cloudtrail.this.arn}"
+        },
+        "home_region": {
+            "description": "Primary AWS region where the CloudTrail is configured",
+            "value": "${aws_cloudtrail.this.home_region}"
+        },
+        "id": {
+            "description": "Unique identifier for the CloudTrail resource in AWS",
+            "value": "${aws_cloudtrail.this.id}"
+        },
+        "sns_topic_arn": {
+            "description": "ARN of the SNS topic for CloudTrail log notifications",
+            "value": "${aws_cloudtrail.this.sns_topic_arn}"
+        },
+        "tags_all": {
+            "description": "Consolidated list of tags applied to the CloudTrail resource",
+            "value": "${aws_cloudtrail.this.tags_all}"
+        }
+    }
+}

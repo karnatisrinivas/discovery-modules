@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "envgroup_id": [
+      {
+        "description": "ID of the Apigee environment group to attach the environment to; must already exist in the same Apigee organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "environment": [
+      {
+        "description": "Specifies the Apigee environment to be attached to the environment group; must exist within the same Apigee organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures the duration for create, update, and delete operations of the environment group attachment.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

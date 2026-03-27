@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Step Functions activity.",
+            "value": "${data.aws_sfn_activity.this.arn}"
+        },
+        "creation_date": {
+            "description": "The date and time when the Step Functions activity was created.",
+            "value": "${data.aws_sfn_activity.this.creation_date}"
+        },
+        "id": {
+            "description": "The unique identifier of the Step Functions activity.",
+            "value": "${data.aws_sfn_activity.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the Step Functions activity.",
+            "value": "${data.aws_sfn_activity.this.name}"
+        }
+    }
+}

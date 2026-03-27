@@ -1,0 +1,28 @@
+{
+    "output": {
+        "allowed_publishers": {
+            "description": "A list of ARNs for signing profiles that are allowed to sign the code package.",
+            "value": "${data.aws_lambda_code_signing_config.this.allowed_publishers}"
+        },
+        "config_id": {
+            "description": "The unique identifier of the code signing configuration.",
+            "value": "${data.aws_lambda_code_signing_config.this.config_id}"
+        },
+        "description": {
+            "description": "A brief description of the code signing configuration.",
+            "value": "${data.aws_lambda_code_signing_config.this.description}"
+        },
+        "id": {
+            "description": "The ID of the code signing configuration.",
+            "value": "${data.aws_lambda_code_signing_config.this.id}"
+        },
+        "last_modified": {
+            "description": "The date and time when the code signing configuration was last modified.",
+            "value": "${data.aws_lambda_code_signing_config.this.last_modified}"
+        },
+        "policies": {
+            "description": "Policies that define what to do with untrusted artifacts during deployment.",
+            "value": "${data.aws_lambda_code_signing_config.this.policies}"
+        }
+    }
+}

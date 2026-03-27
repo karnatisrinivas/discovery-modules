@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the billing account in configurations and API calls",
+            "value": "${data.google_billing_account.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the billing account for easy identification",
+            "value": "${data.google_billing_account.this.name}"
+        },
+        "project_ids": {
+            "description": "List of project IDs associated with the billing account for resource mapping",
+            "value": "${data.google_billing_account.this.project_ids}"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway API key.",
+            "value": "${data.aws_api_gateway_api_key.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the API key was created.",
+            "value": "${data.aws_api_gateway_api_key.this.created_date}"
+        },
+        "customer_id": {
+            "description": "The identifier of the customer associated with the API key.",
+            "value": "${data.aws_api_gateway_api_key.this.customer_id}"
+        },
+        "description": {
+            "description": "A brief description of the API key.",
+            "value": "${data.aws_api_gateway_api_key.this.description}"
+        },
+        "enabled": {
+            "description": "Indicates whether the API key is enabled (true) or disabled (false).",
+            "value": "${data.aws_api_gateway_api_key.this.enabled}"
+        },
+        "last_updated_date": {
+            "description": "The date and time when the API key was last updated.",
+            "value": "${data.aws_api_gateway_api_key.this.last_updated_date}"
+        },
+        "name": {
+            "description": "The name of the API key.",
+            "value": "${data.aws_api_gateway_api_key.this.name}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the API key.",
+            "value": "${data.aws_api_gateway_api_key.this.tags}"
+        }
+    }
+}

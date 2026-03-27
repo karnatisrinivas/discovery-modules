@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elasticache Reserved Cache Node Offering"
+  node:
+    label:
+      static: "[Data] Elasticache Reserved Cache Node Offering"
+      template: "[Data] Elasticache Reserved Cache Node Offering"
+    display_type: default
+
+discovery:
+  type: data_aws_elasticache_reserved_cache_node_offering
+  dnd_supported: false

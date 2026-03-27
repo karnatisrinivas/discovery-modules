@@ -1,0 +1,352 @@
+{
+  "variable": {
+    "additional_capabilities": [
+      {
+        "description": "Enables hibernation or ultra SSD for the VM",
+        "nullable": true,
+        "type": "list(object({hibernation_enabled: optional(bool),ultra_ssd_enabled: optional(bool)}))"
+      }
+    ],
+    "admin_password": [
+      {
+        "description": "Sets the administrator's password (min length: 12)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "admin_ssh_key": [
+      {
+        "description": "Provides SSH key for admin access",
+        "nullable": true,
+        "type": "list(object({public_key: string,username: string}))"
+      }
+    ],
+    "admin_username": [
+      {
+        "description": "Defines the admin username (cannot be 'root')",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "allow_extension_operations": [
+      {
+        "description": "Enables extension operations on the VM",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "availability_set_id": [
+      {
+        "description": "Specifies the ID of the availability set",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "boot_diagnostics": [
+      {
+        "description": "Configures boot diagnostics with storage URI",
+        "nullable": true,
+        "type": "list(object({storage_account_uri: optional(string)}))"
+      }
+    ],
+    "bypass_platform_safety_checks_on_user_schedule_enabled": [
+      {
+        "description": "Allows bypassing safety checks on user schedule",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "capacity_reservation_group_id": [
+      {
+        "description": "ID of the capacity reservation group",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "computer_name": [
+      {
+        "description": "Sets the computer name for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "custom_data": [
+      {
+        "description": "Provides custom data for cloud-init",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dedicated_host_group_id": [
+      {
+        "description": "ID of the dedicated host group for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dedicated_host_id": [
+      {
+        "description": "ID of the dedicated host for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_password_authentication": [
+      {
+        "description": "Disables password authentication for SSH",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "disk_controller_type": [
+      {
+        "description": "Specifies the type of disk controller",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the edge zone for VM deployment",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption_at_host_enabled": [
+      {
+        "description": "Enables host-based encryption",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "eviction_policy": [
+      {
+        "description": "Defines the eviction policy for spot VMs",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "extensions_time_budget": [
+      {
+        "description": "Sets time budget for VM extensions",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gallery_application": [
+      {
+        "description": "Configures gallery application settings",
+        "nullable": true,
+        "type": "list(object({automatic_upgrade_enabled: optional(bool),configuration_blob_uri: optional(string),order: optional(number),tag: optional(string),treat_failure_as_deployment_failure_enabled: optional(bool),version_id: string}))"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Manages VM identities and principal IDs",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "license_type": [
+      {
+        "description": "Specifies the license type for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "max_bid_price": [
+      {
+        "description": "Maximum bid price for spot instances",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique identifier for the VM",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_interface_ids": [
+      {
+        "description": "Lists the network interfaces for the VM",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "os_disk": [
+      {
+        "description": "Configures OS disk properties and settings",
+        "nullable": true,
+        "type": "list(object({caching: string,disk_encryption_set_id: optional(string),disk_size_gb: optional(number),name: optional(string),secure_vm_disk_encryption_set_id: optional(string),security_encryption_type: optional(string),storage_account_type: string,write_accelerator_enabled: optional(bool),diff_disk_settings: list(object({option: string,placement: optional(string)}))}))"
+      }
+    ],
+    "os_image_notification": [
+      {
+        "description": "Settings for OS image notifications",
+        "nullable": true,
+        "type": "list(object({timeout: optional(string)}))"
+      }
+    ],
+    "patch_assessment_mode": [
+      {
+        "description": "Defines the mode for patch assessment",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "patch_mode": [
+      {
+        "description": "Specifies the VM patching mode",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "plan": [
+      {
+        "description": "Details the purchase plan for the VM",
+        "nullable": true,
+        "type": "list(object({name: string,product: string,publisher: string}))"
+      }
+    ],
+    "platform_fault_domain": [
+      {
+        "description": "Specifies the fault domain for the VM",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Sets the priority level of the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "provision_vm_agent": [
+      {
+        "description": "Enables provisioning of the VM agent",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "proximity_placement_group_id": [
+      {
+        "description": "ID of the proximity placement group",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "reboot_setting": [
+      {
+        "description": "Configures reboot settings for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "secret": [
+      {
+        "description": "Manages secrets in Key Vault for the VM",
+        "nullable": true,
+        "type": "list(object({key_vault_id: string,certificate: list(object({url: string}))}))"
+      }
+    ],
+    "secure_boot_enabled": [
+      {
+        "description": "Enables secure boot for the VM",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "size": [
+      {
+        "description": "Controls the VM size (e.g., Standard_D2s_v3)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_image_id": [
+      {
+        "description": "ID of the source image for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_image_reference": [
+      {
+        "description": "Details the source image reference",
+        "nullable": true,
+        "type": "list(object({offer: string,publisher: string,sku: string,version: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines key-value pairs for organization",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "termination_notification": [
+      {
+        "description": "Configures termination notification settings",
+        "nullable": true,
+        "type": "list(object({enabled: bool,timeout: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Sets custom timeouts for VM operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_data": [
+      {
+        "description": "Provides user data for VM initialization",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "virtual_machine_scale_set_id": [
+      {
+        "description": "ID of the VM scale set",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vm_agent_platform_updates_enabled": [
+      {
+        "description": "Enables platform updates for VM agent",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "vtpm_enabled": [
+      {
+        "description": "Enables vTPM for the VM",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the availability zone for the VM",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

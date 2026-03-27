@@ -1,0 +1,128 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created."
+      }
+    ],
+    "profile_name": [
+      {
+        "type": "string",
+        "description": "The CDN Profile to which to attach the CDN Endpoint. Changing this forces a new resource to be created."
+      }
+    ],
+    "is_http_allowed": [
+      {
+        "type": "bool",
+        "description": "Specifies if HTTP allowed.",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "is_https_allowed": [
+      {
+        "type": "bool",
+        "description": "Specifies if HTTPS allowed.",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "content_types_to_compress": [
+      {
+        "type": "list(string)",
+        "description": "An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.",
+        "nullable": true
+      }
+    ],
+    "geo_filter": [
+      {
+        "type": "list(object({relative_path: string, action: string, country_codes: list(string)}))",
+        "description": "A set of Geo Filters for this CDN Endpoint.",
+        "nullable": true
+      }
+    ],
+    "is_compression_enabled": [
+      {
+        "type": "bool",
+        "description": "Indicates whether compression is to be enabled.",
+        "nullable": true
+      }
+    ],
+    "querystring_caching_behaviour": [
+      {
+        "type": "string",
+        "description": "Sets query string caching behavior.",
+        "nullable": true,
+        "default": "IgnoreQueryString"
+      }
+    ],
+    "optimization_type": [
+      {
+        "type": "string",
+        "description": "What types of optimization should this CDN Endpoint optimize for?",
+        "nullable": true
+      }
+    ],
+    "origin": [
+      {
+        "type": "list(object({name: string, host_name: string, http_port: optional(number), https_port: optional(number)}))",
+        "description": "The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Changing this forces a new resource to be created."
+      }
+    ],
+    "origin_host_header": [
+      {
+        "type": "string",
+        "description": "The host header CDN provider will send along with content requests to origins.",
+        "nullable": true
+      }
+    ],
+    "origin_path": [
+      {
+        "type": "string",
+        "description": "The path used at for origin requests.",
+        "nullable": true
+      }
+    ],
+    "probe_path": [
+      {
+        "type": "string",
+        "description": "The path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `Origin Path`.",
+        "nullable": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true
+      }
+    ],
+    "global_delivery_rule": [
+      {
+        "type": "list(object({cache_expiration_action: list(object({behavior: string, duration: optional(string)})), cache_key_query_string_action: list(object({behavior: string, parameters: list(string)})), modify_request_header_action: list(object({action: string, name: string, value: optional(string)})), modify_response_header_action: list(object({action: string, name: string, value: optional(string)})), url_redirect_action: list(object({redirect_type: string, protocol: optional(string), hostname: optional(string), path: optional(string), fragment: optional(string), query_string: optional(string)})), url_rewrite_action: list(object({source_pattern: string, destination: string, preserve_unmatched_path: optional(bool)}))}))",
+        "description": "Actions that are valid for all resources regardless of any conditions.",
+        "nullable": true
+      }
+    ],
+    "delivery_rule": [
+      {
+        "type": "list(object({name: string, order: number, cache_expiration_action: list(object({behavior: string, duration: optional(string)})), cache_key_query_string_action: list(object({behavior: string, parameters: list(string)})), modify_request_header_action: list(object({action: string, name: string, value: optional(string)})), modify_response_header_action: list(object({action: string, name: string, value: optional(string)})), url_redirect_action: list(object({redirect_type: string, protocol: optional(string), hostname: optional(string), path: optional(string), fragment: optional(string), query_string: optional(string)})), url_rewrite_action: list(object({source_pattern: string, destination: string, preserve_unmatched_path: optional(bool)})), cookies_condition: list(object({ selector: string, operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), device_condition: list(object({operator: optional(string), negate_condition: optional(bool), match_values: string})), http_version_condition: list(object({operator: optional(string), negate_condition: optional(bool), match_values: string})), post_arg_condition: list(object({ selector: string, operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), query_string_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), remode_address_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string)})), request_body_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), request_header_condition: list(object({ selector: string, operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), request_method_condition: list(object({ operator: string, negate_condition: optional(bool), match_values: list(string)})), request_scheme_condition: list(object({ operator: string, negate_condition: optional(bool), match_values: list(string)})), request_uri_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), url_file_extension_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)})), url_file_name_condition: list(object({operator: string, negate_condition: optional(bool), match_values: list(string), transforms: list(string)}))}))",
+        "description": "Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions.",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

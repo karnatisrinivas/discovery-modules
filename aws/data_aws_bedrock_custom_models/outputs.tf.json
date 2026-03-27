@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Bedrock custom model.",
+            "value": "${data.aws_bedrock_custom_models.this.id}"
+        },
+        "model_summaries": {
+            "description": "A list of summaries for each AWS Bedrock custom model, including creation time, model ARN, and model name.",
+            "value": "${data.aws_bedrock_custom_models.this.model_summaries}"
+        }
+    }
+}

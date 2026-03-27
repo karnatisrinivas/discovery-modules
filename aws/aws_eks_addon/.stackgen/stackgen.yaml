@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS EKS Addon
+  node:
+    label:
+      static: AWS EKS Addon
+      template: ${addon_name}
+    display_type: default
+
+variables:
+  resolve_conflicts_on_create:
+    ui_control: select
+    description: "What to do if conflicts arise during add-on creation. Options: 'OVERWRITE' or 'NONE'."
+    type: string
+    options: 
+      - PRESERVE
+      - OVERWRITE
+
+discovery:
+  type: aws_eks_addon
+  dnd_supported: false
+  data_source: data_aws_eks_addon
+  references:
+    cluster_name:
+      from: aws_eks
+      output: id
+    addon_version:
+      from: data_aws_eks_addon_version
+      output: version

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudwatch Dashboard
+  node:
+    label:
+      static: Cloudwatch Dashboard
+      template: ${dashboard_name}
+    display_type: default
+
+discovery:
+  type: aws_cloudwatch_dashboard
+  dnd_supported: false

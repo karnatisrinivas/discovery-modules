@@ -1,0 +1,38 @@
+{
+  "variable": {
+    "end_ip": [
+      {
+        "description": "The last IP address in the range that is allowed to access the Redis cache.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the firewall rule.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "redis_cache_name": [
+      {
+        "description": "The name of the Redis cache instance to which the firewall rule applies.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "start_ip": [
+      {
+        "description": "The first IP address in the range that is allowed to access the Redis cache.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

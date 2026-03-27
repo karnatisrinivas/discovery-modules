@@ -1,0 +1,106 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Sub Network
+  node:
+    label:
+      static: Compute Sub Network
+      template: ${name}
+    display_type: default
+
+variables:
+  stack_type:
+    description: The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+    type: string
+    options: 
+      - IPV4_ONLY
+      - IPV4_IPV6
+    ui_control: select
+  purpose:
+    type: string
+    options: 
+      - PRIVATE
+      - REGIONAL_MANAGED_PROXY
+      - GLOBAL_MANAGED_PROXY
+      - PRIVATE_SERVICE_CONNECT
+      - PRIVATE_NAT
+    ui_control: select
+    description: "A subnet with purpose set to REGIONAL_MANAGED_PROXY is a user-created subnetwork that is reserved for regional Envoy-based load balancers. A subnetwork in a given region with purpose set to GLOBAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers. A subnetwork with purpose set to PRIVATE_SERVICE_CONNECT reserves the subnet for hosting a Private Service Connect published service. A subnetwork with purpose set to PRIVATE_NAT is used as source range for Private NAT gateways. Note that REGIONAL_MANAGED_PROXY is the preferred setting for all regional Envoy load balancers. If unspecified, the purpose defaults to PRIVATE."
+  ipv6_access_type:
+    description: "The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the type is EXTERNAL then this subnet cannot enable direct path"
+    type: string
+    options: 
+      - EXTERNAL
+      - INTERNAL
+    ui_control: select
+  send_secondary_ip_range_if_empty:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Controls the removal behavior of `Secondary IP Range`. When false, removing `Secondary IP Range` from config will not produce a diff as the provider will default to the API's value. When true, the provider will treat removing `Secondary IP Range` as sending an empty list of secondary IP ranges to the API."
+  private_ip_google_access:
+    options: 
+      - true
+      - false
+    ui_control: select
+  log_config:
+    description: "This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging. Flow logging isn't supported if the subnet `Purpose` field is set to `REGIONAL_MANAGED_PROXY` or `GLOBAL_MANAGED_PROXY`"
+    attributes: 
+      metadata: 
+        label: Metadata
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - INCLUDE_ALL_METADATA
+          - EXCLUDE_ALL_METADATA
+          - CUSTOM_METADATA
+        ui_control: select
+      aggregation_interval: 
+        options: 
+          - INTERVAL_5_SEC
+          - INTERVAL_30_SEC
+          - INTERVAL_1_MIN
+          - INTERVAL_5_MIN
+          - INTERVAL_10_MIN
+          - INTERVAL_15_MIN
+        ui_control: select
+        label: Aggregation Interval
+        validation: 
+          required: false
+          dataType: string
+        type: string
+  private_ipv6_google_access:
+    description: The private IPv6 google access type for the VMs in this subnet.
+    type: string
+    options: 
+      - true
+      - false
+    ui_control: select
+  private_ip_google_address:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private Google Access.
+  role:
+    description: "The role of subnetwork. Currently, this field is only used when purpose is REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a region."
+    type: string
+    options: 
+      - ACTIVE
+      - BACKUP
+    ui_control: select
+
+discovery:
+  type: google_compute_subnetwork
+  dnd_supported: false
+  data_source: data_google_compute_subnetwork
+  references:
+    network:
+      from: google_compute_network
+      output: self_link

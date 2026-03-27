@@ -1,0 +1,58 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SNS Topic Subscription
+  node:
+    label:
+      static: SNS Topic Subscription
+      template: SNS Topic Subscription
+    display_type: default
+
+variables:
+  endpoint_auto_confirms:
+    description: Whether the endpoint is capable of auto confirming subscription (e.g., PagerDuty).
+    type: bool
+    options: 
+      - false
+      - true
+    ui_control: select
+  filter_policy_scope:
+    description: "Whether the `filter_policy` applies to `MessageAttributes` (default) or `MessageBody`."
+    type: string
+    options: 
+      - MessageAttributes
+      - MessageBody
+    ui_control: select
+  raw_message_delivery:
+    description: Whether to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property).
+    type: bool
+    options: 
+      - false
+      - true
+    ui_control: select
+  protocol:
+    description: "Protocol to use. Protocols `email`, `email-json`, `http` and `https` are also valid but partially supported."
+    type: string
+    options: 
+      - sqs
+      - sms
+      - lambda
+      - firehose
+      - application
+      - email
+      - "email-json"
+      - http
+      - https
+    ui_control: select
+
+discovery:
+  type: aws_sns_topic_subscription
+  dnd_supported: false
+  references:
+    topic_arn:
+      from: aws_sns_topic
+      output: arn
+    endpoint:
+      from: aws_sqs_queue
+      output: arn

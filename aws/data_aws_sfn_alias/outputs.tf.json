@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Step Functions alias.",
+            "value": "${data.aws_sfn_alias.this.arn}"
+        },
+        "creation_date": {
+            "description": "The date and time when the Step Functions alias was created.",
+            "value": "${data.aws_sfn_alias.this.creation_date}"
+        },
+        "id": {
+            "description": "The unique identifier for the Step Functions alias.",
+            "value": "${data.aws_sfn_alias.this.id}"
+        },
+        "routing_configuration": {
+            "description": "The configuration that specifies how traffic is distributed between different versions of the state machine.",
+            "value": "${data.aws_sfn_alias.this.routing_configuration}"
+        }
+    }
+}

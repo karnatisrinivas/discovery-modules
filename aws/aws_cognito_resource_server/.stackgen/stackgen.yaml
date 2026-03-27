@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cognito Resource Server
+  node:
+    label:
+      static: Cognito Resource Server
+      template: Cognito Resource Server
+    display_type: default
+
+discovery:
+  type: aws_cognito_resource_server
+  dnd_supported: false
+  references:
+    user_pool_id:
+      from: aws_cognito_user_pool
+      output: id

@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "deletion_protection_enabled": [
+      {
+        "description": "Enables protection against accidental deletion; set to true to prevent instance deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "deletion_protection_reason": [
+      {
+        "description": "Reason for enabling deletion protection, to prevent accidental instance deletion; optional and should be set thoughtfully.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a user-defined description for the Filestore instance; must be concise and relevant to the instance's purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "file_shares": [
+      {
+        "description": "Defines the configuration for file shares, including their name, capacity, and export options.",
+        "nullable": false,
+        "type": "list(object({capacity_gb: number,name: string,source_backup: optional(string),nfs_export_options: list(object({access_mode: optional(string),anon_gid: optional(number),anon_uid: optional(number),ip_ranges: optional(list(string)),squash_mode: optional(string)}))}))"
+      }
+    ],
+    "initial_replication": [
+      {
+        "description": "Defines whether the instance should replicate data from an existing source during creation; must be set to true for replication-based setups.",
+        "nullable": true,
+        "type": "list(object({role: optional(string),replicas: list(object({peer_instance: string}))}))"
+      }
+    ],
+    "kms_key_name": [
+      {
+        "description": "Specifies the Cloud KMS key to use for encrypting the Filestore instance, requiring the key to be in the same region as the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the Filestore instance; must comply with GCP label format.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the GCP region where the Filestore instance will be created; must match the region of the associated network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the Filestore instance; must be between 1-63 characters, start with a lowercase letter, and contain only lowercase letters, numbers, and hyphens.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "networks": [
+      {
+        "description": "Defines the network configurations for the instance, including the subnet and IP range, which must belong to the same VPC and region as the Filestore instance.",
+        "nullable": false,
+        "type": "list(object({connect_mode: optional(string),ip_addresses: optional(list(string)),modes: list(string),network: string,reserved_ip_range: optional(string)}))"
+      }
+    ],
+    "performance_config": [
+      {
+        "description": "Defines the performance tier for the Filestore instance, specifying the throughput and IOPS settings.",
+        "nullable": true,
+        "type": "list(object({fixed_iops: list(object({max_iops: optional(number)})),iops_per_tb: list(object({max_iops_per_tb: optional(number)}))}))"
+      }
+    ],
+    "protocol": [
+      {
+        "description": "Specifies the network protocol used for the Filestore instance, such as NFSv3 or NFSv4, depending on compatibility requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "List of key-value pairs to apply to the instance for organization, categorization, or filtering purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tier": [
+      {
+        "description": "Defines the service tier for the Filestore instance, specifying performance and cost options. Valid values are BASIC_HDD, BASIC_SSD, or HIGH_SCALE_SSD.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations for the Filestore instance.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone where the Filestore instance will be created; must match a valid Google Cloud zone within the selected region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

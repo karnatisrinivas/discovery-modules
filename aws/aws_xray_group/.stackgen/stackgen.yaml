@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: XRay Group
+  node:
+    label:
+      static: XRay Group
+      template: ${group_name}
+    display_type: default
+
+discovery:
+  type: aws_xray_group
+  dnd_supported: false

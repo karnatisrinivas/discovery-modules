@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CloudWatch Log Group
+  node:
+    label:
+      static: CloudWatch Log Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_cloudwatch_log_group
+  dnd_supported: false
+  data_source: data_aws_cloudwatch_log_group

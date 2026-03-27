@@ -1,0 +1,96 @@
+{
+    "output": {
+        "account_recovery_setting": {
+            "description": "Settings that define how account recovery can be performed, such as through email or phone.",
+            "value": "${data.aws_cognito_user_pool.this.account_recovery_setting}"
+        },
+        "admin_create_user_config": {
+            "description": "Configuration for creating users by an admin, including settings for invite messages and account validity.",
+            "value": "${data.aws_cognito_user_pool.this.admin_create_user_config}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Cognito User Pool.",
+            "value": "${data.aws_cognito_user_pool.this.arn}"
+        },
+        "auto_verified_attributes": {
+            "description": "Attributes that are automatically verified, such as email or phone number.",
+            "value": "${data.aws_cognito_user_pool.this.auto_verified_attributes}"
+        },
+        "creation_date": {
+            "description": "The date when the user pool was created.",
+            "value": "${data.aws_cognito_user_pool.this.creation_date}"
+        },
+        "custom_domain": {
+            "description": "The custom domain associated with the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.custom_domain}"
+        },
+        "deletion_protection": {
+            "description": "Specifies whether deletion protection is enabled for the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.deletion_protection}"
+        },
+        "device_configuration": {
+            "description": "Configuration related to remembering devices and requiring challenges for new devices.",
+            "value": "${data.aws_cognito_user_pool.this.device_configuration}"
+        },
+        "domain": {
+            "description": "The domain associated with the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.domain}"
+        },
+        "email_configuration": {
+            "description": "Settings for sending emails from the user pool, such as the source email address and configuration set.",
+            "value": "${data.aws_cognito_user_pool.this.email_configuration}"
+        },
+        "estimated_number_of_users": {
+            "description": "An estimate of the number of users in the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.estimated_number_of_users}"
+        },
+        "id": {
+            "description": "The unique identifier for the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.id}"
+        },
+        "lambda_config": {
+            "description": "Lambda functions configuration for various user pool triggers, like custom message sending and user migration.",
+            "value": "${data.aws_cognito_user_pool.this.lambda_config}"
+        },
+        "last_modified_date": {
+            "description": "The date when the user pool was last modified.",
+            "value": "${data.aws_cognito_user_pool.this.last_modified_date}"
+        },
+        "mfa_configuration": {
+            "description": "The multi-factor authentication (MFA) configuration for the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.mfa_configuration}"
+        },
+        "name": {
+            "description": "The name of the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.name}"
+        },
+        "schema_attributes": {
+            "description": "Schema attributes for the user pool, defining data types, mutability, and constraints for user attributes.",
+            "value": "${data.aws_cognito_user_pool.this.schema_attributes}"
+        },
+        "sms_authentication_message": {
+            "description": "The SMS message template for authentication.",
+            "value": "${data.aws_cognito_user_pool.this.sms_authentication_message}"
+        },
+        "sms_configuration_failure": {
+            "description": "Information about SMS configuration failures.",
+            "value": "${data.aws_cognito_user_pool.this.sms_configuration_failure}"
+        },
+        "sms_verification_message": {
+            "description": "The SMS message template used for verification purposes.",
+            "value": "${data.aws_cognito_user_pool.this.sms_verification_message}"
+        },
+        "tags": {
+            "description": "Tags associated with the user pool for organizational purposes.",
+            "value": "${data.aws_cognito_user_pool.this.tags}"
+        },
+        "user_pool_tags": {
+            "description": "Tags specifically applied to the user pool.",
+            "value": "${data.aws_cognito_user_pool.this.user_pool_tags}"
+        },
+        "username_attributes": {
+            "description": "Attributes that can be used as a username, such as email or phone number.",
+            "value": "${data.aws_cognito_user_pool.this.username_attributes}"
+        }
+    }
+}

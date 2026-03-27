@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ip Ranges"
+  node:
+    label:
+      static: "[Data] Ip Ranges"
+      template: "[Data] Ip Ranges"
+    display_type: default
+
+discovery:
+  type: data_aws_ip_ranges
+  dnd_supported: false

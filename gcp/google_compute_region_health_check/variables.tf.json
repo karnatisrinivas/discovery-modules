@@ -1,0 +1,102 @@
+{
+  "variable": {
+    "check_interval_sec": [
+      {
+        "description": "Time interval, in seconds, between each health check; must be between 1 and 300 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a description for the regional health check, detailing its purpose or identifying characteristics.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "grpc_health_check": [
+      {
+        "description": "Defines the gRPC health check configuration, including the service name and port for regional health checks.",
+        "nullable": true,
+        "type": "list(object({grpc_service_name: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string)}))"
+      }
+    ],
+    "healthy_threshold": [
+      {
+        "description": "The number of consecutive successful health checks required before marking a backend as healthy. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "http2_health_check": [
+      {
+        "description": "Defines the configuration for an HTTP/2 health check, including settings like request path, port, and response timeout, used to monitor the health of regional resources.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "http_health_check": [
+      {
+        "description": "Defines the configuration for an HTTP health check, including parameters such as request path, port, and response timeout, to monitor the health of regional resources.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "https_health_check": [
+      {
+        "description": "Defines the HTTPS health check configuration for monitoring the health of resources in a specific region.",
+        "nullable": true,
+        "type": "list(object({host: optional(string),port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request_path: optional(string),response: optional(string)}))"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Specifies the logging configuration for the health check, enabling or disabling logging of health check requests.",
+        "nullable": true,
+        "type": "list(object({enable: optional(bool)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the regional health check, must be unique within the project and region, and comply with Google Cloud naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ssl_health_check": [
+      {
+        "description": "Defines the configuration for an SSL health check, including parameters such as port, request path, and response timeout, to monitor the health of resources in a specific region.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "tcp_health_check": [
+      {
+        "description": "Defines the TCP health check configuration, including port and optional request/response settings, to monitor the health of regional resources.",
+        "nullable": true,
+        "type": "list(object({port: optional(number),port_name: optional(string),port_specification: optional(string),proxy_header: optional(string),request: optional(string),response: optional(string)}))"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "The amount of time, in seconds, to wait for a response before marking the health check as failed. Must be greater than zero.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout settings for the region health check, specifying the maximum duration allowed for each request to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "unhealthy_threshold": [
+      {
+        "description": "Specifies the number of consecutive health check failures required to mark a VM as unhealthy; must be an integer between 1 and 10.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

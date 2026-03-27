@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ebs Default Kms Key"
+  node:
+    label:
+      static: "[Data] Ebs Default Kms Key"
+      template: "[Data] Ebs Default Kms Key"
+    display_type: default
+
+discovery:
+  type: data_aws_ebs_default_kms_key
+  dnd_supported: false

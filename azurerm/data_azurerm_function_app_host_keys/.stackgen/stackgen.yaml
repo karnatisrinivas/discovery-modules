@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Function App Host Keys"
+  node:
+    label:
+      static: "[Data] Function App Host Keys"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_function_app_host_keys
+  dnd_supported: false

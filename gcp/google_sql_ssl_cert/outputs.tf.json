@@ -1,0 +1,36 @@
+{
+    "output": {
+        "cert": {
+            "description": "The public SSL certificate for authenticating connections to the SQL instance",
+            "value": "${google_sql_ssl_cert.this.cert}"
+        },
+        "cert_serial_number": {
+            "description": "Serial number of the SSL certificate for tracking and validation purposes",
+            "value": "${google_sql_ssl_cert.this.cert_serial_number}"
+        },
+        "create_time": {
+            "description": "Timestamp indicating when the SSL certificate was created",
+            "value": "${google_sql_ssl_cert.this.create_time}"
+        },
+        "expiration_time": {
+            "description": "Timestamp indicating when the SSL certificate will expire",
+            "value": "${google_sql_ssl_cert.this.expiration_time}"
+        },
+        "id": {
+            "description": "Unique identifier for the SSL certificate resource",
+            "value": "${google_sql_ssl_cert.this.id}"
+        },
+        "private_key": {
+            "description": "The private key associated with the SSL certificate for secure connections",
+            "value": "${google_sql_ssl_cert.this.private_key}"
+        },
+        "server_ca_cert": {
+            "description": "Certificate Authority certificate used by the server for client authentication",
+            "value": "${google_sql_ssl_cert.this.server_ca_cert}"
+        },
+        "sha1_fingerprint": {
+            "description": "SHA-1 fingerprint of the SSL certificate for integrity verification",
+            "value": "${google_sql_ssl_cert.this.sha1_fingerprint}"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AzureAD User
+  node:
+    label:
+      static: AzureAD User
+      template: ${given_name}
+    display_type: default
+
+variables:
+  show_in_address_list:
+    description: Determines if the user should be visible in the address list.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  age_group:
+    description: Specifies the age group of the user.
+    type: string
+    options: 
+      - Minor
+      - Adult
+      - NotAdult
+    ui_control: select
+  consent_provided_for_minor:
+    type: string
+    options: 
+      - Granted
+      - Denied
+      - NotRequired
+    ui_control: select
+    description: Indicates if consent has been provided for a minor.
+  account_enabled:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Indicates if the user account is enabled or not.
+  disable_password_expiration:
+    ui_control: select
+    description: "Determines if the user's password expiration is disabled."
+    type: bool
+    options: 
+      - true
+      - false
+  disable_strong_password:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Determines if strong password enforcement is disabled for the user.
+  force_password_change:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Indicates if the user is required to change their password on next login.
+    type: bool
+
+discovery:
+  type: azuread_user
+  dnd_supported: false
+  data_source: data_azuread_user

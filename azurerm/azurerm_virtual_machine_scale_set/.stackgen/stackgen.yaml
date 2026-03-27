@@ -1,0 +1,243 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Machine Scale Set
+  node:
+    label:
+      static: Virtual Machine Scale Set
+      template: ${name}
+    display_type: default
+
+variables:
+  single_placement_group:
+    description: Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Changing this forces a new resource to be created.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  sku:
+    description: A sku block
+    attributes: 
+      tier: 
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - standard
+          - basic
+        ui_control: select
+  storage_profile_data_disk:
+    description: A storage_profile_data_disk block
+    attributes: 
+      managed_disk_type: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - Standard LRS
+          - Premium LRS
+          - Standard SSD LRS
+        ui_control: select
+      caching: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - ReadOnly
+          - ReadWrite
+        ui_control: select
+      create_option: 
+        type: string
+        options: 
+          - FromImage
+          - Empty
+        ui_control: select
+        validation: 
+          dataType: string
+          required: false
+  upgrade_policy_mode:
+    description: Specifies the mode of an upgrade to virtual machines in the scale set. When choosing Rolling, you will need to set a health probe.
+    type: string
+    options: 
+      - Rolling
+      - Manual
+      - Automatic
+    ui_control: select
+  identity:
+    description: An identity block
+    attributes: 
+      type: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - SystemAssigned
+          - UserAssigned
+          - SystemAssigned, UserAssigned
+        ui_control: select
+  os_profile_linux_config:
+    description: A os_profile_linux_config block.
+    attributes: 
+      disable_password_authentication: 
+        ui_control: select
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+  license_type:
+    description: Specifies the Windows OS license type.
+    type: string
+    options: 
+      - Windows_Client
+      - Windows_Server
+    ui_control: select
+  extension:
+    description: Can be specified multiple times to add extension profiles to the scale set.
+    attributes: 
+      settings: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        ui_control: json
+      protected_settings: 
+        ui_control: json
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+  storage_profile_os_disk:
+    description: A storage_profile_os_disk block
+    attributes: 
+      caching: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - ReadOnly
+          - ReadWrite
+        ui_control: select
+      os_type: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - windows
+          - linux
+        ui_control: select
+      managed_disk_type: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - Standard LRS
+          - Premium LRS
+          - Standard SSD LRS
+        ui_control: select
+  network_profile:
+    attributes: 
+      accelerated_networking: 
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        validation: 
+          required: false
+          dataType: bool
+      ip_forwarding: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      network_security_group_id: 
+        type: bool
+        validation: 
+          required: false
+          dataType: bool
+    description: A collection of network_profile blocks.
+  priority:
+    description: Specifies the priority for the Virtual Machines in the Scale Set. Changing this forces a new resource to be created.
+    type: string
+    options: 
+      - Low
+      - Regular
+    ui_control: select
+  os_profile_windows_config:
+    description: A os_profile_windows_config block.
+    attributes: 
+      provision_vm_agent: 
+        validation: 
+          dataType: bool
+          required: false
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      enable_automatic_updates: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  eviction_policy:
+    options: 
+      - Delete
+      - Deallocate
+    ui_control: select
+    description: Specifies the eviction policy for Virtual Machines in this Scale Set. Changing this forces a new resource to be created.
+    type: string
+  automatic_os_upgrade:
+    ui_control: select
+    description: Automatic OS patches can be applied by Azure to your scaleset.
+    type: bool
+    options: 
+      - true
+      - false
+  boot_diagnostics:
+    description: A boot_diagnostics block
+    attributes: 
+      enabled: 
+        options: 
+          - true
+          - false
+        ui_control: select
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+  overprovision:
+    description: Specifies whether the virtual machine scale set should be overprovisioned.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_virtual_machine_scale_set
+  dnd_supported: false
+  references:
+    proximity_placement_group_id:
+      from: azurerm_proximity_placement_group
+      output: id

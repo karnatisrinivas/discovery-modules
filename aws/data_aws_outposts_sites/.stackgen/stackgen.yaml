@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Outposts Sites"
+  node:
+    label:
+      static: "[Data] Outposts Sites"
+      template: "[Data] Outposts Sites"
+    display_type: default
+
+discovery:
+  type: data_aws_outposts_sites
+  dnd_supported: false

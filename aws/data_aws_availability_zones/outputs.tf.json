@@ -1,0 +1,20 @@
+{
+    "output": {
+        "group_names": {
+            "description": "A set of group names for the availability zones.",
+            "value": "${data.aws_availability_zones.this.group_names}"
+        },
+        "id": {
+            "description": "A unique identifier for the availability zones data source.",
+            "value": "${data.aws_availability_zones.this.id}"
+        },
+        "names": {
+            "description": "A list of names of the availability zones.",
+            "value": "${data.aws_availability_zones.this.names}"
+        },
+        "zone_ids": {
+            "description": "A list of unique identifiers for each availability zone.",
+            "value": "${data.aws_availability_zones.this.zone_ids}"
+        }
+    }
+}

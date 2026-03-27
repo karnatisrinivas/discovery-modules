@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Memorydb Subnet Group"
+  node:
+    label:
+      static: "[Data] Memorydb Subnet Group"
+      template: "[Data] Memorydb Subnet Group"
+    display_type: default
+
+discovery:
+  type: data_aws_memorydb_subnet_group
+  dnd_supported: false

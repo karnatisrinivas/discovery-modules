@@ -1,0 +1,20 @@
+{
+    "output": {
+        "default_hostname": {
+            "description": "The default hostname assigned to the Linux web app.",
+            "value": "${azurerm_linux_web_app.this.default_hostname}"
+        },
+        "hosting_environment_id": {
+            "description": "The ID of the hosting environment where the Linux web app is running.",
+            "value": "${azurerm_linux_web_app.this.hosting_environment_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Linux web app.",
+            "value": "${azurerm_linux_web_app.this.id}"
+        },
+        "principal_id": {
+            "description": "The principal ID of the Linux web app.",
+            "value": "${azurerm_linux_web_app.this.identity[0].principal_id}"
+        }
+    }
+}

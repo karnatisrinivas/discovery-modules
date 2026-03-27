@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM binding configuration",
+            "value": "${google_apigee_environment_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for identifying the IAM binding in the Apigee environment",
+            "value": "${google_apigee_environment_iam_binding.this.id}"
+        }
+    }
+}

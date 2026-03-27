@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "allow_open": [
+      {
+        "description": "Determines whether the server TLS policy allows connections without a valid TLS certificate; set to true to permit non-TLS traffic, otherwise false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines an optional description for the Server TLS Policy, providing additional context or details. Limited to 512 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the resource, supporting filtering and management; must comply with label key and value constraints.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the region where the Server TLS Policy will be created; must match the location of the associated resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "mtls_policy": [
+      {
+        "description": "Defines the mutual TLS authentication policy for the server, specifying client certificate requirements and validation settings.",
+        "nullable": true,
+        "type": "list(object({client_validation_mode: optional(string),client_validation_trust_config: optional(string),client_validation_ca: list(object({certificate_provider_instance: list(object({plugin_instance: string})),grpc_endpoint: list(object({target_uri: string}))}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the Server TLS Policy, must be 1-63 characters long and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_certificate": [
+      {
+        "description": "Specifies the server certificate to use for TLS, must be a valid Google Cloud certificate resource or reference.",
+        "nullable": true,
+        "type": "list(object({certificate_provider_instance: list(object({plugin_instance: string})),grpc_endpoint: list(object({target_uri: string}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the time durations for create, update, and delete operations on the TLS policy.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

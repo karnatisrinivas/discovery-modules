@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "bucket_name": [
+      {
+        "description": "Specifies the name of the storage bucket where objects are stored. Must be unique and comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "cdn_policy": [
+      {
+        "description": "Defines the configuration settings for the Content Delivery Network (CDN), including cache behavior and policies.",
+        "nullable": true,
+        "type": "list(object({cache_mode: optional(string),client_ttl: optional(number),default_ttl: optional(number),max_ttl: optional(number),negative_caching: optional(bool),request_coalescing: optional(bool),serve_while_stale: optional(number),signed_url_cache_max_age_sec: optional(number),bypass_cache_on_request_headers: list(object({header_name: optional(string)})),cache_key_policy: list(object({include_http_headers: optional(list(string)),query_string_whitelist: optional(list(string))})),negative_caching_policy: list(object({code: optional(number),ttl: optional(number)}))}))"
+      }
+    ],
+    "compression_mode": [
+      {
+        "description": "Indicates the compression mode used for the data, such as 'gzip'. Optimizes bandwidth but may increase CPU usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "custom_response_headers": [
+      {
+        "description": "Lists custom headers to include in HTTP responses. Useful for security settings or custom metadata.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a brief text description for the resource or service, aiding in identification and understanding of its purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_security_policy": [
+      {
+        "description": "Specifies the security policy applied at the network edge, focusing on aspects like encryption and access controls.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_cdn": [
+      {
+        "description": "Determines whether the CDN feature is activated for improved content delivery performance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name for the resource, ensuring it is human-readable and aligns with organizational naming standards.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "project": [
+      {
+        "description": "Specifies the Google Cloud project associated with the resources, facilitating organization and billing.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures the timeout durations for create, delete, and update operations, helping manage long-running tasks.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

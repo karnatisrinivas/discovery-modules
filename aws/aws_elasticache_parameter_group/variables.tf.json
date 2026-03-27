@@ -1,0 +1,42 @@
+{
+    "variable": {
+        "description": [
+            {
+                "default": "Managed by Terraform",
+                "description": "The description of the ElastiCache parameter group.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "family": [
+            {
+                "description": "The family of the ElastiCache parameter group.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "name": [
+            {
+                "description": "The name of the ElastiCache parameter group.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "parameter": [
+            {
+                "default": [],
+                "description": "A list of ElastiCache parameters to apply.",
+                "type": "list(object({ name: string, value: string }))",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "default": {},
+                "description": "A mapping of tags to assign to the resource.",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ]
+    }
+}

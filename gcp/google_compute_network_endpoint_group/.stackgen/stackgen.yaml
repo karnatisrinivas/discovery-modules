@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Network Endpoint Group
+  node:
+    label:
+      static: Compute Network Endpoint Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_network_endpoint_group
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id
+    subnetwork:
+      from: google_compute_subnetwork
+      output: id

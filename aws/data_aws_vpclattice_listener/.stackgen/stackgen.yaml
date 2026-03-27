@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpclattice Listener"
+  node:
+    label:
+      static: "[Data] Vpclattice Listener"
+      template: "[Data] Vpclattice Listener"
+    display_type: default
+
+discovery:
+  type: data_aws_vpclattice_listener
+  dnd_supported: false

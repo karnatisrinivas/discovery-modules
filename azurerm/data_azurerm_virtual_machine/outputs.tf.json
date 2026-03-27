@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the virtual machine.",
+            "value": "${data.azurerm_virtual_machine.this.id}"
+        }
+    }
+}

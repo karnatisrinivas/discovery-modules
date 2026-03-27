@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicequotas Service"
+  node:
+    label:
+      static: "[Data] Servicequotas Service"
+      template: "[Data] Servicequotas Service"
+    display_type: default
+
+discovery:
+  type: data_aws_servicequotas_service
+  dnd_supported: false

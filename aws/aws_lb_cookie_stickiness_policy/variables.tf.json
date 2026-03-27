@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "cookie_expiration_period": [
+      {
+        "description": "Defines the lifespan of the cookie in seconds for maintaining session stickiness, with a valid range of 1 to 604800 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "lb_port": [
+      {
+        "description": "Specifies the load balancer listener port to which the stickiness policy should be applied; must match an existing listener port.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "load_balancer": [
+      {
+        "description": "Specifies the name or ARN of the load balancer to associate with the stickiness policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the cookie stickiness policy, which must be alphanumeric and unique within the load balancer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

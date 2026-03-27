@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "network_security_group_id": [
+      {
+        "description": "ID of the associated network security group, required for resource creation",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnet_id": [
+      {
+        "description": "ID of the subnet where the resource will reside, must be specified",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Custom timeouts for create, read, and delete operations (optional)",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string)})"
+      }
+    ]
+  }
+}

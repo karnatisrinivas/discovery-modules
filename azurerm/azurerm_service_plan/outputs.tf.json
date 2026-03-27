@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Azure service plan.",
+            "value": "${azurerm_service_plan.this.id}"
+        }
+    }
+}

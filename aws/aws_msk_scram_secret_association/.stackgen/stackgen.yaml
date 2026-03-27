@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Msk Scram Secret Association
+  node:
+    label:
+      static: Msk Scram Secret Association
+      template: ${cluster_arn}
+    display_type: default
+
+discovery:
+  type: aws_msk_scram_secret_association
+  dnd_supported: false
+  references:
+    cluster_arn:
+      from: aws_msk_cluster
+      output: arn
+    secret_arn_list:
+      from: aws_secretsmanager_secret
+      output: arn

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Coip Pools"
+  node:
+    label:
+      static: "[Data] Ec2 Coip Pools"
+      template: "[Data] Ec2 Coip Pools"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_coip_pools
+  dnd_supported: false

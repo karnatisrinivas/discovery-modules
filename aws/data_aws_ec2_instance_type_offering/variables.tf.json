@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "location_type": [
+      {
+        "description": "Specifies the type of location (e.g., region or availability zone) for the EC2 instance offering.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_instance_types": [
+      {
+        "description": "A list of preferred EC2 instance types that you want to consider when finding instance offerings.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

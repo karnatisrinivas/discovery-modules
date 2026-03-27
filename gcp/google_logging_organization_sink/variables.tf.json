@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "bigquery_options": [
+      {
+        "description": "Specifies options that affect sink exporting to BigQuery, such as partitioning and use of storage write API.",
+        "nullable": true,
+        "type": "list(object({use_partitioned_tables: bool}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the purpose or details of the organization-level logging sink; optional but recommended for clarity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination": [
+      {
+        "description": "Specifies the destination for log entries, such as a Cloud Storage bucket, BigQuery dataset, or Pub/Sub topic. Must be a valid resource in the required format.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Specifies whether the logging sink is disabled; set to true to disable the sink and prevent it from exporting logs.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclusions": [
+      {
+        "description": "Defines log exclusions for the organization sink, specifying which log entries should be excluded from being exported.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),disabled: optional(bool),filter: string,name: string}))"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the advanced logs filter to determine which log entries to include in the sink; must be a valid filter expression.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_children": [
+      {
+        "description": "Determines whether to include logs from child resources, such as projects or folders, in the sink. Must be a boolean value.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "intercept_children": [
+      {
+        "description": "Determines whether log entries from child projects are included in the sink; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The unique name for the logging sink, must be compliant with Google Cloud naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "Identifier of the organization for which the logging sink is created; must be a valid organization ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

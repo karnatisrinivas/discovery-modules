@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Access Keys"
+  node:
+    label:
+      static: "[Data] Iam Access Keys"
+      template: "[Data] Iam Access Keys"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_access_keys
+  dnd_supported: false

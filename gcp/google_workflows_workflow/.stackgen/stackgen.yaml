@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Workflows Workflow
+  node:
+    label:
+      static: Workflows Workflow
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_workflows_workflow
+  dnd_supported: false

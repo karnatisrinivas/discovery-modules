@@ -1,0 +1,48 @@
+{
+    "variable": {
+        "name": [
+             {
+                "nullable": false,
+                "description": "The name of the repository",
+                "type": "string"
+            }
+        ],
+        "force_delete":[
+            {
+                "nullable": true,
+                "description": "If true, the repository will be deleted even if it contains images",
+                "type": "bool",
+                "default": false
+            }
+        ],
+        "image_tag_mutability":[
+            {
+                "nullable": true,
+                "description": "The tag mutability setting for the repository",
+                "type": "string",
+                "default": "MUTABLE"
+            }
+        ],
+        "image_scanning_configuration":[
+            {
+                "nullable": false,
+                "description": "The image scanning configuration for the repository",
+                "type": "list(object({ scan_on_push: bool}))"
+            }
+        ],
+        "encryption_configuration":[
+            {
+                "nullable": true,
+                "description": "The encryption configuration for the repository",
+                "type": "list(object({ encryption_type: string, kms_key: string}))"
+            }
+        ],
+        "tags":[
+            {
+                "nullable": true,
+                "description": "A mapping of tags to assign to the resource",
+                "type": "map(string)"
+            }
+        ]
+    }
+}

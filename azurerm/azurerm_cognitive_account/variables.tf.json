@@ -1,0 +1,42 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the Cognitive Service Account. Changing this forces a new resource to be created."
+      }
+    ],
+    "kind": [
+      {
+        "type": "string",
+        "description": "Specifies the type of Cognitive Service Account that should be created. Changing this forces a new resource to be created."
+      }
+    ],
+    "sku_name": [
+      {
+        "type": "string",
+        "description": "Specifies the SKU Name for this Cognitive Service Account. Changing this forces a new resource to be created"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "type": "bool",
+        "description": "Whether public network access is allowed for the Cognitive Account",
+        "default": false,
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

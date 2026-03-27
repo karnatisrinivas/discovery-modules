@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "access_log_settings": [
+      {
+        "description": "Configures logging for API Gateway stage, specifying the destination ARN and format for access logs.",
+        "nullable": true,
+        "type": "list(object({destination_arn: string,format: string}))"
+      }
+    ],
+    "api_id": [
+      {
+        "description": "ID of the associated API Gateway v2 resource that this stage belongs to; must be an existing API ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "auto_deploy": [
+      {
+        "description": "Determines whether changes deployed to the API are automatically available in the stage; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_id": [
+      {
+        "description": "The ID of the client certificate used for mutual TLS authentication in the stage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "default_route_settings": [
+      {
+        "description": "Defines the default route settings for the API Gateway stage, including configurations for throttling and data logging.",
+        "nullable": true,
+        "type": "list(object({data_trace_enabled: optional(bool),detailed_metrics_enabled: optional(bool),logging_level: optional(string),throttling_burst_limit: optional(number),throttling_rate_limit: optional(number)}))"
+      }
+    ],
+    "deployment_id": [
+      {
+        "description": "Specifies the ID of the deployment to associate with the stage. Must correspond to an existing deployment in the API Gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the stage's description, providing context or details about its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the API Gateway stage. Must be unique within the API Gateway and can contain alphanumeric characters, hyphens, and underscores.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "route_settings": [
+      {
+        "description": "Defines custom settings for routes in the stage, including throttling and data logging configurations.",
+        "nullable": true,
+        "type": "list(object({data_trace_enabled: optional(bool),detailed_metrics_enabled: optional(bool),logging_level: optional(string),route_key: string,throttling_burst_limit: optional(number),throttling_rate_limit: optional(number)}))"
+      }
+    ],
+    "stage_variables": [
+      {
+        "description": "Key-value pairs to configure stage-specific settings, passed to the integration backend; must be defined as a map.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the stage, typically for cost allocation, access control, or resource management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

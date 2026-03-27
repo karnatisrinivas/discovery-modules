@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Waf Web Acl"
+  node:
+    label:
+      static: "[Data] Waf Web Acl"
+      template: "[Data] Waf Web Acl"
+    display_type: default
+
+discovery:
+  type: data_aws_waf_web_acl
+  dnd_supported: false

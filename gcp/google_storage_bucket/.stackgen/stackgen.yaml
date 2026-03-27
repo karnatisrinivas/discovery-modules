@@ -1,0 +1,137 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Bucket
+  node:
+    label:
+      static: Storage Bucket
+      template: ${name}
+    display_type: default
+
+variables:
+  enable_object_retention:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Enables object retention on a storage bucket.
+  hierarchical_namespace:
+    attributes: 
+      enabled: 
+        label: Enabled
+        validation: 
+          dataType: bool
+          required: true
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  uniform_bucket_level_access:
+    description: "Whether to enable uniform bucket-level access"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  public_access_prevention:
+    description: "Prevents public access to a bucket. Acceptable values are \"inherited\" or \"enforced\". If \"inherited\", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint."
+    type: string
+    options: 
+      - inherited
+      - enforced
+    ui_control: select
+  storage_class:
+    description: The Storage Class of the new bucket.
+    type: string
+    options: 
+      - STANDARD
+      - MULTI_REGIONAL
+      - REGIONAL
+      - NEARLINE
+      - COLDLINE
+      - ARCHIVE
+    ui_control: select
+  versioning:
+    description: If versioning is enabled for this bucket
+    attributes: 
+      enabled: 
+        ui_control: select
+        label: Enabled
+        validation: 
+          required: true
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+  default_event_based_hold:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+  requester_pays:
+    ui_control: select
+    description: Enables Requester Pays on a storage bucket.
+    type: bool
+    options: 
+      - true
+      - false
+  rpo:
+    description: "The recovery point objective for cross-region replication of the bucket. Applicable only for dual and multi-region buckets."
+    type: string
+    options: 
+      - DEFAULT
+      - ASYNC_TURBO
+    ui_control: select
+  force_destroy:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether to allow the bucket and all objects to be deleted on destroy
+    type: bool
+  autoclass:
+    description: "The bucket's Autoclass configuration."
+    attributes: 
+      enabled: 
+        label: Enabled
+        validation: 
+          dataType: bool
+          required: true
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      terminal_storage_class: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - NEARLINE
+          - ARCHIVE
+        ui_control: select
+        label: Terminal Storage Class
+  retention_policy:
+    description: "Configuration of the bucket's data retention policy for how long objects in the bucket should be retained."
+    attributes: 
+      is_locked: 
+        validation: 
+          required: true
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: "Is Locked?"
+
+discovery:
+  type: google_storage_bucket
+  dnd_supported: false

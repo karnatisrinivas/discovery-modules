@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the Router NAT.",
+            "value": "${google_compute_router_nat.this.id}"
+        }
+    }
+}

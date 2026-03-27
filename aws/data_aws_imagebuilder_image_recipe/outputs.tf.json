@@ -1,0 +1,56 @@
+{
+    "output": {
+        "block_device_mapping": {
+            "description": "Specifies the block devices to attach to the image, including EBS volumes.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.block_device_mapping}"
+        },
+        "component": {
+            "description": "A list of components that are included in the image recipe, specifying their ARNs and parameters.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.component}"
+        },
+        "date_created": {
+            "description": "The date and time when the image recipe was created.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.date_created}"
+        },
+        "description": {
+            "description": "A brief description of the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.id}"
+        },
+        "name": {
+            "description": "The name of the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.name}"
+        },
+        "owner": {
+            "description": "The AWS account ID of the owner of the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.owner}"
+        },
+        "parent_image": {
+            "description": "The Amazon Resource Name (ARN) of the parent image used to create the recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.parent_image}"
+        },
+        "platform": {
+            "description": "The platform of the image, such as Windows or Linux.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.platform}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.tags}"
+        },
+        "user_data_base64": {
+            "description": "User data for the image, encoded in base64.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.user_data_base64}"
+        },
+        "version": {
+            "description": "The version of the image recipe.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.version}"
+        },
+        "working_directory": {
+            "description": "The working directory where the image recipe is created.",
+            "value": "${data.aws_imagebuilder_image_recipe.this.working_directory}"
+        }
+    }
+}

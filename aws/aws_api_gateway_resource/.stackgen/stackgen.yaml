@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: API Gateway Resource
+  node:
+    label:
+      static: API Gateway Resource
+      template: ${parent_id}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_resource
+  dnd_supported: false
+  data_source: data_aws_api_gateway_resource

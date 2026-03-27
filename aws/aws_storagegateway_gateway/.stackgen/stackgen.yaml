@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Gateway
+  node:
+    label:
+      static: Storage Gateway
+      template: ${gateway_name}
+    display_type: default
+
+discovery:
+  type: aws_storagegateway_gateway
+  dnd_supported: false

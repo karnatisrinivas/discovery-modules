@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "pipeline_id": [
+      {
+        "description": "The unique identifier for the AWS Data Pipeline that you want to define or configure.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Private DNS Zone
+  node:
+    label:
+      static: Private DNS Zone
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_private_dns_zone
+  dnd_supported: false
+  data_source: data_azurerm_private_dns_zone

@@ -1,0 +1,130 @@
+{
+    "variable": {
+      "bucket": [
+        {
+          "description": "Specifies the name of the GCS bucket where the object will reside. This must be an existing bucket.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "cache_control": [
+        {
+          "description": "Defines caching behavior for the object, such as expiration times or caching policies.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "content": [
+        {
+          "description": "Raw content to be stored in the object. Can be used for small text or binary data.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "content_disposition": [
+        {
+          "description": "Indicates how the object should be displayed or downloaded, such as inline or as an attachment.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "content_encoding": [
+        {
+          "description": "Specifies the encoding used for the object, such as gzip or base64, to allow proper decoding.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "content_language": [
+        {
+          "description": "Sets the language of the object content, using standard language codes like 'en' or 'es'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "content_type": [
+        {
+          "description": "Defines the media type (MIME type) of the object, such as 'text/plain' or 'application/json'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "customer_encryption": [
+        {
+          "description": "Specifies encryption settings for the object, including the algorithm and encryption key. Requires a valid encryption key.",
+          "nullable": true,
+          "type": "list(object({encryption_algorithm: optional(string),encryption_key: string}))"
+        }
+      ],
+      "detect_md5hash": [
+        {
+          "description": "Calculates the MD5 hash of the object's content to ensure data integrity.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "event_based_hold": [
+        {
+          "description": "Enables an event-based hold on the object, preventing deletion until the hold is explicitly removed.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "google_storage_bucket_object_source": [
+        {
+          "description": "Specifies the source file for the object, typically a local file path or a remote URL.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "kms_key_name": [
+        {
+          "description": "Specifies the Cloud KMS key used to encrypt the object. Requires valid KMS configuration.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "metadata": [
+        {
+          "description": "Custom metadata key-value pairs to attach to the object. Useful for adding additional context or information.",
+          "nullable": true,
+          "type": "map(string)"
+        }
+      ],
+      "name": [
+        {
+          "description": "Specifies the name of the object within the bucket. Must be unique within the bucket.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "retention": [
+        {
+          "description": "Defines retention policies for the object, including mode and retention period settings.",
+          "nullable": true,
+          "type": "list(object({mode: string,retain_until_time: string}))"
+        }
+      ],
+      "storage_class": [
+        {
+          "description": "Specifies the storage class for the object, such as 'STANDARD' or 'NEARLINE'. Determines cost and availability.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "temporary_hold": [
+        {
+          "description": "Applies a temporary hold on the object, preventing deletion until the hold is removed.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Configures timeout durations for create, update, and delete operations. Optional per operation.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ]
+    }
+  }

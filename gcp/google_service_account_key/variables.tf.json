@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "service_account_id": [
+            {
+                "type": "string",
+                "description": "The Service account id of the Key."
+            }
+        ],
+        "public_key_type": [
+            {
+                "type": "string",
+                "description": "The output format of the public key requested.",
+                "default": "TYPE_X509_PEM_FILE",
+                "nullable": true
+            }
+        ]
+    }
+}

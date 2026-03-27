@@ -1,0 +1,122 @@
+{
+  "variable": {
+    "administrator_login": [
+      {
+        "description": "The administrator login for the PostgreSQL server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "administrator_login_password": [
+      {
+        "description": "Password for the PostgreSQL server administrator.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "auto_grow_enabled": [
+      {
+        "description": "Determines if storage auto-grow is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "create_mode": [
+      {
+        "description": "Specifies the mode to create the PostgreSQL server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "creation_source_server_id": [
+      {
+        "description": "The ID of the source server to create from.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "geo_redundant_backup_enabled": [
+      {
+        "description": "Enables geo-redundant backups.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "infrastructure_encryption_enabled": [
+      {
+        "description": "Enables additional infrastructure encryption.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the PostgreSQL server.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "postgresql_version": [
+      {
+        "type": "string",
+        "description": "The version of the postgresql server.",
+        "nullable": false,
+        "default": "11"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Allows public network access to the server.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "restore_point_in_time": [
+      {
+        "description": "The time to restore from during server creation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "The SKU name for the server, defining its performance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ssl_enforcement_enabled": [
+      {
+        "description": "Enforces SSL connection to the server.",
+        "nullable": false,
+        "type": "bool"
+      }
+    ],
+    "ssl_minimal_tls_version_enforced": [
+      {
+        "description": "The minimum TLS version for SSL enforcement.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

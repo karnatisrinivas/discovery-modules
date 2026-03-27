@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Security Rule
+  node:
+    label:
+      static: Network Security Rule
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_network_security_rule
+  dnd_supported: false
+  references:
+    network_security_group_name:
+      from: azurerm_network_security_group
+      output: name

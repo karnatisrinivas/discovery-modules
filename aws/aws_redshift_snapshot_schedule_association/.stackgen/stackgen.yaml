@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redshift Snapshot Schedule Association
+  node:
+    label:
+      static: Redshift Snapshot Schedule Association
+      template: Redshift Snapshot Schedule Association
+    display_type: default
+
+discovery:
+  type: aws_redshift_snapshot_schedule_association
+  dnd_supported: false
+  references:
+    schedule_identifier:
+      from: aws_redshift_snapshot_schedule
+      output: identifier
+    cluster_identifier:
+      from: aws_redshift_cluster
+      output: cluster_identifier

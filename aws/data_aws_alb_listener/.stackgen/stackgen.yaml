@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Alb Listener"
+  node:
+    label:
+      static: "[Data] Alb Listener"
+      template: "[Data] Alb Listener"
+    display_type: default
+
+discovery:
+  type: data_aws_alb_listener
+  dnd_supported: false

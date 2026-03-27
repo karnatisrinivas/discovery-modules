@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Security Policy
+  node:
+    label:
+      static: Compute Security Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_security_policy
+  dnd_supported: false

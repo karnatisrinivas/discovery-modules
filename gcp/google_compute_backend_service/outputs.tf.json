@@ -1,0 +1,24 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp when the backend service was created, useful for auditing changes",
+            "value": "${google_compute_backend_service.this.creation_timestamp}"
+        },
+        "fingerprint": {
+            "description": "Hash used for optimistic locking during updates to prevent conflicts",
+            "value": "${google_compute_backend_service.this.fingerprint}"
+        },
+        "generated_id": {
+            "description": "System-generated unique ID for identifying the backend service resource",
+            "value": "${google_compute_backend_service.this.generated_id}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the backend service in configurations",
+            "value": "${google_compute_backend_service.this.id}"
+        },
+        "self_link": {
+            "description": "API URL for accessing the backend service resource directly",
+            "value": "${google_compute_backend_service.this.self_link}"
+        }
+    }
+}

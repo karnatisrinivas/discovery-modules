@@ -1,0 +1,81 @@
+{
+    "variable": {
+        "default_route_action": [
+            {
+                "description": "Specifies the default routing behavior for HTTP requests, including policies for CORS, fault injection, retries, and timeout settings. Supports optional backend service configuration and header actions.",
+                "nullable": true,
+                "type": "list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: optional(bool),expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: optional(number),percentage: optional(number)})),delay: list(object({percentage: optional(number),fixed_delay: list(object({nanos: optional(number),seconds: optional(string)}))}))})),max_stream_duration: list(object({nanos: optional(number),seconds: string})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: optional(number),retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: optional(string)}))})),timeout: list(object({nanos: optional(number),seconds: optional(string)})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: optional(string),weight: optional(number),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)})),response_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)}))}))}))}))"
+            }
+        ],
+        "default_service": [
+            {
+                "description": "Defines the default backend service for HTTP requests if no specific routing rules match. Must be a valid service name string.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "default_url_redirect": [
+            {
+                "description": "Configures default URL redirection settings, including optional host and path redirects, HTTPS enforcement, and response codes. Requires 'strip_query' as a boolean.",
+                "nullable": true,
+                "type": "list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool}))"
+            }
+        ],
+        "description": [
+            {
+                "description": "Provides a textual description for the resource, aiding in identification and understanding of its purpose. Accepts any string value.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "header_action": [
+            {
+                "description": "Specifies actions on HTTP headers, including adding, removing, or replacing request and response headers. Must include header names and values.",
+                "nullable": true,
+                "type": "list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))}))"
+            }
+        ],
+        "host_rule": [
+            {
+                "description": "Defines a rule for directing traffic based on host names and associated path matchers. Requires a list of hosts and a path matcher identifier.",
+                "nullable": true,
+                "type": "list(object({description: optional(string),hosts: list(string),path_matcher: string}))"
+            }
+        ],
+        "name": [
+            {
+                "description": "Specifies the resource name, which must be unique within the project. Cannot be null.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "path_matcher": [
+            {
+                "description": "Defines a set of routing rules based on URL path patterns, including default services, route actions, and URL redirects. Requires a unique name.",
+                "nullable": true,
+                "type": "list(object({default_service: optional(string),description: optional(string),name: string,default_route_action: list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: optional(bool),expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: optional(number),percentage: optional(number)})),delay: list(object({percentage: optional(number),fixed_delay: list(object({nanos: optional(number),seconds: optional(string)}))}))})),max_stream_duration: list(object({nanos: optional(number),seconds: string})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: optional(number),retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: optional(string)}))})),timeout: list(object({nanos: optional(number),seconds: optional(string)})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: optional(string),weight: optional(number),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)})),response_headers_to_add: list(object({header_name: optional(string),header_value: optional(string),replace: optional(bool)}))}))}))})),default_url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool})),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))})),path_rule: list(object({paths: list(string),service: optional(string),route_action: list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: bool,expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: number,percentage: number})),delay: list(object({percentage: number,fixed_delay: list(object({nanos: optional(number),seconds: string}))}))})),max_stream_duration: list(object({nanos: optional(number),seconds: string})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: optional(number),retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: string}))})),timeout: list(object({nanos: optional(number),seconds: string})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: string,weight: number,header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))}))}))})),url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: bool}))})),route_rules: list(object({priority: number,service: optional(string),header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))})),match_rules: list(object({full_path_match: optional(string),ignore_case: optional(bool),path_template_match: optional(string),prefix_match: optional(string),regex_match: optional(string),header_matches: list(object({exact_match: optional(string),header_name: string,invert_match: optional(bool),prefix_match: optional(string),present_match: optional(bool),regex_match: optional(string),suffix_match: optional(string),range_match: list(object({range_end: number,range_start: number}))})),metadata_filters: list(object({filter_match_criteria: string,filter_labels: list(object({name: string,value: string}))})),query_parameter_matches: list(object({exact_match: optional(string),name: string,present_match: optional(bool),regex_match: optional(string)}))})),route_action: list(object({cors_policy: list(object({allow_credentials: optional(bool),allow_headers: optional(list(string)),allow_methods: optional(list(string)),allow_origin_regexes: optional(list(string)),allow_origins: optional(list(string)),disabled: optional(bool),expose_headers: optional(list(string)),max_age: optional(number)})),fault_injection_policy: list(object({abort: list(object({http_status: optional(number),percentage: optional(number)})),delay: list(object({percentage: optional(number),fixed_delay: list(object({nanos: optional(number),seconds: string}))}))})),max_stream_duration: list(object({nanos: optional(number),seconds: string})),request_mirror_policy: list(object({backend_service: string})),retry_policy: list(object({num_retries: number,retry_conditions: optional(list(string)),per_try_timeout: list(object({nanos: optional(number),seconds: string}))})),timeout: list(object({nanos: optional(number),seconds: string})),url_rewrite: list(object({host_rewrite: optional(string),path_prefix_rewrite: optional(string),path_template_rewrite: optional(string)})),weighted_backend_services: list(object({backend_service: string,weight: number,header_action: list(object({request_headers_to_remove: optional(list(string)),response_headers_to_remove: optional(list(string)),request_headers_to_add: list(object({header_name: string,header_value: string,replace: bool})),response_headers_to_add: list(object({header_name: string,header_value: string,replace: bool}))}))}))})),url_redirect: list(object({host_redirect: optional(string),https_redirect: optional(bool),path_redirect: optional(string),prefix_redirect: optional(string),redirect_response_code: optional(string),strip_query: optional(bool)}))}))}))"
+            }
+        ],
+        "project": [
+            {
+                "description": "Indicates the GCP project ID where resources are managed. Should be a valid, existing project ID.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "test": [
+            {
+                "description": "Defines test cases for validating service configurations, including required host, path, and service parameters.",
+                "nullable": true,
+                "type": "list(object({description: optional(string),host: string,path: string,service: string}))"
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "Sets custom timeout durations for create, update, and delete operations, defined in a string format (e.g., '30m').",
+                "nullable": true,
+                "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+            }
+        ]
+    }
+}

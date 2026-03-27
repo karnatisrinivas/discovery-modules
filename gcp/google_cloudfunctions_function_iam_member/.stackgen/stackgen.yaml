@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfunctions Function Iam Member
+  node:
+    label:
+      static: Cloudfunctions Function Iam Member
+      template: ${cloud_function}
+    display_type: default
+
+discovery:
+  type: google_cloudfunctions_function_iam_member
+  dnd_supported: false
+  references:
+    cloud_function:
+      from: google_cloudfunctions_function
+      output: name

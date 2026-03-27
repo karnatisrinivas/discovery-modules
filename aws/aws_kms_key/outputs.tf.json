@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_kms_key.this.arn}"
+        },
+        "id": {
+            "description": "The value of the id output",
+            "value": "${aws_kms_key.this.id}"
+        },
+        "key_id": {
+            "description": "The value of the key_id output",
+            "value": "${aws_kms_key.this.key_id}"
+        }
+    }
+}

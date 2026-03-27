@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Tags Tag Binding
+  node:
+    label:
+      static: Tags Tag Binding
+      template: ${tag_value}
+    display_type: default
+
+discovery:
+  type: google_tags_tag_binding
+  dnd_supported: false

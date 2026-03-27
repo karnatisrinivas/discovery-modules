@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the iam_arn output",
+            "value": "${aws_cloudfront_origin_access_identity.this.iam_arn}"
+        }
+    }
+}

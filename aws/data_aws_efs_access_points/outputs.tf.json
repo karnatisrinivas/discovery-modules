@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the EFS access points.",
+            "value": "${data.aws_efs_access_points.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the specific EFS access point.",
+            "value": "${data.aws_efs_access_points.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for the EFS access points.",
+            "value": "${data.aws_efs_access_points.this.ids}"
+        }
+    }
+}

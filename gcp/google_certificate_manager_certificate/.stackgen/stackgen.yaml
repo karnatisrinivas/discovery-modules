@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Certificate Manager Certificate
+  node:
+    label:
+      static: Certificate Manager Certificate
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_certificate_manager_certificate
+  dnd_supported: false

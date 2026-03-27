@@ -1,0 +1,28 @@
+{
+    "output": {
+        "description": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.description}"
+        },
+        "owner": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.owner}"
+        },
+        "parameters": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.parameters}"
+        },
+        "portfolio_id": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.portfolio_id}"
+        },
+        "product_id": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.product_id}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_constraint.this.status}"
+        }
+    }
+}

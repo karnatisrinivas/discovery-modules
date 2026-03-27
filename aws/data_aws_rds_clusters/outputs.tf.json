@@ -1,0 +1,16 @@
+{
+    "output": {
+        "cluster_arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the RDS clusters.",
+            "value": "${data.aws_rds_clusters.this.cluster_arns}"
+        },
+        "cluster_identifiers": {
+            "description": "A set of unique identifiers for the RDS clusters.",
+            "value": "${data.aws_rds_clusters.this.cluster_identifiers}"
+        },
+        "id": {
+            "description": "The ID of the data source for the RDS clusters.",
+            "value": "${data.aws_rds_clusters.this.id}"
+        }
+    }
+}

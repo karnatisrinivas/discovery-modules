@@ -1,0 +1,16 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the health check was created",
+            "value": "${google_compute_http_health_check.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for the HTTP health check resource",
+            "value": "${google_compute_http_health_check.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the health check in the Google Cloud API",
+            "value": "${google_compute_http_health_check.this.self_link}"
+        }
+    }
+}

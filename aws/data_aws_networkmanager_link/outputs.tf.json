@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network manager link.",
+            "value": "${data.aws_networkmanager_link.this.arn}"
+        },
+        "bandwidth": {
+            "description": "The bandwidth details of the link, including download and upload speeds.",
+            "value": "${data.aws_networkmanager_link.this.bandwidth}"
+        },
+        "description": {
+            "description": "A description of the network manager link.",
+            "value": "${data.aws_networkmanager_link.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the network manager link.",
+            "value": "${data.aws_networkmanager_link.this.id}"
+        },
+        "provider_name": {
+            "description": "The name of the service provider for the link.",
+            "value": "${data.aws_networkmanager_link.this.provider_name}"
+        },
+        "site_id": {
+            "description": "The identifier of the site associated with the network manager link.",
+            "value": "${data.aws_networkmanager_link.this.site_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the network manager link.",
+            "value": "${data.aws_networkmanager_link.this.tags}"
+        }
+    }
+}

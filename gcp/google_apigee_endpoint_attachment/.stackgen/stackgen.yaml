@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Endpoint Attachment
+  node:
+    label:
+      static: Apigee Endpoint Attachment
+      template: ${endpoint_attachment_id}
+    display_type: default
+
+discovery:
+  type: google_apigee_endpoint_attachment
+  dnd_supported: false
+  references:
+    org_id:
+      from: google_apigee_organization
+      output: id

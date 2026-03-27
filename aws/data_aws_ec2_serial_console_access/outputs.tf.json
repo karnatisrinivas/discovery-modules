@@ -1,0 +1,12 @@
+{
+    "output": {
+        "enabled": {
+            "description": "Indicates whether the EC2 Serial Console is enabled or disabled.",
+            "value": "${data.aws_ec2_serial_console_access.this.enabled}"
+        },
+        "id": {
+            "description": "A unique identifier for the EC2 Serial Console Access configuration.",
+            "value": "${data.aws_ec2_serial_console_access.this.id}"
+        }
+    }
+}

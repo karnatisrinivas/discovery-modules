@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Vpn Tunnel
+  node:
+    label:
+      static: Compute Vpn Tunnel
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_vpn_tunnel
+  dnd_supported: false
+  references:
+    target_vpn_gateway:
+      from: google_compute_vpn_gateway
+      output: id

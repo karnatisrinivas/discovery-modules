@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "database_name": [
+      {
+        "description": "The name of the Glue catalog database where the table is located.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Glue catalog table.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "query_as_of_time": [
+      {
+        "description": "The point in time to query the table as of, formatted as a string.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "transaction_id": [
+      {
+        "description": "The transaction ID to query the table within a specific transaction.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

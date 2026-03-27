@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the Amazon Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "contact_flow_module_id": [
+      {
+        "description": "The unique identifier for the contact flow module, if already existing.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the contact flow module.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

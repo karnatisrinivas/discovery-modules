@@ -1,0 +1,121 @@
+{
+  "variable": {
+    "allocation_method": [
+      {
+        "description": "Defines how the public IP address is allocated (Static or Dynamic).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ddos_protection_mode": [
+      {
+        "description": "Specifies the DDoS protection mode for the public IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ddos_protection_plan_id": [
+      {
+        "description": "The ID of the DDoS protection plan to be associated with the public IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "domain_name_label": [
+      {
+        "description": "A label assigned to the public IP, used for DNS settings.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the edge zone where the public IP is deployed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "idle_timeout_in_minutes": [
+      {
+        "description": "Specifies the idle timeout for the public IP in minutes.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "ip_tags": [
+      {
+        "description": "A set of tags assigned to the public IP address.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "ip_version": [
+      {
+        "description": "Specifies the IP version (IPv4 or IPv6) of the public IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the public IP resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_ip_prefix_id": [
+      {
+        "description": "The ID of the public IP prefix associated with this public IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "reverse_fqdn": [
+      {
+        "description": "The reverse FQDN associated with the public IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku": [
+      {
+        "description": "The SKU of the public IP (Basic or Standard).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku_tier": [
+      {
+        "description": "The tier of the SKU for the public IP, if applicable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the public IP resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zones": [
+      {
+        "description": "The availability zones in which the public IP is available.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

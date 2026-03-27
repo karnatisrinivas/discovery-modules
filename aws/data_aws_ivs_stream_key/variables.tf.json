@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "channel_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the IVS channel for which the stream key will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 Resolver query log configuration.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.arn}"
+        },
+        "destination_arn": {
+            "description": "The ARN of the destination resource where the query logs are sent.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.destination_arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the Route 53 Resolver query log configuration.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the query log configuration.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.owner_id}"
+        },
+        "share_status": {
+            "description": "Indicates whether the query logging configuration is shared with other AWS accounts.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.share_status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the query log configuration.",
+            "value": "${data.aws_route53_resolver_query_log_config.this.tags}"
+        }
+    }
+}

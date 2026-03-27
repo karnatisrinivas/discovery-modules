@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Fsx Ontap Storage Virtual Machines"
+  node:
+    label:
+      static: "[Data] Fsx Ontap Storage Virtual Machines"
+      template: "[Data] Fsx Ontap Storage Virtual Machines"
+    display_type: default
+
+discovery:
+  type: data_aws_fsx_ontap_storage_virtual_machines
+  dnd_supported: false

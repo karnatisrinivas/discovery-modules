@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Opensearchserverless Vpc Endpoint"
+  node:
+    label:
+      static: "[Data] Opensearchserverless Vpc Endpoint"
+      template: "[Data] Opensearchserverless Vpc Endpoint"
+    display_type: default
+
+discovery:
+  type: data_aws_opensearchserverless_vpc_endpoint
+  dnd_supported: false

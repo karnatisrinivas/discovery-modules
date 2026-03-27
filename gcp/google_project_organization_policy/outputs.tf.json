@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${google_project_organization_policy.this.id}"
+        }
+    }
+}

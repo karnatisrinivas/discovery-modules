@@ -1,0 +1,108 @@
+{
+    "output": {
+        "available_maintenance_versions": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.available_maintenance_versions}"
+        },
+        "clone": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.clone}"
+        },
+        "connection_name": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.connection_name}"
+        },
+        "database_version": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.database_version}"
+        },
+        "deletion_protection": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.deletion_protection}"
+        },
+        "dns_name": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.dns_name}"
+        },
+        "encryption_key_name": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.encryption_key_name}"
+        },
+        "first_ip_address": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.first_ip_address}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.id}"
+        },
+        "instance_type": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.instance_type}"
+        },
+        "ip_address": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.ip_address}"
+        },
+        "maintenance_version": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.maintenance_version}"
+        },
+        "master_instance_name": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.master_instance_name}"
+        },
+        "private_ip_address": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.private_ip_address}"
+        },
+        "psc_service_attachment_link": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.psc_service_attachment_link}"
+        },
+        "public_ip_address": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.public_ip_address}"
+        },
+        "region": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.region}"
+        },
+        "replica_configuration": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.replica_configuration}"
+        },
+        "replica_names": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.replica_names}"
+        },
+        "replication_cluster": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.replication_cluster}"
+        },
+        "restore_backup_context": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.restore_backup_context}"
+        },
+        "root_password": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.root_password}"
+        },
+        "self_link": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.self_link}"
+        },
+        "server_ca_cert": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.server_ca_cert}"
+        },
+        "service_account_email_address": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.service_account_email_address}"
+        },
+        "settings": {
+            "description": "",
+            "value": "${data.google_sql_database_instance.this.settings}"
+        }
+    }
+}

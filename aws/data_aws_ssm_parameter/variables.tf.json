@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the SSM parameter to be created or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "with_decryption": [
+      {
+        "description": "Indicates whether the parameter's value should be decrypted.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

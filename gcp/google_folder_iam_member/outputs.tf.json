@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to IAM bindings in the folder",
+            "value": "${google_folder_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the folder IAM member resource",
+            "value": "${google_folder_iam_member.this.id}"
+        }
+    }
+}

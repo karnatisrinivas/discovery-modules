@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "function_name": [
+      {
+        "description": "The name of the Lambda function to be invoked.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "input": [
+      {
+        "description": "The JSON input to pass to the Lambda function during invocation.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "qualifier": [
+      {
+        "description": "The version or alias of the Lambda function to be invoked, if applicable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

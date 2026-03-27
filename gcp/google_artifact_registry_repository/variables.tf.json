@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "cleanup_policies": [
+      {
+        "description": "Defines the cleanup policies for the repository, specifying rules for automatically deleting or retaining artifacts based on conditions like age or number of versions.",
+        "nullable": true,
+        "type": "list(object({action: optional(string),id: string,condition: list(object({newer_than: optional(string),older_than: optional(string),package_name_prefixes: optional(list(string)),tag_prefixes: optional(list(string)),tag_state: optional(string),version_name_prefixes: optional(list(string))})),most_recent_versions: list(object({keep_count: optional(number),package_name_prefixes: optional(list(string))}))}))"
+      }
+    ],
+    "cleanup_policy_dry_run": [
+      {
+        "description": "Enables simulation of cleanup policies without deleting artifacts, useful for testing policy behavior.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the purpose or details of the repository, such as its intended usage or contents.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "docker_config": [
+      {
+        "description": "Specifies the Docker repository configuration, including settings for authentication and access control.",
+        "nullable": true,
+        "type": "list(object({immutable_tags: optional(bool)}))"
+      }
+    ],
+    "format": [
+      {
+        "description": "Specifies the format of packages stored in the repository (e.g., DOCKER, MAVEN, NPM).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kms_key_name": [
+      {
+        "description": "Specifies the Cloud KMS key to be used for encrypting the repository's contents. Must be in the same region as the repository.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the repository, typically used for metadata or filtering purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the GCP region where the repository will be created; must be a valid region supported by Artifact Registry.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "maven_config": [
+      {
+        "description": "Specifies the Maven repository configuration, including optional settings like repository policy and versioning, for the Artifact Registry repository.",
+        "nullable": true,
+        "type": "list(object({allow_snapshot_overwrites: optional(bool),version_policy: optional(string)}))"
+      }
+    ],
+    "mode": [
+      {
+        "description": "Defines the format of the repository, such as DOCKER, MAVEN, NPM, or PYTHON, determining the type of artifacts it can store.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "remote_repository_config": [
+      {
+        "description": "Configuration settings for a remote repository, including the source location and authentication details.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),disable_upstream_validation: optional(bool),apt_repository: list(object({public_repository: list(object({repository_base: string,repository_path: string}))})),common_repository: list(object({uri: string})),docker_repository: list(object({public_repository: optional(string),custom_repository: list(object({uri: optional(string)}))})),maven_repository: list(object({public_repository: optional(string),custom_repository: list(object({uri: optional(string)}))})),npm_repository: list(object({public_repository: optional(string),custom_repository: list(object({uri: optional(string)}))})),python_repository: list(object({public_repository: optional(string),custom_repository: list(object({uri: optional(string)}))})),upstream_credentials: list(object({username_password_credentials: list(object({password_secret_version: optional(string),username: optional(string)}))})),yum_repository: list(object({public_repository: list(object({repository_base: string,repository_path: string}))}))}))"
+      }
+    ],
+    "repository_id": [
+      {
+        "description": "Unique identifier for the repository within the Artifact Registry, must be globally unique.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations on the repository, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "virtual_repository_config": [
+      {
+        "description": "Defines the configuration for a virtual repository, including settings for upstream repositories and caching behavior.",
+        "nullable": true,
+        "type": "list(object({upstream_policies: list(object({id: optional(string),priority: optional(number),repository: optional(string)}))}))"
+      }
+    ],
+    "vulnerability_scanning_config": [
+      {
+        "description": "Configures the vulnerability scanning settings for the repository, specifying whether to enable or disable scanning for container images.",
+        "nullable": true,
+        "type": "list(object({enablement_config: optional(string),enablement_state: optional(string),enablement_state_reason: optional(string)}))"
+      }
+    ]
+  }
+}

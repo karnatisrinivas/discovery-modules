@@ -1,0 +1,16 @@
+{
+    "output": {
+        "guid": {
+            "description": "The globally unique identifier of the virtual network.",
+            "value": "${data.azurerm_virtual_network.this.guid}"
+        },
+        "id": {
+            "description": "The unique identifier of the virtual network resource.",
+            "value": "${data.azurerm_virtual_network.this.id}"
+        },
+        "name": {
+            "description": "The name of the virtual network.",
+            "value": "${data.azurerm_virtual_network.this.name}"
+        }
+    }
+}

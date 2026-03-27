@@ -1,0 +1,53 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the resolver endpoint",
+                "nullable": true
+            }
+        ],
+        "direction": [
+            {
+                "type": "string",
+                "description": "The direction of the resolver endpoint",
+                "nullable": false
+            }
+        ],
+        "resolver_endpoint_type": [
+            {
+                "type": "string",
+                "description": "The type of the resolver endpoint",
+                "nullable": true
+            }
+        ],
+        "protocols": [
+            {
+                "type": "list(string)",
+                "description": "The protocols of the resolver endpoint",
+                "nullable": true    
+            }
+        ],
+        "security_group_ids": [
+            {
+                "type": "list(string)",
+                "description": "The security group ids of the resolver endpoint",
+                "nullable": false
+            }
+        ],
+        "ip_address": [
+            {
+                "type": "list(object({subnet_id: string, ip: string, ipv6: optional(string)}))",
+                "description": "The ip address of the resolver endpoint. (Two required)",
+                "nullable": false
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "The tags of the resolver endpoint",
+                "nullable": true
+            }
+        ]
+    }
+}

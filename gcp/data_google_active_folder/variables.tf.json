@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "api_method": [
+      {
+        "description": "Specifies the API method to use for managing the active folder, such as creating or updating, based on the desired operation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name of the active folder, must be unique within the same parent folder or organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "parent": [
+      {
+        "description": "ID of the parent folder or organization for the active folder being created; must be in the format \"folders/{folder_id}\" or \"organizations/{org_id}\"",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

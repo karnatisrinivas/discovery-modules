@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag used for optimistic concurrency control in updates",
+            "value": "${google_compute_subnetwork_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique ID for the IAM binding to identify it in the subnetwork",
+            "value": "${google_compute_subnetwork_iam_binding.this.id}"
+        }
+    }
+}

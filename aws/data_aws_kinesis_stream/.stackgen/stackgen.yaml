@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kinesis Stream"
+  node:
+    label:
+      static: "[Data] Kinesis Stream"
+      template: "[Data] Kinesis Stream"
+    display_type: default
+
+discovery:
+  type: data_aws_kinesis_stream
+  dnd_supported: false

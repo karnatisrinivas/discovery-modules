@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Storage Account"
+  node:
+    label:
+      static: "[Data] Storage Account"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_storage_account
+  dnd_supported: false

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific AWS Network ACL.",
+            "value": "${data.aws_network_acls.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the AWS Network ACLs.",
+            "value": "${data.aws_network_acls.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the AWS Network ACLs.",
+            "value": "${data.aws_network_acls.this.tags}"
+        }
+    }
+}

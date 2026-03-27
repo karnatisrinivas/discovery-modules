@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "principal_id": [
+      {
+        "description": "The principal ID of the user or service principal.",
+        "type": "string",
+        "nullable": false
+      }
+    ],
+    "role_definition_name": [
+      {
+        "description": "The name of the role definition to assign. Conflicts with `Role Definition ID`",
+        "type": "string",
+        "default": "Reader",
+        "nullable": true
+      }
+    ],
+    "scope": [
+      {
+        "description": "The scope at which the role assignment applies.",
+        "type": "string",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

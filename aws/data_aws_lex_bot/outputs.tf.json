@@ -1,0 +1,64 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.arn}"
+        },
+        "checksum": {
+            "description": "A checksum that helps identify the version of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.checksum}"
+        },
+        "child_directed": {
+            "description": "Indicates whether the Lex bot is directed towards children.",
+            "value": "${data.aws_lex_bot.this.child_directed}"
+        },
+        "created_date": {
+            "description": "The date when the Lex bot was created.",
+            "value": "${data.aws_lex_bot.this.created_date}"
+        },
+        "description": {
+            "description": "A brief description of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.description}"
+        },
+        "detect_sentiment": {
+            "description": "Indicates if the Lex bot has sentiment detection enabled.",
+            "value": "${data.aws_lex_bot.this.detect_sentiment}"
+        },
+        "enable_model_improvements": {
+            "description": "Indicates if the Lex bot's model improvements are enabled.",
+            "value": "${data.aws_lex_bot.this.enable_model_improvements}"
+        },
+        "failure_reason": {
+            "description": "The reason for any failure in building the Lex bot.",
+            "value": "${data.aws_lex_bot.this.failure_reason}"
+        },
+        "id": {
+            "description": "The unique identifier of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.id}"
+        },
+        "idle_session_ttl_in_seconds": {
+            "description": "The time-to-live (TTL) for a session in seconds when the Lex bot is idle.",
+            "value": "${data.aws_lex_bot.this.idle_session_ttl_in_seconds}"
+        },
+        "last_updated_date": {
+            "description": "The date when the Lex bot was last updated.",
+            "value": "${data.aws_lex_bot.this.last_updated_date}"
+        },
+        "locale": {
+            "description": "The language locale of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.locale}"
+        },
+        "nlu_intent_confidence_threshold": {
+            "description": "The confidence threshold for the NLU intent in the Lex bot.",
+            "value": "${data.aws_lex_bot.this.nlu_intent_confidence_threshold}"
+        },
+        "status": {
+            "description": "The current status of the Lex bot.",
+            "value": "${data.aws_lex_bot.this.status}"
+        },
+        "voice_id": {
+            "description": "The identifier for the voice used by the Lex bot.",
+            "value": "${data.aws_lex_bot.this.voice_id}"
+        }
+    }
+}

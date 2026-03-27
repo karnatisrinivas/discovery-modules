@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The arn of the resolver endpoint",
+            "value": "${aws_route53_resolver_endpoint.this.arn}"
+        }
+    }
+}

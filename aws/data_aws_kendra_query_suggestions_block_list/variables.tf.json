@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "index_id": [
+      {
+        "description": "The unique identifier for the Kendra index associated with the query suggestions block list.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "query_suggestions_block_list_id": [
+      {
+        "description": "The unique identifier for the query suggestions block list in Amazon Kendra.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

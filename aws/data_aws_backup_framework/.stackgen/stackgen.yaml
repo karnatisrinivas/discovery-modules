@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Backup Framework"
+  node:
+    label:
+      static: "[Data] Backup Framework"
+      template: "[Data] Backup Framework"
+    display_type: default
+
+discovery:
+  type: data_aws_backup_framework
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Imagebuilder Image Recipes"
+  node:
+    label:
+      static: "[Data] Imagebuilder Image Recipes"
+      template: "[Data] Imagebuilder Image Recipes"
+    display_type: default
+
+discovery:
+  type: data_aws_imagebuilder_image_recipes
+  dnd_supported: false

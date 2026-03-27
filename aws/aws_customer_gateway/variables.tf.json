@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "bgp_asn": [
+      {
+        "description": "Specifies the Border Gateway Protocol Autonomous System Number (ASN) to be used for the gateway; must be a 16-bit or 32-bit integer.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "bgp_asn_extended": [
+      {
+        "description": "Defines the Border Gateway Protocol Autonomous System Number (ASN) for the customer gateway, must be a valid 16-bit or 32-bit ASN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "certificate_arn": [
+      {
+        "description": "ARN of the certificate to use for authentication, required for certificate-based VPN connections.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "device_name": [
+      {
+        "description": "Specifies the identifier of the physical device or software appliance at the customer end of the VPN connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "Specifies the external IP address of the customer gateway device; must be a valid, public IPv4 address.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the customer gateway for organization, categorization, or identification purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of VPN connection; must be 'ipsec.1'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Azure Logic App Workflow"
+  node:
+    label:
+      static: "[Data] Azure Logic App Workflow"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_logic_app_workflow
+  dnd_supported: false

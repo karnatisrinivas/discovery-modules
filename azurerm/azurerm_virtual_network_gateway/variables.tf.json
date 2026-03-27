@@ -1,0 +1,114 @@
+{
+  "variable": {
+    "bgp_route_translation_for_nat_enabled": [
+      {
+        "description": "Indicates if BGP route translation is enabled for NAT.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "default_local_network_gateway_id": [
+      {
+        "description": "Specifies the ID of the local network gateway to be used as the default.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns_forwarding_enabled": [
+      {
+        "description": "Determines if DNS forwarding is enabled on the virtual network gateway.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the edge zone in which the virtual network gateway should be created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_sec_replay_protection_enabled": [
+      {
+        "description": "Indicates if IPsec replay protection is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the virtual network gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "private_ip_address_enabled": [
+      {
+        "description": "Determines if a private IP address is enabled for the gateway.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "remote_vnet_traffic_enabled": [
+      {
+        "description": "Indicates if traffic to remote virtual networks is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Specifies the SKU of the virtual network gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of the virtual network gateway (e.g., VPN or ExpressRoute).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "virtual_wan_traffic_enabled": [
+      {
+        "description": "Indicates if traffic to a virtual WAN is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "vpn_type": [
+      {
+        "description": "Specifies the type of VPN (e.g., PolicyBased or RouteBased).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_configuration": [
+      {
+        "description": "The IP configuration for the virtual network gateway.",
+        "nullable": false,
+        "type": "list(object({name:string,subnet_id:string,public_ip_address_id:string,private_ip_address_allocation:string}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

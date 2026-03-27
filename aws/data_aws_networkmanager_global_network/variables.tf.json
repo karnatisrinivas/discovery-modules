@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier for the AWS Network Manager Global Network resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

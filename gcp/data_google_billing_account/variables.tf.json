@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "billing_account": [
+      {
+        "description": "Specifies the ID of the Google Cloud billing account to associate with resources; must be an active billing account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name displayed for the billing account, must be unique and descriptive.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "lookup_projects": [
+      {
+        "description": "Specifies the list of project IDs or names to check for billing account linkage.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "open": [
+      {
+        "description": "Determines whether the billing account is open or closed; must be set to true for active accounts.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

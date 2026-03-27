@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the API Gateway method, useful for linking related resources.",
+            "value": "${aws_api_gateway_method.this.id}"
+        }
+    }
+}

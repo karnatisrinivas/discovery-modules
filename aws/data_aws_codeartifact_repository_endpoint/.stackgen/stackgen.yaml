@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Codeartifact Repository Endpoint"
+  node:
+    label:
+      static: "[Data] Codeartifact Repository Endpoint"
+      template: "[Data] Codeartifact Repository Endpoint"
+    display_type: default
+
+discovery:
+  type: data_aws_codeartifact_repository_endpoint
+  dnd_supported: false

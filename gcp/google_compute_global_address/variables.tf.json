@@ -1,0 +1,61 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "Name of the resource.",
+                "nullable": false
+            }
+        ],
+        "address_type": [
+            {
+                "type": "string",
+                "description": "The type of address to reserve, either INTERNAL or EXTERNAL. If EXTERNAL is selected, no other inputs are required. If INTERNAL is selected, the network and purpose fields are required.",
+                "nullable": true
+            }
+        ],
+        "purpose": [
+            {
+                "type": "string",
+                "description": "The purpose of the resource.(Shared or Not Shared)",
+                "nullable": true
+            }
+        ],
+        "network": [
+            {
+                "type": "string",
+                "description": "The URL of the network in which to reserve the IP range. This field is mandatory if the Address Type is INTERNAL.",
+                "nullable": true
+            }
+        ],
+        "address": [
+            {
+                "type": "string",
+                "description": "The IP address or beginning of the address range represented by this resource. This can be supplied as an input to reserve a specific address or omitted to allow GCP to choose a valid one for you.",
+                "nullable": true
+            }
+        ],
+        "prefix_length": [
+            {
+                "type": "number",
+                "description": "The prefix length of the IP range. If not supplied, the IP range will be considered as a single IP.",
+                "nullable": true
+            }
+        ],
+        "description": [
+            {
+                "type": "string",
+                "description": "An optional description of this resource.",
+                "nullable": true
+            }
+        ],
+        "ip_version": [
+            {
+                "type": "string",
+                "description": "The IP Version that will be used by this address.",
+                "nullable": true,
+                "default": "IPV4"
+            }
+        ]
+    }
+}

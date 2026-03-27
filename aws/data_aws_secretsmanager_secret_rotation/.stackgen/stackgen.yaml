@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Secretsmanager Secret Rotation"
+  node:
+    label:
+      static: "[Data] Secretsmanager Secret Rotation"
+      template: "[Data] Secretsmanager Secret Rotation"
+    display_type: default
+
+discovery:
+  type: data_aws_secretsmanager_secret_rotation
+  dnd_supported: false

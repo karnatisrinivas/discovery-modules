@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "client_token": [
+      {
+        "description": "A unique token to ensure idempotency of the request.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cluster": [
+      {
+        "description": "The name of the ECS cluster where the service will be run.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "desired_count": [
+      {
+        "description": "The number of instances of the task definition to place and keep running.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "enable_ecs_managed_tags": [
+      {
+        "description": "Specifies whether to enable Amazon ECS managed tags for the tasks within the service.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_execute_command": [
+      {
+        "description": "Specifies whether to enable the execute command functionality on the tasks in the service.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "group": [
+      {
+        "description": "The name of the task group associated with the service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "launch_type": [
+      {
+        "description": "The launch type on which to run your service, such as EC2 or FARGATE.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "platform_version": [
+      {
+        "description": "The platform version on which to run your service. Only applicable for Fargate launch type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "propagate_tags": [
+      {
+        "description": "Specifies whether to propagate the tags from the task definition or the service to the tasks.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "reference_id": [
+      {
+        "description": "An optional identifier that you can assign to the service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "started_by": [
+      {
+        "description": "An identifier for the entity that started the task.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "task_definition": [
+      {
+        "description": "The family and revision (family:revision) or full ARN of the task definition to run in the service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

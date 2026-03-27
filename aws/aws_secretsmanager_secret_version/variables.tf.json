@@ -1,0 +1,28 @@
+{
+    "variable": {
+        "secret_string": [
+            {
+                "type": "string",
+                "description": "Specifies text data that you want to encrypt and store in this version of the secret.",
+                "nullable": true
+            }
+        ],
+        "version_stages": [
+            {
+                "type": "list(string)",
+                "description": "Specifies a list of staging labels that are attached to this version of the secret.",
+                "default": [
+                    "AWSCURRENT"
+                ],
+                "nullable": true
+            }
+        ],
+        "secret_id": [
+            {
+                "type": "string",
+                "description": "Specifies the secret to which you want to add a new version.",
+                "nullable": false
+            }
+        ]
+    }
+}

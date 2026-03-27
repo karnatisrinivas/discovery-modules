@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the MSK broker nodes.",
+            "value": "${data.aws_msk_broker_nodes.this.id}"
+        },
+        "node_info_list": {
+            "description": "A list of information about each MSK broker node, including details such as network interface ID, broker ID, subnet, VPC IP address, endpoints, and node ARN.",
+            "value": "${data.aws_msk_broker_nodes.this.node_info_list}"
+        }
+    }
+}

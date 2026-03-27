@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS SSO Admin application provider.",
+            "value": "${data.aws_ssoadmin_application_providers.this.id}"
+        }
+    }
+}

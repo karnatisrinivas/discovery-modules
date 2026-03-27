@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Oam Sink"
+  node:
+    label:
+      static: "[Data] Oam Sink"
+      template: "[Data] Oam Sink"
+    display_type: default
+
+discovery:
+  type: data_aws_oam_sink
+  dnd_supported: false

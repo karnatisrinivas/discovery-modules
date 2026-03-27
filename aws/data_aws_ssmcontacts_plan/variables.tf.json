@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "contact_id": [
+      {
+        "description": "A unique identifier for the contact in the AWS SSM contacts plan.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

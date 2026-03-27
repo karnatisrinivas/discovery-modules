@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "link_identifier": [
+      {
+        "description": "A unique string used to identify the AWS OAM link.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

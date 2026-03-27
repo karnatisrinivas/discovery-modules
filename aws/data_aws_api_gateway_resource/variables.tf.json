@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "path": [
+      {
+        "description": "The path for the API resource, which is the endpoint URL segment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "The identifier of the REST API to which the resource belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variable": {
+    "charset": [
+      {
+        "description": "Specifies the character set for the MySQL database.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "collation": [
+      {
+        "description": "Defines the collation order for the MySQL database.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the MySQL database to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_name": [
+      {
+        "description": "The name of the MySQL server where the database will be hosted.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Cosmos DB table resource.",
+            "value": "${azurerm_cosmosdb_table.this.id}"
+        }
+    }
+}

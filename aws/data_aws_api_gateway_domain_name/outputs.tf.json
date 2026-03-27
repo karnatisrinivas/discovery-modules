@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.arn}"
+        },
+        "certificate_arn": {
+            "description": "The ARN of the certificate that is used to validate the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.certificate_arn}"
+        },
+        "certificate_name": {
+            "description": "The name of the certificate associated with the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.certificate_name}"
+        },
+        "certificate_upload_date": {
+            "description": "The date when the certificate was uploaded.",
+            "value": "${data.aws_api_gateway_domain_name.this.certificate_upload_date}"
+        },
+        "cloudfront_domain_name": {
+            "description": "The domain name assigned by CloudFront to the API Gateway.",
+            "value": "${data.aws_api_gateway_domain_name.this.cloudfront_domain_name}"
+        },
+        "cloudfront_zone_id": {
+            "description": "The CloudFront zone ID for the distribution associated with the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.cloudfront_zone_id}"
+        },
+        "endpoint_configuration": {
+            "description": "The endpoint configuration of the domain name, specifying the types of endpoints.",
+            "value": "${data.aws_api_gateway_domain_name.this.endpoint_configuration}"
+        },
+        "id": {
+            "description": "The ID of the API Gateway domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.id}"
+        },
+        "regional_certificate_arn": {
+            "description": "The ARN of the regional certificate used for the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.regional_certificate_arn}"
+        },
+        "regional_certificate_name": {
+            "description": "The name of the regional certificate associated with the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.regional_certificate_name}"
+        },
+        "regional_domain_name": {
+            "description": "The regional domain name for the API Gateway.",
+            "value": "${data.aws_api_gateway_domain_name.this.regional_domain_name}"
+        },
+        "regional_zone_id": {
+            "description": "The regional zone ID for the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.regional_zone_id}"
+        },
+        "security_policy": {
+            "description": "The security policy used for the domain name, indicating the TLS version.",
+            "value": "${data.aws_api_gateway_domain_name.this.security_policy}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the domain name.",
+            "value": "${data.aws_api_gateway_domain_name.this.tags}"
+        }
+    }
+}

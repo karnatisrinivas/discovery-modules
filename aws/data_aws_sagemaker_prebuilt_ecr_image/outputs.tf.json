@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS SageMaker prebuilt ECR image.",
+            "value": "${data.aws_sagemaker_prebuilt_ecr_image.this.id}"
+        },
+        "registry_id": {
+            "description": "The AWS account ID that owns the ECR registry containing the SageMaker prebuilt image.",
+            "value": "${data.aws_sagemaker_prebuilt_ecr_image.this.registry_id}"
+        },
+        "registry_path": {
+            "description": "The full path to the ECR registry where the SageMaker prebuilt image is stored.",
+            "value": "${data.aws_sagemaker_prebuilt_ecr_image.this.registry_path}"
+        }
+    }
+}

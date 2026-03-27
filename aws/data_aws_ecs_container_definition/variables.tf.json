@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "container_name": [
+      {
+        "description": "The name of the container, which is used to identify it within the ECS task.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "task_definition": [
+      {
+        "description": "The family and revision (family:revision) or full ARN of the task definition to which this container belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

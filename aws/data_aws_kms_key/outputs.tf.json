@@ -1,0 +1,88 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the KMS key.",
+            "value": "${data.aws_kms_key.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "The AWS account ID that owns the KMS key.",
+            "value": "${data.aws_kms_key.this.aws_account_id}"
+        },
+        "cloud_hsm_cluster_id": {
+            "description": "The ID of the CloudHSM cluster that contains the key.",
+            "value": "${data.aws_kms_key.this.cloud_hsm_cluster_id}"
+        },
+        "creation_date": {
+            "description": "The date and time when the KMS key was created.",
+            "value": "${data.aws_kms_key.this.creation_date}"
+        },
+        "custom_key_store_id": {
+            "description": "The ID of the custom key store that contains the KMS key.",
+            "value": "${data.aws_kms_key.this.custom_key_store_id}"
+        },
+        "customer_master_key_spec": {
+            "description": "The cryptographic configuration of the KMS key.",
+            "value": "${data.aws_kms_key.this.customer_master_key_spec}"
+        },
+        "deletion_date": {
+            "description": "The date and time when the KMS key is scheduled for deletion.",
+            "value": "${data.aws_kms_key.this.deletion_date}"
+        },
+        "description": {
+            "description": "A brief description of the KMS key.",
+            "value": "${data.aws_kms_key.this.description}"
+        },
+        "enabled": {
+            "description": "Indicates whether the KMS key is enabled.",
+            "value": "${data.aws_kms_key.this.enabled}"
+        },
+        "expiration_model": {
+            "description": "The expiration model of the KMS key.",
+            "value": "${data.aws_kms_key.this.expiration_model}"
+        },
+        "id": {
+            "description": "The unique identifier for the KMS key.",
+            "value": "${data.aws_kms_key.this.id}"
+        },
+        "key_manager": {
+            "description": "The manager of the KMS key, which could be AWS or a customer.",
+            "value": "${data.aws_kms_key.this.key_manager}"
+        },
+        "key_spec": {
+            "description": "The cryptographic configuration of the KMS key.",
+            "value": "${data.aws_kms_key.this.key_spec}"
+        },
+        "key_state": {
+            "description": "The current state of the KMS key.",
+            "value": "${data.aws_kms_key.this.key_state}"
+        },
+        "key_usage": {
+            "description": "The intended use of the KMS key.",
+            "value": "${data.aws_kms_key.this.key_usage}"
+        },
+        "multi_region": {
+            "description": "Indicates if the KMS key is multi-region.",
+            "value": "${data.aws_kms_key.this.multi_region}"
+        },
+        "multi_region_configuration": {
+            "description": "Configuration details for a multi-region KMS key.",
+            "value": "${data.aws_kms_key.this.multi_region_configuration}"
+        },
+        "origin": {
+            "description": "The source of the key material for the KMS key.",
+            "value": "${data.aws_kms_key.this.origin}"
+        },
+        "pending_deletion_window_in_days": {
+            "description": "The waiting period before the KMS key is deleted.",
+            "value": "${data.aws_kms_key.this.pending_deletion_window_in_days}"
+        },
+        "valid_to": {
+            "description": "The date and time when the KMS key will become invalid.",
+            "value": "${data.aws_kms_key.this.valid_to}"
+        },
+        "xks_key_configuration": {
+            "description": "Configuration details for the external key store (XKS) key.",
+            "value": "${data.aws_kms_key.this.xks_key_configuration}"
+        }
+    }
+}

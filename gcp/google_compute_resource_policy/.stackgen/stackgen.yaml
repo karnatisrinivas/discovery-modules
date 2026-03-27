@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Resource Policy
+  node:
+    label:
+      static: Compute Resource Policy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_resource_policy
+  dnd_supported: false

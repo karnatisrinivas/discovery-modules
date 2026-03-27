@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the description for the resource policy, providing context or details about its purpose. Maximum length is 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disk_consistency_group_policy": [
+      {
+        "description": "Defines the consistency group policy for disks, ensuring data integrity during snapshots; requires specifying parameters for resource group management.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "group_placement_policy": [
+      {
+        "description": "Defines the placement policy for instances in the group, specifying constraints such as colocation or distribution across zones.",
+        "nullable": true,
+        "type": "list(object({availability_domain_count: optional(number),collocation: optional(string),vm_count: optional(number)}))"
+      }
+    ],
+    "instance_schedule_policy": [
+      {
+        "description": "Defines the schedule for instances, specifying start and stop times in UTC for automated instance management.",
+        "nullable": true,
+        "type": "list(object({expiration_time: optional(string),start_time: optional(string),time_zone: string,vm_start_schedule: list(object({schedule: string})),vm_stop_schedule: list(object({schedule: string}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the resource policy, must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "snapshot_schedule_policy": [
+      {
+        "description": "Defines the configuration for the snapshot schedule, including frequency, retention policy, and other settings for automated disk snapshots.",
+        "nullable": true,
+        "type": "list(object({retention_policy: list(object({max_retention_days: number,on_source_disk_delete: optional(string)})),schedule: list(object({daily_schedule: list(object({days_in_cycle: number,start_time: string})),hourly_schedule: list(object({hours_in_cycle: number,start_time: string})),weekly_schedule: list(object({day_of_weeks: list(object({day: string,start_time: string}))}))})),snapshot_properties: list(object({chain_name: optional(string),guest_flush: optional(bool),labels: optional(map(string)),storage_locations: optional(list(string))}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for operations on the resource policy, specifying limits for creation, update, and deletion processes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

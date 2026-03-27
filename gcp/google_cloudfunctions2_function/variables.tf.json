@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "build_config": [
+      {
+        "description": "Specifies the Cloud Functions build configuration, including source code location, runtime environment, and build environment settings.",
+        "nullable": true,
+        "type": "list(object({build: optional(string),docker_repository: optional(string),entry_point: optional(string),environment_variables: optional(map(string)),runtime: optional(string),service_account: optional(string),worker_pool: optional(string),automatic_update_policy: list(object({})),on_deploy_update_policy: list(object({runtime_version: optional(string)})),source: list(object({repo_source: list(object({branch_name: optional(string),commit_sha: optional(string),dir: optional(string),invert_regex: optional(bool),project_id: optional(string),repo_name: optional(string),tag_name: optional(string)})),storage_source: list(object({bucket: optional(string),generation: optional(number),object: optional(string)}))}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Detailed information about the Cloud Function's purpose and functionality, up to 1024 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "event_trigger": [
+      {
+        "description": "Specifies the event trigger configuration for the Cloud Function, which determines the type of event that will invoke the function. Required fields include event type and resource.",
+        "nullable": true,
+        "type": "list(object({event_type: string,pubsub_topic: optional(string),retry_policy: optional(string),service_account_email: optional(string),trigger: optional(string),trigger_region: optional(string),event_filters: list(object({attribute: string,operator: optional(string),value: string}))}))"
+      }
+    ],
+    "kms_key_name": [
+      {
+        "description": "Specifies the KMS key used to encrypt environment variables, must be in the same location as the function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the function, with a maximum of 64 labels.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the GCP region where the Cloud Function will be deployed; must be a supported region for Google Cloud Functions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the Cloud Function, must be between 1 and 63 characters, and can contain lowercase letters, numbers, and hyphens.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_config": [
+      {
+        "description": "Configuration settings for the Google Cloud Function's service, including memory, timeout, environment variables, and IAM settings.",
+        "nullable": true,
+        "type": "list(object({all_traffic_on_latest_revision: optional(bool),available_cpu: optional(string),available_memory: optional(string),binary_authorization_policy: optional(string),environment_variables: optional(map(string)),gcf_uri: optional(string),ingress_settings: optional(string),max_instance_count: optional(number),max_instance_request_concurrency: optional(number),min_instance_count: optional(number),service: string,service_account_email: optional(string),timeout_seconds: optional(number),uri: optional(string),vpc_connector: optional(string),vpc_connector_egress_settings: optional(string),secret_environment_variables: list(object({key: string,project_id: string,secret: string,version: string})),secret_volumes: list(object({mount_path: string,project_id: string,secret: string,versions: list(object({path: string,version: string}))}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the amount of time to wait for the function to complete an operation, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

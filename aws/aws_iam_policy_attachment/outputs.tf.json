@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for tracking the attached IAM policy",
+            "value": "${aws_iam_policy_attachment.this.id}"
+        }
+    }
+}

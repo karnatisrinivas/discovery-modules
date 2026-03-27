@@ -1,0 +1,10 @@
+{
+    "variable": {
+        "bindings": [
+            {
+                "type": "list(object({role: string, members: list(string), condition_expression: string, condition_title: string, condition_description: string}))",
+                "description": "(WILL OVERRIDE HIGHER LEVEL POLICIES) Defines a binding to be included in the policy document. Cannot be used in conjunction with Project IAM Member. To add a condition, you need to indicate the title and expression."
+            }
+        ]
+    }
+}

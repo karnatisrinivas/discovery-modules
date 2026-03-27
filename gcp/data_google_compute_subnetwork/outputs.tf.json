@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the subnetwork.",
+            "value": "${data.google_compute_subnetwork.this.id}"
+        },
+        "ip_cidr_range": {
+            "description": "The range of internal IP addresses for the subnetwork in CIDR format.",
+            "value": "${data.google_compute_subnetwork.this.ip_cidr_range}"
+        },
+        "subnetwork_id": {
+            "description": "The numeric identifier of the subnetwork.",
+            "value": "${data.google_compute_subnetwork.this.subnetwork_id}"
+        }
+    }
+}

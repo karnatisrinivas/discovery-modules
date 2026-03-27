@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for managing and referencing the DNS response policy",
+            "value": "${google_dns_response_policy.this.id}"
+        },
+        "name": {
+            "description": "Name of the DNS response policy",
+            "value": "${google_dns_response_policy.this.response_policy_name}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Databricks workspace.",
+            "value": "${data.azurerm_databricks_workspace.this.id}"
+        },
+        "workspace_id": {
+            "description": "The unique workspace identifier within the Databricks environment.",
+            "value": "${data.azurerm_databricks_workspace.this.workspace_id}"
+        }
+    }
+}

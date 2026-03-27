@@ -1,0 +1,80 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS Lambda Function
+  node:
+    label:
+      static: AWS Lambda Function
+      template: AWS Lambda Function
+    display_type: default
+
+variables:
+  package_type:
+    ui_control: select
+    description: Lambda deployment package type
+    type: string
+    options: 
+      - Zip
+      - Image
+  publish:
+    description: Whether to public creation/change as new Lambda Function Version
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  runtime:
+    description: "Identifier of the function's runtime"
+    type: string
+    options: 
+      - nodejs
+      - nodejs4.3
+      - nodejs6.10
+      - nodejs8.10
+      - nodejs10.x
+      - nodejs12.x
+      - nodejs14.x
+      - nodejs16.x
+      - java8
+      - java8.al2
+      - java11
+      - python2.7
+      - python3.6
+      - python3.7
+      - python3.8
+      - python3.9
+      - dotnetcore1.0
+      - dotnetcore2.0
+      - dotnetcore2.1
+      - dotnetcore3.1
+      - dotnet6
+      - dotnet8
+      - "nodejs4.3-edge"
+      - go1.x
+      - ruby2.5
+      - ruby2.7
+      - provided
+      - provided.al2
+      - nodejs18.x
+      - python3.10
+      - java17
+      - ruby3.2
+      - python3.11
+      - nodejs20.x
+      - provided.al2023
+      - python3.12
+      - java21
+    ui_control: select
+
+discovery:
+  type: aws_lambda_function
+  dnd_supported: false
+  data_source: data_aws_lambda_function
+  references:
+    role:
+      from: aws_iam_role
+      output: arn
+    code_signing_config_arn:
+      from: aws_lambda_code_signing_config
+      output: arn

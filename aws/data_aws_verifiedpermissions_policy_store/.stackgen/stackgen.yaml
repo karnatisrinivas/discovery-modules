@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Verifiedpermissions Policy Store"
+  node:
+    label:
+      static: "[Data] Verifiedpermissions Policy Store"
+      template: "[Data] Verifiedpermissions Policy Store"
+    display_type: default
+
+discovery:
+  type: data_aws_verifiedpermissions_policy_store
+  dnd_supported: false

@@ -1,0 +1,120 @@
+{
+    "output": {
+        "availability_zone_group": {
+            "description": "The group of availability zones where the RDS instance can be launched.",
+            "value": "${data.aws_rds_orderable_db_instance.this.availability_zone_group}"
+        },
+        "availability_zones": {
+            "description": "A list of availability zones where the RDS instance is available.",
+            "value": "${data.aws_rds_orderable_db_instance.this.availability_zones}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine used by the RDS instance.",
+            "value": "${data.aws_rds_orderable_db_instance.this.engine_version}"
+        },
+        "id": {
+            "description": "A unique identifier for the RDS instance.",
+            "value": "${data.aws_rds_orderable_db_instance.this.id}"
+        },
+        "instance_class": {
+            "description": "The class type of the RDS instance which determines its computing capacity.",
+            "value": "${data.aws_rds_orderable_db_instance.this.instance_class}"
+        },
+        "license_model": {
+            "description": "The licensing model for the RDS instance's database engine.",
+            "value": "${data.aws_rds_orderable_db_instance.this.license_model}"
+        },
+        "max_iops_per_db_instance": {
+            "description": "The maximum IOPS (Input/Output Operations Per Second) that the RDS instance can support.",
+            "value": "${data.aws_rds_orderable_db_instance.this.max_iops_per_db_instance}"
+        },
+        "max_iops_per_gib": {
+            "description": "The maximum IOPS per GiB of storage that the RDS instance can support.",
+            "value": "${data.aws_rds_orderable_db_instance.this.max_iops_per_gib}"
+        },
+        "max_storage_size": {
+            "description": "The maximum storage size, in gigabytes, that the RDS instance can support.",
+            "value": "${data.aws_rds_orderable_db_instance.this.max_storage_size}"
+        },
+        "min_iops_per_db_instance": {
+            "description": "The minimum IOPS that the RDS instance can support.",
+            "value": "${data.aws_rds_orderable_db_instance.this.min_iops_per_db_instance}"
+        },
+        "min_iops_per_gib": {
+            "description": "The minimum IOPS per GiB of storage that the RDS instance can support.",
+            "value": "${data.aws_rds_orderable_db_instance.this.min_iops_per_gib}"
+        },
+        "min_storage_size": {
+            "description": "The minimum storage size, in gigabytes, that the RDS instance requires.",
+            "value": "${data.aws_rds_orderable_db_instance.this.min_storage_size}"
+        },
+        "multi_az_capable": {
+            "description": "Indicates whether the RDS instance can be deployed in multiple availability zones for high availability.",
+            "value": "${data.aws_rds_orderable_db_instance.this.multi_az_capable}"
+        },
+        "outpost_capable": {
+            "description": "Indicates whether the RDS instance can be deployed on AWS Outposts.",
+            "value": "${data.aws_rds_orderable_db_instance.this.outpost_capable}"
+        },
+        "read_replica_capable": {
+            "description": "Indicates whether the RDS instance supports read replicas for scaling read operations.",
+            "value": "${data.aws_rds_orderable_db_instance.this.read_replica_capable}"
+        },
+        "storage_type": {
+            "description": "The type of storage used by the RDS instance, such as standard, GP2, or IO1.",
+            "value": "${data.aws_rds_orderable_db_instance.this.storage_type}"
+        },
+        "supported_engine_modes": {
+            "description": "A list of database engine modes supported by the RDS instance.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supported_engine_modes}"
+        },
+        "supported_network_types": {
+            "description": "A list of network types supported by the RDS instance, such as VPC.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supported_network_types}"
+        },
+        "supports_clusters": {
+            "description": "Indicates whether the RDS instance supports cluster deployments.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_clusters}"
+        },
+        "supports_enhanced_monitoring": {
+            "description": "Indicates whether the RDS instance supports enhanced monitoring for more detailed metrics.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_enhanced_monitoring}"
+        },
+        "supports_global_databases": {
+            "description": "Indicates whether the RDS instance supports global databases for cross-region replication.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_global_databases}"
+        },
+        "supports_iam_database_authentication": {
+            "description": "Indicates whether the RDS instance supports IAM database authentication for improved security.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_iam_database_authentication}"
+        },
+        "supports_iops": {
+            "description": "Indicates whether the RDS instance supports provisioned IOPS for faster disk performance.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_iops}"
+        },
+        "supports_kerberos_authentication": {
+            "description": "Indicates whether the RDS instance supports Kerberos authentication for enhanced security.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_kerberos_authentication}"
+        },
+        "supports_multi_az": {
+            "description": "Indicates whether the RDS instance can be configured for high availability across multiple availability zones.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_multi_az}"
+        },
+        "supports_performance_insights": {
+            "description": "Indicates whether the RDS instance supports Performance Insights for advanced monitoring.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_performance_insights}"
+        },
+        "supports_storage_autoscaling": {
+            "description": "Indicates whether the RDS instance supports automatic scaling of storage capacity.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_storage_autoscaling}"
+        },
+        "supports_storage_encryption": {
+            "description": "Indicates whether the RDS instance supports encryption for data at rest.",
+            "value": "${data.aws_rds_orderable_db_instance.this.supports_storage_encryption}"
+        },
+        "vpc": {
+            "description": "Indicates whether the RDS instance is deployed within a Virtual Private Cloud (VPC).",
+            "value": "${data.aws_rds_orderable_db_instance.this.vpc}"
+        }
+    }
+}

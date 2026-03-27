@@ -1,0 +1,20 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Labels applied to the topic, including inherited ones, useful for resource categorization.",
+            "value": "${google_pubsub_topic.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the Pub/Sub topic, useful for linking and referencing.",
+            "value": "${google_pubsub_topic.this.id}"
+        },
+        "name": {
+            "description": "Name of the PubSub topic",
+            "value": "${google_pubsub_topic.this.name}"
+        },
+        "terraform_labels": {
+            "description": "Custom labels defined in Terraform, helpful for organizing infrastructure.",
+            "value": "${google_pubsub_topic.this.terraform_labels}"
+        }
+    }
+}

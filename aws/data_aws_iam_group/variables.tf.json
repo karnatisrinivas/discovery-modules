@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "group_name": [
+      {
+        "description": "The name assigned to the IAM group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "availability_zone_id": {
+            "description": "AZ identifier for locating the mount target",
+            "value": "${aws_efs_mount_target.this.availability_zone_id}"
+        },
+        "availability_zone_name": {
+            "description": "Readable name of the AZ hosting the mount target",
+            "value": "${aws_efs_mount_target.this.availability_zone_name}"
+        },
+        "dns_name": {
+            "description": "DNS address for accessing the EFS mount target",
+            "value": "${aws_efs_mount_target.this.dns_name}"
+        },
+        "file_system_arn": {
+            "description": "ARN for identifying the linked EFS file system",
+            "value": "${aws_efs_mount_target.this.file_system_arn}"
+        },
+        "id": {
+            "description": "Unique ID for the EFS mount target resource",
+            "value": "${aws_efs_mount_target.this.id}"
+        },
+        "mount_target_dns_name": {
+            "description": "Specific DNS name for the EFS mount target",
+            "value": "${aws_efs_mount_target.this.mount_target_dns_name}"
+        },
+        "network_interface_id": {
+            "description": "ID of the network interface attached to the mount target",
+            "value": "${aws_efs_mount_target.this.network_interface_id}"
+        },
+        "owner_id": {
+            "description": "AWS account ID that owns the mount target",
+            "value": "${aws_efs_mount_target.this.owner_id}"
+        }
+    }
+}

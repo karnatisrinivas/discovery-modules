@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dax Cluster
+  node:
+    label:
+      static: Dax Cluster
+      template: ${cluster_name}
+    display_type: default
+
+discovery:
+  type: aws_dax_cluster
+  dnd_supported: false
+  references:
+    subnet_group_name:
+      from: aws_dax_subnet_group
+      output: name
+    security_group_ids:
+      from: aws_sg
+      output: security_group_id
+    notification_topic_arn:
+      from: aws_sns_topic
+      output: arn
+    iam_role_arn:
+      from: data_aws_iam_role
+      output: arn

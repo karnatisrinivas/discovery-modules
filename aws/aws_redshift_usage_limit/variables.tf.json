@@ -1,0 +1,55 @@
+{
+    "variable": {
+        "cluster_identifier": [
+            {
+                "description": "The Cluster Identifier. Must be a lower case string.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "amount": [
+            {
+                "type": "number",
+                "nullable": false,
+                "description": "The limit amount. If time-based, this amount is in minutes. If data-based, this amount is in terabytes (TB). The value must be a positive number."
+            }
+        ],
+        "feature_type": [
+            {
+                "nullable": false,
+                "type": "string",
+                "description": "The Amazon Redshift feature that you want to limit."
+            }
+        ],
+        "limit_type": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "The type of limit. Depending on the feature type, this can be based on a time duration or data size. If FeatureType is spectrum, then LimitType must be data-scanned. If FeatureType is concurrency-scaling, then LimitType must be time. If FeatureType is cross-region-datasharing, then LimitType must be data-scanned. "
+            }
+        ],
+        "period": [
+            {
+                "type": "string",
+                "default": "monthly",
+                "description": "The time period that the amount applies to. A weekly period begins on Sunday.",
+                "nullable": true
+            }
+        ],
+        "breach_action": [
+            {
+                "type": "string",
+                "default": "log",
+                "description": "The action that Amazon Redshift takes when the limit is reached.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

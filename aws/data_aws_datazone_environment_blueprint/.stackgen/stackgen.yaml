@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Datazone Environment Blueprint"
+  node:
+    label:
+      static: "[Data] Datazone Environment Blueprint"
+      template: "[Data] Datazone Environment Blueprint"
+    display_type: default
+
+discovery:
+  type: data_aws_datazone_environment_blueprint
+  dnd_supported: false

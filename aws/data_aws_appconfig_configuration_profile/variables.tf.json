@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "application_id": [
+      {
+        "description": "The unique identifier for the application within AWS AppConfig.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "configuration_profile_id": [
+      {
+        "description": "The unique identifier for the configuration profile within the specified application in AWS AppConfig.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

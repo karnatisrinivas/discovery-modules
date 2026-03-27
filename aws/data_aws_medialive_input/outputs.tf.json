@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.arn}"
+        },
+        "attached_channels": {
+            "description": "A list of channels that are attached to this MediaLive input.",
+            "value": "${data.aws_medialive_input.this.attached_channels}"
+        },
+        "destinations": {
+            "description": "The destinations for the MediaLive input, including IP, port, URL, and VPC details.",
+            "value": "${data.aws_medialive_input.this.destinations}"
+        },
+        "input_class": {
+            "description": "The class of the MediaLive input, indicating its characteristics such as standard or advanced.",
+            "value": "${data.aws_medialive_input.this.input_class}"
+        },
+        "input_devices": {
+            "description": "A list of input devices associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.input_devices}"
+        },
+        "input_partner_ids": {
+            "description": "A list of partner IDs associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.input_partner_ids}"
+        },
+        "input_source_type": {
+            "description": "The source type of the MediaLive input, such as 'STATIC' or 'DYNAMIC'.",
+            "value": "${data.aws_medialive_input.this.input_source_type}"
+        },
+        "media_connect_flows": {
+            "description": "A list of MediaConnect flows associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.media_connect_flows}"
+        },
+        "name": {
+            "description": "The name of the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.role_arn}"
+        },
+        "security_groups": {
+            "description": "A list of security groups associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.security_groups}"
+        },
+        "sources": {
+            "description": "The sources for the MediaLive input, including URLs and authentication details.",
+            "value": "${data.aws_medialive_input.this.sources}"
+        },
+        "state": {
+            "description": "The current state of the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the MediaLive input.",
+            "value": "${data.aws_medialive_input.this.tags}"
+        }
+    }
+}

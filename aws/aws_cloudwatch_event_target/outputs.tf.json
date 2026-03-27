@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the event target in configurations",
+            "value": "${aws_cloudwatch_event_target.this.id}"
+        }
+    }
+}

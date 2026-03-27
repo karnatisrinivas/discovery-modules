@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Glue connection.",
+            "value": "${data.aws_glue_connection.this.arn}"
+        },
+        "catalog_id": {
+            "description": "The ID of the Data Catalog in which the connection resides.",
+            "value": "${data.aws_glue_connection.this.catalog_id}"
+        },
+        "connection_type": {
+            "description": "The type of the Glue connection (e.g., JDBC, S3, etc.).",
+            "value": "${data.aws_glue_connection.this.connection_type}"
+        },
+        "description": {
+            "description": "A description of the Glue connection.",
+            "value": "${data.aws_glue_connection.this.description}"
+        },
+        "match_criteria": {
+            "description": "A list of criteria to match when using the connection.",
+            "value": "${data.aws_glue_connection.this.match_criteria}"
+        },
+        "name": {
+            "description": "The name of the Glue connection.",
+            "value": "${data.aws_glue_connection.this.name}"
+        },
+        "physical_connection_requirements": {
+            "description": "The physical network requirements for the Glue connection, including availability zone, security group IDs, and subnet ID.",
+            "value": "${data.aws_glue_connection.this.physical_connection_requirements}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Glue connection.",
+            "value": "${data.aws_glue_connection.this.tags}"
+        }
+    }
+}

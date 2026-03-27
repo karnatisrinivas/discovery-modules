@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.arn}"
+        },
+        "domain_name": {
+            "description": "The domain name that the Route 53 resolver rule is associated with.",
+            "value": "${data.aws_route53_resolver_rule.this.domain_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.name}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.owner_id}"
+        },
+        "resolver_endpoint_id": {
+            "description": "The ID of the resolver endpoint associated with the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.resolver_endpoint_id}"
+        },
+        "resolver_rule_id": {
+            "description": "The ID of the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.resolver_rule_id}"
+        },
+        "rule_type": {
+            "description": "The type of the Route 53 resolver rule (e.g., FORWARD, SYSTEM, RECURSIVE).",
+            "value": "${data.aws_route53_resolver_rule.this.rule_type}"
+        },
+        "share_status": {
+            "description": "Indicates whether the Route 53 resolver rule is shared with other AWS accounts.",
+            "value": "${data.aws_route53_resolver_rule.this.share_status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Route 53 resolver rule.",
+            "value": "${data.aws_route53_resolver_rule.this.tags}"
+        }
+    }
+}

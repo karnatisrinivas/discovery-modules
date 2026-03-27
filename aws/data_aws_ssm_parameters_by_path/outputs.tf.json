@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the SSM parameters retrieved by path.",
+            "value": "${data.aws_ssm_parameters_by_path.this.arns}"
+        },
+        "id": {
+            "description": "The ID of the data source instance fetching the SSM parameters by path.",
+            "value": "${data.aws_ssm_parameters_by_path.this.id}"
+        },
+        "names": {
+            "description": "A list of names for the SSM parameters retrieved by path.",
+            "value": "${data.aws_ssm_parameters_by_path.this.names}"
+        },
+        "types": {
+            "description": "A list of types for the SSM parameters retrieved by path, indicating the data type of each parameter.",
+            "value": "${data.aws_ssm_parameters_by_path.this.types}"
+        }
+    }
+}

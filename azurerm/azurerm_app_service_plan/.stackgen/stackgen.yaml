@@ -1,0 +1,56 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: App Service Plan
+  node:
+    label:
+      static: App Service Plan
+      template: ${name}
+    display_type: default
+
+variables:
+  kind:
+    description: The kind of the App Service Plan
+    type: string
+    options: 
+      - Windows
+      - App
+      - Linux
+      - elastic
+      - xenon
+      - FunctionApp
+    ui_control: select
+  reserved:
+    description: Is this App Service Plan Reserved.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  per_site_scaling:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: If true, apps assigned to this App Service Plan can be scaled independently.
+    type: bool
+  is_xenon:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether to create a xenon App Service Plan.
+    type: bool
+  zone_redundant:
+    description: Whether this App Service Plan is zone redundant.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_app_service_plan
+  dnd_supported: false
+  data_source: data_azurerm_app_service_plan

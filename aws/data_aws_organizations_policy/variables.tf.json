@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "policy_id": [
+      {
+        "description": "The unique identifier of the AWS Organizations policy to be managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

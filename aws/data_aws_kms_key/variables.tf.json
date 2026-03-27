@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "grant_tokens": [
+      {
+        "description": "A list of grant tokens that are used to specify permissions for the KMS key.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "key_id": [
+      {
+        "description": "A unique identifier for the KMS key.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

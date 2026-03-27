@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the virtual network link to the private DNS zone.",
+            "value": "${azurerm_private_dns_zone_virtual_network_link.this.id}"
+        }
+    }
+}

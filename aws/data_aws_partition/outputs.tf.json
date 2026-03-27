@@ -1,0 +1,20 @@
+{
+    "output": {
+        "dns_suffix": {
+            "description": "The DNS suffix for the AWS partition, typically used in service endpoints.",
+            "value": "${data.aws_partition.this.dns_suffix}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS partition.",
+            "value": "${data.aws_partition.this.id}"
+        },
+        "partition": {
+            "description": "The name of the AWS partition, such as 'aws', 'aws-cn', or 'aws-us-gov'.",
+            "value": "${data.aws_partition.this.partition}"
+        },
+        "reverse_dns_prefix": {
+            "description": "The prefix used for reverse DNS entries in the AWS partition.",
+            "value": "${data.aws_partition.this.reverse_dns_prefix}"
+        }
+    }
+}

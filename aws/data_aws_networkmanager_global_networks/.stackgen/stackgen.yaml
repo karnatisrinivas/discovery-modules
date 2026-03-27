@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkmanager Global Networks"
+  node:
+    label:
+      static: "[Data] Networkmanager Global Networks"
+      template: "[Data] Networkmanager Global Networks"
+    display_type: default
+
+discovery:
+  type: data_aws_networkmanager_global_networks
+  dnd_supported: false

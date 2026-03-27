@@ -1,0 +1,20 @@
+{
+    "output": {
+        "connection_state": {
+            "description": "Current state of the connection, useful for monitoring attachment status",
+            "value": "${google_apigee_endpoint_attachment.this.connection_state}"
+        },
+        "host": {
+            "description": "Hostname of the endpoint attachment for routing API traffic",
+            "value": "${google_apigee_endpoint_attachment.this.host}"
+        },
+        "id": {
+            "description": "Unique identifier for managing and referencing the attachment",
+            "value": "${google_apigee_endpoint_attachment.this.id}"
+        },
+        "name": {
+            "description": "Name of the endpoint attachment for organizational clarity",
+            "value": "${google_apigee_endpoint_attachment.this.name}"
+        }
+    }
+}

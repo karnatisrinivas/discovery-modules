@@ -1,0 +1,8 @@
+{
+    "output": {
+        "cognitive_account_id": {
+            "description": "The value of the cognitive_account_id output",
+            "value": "${azurerm_cognitive_account.this.id}"
+        }
+    }
+}

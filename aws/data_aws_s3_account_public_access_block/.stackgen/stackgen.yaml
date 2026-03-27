@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] S3 Account Public Access Block"
+  node:
+    label:
+      static: "[Data] S3 Account Public Access Block"
+      template: "[Data] S3 Account Public Access Block"
+    display_type: default
+
+discovery:
+  type: data_aws_s3_account_public_access_block
+  dnd_supported: false

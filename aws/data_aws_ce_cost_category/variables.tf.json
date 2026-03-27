@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cost_category_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the cost category to be used.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

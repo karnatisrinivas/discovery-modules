@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "autoscaling_group_name": [
+      {
+        "description": "Name of the Auto Scaling group to associate the tag with; must match an existing Auto Scaling group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tag": [
+      {
+        "description": "Specifies a tag to associate with the Auto Scaling group, including key, value, and propagation behavior.",
+        "nullable": false,
+        "type": "list(object({key: string,propagate_at_launch: bool,value: string}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecr Authorization Token"
+  node:
+    label:
+      static: "[Data] Ecr Authorization Token"
+      template: "[Data] Ecr Authorization Token"
+    display_type: default
+
+discovery:
+  type: data_aws_ecr_authorization_token
+  dnd_supported: false

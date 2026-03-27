@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ram Resource Share
+  node:
+    label:
+      static: Ram Resource Share
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_ram_resource_share
+  dnd_supported: false

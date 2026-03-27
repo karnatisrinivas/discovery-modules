@@ -1,0 +1,40 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: /_+=.@- Conflicts with name_prefix",
+                "nullable": true
+            }
+        ],
+        "description": [
+            {
+                "type": "string",
+                "description": "A description of the secret.",
+                "nullable": true
+            }
+        ],
+        "recovery_window_in_days": [
+            {
+                "type": "number",
+                "description": "Specifies the number of days that AWS Secrets Manager waits before it can delete the secret.",
+                "default": 30,
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A mapping of tags to assign to the secret.",
+                "nullable": true
+            }
+        ],
+        "kms_key_id": [
+            {
+                "type": "string",
+                "description": "Specifies the ARN, Key ID, or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret.",
+                "nullable": true
+            }
+        ]
+    }
+}

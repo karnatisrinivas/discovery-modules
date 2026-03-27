@@ -1,0 +1,34 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Secret Manager
+  node:
+    label:
+      static: Secret Manager
+      template: Secret Manager
+    display_type: default
+
+variables:
+  replicas:
+    attributes: 
+      location: 
+        label: Location
+        description: "The canonical IDs of the location to replicate data. For example: \"us-east1\"."
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      kms_key_name: 
+        label: KMS Key Name
+        description: Describes the Cloud KMS encryption key that will be used to protect destination secret.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+
+discovery:
+  type: google_secret_manager_secret
+  dnd_supported: false

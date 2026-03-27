@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Spanner Database Iam Member
+  node:
+    label:
+      static: Spanner Database Iam Member
+      template: ${member}
+    display_type: default
+
+discovery:
+  type: google_spanner_database_iam_member
+  dnd_supported: false
+  references:
+    instance:
+      from: google_spanner_instance
+      output: id
+    database:
+      from: google_spanner_database
+      output: id

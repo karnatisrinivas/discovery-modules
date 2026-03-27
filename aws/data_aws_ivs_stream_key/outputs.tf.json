@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the IVS stream key.",
+            "value": "${data.aws_ivs_stream_key.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the IVS stream key.",
+            "value": "${data.aws_ivs_stream_key.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the IVS stream key.",
+            "value": "${data.aws_ivs_stream_key.this.tags}"
+        },
+        "value": {
+            "description": "The actual value of the IVS stream key used for streaming.",
+            "value": "${data.aws_ivs_stream_key.this.value}"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn_prefix": {
+            "description": "The ARN (Amazon Resource Name) prefix for the AWS Batch Job Definition.",
+            "value": "${data.aws_batch_job_definition.this.arn_prefix}"
+        },
+        "container_orchestration_type": {
+            "description": "Specifies the type of container orchestration used for the AWS Batch job (e.g., ECS, EKS).",
+            "value": "${data.aws_batch_job_definition.this.container_orchestration_type}"
+        },
+        "eks_properties": {
+            "description": "Details of the properties for AWS Batch jobs running on Amazon EKS, including pod configurations and container settings.",
+            "value": "${data.aws_batch_job_definition.this.eks_properties}"
+        },
+        "id": {
+            "description": "The unique identifier for the AWS Batch Job Definition.",
+            "value": "${data.aws_batch_job_definition.this.id}"
+        },
+        "node_properties": {
+            "description": "Configuration details for multi-node parallel jobs in AWS Batch, specifying node ranges and properties.",
+            "value": "${data.aws_batch_job_definition.this.node_properties}"
+        },
+        "retry_strategy": {
+            "description": "Defines the retry strategy for failed AWS Batch jobs, including the number of attempts and exit conditions.",
+            "value": "${data.aws_batch_job_definition.this.retry_strategy}"
+        },
+        "scheduling_priority": {
+            "description": "The priority assigned to the AWS Batch job, used for scheduling purposes.",
+            "value": "${data.aws_batch_job_definition.this.scheduling_priority}"
+        },
+        "tags": {
+            "description": "A set of tags associated with the AWS Batch Job Definition for organization and identification.",
+            "value": "${data.aws_batch_job_definition.this.tags}"
+        },
+        "timeout": {
+            "description": "Specifies the timeout settings for the AWS Batch job, defining how long a job can run.",
+            "value": "${data.aws_batch_job_definition.this.timeout}"
+        }
+    }
+}

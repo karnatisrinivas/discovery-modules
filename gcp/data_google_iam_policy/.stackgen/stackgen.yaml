@@ -1,0 +1,59 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM Policy
+  node:
+    label:
+      static: IAM Policy
+      template: IAM Policy
+    display_type: default
+
+variables:
+  bindings:
+    description: Defines a binding to be included in the policy document.
+    attributes: 
+      condition_expression: 
+        ui_control: text
+        label: Condition Expression
+        description: Textual representation of an expression in Common Expression Language syntax. If you wish to use a condition, you must add an Expression and a Title
+        validation: 
+          required: false
+          dataType: string
+        type: string
+      condition_title: 
+        label: Condition Title
+        description: A title for the expression, i.e. a short string describing its purpose. If you wish to use a condition, you must add an Expression and a Title
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      condition_description: 
+        type: string
+        ui_control: text
+        label: Condition Description
+        description: An optional description of the expression.
+        validation: 
+          required: false
+          dataType: string
+      role: 
+        label: Role
+        description: "The role/permission that will be granted to the members. Note that custom roles must be of the format [projects|organizations]/{parent-name}/roles/{role-name}."
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      members: 
+        label: Members
+        description: "An array of identities that will be granted the privilege in the role. Valid values: allUsers, AllAuthenticatedUsers, user:{emailid}, serviceAccount:{emailid}, group:{emailid}, domain:{domain}"
+        validation: 
+          required: true
+          dataType: list(string)
+        type: list(string)
+        ui_control: text_list
+
+discovery:
+  type: data_google_iam_policy
+  dnd_supported: false

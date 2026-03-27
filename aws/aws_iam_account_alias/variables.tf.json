@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "account_alias": [
+      {
+        "description": "A user-friendly name or alias for your AWS account, making it easier to identify instead of using the default account ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

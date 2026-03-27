@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssmcontacts Contact Channel"
+  node:
+    label:
+      static: "[Data] Ssmcontacts Contact Channel"
+      template: "[Data] Ssmcontacts Contact Channel"
+    display_type: default
+
+discovery:
+  type: data_aws_ssmcontacts_contact_channel
+  dnd_supported: false

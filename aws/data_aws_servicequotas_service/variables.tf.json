@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "service_name": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

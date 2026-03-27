@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Iam Workload Identity Pool
+  node:
+    label:
+      static: Iam Workload Identity Pool
+      template: ${workload_identity_pool_id}
+    display_type: default
+
+discovery:
+  type: google_iam_workload_identity_pool
+  dnd_supported: false

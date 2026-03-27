@@ -1,0 +1,87 @@
+{
+  "variable": {
+    "action_group_id": [
+      {
+        "description": "The ID of the action group to use when the metric alert is triggered.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "auto_mitigate": [
+      {
+        "description": "Indicates whether to automatically resolve the alert when the condition is no longer met.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "criteria": [
+      {
+        "description": "The criteria that determine when the metric alert is triggered.",
+        "nullable": false,
+        "type": "list(object({metric_name: string, metric_namespace: string, operator: string, threshold: number, aggregation: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "A detailed description of the metric alert.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Specifies whether the metric alert is enabled or disabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "frequency": [
+      {
+        "description": "The frequency with which the metric alert is evaluated, in ISO 8601 format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the metric alert.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scopes": [
+      {
+        "description": "A list of resource IDs that the alert is scoped to.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "severity": [
+      {
+        "description": "The severity level of the alert, typically a number from 0 to 4.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs to assign tags to the metric alert.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "window_size": [
+      {
+        "description": "The time window size in which the metric alert is evaluated, in ISO 8601 format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

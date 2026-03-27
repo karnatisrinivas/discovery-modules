@@ -1,0 +1,32 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the workflow was created",
+            "value": "${google_workflows_workflow.this.create_time}"
+        },
+        "effective_labels": {
+            "description": "Applied labels after merging user-defined and system-defined labels",
+            "value": "${google_workflows_workflow.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the workflow instance",
+            "value": "${google_workflows_workflow.this.id}"
+        },
+        "revision_id": {
+            "description": "Identifier for the specific revision of the workflow",
+            "value": "${google_workflows_workflow.this.revision_id}"
+        },
+        "state": {
+            "description": "Current operational state of the workflow (e.g., ACTIVE, FAILED)",
+            "value": "${google_workflows_workflow.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly set in Terraform configuration",
+            "value": "${google_workflows_workflow.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp of the most recent update to the workflow",
+            "value": "${google_workflows_workflow.this.update_time}"
+        }
+    }
+}

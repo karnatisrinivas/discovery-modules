@@ -1,0 +1,34 @@
+{
+  "variable": {
+    "eventgrid_system_topic_name": [
+      {
+        "description": "The name of the event grid system topic.",
+        "type": "string"
+      }
+    ],
+    "eventgrid_topic_type": [
+      {
+        "description": "The type of the event grid topic.",
+        "type": "string"
+      }
+    ],
+    "source_arm_resource_id": [
+      {
+        "description": "The ARM resource ID of the source resource.",
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

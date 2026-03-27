@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "endpoint_id": [
+      {
+        "description": "A unique identifier for the AWS DMS endpoint.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

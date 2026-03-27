@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Spanner Database
+  node:
+    label:
+      static: Spanner Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_spanner_database
+  dnd_supported: false
+  references:
+    instance:
+      from: google_spanner_instance
+      output: name

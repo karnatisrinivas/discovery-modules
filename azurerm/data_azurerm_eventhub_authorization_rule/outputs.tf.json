@@ -1,0 +1,32 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Event Hub authorization rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.id}"
+        },
+        "primary_connection_string": {
+            "description": "The Primary Connection String for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.primary_connection_string}"
+        },
+        "primary_connection_string_alias": {
+            "description": "The alias of the Primary Connection String for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.primary_connection_string_alias}"
+        },
+        "primary_key": {
+            "description": "The Primary Key for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.primary_key}"
+        },
+        "secondary_connection_string": {
+            "description": "The Secondary Connection String for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.secondary_connection_string}"
+        },
+        "secondary_connection_string_alias": {
+            "description": "The alias of the Secondary Connection String for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.secondary_connection_string_alias}"
+        },
+        "secondary_key": {
+            "description": "The Secondary Key for the Event Hubs Authorization Rule.",
+            "value": "${data.azurerm_eventhub_authorization_rule.this.secondary_key}"
+        }
+    }
+}

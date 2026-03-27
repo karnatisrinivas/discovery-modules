@@ -1,0 +1,11 @@
+{
+    "variable": {
+        "filter": [
+            {
+                "type": "string",
+                "description": "A string filter as defined in the REST API.",
+                "nullable": true
+            }
+        ]
+    }
+}

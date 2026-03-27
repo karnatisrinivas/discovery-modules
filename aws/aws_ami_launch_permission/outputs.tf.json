@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier to manage and track launch permissions for an AWS AMI",
+            "value": "${aws_ami_launch_permission.this.id}"
+        }
+    }
+}

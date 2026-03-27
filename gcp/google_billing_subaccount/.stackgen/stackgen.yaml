@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Billing Subaccount
+  node:
+    label:
+      static: Billing Subaccount
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: google_billing_subaccount
+  dnd_supported: false

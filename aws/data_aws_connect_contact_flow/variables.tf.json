@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the AWS Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of contact flow, such as 'CONTACT_FLOW' or 'CUSTOMER_QUEUE'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "contact_flow_id": [
+      {
+        "description": "The unique identifier for the specific contact flow.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the contact flow.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.id}"
+        },
+        "latest_revision": {
+            "description": "The latest revision number of the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.latest_revision}"
+        },
+        "state": {
+            "description": "The current state of the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the custom plugin.",
+            "value": "${data.aws_mskconnect_custom_plugin.this.tags}"
+        }
+    }
+}

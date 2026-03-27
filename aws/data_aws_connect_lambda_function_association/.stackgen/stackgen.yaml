@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Lambda Function Association"
+  node:
+    label:
+      static: "[Data] Connect Lambda Function Association"
+      template: "[Data] Connect Lambda Function Association"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_lambda_function_association
+  dnd_supported: false

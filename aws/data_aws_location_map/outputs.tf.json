@@ -1,0 +1,32 @@
+{
+    "output": {
+        "configuration": {
+            "description": "A list of configuration objects, each specifying the style of the map.",
+            "value": "${data.aws_location_map.this.configuration}"
+        },
+        "create_time": {
+            "description": "The time when the map was created.",
+            "value": "${data.aws_location_map.this.create_time}"
+        },
+        "description": {
+            "description": "A brief description of the map.",
+            "value": "${data.aws_location_map.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the map.",
+            "value": "${data.aws_location_map.this.id}"
+        },
+        "map_arn": {
+            "description": "The Amazon Resource Name (ARN) for the map.",
+            "value": "${data.aws_location_map.this.map_arn}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs assigned to the map.",
+            "value": "${data.aws_location_map.this.tags}"
+        },
+        "update_time": {
+            "description": "The time when the map was last updated.",
+            "value": "${data.aws_location_map.this.update_time}"
+        }
+    }
+}

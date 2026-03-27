@@ -1,0 +1,48 @@
+{
+    "variable": {
+        "client_subnets": [
+            {
+                "type": "list(string)",
+                "nullable": false,
+                "description": "The list of subnets in the client VPC to connect to."
+            }
+        ],
+        "security_groups": [
+            {
+                "type": "list(string)",
+                "nullable": false,
+                "description": "The security groups to attach to the ENIs for the broker nodes."
+            }
+        ],
+        "target_cluster_arn": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "The Amazon Resource Name (ARN) of the cluster."
+            }
+        ],
+        "vpc_id": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "The VPC ID of the remote client."
+            }
+        ],
+        "authentication": [
+            {
+                "type": "string",
+                "default": "SASL_IAM",
+                "nullable": false,
+                "description": "The authentication type for the client VPC connection. Specify one of these auth type strings: SASL_IAM, SASL_SCRAM, or TLS."
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "default": {},
+                "description": "A map of tags to assign to the resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

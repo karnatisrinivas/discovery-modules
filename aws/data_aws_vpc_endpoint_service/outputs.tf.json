@@ -1,0 +1,64 @@
+{
+    "output": {
+        "acceptance_required": {
+            "description": "Indicates if acceptance is required for VPC endpoint connections to this service.",
+            "value": "${data.aws_vpc_endpoint_service.this.acceptance_required}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.arn}"
+        },
+        "availability_zones": {
+            "description": "The availability zones where the VPC endpoint service is available.",
+            "value": "${data.aws_vpc_endpoint_service.this.availability_zones}"
+        },
+        "base_endpoint_dns_names": {
+            "description": "The base DNS names for the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.base_endpoint_dns_names}"
+        },
+        "id": {
+            "description": "The ID of the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.id}"
+        },
+        "manages_vpc_endpoints": {
+            "description": "Indicates if the service manages its own VPC endpoints.",
+            "value": "${data.aws_vpc_endpoint_service.this.manages_vpc_endpoints}"
+        },
+        "owner": {
+            "description": "The AWS account ID of the service owner.",
+            "value": "${data.aws_vpc_endpoint_service.this.owner}"
+        },
+        "private_dns_name": {
+            "description": "The private DNS name for the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.private_dns_name}"
+        },
+        "private_dns_names": {
+            "description": "The private DNS names for the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.private_dns_names}"
+        },
+        "service_id": {
+            "description": "The service ID of the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.service_id}"
+        },
+        "service_name": {
+            "description": "The name of the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.service_name}"
+        },
+        "service_type": {
+            "description": "The type of the VPC endpoint service (e.g., Interface, Gateway).",
+            "value": "${data.aws_vpc_endpoint_service.this.service_type}"
+        },
+        "supported_ip_address_types": {
+            "description": "The IP address types supported by the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.supported_ip_address_types}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the VPC endpoint service.",
+            "value": "${data.aws_vpc_endpoint_service.this.tags}"
+        },
+        "vpc_endpoint_policy_supported": {
+            "description": "Indicates if a VPC endpoint policy is supported by the service.",
+            "value": "${data.aws_vpc_endpoint_service.this.vpc_endpoint_policy_supported}"
+        }
+    }
+}

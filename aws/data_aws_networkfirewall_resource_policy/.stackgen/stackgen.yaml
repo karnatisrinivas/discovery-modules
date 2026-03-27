@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkfirewall Resource Policy"
+  node:
+    label:
+      static: "[Data] Networkfirewall Resource Policy"
+      template: "[Data] Networkfirewall Resource Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_networkfirewall_resource_policy
+  dnd_supported: false

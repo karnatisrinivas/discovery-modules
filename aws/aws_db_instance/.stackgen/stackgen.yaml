@@ -1,0 +1,63 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DB Instance
+  node:
+    label:
+      static: DB Instance
+      template: ${identifier}
+    display_type: default
+
+variables:
+  replica_mode:
+    type: string
+    options: 
+      - mounted
+      - "open-read-only"
+    ui_control: select
+    description: The replica mode
+  engine_lifecycle_support:
+    description: The engine lifecycle support
+    type: string
+    options: 
+      - "open-source-rds-extended-support"
+      - "open-source-rds-extended-support-disabled"
+    ui_control: select
+  license_model:
+    description: The license model
+    type: string
+    options: 
+      - "general-public-license"
+      - "license-included"
+      - "bring-your-own-license | license-included"
+      - "postgresql-license"
+    ui_control: select
+  monitoring_interval:
+    options: 
+      - 0
+      - 1
+      - 5
+      - 10
+      - 15
+      - 30
+      - 60
+    ui_control: select
+    description: The monitoring interval
+    type: number
+  network_type:
+    description: The network type
+    type: string
+    options: 
+      - IPV4
+      - DUAL
+    ui_control: select
+
+discovery:
+  type: aws_db_instance
+  dnd_supported: false
+  data_source: data_aws_db_instance
+  references:
+    db_subnet_group_name:
+      from: aws_db_subnet_group
+      output: name

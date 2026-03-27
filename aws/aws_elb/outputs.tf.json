@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN of the ELB",
+            "value": "${aws_elb.this.arn}"
+        },
+        "name": {
+            "description": "The value of the name output",
+            "value": "${aws_elb.this.name}"
+        }
+    }
+}

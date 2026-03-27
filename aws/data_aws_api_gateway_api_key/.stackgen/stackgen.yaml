@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Api Key"
+  node:
+    label:
+      static: "[Data] Api Gateway Api Key"
+      template: "[Data] Api Gateway Api Key"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_api_key
+  dnd_supported: false

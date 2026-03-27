@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the ECS task execution.",
+            "value": "${data.aws_ecs_task_execution.this.id}"
+        },
+        "task_arns": {
+            "description": "A list of Amazon Resource Names (ARNs) for the ECS tasks being executed.",
+            "value": "${data.aws_ecs_task_execution.this.task_arns}"
+        }
+    }
+}

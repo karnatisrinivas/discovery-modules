@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "plan_id": [
+      {
+        "description": "The unique identifier of the backup plan to which the selection belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "selection_id": [
+      {
+        "description": "The unique identifier of the backup selection within the backup plan.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

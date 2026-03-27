@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Guardduty Finding Ids"
+  node:
+    label:
+      static: "[Data] Guardduty Finding Ids"
+      template: "[Data] Guardduty Finding Ids"
+    display_type: default
+
+discovery:
+  type: data_aws_guardduty_finding_ids
+  dnd_supported: false

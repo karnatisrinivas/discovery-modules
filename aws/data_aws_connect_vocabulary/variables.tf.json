@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_id": [
+      {
+        "description": "The unique identifier for the Amazon Connect instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "vocabulary_id": [
+      {
+        "description": "The identifier for the vocabulary within the Connect instance, if available.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the vocabulary.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

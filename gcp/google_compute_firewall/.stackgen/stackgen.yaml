@@ -1,0 +1,79 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Firewall
+  node:
+    label:
+      static: Compute Firewall
+      template: ${name}
+    display_type: default
+
+variables:
+  deny:
+    description: Defines the list of deny rules specifying protocols and ports to block in the firewall configuration.
+    attributes: 
+      protocol: 
+        label: Protocol
+        description: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      ports: 
+        label: Ports
+        description: An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
+        validation: 
+          required: false
+          dataType: list(string)
+        type: list(string)
+        ui_control: text
+  log_config:
+    description: Configures logging options for the firewall rule, including whether to enable logging and the type of log metadata captured.
+    attributes: 
+      metadata: 
+        description: The metadata fields to include in the log. If not specified, all metadata fields will be included.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - EXCLUDE_ALL_METADATA
+          - INCLUDE_ALL_METADATA
+        ui_control: select
+        label: Metadata
+  direction:
+    type: string
+    options: 
+      - INGRESS
+      - EGRESS
+    ui_control: select
+    description: "Specifies the traffic direction for the firewall rule; must be either \"INGRESS\" for incoming traffic or \"EGRESS\" for outgoing traffic."
+  allow:
+    attributes: 
+      protocol: 
+        ui_control: text
+        label: Protocol
+        description: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+        validation: 
+          dataType: string
+          required: true
+        type: string
+      ports: 
+        type: list(string)
+        ui_control: text
+        label: Ports
+        description: An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
+        validation: 
+          required: false
+          dataType: list(string)
+    description: Defines the list of allowed protocols and ports for the firewall rule, specifying which traffic is permitted.
+
+discovery:
+  type: google_compute_firewall
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: self_link

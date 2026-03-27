@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] App Configuration"
+  node:
+    label:
+      static: "[Data] App Configuration"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_app_configuration
+  dnd_supported: false

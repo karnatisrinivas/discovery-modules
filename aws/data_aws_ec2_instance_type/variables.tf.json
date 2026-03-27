@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "instance_type": [
+      {
+        "description": "Specifies the type of EC2 instance to be created, such as t2.micro, m5.large, etc.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

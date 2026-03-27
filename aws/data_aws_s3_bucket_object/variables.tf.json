@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket where the object will be stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "key": [
+      {
+        "description": "The key (or path) within the bucket that specifies the object's location.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "range": [
+      {
+        "description": "An optional string that can specify a range of bytes to download from the object.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

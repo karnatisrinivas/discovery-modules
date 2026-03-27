@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_servicequotas_templates.this.id}"
+        }
+    }
+}

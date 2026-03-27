@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Resource Explorer search.",
+            "value": "${data.aws_resourceexplorer2_search.this.id}"
+        },
+        "resource_count": {
+            "description": "A list containing the count of resources found, with information on whether the count is complete and the total number of resources.",
+            "value": "${data.aws_resourceexplorer2_search.this.resource_count}"
+        },
+        "resources": {
+            "description": "A list of resources returned by the search, each with details such as ARN, last reported time, owning account ID, region, resource type, and service.",
+            "value": "${data.aws_resourceexplorer2_search.this.resources}"
+        },
+        "view_arn": {
+            "description": "The Amazon Resource Name (ARN) of the view used for the search in AWS Resource Explorer.",
+            "value": "${data.aws_resourceexplorer2_search.this.view_arn}"
+        }
+    }
+}

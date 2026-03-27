@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "description": [
+            {
+                "description": "The description of the rule",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "rule_name": [
+            {
+                "description": "The name of the rule",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "schedule_expression": [
+            {
+                "description": "The scheduling expression. For example, cron(0 20 * * ? *) or rate(5 minutes)",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to all resources",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ]
+    }
+}

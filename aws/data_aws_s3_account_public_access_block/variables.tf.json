@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "account_id": [
+      {
+        "description": "The unique identifier for the AWS account where the S3 public access block will be configured.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

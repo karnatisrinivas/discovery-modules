@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing and referencing the scaling schedule",
+            "value": "${aws_autoscaling_schedule.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for tracking the scaling schedule in configurations",
+            "value": "${aws_autoscaling_schedule.this.id}"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Elastic Beanstalk hosted zone.",
+            "value": "${data.aws_elastic_beanstalk_hosted_zone.this.id}"
+        }
+    }
+}

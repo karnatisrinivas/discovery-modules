@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the EKS node group.",
+            "value": "${data.aws_eks_node_groups.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the EKS node groups.",
+            "value": "${data.aws_eks_node_groups.this.names}"
+        }
+    }
+}

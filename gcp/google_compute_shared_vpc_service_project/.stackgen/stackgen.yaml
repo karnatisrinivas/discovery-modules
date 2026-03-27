@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Shared Vpc Service Project
+  node:
+    label:
+      static: Compute Shared Vpc Service Project
+      template: ${host_project}
+    display_type: default
+
+discovery:
+  type: google_compute_shared_vpc_service_project
+  dnd_supported: false

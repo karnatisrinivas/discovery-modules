@@ -1,0 +1,64 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EC2 host.",
+            "value": "${data.aws_ec2_host.this.arn}"
+        },
+        "asset_id": {
+            "description": "The unique identifier for the asset on the EC2 host.",
+            "value": "${data.aws_ec2_host.this.asset_id}"
+        },
+        "auto_placement": {
+            "description": "Indicates if the host supports auto-placement of instances.",
+            "value": "${data.aws_ec2_host.this.auto_placement}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the EC2 host is located.",
+            "value": "${data.aws_ec2_host.this.availability_zone}"
+        },
+        "cores": {
+            "description": "The number of cores available on the EC2 host.",
+            "value": "${data.aws_ec2_host.this.cores}"
+        },
+        "host_id": {
+            "description": "The unique identifier for the EC2 host.",
+            "value": "${data.aws_ec2_host.this.host_id}"
+        },
+        "host_recovery": {
+            "description": "Indicates if the host is configured for host recovery.",
+            "value": "${data.aws_ec2_host.this.host_recovery}"
+        },
+        "id": {
+            "description": "The ID of the EC2 host.",
+            "value": "${data.aws_ec2_host.this.id}"
+        },
+        "instance_family": {
+            "description": "The family of instances that the host supports.",
+            "value": "${data.aws_ec2_host.this.instance_family}"
+        },
+        "instance_type": {
+            "description": "The type of instance that can be launched on the host.",
+            "value": "${data.aws_ec2_host.this.instance_type}"
+        },
+        "outpost_arn": {
+            "description": "The ARN of the Outpost on which the host is located, if applicable.",
+            "value": "${data.aws_ec2_host.this.outpost_arn}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the EC2 host.",
+            "value": "${data.aws_ec2_host.this.owner_id}"
+        },
+        "sockets": {
+            "description": "The number of sockets available on the EC2 host.",
+            "value": "${data.aws_ec2_host.this.sockets}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EC2 host.",
+            "value": "${data.aws_ec2_host.this.tags}"
+        },
+        "total_vcpus": {
+            "description": "The total number of virtual CPUs available on the EC2 host.",
+            "value": "${data.aws_ec2_host.this.total_vcpus}"
+        }
+    }
+}

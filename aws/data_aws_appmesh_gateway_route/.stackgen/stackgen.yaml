@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appmesh Gateway Route"
+  node:
+    label:
+      static: "[Data] Appmesh Gateway Route"
+      template: "[Data] Appmesh Gateway Route"
+    display_type: default
+
+discovery:
+  type: data_aws_appmesh_gateway_route
+  dnd_supported: false

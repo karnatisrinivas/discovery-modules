@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "autoscaling_group_name": [
+      {
+        "description": "Name of the Auto Scaling group to which the scheduled action applies; must be an existing Auto Scaling group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "desired_capacity": [
+      {
+        "description": "Specifies the desired number of instances for the Auto Scaling group during the scheduled time. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "end_time": [
+      {
+        "description": "Specifies the date and time when the scheduled action ends. Must be in the format \"YYYY-MM-DDThh:mm:ssZ\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "max_size": [
+      {
+        "description": "Defines the maximum number of instances the Auto Scaling group can scale up to during the scheduled action.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "min_size": [
+      {
+        "description": "Specifies the minimum number of instances to maintain in the Auto Scaling group during the scheduled time.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "recurrence": [
+      {
+        "description": "Defines the recurring schedule for the Auto Scaling action, using a cron or rate expression format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "scheduled_action_name": [
+      {
+        "description": "Specifies the name of the scheduled action, which must be unique within the auto scaling group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "start_time": [
+      {
+        "description": "Specifies the time for the scheduled action to start, in UTC format. Ensure the format is \"YYYY-MM-DDThh:mm:ssZ\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "time_zone": [
+      {
+        "description": "Specifies the time zone for the schedule, in tz database format (e.g., \"UTC\", \"America/Los_Angeles\"). Required for accurate scheduling.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

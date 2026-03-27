@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "definition": [
+      {
+        "description": "Specifies the schema definition, provided as a JSON or Avro schema string, to define the structure of the Pub/Sub messages.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Pub/Sub schema, must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations on the Pub/Sub schema. Ensure the specified time is sufficient for the operation to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Defines the type of schema, either AVRO, PROTOCOL_BUF, or JSON, determining the format of the messages.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

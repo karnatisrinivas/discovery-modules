@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "instance_name": [
+      {
+        "description": "Name assigned to the instance, must be unique within the project to avoid conflicts.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_data": [
+      {
+        "description": "JSON-encoded string containing the policy configuration, must conform to the required schema for valid policies.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Geographical zone where the resource will be deployed, optional if not location-specific.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

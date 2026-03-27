@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "Secrets Manager - Secret Version"
+  node:
+    label:
+      static: "Secrets Manager - Secret Version"
+      template: "Secrets Manager - Secret Version"
+    display_type: default
+
+discovery:
+  type: aws_secretsmanager_secret_version
+  dnd_supported: false
+  data_source: data_aws_secretsmanager_secret_version
+  references:
+    secret_id:
+      from: aws_secretsmanager_secret
+      output: id

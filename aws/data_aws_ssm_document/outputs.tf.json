@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SSM document.",
+            "value": "${data.aws_ssm_document.this.arn}"
+        },
+        "content": {
+            "description": "The JSON or YAML content of the SSM document.",
+            "value": "${data.aws_ssm_document.this.content}"
+        },
+        "document_type": {
+            "description": "The type of the SSM document, such as Command or Policy.",
+            "value": "${data.aws_ssm_document.this.document_type}"
+        },
+        "id": {
+            "description": "The ID of the SSM document.",
+            "value": "${data.aws_ssm_document.this.id}"
+        }
+    }
+}

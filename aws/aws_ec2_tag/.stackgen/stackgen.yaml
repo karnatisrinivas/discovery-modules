@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ec2 Tag
+  node:
+    label:
+      static: Ec2 Tag
+      template: ${key}
+    display_type: default
+
+discovery:
+  type: aws_ec2_tag
+  dnd_supported: false
+  references:
+    resource_id:
+      from: aws_vpn_connection
+      output: transit_gateway_attachment_id

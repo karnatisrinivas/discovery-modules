@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the folder sink resource in Google Cloud",
+            "value": "${google_logging_folder_sink.this.id}"
+        },
+        "writer_identity": {
+            "description": "Service account used to write logs to the destination",
+            "value": "${google_logging_folder_sink.this.writer_identity}"
+        }
+    }
+}

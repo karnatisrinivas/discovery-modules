@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS WAF Regional Rate Based Rule.",
+            "value": "${data.aws_wafregional_rate_based_rule.this.id}"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Details or purpose of the CloudFront origin access control, such as access policies or restrictions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the origin access control, must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "origin_access_control_origin_type": [
+      {
+        "description": "Specifies the origin type for the origin access control, must be either 's3' or 'custom'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "signing_behavior": [
+      {
+        "description": "Determines how CloudFront signs requests, specifying whether to always sign, never sign, or inherit the behavior from the origin.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "signing_protocol": [
+      {
+        "description": "Specifies the signing protocol to use for the CloudFront origin access control, such as Sigv4.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

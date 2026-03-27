@@ -1,0 +1,34 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Lambda Function Permission
+  node:
+    label:
+      static: Lambda Function Permission
+      template: ${function_name}
+    display_type: default
+
+variable_groups:
+- label: Lambda Configuration
+  variables:
+    - action
+    - function_name
+    - function_url_auth_type
+    - qualifier
+- label: Trigger Resource Configuration
+  variables:
+    - principal
+    - source_account
+    - source_arn
+
+discovery:
+  type: aws_lambda_permission
+  dnd_supported: false
+  references:
+    function_name:
+      from: aws_lambda_function
+      output: function_name
+    source_arn:
+      from: aws_sns_topic
+      output: arn

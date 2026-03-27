@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "metadata": [
+      {
+        "description": "Key-value pairs to set as project-level metadata; used to define custom data accessible to all instances in the project.",
+        "nullable": false,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeout duration for operations related to project metadata, allowing customization of create, update, or delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

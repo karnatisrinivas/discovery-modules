@@ -1,0 +1,116 @@
+{
+    "output": {
+        "access_policies": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.access_policies}"
+        },
+        "advanced_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.advanced_options}"
+        },
+        "advanced_security_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.advanced_security_options}"
+        },
+        "arn": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.arn}"
+        },
+        "auto_tune_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.auto_tune_options}"
+        },
+        "cluster_config": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.cluster_config}"
+        },
+        "cognito_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.cognito_options}"
+        },
+        "created": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.created}"
+        },
+        "dashboard_endpoint": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.dashboard_endpoint}"
+        },
+        "dashboard_endpoint_v2": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.dashboard_endpoint_v2}"
+        },
+        "deleted": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.deleted}"
+        },
+        "domain_endpoint_v2_hosted_zone_id": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.domain_endpoint_v2_hosted_zone_id}"
+        },
+        "domain_id": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.domain_id}"
+        },
+        "ebs_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.ebs_options}"
+        },
+        "encryption_at_rest": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.encryption_at_rest}"
+        },
+        "endpoint": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.endpoint}"
+        },
+        "endpoint_v2": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.endpoint_v2}"
+        },
+        "engine_version": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.engine_version}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.id}"
+        },
+        "ip_address_type": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.ip_address_type}"
+        },
+        "kibana_endpoint": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.kibana_endpoint}"
+        },
+        "log_publishing_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.log_publishing_options}"
+        },
+        "node_to_node_encryption": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.node_to_node_encryption}"
+        },
+        "processing": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.processing}"
+        },
+        "snapshot_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.snapshot_options}"
+        },
+        "software_update_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.software_update_options}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.tags}"
+        },
+        "vpc_options": {
+            "description": "",
+            "value": "${data.aws_opensearch_domain.this.vpc_options}"
+        }
+    }
+}

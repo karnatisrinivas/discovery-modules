@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Dx Gateway Attachment"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Dx Gateway Attachment"
+      template: "[Data] Ec2 Transit Gateway Dx Gateway Attachment"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_dx_gateway_attachment
+  dnd_supported: false

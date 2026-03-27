@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the CloudWatch log groups.",
+            "value": "${data.aws_cloudwatch_log_groups.this.arns}"
+        },
+        "id": {
+            "description": "The identifier for the CloudWatch log groups data source.",
+            "value": "${data.aws_cloudwatch_log_groups.this.id}"
+        },
+        "log_group_names": {
+            "description": "A set of names for the CloudWatch log groups.",
+            "value": "${data.aws_cloudwatch_log_groups.this.log_group_names}"
+        }
+    }
+}

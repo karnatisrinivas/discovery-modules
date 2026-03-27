@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SES email identity.",
+            "value": "${data.aws_sesv2_email_identity.this.arn}"
+        },
+        "configuration_set_name": {
+            "description": "The name of the configuration set associated with the email identity.",
+            "value": "${data.aws_sesv2_email_identity.this.configuration_set_name}"
+        },
+        "dkim_signing_attributes": {
+            "description": "Attributes related to DKIM (DomainKeys Identified Mail) signing for the email identity.",
+            "value": "${data.aws_sesv2_email_identity.this.dkim_signing_attributes}"
+        },
+        "id": {
+            "description": "The unique identifier of the SES email identity.",
+            "value": "${data.aws_sesv2_email_identity.this.id}"
+        },
+        "identity_type": {
+            "description": "The type of identity (e.g., email address or domain) verified by SES.",
+            "value": "${data.aws_sesv2_email_identity.this.identity_type}"
+        },
+        "tags": {
+            "description": "Tags associated with the SES email identity for categorization and management.",
+            "value": "${data.aws_sesv2_email_identity.this.tags}"
+        },
+        "verified_for_sending_status": {
+            "description": "Indicates whether the email identity is verified and authorized for sending emails.",
+            "value": "${data.aws_sesv2_email_identity.this.verified_for_sending_status}"
+        }
+    }
+}

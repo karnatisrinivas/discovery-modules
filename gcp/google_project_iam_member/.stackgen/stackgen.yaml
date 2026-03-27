@@ -1,0 +1,43 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project IAM Member
+  node:
+    label:
+      static: Project IAM Member
+      template: Project IAM Member
+    display_type: default
+
+variables:
+  condition:
+    description: Defines a condition for the IAM policy binding, specifying attributes and logic that determine when the binding is applied.
+    attributes: 
+      description: 
+        label: Description
+        description: The description of the condition
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      expression: 
+        ui_control: text
+        label: Expression
+        description: The expression of the condition
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      title: 
+        label: Title
+        description: The title of the condition
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+
+discovery:
+  type: google_project_iam_member
+  dnd_supported: false

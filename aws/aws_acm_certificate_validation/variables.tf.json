@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "certificate_arn": [
+      {
+        "description": "ARN of the ACM certificate to validate; must match the certificate being validated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the amount of time to wait for the ACM certificate validation to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string)})"
+      }
+    ],
+    "validation_record_fqdns": [
+      {
+        "description": "List of fully qualified domain names (FQDNs) corresponding to the DNS validation records for the certificate.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

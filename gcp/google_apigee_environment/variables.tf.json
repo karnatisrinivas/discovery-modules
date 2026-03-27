@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "api_proxy_type": [
+      {
+        "description": "Specifies the type of API proxy deployed in the Apigee environment; must be either 'proxy' or 'sharedflow'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deployment_type": [
+      {
+        "description": "Specifies the type of deployment for the Apigee environment, such as 'PRODUCTION' or 'TEST', which determines the environment's use case and behavior.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the description for the Apigee environment, providing context or details about its purpose; must not exceed 255 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Human-readable name for the Apigee environment, used for identification and display purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "forward_proxy_uri": [
+      {
+        "description": "Specifies the URI of the forward proxy to route API requests through, if applicable. Must include the protocol (http or https).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Apigee environment. Must be unique within the Apigee organization.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "node_config": [
+      {
+        "description": "Specifies the configuration for the Apigee environment's nodes, including size and count, to control the deployment capacity.",
+        "nullable": true,
+        "type": "list(object({current_aggregate_node_count: optional(string),max_node_count: optional(string),min_node_count: optional(string)}))"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "ID of the Apigee organization to which the environment belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "properties": [
+      {
+        "description": "Specifies the key-value pairs for configuring environment-level properties in Apigee. Must be a valid JSON object.",
+        "nullable": true,
+        "type": "list(object({property: list(object({name: optional(string),value: optional(string)}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for operations related to the Apigee environment, such as create, update, or delete, with values specified in Terraform's timeout block.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Defines the type of environment, such as \"PROD\" or \"TEST\", used for managing API proxies within Apigee.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The KeyRing's name. A KeyRing name must exist within the provided location and match the regular expression [a-zA-Z0-9_-]{1,63}"
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "The Google Cloud Platform location for the KeyRing. A full list of valid locations can be found by running gcloud kms locations list."
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the default AWS EBS KMS key.",
+            "value": "${data.aws_ebs_default_kms_key.this.id}"
+        },
+        "key_arn": {
+            "description": "The Amazon Resource Name (ARN) of the default AWS EBS KMS key.",
+            "value": "${data.aws_ebs_default_kms_key.this.key_arn}"
+        }
+    }
+}

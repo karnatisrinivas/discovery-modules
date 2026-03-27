@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "all_regions": [
+      {
+        "description": "Indicates whether to include all AWS regions. Set to true to include all regions, or false to specify particular regions.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

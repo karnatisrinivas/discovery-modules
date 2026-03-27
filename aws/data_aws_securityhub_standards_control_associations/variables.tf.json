@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "security_control_id": [
+      {
+        "description": "A unique identifier for the security control to associate with AWS Security Hub standards.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

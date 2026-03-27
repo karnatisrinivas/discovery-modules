@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Azure Private DNS A Record resource.",
+            "value": "${azurerm_private_dns_a_record.this.id}"
+        }
+    }
+}

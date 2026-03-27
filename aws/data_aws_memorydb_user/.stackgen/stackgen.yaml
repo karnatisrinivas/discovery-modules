@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Memorydb User"
+  node:
+    label:
+      static: "[Data] Memorydb User"
+      template: "[Data] Memorydb User"
+    display_type: default
+
+discovery:
+  type: data_aws_memorydb_user
+  dnd_supported: false

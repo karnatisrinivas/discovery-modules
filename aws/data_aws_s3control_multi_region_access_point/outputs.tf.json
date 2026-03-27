@@ -1,0 +1,40 @@
+{
+    "output": {
+        "account_id": {
+            "description": "The unique identifier for the AWS account that owns the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.account_id}"
+        },
+        "alias": {
+            "description": "A user-friendly name for the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.alias}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.arn}"
+        },
+        "created_at": {
+            "description": "The timestamp when the multi-region access point was created.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.created_at}"
+        },
+        "domain_name": {
+            "description": "The domain name associated with the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.domain_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.id}"
+        },
+        "public_access_block": {
+            "description": "Settings that manage public access to the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.public_access_block}"
+        },
+        "regions": {
+            "description": "A list of regions and corresponding bucket configurations for the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.regions}"
+        },
+        "status": {
+            "description": "The current operational status of the multi-region access point.",
+            "value": "${data.aws_s3control_multi_region_access_point.this.status}"
+        }
+    }
+}

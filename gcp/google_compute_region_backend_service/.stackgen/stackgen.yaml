@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Region Backend Service
+  node:
+    label:
+      static: Compute Region Backend Service
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_region_backend_service
+  dnd_supported: false
+  references:
+    health_checks:
+      from: google_compute_health_check
+      output: id
+    network:
+      from: google_compute_network
+      output: id

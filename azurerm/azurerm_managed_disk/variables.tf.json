@@ -1,0 +1,248 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the Managed Disk."
+      }
+    ],
+    "storage_account_type": [
+      {
+        "type": "string",
+        "description": "The type of storage to use for the managed disk."
+      }
+    ],
+    "create_option": [
+      {
+        "type": "string",
+        "description": "The method to use when creating the managed disk."
+      }
+    ],
+    "disk_encryption_set_id": [
+      {
+        "type": "string",
+        "description": "The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk. Conflicts with `Secure VM Disk Encryption Set ID`.",
+        "nullable": true
+      }
+    ],
+    "disk_iops_read_write": [
+      {
+        "type": "number",
+        "description": "The number of IOPS allowed for this disk; only settable for UltraSSD disks and PremiumV2 disks. One operation can transfer between 4k and 256k bytes.",
+        "nullable": true
+      }
+    ],
+    "disk_mbps_read_write": [
+      {
+        "type": "number",
+        "description": "The bandwidth allowed for this disk; only settable for UltraSSD disks and PremiumV2 disks. MBps means millions of bytes per second.",
+        "nullable": true
+      }
+    ],
+    "disk_iops_read_only": [
+      {
+        "type": "number",
+        "description": "The number of IOPS allowed across all VMs mounting the shared disk as read-only; only settable for UltraSSD disks and PremiumV2 disks with shared disk enabled. One operation can transfer between 4k and 256k bytes.",
+        "nullable": true
+      }
+    ],
+    "disk_mbps_read_only": [
+      {
+        "type": "number",
+        "description": "The bandwidth allowed across all VMs mounting the shared disk as read-only; only settable for UltraSSD disks and PremiumV2 disks with shared disk enabled. MBps means millions of bytes per second.",
+        "nullable": true
+      }
+    ],
+    "upload_size_bytes": [
+      {
+        "type": "number",
+        "description": "Specifies the size of the managed disk to create in bytes. Required when `Create Option` is Upload. The value must be equal to the source disk to be copied in bytes. Source disk size could be calculated with `ls -l` or `wc -c`",
+        "nullable": true
+      }
+    ],
+    "disk_size_gb": [
+      {
+        "type": "number",
+        "description": " (Required for new managed disks) Specifies the size of the managed disk to create in gigabytes. If `Create Option` is Copy or FromImage, then the value must be equal to or greater than the source's size.",
+        "nullable": true
+      }
+    ],
+    "edge_zone": [
+      {
+        "type": "string",
+        "description": "Specifies the Edge Zone within the Azure Region where this Managed Disk should exist.",
+        "nullable": true
+      }
+    ],
+    "hyper_v_generation": [
+      {
+        "type": "string",
+        "description": "The HyperV Generation of the Disk when the source of an Import or Copy operation targets a source that contains an operating system. Possible values are V1 and V2. For ImportSecure it must be set to V2.",
+        "nullable": true
+      }
+    ],
+    "image_reference_id": [
+      {
+        "type": "string",
+        "description": "ID of an existing platform/marketplace disk image to copy when `Create Option` is FromImage. This field cannot be specified if `Gallery Image Reference ID` is specified.",
+        "nullable": true
+      }
+    ],
+    "gallery_image_reference_id": [
+      {
+        "type": "string",
+        "description": "ID of a Gallery Image Version to copy when `Create Option` is FromImage. This field cannot be specified if `Image Reference ID` is specified.",
+        "nullable": true
+      }
+    ],
+    "logical_sector_size": [
+      {
+        "type": "string",
+        "description": "Logical Sector Size",
+        "nullable": true,
+        "default": "4096"
+      }
+    ],
+    "optimized_frequent_attach_enabled": [
+      {
+        "type": "bool",
+        "description": "Specifies whether this Managed Disk should be optimized for frequent disk attachments (where a disk is attached/detached more than 5 times in a day)",
+        "nullable": true,
+        "default": false
+      }
+    ],
+    "performance_plus_enabled": [
+      {
+        "type": "bool",
+        "description": "Specifies whether Performance Plus is enabled for this Managed Disk.",
+        "nullable": true,
+        "default": false
+      }
+    ],
+    "os_type": [
+      {
+        "type": "string",
+        "description": "Specify a value when the source of an Import, ImportSecure or Copy operation targets a source that contains an operating system.",
+        "nullable": true
+      }
+    ],
+    "source_resource_id": [
+      {
+        "type": "string",
+        "description": " The ID of an existing Managed Disk or Snapshot to copy when `Create Option` is Copy or the recovery point to restore when `Create Option` is Restore.",
+        "nullable": true
+      }
+    ],
+    "source_uri": [
+      {
+        "type": "string",
+        "description": "URI to a valid VHD file to be used when `Create Option` is Import or ImportSecure.",
+        "nullable": true
+      }
+    ],
+    "storage_account_id": [
+      {
+        "type": "string",
+        "description": "The ID of the Storage Account where the `Source URI` is located. Required when `Create Option` is set to Import or ImportSecure.",
+        "nullable": true
+      }
+    ],
+    "tier": [
+      {
+        "type": "string",
+        "description": "The disk performance tier to use.",
+        "nullable": true
+      }
+    ],
+    "max_shares": [
+      {
+        "type": "number",
+        "description": "The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.",
+        "nullable": true
+      }
+    ],
+    "trusted_launch_enabled": [
+      {
+        "type": "bool",
+        "description": "Specifies if Trusted Launch is enabled for the Managed Disk.",
+        "nullable": true
+      }
+    ],
+    "security_type": [
+      {
+        "type": "string",
+        "description": "Security Type of the Managed Disk when it is used for a Confidential VM.",
+        "nullable": true
+      }
+    ],
+    "secure_vm_disk_encryption_set_id": [
+      {
+        "type": "string",
+        "description": "The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk when the Virtual Machine is a Confidential VM. Conflicts with `Disk Encryption Set ID`.",
+        "nullable": true
+      }
+    ],
+    "on_demand_bursting_enabled": [
+      {
+        "type": "bool",
+        "description": "Specifies if On-Demand Bursting is enabled for the Managed Disk.",
+        "nullable": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true
+      }
+    ],
+    "zone": [
+      {
+        "type": "string",
+        "description": "Specifies the Availability Zone in which this Managed Disk should be located.",
+        "nullable": true
+      }
+    ],
+    "network_access_policy": [
+      {
+        "type": "string",
+        "description": "Policy for accessing the disk via network.",
+        "nullable": true
+      }
+    ],
+    "disk_access_id": [
+      {
+        "type": "string",
+        "description": "The ID of the disk access resource for using private endpoints on disks.",
+        "nullable": true
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "type": "string",
+        "description": "Whether it is allowed to access the disk via public network.",
+        "nullable": false
+      }
+    ],
+    "encryption_settings": [
+      {
+        "type": "list(object({disk_encryption_key: object({secret_url: string, source_vault_id: string}), key_encryption_key: object({key_url: string, source_vault_id: string})}))",
+        "description": "Information about encryption of the disk and the key",
+        "nullable": true,
+        "default": []
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

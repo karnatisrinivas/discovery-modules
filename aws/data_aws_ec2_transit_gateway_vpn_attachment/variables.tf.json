@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "transit_gateway_id": [
+      {
+        "description": "The unique identifier for the AWS Transit Gateway to which the VPN connection will be attached.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpn_connection_id": [
+      {
+        "description": "The unique identifier for the VPN connection that will be attached to the Transit Gateway.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

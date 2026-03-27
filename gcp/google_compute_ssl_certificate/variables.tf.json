@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "certificate": [
+      {
+        "description": "PEM-encoded certificate data for the SSL certificate, must be valid and correctly formatted.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the description of the SSL certificate, providing context or details for identification purposes; must be a string with a maximum of 63 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the SSL certificate, which must be unique within the project and comply with GCP naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Prefix added to the name of the SSL certificate, used to uniquely identify the resource; must be 1-63 characters long and comply with GCP naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "private_key": [
+      {
+        "description": "PEM-encoded private key used to create the SSL certificate; must be valid and correspond to the provided certificate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for create, update, and delete operations on the SSL certificate.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

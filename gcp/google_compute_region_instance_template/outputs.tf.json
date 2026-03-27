@@ -1,0 +1,32 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the instance template was created",
+            "value": "${google_compute_region_instance_template.this.creation_timestamp}"
+        },
+        "effective_labels": {
+            "description": "Resolved labels applied to the instance template for organization and filtering",
+            "value": "${google_compute_region_instance_template.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the instance template resource",
+            "value": "${google_compute_region_instance_template.this.id}"
+        },
+        "metadata_fingerprint": {
+            "description": "Fingerprint used to detect metadata changes on the instance template",
+            "value": "${google_compute_region_instance_template.this.metadata_fingerprint}"
+        },
+        "self_link": {
+            "description": "Fully qualified URL to access the instance template",
+            "value": "${google_compute_region_instance_template.this.self_link}"
+        },
+        "tags_fingerprint": {
+            "description": "Fingerprint used to detect tag changes on the instance template",
+            "value": "${google_compute_region_instance_template.this.tags_fingerprint}"
+        },
+        "terraform_labels": {
+            "description": "Labels assigned via Terraform for resource management and identification",
+            "value": "${google_compute_region_instance_template.this.terraform_labels}"
+        }
+    }
+}

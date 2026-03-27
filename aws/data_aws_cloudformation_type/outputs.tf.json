@@ -1,0 +1,64 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.arn}"
+        },
+        "default_version_id": {
+            "description": "The identifier of the default version of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.default_version_id}"
+        },
+        "deprecated_status": {
+            "description": "Indicates whether the CloudFormation type is deprecated.",
+            "value": "${data.aws_cloudformation_type.this.deprecated_status}"
+        },
+        "description": {
+            "description": "A description of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.description}"
+        },
+        "documentation_url": {
+            "description": "The URL to the documentation related to the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.documentation_url}"
+        },
+        "execution_role_arn": {
+            "description": "The ARN of the execution role for the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.execution_role_arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.id}"
+        },
+        "is_default_version": {
+            "description": "Indicates if this is the default version of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.is_default_version}"
+        },
+        "logging_config": {
+            "description": "Configuration for logging related to the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.logging_config}"
+        },
+        "provisioning_type": {
+            "description": "Defines the provisioning type of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.provisioning_type}"
+        },
+        "schema": {
+            "description": "The schema that defines the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.schema}"
+        },
+        "source_url": {
+            "description": "The source URL for the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.source_url}"
+        },
+        "type_arn": {
+            "description": "The ARN specific to the type configuration of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.type_arn}"
+        },
+        "type_name": {
+            "description": "The name of the CloudFormation type.",
+            "value": "${data.aws_cloudformation_type.this.type_name}"
+        },
+        "visibility": {
+            "description": "The visibility setting of the CloudFormation type (e.g., PUBLIC or PRIVATE).",
+            "value": "${data.aws_cloudformation_type.this.visibility}"
+        }
+    }
+}

@@ -1,0 +1,145 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DynamoDB Table
+  node:
+    label:
+      static: DynamoDB Table
+      template: DynamoDB Table
+    display_type: default
+
+variables:
+  billing_mode:
+    ui_control: select
+    description: The billing mode of the DynamoDB table
+    type: string
+    options: 
+      - PROVISIONED
+      - PAY_PER_REQUEST
+  stream_enabled:
+    ui_control: select
+    description: Indicates whether Streams is to be enabled (true) or disabled (false)
+    type: bool
+    options: 
+      - true
+      - false
+  stream_view_type:
+    description: Indicates the DynamoDB Streams settings for the table
+    type: string
+    options: 
+      - NEW_IMAGE
+      - OLD_IMAGE
+      - NEW_AND_OLD_IMAGES
+      - KEYS_ONLY
+    ui_control: select
+  server_side_encryption:
+    description: "Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified."
+    attributes: 
+      enabled: 
+        label: Enabled
+        description: "Whether server-side encryption is enabled"
+        validation: 
+          dataType: bool
+          required: true
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      kms_key_arn: 
+        label: KMS Key ARN
+        description: The ARN of the KMS key to use for encryption
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+  ttl:
+    description: A map representing the TTL settings
+    attributes: 
+      attribute_name: 
+        label: Attribute Name
+        description: The attribute name for the TTL
+        validation: 
+          required: true
+        type: string
+        ui_control: text
+      enabled: 
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Enabled
+        description: Whether the TTL is enabled
+        validation: 
+          required: true
+          dataType: bool
+  global_secondary_index:
+    description: A list of maps representing the global secondary indexes
+    attributes: 
+      name: 
+        description: The name of the local secondary index
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Name
+      projection_type: 
+        type: string
+        options: 
+          - ALL
+          - KEYS_ONLY
+          - INCLUDE
+        ui_control: select
+        label: Projection Type
+        description: The projection type of the local secondary index
+        validation: 
+          dataType: string
+          required: true
+      hash_key: 
+        ui_control: text
+        label: Hash Key
+        description: The hash key of the local secondary index
+        validation: 
+          required: true
+          dataType: string
+        type: string
+  local_secondary_index:
+    description: A list of maps representing the local secondary indexes
+    attributes: 
+      range_key: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Range Key
+        description: The range key of the local secondary index
+      projection_type: 
+        ui_control: select
+        label: Projection Type
+        description: The projection type of the local secondary index
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - ALL
+          - KEYS_ONLY
+          - INCLUDE
+      name: 
+        ui_control: text
+        label: Name
+        description: The name of the local secondary index
+        validation: 
+          dataType: string
+          required: true
+        type: string
+
+discovery:
+  type: aws_dynamodb_table
+  dnd_supported: false
+  data_source: data_aws_dynamodb_table

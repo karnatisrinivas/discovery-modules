@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A map of tags to assign to the security group rules, where each key is the tag name and the value is the tag value.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

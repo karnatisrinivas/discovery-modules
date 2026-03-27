@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the AWS Lex slot type, which is a specific type of data that Lex recognizes and uses to fill slots in a conversation.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

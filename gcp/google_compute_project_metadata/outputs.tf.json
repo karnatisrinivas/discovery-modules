@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for accessing project-wide metadata in Google Compute Engine",
+            "value": "${google_compute_project_metadata.this.id}"
+        }
+    }
+}

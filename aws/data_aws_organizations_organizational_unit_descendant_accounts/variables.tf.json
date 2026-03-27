@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "parent_id": [
+      {
+        "description": "The unique identifier (ID) of the parent organizational unit or root under which the descendant accounts are listed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

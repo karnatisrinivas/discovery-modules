@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for managing permissions and API interactions",
+            "value": "${aws_ec2_transit_gateway_vpc_attachment.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the VPC attachment in configurations",
+            "value": "${aws_ec2_transit_gateway_vpc_attachment.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated list of tags applied to the VPC attachment for organization",
+            "value": "${aws_ec2_transit_gateway_vpc_attachment.this.tags_all}"
+        },
+        "vpc_owner_id": {
+            "description": "AWS account ID of the VPC owner for identifying ownership",
+            "value": "${aws_ec2_transit_gateway_vpc_attachment.this.vpc_owner_id}"
+        }
+    }
+}

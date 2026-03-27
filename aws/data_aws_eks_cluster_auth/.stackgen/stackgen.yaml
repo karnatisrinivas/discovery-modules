@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eks Cluster Auth"
+  node:
+    label:
+      static: "[Data] Eks Cluster Auth"
+      template: "[Data] Eks Cluster Auth"
+    display_type: default
+
+discovery:
+  type: data_aws_eks_cluster_auth
+  dnd_supported: false

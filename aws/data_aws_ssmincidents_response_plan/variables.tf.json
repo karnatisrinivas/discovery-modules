@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) uniquely identifying the SSM Incidents response plan.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying the Lambda layer version.",
+            "value": "${data.aws_lambda_layer_version.this.arn}"
+        },
+        "code_sha256": {
+            "description": "The SHA-256 hash of the layer version's source code.",
+            "value": "${data.aws_lambda_layer_version.this.code_sha256}"
+        },
+        "compatible_architectures": {
+            "description": "A set of architectures that this layer version is compatible with.",
+            "value": "${data.aws_lambda_layer_version.this.compatible_architectures}"
+        },
+        "compatible_runtimes": {
+            "description": "A set of runtimes that this layer version is compatible with.",
+            "value": "${data.aws_lambda_layer_version.this.compatible_runtimes}"
+        },
+        "created_date": {
+            "description": "The date and time when the layer version was created.",
+            "value": "${data.aws_lambda_layer_version.this.created_date}"
+        },
+        "description": {
+            "description": "A brief description of the Lambda layer version.",
+            "value": "${data.aws_lambda_layer_version.this.description}"
+        },
+        "id": {
+            "description": "The ID of the Lambda layer version.",
+            "value": "${data.aws_lambda_layer_version.this.id}"
+        },
+        "layer_arn": {
+            "description": "The ARN of the Lambda layer without the version suffix.",
+            "value": "${data.aws_lambda_layer_version.this.layer_arn}"
+        },
+        "license_info": {
+            "description": "The license information associated with the Lambda layer version.",
+            "value": "${data.aws_lambda_layer_version.this.license_info}"
+        },
+        "signing_job_arn": {
+            "description": "The ARN of the signing job that signed the layer version.",
+            "value": "${data.aws_lambda_layer_version.this.signing_job_arn}"
+        },
+        "signing_profile_version_arn": {
+            "description": "The ARN of the signing profile version used to sign the layer version.",
+            "value": "${data.aws_lambda_layer_version.this.signing_profile_version_arn}"
+        },
+        "source_code_hash": {
+            "description": "The hash of the layer version's source code.",
+            "value": "${data.aws_lambda_layer_version.this.source_code_hash}"
+        },
+        "source_code_size": {
+            "description": "The size of the layer version's source code in bytes.",
+            "value": "${data.aws_lambda_layer_version.this.source_code_size}"
+        },
+        "version": {
+            "description": "The version number of the Lambda layer.",
+            "value": "${data.aws_lambda_layer_version.this.version}"
+        }
+    }
+}

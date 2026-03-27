@@ -1,0 +1,51 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Event Grid System Topic
+  node:
+    label:
+      static: Event Grid System Topic
+      template: ${eventgrid_system_topic_name}
+    display_type: default
+
+variables:
+  eventgrid_topic_type:
+    options: 
+      - Microsoft.Eventhub.Namespaces
+      - Microsoft.Storage.StorageAccounts
+      - Microsoft.Resources.Subscriptions
+      - Microsoft.Resources.ResourceGroups
+      - Microsoft.Devices.IoTHubs
+      - Microsoft.EventGrid.Topics
+      - Microsoft.ServiceBus.Namespaces
+      - Microsoft.ContainerRegistry.Registries
+      - Microsoft.Media.MediaServices
+      - Microsoft.Maps.Accounts
+      - Microsoft.EventGrid.Domains
+      - Microsoft.AppConfiguration.ConfigurationStores
+      - Microsoft.KeyVault.vaults
+      - Microsoft.Web.Sites
+      - Microsoft.Web.ServerFarms
+      - Microsoft.SignalRService.SignalR
+      - Microsoft.MachineLearningServices.Workspaces
+      - Microsoft.Cache.Redis
+      - Microsoft.Communication.CommunicationServices
+      - Microsoft.PolicyInsights.PolicyStates
+      - Microsoft.AgFoodPlatform.FarmBeats
+      - Microsoft.ContainerService.ManagedClusters
+      - Microsoft.ApiManagement.Service
+      - Microsoft.HealthcareApis.Workspaces
+      - Microsoft.ResourceNotifications.Resources
+      - Microsoft.ResourceNotifications.HealthResources
+      - Microsoft.DataBox.Jobs
+      - Microsoft.EventGrid.Namespaces
+      - Microsoft.Maintenance.MaintenanceConfigurations
+      - Microsoft.ApiCenter.Services
+    ui_control: select
+    description: The type of the event grid topic.
+    type: string
+
+discovery:
+  type: azurerm_eventgrid_system_topic
+  dnd_supported: false

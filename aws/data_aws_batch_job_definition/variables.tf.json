@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) assigned to the batch job definition.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the batch job definition.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "revision": [
+      {
+        "description": "The revision number of the batch job definition.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "status": [
+      {
+        "description": "The current status of the batch job definition.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

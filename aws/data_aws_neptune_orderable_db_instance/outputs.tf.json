@@ -1,0 +1,80 @@
+{
+    "output": {
+        "availability_zones": {
+            "description": "A list of availability zones where the Neptune DB instance can be deployed.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.availability_zones}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine used by the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.engine_version}"
+        },
+        "id": {
+            "description": "The unique identifier for the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.id}"
+        },
+        "instance_class": {
+            "description": "The type of instance class used for the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.instance_class}"
+        },
+        "max_iops_per_db_instance": {
+            "description": "The maximum IOPS (Input/Output Operations Per Second) supported by the DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.max_iops_per_db_instance}"
+        },
+        "max_iops_per_gib": {
+            "description": "The maximum IOPS that can be allocated per GiB of storage.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.max_iops_per_gib}"
+        },
+        "max_storage_size": {
+            "description": "The maximum storage size, in GiB, that can be allocated to the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.max_storage_size}"
+        },
+        "min_iops_per_db_instance": {
+            "description": "The minimum IOPS supported by the DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.min_iops_per_db_instance}"
+        },
+        "min_iops_per_gib": {
+            "description": "The minimum IOPS that must be allocated per GiB of storage.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.min_iops_per_gib}"
+        },
+        "min_storage_size": {
+            "description": "The minimum storage size, in GiB, that can be allocated to the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.min_storage_size}"
+        },
+        "multi_az_capable": {
+            "description": "Indicates if the Neptune DB instance supports deployment across multiple availability zones.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.multi_az_capable}"
+        },
+        "read_replica_capable": {
+            "description": "Indicates if the Neptune DB instance supports read replicas.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.read_replica_capable}"
+        },
+        "storage_type": {
+            "description": "The type of storage used by the Neptune DB instance.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.storage_type}"
+        },
+        "supports_enhanced_monitoring": {
+            "description": "Indicates if the Neptune DB instance supports enhanced monitoring.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.supports_enhanced_monitoring}"
+        },
+        "supports_iam_database_authentication": {
+            "description": "Indicates if the Neptune DB instance supports IAM database authentication.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.supports_iam_database_authentication}"
+        },
+        "supports_iops": {
+            "description": "Indicates if the Neptune DB instance supports provisioned IOPS.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.supports_iops}"
+        },
+        "supports_performance_insights": {
+            "description": "Indicates if the Neptune DB instance supports performance insights.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.supports_performance_insights}"
+        },
+        "supports_storage_encryption": {
+            "description": "Indicates if the Neptune DB instance supports storage encryption.",
+            "value": "${data.aws_neptune_orderable_db_instance.this.supports_storage_encryption}"
+        },
+        "vpc": {
+            "description": "Indicates if the Neptune DB instance is in a VPC (Virtual Private Cloud).",
+            "value": "${data.aws_neptune_orderable_db_instance.this.vpc}"
+        }
+    }
+}

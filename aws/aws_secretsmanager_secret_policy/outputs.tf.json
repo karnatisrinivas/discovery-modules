@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the secret policy in other configurations",
+            "value": "${aws_secretsmanager_secret_policy.this.id}"
+        }
+    }
+}

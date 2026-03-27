@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "plan_id": [
+      {
+        "description": "A unique identifier for the backup plan, used to manage and organize backup tasks.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

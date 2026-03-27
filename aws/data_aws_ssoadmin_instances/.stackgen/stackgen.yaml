@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssoadmin Instances"
+  node:
+    label:
+      static: "[Data] Ssoadmin Instances"
+      template: "[Data] Ssoadmin Instances"
+    display_type: default
+
+discovery:
+  type: data_aws_ssoadmin_instances
+  dnd_supported: false

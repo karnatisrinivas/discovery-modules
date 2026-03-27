@@ -1,0 +1,47 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EBS
+  node:
+    label:
+      static: EBS
+      template: EBS
+    display_type: default
+
+variables:
+  encrypted:
+    description: If true, the disk will be encrypted.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  multi_attach_enabled:
+    description: "Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported on `io1` and `io2` volumes."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  type:
+    description: The type of EBS volume.
+    type: string
+    options: 
+      - standard
+      - gp2
+      - gp3
+      - io1
+      - io2
+      - sc1
+      - st1
+    ui_control: select
+
+discovery:
+  type: aws_ebs_volume
+  dnd_supported: false
+  data_source: data_aws_ebs_volume
+  references:
+    kms_key_id:
+      from: aws_kms_key
+      output: arn

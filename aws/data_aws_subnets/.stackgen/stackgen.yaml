@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Subnets"
+  node:
+    label:
+      static: "[Data] Subnets"
+      template: "[Data] Subnets"
+    display_type: default
+
+discovery:
+  type: data_aws_subnets
+  dnd_supported: false

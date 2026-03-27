@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EMR containers virtual cluster.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.arn}"
+        },
+        "container_provider": {
+            "description": "Details of the container provider, including the EKS cluster information and type.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.container_provider}"
+        },
+        "created_at": {
+            "description": "The timestamp indicating when the EMR containers virtual cluster was created.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.created_at}"
+        },
+        "id": {
+            "description": "The unique identifier of the EMR containers virtual cluster.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.id}"
+        },
+        "name": {
+            "description": "The name of the EMR containers virtual cluster.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.name}"
+        },
+        "state": {
+            "description": "The current state of the EMR containers virtual cluster.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EMR containers virtual cluster.",
+            "value": "${data.aws_emrcontainers_virtual_cluster.this.tags}"
+        }
+    }
+}

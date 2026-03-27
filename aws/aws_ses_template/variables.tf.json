@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "html": [
+      {
+        "description": "Defines the HTML content of the email template, supporting inline CSS and must be valid HTML.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the SES template, must be unique and between 1 and 64 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subject": [
+      {
+        "description": "Subject line for the email template, must be a string with a maximum length of 256 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "text": [
+      {
+        "description": "Content of the email body in plain text format, supporting up to 64 KB in size.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

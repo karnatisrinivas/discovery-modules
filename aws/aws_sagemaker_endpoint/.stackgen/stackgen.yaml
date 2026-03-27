@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Sagemaker Endpoint
+  node:
+    label:
+      static: Sagemaker Endpoint
+      template: ${endpoint_config_name}
+    display_type: default
+
+discovery:
+  type: aws_sagemaker_endpoint
+  dnd_supported: false
+  references:
+    endpoint_config_name:
+      from: aws_sagemaker_endpoint_configuration
+      output: name

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag to track changes and ensure IAM binding consistency",
+            "value": "${google_bigtable_instance_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Identifier for the IAM binding to reference in policies or updates",
+            "value": "${google_bigtable_instance_iam_binding.this.id}"
+        }
+    }
+}

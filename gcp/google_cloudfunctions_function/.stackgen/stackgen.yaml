@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfunctions Function
+  node:
+    label:
+      static: Cloudfunctions Function
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloudfunctions_function
+  dnd_supported: false
+  references:
+    source_archive_bucket:
+      from: google_storage_bucket
+      output: name
+    source_archive_object:
+      from: google_storage_bucket_object
+      output: name

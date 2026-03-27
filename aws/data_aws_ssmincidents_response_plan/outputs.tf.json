@@ -1,0 +1,40 @@
+{
+    "output": {
+        "action": {
+            "description": "Defines automated actions to be performed during an incident, using SSM Automation documents.",
+            "value": "${data.aws_ssmincidents_response_plan.this.action}"
+        },
+        "chat_channel": {
+            "description": "Specifies chat channels for communication during an incident.",
+            "value": "${data.aws_ssmincidents_response_plan.this.chat_channel}"
+        },
+        "display_name": {
+            "description": "A user-friendly name for the response plan.",
+            "value": "${data.aws_ssmincidents_response_plan.this.display_name}"
+        },
+        "engagements": {
+            "description": "Lists contacts or contact methods to engage during an incident.",
+            "value": "${data.aws_ssmincidents_response_plan.this.engagements}"
+        },
+        "id": {
+            "description": "Unique identifier for the response plan.",
+            "value": "${data.aws_ssmincidents_response_plan.this.id}"
+        },
+        "incident_template": {
+            "description": "Template used for creating incidents, including details like impact, tags, and notification targets.",
+            "value": "${data.aws_ssmincidents_response_plan.this.incident_template}"
+        },
+        "integration": {
+            "description": "Integrations with third-party services, such as PagerDuty, for incident management.",
+            "value": "${data.aws_ssmincidents_response_plan.this.integration}"
+        },
+        "name": {
+            "description": "The name of the response plan.",
+            "value": "${data.aws_ssmincidents_response_plan.this.name}"
+        },
+        "tags": {
+            "description": "Key-value pairs used to organize and categorize the response plan.",
+            "value": "${data.aws_ssmincidents_response_plan.this.tags}"
+        }
+    }
+}

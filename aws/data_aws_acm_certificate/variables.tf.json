@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "domain": [
+      {
+        "description": "The primary domain name for which the ACM certificate is being requested.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "key_types": [
+      {
+        "description": "A set of key types to use for the ACM certificate, such as RSA or ECC.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "If set to true, retrieves only the most recently issued ACM certificate.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "statuses": [
+      {
+        "description": "A list of statuses to filter the ACM certificates, such as ISSUED or PENDING_VALIDATION.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "types": [
+      {
+        "description": "A list of types of ACM certificates, such as AMAZON_ISSUED or IMPORTED.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

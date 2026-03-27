@@ -1,0 +1,40 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "Resource name of the repository, of the form {{repo}}. The repo name may contain slashes. eg, name/with/slash",
+                "nullable": false
+            }
+        ],
+        "topic": [
+            {
+                "type": "string",
+                "description": "The Pub/Sub topic to publish to. The identifier for this object",
+                "nullable": true
+            }
+        ],
+        "message_format": [
+            {
+                "type": "string",
+                "description": "The format of the message.",
+                "nullable": true,
+                "default": "JSON"
+            }
+        ],
+        "service_account_email": [
+            {
+                "type": "string",
+                "description": "Email address of the service account used for publishing Cloud Pub/Sub messages. This service account needs to be in the same project as the PubsubConfig. When added, the caller needs to have iam.serviceAccounts.actAs permission on this service account. If unspecified, it defaults to the compute engine default service account.",
+                "nullable": true
+            }
+        ],
+        "iam_roles": [
+            {
+                "type": "list(object({role: string, member: string}))",
+                "description": "Defines a binding to be included for this resource.",
+                "nullable": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "vpc_id": [
+            {
+                "type": "string",
+                "description": "The ID of the VPC to attach the VPN gateway to",
+                "nullable": true
+            }
+        ],
+        "availability_zone": [
+            {
+                "type": "string",
+                "description": "The availability zone of the VPN gateway",
+                "nullable": true
+            }
+        ],
+        "amazon_side_asn": [
+            {
+                "type": "string",
+                "description": "The Amazon side ASN of the VPN gateway",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to attach to the VPN gateway",
+                "nullable": true
+            }
+        ]
+    }
+}

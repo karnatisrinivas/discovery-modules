@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lbs"
+  node:
+    label:
+      static: "[Data] Lbs"
+      template: "[Data] Lbs"
+    display_type: default
+
+discovery:
+  type: data_aws_lbs
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dns Record Set
+  node:
+    label:
+      static: Dns Record Set
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_dns_record_set
+  dnd_supported: false

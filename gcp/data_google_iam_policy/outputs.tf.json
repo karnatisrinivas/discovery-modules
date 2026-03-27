@@ -1,0 +1,8 @@
+{
+    "output": {
+        "policy_data": {
+            "description": "The above bindings serialized in a format suitable for referencing from a resource that supports IAM.",
+            "value": "${google_iam_policy.this.policy_data}"
+        }
+    }
+}

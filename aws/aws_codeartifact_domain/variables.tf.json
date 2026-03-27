@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "domain": [
+      {
+        "description": "Specifies the name of the CodeArtifact domain to be created, which must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "encryption_key": [
+      {
+        "description": "Specifies the ARN of the KMS key used to encrypt the domain. If not provided, AWS-managed encryption is used.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the domain, with a maximum of 50 tags allowed.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

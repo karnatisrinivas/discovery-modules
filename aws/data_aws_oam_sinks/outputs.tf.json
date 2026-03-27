@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the OAM sinks, which are unique identifiers for AWS resources.",
+            "value": "${data.aws_oam_sinks.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the OAM sinks data source.",
+            "value": "${data.aws_oam_sinks.this.id}"
+        }
+    }
+}

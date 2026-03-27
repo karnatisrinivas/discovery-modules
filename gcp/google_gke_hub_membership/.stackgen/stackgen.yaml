@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: GKE Membership
+  node:
+    label:
+      static: GKE Membership
+      template: ${membership_id}
+    display_type: default
+
+discovery:
+  type: google_gke_hub_membership
+  dnd_supported: false

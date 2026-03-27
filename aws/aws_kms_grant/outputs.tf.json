@@ -1,0 +1,17 @@
+{
+    "output": {
+        "grant_id": {
+            "description": "Unique ID for the KMS grant, useful for referencing specific grants",
+            "value": "${aws_kms_grant.this.grant_id}"
+        },
+        "grant_token": {
+            "description": "Temporary token used for immediate access to the grant",
+            "sensitive": true,
+            "value": "${aws_kms_grant.this.grant_token}"
+        },
+        "id": {
+            "description": "Primary identifier for the KMS grant resource",
+            "value": "${aws_kms_grant.this.id}"
+        }
+    }
+}

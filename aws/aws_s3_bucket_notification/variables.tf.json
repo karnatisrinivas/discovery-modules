@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "Specifies the name of the S3 bucket to configure; must be unique across all AWS accounts and regions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "eventbridge": [
+      {
+        "description": "Enables or disables EventBridge notifications for the S3 bucket; defaults to false if not specified.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "lambda_function": [
+      {
+        "description": "Defines a list of Lambda function configurations for S3 bucket events, including event types, optional filters (prefix/suffix), and the function's ARN.",
+        "nullable": true,
+        "type": "list(object({events: list(string),filter_prefix: optional(string),filter_suffix: optional(string),id: optional(string),lambda_function_arn: optional(string)}))"
+      }
+    ],
+    "queue": [
+      {
+        "description": "Defines a list of SQS queue configurations for S3 bucket events, specifying event types, optional filters (prefix/suffix), and the queue's ARN.",
+        "nullable": true,
+        "type": "list(object({events: list(string),filter_prefix: optional(string),filter_suffix: optional(string),id: optional(string),queue_arn: string}))"
+      }
+    ],
+    "topic": [
+      {
+        "description": "Defines a list of SNS topic configurations for S3 bucket events, specifying event types, optional filters (prefix/suffix), and the topic's ARN.",
+        "nullable": true,
+        "type": "list(object({events: list(string),filter_prefix: optional(string),filter_suffix: optional(string),id: optional(string),topic_arn: string}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for a single AWS Systems Manager instance.",
+            "value": "${data.aws_ssm_instances.this.id}"
+        },
+        "ids": {
+            "description": "A set of unique identifiers for multiple AWS Systems Manager instances.",
+            "value": "${data.aws_ssm_instances.this.ids}"
+        }
+    }
+}

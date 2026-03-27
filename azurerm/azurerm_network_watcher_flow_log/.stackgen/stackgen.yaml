@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Watcher Flow Log
+  node:
+    label:
+      static: Network Watcher Flow Log
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_network_watcher_flow_log
+  dnd_supported: false
+  references:
+    network_security_group_id:
+      from: azurerm_network_security_group
+      output: id
+    network_watcher_name:
+      from: azurerm_network_watcher
+      output: name

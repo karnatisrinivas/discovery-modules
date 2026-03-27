@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Region Autoscaler
+  node:
+    label:
+      static: Compute Region Autoscaler
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_region_autoscaler
+  dnd_supported: false

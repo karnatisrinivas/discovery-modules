@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "version_id": [
+      {
+        "description": "An optional identifier for a specific version of the CloudFormation type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

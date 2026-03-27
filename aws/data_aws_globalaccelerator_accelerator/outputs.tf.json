@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.arn}"
+        },
+        "attributes": {
+            "description": "Attributes related to flow logs configuration, including whether flow logs are enabled, the S3 bucket for logs, and the S3 prefix.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.attributes}"
+        },
+        "dns_name": {
+            "description": "The DNS name associated with the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.dns_name}"
+        },
+        "dual_stack_dns_name": {
+            "description": "The dual-stack DNS name that supports both IPv4 and IPv6 addresses.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.dual_stack_dns_name}"
+        },
+        "enabled": {
+            "description": "A boolean indicating whether the Global Accelerator is enabled.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.enabled}"
+        },
+        "hosted_zone_id": {
+            "description": "The ID of the Route 53 hosted zone associated with the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.hosted_zone_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.id}"
+        },
+        "ip_address_type": {
+            "description": "The type of IP addresses used by the Global Accelerator, either IPv4 or dual-stack.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.ip_address_type}"
+        },
+        "ip_sets": {
+            "description": "A list of IP sets containing IP addresses and their family (IPv4 or IPv6).",
+            "value": "${data.aws_globalaccelerator_accelerator.this.ip_sets}"
+        },
+        "name": {
+            "description": "The name of the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.name}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the Global Accelerator.",
+            "value": "${data.aws_globalaccelerator_accelerator.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DB Parameter Group
+  node:
+    label:
+      static: DB Parameter Group
+      template: ${name}
+    display_type: default
+
+variables:
+  skip_destroy:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Set to true if you do not wish the parameter group to be deleted at destroy time
+  parameter:
+    description: A list of parameter values
+    attributes: 
+      apply_method: 
+        label: Apply Method
+        description: The method to apply the parameter
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - immediate
+          - "pending-reboot"
+        ui_control: select
+      name: 
+        label: Name
+        description: The name of the parameter
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+      value: 
+        label: Value
+        description: The value of the parameter
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+
+discovery:
+  type: aws_db_parameter_group
+  dnd_supported: false
+  data_source: data_aws_db_parameter_group

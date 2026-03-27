@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "max_capacity": [
+      {
+        "description": "Maximum number of capacity units the scalable resource can handle.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "min_capacity": [
+      {
+        "description": "Minimum number of capacity units to be maintained for the scalable resource.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "resource_id": [
+      {
+        "description": "Defines the unique identifier of the resource to be scaled, such as an ARN or name, depending on the service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role_arn": [
+      {
+        "description": "IAM role ARN that grants Application Auto Scaling the required permissions to manage the scalable target.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "scalable_dimension": [
+      {
+        "description": "Specifies the scalable dimension of the resource, defining the aspect of the resource to be scaled (e.g., read/write capacity for a DynamoDB table); must match the service namespace and resource type.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service_namespace": [
+      {
+        "description": "Specifies the namespace of the AWS service for which the scalable target is applicable; must match the service providing the resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "suspended_state": [
+      {
+        "description": "Defines the suspended state configuration for scaling activities, specifying whether scale-in, scale-out, or both actions are temporarily suspended.",
+        "nullable": true,
+        "type": "list(object({dynamic_scaling_in_suspended: optional(bool),dynamic_scaling_out_suspended: optional(bool),scheduled_scaling_suspended: optional(bool)}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the resource; useful for organization, cost tracking, and management purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

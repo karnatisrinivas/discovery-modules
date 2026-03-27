@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Redshift Authentication Profile
+  node:
+    label:
+      static: Redshift Authentication Profile
+      template: Redshift Authentication Profile
+    display_type: default
+
+discovery:
+  type: aws_redshift_authentication_profile
+  dnd_supported: false

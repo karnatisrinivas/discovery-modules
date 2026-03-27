@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_app_configuration_keys.this.id}"
+        },
+        "items": {
+            "description": "List of key-value pairs from Azure App Configuration with metadata",
+            "value": "${data.azurerm_app_configuration_keys.this.items}"
+        }
+    }
+}

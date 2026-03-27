@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM policies or API calls referencing the endpoint",
+            "value": "${aws_neptune_cluster_endpoint.this.arn}"
+        },
+        "endpoint": {
+            "description": "Connection URL for accessing the Neptune database cluster",
+            "value": "${aws_neptune_cluster_endpoint.this.endpoint}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune cluster endpoint resource",
+            "value": "${aws_neptune_cluster_endpoint.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the Neptune cluster endpoint for categorization",
+            "value": "${aws_neptune_cluster_endpoint.this.tags_all}"
+        }
+    }
+}

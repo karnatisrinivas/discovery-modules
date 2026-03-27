@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lambda Function"
+  node:
+    label:
+      static: "[Data] Lambda Function"
+      template: ${function_name}
+    display_type: default
+
+discovery:
+  type: data_aws_lambda_function
+  dnd_supported: false

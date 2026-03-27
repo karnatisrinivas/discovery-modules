@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] IAM Role"
+  node:
+    label:
+      static: "[Data] IAM Role"
+      template: "[Data] IAM Role"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_role
+  dnd_supported: false

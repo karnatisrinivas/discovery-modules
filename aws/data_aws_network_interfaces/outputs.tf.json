@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific AWS network interface.",
+            "value": "${data.aws_network_interfaces.this.id}"
+        },
+        "ids": {
+            "description": "A list containing the unique identifiers of all the AWS network interfaces.",
+            "value": "${data.aws_network_interfaces.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the AWS network interfaces.",
+            "value": "${data.aws_network_interfaces.this.tags}"
+        }
+    }
+}

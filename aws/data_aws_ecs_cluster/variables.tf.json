@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cluster_name": [
+      {
+        "description": "The name assigned to the ECS cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

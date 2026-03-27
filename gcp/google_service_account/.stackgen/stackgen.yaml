@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Account
+  node:
+    label:
+      static: Service Account
+      template: ${display_name}
+    display_type: default
+
+variables:
+  description:
+    type: string
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether a service account is disabled or not. Defaults to false. This field has no effect during creation. Must be set after creation to disable a service account.
+  create_ignore_already_exists:
+    description: If set to true, skip service account creation if a service account with the same email already exists.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: google_service_account
+  dnd_supported: false
+  data_source: data_google_service_account

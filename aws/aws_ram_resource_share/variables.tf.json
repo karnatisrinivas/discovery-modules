@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "allow_external_principals": [
+      {
+        "description": "Indicates whether principals outside of your organization can be associated with the resource share.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the resource share, which must be unique and cannot contain spaces or special characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "permission_arns": [
+      {
+        "description": "List of ARNs for permissions to associate with the resource share; must be valid AWS RAM permission ARNs.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the resource for categorization and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for creating, updating, and deleting the resource share.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

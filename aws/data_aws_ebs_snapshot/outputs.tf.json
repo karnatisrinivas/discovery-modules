@@ -1,0 +1,68 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.arn}"
+        },
+        "data_encryption_key_id": {
+            "description": "The identifier of the data encryption key used to encrypt the snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.data_encryption_key_id}"
+        },
+        "description": {
+            "description": "The description of the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.description}"
+        },
+        "encrypted": {
+            "description": "Indicates whether the EBS snapshot is encrypted.",
+            "value": "${data.aws_ebs_snapshot.this.encrypted}"
+        },
+        "id": {
+            "description": "The ID of the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The AWS Key Management Service (KMS) key ID used to encrypt the snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.kms_key_id}"
+        },
+        "outpost_arn": {
+            "description": "The ARN of the Outpost where the snapshot resides, if applicable.",
+            "value": "${data.aws_ebs_snapshot.this.outpost_arn}"
+        },
+        "owner_alias": {
+            "description": "The AWS account alias of the snapshot's owner.",
+            "value": "${data.aws_ebs_snapshot.this.owner_alias}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the snapshot's owner.",
+            "value": "${data.aws_ebs_snapshot.this.owner_id}"
+        },
+        "snapshot_id": {
+            "description": "The unique identifier of the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.snapshot_id}"
+        },
+        "start_time": {
+            "description": "The time when the snapshot was initiated.",
+            "value": "${data.aws_ebs_snapshot.this.start_time}"
+        },
+        "state": {
+            "description": "The current state of the EBS snapshot (e.g., pending, completed, error).",
+            "value": "${data.aws_ebs_snapshot.this.state}"
+        },
+        "storage_tier": {
+            "description": "The storage tier of the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.storage_tier}"
+        },
+        "tags": {
+            "description": "The tags associated with the EBS snapshot.",
+            "value": "${data.aws_ebs_snapshot.this.tags}"
+        },
+        "volume_id": {
+            "description": "The ID of the EBS volume from which the snapshot was created.",
+            "value": "${data.aws_ebs_snapshot.this.volume_id}"
+        },
+        "volume_size": {
+            "description": "The size of the volume, in GiB, from which the snapshot was created.",
+            "value": "${data.aws_ebs_snapshot.this.volume_size}"
+        }
+    }
+}

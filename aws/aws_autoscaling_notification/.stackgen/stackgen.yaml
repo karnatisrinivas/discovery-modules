@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Autoscaling Notification
+  node:
+    label:
+      static: Autoscaling Notification
+      template: ${topic_arn}
+    display_type: default
+
+discovery:
+  type: aws_autoscaling_notification
+  dnd_supported: false
+  references:
+    group_names:
+      from: aws_autoscaling_group
+      output: autoscaling_group_name
+    topic_arn:
+      from: aws_sns_topic
+      output: arn

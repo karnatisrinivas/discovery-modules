@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Account IAM Binding
+  node:
+    label:
+      static: Service Account IAM Binding
+      template: Service Account IAM Binding
+    display_type: default
+
+discovery:
+  type: google_service_account_iam_binding
+  dnd_supported: false
+  references:
+    service_account_id:
+      from: google_service_account
+      output: id

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the access policy for the OpenSearch Serverless instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of access policy, which determines the kind of access control to apply.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

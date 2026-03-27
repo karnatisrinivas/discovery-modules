@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the data source of AWS EC2 instance types.",
+            "value": "${data.aws_ec2_instance_types.this.id}"
+        },
+        "instance_types": {
+            "description": "A list of available AWS EC2 instance types.",
+            "value": "${data.aws_ec2_instance_types.this.instance_types}"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "calculator_arn": {
+            "description": "The Amazon Resource Name (ARN) of the route calculator.",
+            "value": "${data.aws_location_route_calculator.this.calculator_arn}"
+        },
+        "create_time": {
+            "description": "The time when the route calculator was created.",
+            "value": "${data.aws_location_route_calculator.this.create_time}"
+        },
+        "data_source": {
+            "description": "The data source used by the route calculator.",
+            "value": "${data.aws_location_route_calculator.this.data_source}"
+        },
+        "description": {
+            "description": "A description of the route calculator.",
+            "value": "${data.aws_location_route_calculator.this.description}"
+        },
+        "id": {
+            "description": "The identifier of the route calculator.",
+            "value": "${data.aws_location_route_calculator.this.id}"
+        },
+        "tags": {
+            "description": "Tags associated with the route calculator.",
+            "value": "${data.aws_location_route_calculator.this.tags}"
+        },
+        "update_time": {
+            "description": "The time when the route calculator was last updated.",
+            "value": "${data.aws_location_route_calculator.this.update_time}"
+        }
+    }
+}

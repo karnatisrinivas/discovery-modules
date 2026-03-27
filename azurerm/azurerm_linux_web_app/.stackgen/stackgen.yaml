@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Linux Web App
+  node:
+    label:
+      static: Linux Web App
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_linux_web_app
+  dnd_supported: false
+  references:
+    virtual_network_subnet_id:
+      from: data_azurerm_subnet
+      output: id
+    service_plan_id:
+      from: data_azurerm_service_plan
+      output: id

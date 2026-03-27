@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Network Insights Path"
+  node:
+    label:
+      static: "[Data] Ec2 Network Insights Path"
+      template: "[Data] Ec2 Network Insights Path"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_network_insights_path
+  dnd_supported: false

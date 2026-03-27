@@ -1,0 +1,9 @@
+{
+  "variable": {
+    "dhcp_options_id": [{
+      "description": "The ID of the DHCP Options Set",
+      "type": "string",
+      "nullable": false
+    }]
+  }
+}

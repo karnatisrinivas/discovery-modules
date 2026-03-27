@@ -1,0 +1,18 @@
+{
+    "name": "aws_elasticache_parameter_group",
+    "policy":{
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "elasticache:CreateCacheParameterGroup",
+                    "elasticache:ModifyCacheParameterGroup"
+                ],
+                "Resource": [
+                    "${module.module_name.arn}"
+                ]
+            }
+        ]
+    }
+}

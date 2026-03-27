@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the IAM account password policy.",
+            "value": "${aws_iam_account_password_policy.this.id}"
+        }
+    }
+}

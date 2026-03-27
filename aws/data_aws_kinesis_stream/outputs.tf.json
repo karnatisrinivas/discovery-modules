@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.arn}"
+        },
+        "closed_shards": {
+            "description": "A set of shard IDs that have been closed in the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.closed_shards}"
+        },
+        "creation_timestamp": {
+            "description": "The timestamp, in Unix epoch time, when the Kinesis stream was created.",
+            "value": "${data.aws_kinesis_stream.this.creation_timestamp}"
+        },
+        "encryption_type": {
+            "description": "The encryption type used on the Kinesis stream, e.g., NONE or KMS.",
+            "value": "${data.aws_kinesis_stream.this.encryption_type}"
+        },
+        "id": {
+            "description": "The unique identifier for the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The AWS Key Management Service (KMS) key ID used for encryption.",
+            "value": "${data.aws_kinesis_stream.this.kms_key_id}"
+        },
+        "open_shards": {
+            "description": "A set of shard IDs that are currently open in the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.open_shards}"
+        },
+        "retention_period": {
+            "description": "The number of hours data records are retained in the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.retention_period}"
+        },
+        "shard_level_metrics": {
+            "description": "A set of shard-level metrics that are enabled for the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.shard_level_metrics}"
+        },
+        "status": {
+            "description": "The current status of the Kinesis stream, e.g., ACTIVE or CREATING.",
+            "value": "${data.aws_kinesis_stream.this.status}"
+        },
+        "stream_mode_details": {
+            "description": "Details about the mode of the Kinesis stream, such as on-demand or provisioned.",
+            "value": "${data.aws_kinesis_stream.this.stream_mode_details}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Kinesis stream.",
+            "value": "${data.aws_kinesis_stream.this.tags}"
+        }
+    }
+}

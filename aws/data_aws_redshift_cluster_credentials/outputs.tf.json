@@ -1,0 +1,12 @@
+{
+    "output": {
+        "expiration": {
+            "description": "The time at which the Redshift cluster credentials will expire.",
+            "value": "${data.aws_redshift_cluster_credentials.this.expiration}"
+        },
+        "id": {
+            "description": "A unique identifier for the Redshift cluster credentials.",
+            "value": "${data.aws_redshift_cluster_credentials.this.id}"
+        }
+    }
+}

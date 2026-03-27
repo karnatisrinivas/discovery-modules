@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Instance Types"
+  node:
+    label:
+      static: "[Data] Ec2 Instance Types"
+      template: "[Data] Ec2 Instance Types"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_instance_types
+  dnd_supported: false

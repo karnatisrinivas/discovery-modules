@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the default network tier in the project, useful for referencing.",
+            "value": "${google_compute_project_default_network_tier.this.id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appstream Image"
+  node:
+    label:
+      static: "[Data] Appstream Image"
+      template: "[Data] Appstream Image"
+    display_type: default
+
+discovery:
+  type: data_aws_appstream_image
+  dnd_supported: false

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: App Configuration Key
+  node:
+    label:
+      static: App Configuration Key
+      template: ${key}
+    display_type: default
+
+discovery:
+  type: azurerm_app_configuration_key
+  dnd_supported: false
+  references:
+    configuration_store_id:
+      from: azurerm_app_configuration
+      output: id
+    vault_key_reference:
+      from: azurerm_key_vault_secret
+      output: versionless_id

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[DATA] KMS Key Ring"
+  node:
+    label:
+      static: "[DATA] KMS Key Ring"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_google_kms_key_ring
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Appconfig Environments"
+  node:
+    label:
+      static: "[Data] Appconfig Environments"
+      template: "[Data] Appconfig Environments"
+    display_type: default
+
+discovery:
+  type: data_aws_appconfig_environments
+  dnd_supported: false

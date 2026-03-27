@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Disk Encryption Set
+  node:
+    label:
+      static: Disk Encryption Set
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_disk_encryption_set
+  dnd_supported: false
+  references:
+    key_vault_key_id:
+      from: azurerm_key_vault_key
+      output: versionless_id

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS ECR repositories.",
+            "value": "${data.aws_ecr_repositories.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the AWS ECR repositories.",
+            "value": "${data.aws_ecr_repositories.this.names}"
+        }
+    }
+}

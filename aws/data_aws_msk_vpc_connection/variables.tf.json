@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) uniquely identifying the AWS MSK VPC connection.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

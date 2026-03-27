@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "preferred_instance_types": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

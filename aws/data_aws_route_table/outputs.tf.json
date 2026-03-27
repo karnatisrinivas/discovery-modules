@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the route table.",
+            "value": "${data.aws_route_table.this.arn}"
+        },
+        "associations": {
+            "description": "A list of associations between the route table and subnets or gateways.",
+            "value": "${data.aws_route_table.this.associations}"
+        },
+        "gateway_id": {
+            "description": "The ID of the gateway associated with the route table.",
+            "value": "${data.aws_route_table.this.gateway_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the route table.",
+            "value": "${data.aws_route_table.this.id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the route table.",
+            "value": "${data.aws_route_table.this.owner_id}"
+        },
+        "route_table_id": {
+            "description": "The ID of the route table.",
+            "value": "${data.aws_route_table.this.route_table_id}"
+        },
+        "routes": {
+            "description": "A list of routes in the route table.",
+            "value": "${data.aws_route_table.this.routes}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet associated with the route table.",
+            "value": "${data.aws_route_table.this.subnet_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the route table.",
+            "value": "${data.aws_route_table.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC where the route table is located.",
+            "value": "${data.aws_route_table.this.vpc_id}"
+        }
+    }
+}

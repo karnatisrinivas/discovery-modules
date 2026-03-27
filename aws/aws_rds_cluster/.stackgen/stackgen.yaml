@@ -1,0 +1,145 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS RDS Cluster
+  node:
+    label:
+      static: AWS RDS Cluster
+      template: AWS RDS Cluster
+    display_type: default
+
+variables:
+  engine:
+    description: The name of the database engine to be used for this DB cluster
+    type: string
+    options: 
+      - mysql
+      - postgres
+      - "aurora-mysql"
+      - "aurora-postgresql"
+    ui_control: select
+  engine_mode:
+    options: 
+      - provisioned
+      - serverless
+      - parallelquery
+      - multimaster
+    ui_control: select
+    description: The DB engine mode of the DB cluster
+    type: string
+  storage_encrypted:
+    description: Specifies whether the DB cluster is encrypted
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  skip_final_snapshot:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: If true, skip the creation of a final snapshot
+    type: bool
+  enable_global_write_forwarding:
+    description: Specifies whether to enable global write forwarding for the DB cluster
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  enable_local_write_forwarding:
+    ui_control: select
+    description: Specifies whether to enable local write forwarding for the DB cluster
+    type: bool
+    options: 
+      - true
+      - false
+  scaling_configuration:
+    attributes: 
+      min_capacity: 
+        label: Min Capacity
+        validation: 
+          dataType: number
+          required: false
+        type: number
+        ui_control: text
+      seconds_before_timeout: 
+        type: number
+        ui_control: text
+        label: Seconds Before Timeout
+        validation: 
+          required: false
+          dataType: number
+      seconds_until_auto_pause: 
+        label: Seconds Until Auto Pause
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      timeout_action: 
+        label: Timeout Action
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - ForceApplyCapacityChange
+          - RollbackCapacityChange
+        ui_control: select
+      auto_pause: 
+        label: Auto Pause
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      max_capacity: 
+        validation: 
+          dataType: number
+          required: false
+        type: number
+        ui_control: text
+        label: Max Capacity
+    description: Configuration block for scaling settings
+  serverlessv2_scaling_configuration:
+    description: Configuration block for scaling settings
+    attributes: 
+      max_capacity: 
+        ui_control: text
+        label: Max Capacity
+        validation: 
+          required: true
+          dataType: number
+        type: number
+      min_capacity: 
+        type: number
+        ui_control: text
+        label: Min Capacity
+        validation: 
+          required: true
+          dataType: number
+      seconds_until_auto_pause: 
+        label: Seconds Until Auto Pause
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+
+discovery:
+  type: aws_rds_cluster
+  dnd_supported: false
+  data_source: data_aws_rds_cluster
+  references:
+    db_subnet_group_name:
+      from: aws_db_subnet_group
+      output: name
+    vpc_security_group_ids:
+      from: aws_security_group
+      output: id

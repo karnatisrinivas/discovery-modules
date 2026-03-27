@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "backend_service": [
+      {
+        "description": "Specifies the backend service to which the TCP proxy forwards traffic, must be in the same region as the proxy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the user-provided text description for the TCP proxy resource, providing additional context or metadata.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the regional TCP proxy, adhering to Google Cloud's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "proxy_bind": [
+      {
+        "description": "Indicates whether the proxy should bind to the IP address and port specified. Only applicable for regional target TCP proxies.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "proxy_header": [
+      {
+        "description": "Specifies the type of proxy header to be sent to the backend, determining how client connection information is passed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for operations, specifying the maximum duration for creating, updating, or deleting the resource.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

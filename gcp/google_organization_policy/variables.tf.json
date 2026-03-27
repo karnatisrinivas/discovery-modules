@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "boolean_policy": [
+      {
+        "description": "Defines whether to enforce a boolean constraint on the organization, specifying true or false based on the policy requirement.",
+        "nullable": true,
+        "type": "list(object({enforced: bool}))"
+      }
+    ],
+    "constraint": [
+      {
+        "description": "Defines the specific constraint to enforce within the organization policy, such as restrictions on resource configurations or usage.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "google_organization_policy_version": [
+      {
+        "description": "Specifies the version of the organization policy schema to use; must be a valid schema version.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "list_policy": [
+      {
+        "description": "Defines the rules and constraints for a list-based organization policy, specifying allowed or denied values for resources within the organization.",
+        "nullable": true,
+        "type": "list(object({inherit_from_parent: optional(bool),suggested_value: optional(string),allow: list(object({all: optional(bool),values: optional(list(string))})),deny: list(object({all: optional(bool),values: optional(list(string))}))}))"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "ID of the organization where the policy will be applied. Must be a valid organization ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "restore_policy": [
+      {
+        "description": "Specifies whether the organization policy can be restored to its previous state, requiring adherence to organizational compliance rules.",
+        "nullable": true,
+        "type": "list(object({default: bool}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration settings for create, update, and delete operations on the organization policy, ensuring proper execution timing.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

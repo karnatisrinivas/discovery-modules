@@ -1,0 +1,72 @@
+{
+    "output": {
+        "component": {
+            "description": "A list of components used in the container recipe, including their ARNs and parameters.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.component}"
+        },
+        "container_type": {
+            "description": "The type of container, such as Docker, used in the recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.container_type}"
+        },
+        "date_created": {
+            "description": "The date when the container recipe was created.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.date_created}"
+        },
+        "description": {
+            "description": "A brief description of the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.description}"
+        },
+        "dockerfile_template_data": {
+            "description": "The Dockerfile template used in the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.dockerfile_template_data}"
+        },
+        "encrypted": {
+            "description": "Indicates whether the container image is encrypted.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.encrypted}"
+        },
+        "id": {
+            "description": "The unique identifier of the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.id}"
+        },
+        "instance_configuration": {
+            "description": "The configuration for the instance used to build the container image, including block device mappings and base image.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.instance_configuration}"
+        },
+        "kms_key_id": {
+            "description": "The KMS key ID used for encrypting the container image.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.kms_key_id}"
+        },
+        "name": {
+            "description": "The name of the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.name}"
+        },
+        "owner": {
+            "description": "The owner of the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.owner}"
+        },
+        "parent_image": {
+            "description": "The parent image used as the base for the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.parent_image}"
+        },
+        "platform": {
+            "description": "The platform for which the container recipe is intended, such as Linux or Windows.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.platform}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.tags}"
+        },
+        "target_repository": {
+            "description": "The target repository where the container image will be stored, including the repository name and service.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.target_repository}"
+        },
+        "version": {
+            "description": "The version number of the container recipe.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.version}"
+        },
+        "working_directory": {
+            "description": "The working directory used during the image build process.",
+            "value": "${data.aws_imagebuilder_container_recipe.this.working_directory}"
+        }
+    }
+}

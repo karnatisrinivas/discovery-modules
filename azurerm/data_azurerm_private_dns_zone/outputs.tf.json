@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Private DNS Zone.",
+            "value": "${data.azurerm_private_dns_zone.this.id}"
+        },
+        "name": {
+            "description": "The name of the Azure Private DNS Zone.",
+            "value": "${data.azurerm_private_dns_zone.this.name}"
+        },
+        "resource_group_name": {
+            "description": "The name of the resource group where the Azure Private DNS Zone is located.",
+            "value": "${data.azurerm_private_dns_zone.this.resource_group_name}"
+        }
+    }
+}

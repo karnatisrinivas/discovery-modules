@@ -1,0 +1,12 @@
+{
+    "output": {
+        "details": {
+            "description": "A list of details for each constraint within the AWS Service Catalog portfolio, including identifiers and descriptions.",
+            "value": "${data.aws_servicecatalog_portfolio_constraints.this.details}"
+        },
+        "id": {
+            "description": "The unique identifier for the portfolio constraints in the AWS Service Catalog.",
+            "value": "${data.aws_servicecatalog_portfolio_constraints.this.id}"
+        }
+    }
+}

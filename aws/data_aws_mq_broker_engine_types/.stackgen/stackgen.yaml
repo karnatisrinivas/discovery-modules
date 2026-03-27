@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Mq Broker Engine Types"
+  node:
+    label:
+      static: "[Data] Mq Broker Engine Types"
+      template: "[Data] Mq Broker Engine Types"
+    display_type: default
+
+discovery:
+  type: data_aws_mq_broker_engine_types
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM policy of the compute instance",
+            "value": "${google_compute_instance_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM policy associated with the compute instance",
+            "value": "${google_compute_instance_iam_policy.this.id}"
+        }
+    }
+}

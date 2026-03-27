@@ -1,0 +1,16 @@
+{
+    "output": {
+        "display_name": {
+            "description": "The display name of the Azure AD service principal password.",
+            "value": "${azuread_service_principal_password.this.display_name}"
+        },
+        "id": {
+            "description": "The unique identifier of the Azure AD service principal password.",
+            "value": "${azuread_service_principal_password.this.id}"
+        },
+        "key_id": {
+            "description": "The key identifier associated with the Azure AD service principal password.",
+            "value": "${azuread_service_principal_password.this.key_id}"
+        }
+    }
+}

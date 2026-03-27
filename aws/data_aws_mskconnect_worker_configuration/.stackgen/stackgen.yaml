@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Mskconnect Worker Configuration"
+  node:
+    label:
+      static: "[Data] Mskconnect Worker Configuration"
+      template: "[Data] Mskconnect Worker Configuration"
+    display_type: default
+
+discovery:
+  type: data_aws_mskconnect_worker_configuration
+  dnd_supported: false

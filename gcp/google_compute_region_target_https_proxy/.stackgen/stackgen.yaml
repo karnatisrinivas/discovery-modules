@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Region Target Https Proxy
+  node:
+    label:
+      static: Compute Region Target Https Proxy
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_region_target_https_proxy
+  dnd_supported: false
+  references:
+    ssl_certificates:
+      from: google_compute_region_ssl_certificate
+      output: id
+    url_map:
+      from: google_compute_region_url_map
+      output: id

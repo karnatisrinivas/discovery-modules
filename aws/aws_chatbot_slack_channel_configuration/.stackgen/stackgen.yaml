@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Chatbot Slack Channel Configuration
+  node:
+    label:
+      static: Chatbot Slack Channel Configuration
+      template: Chatbot Slack Channel Configuration
+    display_type: default
+
+discovery:
+  type: aws_chatbot_slack_channel_configuration
+  dnd_supported: false
+  references:
+    iam_role_arn:
+      from: aws_iam_role
+      output: arn

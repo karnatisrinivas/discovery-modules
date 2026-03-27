@@ -1,0 +1,44 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Connect queue.",
+            "value": "${data.aws_connect_queue.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the Connect queue.",
+            "value": "${data.aws_connect_queue.this.description}"
+        },
+        "hours_of_operation_id": {
+            "description": "The ID that specifies the hours during which the queue is operational.",
+            "value": "${data.aws_connect_queue.this.hours_of_operation_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Connect queue.",
+            "value": "${data.aws_connect_queue.this.id}"
+        },
+        "max_contacts": {
+            "description": "The maximum number of contacts that can be handled by the queue at any given time.",
+            "value": "${data.aws_connect_queue.this.max_contacts}"
+        },
+        "name": {
+            "description": "The name assigned to the Connect queue.",
+            "value": "${data.aws_connect_queue.this.name}"
+        },
+        "outbound_caller_config": {
+            "description": "Configuration details for outbound calls made from the queue, including caller ID settings.",
+            "value": "${data.aws_connect_queue.this.outbound_caller_config}"
+        },
+        "queue_id": {
+            "description": "The identifier of the queue within AWS Connect.",
+            "value": "${data.aws_connect_queue.this.queue_id}"
+        },
+        "status": {
+            "description": "The current status of the Connect queue, such as active or inactive.",
+            "value": "${data.aws_connect_queue.this.status}"
+        },
+        "tags": {
+            "description": "A map of key-value pairs assigned as tags to the Connect queue.",
+            "value": "${data.aws_connect_queue.this.tags}"
+        }
+    }
+}

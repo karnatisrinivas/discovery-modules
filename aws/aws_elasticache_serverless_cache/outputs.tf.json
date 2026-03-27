@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API interactions",
+            "value": "${aws_elasticache_serverless_cache.this.arn}"
+        },
+        "create_time": {
+            "description": "Timestamp indicating when the cache was created",
+            "value": "${aws_elasticache_serverless_cache.this.create_time}"
+        },
+        "endpoint": {
+            "description": "Primary endpoint for connecting to the serverless cache",
+            "value": "${aws_elasticache_serverless_cache.this.endpoint}"
+        },
+        "full_engine_version": {
+            "description": "Specifies the detailed engine version of the cache",
+            "value": "${aws_elasticache_serverless_cache.this.full_engine_version}"
+        },
+        "id": {
+            "description": "Unique identifier for the cache instance",
+            "value": "${aws_elasticache_serverless_cache.this.id}"
+        },
+        "reader_endpoint": {
+            "description": "Endpoint used for read-only operations on the cache",
+            "value": "${aws_elasticache_serverless_cache.this.reader_endpoint}"
+        },
+        "status": {
+            "description": "Current operational status of the serverless cache",
+            "value": "${aws_elasticache_serverless_cache.this.status}"
+        },
+        "tags_all": {
+            "description": "Comprehensive set of tags associated with the resource",
+            "value": "${aws_elasticache_serverless_cache.this.tags_all}"
+        }
+    }
+}

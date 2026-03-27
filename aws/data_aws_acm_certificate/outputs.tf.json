@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ACM certificate.",
+            "value": "${data.aws_acm_certificate.this.arn}"
+        },
+        "certificate": {
+            "description": "The PEM-encoded certificate content.",
+            "value": "${data.aws_acm_certificate.this.certificate}"
+        },
+        "certificate_chain": {
+            "description": "The PEM-encoded certificate chain content.",
+            "value": "${data.aws_acm_certificate.this.certificate_chain}"
+        },
+        "domain": {
+            "description": "The domain name for which the certificate is issued.",
+            "value": "${data.aws_acm_certificate.this.domain}"
+        },
+        "id": {
+            "description": "The unique identifier of the ACM certificate.",
+            "value": "${data.aws_acm_certificate.this.id}"
+        },
+        "status": {
+            "description": "The current status of the ACM certificate.",
+            "value": "${data.aws_acm_certificate.this.status}"
+        },
+        "tags": {
+            "description": "The tags associated with the ACM certificate.",
+            "value": "${data.aws_acm_certificate.this.tags}"
+        }
+    }
+}

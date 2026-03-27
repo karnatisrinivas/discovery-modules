@@ -1,0 +1,132 @@
+{
+    "output": {
+        "architectures": {
+            "description": "The instruction set architecture for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.architectures}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying the Lambda function.",
+            "value": "${data.aws_lambda_function.this.arn}"
+        },
+        "code_sha256": {
+            "description": "The SHA-256 hash of the function's deployment package.",
+            "value": "${data.aws_lambda_function.this.code_sha256}"
+        },
+        "code_signing_config_arn": {
+            "description": "The ARN of the code signing configuration associated with the Lambda function.",
+            "value": "${data.aws_lambda_function.this.code_signing_config_arn}"
+        },
+        "dead_letter_config": {
+            "description": "The configuration for a dead letter queue that receives unprocessed messages.",
+            "value": "${data.aws_lambda_function.this.dead_letter_config}"
+        },
+        "description": {
+            "description": "The description of the Lambda function.",
+            "value": "${data.aws_lambda_function.this.description}"
+        },
+        "environment": {
+            "description": "The environment variables available to the Lambda function.",
+            "value": "${data.aws_lambda_function.this.environment}"
+        },
+        "ephemeral_storage": {
+            "description": "The size of the ephemeral storage available to the Lambda function in MB.",
+            "value": "${data.aws_lambda_function.this.ephemeral_storage}"
+        },
+        "file_system_config": {
+            "description": "The configuration for mounting an Amazon EFS file system.",
+            "value": "${data.aws_lambda_function.this.file_system_config}"
+        },
+        "handler": {
+            "description": "The function within your code that Lambda calls to begin execution.",
+            "value": "${data.aws_lambda_function.this.handler}"
+        },
+        "id": {
+            "description": "The unique identifier for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.id}"
+        },
+        "image_uri": {
+            "description": "The URI of the container image used by the Lambda function.",
+            "value": "${data.aws_lambda_function.this.image_uri}"
+        },
+        "invoke_arn": {
+            "description": "The ARN used to invoke the Lambda function.",
+            "value": "${data.aws_lambda_function.this.invoke_arn}"
+        },
+        "kms_key_arn": {
+            "description": "The ARN of the KMS key used to encrypt function's environment variables.",
+            "value": "${data.aws_lambda_function.this.kms_key_arn}"
+        },
+        "last_modified": {
+            "description": "The date and time the function was last modified.",
+            "value": "${data.aws_lambda_function.this.last_modified}"
+        },
+        "layers": {
+            "description": "The list of Lambda Layer ARNs attached to the function.",
+            "value": "${data.aws_lambda_function.this.layers}"
+        },
+        "logging_config": {
+            "description": "The logging configuration for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.logging_config}"
+        },
+        "memory_size": {
+            "description": "The amount of memory available to the Lambda function in MB.",
+            "value": "${data.aws_lambda_function.this.memory_size}"
+        },
+        "qualified_arn": {
+            "description": "The ARN of the Lambda function version.",
+            "value": "${data.aws_lambda_function.this.qualified_arn}"
+        },
+        "qualified_invoke_arn": {
+            "description": "The ARN to invoke the specific version of the Lambda function.",
+            "value": "${data.aws_lambda_function.this.qualified_invoke_arn}"
+        },
+        "reserved_concurrent_executions": {
+            "description": "The reserved number of concurrent executions for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.reserved_concurrent_executions}"
+        },
+        "role": {
+            "description": "The IAM role ARN that the Lambda function assumes during execution.",
+            "value": "${data.aws_lambda_function.this.role}"
+        },
+        "runtime": {
+            "description": "The runtime environment for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.runtime}"
+        },
+        "signing_job_arn": {
+            "description": "The ARN of the signing job for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.signing_job_arn}"
+        },
+        "signing_profile_version_arn": {
+            "description": "The ARN of the signing profile version for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.signing_profile_version_arn}"
+        },
+        "source_code_hash": {
+            "description": "The base64-encoded SHA-256 hash of the deployment package.",
+            "value": "${data.aws_lambda_function.this.source_code_hash}"
+        },
+        "source_code_size": {
+            "description": "The size of the deployment package in bytes.",
+            "value": "${data.aws_lambda_function.this.source_code_size}"
+        },
+        "tags": {
+            "description": "A map of tags to assign to the Lambda function.",
+            "value": "${data.aws_lambda_function.this.tags}"
+        },
+        "timeout": {
+            "description": "The maximum amount of time the Lambda function can run in seconds.",
+            "value": "${data.aws_lambda_function.this.timeout}"
+        },
+        "tracing_config": {
+            "description": "The tracing mode for AWS X-Ray.",
+            "value": "${data.aws_lambda_function.this.tracing_config}"
+        },
+        "version": {
+            "description": "The version of the Lambda function.",
+            "value": "${data.aws_lambda_function.this.version}"
+        },
+        "vpc_config": {
+            "description": "The VPC configuration for the Lambda function.",
+            "value": "${data.aws_lambda_function.this.vpc_config}"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies a user-friendly description of the workload identity pool, providing context about its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Indicates whether the workload identity pool is disabled; set to true to disable the pool, preventing new identities from being created.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies the user-friendly name for the workload identity pool, which must be unique within the project and can include alphanumeric characters, spaces, and special characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations within the workload identity pool.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "workload_identity_pool_id": [
+      {
+        "description": "Unique identifier for the workload identity pool, must be globally unique and comply with Google Cloud resource naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

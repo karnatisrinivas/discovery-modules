@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dynamodb Table"
+  node:
+    label:
+      static: "[Data] Dynamodb Table"
+      template: "[Data] Dynamodb Table"
+    display_type: default
+
+discovery:
+  type: data_aws_dynamodb_table
+  dnd_supported: false

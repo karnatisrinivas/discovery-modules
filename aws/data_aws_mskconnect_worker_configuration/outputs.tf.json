@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.id}"
+        },
+        "latest_revision": {
+            "description": "The latest revision number of the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.latest_revision}"
+        },
+        "properties_file_content": {
+            "description": "The content of the properties file associated with the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.properties_file_content}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MSK Connect Worker Configuration.",
+            "value": "${data.aws_mskconnect_worker_configuration.this.tags}"
+        }
+    }
+}

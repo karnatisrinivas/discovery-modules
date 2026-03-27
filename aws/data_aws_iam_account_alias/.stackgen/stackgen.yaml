@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Account Alias"
+  node:
+    label:
+      static: "[Data] Iam Account Alias"
+      template: "[Data] Iam Account Alias"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_account_alias
+  dnd_supported: false

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Windows Web App
+  node:
+    label:
+      static: Windows Web App
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_windows_web_app
+  dnd_supported: false
+  references:
+    service_plan_id:
+      from: azurerm_service_plan
+      output: id

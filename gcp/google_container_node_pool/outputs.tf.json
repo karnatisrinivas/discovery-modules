@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "An identifier for the resource with format {{project}}/{{location}}/{{cluster}}/{{name}}",
+            "value": "${google_container_node_pool.this.id}"
+        },
+        "instance_group_urls": {
+            "description": "The resource URLs of the managed instance groups associated with this node pool.",
+            "value": "${google_container_node_pool.this.instance_group_urls}"
+        },
+        "managed_instance_group_urls": {
+            "description": "List of instance group URLs which have been assigned to this node pool.",
+            "value": "${google_container_node_pool.this.managed_instance_group_urls}"
+        }
+    }
+}

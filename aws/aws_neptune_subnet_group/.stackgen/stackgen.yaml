@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Neptune Subnet Group
+  node:
+    label:
+      static: Neptune Subnet Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_neptune_subnet_group
+  dnd_supported: false
+  references:
+    subnet_ids:
+      from: aws_subnet
+      output: id

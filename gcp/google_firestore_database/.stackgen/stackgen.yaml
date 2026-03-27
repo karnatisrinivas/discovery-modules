@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Firestore Database
+  node:
+    label:
+      static: Firestore Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_firestore_database
+  dnd_supported: false

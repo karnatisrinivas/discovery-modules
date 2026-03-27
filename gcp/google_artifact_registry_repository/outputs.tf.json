@@ -1,0 +1,28 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the repository was created",
+            "value": "${google_artifact_registry_repository.this.create_time}"
+        },
+        "effective_labels": {
+            "description": "Resolved labels applied to the repository for categorization or metadata",
+            "value": "${google_artifact_registry_repository.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the repository in configurations",
+            "value": "${google_artifact_registry_repository.this.id}"
+        },
+        "name": {
+            "description": "Name of the repository used for identification within Artifact Registry",
+            "value": "${google_artifact_registry_repository.this.name}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for organizing and managing the repository",
+            "value": "${google_artifact_registry_repository.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp indicating the last update made to the repository",
+            "value": "${google_artifact_registry_repository.this.update_time}"
+        }
+    }
+}

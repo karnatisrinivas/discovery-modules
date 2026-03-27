@@ -1,0 +1,44 @@
+{
+    "output": {
+        "address": {
+            "description": "DNS address for connecting to the Neptune cluster instance",
+            "value": "${aws_neptune_cluster_instance.this.address}"
+        },
+        "arn": {
+            "description": "Amazon Resource Name used for IAM and API operations",
+            "value": "${aws_neptune_cluster_instance.this.arn}"
+        },
+        "dbi_resource_id": {
+            "description": "Unique database resource ID for tracking the cluster instance",
+            "value": "${aws_neptune_cluster_instance.this.dbi_resource_id}"
+        },
+        "endpoint": {
+            "description": "Endpoint URL for connecting applications to the database",
+            "value": "${aws_neptune_cluster_instance.this.endpoint}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune cluster instance",
+            "value": "${aws_neptune_cluster_instance.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "ARN of the KMS key used for encrypting the database instance",
+            "value": "${aws_neptune_cluster_instance.this.kms_key_arn}"
+        },
+        "storage_encrypted": {
+            "description": "Indicates if storage encryption is enabled for the instance",
+            "value": "${aws_neptune_cluster_instance.this.storage_encrypted}"
+        },
+        "storage_type": {
+            "description": "Specifies the storage type used by the Neptune instance",
+            "value": "${aws_neptune_cluster_instance.this.storage_type}"
+        },
+        "tags_all": {
+            "description": "Consolidated list of tags assigned to the Neptune instance",
+            "value": "${aws_neptune_cluster_instance.this.tags_all}"
+        },
+        "writer": {
+            "description": "Indicates if the instance acts as the writer in the cluster",
+            "value": "${aws_neptune_cluster_instance.this.writer}"
+        }
+    }
+}

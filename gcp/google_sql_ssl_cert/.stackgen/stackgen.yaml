@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Sql Ssl Cert
+  node:
+    label:
+      static: Sql Ssl Cert
+      template: ${common_name}
+    display_type: default
+
+discovery:
+  type: google_sql_ssl_cert
+  dnd_supported: false
+  references:
+    instance:
+      from: google_sql_database_instance
+      output: name

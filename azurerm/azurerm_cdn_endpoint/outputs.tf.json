@@ -1,0 +1,12 @@
+{
+    "output": {
+        "fqdn": {
+            "description": "The Fully Qualified Domain Name of the CDN Endpoint.",
+            "value": "${azurerm_cdn_endpoint.this.fqdn}"
+        },
+        "id": {
+            "description": "The ID of the CDN Endpoint.",
+            "value": "${azurerm_cdn_endpoint.this.id}"
+        }
+    }
+}

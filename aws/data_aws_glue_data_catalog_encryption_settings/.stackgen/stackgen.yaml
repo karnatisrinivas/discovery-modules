@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Glue Data Catalog Encryption Settings"
+  node:
+    label:
+      static: "[Data] Glue Data Catalog Encryption Settings"
+      template: "[Data] Glue Data Catalog Encryption Settings"
+    display_type: default
+
+discovery:
+  type: data_aws_glue_data_catalog_encryption_settings
+  dnd_supported: false

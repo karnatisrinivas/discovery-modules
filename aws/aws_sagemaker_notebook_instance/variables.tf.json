@@ -1,0 +1,116 @@
+{
+  "variable": {
+    "accelerator_types": [
+      {
+        "description": "Defines the hardware accelerator types to be attached to the notebook instance, such as GPU options.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "additional_code_repositories": [
+      {
+        "description": "List of additional Git repositories containing custom code, which will be cloned into the notebook instance; must be accessible via HTTPS.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "default_code_repository": [
+      {
+        "description": "Specifies the default Git repository to clone for the notebook instance, either a repository name in AWS CodeCommit or a URL pointing to a Git repository.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "direct_internet_access": [
+      {
+        "description": "Specifies whether the notebook instance has access to the internet; must be \"Enabled\" or \"Disabled\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instance_metadata_service_configuration": [
+      {
+        "description": "Configuration for the instance metadata service, including options like enabling or disabling the service and setting the minimum instance metadata version.",
+        "nullable": true,
+        "type": "list(object({minimum_instance_metadata_service_version: optional(string)}))"
+      }
+    ],
+    "instance_type": [
+      {
+        "description": "Specifies the type of ML compute instance to use for the SageMaker notebook; must be a valid EC2 instance type supported by SageMaker.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "kms_key_id": [
+      {
+        "description": "Specifies the KMS key ARN used to encrypt data at rest for the SageMaker notebook instance; must be a valid key in the same region as the instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "lifecycle_config_name": [
+      {
+        "description": "Name of the lifecycle configuration to attach to the SageMaker notebook instance; must be pre-created in the same AWS region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the SageMaker notebook instance; must be unique within your AWS account and comply with naming restrictions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "platform_identifier": [
+      {
+        "description": "Specifies the platform identifier for the notebook instance, determining the underlying hardware and software configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "role_arn": [
+      {
+        "description": "IAM role ARN to grant the notebook instance permissions for SageMaker operations and accessing AWS resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "root_access": [
+      {
+        "description": "Specifies whether the notebook instance allows root access; must be \"Enabled\" or \"Disabled\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_groups": [
+      {
+        "description": "Specifies the security groups to associate with the notebook instance; must be in the same VPC as the instance.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "subnet_id": [
+      {
+        "description": "ID of the subnet within which the SageMaker notebook instance will be deployed. Must belong to the specified VPC.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and manage the notebook instance, supporting resource tagging for cost allocation and access control.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "volume_size": [
+      {
+        "description": "Defines the size of the EBS volume attached to the notebook instance, in GiB. Must be between 5 and 16384.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing the Route 53 health check resource",
+            "value": "${aws_route53_health_check.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the Route 53 health check resource",
+            "value": "${aws_route53_health_check.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the Route 53 health check for organization and management",
+            "value": "${aws_route53_health_check.this.tags_all}"
+        }
+    }
+}

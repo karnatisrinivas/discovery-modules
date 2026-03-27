@@ -1,0 +1,20 @@
+{
+    "output": {
+        "fingerprint": {
+            "description": "The unique identifier for the SSH key, used to verify its authenticity.",
+            "value": "${data.aws_iam_user_ssh_key.this.fingerprint}"
+        },
+        "id": {
+            "description": "The unique ID assigned to the SSH key by AWS.",
+            "value": "${data.aws_iam_user_ssh_key.this.id}"
+        },
+        "public_key": {
+            "description": "The actual SSH public key associated with the IAM user.",
+            "value": "${data.aws_iam_user_ssh_key.this.public_key}"
+        },
+        "status": {
+            "description": "The current status of the SSH key, indicating if it is active or inactive.",
+            "value": "${data.aws_iam_user_ssh_key.this.status}"
+        }
+    }
+}

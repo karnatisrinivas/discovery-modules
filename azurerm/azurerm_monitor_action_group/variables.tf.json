@@ -1,0 +1,68 @@
+{
+  "variable": {
+    "enabled": [
+      {
+        "description": "Indicates whether the action group is enabled. Set to true to enable, false to disable.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the action group. This is required and must be unique within the resource group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "short_name": [
+      {
+        "description": "A short name or alias for the action group, which is used in alerts.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the action group. Tags are key-value pairs that help categorize resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "webhook_receiver": [
+      {
+        "description": "A webhook receiver block as defined below.",
+        "nullable": false,
+        "type": "list(object({name: string, service_uri: string}))",
+        "default": []
+      }
+    ],
+    "email_receiver": [
+      {
+        "description": "An email receiver block as defined below.",
+        "nullable": true,
+        "type": "list(object({name: string, email_address: string}))",
+        "default": []
+      }
+    ],
+    "sms_receiver": [
+      {
+        "description": "An SMS receiver block as defined below.",
+        "nullable": true,
+        "type": "list(object({name: string, country_code: string, phone_number: string}))",
+        "default": []
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

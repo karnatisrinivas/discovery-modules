@@ -1,0 +1,32 @@
+{
+    "output": {
+        "authentication": {
+            "description": "The authentication method used for the MSK VPC connection.",
+            "value": "${data.aws_msk_vpc_connection.this.authentication}"
+        },
+        "client_subnets": {
+            "description": "The subnets within the VPC that are used by the MSK cluster.",
+            "value": "${data.aws_msk_vpc_connection.this.client_subnets}"
+        },
+        "id": {
+            "description": "The unique identifier for the MSK VPC connection.",
+            "value": "${data.aws_msk_vpc_connection.this.id}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the MSK VPC connection.",
+            "value": "${data.aws_msk_vpc_connection.this.security_groups}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MSK VPC connection.",
+            "value": "${data.aws_msk_vpc_connection.this.tags}"
+        },
+        "target_cluster_arn": {
+            "description": "The Amazon Resource Name (ARN) of the target MSK cluster.",
+            "value": "${data.aws_msk_vpc_connection.this.target_cluster_arn}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC where the MSK cluster is located.",
+            "value": "${data.aws_msk_vpc_connection.this.vpc_id}"
+        }
+    }
+}

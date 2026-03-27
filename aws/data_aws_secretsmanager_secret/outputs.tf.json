@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.arn}"
+        },
+        "created_date": {
+            "description": "The date and time when the secret was created.",
+            "value": "${data.aws_secretsmanager_secret.this.created_date}"
+        },
+        "description": {
+            "description": "A user-provided description of the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The KMS key ID used to encrypt the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.kms_key_id}"
+        },
+        "last_changed_date": {
+            "description": "The date and time when the secret was last changed.",
+            "value": "${data.aws_secretsmanager_secret.this.last_changed_date}"
+        },
+        "name": {
+            "description": "The name of the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.name}"
+        },
+        "policy": {
+            "description": "The policy document associated with the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.policy}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the secret.",
+            "value": "${data.aws_secretsmanager_secret.this.tags}"
+        }
+    }
+}

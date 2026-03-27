@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Location Place Index"
+  node:
+    label:
+      static: "[Data] Location Place Index"
+      template: "[Data] Location Place Index"
+    display_type: default
+
+discovery:
+  type: data_aws_location_place_index
+  dnd_supported: false

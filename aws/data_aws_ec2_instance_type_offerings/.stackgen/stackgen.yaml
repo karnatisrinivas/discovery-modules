@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Instance Type Offerings"
+  node:
+    label:
+      static: "[Data] Ec2 Instance Type Offerings"
+      template: "[Data] Ec2 Instance Type Offerings"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_instance_type_offerings
+  dnd_supported: false

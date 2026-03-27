@@ -1,0 +1,23 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of this SSH Public Key."
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags which should be assigned to the SSH Public Key.",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

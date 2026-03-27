@@ -1,0 +1,32 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure AD group.",
+            "value": "${azuread_group.this.id}"
+        },
+        "mail_nickname": {
+            "description": "The mail nickname of the Azure AD group, used for email purposes.",
+            "value": "${azuread_group.this.mail_nickname}"
+        },
+        "object_id": {
+            "description": "The object ID of the Azure AD group, serving as a unique identifier within Azure AD.",
+            "value": "${azuread_group.this.object_id}"
+        },
+        "onpremises_domain_name": {
+            "description": "The on-premises domain name associated with the Azure AD group, if synced from an on-premises directory.",
+            "value": "${azuread_group.this.onpremises_domain_name}"
+        },
+        "onpremises_netbios_name": {
+            "description": "The NetBIOS name of the on-premises domain for the Azure AD group, if applicable.",
+            "value": "${azuread_group.this.onpremises_netbios_name}"
+        },
+        "onpremises_sam_account_name": {
+            "description": "The Security Accounts Manager (SAM) account name of the Azure AD group, used for compatibility with older systems.",
+            "value": "${azuread_group.this.onpremises_sam_account_name}"
+        },
+        "onpremises_security_identifier": {
+            "description": "The security identifier (SID) of the Azure AD group in an on-premises directory.",
+            "value": "${azuread_group.this.onpremises_security_identifier}"
+        }
+    }
+}

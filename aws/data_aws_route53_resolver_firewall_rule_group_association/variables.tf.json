@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "firewall_rule_group_association_id": [
+      {
+        "description": "The unique identifier for the association between a Route 53 Resolver firewall rule group and a VPC.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

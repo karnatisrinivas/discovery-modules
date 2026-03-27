@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Windows Function App"
+  node:
+    label:
+      static: "[Data] Windows Function App"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_windows_function_app
+  dnd_supported: false

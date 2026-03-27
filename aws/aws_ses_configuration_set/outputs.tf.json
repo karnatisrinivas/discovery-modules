@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN of the configuration set.",
+            "value": "${aws_ses_configuration_set.this.arn}"
+        },
+        "id": {
+            "description": "The name of the configuration set.",
+            "value": "${aws_ses_configuration_set.this.id}"
+        },
+        "last_fresh_start": {
+            "description": "The date and time at which the configuration set was last updated.",
+            "value": "${aws_ses_configuration_set.this.last_fresh_start}"
+        }
+    }
+}

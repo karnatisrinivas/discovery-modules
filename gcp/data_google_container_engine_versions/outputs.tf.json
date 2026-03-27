@@ -1,0 +1,24 @@
+{
+    "output": {
+        "default_cluster_version": {
+            "description": "Version of Kubernetes the service deploys by default.",
+            "value": "${data.google_container_engine_versions.this.default_cluster_version}"
+        },
+        "latest_master_version": {
+            "description": "The latest version available in the given zone for use with master instances.",
+            "value": "${data.google_container_engine_versions.this.latest_master_version}"
+        },
+        "latest_node_version": {
+            "description": "The latest version available in the given zone for use with node instances.",
+            "value": "${data.google_container_engine_versions.this.latest_node_version}"
+        },
+        "valid_master_versions": {
+            "description": "A list of versions available in the given zone for use with master instances.",
+            "value": "${data.google_container_engine_versions.this.valid_master_versions}"
+        },
+        "valid_node_versions": {
+            "description": "A list of versions available in the given zone for use with node instances.",
+            "value": "${data.google_container_engine_versions.this.valid_node_versions}"
+        }
+    }
+}

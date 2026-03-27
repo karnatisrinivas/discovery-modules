@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the load balancer listener rule.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "listener_arn": [
+      {
+        "description": "The ARN of the listener to which the load balancer rule is associated.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

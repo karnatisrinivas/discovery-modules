@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Glue Catalog Table"
+  node:
+    label:
+      static: "[Data] Glue Catalog Table"
+      template: "[Data] Glue Catalog Table"
+    display_type: default
+
+discovery:
+  type: data_aws_glue_catalog_table
+  dnd_supported: false

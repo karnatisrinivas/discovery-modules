@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "device_id": [
+      {
+        "description": "The unique identifier of the device to which the connection is associated. This can be set to null if not applicable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "global_network_id": [
+      {
+        "description": "The unique identifier of the global network that the connection belongs to. This is required and cannot be null.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs to apply as tags to the connection. Tags can be used to organize and categorize resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

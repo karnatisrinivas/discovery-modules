@@ -1,0 +1,56 @@
+{
+    "output": {
+        "api_endpoint": {
+            "description": "The endpoint URL of the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.api_endpoint}"
+        },
+        "api_key_selection_expression": {
+            "description": "The expression to select the API key for requests.",
+            "value": "${data.aws_apigatewayv2_api.this.api_key_selection_expression}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.arn}"
+        },
+        "cors_configuration": {
+            "description": "The Cross-Origin Resource Sharing (CORS) configuration for the API.",
+            "value": "${data.aws_apigatewayv2_api.this.cors_configuration}"
+        },
+        "description": {
+            "description": "A brief description of the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.description}"
+        },
+        "disable_execute_api_endpoint": {
+            "description": "Indicates whether the execute API endpoint is disabled.",
+            "value": "${data.aws_apigatewayv2_api.this.disable_execute_api_endpoint}"
+        },
+        "execution_arn": {
+            "description": "The ARN used for executing the API.",
+            "value": "${data.aws_apigatewayv2_api.this.execution_arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.id}"
+        },
+        "name": {
+            "description": "The name of the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.name}"
+        },
+        "protocol_type": {
+            "description": "The protocol type of the API Gateway, such as HTTP or WEBSOCKET.",
+            "value": "${data.aws_apigatewayv2_api.this.protocol_type}"
+        },
+        "route_selection_expression": {
+            "description": "The expression used to select routes for the API.",
+            "value": "${data.aws_apigatewayv2_api.this.route_selection_expression}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.tags}"
+        },
+        "version": {
+            "description": "The version of the API Gateway.",
+            "value": "${data.aws_apigatewayv2_api.this.version}"
+        }
+    }
+}

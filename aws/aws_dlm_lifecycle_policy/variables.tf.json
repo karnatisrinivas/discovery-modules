@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies the detailed purpose or intent of the lifecycle policy to manage the retention and deletion of snapshots.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "execution_role_arn": [
+      {
+        "description": "ARN of the IAM role that grants permissions to DLM for creating and managing resources in the lifecycle policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_details": [
+      {
+        "description": "Defines the configuration details for the lifecycle policy, including target resources, schedules, and actions to manage snapshots or AMIs.",
+        "nullable": false,
+        "type": "list(object({policy_type: optional(string),resource_locations: optional(list(string)),resource_types: optional(list(string)),target_tags: optional(map(string)),action: list(object({name: string,cross_region_copy: list(object({target: string,encryption_configuration: list(object({cmk_arn: optional(string),encrypted: optional(bool)})),retain_rule: list(object({interval: number,interval_unit: string}))}))})),event_source: list(object({type: string,parameters: list(object({description_regex: string,event_type: string,snapshot_owner: list(string)}))})),parameters: list(object({exclude_boot_volume: optional(bool),no_reboot: optional(bool)})),schedule: list(object({copy_tags: optional(bool),name: string,tags_to_add: optional(map(string)),variable_tags: optional(map(string)),create_rule: list(object({cron_expression: optional(string),interval: optional(number),interval_unit: optional(string),location: optional(string),times: optional(list(string))})),cross_region_copy_rule: list(object({cmk_arn: optional(string),copy_tags: optional(bool),encrypted: bool,target: string,deprecate_rule: list(object({interval: number,interval_unit: string})),retain_rule: list(object({interval: number,interval_unit: string}))})),deprecate_rule: list(object({count: optional(number),interval: optional(number),interval_unit: optional(string)})),fast_restore_rule: list(object({availability_zones: list(string),count: optional(number),interval: optional(number),interval_unit: optional(string)})),retain_rule: list(object({count: optional(number),interval: optional(number),interval_unit: optional(string)})),share_rule: list(object({target_accounts: list(string),unshare_interval: optional(number),unshare_interval_unit: optional(string)}))}))}))"
+      }
+    ],
+    "state": [
+      {
+        "description": "Specifies whether the lifecycle policy is enabled or disabled.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs used to categorize and organize the lifecycle policy, typically for identification or billing purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "api_endpoint": {
+            "description": "URL for sending API requests to the deployed gateway",
+            "value": "${aws_apigatewayv2_api.this.api_endpoint}"
+        },
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API management",
+            "value": "${aws_apigatewayv2_api.this.arn}"
+        },
+        "execution_arn": {
+            "description": "ARN for invoking API methods during runtime execution",
+            "value": "${aws_apigatewayv2_api.this.execution_arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the API gateway resource",
+            "value": "${aws_apigatewayv2_api.this.id}"
+        },
+        "tags_all": {
+            "description": "Complete set of tags applied to the API gateway for organization",
+            "value": "${aws_apigatewayv2_api.this.tags_all}"
+        }
+    }
+}

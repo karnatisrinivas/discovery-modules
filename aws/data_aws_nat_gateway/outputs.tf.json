@@ -1,0 +1,60 @@
+{
+    "output": {
+        "allocation_id": {
+            "description": "The unique identifier for the Elastic IP address associated with the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.allocation_id}"
+        },
+        "association_id": {
+            "description": "The ID representing the association between the Elastic IP address and the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.association_id}"
+        },
+        "connectivity_type": {
+            "description": "Specifies whether the NAT Gateway is public or private.",
+            "value": "${data.aws_nat_gateway.this.connectivity_type}"
+        },
+        "id": {
+            "description": "The unique identifier for the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.id}"
+        },
+        "network_interface_id": {
+            "description": "The ID of the network interface associated with the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.network_interface_id}"
+        },
+        "private_ip": {
+            "description": "The private IP address of the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.private_ip}"
+        },
+        "public_ip": {
+            "description": "The public IP address of the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.public_ip}"
+        },
+        "secondary_allocation_ids": {
+            "description": "A list of allocation IDs for any secondary Elastic IP addresses associated with the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.secondary_allocation_ids}"
+        },
+        "secondary_private_ip_address_count": {
+            "description": "The count of secondary private IP addresses assigned to the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.secondary_private_ip_address_count}"
+        },
+        "secondary_private_ip_addresses": {
+            "description": "A list of secondary private IP addresses assigned to the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.secondary_private_ip_addresses}"
+        },
+        "state": {
+            "description": "The current state of the NAT Gateway (e.g., pending, available, deleting, deleted).",
+            "value": "${data.aws_nat_gateway.this.state}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet in which the NAT Gateway is located.",
+            "value": "${data.aws_nat_gateway.this.subnet_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the NAT Gateway.",
+            "value": "${data.aws_nat_gateway.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC in which the NAT Gateway is located.",
+            "value": "${data.aws_nat_gateway.this.vpc_id}"
+        }
+    }
+}

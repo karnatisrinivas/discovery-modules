@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for permissions and API operations",
+            "value": "${aws_dax_cluster.this.arn}"
+        },
+        "cluster_address": {
+            "description": "Primary endpoint address for connecting to the DAX cluster",
+            "value": "${aws_dax_cluster.this.cluster_address}"
+        },
+        "configuration_endpoint": {
+            "description": "Endpoint used for configuring the DAX cluster",
+            "value": "${aws_dax_cluster.this.configuration_endpoint}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the DAX cluster",
+            "value": "${aws_dax_cluster.this.id}"
+        },
+        "nodes": {
+            "description": "List of nodes in the DAX cluster with their details",
+            "value": "${aws_dax_cluster.this.nodes}"
+        },
+        "port": {
+            "description": "Port number for accessing the DAX cluster",
+            "value": "${aws_dax_cluster.this.port}"
+        },
+        "tags_all": {
+            "description": "Consolidated list of tags applied to the DAX cluster",
+            "value": "${aws_dax_cluster.this.tags_all}"
+        }
+    }
+}

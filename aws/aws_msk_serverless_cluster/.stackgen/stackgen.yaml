@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Msk Serverless Cluster
+  node:
+    label:
+      static: Msk Serverless Cluster
+      template: ${cluster_name}
+    display_type: default
+
+discovery:
+  type: aws_msk_serverless_cluster
+  dnd_supported: false

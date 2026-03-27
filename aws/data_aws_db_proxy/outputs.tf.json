@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the DB proxy.",
+            "value": "${data.aws_db_proxy.this.arn}"
+        },
+        "auth": {
+            "description": "Details of the authentication configuration for the DB proxy.",
+            "value": "${data.aws_db_proxy.this.auth}"
+        },
+        "debug_logging": {
+            "description": "Indicates whether debug logging is enabled for the DB proxy.",
+            "value": "${data.aws_db_proxy.this.debug_logging}"
+        },
+        "endpoint": {
+            "description": "The connection endpoint for the DB proxy.",
+            "value": "${data.aws_db_proxy.this.endpoint}"
+        },
+        "engine_family": {
+            "description": "The database engine family that the proxy supports.",
+            "value": "${data.aws_db_proxy.this.engine_family}"
+        },
+        "id": {
+            "description": "The identifier for the DB proxy.",
+            "value": "${data.aws_db_proxy.this.id}"
+        },
+        "idle_client_timeout": {
+            "description": "The time, in seconds, that a client connection can be idle before the proxy disconnects it.",
+            "value": "${data.aws_db_proxy.this.idle_client_timeout}"
+        },
+        "require_tls": {
+            "description": "Indicates whether TLS is required for connections to the DB proxy.",
+            "value": "${data.aws_db_proxy.this.require_tls}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role associated with the DB proxy.",
+            "value": "${data.aws_db_proxy.this.role_arn}"
+        },
+        "vpc_id": {
+            "description": "The VPC ID associated with the DB proxy.",
+            "value": "${data.aws_db_proxy.this.vpc_id}"
+        },
+        "vpc_security_group_ids": {
+            "description": "The IDs of the VPC security groups associated with the DB proxy.",
+            "value": "${data.aws_db_proxy.this.vpc_security_group_ids}"
+        },
+        "vpc_subnet_ids": {
+            "description": "The IDs of the VPC subnets associated with the DB proxy.",
+            "value": "${data.aws_db_proxy.this.vpc_subnet_ids}"
+        }
+    }
+}

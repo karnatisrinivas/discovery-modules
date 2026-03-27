@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "report_name": [
+      {
+        "description": "The name to assign to the AWS Cost and Usage Report.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

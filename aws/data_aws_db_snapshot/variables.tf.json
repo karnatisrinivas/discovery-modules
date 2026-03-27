@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "db_instance_identifier": [
+      {
+        "description": "The identifier of the database instance for which the snapshot was created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "db_snapshot_identifier": [
+      {
+        "description": "The unique identifier for the database snapshot.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_public": [
+      {
+        "description": "Whether to include public snapshots in the search results.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "include_shared": [
+      {
+        "description": "Whether to include shared snapshots in the search results.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "If true, returns only the most recent snapshot.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "snapshot_type": [
+      {
+        "description": "The type of snapshots to be included (e.g., automated or manual).",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

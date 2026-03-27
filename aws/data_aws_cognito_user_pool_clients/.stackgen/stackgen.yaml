@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cognito User Pool Clients"
+  node:
+    label:
+      static: "[Data] Cognito User Pool Clients"
+      template: "[Data] Cognito User Pool Clients"
+    display_type: default
+
+discovery:
+  type: data_aws_cognito_user_pool_clients
+  dnd_supported: false

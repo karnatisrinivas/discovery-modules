@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AzureAD Service Principal Password
+  node:
+    label:
+      static: AzureAD Service Principal Password
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: azuread_service_principal_password
+  dnd_supported: false

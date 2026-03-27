@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect User"
+  node:
+    label:
+      static: "[Data] Connect User"
+      template: "[Data] Connect User"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_user
+  dnd_supported: false

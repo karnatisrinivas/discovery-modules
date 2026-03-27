@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "gateway_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS Storage Gateway for which the local disk is being configured.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

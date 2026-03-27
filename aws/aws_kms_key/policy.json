@@ -1,0 +1,22 @@
+{
+    "Name": "aws_kms_key",
+    "Policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "Default",
+                "Effect": "Allow",
+                "Action": [
+                    "kms:Encrypt",
+                    "kms:Decrypt",
+                    "kms:ReEncrypt*",
+                    "kms:GenerateDataKey*",
+                    "kms:DescribeKey"
+                ],
+                "Resource": [
+                    "${module.module_name.arn}"
+                ]
+            }
+        ]
+    }
+}

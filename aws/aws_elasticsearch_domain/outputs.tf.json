@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Elasticsearch domain.",
+            "value": "${aws_elasticsearch_domain.this.arn}"
+        },
+        "domain_id": {
+            "description": "The unique identifier for the Elasticsearch domain.",
+            "value": "${aws_elasticsearch_domain.this.domain_id}"
+        },
+        "domain_name": {
+            "description": "The domain name of the Elasticsearch instance.",
+            "value": "${aws_elasticsearch_domain.this.domain_name}"
+        },
+        "id": {
+            "description": "The domain name of the Elasticsearch instance.",
+            "value": "${aws_elasticsearch_domain.this.id}"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SSM Incidents replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.arn}"
+        },
+        "created_by": {
+            "description": "The identifier of the user or service that created the replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.created_by}"
+        },
+        "deletion_protected": {
+            "description": "Indicates whether the replication set is protected from deletion.",
+            "value": "${data.aws_ssmincidents_replication_set.this.deletion_protected}"
+        },
+        "id": {
+            "description": "The unique identifier of the SSM Incidents replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.id}"
+        },
+        "last_modified_by": {
+            "description": "The identifier of the user or service that last modified the replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.last_modified_by}"
+        },
+        "region": {
+            "description": "The set of regions where the replication set is deployed, including details like KMS key ARN, name, status, and status message.",
+            "value": "${data.aws_ssmincidents_replication_set.this.region}"
+        },
+        "status": {
+            "description": "The current status of the SSM Incidents replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the SSM Incidents replication set.",
+            "value": "${data.aws_ssmincidents_replication_set.this.tags}"
+        }
+    }
+}

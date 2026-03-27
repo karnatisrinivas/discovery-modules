@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "cloud_function": [
+            {
+                "description": "Specifies the Cloud Function to which the IAM binding will be applied. Must be provided in the format 'projects/{project}/locations/{location}/functions/{function}'.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "condition": [
+            {
+                "description": "Defines an IAM condition for the Cloud Function IAM binding, specifying requirements that must be met for the policy binding to be applicable.",
+                "nullable": true,
+                "type": "list(object({description: optional(string),expression: string,title: string}))"
+            }
+        ],
+        "members": [
+            {
+                "description": "List of identities to which the IAM binding will be applied, including users, groups, and service accounts.",
+                "nullable": false,
+                "type": "list(string)"
+            }
+        ],
+        "role": [
+            {
+                "description": "Specifies the IAM role to be applied to the Cloud Function, such as 'roles/cloudfunctions.invoker'.",
+                "nullable": false,
+                "type": "string"
+            }
+        ]
+    }
+}

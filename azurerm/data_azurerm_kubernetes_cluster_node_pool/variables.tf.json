@@ -1,0 +1,31 @@
+{
+  "variable": {
+    "kubernetes_cluster_name": [
+      {
+        "description": "Specifies the name of the Kubernetes cluster to associate with the node pool; must match an existing cluster name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the node pool; must be unique within the Kubernetes cluster and comply with Azure's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for create, update, and delete operations on the Kubernetes cluster node pool.",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

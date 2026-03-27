@@ -1,0 +1,30 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EC2 Transit Gateway VPC Attachment Accepter
+  node:
+    label:
+      static: EC2 Transit Gateway VPC Attachment Accepter
+      template: EC2 Transit Gateway VPC Attachment Accepter
+    display_type: default
+
+variables:
+  transit_gateway_default_route_table_propagation:
+    description: "Whether to propagate the transit gateway's default route table to the VPC."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  transit_gateway_default_route_table_association:
+    description: "Whether to associate the transit gateway's default route table with the VPC."
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_ec2_transit_gateway_vpc_attachment_accepter
+  dnd_supported: false

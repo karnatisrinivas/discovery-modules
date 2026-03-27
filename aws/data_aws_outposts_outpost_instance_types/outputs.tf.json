@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_outposts_outpost_instance_types.this.id}"
+        },
+        "instance_types": {
+            "description": "",
+            "value": "${data.aws_outposts_outpost_instance_types.this.instance_types}"
+        }
+    }
+}

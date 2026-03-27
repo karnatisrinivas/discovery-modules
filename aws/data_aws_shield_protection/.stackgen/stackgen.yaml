@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Shield Protection"
+  node:
+    label:
+      static: "[Data] Shield Protection"
+      template: "[Data] Shield Protection"
+    display_type: default
+
+discovery:
+  type: data_aws_shield_protection
+  dnd_supported: false

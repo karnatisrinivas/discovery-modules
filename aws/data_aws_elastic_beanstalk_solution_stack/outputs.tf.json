@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Elastic Beanstalk solution stack.",
+            "value": "${data.aws_elastic_beanstalk_solution_stack.this.id}"
+        },
+        "name": {
+            "description": "The name of the AWS Elastic Beanstalk solution stack.",
+            "value": "${data.aws_elastic_beanstalk_solution_stack.this.name}"
+        }
+    }
+}

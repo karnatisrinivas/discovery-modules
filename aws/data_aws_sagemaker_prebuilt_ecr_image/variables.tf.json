@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "dns_suffix": [
+      {
+        "description": "The DNS suffix for the Amazon ECR registry, typically used to construct the full image URI.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "image_tag": [
+      {
+        "description": "The specific version tag of the Docker image to use from the Amazon ECR repository.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "repository_name": [
+      {
+        "description": "The name of the Amazon ECR repository where the prebuilt SageMaker image is stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

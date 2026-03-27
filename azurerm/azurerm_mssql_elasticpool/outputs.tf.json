@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for managing the SQL Elastic Pool in other Azure resources",
+            "value": "${azurerm_mssql_elasticpool.this.id}"
+        }
+    }
+}

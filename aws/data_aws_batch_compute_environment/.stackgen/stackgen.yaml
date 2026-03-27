@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Batch Compute Environment"
+  node:
+    label:
+      static: "[Data] Batch Compute Environment"
+      template: "[Data] Batch Compute Environment"
+    display_type: default
+
+discovery:
+  type: data_aws_batch_compute_environment
+  dnd_supported: false

@@ -1,0 +1,16 @@
+{
+    "output": {
+        "cidr_blocks": {
+            "description": "A list of CIDR blocks included in the AWS prefix list.",
+            "value": "${data.aws_prefix_list.this.cidr_blocks}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS prefix list.",
+            "value": "${data.aws_prefix_list.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the AWS prefix list.",
+            "value": "${data.aws_prefix_list.this.name}"
+        }
+    }
+}

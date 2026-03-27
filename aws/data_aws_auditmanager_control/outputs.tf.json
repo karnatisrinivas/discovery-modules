@@ -1,0 +1,32 @@
+{
+    "output": {
+        "action_plan_instructions": {
+            "description": "Instructions on how to implement the action plan for this control.",
+            "value": "${data.aws_auditmanager_control.this.action_plan_instructions}"
+        },
+        "action_plan_title": {
+            "description": "The title of the action plan associated with this control.",
+            "value": "${data.aws_auditmanager_control.this.action_plan_title}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies this control.",
+            "value": "${data.aws_auditmanager_control.this.arn}"
+        },
+        "description": {
+            "description": "A detailed description of this control.",
+            "value": "${data.aws_auditmanager_control.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for this control.",
+            "value": "${data.aws_auditmanager_control.this.id}"
+        },
+        "tags": {
+            "description": "A set of tags associated with this control, represented as key-value pairs.",
+            "value": "${data.aws_auditmanager_control.this.tags}"
+        },
+        "testing_information": {
+            "description": "Information on how to test this control to ensure it is working as expected.",
+            "value": "${data.aws_auditmanager_control.this.testing_information}"
+        }
+    }
+}

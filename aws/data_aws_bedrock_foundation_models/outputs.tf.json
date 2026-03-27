@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Bedrock Foundation Models data source.",
+            "value": "${data.aws_bedrock_foundation_models.this.id}"
+        },
+        "model_summaries": {
+            "description": "A list containing detailed information about each foundation model, including supported customizations, inference types, input and output modalities, model identifiers, names, provider names, and whether response streaming is supported.",
+            "value": "${data.aws_bedrock_foundation_models.this.model_summaries}"
+        }
+    }
+}

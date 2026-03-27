@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DNS Zone
+  node:
+    label:
+      static: DNS Zone
+      template: ${domain}
+    display_type: default
+
+discovery:
+  type: azurerm_dns_zone
+  dnd_supported: false

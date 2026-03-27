@@ -1,0 +1,55 @@
+{
+    "variable": {
+        "instance_name": [
+            {
+                "type": "string",
+                "description": "The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.",
+                "nullable": false
+            }
+        ],
+        "deletion_protection": [
+            {
+                "type": "string",
+                "description": "A field to make the cluster protected against data loss i.e. when set to PROTECTED, deleting the cluster and the instance containing the cluster would be prohibited. If not provided, deletion protection will be set to UNPROTECTED. default value is PROTECTED.",
+                "nullable": true,
+                "default": "PROTECTED"
+            }
+        ],
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.",
+                "nullable": false
+            }
+        ],
+        "split_keys": [
+            {
+                "type": "list(string)",
+                "description": "A list of predefined keys to split the table on. !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource.",
+                "nullable": true
+            }
+        ],
+        "column_family": [
+            {
+                "type": "list(object({family: optional(string), type: optional(string)}))",
+                "description": "A group of columns within a table which share a common configuration. This can be specified multiple times.",
+                "nullable": true
+            }
+        ],
+        "change_stream_retention": [
+            {
+                "type": "string",
+                "description": "Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days. Should be in the format HHMMSS. For ex- 24h0m0s, 50h3m0s",
+                "nullable": true
+            }
+        ],
+        "automated_backup_policy": [
+            {
+                "type": "list(object({retention_period: string, frequency: string}))",
+                "description": "Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.",
+                "nullable": true,
+                "default": []
+            }
+        ]
+    }
+}

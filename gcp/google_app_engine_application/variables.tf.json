@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "auth_domain": [
+      {
+        "description": "Specifies the domain that users must belong to in order to access the application, typically required for authentication.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "database_type": [
+      {
+        "description": "Specifies the type of database to use for the App Engine application; must be a supported database type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "feature_settings": [
+      {
+        "description": "Configures specific features for the App Engine application, such as split health checks or other feature flags.",
+        "nullable": true,
+        "type": "list(object({split_health_checks: bool}))"
+      }
+    ],
+    "iap": [
+      {
+        "description": "Controls Identity-Aware Proxy settings for the application; must be enabled to restrict access to the app using Google accounts.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),oauth2_client_id: string,oauth2_client_secret: string,oauth2_client_secret_sha256: optional(string)}))"
+      }
+    ],
+    "location_id": [
+      {
+        "description": "Specifies the geographic location for the App Engine application, must be a region where App Engine is supported.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "serving_status": [
+      {
+        "description": "Defines the operational status of the App Engine application, determining whether it should serve traffic or be disabled. Acceptable values: \"SERVING\", \"USER_DISABLED\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations, allowing customization of timeout settings for App Engine application management.",
+        "nullable": true,
+        "type": "object({create: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

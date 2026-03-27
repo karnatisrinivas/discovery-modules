@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "billing_account_id": [
+      {
+        "description": "ID of the billing account to which the IAM member will be assigned.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "condition": [
+      {
+        "description": "Defines a conditional expression for setting IAM policies, specifying under what circumstances the binding is applied. Must include a title, expression, and optional description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to grant the role to, such as a user, group, or service account, in the format `user:email`, `group:email`, or `serviceAccount:email`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member within the billing account. Must be a predefined role name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

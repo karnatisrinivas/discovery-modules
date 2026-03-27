@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kinesis Stream Consumer"
+  node:
+    label:
+      static: "[Data] Kinesis Stream Consumer"
+      template: "[Data] Kinesis Stream Consumer"
+    display_type: default
+
+discovery:
+  type: data_aws_kinesis_stream_consumer
+  dnd_supported: false

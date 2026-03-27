@@ -1,0 +1,20 @@
+{
+    "output": {
+        "host": {
+            "description": "Hostname for connecting to the Apigee instance endpoint",
+            "value": "${google_apigee_instance.this.host}"
+        },
+        "id": {
+            "description": "Unique identifier for the Apigee instance resource",
+            "value": "${google_apigee_instance.this.id}"
+        },
+        "port": {
+            "description": "Port number used for accessing the Apigee instance",
+            "value": "${google_apigee_instance.this.port}"
+        },
+        "service_attachment": {
+            "description": "Service attachment URL for private connectivity setup",
+            "value": "${google_apigee_instance.this.service_attachment}"
+        }
+    }
+}

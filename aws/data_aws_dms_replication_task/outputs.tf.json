@@ -1,0 +1,56 @@
+{
+    "output": {
+        "cdc_start_position": {
+            "description": "The position in the change data capture (CDC) stream where the replication task should start.",
+            "value": "${data.aws_dms_replication_task.this.cdc_start_position}"
+        },
+        "cdc_start_time": {
+            "description": "The specific time when the change data capture (CDC) replication should start.",
+            "value": "${data.aws_dms_replication_task.this.cdc_start_time}"
+        },
+        "id": {
+            "description": "The unique identifier for the replication task.",
+            "value": "${data.aws_dms_replication_task.this.id}"
+        },
+        "migration_type": {
+            "description": "The type of migration being performed, such as full-load or CDC.",
+            "value": "${data.aws_dms_replication_task.this.migration_type}"
+        },
+        "replication_instance_arn": {
+            "description": "The Amazon Resource Name (ARN) of the replication instance used for the task.",
+            "value": "${data.aws_dms_replication_task.this.replication_instance_arn}"
+        },
+        "replication_task_arn": {
+            "description": "The Amazon Resource Name (ARN) of the replication task.",
+            "value": "${data.aws_dms_replication_task.this.replication_task_arn}"
+        },
+        "replication_task_settings": {
+            "description": "The settings for the replication task, including configuration details.",
+            "value": "${data.aws_dms_replication_task.this.replication_task_settings}"
+        },
+        "source_endpoint_arn": {
+            "description": "The Amazon Resource Name (ARN) of the source database endpoint.",
+            "value": "${data.aws_dms_replication_task.this.source_endpoint_arn}"
+        },
+        "start_replication_task": {
+            "description": "Indicates whether the replication task should start automatically.",
+            "value": "${data.aws_dms_replication_task.this.start_replication_task}"
+        },
+        "status": {
+            "description": "The current status of the replication task.",
+            "value": "${data.aws_dms_replication_task.this.status}"
+        },
+        "table_mappings": {
+            "description": "The table mappings used for the task, defining how tables should be replicated.",
+            "value": "${data.aws_dms_replication_task.this.table_mappings}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs associated with the replication task for categorization.",
+            "value": "${data.aws_dms_replication_task.this.tags}"
+        },
+        "target_endpoint_arn": {
+            "description": "The Amazon Resource Name (ARN) of the target database endpoint.",
+            "value": "${data.aws_dms_replication_task.this.target_endpoint_arn}"
+        }
+    }
+}

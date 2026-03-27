@@ -1,0 +1,8 @@
+{
+    "output": {
+        "role_assignment_id": {
+            "description": "The value of the role_assignment_id output",
+            "value": "${azurerm_role_assignment.this.id}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Mssql Elasticpool
+  node:
+    label:
+      static: Mssql Elasticpool
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_mssql_elasticpool
+  dnd_supported: false
+  references:
+    server_name:
+      from: azurerm_mssql_server
+      output: name

@@ -1,0 +1,64 @@
+{
+    "output": {
+        "beneficiary": {
+            "description": "The person or organization that benefits from the license.",
+            "value": "${data.aws_licensemanager_received_license.this.beneficiary}"
+        },
+        "consumption_configuration": {
+            "description": "Details about how the license is consumed, including borrowing and provisional configurations.",
+            "value": "${data.aws_licensemanager_received_license.this.consumption_configuration}"
+        },
+        "create_time": {
+            "description": "The time when the license was created.",
+            "value": "${data.aws_licensemanager_received_license.this.create_time}"
+        },
+        "entitlements": {
+            "description": "The entitlements associated with the license, detailing allowed usage and limits.",
+            "value": "${data.aws_licensemanager_received_license.this.entitlements}"
+        },
+        "home_region": {
+            "description": "The home region where the license is managed.",
+            "value": "${data.aws_licensemanager_received_license.this.home_region}"
+        },
+        "id": {
+            "description": "The unique identifier for the received license.",
+            "value": "${data.aws_licensemanager_received_license.this.id}"
+        },
+        "issuer": {
+            "description": "Information about the entity that issued the license.",
+            "value": "${data.aws_licensemanager_received_license.this.issuer}"
+        },
+        "license_metadata": {
+            "description": "Additional metadata related to the license.",
+            "value": "${data.aws_licensemanager_received_license.this.license_metadata}"
+        },
+        "license_name": {
+            "description": "The name of the license.",
+            "value": "${data.aws_licensemanager_received_license.this.license_name}"
+        },
+        "product_name": {
+            "description": "The name of the product associated with the license.",
+            "value": "${data.aws_licensemanager_received_license.this.product_name}"
+        },
+        "product_sku": {
+            "description": "The stock keeping unit (SKU) for the product associated with the license.",
+            "value": "${data.aws_licensemanager_received_license.this.product_sku}"
+        },
+        "received_metadata": {
+            "description": "Metadata about the received status of the license.",
+            "value": "${data.aws_licensemanager_received_license.this.received_metadata}"
+        },
+        "status": {
+            "description": "The current status of the license.",
+            "value": "${data.aws_licensemanager_received_license.this.status}"
+        },
+        "validity": {
+            "description": "The time period during which the license is valid.",
+            "value": "${data.aws_licensemanager_received_license.this.validity}"
+        },
+        "version": {
+            "description": "The version of the license.",
+            "value": "${data.aws_licensemanager_received_license.this.version}"
+        }
+    }
+}

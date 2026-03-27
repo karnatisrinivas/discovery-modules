@@ -1,0 +1,84 @@
+{
+    "output": {
+        "account_access_type": {
+            "description": "Specifies the type of access the account has to the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.account_access_type}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.arn}"
+        },
+        "authentication_providers": {
+            "description": "List of authentication providers used by the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.authentication_providers}"
+        },
+        "created_date": {
+            "description": "The date when the Grafana workspace was created.",
+            "value": "${data.aws_grafana_workspace.this.created_date}"
+        },
+        "data_sources": {
+            "description": "List of data sources configured for the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.data_sources}"
+        },
+        "description": {
+            "description": "A brief description of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.description}"
+        },
+        "endpoint": {
+            "description": "The URL endpoint of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.endpoint}"
+        },
+        "grafana_version": {
+            "description": "The version of Grafana used in the workspace.",
+            "value": "${data.aws_grafana_workspace.this.grafana_version}"
+        },
+        "id": {
+            "description": "The unique identifier of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date when the Grafana workspace was last updated.",
+            "value": "${data.aws_grafana_workspace.this.last_updated_date}"
+        },
+        "name": {
+            "description": "The name of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.name}"
+        },
+        "notification_destinations": {
+            "description": "List of notification destinations configured in the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.notification_destinations}"
+        },
+        "organization_role_name": {
+            "description": "The name of the organization role associated with the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.organization_role_name}"
+        },
+        "organizational_units": {
+            "description": "List of organizational units associated with the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.organizational_units}"
+        },
+        "permission_type": {
+            "description": "The type of permissions set for the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.permission_type}"
+        },
+        "role_arn": {
+            "description": "The ARN of the role associated with the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.role_arn}"
+        },
+        "saml_configuration_status": {
+            "description": "The status of SAML configuration for the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.saml_configuration_status}"
+        },
+        "stack_set_name": {
+            "description": "The name of the stack set associated with the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.stack_set_name}"
+        },
+        "status": {
+            "description": "The current status of the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Grafana workspace.",
+            "value": "${data.aws_grafana_workspace.this.tags}"
+        }
+    }
+}

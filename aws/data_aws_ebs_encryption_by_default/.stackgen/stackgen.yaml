@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ebs Encryption By Default"
+  node:
+    label:
+      static: "[Data] Ebs Encryption By Default"
+      template: "[Data] Ebs Encryption By Default"
+    display_type: default
+
+discovery:
+  type: data_aws_ebs_encryption_by_default
+  dnd_supported: false

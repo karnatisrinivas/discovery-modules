@@ -1,0 +1,93 @@
+{
+  "variable": {
+    "application_type": [
+      {
+        "description": "Specifies the type of application to be monitored, such as web, other, or mobile.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disable_ip_masking": [
+      {
+        "description": "Determines whether IP masking is disabled, which could allow full IP addresses to be logged.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "force_customer_storage_for_profiler": [
+      {
+        "description": "Indicates whether to force the use of customer-provided storage for performance profiler data.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "internet_ingestion_enabled": [
+      {
+        "description": "Specifies if data ingestion from the internet is enabled for the Application Insights resource.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "internet_query_enabled": [
+      {
+        "description": "Specifies if querying Application Insights data from the internet is allowed.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "local_authentication_disabled": [
+      {
+        "description": "Indicates whether local authentication methods are disabled for accessing the Application Insights resource.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Application Insights resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "retention_in_days": [
+      {
+        "description": "The number of days to retain data in the Application Insights resource.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "sampling_percentage": [
+      {
+        "description": "The percentage of data to sample, which helps control the amount of data collected.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to associate with the Application Insights resource for categorization and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "workspace_id": [
+      {
+        "description": "The ID of the Log Analytics workspace to link with the Application Insights resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

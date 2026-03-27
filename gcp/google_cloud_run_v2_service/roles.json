@@ -1,0 +1,26 @@
+[
+    {
+        "value": "roles/run.builder",
+        "label": "Cloud Run Builder"
+    },
+    {
+        "value": "roles/run.developer",
+        "label": "Cloud Run Developer"
+    },
+    {
+        "value": "roles/run.invoker",
+        "label": "Cloud Run Invoker"
+    },
+    {
+        "value": "roles/run.admin",
+        "label": "Cloud Run Admin"
+    },
+    {
+        "value": "roles/run.jobsExecutor",
+        "label": "Cloud Run Jobs Executor"
+    },
+    {
+        "value": "roles/run.jobsExecutorWithOverrides",
+        "label": "Cloud Run Jobs Executor With Overrides"
+    }
+]

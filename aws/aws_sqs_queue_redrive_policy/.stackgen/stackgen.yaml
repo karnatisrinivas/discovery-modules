@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SQS Queue Redrive Policy
+  node:
+    label:
+      static: SQS Queue Redrive Policy
+      template: SQS Queue Redrive Policy
+    display_type: default
+
+discovery:
+  type: aws_sqs_queue_redrive_policy
+  dnd_supported: false
+  references:
+    queue_url:
+      from: aws_sqs_queue
+      output: id

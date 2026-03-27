@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Billing Account Iam Member
+  node:
+    label:
+      static: Billing Account Iam Member
+      template: ${member}
+    display_type: default
+
+discovery:
+  type: google_billing_account_iam_member
+  dnd_supported: false

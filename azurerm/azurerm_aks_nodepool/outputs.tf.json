@@ -1,0 +1,8 @@
+{
+    "output": {
+        "nodepool_id": {
+            "description": "The value of the nodepool_id output",
+            "value": "${azurerm_kubernetes_cluster_node_pool.this.id}"
+        }
+    }
+}

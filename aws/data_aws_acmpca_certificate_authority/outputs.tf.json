@@ -1,0 +1,52 @@
+{
+    "output": {
+        "certificate": {
+            "description": "The certificate issued by the Certificate Authority (CA).",
+            "value": "${data.aws_acmpca_certificate_authority.this.certificate}"
+        },
+        "certificate_chain": {
+            "description": "The chain of certificates that validates the CA's certificate.",
+            "value": "${data.aws_acmpca_certificate_authority.this.certificate_chain}"
+        },
+        "certificate_signing_request": {
+            "description": "The request submitted for a new certificate from the CA.",
+            "value": "${data.aws_acmpca_certificate_authority.this.certificate_signing_request}"
+        },
+        "id": {
+            "description": "The unique identifier for the Certificate Authority.",
+            "value": "${data.aws_acmpca_certificate_authority.this.id}"
+        },
+        "key_storage_security_standard": {
+            "description": "The security standard used for storing the CA's key.",
+            "value": "${data.aws_acmpca_certificate_authority.this.key_storage_security_standard}"
+        },
+        "not_after": {
+            "description": "The date after which the certificate is no longer valid.",
+            "value": "${data.aws_acmpca_certificate_authority.this.not_after}"
+        },
+        "not_before": {
+            "description": "The date before which the certificate is not valid.",
+            "value": "${data.aws_acmpca_certificate_authority.this.not_before}"
+        },
+        "revocation_configuration": {
+            "description": "Settings for the revocation of certificates, including CRL and OCSP configurations.",
+            "value": "${data.aws_acmpca_certificate_authority.this.revocation_configuration}"
+        },
+        "serial": {
+            "description": "The serial number of the certificate issued by the CA.",
+            "value": "${data.aws_acmpca_certificate_authority.this.serial}"
+        },
+        "status": {
+            "description": "The current status of the Certificate Authority.",
+            "value": "${data.aws_acmpca_certificate_authority.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the Certificate Authority.",
+            "value": "${data.aws_acmpca_certificate_authority.this.tags}"
+        },
+        "usage_mode": {
+            "description": "The intended usage mode for the Certificate Authority.",
+            "value": "${data.aws_acmpca_certificate_authority.this.usage_mode}"
+        }
+    }
+}

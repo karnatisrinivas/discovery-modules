@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Audit Manager framework.",
+            "value": "${data.aws_auditmanager_framework.this.arn}"
+        },
+        "compliance_type": {
+            "description": "The compliance type associated with the Audit Manager framework.",
+            "value": "${data.aws_auditmanager_framework.this.compliance_type}"
+        },
+        "description": {
+            "description": "A brief explanation or summary of the Audit Manager framework.",
+            "value": "${data.aws_auditmanager_framework.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the Audit Manager framework.",
+            "value": "${data.aws_auditmanager_framework.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Audit Manager framework.",
+            "value": "${data.aws_auditmanager_framework.this.tags}"
+        }
+    }
+}

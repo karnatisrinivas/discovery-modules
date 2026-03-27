@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EventHub Authorization Rule
+  node:
+    label:
+      static: EventHub Authorization Rule
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_eventhub_authorization_rule
+  dnd_supported: false
+  data_source: data_azurerm_eventhub_authorization_rule

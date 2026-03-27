@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Monitor Autoscale Setting resource.",
+            "value": "${azurerm_monitor_autoscale_setting.this.id}"
+        }
+    }
+}

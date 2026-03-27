@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Resource"
+  node:
+    label:
+      static: "[Data] Api Gateway Resource"
+      template: "[Data] Api Gateway Resource"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_resource
+  dnd_supported: false

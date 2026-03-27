@@ -1,0 +1,32 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp when the instance group manager was created, useful for auditing changes",
+            "value": "${google_compute_instance_group_manager.this.creation_timestamp}"
+        },
+        "fingerprint": {
+            "description": "Unique fingerprint for detecting updates to the instance group manager's state",
+            "value": "${google_compute_instance_group_manager.this.fingerprint}"
+        },
+        "instance_group": {
+            "description": "Name of the associated instance group for managing VM instances",
+            "value": "${google_compute_instance_group_manager.this.instance_group}"
+        },
+        "instance_group_manager_id": {
+            "description": "Numeric identifier for the instance group manager resource",
+            "value": "${google_compute_instance_group_manager.this.instance_group_manager_id}"
+        },
+        "operation": {
+            "description": "Current operation status of the instance group manager, useful for tracking tasks",
+            "value": "${google_compute_instance_group_manager.this.operation}"
+        },
+        "self_link": {
+            "description": "API URL for accessing the instance group manager resource directly",
+            "value": "${google_compute_instance_group_manager.this.self_link}"
+        },
+        "status": {
+            "description": "Details on the status and configuration of the instance group manager's versions",
+            "value": "${google_compute_instance_group_manager.this.status}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Container Cluster"
+  node:
+    label:
+      static: "[Data] Container Cluster"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_google_container_cluster
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Checksum for ensuring IAM policy consistency",
+            "value": "${google_cloudfunctions2_function_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Identifier for managing IAM policy resources",
+            "value": "${google_cloudfunctions2_function_iam_policy.this.id}"
+        }
+    }
+}

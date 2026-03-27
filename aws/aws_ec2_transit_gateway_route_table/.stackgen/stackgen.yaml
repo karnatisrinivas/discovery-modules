@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Ec2 Transit Gateway Route Table
+  node:
+    label:
+      static: Ec2 Transit Gateway Route Table
+      template: ${transit_gateway_id}
+    display_type: default
+
+discovery:
+  type: aws_ec2_transit_gateway_route_table
+  dnd_supported: false
+  data_source: data_aws_ec2_transit_gateway_route_table
+  references:
+    transit_gateway_id:
+      from: aws_ec2_transit_gateway
+      output: id

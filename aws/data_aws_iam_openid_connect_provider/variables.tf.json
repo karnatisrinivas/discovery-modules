@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "arn": [
+            {
+                "description": "The ARN of the IAM OpenID Connect Provider",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "url": [
+            {
+                "description": "The URL of the IAM OpenID Connect Provider",
+                "type": "string",
+                "nullable": false
+            }
+        ]
+    }
+}

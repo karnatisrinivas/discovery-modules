@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS DevOps Guru resource collection.",
+            "value": "${data.aws_devopsguru_resource_collection.this.id}"
+        }
+    }
+}

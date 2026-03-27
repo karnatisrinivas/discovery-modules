@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying the DHCP options set.",
+            "value": "${data.aws_vpc_dhcp_options.this.arn}"
+        },
+        "dhcp_options_id": {
+            "description": "The unique ID assigned to the DHCP options set.",
+            "value": "${data.aws_vpc_dhcp_options.this.dhcp_options_id}"
+        },
+        "domain_name": {
+            "description": "The domain name configured in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.domain_name}"
+        },
+        "domain_name_servers": {
+            "description": "A list of domain name servers specified in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.domain_name_servers}"
+        },
+        "id": {
+            "description": "The unique identifier for this set of DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.id}"
+        },
+        "ipv6_address_preferred_lease_time": {
+            "description": "The preferred lease time for IPv6 addresses in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.ipv6_address_preferred_lease_time}"
+        },
+        "netbios_name_servers": {
+            "description": "A list of NetBIOS name servers configured in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.netbios_name_servers}"
+        },
+        "netbios_node_type": {
+            "description": "The NetBIOS node type specified in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.netbios_node_type}"
+        },
+        "ntp_servers": {
+            "description": "A list of Network Time Protocol (NTP) servers specified in the DHCP options.",
+            "value": "${data.aws_vpc_dhcp_options.this.ntp_servers}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the DHCP options set.",
+            "value": "${data.aws_vpc_dhcp_options.this.owner_id}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the DHCP options set.",
+            "value": "${data.aws_vpc_dhcp_options.this.tags}"
+        }
+    }
+}

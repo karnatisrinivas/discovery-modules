@@ -1,0 +1,72 @@
+{
+    "output": {
+        "accepter": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.accepter}"
+        },
+        "cidr_block": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.cidr_block}"
+        },
+        "cidr_block_set": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.cidr_block_set}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.id}"
+        },
+        "ipv6_cidr_block_set": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.ipv6_cidr_block_set}"
+        },
+        "owner_id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.owner_id}"
+        },
+        "peer_cidr_block": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_cidr_block}"
+        },
+        "peer_cidr_block_set": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_cidr_block_set}"
+        },
+        "peer_ipv6_cidr_block_set": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_ipv6_cidr_block_set}"
+        },
+        "peer_owner_id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_owner_id}"
+        },
+        "peer_region": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_region}"
+        },
+        "peer_vpc_id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.peer_vpc_id}"
+        },
+        "region": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.region}"
+        },
+        "requester": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.requester}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.status}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.tags}"
+        },
+        "vpc_id": {
+            "description": "",
+            "value": "${data.aws_vpc_peering_connection.this.vpc_id}"
+        }
+    }
+}

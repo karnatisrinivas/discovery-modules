@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Provides an optional text description of the HTTP proxy, used for identifying or explaining its purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_keep_alive_timeout_sec": [
+      {
+        "description": "Specifies the duration, in seconds, that the HTTP connection can remain idle before being closed. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the regional target HTTP proxy, required to be 1-63 characters long and comply with RFC1035.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time duration allowed for the operations on the region target HTTP proxy resource, including create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "url_map": [
+      {
+        "description": "Specifies the URL map to associate with the regional target HTTP proxy, which defines the mapping of URLs to backend services. Must be the name of an existing URL map in the same region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

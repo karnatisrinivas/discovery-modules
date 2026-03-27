@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecr Pull Through Cache Rule"
+  node:
+    label:
+      static: "[Data] Ecr Pull Through Cache Rule"
+      template: "[Data] Ecr Pull Through Cache Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_ecr_pull_through_cache_rule
+  dnd_supported: false

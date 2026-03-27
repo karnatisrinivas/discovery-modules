@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "deletion_policy": [
+      {
+        "description": "Specifies the action to take on the subaccount when the resource is deleted; options are \"ABANDON\" or \"DELETE\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Name of the billing subaccount to display in the Google Cloud Console, must be unique within the parent billing account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "master_billing_account": [
+      {
+        "description": "Specifies the ID of the master billing account to associate with the subaccount, which must already exist and have permissions for creating subaccounts.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

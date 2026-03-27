@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for referencing the resource policy in other configurations",
+            "value": "${google_compute_resource_policy.this.id}"
+        },
+        "name": {
+            "description": "Name of the resource policy",
+            "value": "${google_compute_resource_policy.this.name}"
+        },
+        "self_link": {
+            "description": "URL for accessing the resource policy via the Google Cloud API",
+            "value": "${google_compute_resource_policy.this.self_link}"
+        }
+    }
+}

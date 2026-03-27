@@ -1,0 +1,20 @@
+{
+    "output": {
+        "connected_projects": {
+            "description": "List of projects connected via the VPC connector for shared services",
+            "value": "${google_vpc_access_connector.this.connected_projects}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the VPC access connector in configurations",
+            "value": "${google_vpc_access_connector.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the VPC access connector's resource details via API",
+            "value": "${google_vpc_access_connector.this.self_link}"
+        },
+        "state": {
+            "description": "Current operational state of the VPC access connector",
+            "value": "${google_vpc_access_connector.this.state}"
+        }
+    }
+}

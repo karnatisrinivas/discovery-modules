@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Availability Set
+  node:
+    label:
+      static: Availability Set
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_availability_set
+  dnd_supported: false

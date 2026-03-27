@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "ip_cidr_range": [
+      {
+        "description": "Defines the internal IP range for the connector in CIDR format, required to allocate IP addresses for VPC access. Must be a valid CIDR block within the VPC subnet.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "machine_type": [
+      {
+        "description": "Specifies the machine type for the VPC access connector, determining the computational resources allocated. Must be a valid Compute Engine machine type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "max_instances": [
+      {
+        "description": "Defines the maximum number of instances in the connector's scaling pool, must be between 2 and 10.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "max_throughput": [
+      {
+        "description": "Defines the maximum throughput in Mbps for the VPC Access Connector, ensuring sufficient bandwidth for connected services.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "min_instances": [
+      {
+        "description": "Specifies the minimum number of instances for the VPC access connector, ensuring sufficient capacity during low traffic periods. Must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "min_throughput": [
+      {
+        "description": "Specifies the minimum throughput capacity in Mbps for the VPC access connector, must be between 200 and 1000.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the VPC Access Connector, adhering to Google Cloud's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network in which the VPC access connector will be created, must be an existing network in the project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subnet": [
+      {
+        "description": "Specifies the subnet where the serverless VPC access connector will be deployed; must be in the same region as the connector.",
+        "nullable": true,
+        "type": "list(object({name: optional(string),project_id: optional(string)}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for create, update, and delete operations for the connector, expressed in a format like \"5m\" for 5 minutes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

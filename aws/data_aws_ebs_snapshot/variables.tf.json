@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "most_recent": [
+      {
+        "description": "Indicates whether to select the most recent snapshot.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "owners": [
+      {
+        "description": "List of AWS account IDs that own the snapshots.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "restorable_by_user_ids": [
+      {
+        "description": "List of user IDs that have permissions to restore the snapshot.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "snapshot_ids": [
+      {
+        "description": "List of specific snapshot IDs to consider.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

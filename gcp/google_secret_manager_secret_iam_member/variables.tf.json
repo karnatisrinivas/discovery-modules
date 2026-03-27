@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines the IAM condition for granting the member access, specifying criteria such as expression, title, and description.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity (user, service account, or group) to which the IAM policy binding will be applied; must be in the format `user:email`, `serviceAccount:email`, or `group:email`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member for the Secret Manager secret (e.g., roles/secretmanager.secretAccessor); must be a valid predefined or custom role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "secret_id": [
+      {
+        "description": "ID of the secret for which IAM policies will be managed. Must be a valid secret name in Secret Manager.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

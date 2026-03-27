@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Synthetics Runtime Versions"
+  node:
+    label:
+      static: "[Data] Synthetics Runtime Versions"
+      template: "[Data] Synthetics Runtime Versions"
+    display_type: default
+
+discovery:
+  type: data_aws_synthetics_runtime_versions
+  dnd_supported: false

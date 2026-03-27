@@ -1,0 +1,36 @@
+{
+    "output": {
+        "blobs_extension_key": {
+            "description": "API key for accessing Azure Blob storage within the function app",
+            "value": "${data.azurerm_function_app_host_keys.this.blobs_extension_key}"
+        },
+        "default_function_key": {
+            "description": "Default key for invoking HTTP-triggered functions in the app",
+            "value": "${data.azurerm_function_app_host_keys.this.default_function_key}"
+        },
+        "durabletask_extension_key": {
+            "description": "Key for enabling Durable Task functionality in Azure Functions",
+            "value": "${data.azurerm_function_app_host_keys.this.durabletask_extension_key}"
+        },
+        "event_grid_extension_config_key": {
+            "description": "Configuration key for integrating with Azure Event Grid",
+            "value": "${data.azurerm_function_app_host_keys.this.event_grid_extension_config_key}"
+        },
+        "event_grid_extension_key": {
+            "description": "Key for processing events from Azure Event Grid in the function app",
+            "value": "${data.azurerm_function_app_host_keys.this.event_grid_extension_key}"
+        },
+        "primary_key": {
+            "description": "Main authorization key for managing Azure Function App host operations",
+            "value": "${data.azurerm_function_app_host_keys.this.primary_key}"
+        },
+        "signalr_extension_key": {
+            "description": "Key for connecting Azure SignalR service with the function app",
+            "value": "${data.azurerm_function_app_host_keys.this.signalr_extension_key}"
+        },
+        "webpubsub_extension_key": {
+            "description": "API key for integrating Azure Web PubSub service in the function app",
+            "value": "${data.azurerm_function_app_host_keys.this.webpubsub_extension_key}"
+        }
+    }
+}

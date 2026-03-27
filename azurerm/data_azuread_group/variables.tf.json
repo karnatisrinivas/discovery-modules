@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "description": "The name displayed for the Azure AD group; must be unique within the tenant.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_transitive_members": [
+      {
+        "description": "Specifies whether to include transitive group members in the group membership retrieval.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "mail_enabled": [
+      {
+        "description": "Indicates whether the group is mail-enabled, requiring the group to be a Microsoft 365 group.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "mail_nickname": [
+      {
+        "description": "Specifies the mail nickname for the group, used as the email alias. Must be unique within the Azure Active Directory tenant.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_id": [
+      {
+        "description": "Unique identifier of the Azure AD group, used to reference the group in other resources or operations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_enabled": [
+      {
+        "description": "Indicates whether the group is a security-enabled group, which can be used to assign permissions to resources in Azure AD.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration settings for create, read, update, and delete operations for the Azure AD group, allowing customization of operation timeout periods.",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

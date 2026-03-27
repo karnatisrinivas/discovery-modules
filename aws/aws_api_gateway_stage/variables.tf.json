@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "cache_cluster_enabled": [
+      {
+        "description": "Indicates if the cache cluster is enabled for the stage.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "cache_cluster_size": [
+      {
+        "description": "Specifies the size of the cache cluster for the stage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "client_certificate_id": [
+      {
+        "description": "The identifier for the client certificate used by the stage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deployment_id": [
+      {
+        "description": "The deployment identifier associated with the stage.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "A brief description of the stage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "documentation_version": [
+      {
+        "description": "The version of the documentation associated with the stage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "The identifier of the REST API that the stage belongs to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage_name": [
+      {
+        "description": "The name of the stage within the API Gateway.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A set of key-value pairs for tagging the stage.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "variables": [
+      {
+        "description": "A map of stage variables that are associated with the stage.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "xray_tracing_enabled": [
+      {
+        "description": "Indicates if AWS X-Ray tracing is enabled for the stage.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "access_log_settings": [
+      {
+        "description": "The settings for the access log.",
+        "nullable": true,
+        "type": "list(object({ destination_arn: string, format: string }))"
+      }
+    ],
+    "canary_settings": [
+      {
+        "description": "The settings for the canary deployment.",
+        "nullable": true,
+        "type": "list(object({ deployment_id: string, percent_traffic: optional(number), stage_variable_overrides: optional(map(string)), use_stage_cache: optional(bool) }))"
+      }
+    ]
+  }
+}

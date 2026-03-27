@@ -1,0 +1,10 @@
+{
+  "resourceType": "google_compute_health_check",
+  "templateType": "atomic",
+  "label": "Compute Health Check",
+  "icon": "",
+  "provider": "gcp",
+  "iacType": "Terraform",
+  "allowDnD": false,
+  "nameVariable": "name"
+}

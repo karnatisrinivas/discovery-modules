@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Interconnect Attachment
+  node:
+    label:
+      static: Compute Interconnect Attachment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_interconnect_attachment
+  dnd_supported: false
+  references:
+    router:
+      from: google_compute_router
+      output: id

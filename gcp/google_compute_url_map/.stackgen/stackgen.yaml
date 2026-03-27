@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Url Map
+  node:
+    label:
+      static: Compute Url Map
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_url_map
+  dnd_supported: false

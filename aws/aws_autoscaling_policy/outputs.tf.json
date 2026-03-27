@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN of the autoscaling policy",
+            "value": "${aws_autoscaling_policy.this.arn}"
+        },
+        "name": {
+            "description": "The name of the autoscaling policy",
+            "value": "${aws_autoscaling_policy.this.name}"
+        }
+    }
+}

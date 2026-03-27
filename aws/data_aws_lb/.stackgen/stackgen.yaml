@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] LB"
+  node:
+    label:
+      static: "[Data] LB"
+      template: "[Data] LB"
+    display_type: default
+
+discovery:
+  type: data_aws_lb
+  dnd_supported: false

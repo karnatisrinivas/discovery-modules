@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "mesh_name": [
+      {
+        "description": "The name of the service mesh in which to create the gateway route.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the gateway route to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "virtual_gateway_name": [
+      {
+        "description": "The name of the virtual gateway for which the route is being created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

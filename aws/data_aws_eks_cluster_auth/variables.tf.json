@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the EKS cluster to authenticate with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

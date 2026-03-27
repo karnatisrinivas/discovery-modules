@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "membership_id": [
+            {
+                "type": "string",
+                "description": "The client-provided identifier of the membership."
+            }
+        ],
+        "cluster": [
+            {
+                "type": "string",
+                "description": "ID of the cluster to belong to this membership."
+            }
+        ]
+    }
+}

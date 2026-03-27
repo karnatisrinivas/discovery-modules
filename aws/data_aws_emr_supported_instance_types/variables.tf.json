@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "release_label": [
+      {
+        "description": "Specifies the version of the Amazon EMR release to use for the cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

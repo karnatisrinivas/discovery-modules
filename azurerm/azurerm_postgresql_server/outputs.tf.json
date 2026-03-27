@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure PostgreSQL server.",
+            "value": "${azurerm_postgresql_server.this.id}"
+        },
+        "name": {
+            "description": "The name of the Azure PostgreSQL server.",
+            "value": "${azurerm_postgresql_server.this.name}"
+        }
+    }
+}

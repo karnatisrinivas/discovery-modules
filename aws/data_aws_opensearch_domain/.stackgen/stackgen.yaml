@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Opensearch Domain"
+  node:
+    label:
+      static: "[Data] Opensearch Domain"
+      template: "[Data] Opensearch Domain"
+    display_type: default
+
+discovery:
+  type: data_aws_opensearch_domain
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific invocation of the AWS Lambda function.",
+            "value": "${data.aws_lambda_invocation.this.id}"
+        },
+        "result": {
+            "description": "The output or response returned from the AWS Lambda function after execution.",
+            "value": "${data.aws_lambda_invocation.this.result}"
+        }
+    }
+}

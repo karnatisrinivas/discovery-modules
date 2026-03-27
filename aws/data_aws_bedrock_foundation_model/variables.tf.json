@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "model_id": [
+      {
+        "description": "The unique identifier for the AWS Bedrock foundation model that you want to configure or interact with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

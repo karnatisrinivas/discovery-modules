@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the human-readable description for the SSL certificate, providing context or purpose; must be unique and can include up to 63 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "managed": [
+      {
+        "description": "Defines the type of SSL certificate to create; set to `true` for a managed certificate or `false` for unmanaged.",
+        "nullable": true,
+        "type": "list(object({domains: list(string)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the SSL certificate. Must be unique within the project and comply with RFC1035.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for operations related to the managed SSL certificate, including creation, update, and deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Defines the type of SSL certificate, either 'SELF_MANAGED' for user-provided certificates or 'MANAGED' for Google-managed certificates.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

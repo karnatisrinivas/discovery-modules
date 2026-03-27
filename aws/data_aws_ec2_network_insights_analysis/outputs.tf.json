@@ -1,0 +1,64 @@
+{
+    "output": {
+        "alternate_path_hints": {
+            "description": "Hints for alternate network paths that could be taken.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.alternate_path_hints}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.arn}"
+        },
+        "explanations": {
+            "description": "Detailed explanations of the network path analysis and any issues found.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.explanations}"
+        },
+        "filter_in_arns": {
+            "description": "List of ARNs used to filter the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.filter_in_arns}"
+        },
+        "forward_path_components": {
+            "description": "Components involved in the forward path of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.forward_path_components}"
+        },
+        "id": {
+            "description": "The ID of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.id}"
+        },
+        "network_insights_analysis_id": {
+            "description": "The ID specifically for this network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.network_insights_analysis_id}"
+        },
+        "network_insights_path_id": {
+            "description": "The ID of the network insights path associated with this analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.network_insights_path_id}"
+        },
+        "path_found": {
+            "description": "Indicates whether a valid network path was found.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.path_found}"
+        },
+        "return_path_components": {
+            "description": "Components involved in the return path of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.return_path_components}"
+        },
+        "start_date": {
+            "description": "The start date and time of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.start_date}"
+        },
+        "status": {
+            "description": "The current status of the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.status}"
+        },
+        "status_message": {
+            "description": "Additional information about the status of the analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.status_message}"
+        },
+        "tags": {
+            "description": "Tags associated with the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.tags}"
+        },
+        "warning_message": {
+            "description": "Any warning messages related to the network insights analysis.",
+            "value": "${data.aws_ec2_network_insights_analysis.this.warning_message}"
+        }
+    }
+}

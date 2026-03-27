@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance Group
+  node:
+    label:
+      static: Compute Instance Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_group
+  dnd_supported: false
+  references:
+    instances:
+      from: google_compute_instance
+      output: self_link
+    network:
+      from: google_compute_network
+      output: self_link

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Apigatewayv2 Export"
+  node:
+    label:
+      static: "[Data] Apigatewayv2 Export"
+      template: "[Data] Apigatewayv2 Export"
+    display_type: default
+
+discovery:
+  type: data_aws_apigatewayv2_export
+  dnd_supported: false

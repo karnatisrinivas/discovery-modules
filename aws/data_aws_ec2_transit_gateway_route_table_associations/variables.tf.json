@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "transit_gateway_route_table_id": [
+      {
+        "description": "The unique identifier for the transit gateway route table to associate with a resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

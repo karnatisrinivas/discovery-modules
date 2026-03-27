@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Firewall Policy"
+  node:
+    label:
+      static: "[Data] Firewall Policy"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_firewall_policy
+  dnd_supported: false

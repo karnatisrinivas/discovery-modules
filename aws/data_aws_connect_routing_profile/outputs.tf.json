@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.arn}"
+        },
+        "default_outbound_queue_id": {
+            "description": "The ID of the default outbound queue for the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.default_outbound_queue_id}"
+        },
+        "description": {
+            "description": "A brief description of the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.id}"
+        },
+        "media_concurrencies": {
+            "description": "The media channels and their concurrent usage limits for the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.media_concurrencies}"
+        },
+        "name": {
+            "description": "The name of the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.name}"
+        },
+        "queue_configs": {
+            "description": "Configurations for the queues associated with the routing profile, including channel, delay, and priority.",
+            "value": "${data.aws_connect_routing_profile.this.queue_configs}"
+        },
+        "routing_profile_id": {
+            "description": "The ID of the routing profile.",
+            "value": "${data.aws_connect_routing_profile.this.routing_profile_id}"
+        },
+        "tags": {
+            "description": "Tags associated with the routing profile for organizational purposes.",
+            "value": "${data.aws_connect_routing_profile.this.tags}"
+        }
+    }
+}

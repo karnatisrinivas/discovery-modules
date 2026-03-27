@@ -1,0 +1,41 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Global Address
+  node:
+    label:
+      static: Compute Global Address
+      template: ${name}
+    display_type: default
+
+variables:
+  ip_version:
+    ui_control: select
+    description: The IP Version that will be used by this address.
+    type: string
+    options: 
+      - IPV4
+      - IPV6
+  address_type:
+    options: 
+      - INTERNAL
+      - EXTERNAL
+    ui_control: select
+    description: The type of address to reserve, either INTERNAL or EXTERNAL. If EXTERNAL is selected, no other inputs are required. If INTERNAL is selected, the network and purpose fields are required.
+    type: string
+  purpose:
+    description: The purpose of the resource.(Shared or Not Shared)
+    type: string
+    options: 
+      - VPC_PEERING
+      - PRIVATE_SERVICE_CONNECT
+    ui_control: select
+
+discovery:
+  type: google_compute_global_address
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: name

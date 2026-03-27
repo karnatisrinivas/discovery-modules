@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Acmpca Certificate Authority"
+  node:
+    label:
+      static: "[Data] Acmpca Certificate Authority"
+      template: "[Data] Acmpca Certificate Authority"
+    display_type: default
+
+discovery:
+  type: data_aws_acmpca_certificate_authority
+  dnd_supported: false

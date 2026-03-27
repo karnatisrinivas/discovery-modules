@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Spanner Instance
+  node:
+    label:
+      static: Spanner Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_spanner_instance
+  dnd_supported: false
+  data_source: data_google_spanner_instance

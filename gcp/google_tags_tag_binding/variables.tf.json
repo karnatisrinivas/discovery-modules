@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "parent": [
+      {
+        "description": "Specifies the resource to which the tag is being applied; must be a valid resource ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tag_value": [
+      {
+        "description": "Specifies the tag value to bind to the resource, must be a valid tag value identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations on the tag binding resource before timing out.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

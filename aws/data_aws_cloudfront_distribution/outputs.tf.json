@@ -1,0 +1,48 @@
+{
+    "output": {
+        "aliases": {
+            "description": "A set of alternate domain names (CNAMEs) associated with the CloudFront distribution.",
+            "value": "${data.aws_cloudfront_distribution.this.aliases}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the CloudFront distribution.",
+            "value": "${data.aws_cloudfront_distribution.this.arn}"
+        },
+        "domain_name": {
+            "description": "The CloudFront distribution's domain name.",
+            "value": "${data.aws_cloudfront_distribution.this.domain_name}"
+        },
+        "enabled": {
+            "description": "Indicates whether the CloudFront distribution is enabled.",
+            "value": "${data.aws_cloudfront_distribution.this.enabled}"
+        },
+        "etag": {
+            "description": "The current version of the CloudFront distribution's configuration.",
+            "value": "${data.aws_cloudfront_distribution.this.etag}"
+        },
+        "hosted_zone_id": {
+            "description": "The ID of the hosted zone for the CloudFront distribution's domain name.",
+            "value": "${data.aws_cloudfront_distribution.this.hosted_zone_id}"
+        },
+        "in_progress_validation_batches": {
+            "description": "The number of validation batches currently in progress.",
+            "value": "${data.aws_cloudfront_distribution.this.in_progress_validation_batches}"
+        },
+        "last_modified_time": {
+            "description": "The date and time when the CloudFront distribution was last modified.",
+            "value": "${data.aws_cloudfront_distribution.this.last_modified_time}"
+        },
+        "status": {
+            "description": "The current status of the CloudFront distribution.",
+            "value": "${data.aws_cloudfront_distribution.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the CloudFront distribution.",
+            "value": "${data.aws_cloudfront_distribution.this.tags}"
+        },
+        "web_acl_id": {
+            "description": "The ID of the Web ACL associated with the CloudFront distribution.",
+            "value": "${data.aws_cloudfront_distribution.this.web_acl_id}"
+        }
+    }
+}

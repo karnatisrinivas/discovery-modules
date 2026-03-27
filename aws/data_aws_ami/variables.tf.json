@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "executable_users": [
+      {
+        "description": "A list of users who are allowed to launch the AMI.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "include_deprecated": [
+      {
+        "description": "Indicates whether to include deprecated AMIs in the search.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "most_recent": [
+      {
+        "description": "If true, selects the most recent version of the AMI.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name_regex": [
+      {
+        "description": "A regular expression to filter AMI names.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "owners": [
+      {
+        "description": "A list of AWS account IDs that own the AMIs.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

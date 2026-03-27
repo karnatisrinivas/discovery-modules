@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: IAM User Policy
+  node:
+    label:
+      static: IAM User Policy
+      template: IAM User Policy
+    display_type: default
+
+variables:
+  policy:
+    description: The policy document. This is a JSON formatted string.
+    type: string
+    ui_control: json
+
+discovery:
+  type: aws_iam_user_policy
+  dnd_supported: false
+  references:
+    user:
+      from: aws_iam_user
+      output: name

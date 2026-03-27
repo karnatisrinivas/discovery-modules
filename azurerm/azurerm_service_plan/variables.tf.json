@@ -1,0 +1,65 @@
+{
+  "variable": {
+    "app_service_environment_id": [
+      {
+        "description": "The ID of the App Service Environment to use for the service plan. Optional.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the App Service Plan.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "os_type": [
+      {
+        "description": "The operating system type for the service plan, such as 'Windows' or 'Linux'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "per_site_scaling_enabled": [
+      {
+        "description": "Indicates if each site can be scaled independently within the plan. Optional.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "sku_name": [
+      {
+        "description": "The pricing tier for the service plan, like 'F1', 'B1', 'S1', etc.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource. Optional.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zone_balancing_enabled": [
+      {
+        "description": "Determines if the service plan should be zone balanced. Optional.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] User"
+  node:
+    label:
+      static: "[Data] User"
+      template: ${user_principal_name}
+    display_type: default
+
+discovery:
+  type: data_azuread_user
+  dnd_supported: false

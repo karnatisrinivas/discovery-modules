@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arns": {
+            "description": "A set of Amazon Resource Names (ARNs) for the image pipelines.",
+            "value": "${data.aws_imagebuilder_image_pipelines.this.arns}"
+        },
+        "id": {
+            "description": "The unique identifier for the image pipelines data source.",
+            "value": "${data.aws_imagebuilder_image_pipelines.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the image pipelines.",
+            "value": "${data.aws_imagebuilder_image_pipelines.this.names}"
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket where the objects are stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "delimiter": [
+      {
+        "description": "A character used to group keys when listing objects, like a directory separator.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encoding_type": [
+      {
+        "description": "Specifies the encoding method to be applied to the object keys in the response.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fetch_owner": [
+      {
+        "description": "A boolean value that indicates whether to include the owner field in the response.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "max_keys": [
+      {
+        "description": "The maximum number of keys to return in the response.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "prefix": [
+      {
+        "description": "Limits the response to keys that begin with the specified prefix.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "start_after": [
+      {
+        "description": "Specifies the key to start with when listing objects in a bucket.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

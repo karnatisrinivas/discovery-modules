@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dataproc Cluster
+  node:
+    label:
+      static: Dataproc Cluster
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_dataproc_cluster
+  dnd_supported: false

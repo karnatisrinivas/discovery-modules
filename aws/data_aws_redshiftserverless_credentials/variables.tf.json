@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "db_name": [
+      {
+        "description": "The name of the database for which you want to retrieve credentials.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "duration_seconds": [
+      {
+        "description": "The duration, in seconds, for which the generated credentials are valid.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "workgroup_name": [
+      {
+        "description": "The name of the workgroup associated with the Redshift Serverless instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

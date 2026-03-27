@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Acm Certificate"
+  node:
+    label:
+      static: "[Data] Acm Certificate"
+      template: "[Data] Acm Certificate"
+    display_type: default
+
+discovery:
+  type: data_aws_acm_certificate
+  dnd_supported: false

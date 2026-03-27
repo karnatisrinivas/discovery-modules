@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional condition that must be met for the IAM policy binding to apply, expressed as a logic expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to be granted the IAM role, such as a user, service account, or group. Must follow the format `user:user@example.com`, `serviceAccount:service-account-name@project-id.iam.gserviceaccount.com`, or similar.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "org_id": [
+      {
+        "description": "The ID of the organization where the IAM policy will be applied; must be a valid organization ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member within the organization. Must be in the format roles/{role_name}.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

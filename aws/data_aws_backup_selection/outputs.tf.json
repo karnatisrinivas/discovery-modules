@@ -1,0 +1,20 @@
+{
+    "output": {
+        "iam_role_arn": {
+            "description": "The Amazon Resource Name (ARN) of the IAM role associated with the backup selection.",
+            "value": "${data.aws_backup_selection.this.iam_role_arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the backup selection.",
+            "value": "${data.aws_backup_selection.this.id}"
+        },
+        "name": {
+            "description": "The name of the backup selection.",
+            "value": "${data.aws_backup_selection.this.name}"
+        },
+        "resources": {
+            "description": "The set of resources that are included in the backup selection.",
+            "value": "${data.aws_backup_selection.this.resources}"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the MemoryDB snapshot.",
+            "value": "${data.aws_memorydb_snapshot.this.arn}"
+        },
+        "cluster_configuration": {
+            "description": "A list of objects representing the configuration details of the MemoryDB cluster associated with the snapshot.",
+            "value": "${data.aws_memorydb_snapshot.this.cluster_configuration}"
+        },
+        "cluster_name": {
+            "description": "The name of the MemoryDB cluster from which the snapshot was created.",
+            "value": "${data.aws_memorydb_snapshot.this.cluster_name}"
+        },
+        "id": {
+            "description": "The unique identifier for the MemoryDB snapshot.",
+            "value": "${data.aws_memorydb_snapshot.this.id}"
+        },
+        "kms_key_arn": {
+            "description": "The ARN of the AWS Key Management Service (KMS) key used to encrypt the snapshot.",
+            "value": "${data.aws_memorydb_snapshot.this.kms_key_arn}"
+        },
+        "source": {
+            "description": "The source of the snapshot, indicating where it was created.",
+            "value": "${data.aws_memorydb_snapshot.this.source}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the MemoryDB snapshot.",
+            "value": "${data.aws_memorydb_snapshot.this.tags}"
+        }
+    }
+}

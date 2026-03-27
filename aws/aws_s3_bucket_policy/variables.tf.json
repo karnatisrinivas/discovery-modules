@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "The name of the S3 bucket to which the policy will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy": [
+      {
+        "description": "The JSON-formatted policy that defines access permissions for the S3 bucket.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

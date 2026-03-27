@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "check_interval_sec": [
+      {
+        "description": "Time interval, in seconds, between consecutive health checks; must be greater than zero.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies an optional description for the HTTP health check resource, providing additional context or purpose for its use.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "healthy_threshold": [
+      {
+        "description": "Number of consecutive successful health checks required for an instance to be considered healthy.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "host": [
+      {
+        "description": "Hostname used for HTTP health check requests, typically resolving to the IP address of the target resource; must be a valid domain name or IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the HTTP health check resource, which must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "port": [
+      {
+        "description": "The port number on which the health check requests will be sent; must be a valid TCP port.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "request_path": [
+      {
+        "description": "Path to which the HTTP health check request is sent; must begin with a forward slash (e.g., \"/health\").",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "Duration in seconds to wait for a response before marking the health check as failed; must be between 1 and 300.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures the timeout settings for the health check, specifying the maximum amount of time to wait for a response before marking the check as failed.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "unhealthy_threshold": [
+      {
+        "description": "Specifies the number of consecutive failed health checks required to mark the instance as unhealthy. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

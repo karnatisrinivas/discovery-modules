@@ -1,0 +1,5 @@
+resource "aws_route_table_association" "this" {
+  subnet_id      = var.subnet_id != null ? var.subnet_id : null
+  gateway_id     = var.subnet_id == null && var.gateway_id != null ? var.gateway_id : null
+  route_table_id = var.route_table_id
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lakeformation Data Lake Settings"
+  node:
+    label:
+      static: "[Data] Lakeformation Data Lake Settings"
+      template: "[Data] Lakeformation Data Lake Settings"
+    display_type: default
+
+discovery:
+  type: data_aws_lakeformation_data_lake_settings
+  dnd_supported: false

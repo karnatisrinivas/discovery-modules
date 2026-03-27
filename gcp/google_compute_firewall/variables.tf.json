@@ -1,0 +1,123 @@
+{
+  "variable": {
+    "allow": [
+      {
+        "description": "Defines the list of allowed protocols and ports for the firewall rule, specifying which traffic is permitted.",
+        "nullable": true,
+        "type": "list(object({ports: optional(list(string)),protocol: string}))"
+      }
+    ],
+    "deny": [
+      {
+        "description": "Defines the list of deny rules specifying protocols and ports to block in the firewall configuration.",
+        "nullable": true,
+        "type": "list(object({ports: optional(list(string)),protocol: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the purpose or details of the firewall rule; can be up to 2048 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_ranges": [
+      {
+        "description": "Specifies the list of destination IP address ranges in CIDR format for the firewall rule; used to define traffic targets.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "direction": [
+      {
+        "description": "Specifies the traffic direction for the firewall rule; must be either \"INGRESS\" for incoming traffic or \"EGRESS\" for outgoing traffic.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Indicates whether the firewall rule is disabled; set to true to disable the rule and prevent it from being applied.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_logging": [
+      {
+        "description": "Determines whether logging is enabled for the firewall rule; requires logging to be supported in the project.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Configures logging options for the firewall rule, including whether to enable logging and the type of log metadata captured.",
+        "nullable": true,
+        "type": "list(object({metadata: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the firewall rule, used to identify it within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the VPC network where the firewall rule will be applied. Must be the name of an existing VPC network in the same project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "priority": [
+      {
+        "description": "Defines the priority of the firewall rule, determining the order in which rules are evaluated. Lower values indicate higher priority. Must be an integer between 0 and 65535.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "source_ranges": [
+      {
+        "description": "Defines the IP address ranges that are allowed to make inbound connections; must be specified in CIDR format.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "source_service_accounts": [
+      {
+        "description": "Specifies the service accounts allowed to send traffic through the firewall rule, must be formatted as email addresses.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "source_tags": [
+      {
+        "description": "Defines the network tags that a source instance must have to match this firewall rule.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "target_service_accounts": [
+      {
+        "description": "Specifies the list of service accounts that are allowed as targets for the firewall rule; must be valid and existing service accounts within the project.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "target_tags": [
+      {
+        "description": "Specifies the network tags of instances to which the firewall rule will apply; must match the tags assigned to the target instances.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the creation, update, or deletion of the firewall rule to complete.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

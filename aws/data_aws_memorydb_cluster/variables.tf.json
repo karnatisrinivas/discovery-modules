@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the MemoryDB cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Fsx Openzfs Snapshot"
+  node:
+    label:
+      static: "[Data] Fsx Openzfs Snapshot"
+      template: "[Data] Fsx Openzfs Snapshot"
+    display_type: default
+
+discovery:
+  type: data_aws_fsx_openzfs_snapshot
+  dnd_supported: false

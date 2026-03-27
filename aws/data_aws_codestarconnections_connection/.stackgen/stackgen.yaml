@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Codestarconnections Connection"
+  node:
+    label:
+      static: "[Data] Codestarconnections Connection"
+      template: "[Data] Codestarconnections Connection"
+    display_type: default
+
+discovery:
+  type: data_aws_codestarconnections_connection
+  dnd_supported: false

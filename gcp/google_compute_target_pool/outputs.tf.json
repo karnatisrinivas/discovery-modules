@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for managing and referencing the target pool in configurations",
+            "value": "${google_compute_target_pool.this.id}"
+        },
+        "self_link": {
+            "description": "The URI of the created resource.",
+            "value": "${google_compute_target_pool.this.self_link}"
+        }
+    }
+}

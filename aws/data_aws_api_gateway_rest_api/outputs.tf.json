@@ -1,0 +1,48 @@
+{
+    "output": {
+        "api_key_source": {
+            "description": "The source of the API key for requests, such as HEADER or AUTHORIZER.",
+            "value": "${data.aws_api_gateway_rest_api.this.api_key_source}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.arn}"
+        },
+        "binary_media_types": {
+            "description": "A list of binary media types supported by the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.binary_media_types}"
+        },
+        "description": {
+            "description": "A description of the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.description}"
+        },
+        "endpoint_configuration": {
+            "description": "Configuration settings for the API endpoint, including types and VPC endpoint IDs.",
+            "value": "${data.aws_api_gateway_rest_api.this.endpoint_configuration}"
+        },
+        "execution_arn": {
+            "description": "The execution ARN that includes the stage and method.",
+            "value": "${data.aws_api_gateway_rest_api.this.execution_arn}"
+        },
+        "id": {
+            "description": "The unique identifier of the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.id}"
+        },
+        "minimum_compression_size": {
+            "description": "The minimum size in bytes for which compression is enabled.",
+            "value": "${data.aws_api_gateway_rest_api.this.minimum_compression_size}"
+        },
+        "policy": {
+            "description": "The policy document that controls access to the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.policy}"
+        },
+        "root_resource_id": {
+            "description": "The identifier for the root resource of the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.root_resource_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the REST API.",
+            "value": "${data.aws_api_gateway_rest_api.this.tags}"
+        }
+    }
+}

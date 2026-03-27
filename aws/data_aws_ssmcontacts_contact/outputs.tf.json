@@ -1,0 +1,20 @@
+{
+    "output": {
+        "alias": {
+            "description": "The unique identifier (alias) for the contact.",
+            "value": "${data.aws_ssmcontacts_contact.this.alias}"
+        },
+        "display_name": {
+            "description": "The name displayed for the contact.",
+            "value": "${data.aws_ssmcontacts_contact.this.display_name}"
+        },
+        "id": {
+            "description": "The unique ID assigned to the contact.",
+            "value": "${data.aws_ssmcontacts_contact.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the contact.",
+            "value": "${data.aws_ssmcontacts_contact.this.tags}"
+        }
+    }
+}

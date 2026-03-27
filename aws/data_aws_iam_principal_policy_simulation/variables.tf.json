@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "action_names": [
+      {
+        "description": "A set of action names that you want to simulate in the policy, e.g., 's3:PutObject'.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "additional_policies_json": [
+      {
+        "description": "Optional set of additional policies in JSON format to consider during simulation.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "caller_arn": [
+      {
+        "description": "The ARN of the IAM entity (user or role) that is making the request.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "permissions_boundary_policies_json": [
+      {
+        "description": "Optional set of permissions boundary policies in JSON format to include in the simulation.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "policy_source_arn": [
+      {
+        "description": "The ARN of the IAM policy or role to simulate.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_arns": [
+      {
+        "description": "Optional set of ARNs of the resources on which you want to simulate actions.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "resource_handling_option": [
+      {
+        "description": "Specifies how to handle resources; options may include 'SkipResource' or other modes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_owner_account_id": [
+      {
+        "description": "The account ID of the resource owner, useful for cross-account simulations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_policy_json": [
+      {
+        "description": "Optional resource policy in JSON format to include in the simulation.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

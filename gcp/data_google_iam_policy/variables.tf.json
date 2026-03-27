@@ -1,0 +1,10 @@
+{
+    "variable": {
+        "bindings": [
+            {
+                "type": "list(object({role: string, members: list(string), condition_expression: string, condition_title: string, condition_description: string}))",
+                "description": "Defines a binding to be included in the policy document."
+            }
+        ]
+    }
+}

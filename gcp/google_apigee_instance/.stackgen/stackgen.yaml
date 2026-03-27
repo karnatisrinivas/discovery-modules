@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Instance
+  node:
+    label:
+      static: Apigee Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_apigee_instance
+  dnd_supported: false
+  references:
+    org_id:
+      from: google_apigee_organization
+      output: id
+    disk_encryption_key_name:
+      from: google_kms_crypto_key
+      output: id

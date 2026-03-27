@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloud Scheduler Job
+  node:
+    label:
+      static: Cloud Scheduler Job
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloud_scheduler_job
+  dnd_supported: false

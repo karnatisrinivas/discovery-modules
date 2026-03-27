@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Vpn Attachment"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Vpn Attachment"
+      template: "[Data] Ec2 Transit Gateway Vpn Attachment"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_vpn_attachment
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_ses_domain_identity.this.arn}"
+        },
+        "domain": {
+            "description": "The value of the domain output",
+            "value": "${aws_ses_domain_identity.this.domain}"
+        }
+    }
+}

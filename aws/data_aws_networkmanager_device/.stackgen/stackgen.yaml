@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Networkmanager Device"
+  node:
+    label:
+      static: "[Data] Networkmanager Device"
+      template: "[Data] Networkmanager Device"
+    display_type: default
+
+discovery:
+  type: data_aws_networkmanager_device
+  dnd_supported: false

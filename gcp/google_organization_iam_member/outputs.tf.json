@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM policy binding",
+            "value": "${google_organization_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM member resource in the organization",
+            "value": "${google_organization_iam_member.this.id}"
+        }
+    }
+}

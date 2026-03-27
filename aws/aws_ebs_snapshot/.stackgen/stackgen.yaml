@@ -1,0 +1,28 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EBS Snapshot
+  node:
+    label:
+      static: EBS Snapshot
+      template: EBS Snapshot
+    display_type: default
+
+variables:
+  storage_tier:
+    options: 
+      - standard
+      - archive
+    ui_control: select
+    description: The storage tier of the snapshot
+    type: string
+
+discovery:
+  type: aws_ebs_snapshot
+  dnd_supported: false
+  data_source: data_aws_ebs_snapshot
+  references:
+    volume_id:
+      from: aws_ebs_volume
+      output: id

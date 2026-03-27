@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS Connect instance storage configuration.",
+            "value": "${data.aws_connect_instance_storage_config.this.id}"
+        },
+        "storage_config": {
+            "description": "The configuration details for storage options in an AWS Connect instance, including settings for Kinesis Firehose, Kinesis Stream, Kinesis Video Stream, and S3, along with their respective encryption and retention configurations.",
+            "value": "${data.aws_connect_instance_storage_config.this.storage_config}"
+        }
+    }
+}

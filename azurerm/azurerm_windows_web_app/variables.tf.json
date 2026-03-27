@@ -1,0 +1,135 @@
+{
+  "variable": {
+    "app_settings": [
+      {
+        "description": "Key-value pairs of settings for the web app.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "client_affinity_enabled": [
+      {
+        "description": "Indicates if client affinity (ARR affinity) is enabled for the web app.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_enabled": [
+      {
+        "description": "Specifies if client certificates are required for the web app.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "client_certificate_exclusion_paths": [
+      {
+        "description": "Paths that are excluded from requiring a client certificate.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "client_certificate_mode": [
+      {
+        "description": "The mode of client certificate requirement (e.g., Required, Optional, etc.).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enabled": [
+      {
+        "description": "Determines if the web app is enabled or not.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "ftp_publish_basic_authentication_enabled": [
+      {
+        "description": "Specifies if basic authentication is enabled for FTP publishing.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "https_only": [
+      {
+        "description": "Indicates if only HTTPS traffic is allowed for the web app.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the web app.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Specifies if public network access is enabled for the web app.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "service_plan_id": [
+      {
+        "description": "The ID of the service plan associated with the web app.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the web app for categorization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "virtual_network_subnet_id": [
+      {
+        "description": "The ID of the virtual network subnet used by the web app.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "webdeploy_publish_basic_authentication_enabled": [
+      {
+        "description": "Indicates if basic authentication is enabled for WebDeploy publishing.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "connection_string": [
+      {
+        "description": "Connection string for the web app.",
+        "nullable": true,
+        "type": "list(object({name: string, type: string, value: string}))"
+      }
+    ],
+    "site_config": [
+      {
+        "description": "Configuration settings for the web app.",
+        "nullable": true,
+        "type": "list(object({always_on: bool, application_stack: list(object({current_stack: string, docker_image_name: string, docker_registry_url: string, docker_registry_username: string, docker_registry_password: string, dotnet_version: string, dotnet_core_version: string, tomcat_version: string, java_embedded_server_enabled: bool, java_version: string, node_version: string, php_version: string, python: bool })), default_documents: list(string), ftps_state: string, health_check_path: string, health_check_eviction_time_in_min: number, http2_enabled: bool, ip_restriction: list(object({action: string, ip_address: string, name: string, priority: number, service_tag: string, virtual_network_subnet_id: string})), ip_restriction_default_action: string, load_balancing_mode: string, local_mysql_enabled: bool, managed_pipeline_mode: string, minimum_tls_version: string, remote_debugging_enabled: bool, remote_debugging_version: string, use_32_bit_worker: bool, vnet_route_all_enabled: bool, websockets_enabled: bool, worker_count: number }))"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Identity for the web app.",
+        "nullable": true,
+        "type": "list(object({type: string, identity_ids: list(string)}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

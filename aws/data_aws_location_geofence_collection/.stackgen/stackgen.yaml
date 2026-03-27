@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Location Geofence Collection"
+  node:
+    label:
+      static: "[Data] Location Geofence Collection"
+      template: "[Data] Location Geofence Collection"
+    display_type: default
+
+discovery:
+  type: data_aws_location_geofence_collection
+  dnd_supported: false

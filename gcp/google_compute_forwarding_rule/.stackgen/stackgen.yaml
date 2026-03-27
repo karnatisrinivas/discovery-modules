@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Forwarding Rule
+  node:
+    label:
+      static: Compute Forwarding Rule
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_forwarding_rule
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: id
+    subnetwork:
+      from: google_compute_subnetwork
+      output: id

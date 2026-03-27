@@ -1,0 +1,32 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the ECR image.",
+            "value": "${data.aws_ecr_image.this.id}"
+        },
+        "image_digest": {
+            "description": "A unique identifier for the ECR image based on its content.",
+            "value": "${data.aws_ecr_image.this.image_digest}"
+        },
+        "image_pushed_at": {
+            "description": "The timestamp when the image was pushed to the ECR.",
+            "value": "${data.aws_ecr_image.this.image_pushed_at}"
+        },
+        "image_size_in_bytes": {
+            "description": "The size of the ECR image in bytes.",
+            "value": "${data.aws_ecr_image.this.image_size_in_bytes}"
+        },
+        "image_tags": {
+            "description": "A list of tags associated with the ECR image.",
+            "value": "${data.aws_ecr_image.this.image_tags}"
+        },
+        "image_uri": {
+            "description": "The URI of the ECR image.",
+            "value": "${data.aws_ecr_image.this.image_uri}"
+        },
+        "registry_id": {
+            "description": "The ID of the AWS ECR registry containing the image.",
+            "value": "${data.aws_ecr_image.this.registry_id}"
+        }
+    }
+}

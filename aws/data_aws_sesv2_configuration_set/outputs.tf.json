@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying the SES configuration set.",
+            "value": "${data.aws_sesv2_configuration_set.this.arn}"
+        },
+        "delivery_options": {
+            "description": "Settings for how emails are delivered, including sending pool and TLS policy.",
+            "value": "${data.aws_sesv2_configuration_set.this.delivery_options}"
+        },
+        "id": {
+            "description": "The unique identifier for the SES configuration set.",
+            "value": "${data.aws_sesv2_configuration_set.this.id}"
+        },
+        "reputation_options": {
+            "description": "Options related to the reputation of the configuration set, including metrics and last reset date.",
+            "value": "${data.aws_sesv2_configuration_set.this.reputation_options}"
+        },
+        "sending_options": {
+            "description": "Settings that determine if email sending is enabled for the configuration set.",
+            "value": "${data.aws_sesv2_configuration_set.this.sending_options}"
+        },
+        "suppression_options": {
+            "description": "Reasons for suppressing emails, such as complaints or bounces.",
+            "value": "${data.aws_sesv2_configuration_set.this.suppression_options}"
+        },
+        "tags": {
+            "description": "Key-value pairs used to tag and organize the configuration set.",
+            "value": "${data.aws_sesv2_configuration_set.this.tags}"
+        },
+        "tracking_options": {
+            "description": "Settings for tracking email opens and clicks, including a custom redirect domain.",
+            "value": "${data.aws_sesv2_configuration_set.this.tracking_options}"
+        },
+        "vdm_options": {
+            "description": "Options for Virtual Deliverability Manager, including dashboard and guardian settings.",
+            "value": "${data.aws_sesv2_configuration_set.this.vdm_options}"
+        }
+    }
+}

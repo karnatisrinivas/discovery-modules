@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_ecr_repository.this.arn}"
+        },
+        "name": {
+            "description": "The value of the name output",
+            "value": "${aws_ecr_repository.this.name}"
+        },
+        "repository_url": {
+            "description": "The value of the repository_url output",
+            "value": "${aws_ecr_repository.this.name}"
+        }
+    }
+}

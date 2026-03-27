@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Windows Function App
+  node:
+    label:
+      static: Windows Function App
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_windows_function_app
+  dnd_supported: false
+  data_source: data_azurerm_windows_function_app
+  references:
+    service_plan_id:
+      from: azurerm_service_plan
+      output: id

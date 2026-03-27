@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The arn of the active receipt rule set",
+            "value": "${aws_ses_active_receipt_rule_set.this.arn}"
+        },
+        "id": {
+            "description": "The id of the active receipt rule set",
+            "value": "${aws_ses_active_receipt_rule_set.this.id}"
+        }
+    }
+}

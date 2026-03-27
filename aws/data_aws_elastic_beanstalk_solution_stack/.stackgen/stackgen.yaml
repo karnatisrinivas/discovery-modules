@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elastic Beanstalk Solution Stack"
+  node:
+    label:
+      static: "[Data] Elastic Beanstalk Solution Stack"
+      template: "[Data] Elastic Beanstalk Solution Stack"
+    display_type: default
+
+discovery:
+  type: data_aws_elastic_beanstalk_solution_stack
+  dnd_supported: false

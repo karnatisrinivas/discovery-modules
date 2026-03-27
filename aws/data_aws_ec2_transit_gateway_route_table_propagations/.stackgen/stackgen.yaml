@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Transit Gateway Route Table Propagations"
+  node:
+    label:
+      static: "[Data] Ec2 Transit Gateway Route Table Propagations"
+      template: "[Data] Ec2 Transit Gateway Route Table Propagations"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_transit_gateway_route_table_propagations
+  dnd_supported: false

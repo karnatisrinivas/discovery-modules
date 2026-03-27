@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the service discovery service.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "namespace_id": [
+      {
+        "description": "The ID of the namespace to associate the service with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the service discovery service.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

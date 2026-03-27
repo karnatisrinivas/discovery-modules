@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the AWS Audit Manager control.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of the AWS Audit Manager control, which specifies its category or function.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

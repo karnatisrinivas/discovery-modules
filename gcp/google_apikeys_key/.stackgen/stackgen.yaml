@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apikeys Key
+  node:
+    label:
+      static: Apikeys Key
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_apikeys_key
+  dnd_supported: false

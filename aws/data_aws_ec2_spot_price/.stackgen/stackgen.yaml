@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Spot Price"
+  node:
+    label:
+      static: "[Data] Ec2 Spot Price"
+      template: "[Data] Ec2 Spot Price"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_spot_price
+  dnd_supported: false

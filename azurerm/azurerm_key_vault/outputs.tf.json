@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Azure Key Vault.",
+            "value": "${azurerm_key_vault.this.id}"
+        },
+        "key_vault_id": {
+            "description": "The unique identifier of the Azure Key Vault.",
+            "value": "${azurerm_key_vault.this.id}"
+        }
+    }
+}

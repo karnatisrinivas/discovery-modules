@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudfront Origin Access Control"
+  node:
+    label:
+      static: "[Data] Cloudfront Origin Access Control"
+      template: "[Data] Cloudfront Origin Access Control"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudfront_origin_access_control
+  dnd_supported: false

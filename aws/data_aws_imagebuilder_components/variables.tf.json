@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "owner": [
+      {
+        "description": "The owner of the AWS Image Builder component, typically the AWS account ID or an alias.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

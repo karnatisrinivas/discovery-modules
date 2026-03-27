@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Db Snapshot"
+  node:
+    label:
+      static: "[Data] Db Snapshot"
+      template: "[Data] Db Snapshot"
+    display_type: default
+
+discovery:
+  type: data_aws_db_snapshot
+  dnd_supported: false

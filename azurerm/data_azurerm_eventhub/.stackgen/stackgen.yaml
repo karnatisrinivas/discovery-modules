@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eventhub"
+  node:
+    label:
+      static: "[Data] Eventhub"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_eventhub
+  dnd_supported: false
+  references:
+    namespace_name:
+      from: data_azurerm_eventhub_namespace
+      output: name

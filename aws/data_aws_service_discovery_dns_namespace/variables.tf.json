@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the DNS namespace to be created or managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "The type of the DNS namespace, such as 'Public' or 'Private'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

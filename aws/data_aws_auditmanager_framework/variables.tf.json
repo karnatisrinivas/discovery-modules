@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "framework_type": [
+      {
+        "description": "Specifies the type of framework to create in AWS Audit Manager. Examples include 'Standard' or 'Custom'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the AWS Audit Manager framework. This is a unique identifier for the framework.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

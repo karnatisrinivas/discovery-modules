@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshift Data Shares"
+  node:
+    label:
+      static: "[Data] Redshift Data Shares"
+      template: "[Data] Redshift Data Shares"
+    display_type: default
+
+discovery:
+  type: data_aws_redshift_data_shares
+  dnd_supported: false

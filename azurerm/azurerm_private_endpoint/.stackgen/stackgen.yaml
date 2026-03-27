@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Private Endpoint
+  node:
+    label:
+      static: Private Endpoint
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_private_endpoint
+  dnd_supported: false
+  references:
+    subnet_id:
+      from: azurerm_subnet
+      output: id

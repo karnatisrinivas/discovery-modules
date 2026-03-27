@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the logging metric to reference in other configurations",
+            "value": "${google_logging_metric.this.id}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "log_group_name_prefix": [
+      {
+        "description": "An optional prefix for filtering log group names.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

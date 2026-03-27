@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Azure Role Assignment
+  node:
+    label:
+      static: Azure Role Assignment
+      template: ${role_definition_name}
+    display_type: default
+
+variables:
+  role_definition_name:
+    options: 
+      - Reader
+      - Contributor
+      - Owner
+    ui_control: text_autocomplete
+    description: "The name of the role definition to assign. Conflicts with `Role Definition ID`"
+    type: string
+
+discovery:
+  type: azurerm_role_assignment
+  dnd_supported: false
+  references:
+    scope:
+      from: azurerm_storage_account
+      output: id
+    principal_id:
+      from: azurerm_linux_web_app
+      output: principal_id

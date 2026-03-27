@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the PostgreSQL configuration setting to be managed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_id": [
+      {
+        "description": "The ID of the PostgreSQL flexible server to which the configuration belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "value": [
+      {
+        "description": "The value to assign to the specified PostgreSQL configuration setting.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

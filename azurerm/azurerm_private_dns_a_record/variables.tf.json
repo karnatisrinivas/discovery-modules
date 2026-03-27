@@ -1,0 +1,45 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the DNS A record.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "records": [
+      {
+        "description": "A set of IP addresses assigned to the DNS A record.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "ttl": [
+      {
+        "description": "The time to live (TTL) for the DNS A record, in seconds.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "zone_name": [
+      {
+        "description": "The name of the private DNS zone this record belongs to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

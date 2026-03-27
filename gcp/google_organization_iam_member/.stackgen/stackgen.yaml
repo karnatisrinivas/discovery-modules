@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Organization Iam Member
+  node:
+    label:
+      static: Organization Iam Member
+      template: ${member}
+    display_type: default
+
+discovery:
+  type: google_organization_iam_member
+  dnd_supported: false
+  references:
+    org_id:
+      from: data_google_organization
+      output: org_id

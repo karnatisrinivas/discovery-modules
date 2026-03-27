@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicequotas Templates"
+  node:
+    label:
+      static: "[Data] Servicequotas Templates"
+      template: "[Data] Servicequotas Templates"
+    display_type: default
+
+discovery:
+  type: data_aws_servicequotas_templates
+  dnd_supported: false

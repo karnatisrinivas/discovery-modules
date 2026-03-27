@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "function_name": [
+      {
+        "description": "The name of the Lambda function for which the alias is created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the alias to be created for the Lambda function.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

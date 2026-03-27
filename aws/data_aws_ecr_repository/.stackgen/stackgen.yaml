@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecr Repository"
+  node:
+    label:
+      static: "[Data] Ecr Repository"
+      template: "[Data] Ecr Repository"
+    display_type: default
+
+discovery:
+  type: data_aws_ecr_repository
+  dnd_supported: false

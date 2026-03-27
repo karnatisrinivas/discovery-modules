@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "schedule_identifier": [
+            {
+                "type": "string",
+                "nullable": false,
+                "description": "The snapshot schedule identifier. If omitted, Terraform will assign a random, unique identifier."
+            }
+        ],
+        "cluster_identifier": [
+            {
+                "description": "The Cluster Identifier. Must be a lower case string.",
+                "type": "string",
+                "nullable": false
+            }
+        ]
+    }
+}

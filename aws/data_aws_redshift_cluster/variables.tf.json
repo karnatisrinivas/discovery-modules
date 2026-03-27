@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "cluster_identifier": [
+      {
+        "description": "A unique name to identify the Redshift cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

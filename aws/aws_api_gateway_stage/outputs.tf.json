@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the API Gateway stage.",
+            "value": "${aws_api_gateway_stage.this.arn}"
+        },
+        "execution_arn": {
+            "description": "The execution ARN of the API Gateway stage, used to invoke the stage.",
+            "value": "${aws_api_gateway_stage.this.execution_arn}"
+        },
+        "id": {
+            "description": "The ID of the API Gateway stage.",
+            "value": "${aws_api_gateway_stage.this.id}"
+        },
+        "web_acl_arn": {
+            "description": "The ARN of the associated Web ACL for the API Gateway stage, if any.",
+            "value": "${aws_api_gateway_stage.this.web_acl_arn}"
+        }
+    }
+}

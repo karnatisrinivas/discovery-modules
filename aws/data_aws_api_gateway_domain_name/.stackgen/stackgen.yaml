@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Domain Name"
+  node:
+    label:
+      static: "[Data] Api Gateway Domain Name"
+      template: "[Data] Api Gateway Domain Name"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_domain_name
+  dnd_supported: false

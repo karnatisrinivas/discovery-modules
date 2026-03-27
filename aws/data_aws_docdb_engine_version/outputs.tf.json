@@ -1,0 +1,36 @@
+{
+    "output": {
+        "engine_description": {
+            "description": "A brief description of the Amazon DocumentDB engine version.",
+            "value": "${data.aws_docdb_engine_version.this.engine_description}"
+        },
+        "exportable_log_types": {
+            "description": "A list of log types that can be exported for the specified engine version.",
+            "value": "${data.aws_docdb_engine_version.this.exportable_log_types}"
+        },
+        "id": {
+            "description": "The identifier for the specific DocumentDB engine version.",
+            "value": "${data.aws_docdb_engine_version.this.id}"
+        },
+        "parameter_group_family": {
+            "description": "The parameter group family associated with the engine version.",
+            "value": "${data.aws_docdb_engine_version.this.parameter_group_family}"
+        },
+        "supports_log_exports_to_cloudwatch": {
+            "description": "Indicates whether the engine version supports exporting logs to CloudWatch.",
+            "value": "${data.aws_docdb_engine_version.this.supports_log_exports_to_cloudwatch}"
+        },
+        "valid_upgrade_targets": {
+            "description": "A list of engine versions that are valid targets for upgrading from the current version.",
+            "value": "${data.aws_docdb_engine_version.this.valid_upgrade_targets}"
+        },
+        "version": {
+            "description": "The specific version number of the Amazon DocumentDB engine.",
+            "value": "${data.aws_docdb_engine_version.this.version}"
+        },
+        "version_description": {
+            "description": "A detailed description of the features and updates included in the engine version.",
+            "value": "${data.aws_docdb_engine_version.this.version_description}"
+        }
+    }
+}

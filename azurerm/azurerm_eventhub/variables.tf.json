@@ -1,0 +1,45 @@
+{
+  "variable": {
+    "message_retention": [
+      {
+        "description": "The number of days to retain events in the Event Hub.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Event Hub.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "namespace_name": [
+      {
+        "description": "The name of the Event Hub Namespace.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "partition_count": [
+      {
+        "description": "The number of partitions in the Event Hub.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "status": [
+      {
+        "description": "The status of the Event Hub, e.g., 'Active' or 'Disabled'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

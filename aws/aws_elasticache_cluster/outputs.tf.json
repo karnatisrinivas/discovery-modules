@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API interactions",
+            "value": "${aws_elasticache_cluster.this.arn}"
+        },
+        "cache_nodes": {
+            "description": "Details of all cache nodes in the cluster, useful for monitoring and scaling",
+            "value": "${aws_elasticache_cluster.this.cache_nodes}"
+        },
+        "cluster_address": {
+            "description": "Endpoint address to connect to the cache cluster",
+            "value": "${aws_elasticache_cluster.this.cluster_address}"
+        },
+        "configuration_endpoint": {
+            "description": "Primary endpoint for managing cluster configuration and connections",
+            "value": "${aws_elasticache_cluster.this.configuration_endpoint}"
+        },
+        "engine_version_actual": {
+            "description": "The actual version of the cache engine in use, helpful for compatibility checks",
+            "value": "${aws_elasticache_cluster.this.engine_version_actual}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the cache cluster in configurations",
+            "value": "${aws_elasticache_cluster.this.id}"
+        },
+        "tags_all": {
+            "description": "Set of key-value tags for categorizing and organizing resources",
+            "value": "${aws_elasticache_cluster.this.tags_all}"
+        }
+    }
+}

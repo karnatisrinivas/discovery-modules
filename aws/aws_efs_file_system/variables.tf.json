@@ -1,0 +1,76 @@
+{
+    "variable": {
+        "availability_zone_name": [
+            {
+                "type": "string",
+                "description": "The availability zone name in which to create the file system.",
+                "nullable": true
+            }
+        ],
+        "creation_token": [
+            {
+                "type": "string",
+                "description": "A unique name (1-16 letters, numbers, and underscores) used as reference when creating the file system so that the file system can be mounted on instances by using this name.",
+                "nullable": true
+            }
+        ],
+        "encrypted": [
+            {
+                "type": "bool",
+                "description": "Whether to enable encryption for the file system.",
+                "nullable": true    
+            }
+        ],
+        "kms_key_id": [
+            {
+                "type": "string",
+                "description": "The ARN for the KMS key that is used to encrypt the file system.",
+                "nullable": true
+            }
+        ],
+        "lifecycle_policy": [
+            {
+                "type": "list(object({transition_to_ia: string, transition_to_archive: string, transition_to_primary_storage_class: string}))",
+                "description": "A file system lifecycle policy for the file system.",
+                "nullable": true
+            }
+        ],
+        "protection": [
+            {
+                "type": "list(object({replication_overwrite: string}))",
+                "description": "The file system protection policy for the file system.",
+                "nullable": true
+            }
+        ],
+        "performance_mode": [
+            {
+                "type": "string",
+                "description": "The file system performance mode to set.",
+                "nullable": true,
+                "default": "generalPurpose"
+            }
+        ],
+        "provisioned_throughput_in_mibps": [
+            {
+                "type": "number",
+                "description": "The throughput, measured in MiB/s, that you want to provision for the file system.",
+                "nullable": true
+            }
+        ],
+        "throughput_mode": [
+            {
+                "type": "string",
+                "description": "The throughput mode for the file system.",
+                "nullable": true,
+                "default": "bursting"
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the file system.",
+                "nullable": true
+            }
+        ]
+    }
+}

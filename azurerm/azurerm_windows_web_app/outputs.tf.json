@@ -1,0 +1,20 @@
+{
+    "output": {
+        "default_hostname": {
+            "description": "The default domain name assigned to the web app.",
+            "value": "${azurerm_windows_web_app.this.default_hostname}"
+        },
+        "hosting_environment_id": {
+            "description": "The identifier of the hosting environment where the web app is running.",
+            "value": "${azurerm_windows_web_app.this.hosting_environment_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Windows web app.",
+            "value": "${azurerm_windows_web_app.this.id}"
+        },
+        "key_vault_reference_identity_id": {
+            "description": "The identity ID used for accessing Azure Key Vault references in the web app.",
+            "value": "${azurerm_windows_web_app.this.key_vault_reference_identity_id}"
+        }
+    }
+}

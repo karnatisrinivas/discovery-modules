@@ -1,0 +1,134 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Managed Disk
+  node:
+    label:
+      static: Managed Disk
+      template: ${name}
+    display_type: default
+
+variables:
+  hyper_v_generation:
+    description: The HyperV Generation of the Disk when the source of an Import or Copy operation targets a source that contains an operating system. Possible values are V1 and V2. For ImportSecure it must be set to V2.
+    type: string
+    options: 
+      - V1
+      - V2
+    ui_control: select
+  storage_account_type:
+    options: 
+      - Standard_LRS
+      - StandardSSD_ZRS
+      - Premium_LRS
+      - PremiumV2_LRS
+      - Premium_ZRS
+      - StandardSSD_LRS
+      - UltraSSD_LRS
+    ui_control: select
+    description: The type of storage to use for the managed disk.
+    type: string
+  create_option:
+    description: The method to use when creating the managed disk.
+    type: string
+    options: 
+      - Import
+      - ImportSecure
+      - Empty
+      - FromImage
+      - Restore
+      - Upload
+    ui_control: select
+  logical_sector_size:
+    description: Logical Sector Size
+    type: string
+    options: 
+      - 512
+      - 4096
+    ui_control: select
+  optimized_frequent_attach_enabled:
+    description: Specifies whether this Managed Disk should be optimized for frequent disk attachments (where a disk is attached/detached more than 5 times in a day)
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  tier:
+    description: The disk performance tier to use.
+    type: string
+    options: 
+      - P1
+      - P2
+      - P3
+      - P4
+      - P6
+      - P10
+      - P15
+      - P20
+      - P30
+      - P40
+      - P50
+      - P60
+      - P70
+      - P80
+    ui_control: select
+  trusted_launch_enabled:
+    description: Specifies if Trusted Launch is enabled for the Managed Disk.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  security_type:
+    type: string
+    options: 
+      - ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey
+      - ConfidentialVM_DiskEncryptedWithPlatformKey
+      - ConfidentialVM_DiskEncryptedWithCustomerKey
+    ui_control: select
+    description: Security Type of the Managed Disk when it is used for a Confidential VM.
+  performance_plus_enabled:
+    ui_control: select
+    description: Specifies whether Performance Plus is enabled for this Managed Disk.
+    type: bool
+    options: 
+      - true
+      - false
+  os_type:
+    description: Specify a value when the source of an Import, ImportSecure or Copy operation targets a source that contains an operating system.
+    type: string
+    options: 
+      - Linux
+      - Windows
+    ui_control: select
+  on_demand_bursting_enabled:
+    ui_control: select
+    description: "Specifies if On-Demand Bursting is enabled for the Managed Disk."
+    type: bool
+    options: 
+      - true
+      - false
+  network_access_policy:
+    description: Policy for accessing the disk via network.
+    type: string
+    options: 
+      - AllowAll
+      - AllowPrivate
+      - DenyAll
+    ui_control: select
+  public_network_access_enabled:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether it is allowed to access the disk via public network.
+    type: string
+
+discovery:
+  type: azurerm_managed_disk
+  dnd_supported: false
+  references:
+    storage_account_id:
+      from: azurerm_storage_account
+      output: id

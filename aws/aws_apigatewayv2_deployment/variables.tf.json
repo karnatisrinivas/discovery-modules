@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "api_id": [
+      {
+        "description": "Identifier of the API for which the deployment is created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines a brief summary or purpose of the deployment, used to describe the changes or updates included in this specific deployment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Defines conditions that initiate a new deployment, such as changes in stage variables or API configurations.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

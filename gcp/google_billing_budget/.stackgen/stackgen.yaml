@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Billing Budget
+  node:
+    label:
+      static: Billing Budget
+      template: ${billing_account}
+    display_type: default
+
+discovery:
+  type: google_billing_budget
+  dnd_supported: false
+  references:
+    billing_account:
+      from: data_google_billing_account
+      output: id

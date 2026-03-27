@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "authorized_domains": [
+      {
+        "description": "List of domains authorized for use with Identity Platform; required for configuring OAuth clients and custom domains.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "autodelete_anonymous_users": [
+      {
+        "description": "Controls whether anonymous user accounts are automatically deleted after a specified period of inactivity. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "blocking_functions": [
+      {
+        "description": "Defines the configuration for blocking functions, including the triggers and endpoints for custom authentication logic, used to enforce additional checks during user sign-in or sign-up processes.",
+        "nullable": true,
+        "type": "list(object({forward_inbound_credentials: list(object({access_token: optional(bool),id_token: optional(bool),refresh_token: optional(bool)})),triggers: list(object({event_type: string,function_uri: string,update_time: optional(string)}))}))"
+      }
+    ],
+    "client": [
+      {
+        "description": "Defines the OAuth 2.0 client ID used for authenticating users with external identity providers.",
+        "nullable": true,
+        "type": "list(object({api_key: optional(string),firebase_subdomain: optional(string),permissions: list(object({disabled_user_deletion: optional(bool),disabled_user_signup: optional(bool)}))}))"
+      }
+    ],
+    "mfa": [
+      {
+        "description": "Specifies whether multi-factor authentication (MFA) is enabled for Identity Platform, requiring users to provide additional verification during sign-in.",
+        "nullable": true,
+        "type": "list(object({enabled_providers: optional(list(string)),state: optional(string),provider_configs: list(object({state: optional(string),totp_provider_config: list(object({adjacent_intervals: optional(number)}))}))}))"
+      }
+    ],
+    "monitoring": [
+      {
+        "description": "Determines whether monitoring is enabled for the Identity Platform project, allowing visibility into usage and performance metrics.",
+        "nullable": true,
+        "type": "list(object({request_logging: list(object({enabled: optional(bool)}))}))"
+      }
+    ],
+    "multi_tenant": [
+      {
+        "description": "Indicates whether multi-tenancy is enabled for the Identity Platform, allowing multiple tenants to share the same project resources.",
+        "nullable": true,
+        "type": "list(object({allow_tenants: optional(bool),default_tenant_location: optional(string)}))"
+      }
+    ],
+    "quota": [
+      {
+        "description": "Configures the quota settings for Identity Platform, including limitations on API requests and other usage constraints.",
+        "nullable": true,
+        "type": "list(object({sign_up_quota_config: list(object({quota: optional(number),quota_duration: optional(string),start_time: optional(string)}))}))"
+      }
+    ],
+    "sign_in": [
+      {
+        "description": "Configures the authentication methods for users, specifying allowed sign-in options such as email/password, phone number, or third-party providers.",
+        "nullable": true,
+        "type": "list(object({allow_duplicate_emails: optional(bool),hash_config: optional(list(object({algorithm=string,memory_cost=number,rounds=number,salt_separator=string,signer_key=string}))),anonymous: list(object({enabled: bool})),email: list(object({enabled: bool,password_required: optional(bool)})),phone_number: list(object({enabled: bool,test_phone_numbers: optional(map(string))}))}))"
+      }
+    ],
+    "sms_region_config": [
+      {
+        "description": "Defines the regions where SMS-based multi-factor authentication is allowed or blocked, ensuring compliance with regional regulations and requirements.",
+        "nullable": true,
+        "type": "list(object({allow_by_default: list(object({disallowed_regions: optional(list(string))})),allowlist_only: list(object({allowed_regions: optional(list(string))}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the amount of time to wait for the configuration to be created, updated, or deleted.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

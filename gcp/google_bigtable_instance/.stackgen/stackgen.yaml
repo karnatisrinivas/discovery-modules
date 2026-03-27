@@ -1,0 +1,37 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: BigTable Instance
+  node:
+    label:
+      static: BigTable Instance
+      template: ${name}
+    display_type: default
+
+variables:
+  cluster:
+    description: A block of cluster configuration options. This can be specified at least once, and up to as many as possible within 8 cloud regions. Removing the field entirely from the config will cause the provider to default to the backend value.
+    attributes: 
+      storage_type: 
+        type: string
+        options: 
+          - SSD
+          - HDD
+        ui_control: select
+        label: Storage Type
+        description: The storage type to use.
+        validation: 
+          required: false
+          dataType: string
+  deletion_protection:
+    description: A field to make the cluster protected against data loss i.e. when set to PROTECTED, deleting the cluster and the instance containing the cluster would be prohibited. If not provided, deletion protection will be set to UNPROTECTED. default value is PROTECTED.
+    type: string
+    options: 
+      - PROTECTED
+      - UNPROTECTED
+    ui_control: select
+
+discovery:
+  type: google_bigtable_instance
+  dnd_supported: false

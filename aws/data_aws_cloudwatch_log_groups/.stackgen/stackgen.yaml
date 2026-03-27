@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudwatch Log Groups"
+  node:
+    label:
+      static: "[Data] Cloudwatch Log Groups"
+      template: "[Data] Cloudwatch Log Groups"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudwatch_log_groups
+  dnd_supported: false

@@ -1,0 +1,18 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "The display name of the alias.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "target_key_id": [
+            {
+                "description": "The identifier of the key for which you are creating the alias. This value must be a globally unique identifier.",
+                "type": "string",
+                "nullable": false
+            }
+        ]
+    }
+}

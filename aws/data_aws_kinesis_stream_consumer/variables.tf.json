@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "stream_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Kinesis stream that the consumer will be associated with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

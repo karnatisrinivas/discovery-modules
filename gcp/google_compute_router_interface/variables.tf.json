@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "interconnect_attachment": [
+      {
+        "description": "Specifies the ID of the interconnect attachment to associate with the router interface. Must belong to the same region as the router.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_range": [
+      {
+        "description": "Specifies the IP range for the interface, must be a valid CIDR block within the router's network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ip_version": [
+      {
+        "description": "Specifies the IP version for the interface, either IPv4 or IPv6.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the router interface, which must be unique within the router and comply with RFC1035 naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "private_ip_address": [
+      {
+        "description": "IP address to assign to the interface; must belong to the subnet's primary IP range.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "redundant_interface": [
+      {
+        "description": "Specifies the configuration for a redundant interface in the router, including its name, IP address, and associated network or region. Must be paired with another interface for redundancy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "router": [
+      {
+        "description": "Specifies the name of the Cloud Router to associate with this interface, must exist in the same region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the self-link of the subnetwork to which the interface belongs; must be in the same region as the router.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for operations related to the router interface, including create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "vpn_tunnel": [
+      {
+        "description": "Specifies the VPN tunnel to associate with the router interface; must be a valid VPN tunnel resource in the same region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

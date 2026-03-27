@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_elasticache_parameter_group.this.arn}"
+        },
+        "name": {
+            "description": "The value of the name output",
+            "value": "${aws_elasticache_parameter_group.this.name}"
+        }
+    }
+}

@@ -1,0 +1,284 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Virtual Machine
+  node:
+    label:
+      static: Virtual Machine
+      template: ${name}
+    display_type: default
+
+variables:
+  create_option:
+    options: 
+      - Attach
+      - FromImage
+    ui_control: select
+  enabled:
+    ui_control: select
+    description: "Should Boot Diagnostics be enabled for this Virtual Machine?"
+    type: bool
+    options: 
+      - true
+      - false
+  provision_vm_agent:
+    description: " Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine?"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  pass:
+    description: Specifies the name of the pass that the content applies to
+    type: string
+    options: 
+      - oobeSystem
+    ui_control: select
+  type:
+    ui_control: select
+    description: " Specifies the type of Managed Service Identity that should be configured on this Virtual Machine."
+    type: string
+    options: 
+      - SystemAssigned
+      - UserAssigned
+      - SystemAssigned, UserAssigned
+  storage_data_disk:
+    description: Specifies the storage data disks to attach to the virtual machine.
+    attributes: 
+      caching: 
+        label: Caching
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - None
+          - ReadOnly
+          - ReadWrite
+        ui_control: select
+      disk_size_gb: 
+        label: Disk Size (GB)
+        validation: 
+          dataType: number
+          required: false
+        type: number
+        ui_control: text
+      lun: 
+        label: LUN
+        validation: 
+          required: true
+          dataType: number
+        type: number
+        ui_control: text
+      name: 
+        label: Name
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+      create_option: 
+        label: Create Option
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Attach
+          - FromImage
+          - Empty
+        ui_control: select
+  delete_os_disk_on_termination:
+    description: "Should the OS Disk be deleted when the Virtual Machine is deleted?"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  caching:
+    options: 
+      - None
+      - ReadOnly
+      - ReadWrite
+    ui_control: select
+  protocol:
+    description: Specifies the protocol of listener.
+    type: string
+    options: 
+      - HTTP
+      - HTTPS
+    ui_control: select
+  storage_os_disk:
+    description: A storage_os_disk block.
+    attributes: 
+      name: 
+        ui_control: text
+        label: Name
+        validation: 
+          required: true
+          dataType: string
+        type: string
+      create_option: 
+        type: string
+        options: 
+          - Attach
+          - FromImage
+        ui_control: select
+        label: Create Option
+        validation: 
+          required: true
+          dataType: string
+      caching: 
+        label: Caching
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - None
+          - ReadOnly
+          - ReadWrite
+        ui_control: select
+      disk_size_gb: 
+        label: Disk Size (GB)
+        validation: 
+          dataType: number
+          required: false
+        type: number
+        ui_control: text
+      image_uri: 
+        label: Image URI
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      os_type: 
+        label: OS Type
+        validation: 
+          dataType: number
+          required: false
+        type: number
+        options: 
+          - Linux
+          - Windows
+        ui_control: select
+      write_accelerator_enabled: 
+        label: Write Accelerator Enabled
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        options: 
+          - true
+          - false
+        ui_control: select
+  os_type:
+    options: 
+      - Linux
+      - Windows
+    ui_control: select
+  enable_automatic_upgrades:
+    description: " Are automatic updates enabled on this Virtual Machine?"
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  delete_data_disks_on_termination:
+    ui_control: select
+    description: "Should the Data Disks be deleted when the Virtual Machine is deleted?"
+    type: bool
+    options: 
+      - true
+      - false
+  setting_name:
+    description: Specifies the name of the setting to which the content applies.
+    type: string
+    options: 
+      - AutoLogon
+      - FirstLogonCommands
+    ui_control: select
+  disable_password_authentication:
+    description: Specifies whether password authentication should be disabled. If set to false, an admin_password must be specified.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  component:
+    ui_control: select
+    description: Specifies the name of the component to configure with the added content.
+    type: string
+    options: 
+      - "Microsoft-Windows-Shell-Setup"
+
+variable_groups:
+- label: Storage Image Reference
+  variables:
+    - id
+    - publisher
+    - offer
+    - sku
+    - version
+- label: OS Disk
+  variables:
+    - storage_os_disk_name
+    - create_option
+    - caching
+    - disk_size_gb
+    - os_type
+- label: Data Disks
+  variables:
+    - storage_data_disk
+- label: OS Profile
+  variables:
+    - computer_name
+    - admin_username
+    - admin_password
+- label: OS Profile Linux Config
+  variables:
+    - disable_password_authentication
+    - ssh_keys
+- label: OS Profile Windows Config
+  variables:
+    - provision_vm_agent
+    - enable_automatic_upgrades
+    - timezone
+    - protocol
+    - certificate_url
+    - pass
+    - component
+    - setting_name
+    - content
+- label: Boot Diagnostics
+  variables:
+    - enabled
+    - storage_uri
+- label: Identity
+  variables:
+    - type
+    - identity_ids
+- label: Deletion Protection
+  variables:
+    - delete_os_disk_on_termination
+    - delete_data_disks_on_termination
+- label: Tags
+  variables:
+    - tags
+
+discovery:
+  type: azurerm_virtual_machine
+  dnd_supported: false
+  data_source: data_azurerm_virtual_machine
+  references:
+    availability_set_id:
+      from: azurerm_availability_set
+      output: id
+    network_interface_ids:
+      from: azurerm_network_interface
+      output: id
+    identity_ids:
+      from: azurerm_user_assigned_managed_identity
+      output: id

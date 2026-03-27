@@ -1,0 +1,12 @@
+{
+    "output": {
+        "execution_arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the execution of this API Gateway deployment.",
+            "value": "${aws_api_gateway_deployment.this.execution_arn}"
+        },
+        "id": {
+            "description": "The unique identifier for this API Gateway deployment.",
+            "value": "${aws_api_gateway_deployment.this.id}"
+        }
+    }
+}

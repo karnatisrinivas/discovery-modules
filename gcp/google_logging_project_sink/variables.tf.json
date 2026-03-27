@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "bigquery_options": [
+      {
+        "description": "Specifies options for BigQuery as the destination, such as using partitioned tables for logs.",
+        "nullable": true,
+        "type": "list(object({use_partitioned_tables: bool}))"
+      }
+    ],
+    "custom_writer_identity": [
+      {
+        "description": "Specifies the IAM identity to be used as the writer for the log sink; must be a valid service account or group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies a description for the logging sink, providing context or details about its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination": [
+      {
+        "description": "Specifies the destination for the logging sink, such as a Cloud Storage bucket, BigQuery dataset, or Pub/Sub topic. Must be a valid resource identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Indicates whether the log sink is disabled; set to true to disable the sink.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclusions": [
+      {
+        "description": "Defines log exclusions to filter out specific log entries from being exported by the logging sink. Must be a list of exclusion blocks with filter expressions and optional descriptions.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),disabled: optional(bool),filter: string,name: string}))"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the advanced filter expression used to match log entries for inclusion in the sink, using the Logging query language.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the logging sink within the project, must comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "unique_writer_identity": [
+      {
+        "description": "Determines whether a unique service account is created for the sink to write logs; set to true to enable creation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

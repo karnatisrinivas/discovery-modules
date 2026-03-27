@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the IP set. This is used to identify the IP set in AWS WAF.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "scope": [
+      {
+        "description": "Specifies whether this IP set is for a CloudFront distribution or for a regional application. Valid values are CLOUDFRONT or REGIONAL.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

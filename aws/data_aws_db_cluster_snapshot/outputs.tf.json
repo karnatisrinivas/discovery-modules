@@ -1,0 +1,64 @@
+{
+    "output": {
+        "allocated_storage": {
+            "description": "The amount of storage (in gigabytes) allocated for the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.allocated_storage}"
+        },
+        "availability_zones": {
+            "description": "The list of availability zones where the database cluster snapshot is available.",
+            "value": "${data.aws_db_cluster_snapshot.this.availability_zones}"
+        },
+        "db_cluster_snapshot_arn": {
+            "description": "The Amazon Resource Name (ARN) of the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.db_cluster_snapshot_arn}"
+        },
+        "engine": {
+            "description": "The database engine used for the database cluster.",
+            "value": "${data.aws_db_cluster_snapshot.this.engine}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine used for the database cluster.",
+            "value": "${data.aws_db_cluster_snapshot.this.engine_version}"
+        },
+        "id": {
+            "description": "The unique identifier for the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The AWS KMS key identifier used to encrypt the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.kms_key_id}"
+        },
+        "license_model": {
+            "description": "The license model information for the database engine.",
+            "value": "${data.aws_db_cluster_snapshot.this.license_model}"
+        },
+        "port": {
+            "description": "The port number on which the database accepts connections.",
+            "value": "${data.aws_db_cluster_snapshot.this.port}"
+        },
+        "snapshot_create_time": {
+            "description": "The time when the database cluster snapshot was created.",
+            "value": "${data.aws_db_cluster_snapshot.this.snapshot_create_time}"
+        },
+        "source_db_cluster_snapshot_arn": {
+            "description": "The ARN of the source database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.source_db_cluster_snapshot_arn}"
+        },
+        "status": {
+            "description": "The current status of the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.status}"
+        },
+        "storage_encrypted": {
+            "description": "Indicates whether the storage for the database cluster snapshot is encrypted.",
+            "value": "${data.aws_db_cluster_snapshot.this.storage_encrypted}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The VPC ID associated with the database cluster snapshot.",
+            "value": "${data.aws_db_cluster_snapshot.this.vpc_id}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "product_id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

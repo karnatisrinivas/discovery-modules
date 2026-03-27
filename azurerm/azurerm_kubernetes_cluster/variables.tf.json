@@ -1,0 +1,415 @@
+{
+  "variable": {
+    "aci_connector_linux": [
+      {
+        "description": "Enables or disables the ACI Connector for Linux containers in the Kubernetes cluster. Requires the Kubernetes cluster to have the appropriate configuration for virtual nodes.",
+        "nullable": true,
+        "type": "list(object({connector_identity: optional(list(object({client_id=string,object_id=string,user_assigned_identity_id=string}))),subnet_name: string}))"
+      }
+    ],
+    "api_server_access_profile": [
+      {
+        "description": "Configures API server access settings, including private cluster enablement, authorized IP ranges, and Azure RBAC integration.",
+        "nullable": true,
+        "type": "list(object({authorized_ip_ranges: optional(list(string)),subnet_id: optional(string),vnet_integration_enabled: optional(bool)}))"
+      }
+    ],
+    "api_server_authorized_ip_ranges": [
+      {
+        "description": "Defines the list of IP ranges that are permitted to access the Kubernetes API server. Use CIDR notation. Empty list disables restrictions.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "auto_scaler_profile": [
+      {
+        "description": "Configuration for the cluster's autoscaler profile, defining scaling behavior such as thresholds and cooldown periods.",
+        "nullable": true,
+        "type": "list(object({balance_similar_node_groups: optional(bool),empty_bulk_delete_max: optional(string),expander: optional(string),max_graceful_termination_sec: optional(string),max_node_provisioning_time: optional(string),max_unready_nodes: optional(number),max_unready_percentage: optional(number),new_pod_scale_up_delay: optional(string),scale_down_delay_after_add: optional(string),scale_down_delay_after_delete: optional(string),scale_down_delay_after_failure: optional(string),scale_down_unneeded: optional(string),scale_down_unready: optional(string),scale_down_utilization_threshold: optional(string),scan_interval: optional(string),skip_nodes_with_local_storage: optional(bool),skip_nodes_with_system_pods: optional(bool)}))"
+      }
+    ],
+    "automatic_channel_upgrade": [
+      {
+        "description": "Specifies the upgrade channel for the Kubernetes cluster, determining the frequency and type of automatic upgrades. Valid options include \"patch\", \"rapid\", or \"stable\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "azure_active_directory_role_based_access_control": [
+      {
+        "description": "Enables integration with Azure Active Directory for Kubernetes role-based access control; requires an existing Azure AD tenant and service principal configuration.",
+        "nullable": true,
+        "type": "list(object({admin_group_object_ids: optional(list(string)),azure_rbac_enabled: optional(bool),client_app_id: optional(string),managed: optional(bool),server_app_id: optional(string),server_app_secret: optional(string),tenant_id: optional(string)}))"
+      }
+    ],
+    "azure_policy_enabled": [
+      {
+        "description": "Determines whether Azure Policy is enabled for the Kubernetes cluster, enforcing compliance and governance rules. Must be set to `true` or `false`.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "confidential_computing": [
+      {
+        "description": "Enables confidential computing nodes in the cluster to provide enhanced security for sensitive workloads; requires supported VM SKU.",
+        "nullable": true,
+        "type": "list(object({sgx_quote_helper_enabled: bool}))"
+      }
+    ],
+    "cost_analysis_enabled": [
+      {
+        "description": "Specifies whether cost analysis and reporting features are enabled for the Kubernetes cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "custom_ca_trust_certificates_base64": [
+      {
+        "description": "Base64-encoded custom CA certificates to be added to the trusted root CA list of the cluster. Must be valid and properly formatted.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "default_node_pool": [
+      {
+        "description": "Defines the configuration for the default node pool in the Kubernetes cluster, including size, count, and type of nodes.",
+        "nullable": false,
+        "type": "list(object({capacity_reservation_group_id: optional(string),custom_ca_trust_enabled: optional(bool),enable_auto_scaling: optional(bool),enable_host_encryption: optional(bool),enable_node_public_ip: optional(bool),fips_enabled: optional(bool),gpu_instance: optional(string),host_group_id: optional(string),kubelet_disk_type: optional(string),max_count: optional(number),max_pods: optional(number),message_of_the_day: optional(string),min_count: optional(number),name: string,node_count: optional(number),node_labels: optional(map(string)),node_public_ip_prefix_id: optional(string),node_taints: optional(list(string)),only_critical_addons_enabled: optional(bool),orchestrator_version: optional(string),os_disk_size_gb: optional(number),os_disk_type: optional(string),os_sku: optional(string),pod_subnet_id: optional(string),proximity_placement_group_id: optional(string),scale_down_mode: optional(string),snapshot_id: optional(string),tags: optional(map(string)),temporary_name_for_rotation: optional(string),type: optional(string),ultra_ssd_enabled: optional(bool),vm_size: string,vnet_subnet_id: optional(string),workload_runtime: optional(string),zones: optional(list(string)),kubelet_config: list(object({allowed_unsafe_sysctls: optional(list(string)),container_log_max_line: optional(number),container_log_max_size_mb: optional(number),cpu_cfs_quota_enabled: optional(bool),cpu_cfs_quota_period: optional(string),cpu_manager_policy: optional(string),image_gc_high_threshold: optional(number),image_gc_low_threshold: optional(number),pod_max_pid: optional(number),topology_manager_policy: optional(string)})),linux_os_config: list(object({swap_file_size_mb: optional(number),transparent_huge_page_defrag: optional(string),transparent_huge_page_enabled: optional(string),sysctl_config: list(object({fs_aio_max_nr: optional(number),fs_file_max: optional(number),fs_inotify_max_user_watches: optional(number),fs_nr_open: optional(number),kernel_threads_max: optional(number),net_core_netdev_max_backlog: optional(number),net_core_optmem_max: optional(number),net_core_rmem_default: optional(number),net_core_rmem_max: optional(number),net_core_somaxconn: optional(number),net_core_wmem_default: optional(number),net_core_wmem_max: optional(number),net_ipv4_ip_local_port_range_max: optional(number),net_ipv4_ip_local_port_range_min: optional(number),net_ipv4_neigh_default_gc_thresh1: optional(number),net_ipv4_neigh_default_gc_thresh2: optional(number),net_ipv4_neigh_default_gc_thresh3: optional(number),net_ipv4_tcp_fin_timeout: optional(number),net_ipv4_tcp_keepalive_intvl: optional(number),net_ipv4_tcp_keepalive_probes: optional(number),net_ipv4_tcp_keepalive_time: optional(number),net_ipv4_tcp_max_syn_backlog: optional(number),net_ipv4_tcp_max_tw_buckets: optional(number),net_ipv4_tcp_tw_reuse: optional(bool),net_netfilter_nf_conntrack_buckets: optional(number),net_netfilter_nf_conntrack_max: optional(number),vm_max_map_count: optional(number),vm_swappiness: optional(number),vm_vfs_cache_pressure: optional(number)}))})),node_network_profile: list(object({application_security_group_ids: optional(list(string)),node_public_ip_tags: optional(map(string)),allowed_host_ports: list(object({port_end: optional(number),port_start: optional(number),protocol: optional(string)}))})),upgrade_settings: list(object({drain_timeout_in_minutes: optional(number),max_surge: string,node_soak_duration_in_minutes: optional(number)}))}))"
+      }
+    ],
+    "disk_encryption_set_id": [
+      {
+        "description": "ID of the disk encryption set to be used for encrypting the cluster's managed disks; must be an existing resource in the same region as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns_prefix": [
+      {
+        "description": "Specifies the DNS prefix used to create a fully qualified domain name for the Kubernetes cluster. Must be globally unique within Azure.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns_prefix_private_cluster": [
+      {
+        "description": "Specifies the DNS prefix used for the private cluster, must be unique within the Azure region and conform to DNS naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_zone": [
+      {
+        "description": "Specifies the Azure Edge Zone where the Kubernetes cluster will be deployed, must be a valid Edge Zone name within the selected region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_pod_security_policy": [
+      {
+        "description": "Controls whether the Kubernetes cluster enforces pod security policies. Set to true to enable pod-level security restrictions.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "http_application_routing_enabled": [
+      {
+        "description": "Enables HTTP application routing add-on for the Kubernetes cluster, allowing DNS zone creation for ingress endpoints. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "http_proxy_config": [
+      {
+        "description": "Configuration for HTTP proxy settings used by the cluster, including proxy server addresses and exclusions.",
+        "nullable": true,
+        "type": "list(object({http_proxy: optional(string),https_proxy: optional(string),no_proxy: optional(list(string)),trusted_ca: optional(string)}))"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Defines the managed identity type and configuration used for the Kubernetes cluster, required for resource access and role assignments.",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "image_cleaner_enabled": [
+      {
+        "description": "Enables the image cleaner feature to automatically remove unused images from the cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "image_cleaner_interval_hours": [
+      {
+        "description": "Specifies the interval, in hours, at which unused container images are cleaned up in the Kubernetes cluster. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "ingress_application_gateway": [
+      {
+        "description": "Configures the integration of an Application Gateway with the Kubernetes cluster for ingress traffic management. Requires an existing Application Gateway or specifies settings to create one.",
+        "nullable": true,
+        "type": "list(object({effective_gateway_id: optional(string),gateway_id: optional(string),gateway_name: optional(string),ingress_application_gateway_identity: optional(list(object({client_id=string,object_id=string,user_assigned_identity_id=string}))),subnet_cidr: optional(string),subnet_id: optional(string)}))"
+      }
+    ],
+    "key_management_service": [
+      {
+        "description": "Specifies the configuration for integrating Azure Key Management Service with the Kubernetes cluster for enhanced security and encryption.",
+        "nullable": true,
+        "type": "list(object({key_vault_key_id: string,key_vault_network_access: optional(string)}))"
+      }
+    ],
+    "key_vault_secrets_provider": [
+      {
+        "description": "Specifies whether the Key Vault Secrets Provider is enabled for integrating Azure Key Vault with the Kubernetes cluster.",
+        "nullable": true,
+        "type": "list(object({secret_identity: optional(list(object({client_id=string,object_id=string,user_assigned_identity_id=string}))),secret_rotation_enabled: optional(bool),secret_rotation_interval: optional(string)}))"
+      }
+    ],
+    "kubelet_identity": [
+      {
+        "description": "Specifies the identity assigned to the kubelet in the Kubernetes cluster, used for managing permissions and accessing Azure resources.",
+        "nullable": true,
+        "type": "list(object({client_id: optional(string),object_id: optional(string),user_assigned_identity_id: optional(string)}))"
+      }
+    ],
+    "kubernetes_version": [
+      {
+        "description": "Specifies the version of Kubernetes to be used for the cluster; must be a supported version by Azure Kubernetes Service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "linux_profile": [
+      {
+        "description": "Defines the configuration for Linux-based nodes, including admin username and SSH key for secure access.",
+        "nullable": true,
+        "type": "list(object({admin_username: string,ssh_key: list(object({key_data: string}))}))"
+      }
+    ],
+    "local_account_disabled": [
+      {
+        "description": "Determines whether local accounts are disabled for the Kubernetes cluster, enhancing security by requiring Azure Active Directory authentication.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "maintenance_window": [
+      {
+        "description": "Specifies the recurring maintenance window for the cluster, including days and time constraints during which maintenance operations are allowed.",
+        "nullable": true,
+        "type": "list(object({allowed: list(object({day: string,hours: list(number)})),not_allowed: list(object({end: string,start: string}))}))"
+      }
+    ],
+    "maintenance_window_auto_upgrade": [
+      {
+        "description": "Specifies whether automatic upgrades are enabled during the maintenance window for the Kubernetes cluster.",
+        "nullable": true,
+        "type": "list(object({day_of_month: optional(number),day_of_week: optional(string),duration: number,frequency: string,interval: number,start_date: optional(string),start_time: optional(string),utc_offset: optional(string),week_index: optional(string),not_allowed: list(object({end: string,start: string}))}))"
+      }
+    ],
+    "maintenance_window_node_os": [
+      {
+        "description": "Defines the preferred time range for node operating system updates during the maintenance window. Must be specified in the format \"HH:mm-HH:mm\" using 24-hour time.",
+        "nullable": true,
+        "type": "list(object({day_of_month: optional(number),day_of_week: optional(string),duration: number,frequency: string,interval: number,start_date: optional(string),start_time: optional(string),utc_offset: optional(string),week_index: optional(string),not_allowed: list(object({end: string,start: string}))}))"
+      }
+    ],
+    "microsoft_defender": [
+      {
+        "description": "Enables or disables Microsoft Defender integration for the Kubernetes cluster. Must be set to 'Enabled' or 'Disabled'.",
+        "nullable": true,
+        "type": "list(object({log_analytics_workspace_id: string}))"
+      }
+    ],
+    "monitor_metrics": [
+      {
+        "description": "Determines whether Azure Monitor metrics are enabled for the Kubernetes cluster. Requires an existing Log Analytics workspace for integration.",
+        "nullable": true,
+        "type": "list(object({annotations_allowed: optional(string),labels_allowed: optional(string)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the Kubernetes cluster, which must be unique within the resource group and comply with Azure's naming rules.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_profile": [
+      {
+        "description": "Defines the network configuration for the Kubernetes cluster, including network plugin, DNS service IP, and pod CIDR. Ensure compatibility with the cluster's subnet and resource group settings.",
+        "nullable": true,
+        "type": "list(object({dns_service_ip: optional(string),docker_bridge_cidr: optional(string),ebpf_data_plane: optional(string),ip_versions: optional(list(string)),load_balancer_sku: optional(string),network_data_plane: optional(string),network_mode: optional(string),network_plugin: string,network_plugin_mode: optional(string),network_policy: optional(string),outbound_ip_address_ids: optional(list(string)),outbound_ip_prefix_ids: optional(list(string)),outbound_type: optional(string),pod_cidr: optional(string),pod_cidrs: optional(list(string)),service_cidr: optional(string),service_cidrs: optional(list(string)),load_balancer_profile: list(object({effective_outbound_ips: optional(list(string)),idle_timeout_in_minutes: optional(number),managed_outbound_ip_count: optional(number),managed_outbound_ipv6_count: optional(number),outbound_ip_address_ids: optional(list(string)),outbound_ip_prefix_ids: optional(list(string)),outbound_ports_allocated: optional(number)})),nat_gateway_profile: list(object({effective_outbound_ips: optional(list(string)),idle_timeout_in_minutes: optional(number),managed_outbound_ip_count: optional(number)}))}))"
+      }
+    ],
+    "node_os_channel_upgrade": [
+      {
+        "description": "Specifies the OS channel upgrade type for nodes in the Kubernetes cluster, controlling the update cadence and stability.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "node_resource_group": [
+      {
+        "description": "Specifies the name of the resource group where the cluster's nodes and managed resources will be created. Must be unique within the Azure subscription.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "oidc_issuer_enabled": [
+      {
+        "description": "Enables OIDC issuer integration for the Kubernetes cluster; must be set to true if OIDC-based authentication or workload identity is required.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "oms_agent": [
+      {
+        "description": "Enables monitoring with Azure Monitor for containers; requires Log Analytics Workspace integration.",
+        "nullable": true,
+        "type": "list(object({log_analytics_workspace_id: string,msi_auth_for_monitoring_enabled: optional(bool),oms_agent_identity: optional(list(object({client_id=string,object_id=string,user_assigned_identity_id=string})))}))"
+      }
+    ],
+    "open_service_mesh_enabled": [
+      {
+        "description": "Enables Open Service Mesh integration for the Kubernetes cluster; requires Kubernetes version 1.19.0 or later.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "private_cluster_enabled": [
+      {
+        "description": "Determines whether private cluster mode is enabled, restricting access to the Kubernetes API server to private endpoints only.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "private_cluster_public_fqdn_enabled": [
+      {
+        "description": "Specifies whether the public fully qualified domain name (FQDN) is enabled for the private cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "private_dns_zone_id": [
+      {
+        "description": "ID of an existing private DNS zone to associate with the Kubernetes cluster; required for private cluster configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Determines whether public network access is enabled for the Kubernetes cluster; must be true to allow access from outside the private network.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "role_based_access_control_enabled": [
+      {
+        "description": "Enables or disables Role-Based Access Control (RBAC) for managing access permissions in the Kubernetes cluster.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "run_command_enabled": [
+      {
+        "description": "Determines if the ability to execute run commands on the Kubernetes cluster is enabled; must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "service_mesh_profile": [
+      {
+        "description": "Specifies the configuration for enabling and managing service mesh features within the Kubernetes cluster.",
+        "nullable": true,
+        "type": "list(object({external_ingress_gateway_enabled: optional(bool),internal_ingress_gateway_enabled: optional(bool),mode: string,certificate_authority: list(object({cert_chain_object_name: string,cert_object_name: string,key_object_name: string,key_vault_id: string,root_cert_object_name: string}))}))"
+      }
+    ],
+    "service_principal": [
+      {
+        "description": "Service principal credentials used for authenticating with Azure, required for managing the Kubernetes cluster.",
+        "nullable": true,
+        "type": "list(object({client_id: string,client_secret: string}))"
+      }
+    ],
+    "sku_tier": [
+      {
+        "description": "Defines the pricing tier for the Kubernetes cluster, such as \"Free\" or \"Paid\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "storage_profile": [
+      {
+        "description": "Defines the storage configuration for agent nodes, specifying disk size, type, and other related settings.",
+        "nullable": true,
+        "type": "list(object({blob_driver_enabled: optional(bool),disk_driver_enabled: optional(bool),disk_driver_version: optional(string),file_driver_enabled: optional(bool),snapshot_controller_enabled: optional(bool)}))"
+      }
+    ],
+    "support_plan": [
+      {
+        "description": "Specifies the Azure support plan for the Kubernetes cluster; options include Standard, Basic, or Advanced.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines custom tags to categorize and organize the Kubernetes cluster. Tags must be key-value pairs and adhere to Azure's tag naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom time limits for create, read, update, and delete operations on the Kubernetes cluster.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "web_app_routing": [
+      {
+        "description": "Enables web application routing for the Kubernetes cluster, allowing automatic DNS management and ingress configuration.",
+        "nullable": true,
+        "type": "list(object({dns_zone_id: optional(string),dns_zone_ids: optional(list(string)),web_app_routing_identity: optional(list(object({client_id=string,object_id=string,user_assigned_identity_id=string})))}))"
+      }
+    ],
+    "windows_profile": [
+      {
+        "description": "Configuration for Windows node pool in the Kubernetes cluster, including administrator username and password requirements.",
+        "nullable": true,
+        "type": "list(object({admin_password: optional(string),admin_username: string,license: optional(string),gmsa: list(object({dns_server: string,root_domain: string}))}))"
+      }
+    ],
+    "workload_autoscaler_profile": [
+      {
+        "description": "Configures the autoscaler settings for workloads, including constraints such as minimum and maximum node counts for scaling.",
+        "nullable": true,
+        "type": "list(object({keda_enabled: optional(bool),vertical_pod_autoscaler_controlled_values: optional(string),vertical_pod_autoscaler_enabled: optional(bool),vertical_pod_autoscaler_update_mode: optional(string)}))"
+      }
+    ],
+    "workload_identity_enabled": [
+      {
+        "description": "Enables or disables Azure AD Workload Identity integration for the Kubernetes cluster; requires Azure AD integration to be configured.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

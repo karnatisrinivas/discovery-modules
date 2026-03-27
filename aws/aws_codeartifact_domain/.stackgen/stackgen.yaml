@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Codeartifact Domain
+  node:
+    label:
+      static: Codeartifact Domain
+      template: ${domain}
+    display_type: default
+
+discovery:
+  type: aws_codeartifact_domain
+  dnd_supported: false
+  references:
+    encryption_key:
+      from: aws_kms_key
+      output: arn

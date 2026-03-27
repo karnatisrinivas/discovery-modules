@@ -1,0 +1,12 @@
+{
+    "output": {
+        "asset_ids": {
+            "description": "A list of unique identifiers for the Outposts assets.",
+            "value": "${data.aws_outposts_assets.this.asset_ids}"
+        },
+        "id": {
+            "description": "The unique identifier for the specific Outposts asset data.",
+            "value": "${data.aws_outposts_assets.this.id}"
+        }
+    }
+}

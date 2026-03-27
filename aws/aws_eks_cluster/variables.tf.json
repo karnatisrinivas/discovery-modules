@@ -1,0 +1,128 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores.",
+                "validation": {
+                    "condition": "${length(var.name) >= 1 && length(var.name) <= 100 && can(regex(\"^[a-zA-Z0-9][a-zA-Z0-9-_]*$\", var.name))}",
+                    "error_message": "`Name` must be between 1-100 characters in length, must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores."
+                },
+                "nullable": false
+            }
+        ],
+        "role_arn": [
+            {
+                "type": "string",
+                "description": "ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.",
+                "nullable": false
+            }
+        ],
+        "vpc_config": [
+            {
+                "type": "list(object({subnet_ids: list(string), security_group_ids: list(string), endpoint_public_access: bool, endpoint_private_access: bool, public_access_cidrs: list(string)}))",
+                "description": "Configuration block with VPC configuration for the cluster. If removed, Terraform will only perform drift detection if a configuration value is provided.",
+                "nullable": false
+            }
+        ],
+        "access_config": [
+            {
+                "type": "list(object({authentication_mode: string, bootstrap_cluster_creator_admin_permissions: bool}))",
+                "description": "Configuration block for the access config associated with your cluster.",
+                "nullable": true
+            }
+        ],
+        "encryption_config": [
+            {
+                "type": "list(object({provider: list(object({key_arn: string})), resources: list(string)}))",
+                "description": "ARN of the Key Management Service (KMS) customer master key (CMK). Used to configure encryption. The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK.",
+                "nullable": true
+            }
+        ],
+        "kubernetes_network_config": [
+            {
+                "type": "list(object({service_ipv4_cidr: string, ip_family: string, elastic_load_balancing: optional(list(object({enabled: bool})))}))",
+                "description": "Configuration block with kubernetes network configuration for the cluster. If removed, Terraform will only perform drift detection if a configuration value is provided.",
+                "nullable": true
+            }
+        ],
+        "outpost_config": [
+            {
+                "type": "list(object({control_plane_instance_type: string, outpost_arns: list(string), control_plane_placement: list(object({group_name: string}))}))",
+                "description": "Configuration block representing the configuration of your local Amazon EKS cluster on an AWS Outpost. This block isn't available for creating Amazon EKS clusters on the AWS cloud.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "Key-value map of resource tags.",
+                "nullable": true
+            }
+        ],
+        "eks_version": [
+            {
+                "type": "string",
+                "description": "Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.",
+                "nullable": true
+            }
+        ],
+        "enabled_cluster_log_types": [
+            {
+                "type": "list(string)",
+                "description": "A list of the desired control plane logging to enable. For more information, see Amazon EKS Control Plane Logging.",
+                "nullable": true
+            }
+        ],
+        "timeouts": [
+            {
+                "type": "object({create: optional(string), update: optional(string), delete: optional(string)})",
+                "description": "The timeouts for create, update and delete operations",
+                "nullable": true
+            }
+        ],
+        "bootstrap_self_managed_addons": [
+            {
+                "type": "bool",
+                "description": "Whether to bootstrap the self-managed addons",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "compute_config": [
+            {
+                "type": "list(object({enabled: bool, node_pools:list(string), node_role_arn:string}))",
+                "description": "Configuration block with compute configuration for the cluster.",
+                "nullable": true
+            }
+        ],
+        "storage_config": [
+            {
+                "type": "list(object({block_storage: list(object({enabled: bool}))}))",
+                "description": "Configuration block with storage configuration for the cluster.",
+                "nullable": true
+            }
+        ],
+        "remote_network_config": [
+            {
+                "type": "list(object({remote_node_networks: list(object({cidrs: list(string)})), remote_pod_networks: optional(list(object({cidrs: list(string)})))}))",
+                "description": "Configuration block with remote network configuration for the cluster. Contains remote node and pod network settings.",
+                "nullable": true
+            }
+        ],
+        "upgrade_policy": [
+            {
+                "type": "list(object({support_type: string}))",
+                "description": "Configuration block representing the upgrade policy for the cluster.",
+                "nullable": true
+            }
+        ],
+        "zonal_shift_config": [
+            {
+                "type": "list(object({enabled: bool}))",
+                "description": "Configuration block with zonal shift configuration for the cluster.",
+                "nullable": true
+            }
+        ]
+    }
+}

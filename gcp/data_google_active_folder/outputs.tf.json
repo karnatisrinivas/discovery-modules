@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the active folder, useful for referencing in other configurations",
+            "value": "${data.google_active_folder.this.id}"
+        },
+        "name": {
+            "description": "Name of the active folder, useful for identifying folder resources in GCP",
+            "value": "${data.google_active_folder.this.name}"
+        }
+    }
+}

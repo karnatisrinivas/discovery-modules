@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "most_recent": [
+      {
+        "description": "Indicates whether to select the most recent snapshot.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the OpenZFS snapshot.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "snapshot_ids": [
+      {
+        "description": "A list of specific snapshot IDs to select.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

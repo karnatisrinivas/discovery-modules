@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Container Registry"
+  node:
+    label:
+      static: "[Data] Container Registry"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_container_registry
+  dnd_supported: false

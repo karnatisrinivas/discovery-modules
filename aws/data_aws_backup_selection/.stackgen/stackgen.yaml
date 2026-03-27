@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Backup Selection"
+  node:
+    label:
+      static: "[Data] Backup Selection"
+      template: "[Data] Backup Selection"
+    display_type: default
+
+discovery:
+  type: data_aws_backup_selection
+  dnd_supported: false

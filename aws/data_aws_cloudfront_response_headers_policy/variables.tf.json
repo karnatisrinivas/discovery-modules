@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "The unique identifier for the CloudFront response headers policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name assigned to the CloudFront response headers policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

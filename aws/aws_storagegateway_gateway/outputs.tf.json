@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for IAM policies and API operations",
+            "value": "${aws_storagegateway_gateway.this.arn}"
+        },
+        "ec2_instance_id": {
+            "description": "Identifier of the EC2 instance running the storage gateway",
+            "value": "${aws_storagegateway_gateway.this.ec2_instance_id}"
+        },
+        "endpoint_type": {
+            "description": "Specifies the type of endpoint for gateway access",
+            "value": "${aws_storagegateway_gateway.this.endpoint_type}"
+        },
+        "gateway_id": {
+            "description": "Unique ID for identifying the storage gateway instance",
+            "value": "${aws_storagegateway_gateway.this.gateway_id}"
+        },
+        "gateway_network_interface": {
+            "description": "Details of network interfaces including IPv4 addresses",
+            "value": "${aws_storagegateway_gateway.this.gateway_network_interface}"
+        },
+        "host_environment": {
+            "description": "Deployment environment type for the gateway (e.g., EC2 or VMware)",
+            "value": "${aws_storagegateway_gateway.this.host_environment}"
+        }
+    }
+}

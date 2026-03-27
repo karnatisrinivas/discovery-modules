@@ -1,0 +1,44 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Auto Scaling Policy
+  node:
+    label:
+      static: Auto Scaling Policy
+      template: ${name}
+    display_type: default
+
+variables:
+  adjustment_type:
+    type: string
+    options: 
+      - ChangeInCapacity
+      - ExactCapacity
+      - PercentChangeInCapacity
+    ui_control: select
+    description: The type of adjustment to make to the autoscaling group
+  enabled:
+    description: Whether the scaling policy is enabled
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  policy_type:
+    description: The type of the policy
+    type: string
+    options: 
+      - SimpleScaling
+      - StepScaling
+      - TargetTrackingScaling
+      - PredictiveScaling
+    ui_control: select
+
+discovery:
+  type: aws_autoscaling_policy
+  dnd_supported: false
+  references:
+    autoscaling_group_name:
+      from: aws_autoscaling_group
+      output: autoscaling_group_name

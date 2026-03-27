@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "prefix_list_id": [
+      {
+        "description": "The identifier for the AWS prefix list, which is a set of one or more CIDR blocks.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

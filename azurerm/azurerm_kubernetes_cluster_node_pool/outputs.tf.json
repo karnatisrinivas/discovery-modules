@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the node pool in Kubernetes cluster configurations",
+            "value": "${azurerm_kubernetes_cluster_node_pool.this.id}"
+        }
+    }
+}

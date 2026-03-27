@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "backend_address_ip_configuration_id": [
+      {
+        "description": "The ID of the IP configuration associated with the backend address.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "backend_address_pool_id": [
+      {
+        "description": "The ID of the backend address pool to associate with the load balancer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "The IP address to include in the backend address pool.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the backend address.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "virtual_network_id": [
+      {
+        "description": "The ID of the virtual network where the backend address resides.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

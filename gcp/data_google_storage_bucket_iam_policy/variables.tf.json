@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "description": "Specifies the name of the S3 bucket to be used. Must be globally unique and adhere to AWS naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

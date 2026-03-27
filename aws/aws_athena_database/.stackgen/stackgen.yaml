@@ -1,0 +1,56 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Athena Database
+  node:
+    label:
+      static: Athena Database
+      template: Athena Database
+    display_type: default
+
+variables:
+  encryption_option:
+    ui_control: select
+    options: 
+      - SSE_S3
+      - SSE_KMS
+      - CSE_KMS
+  force_destroy:
+    description: Whether to destroy all tables in the database when destroying the database resource.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  encryption_configuration:
+    description: Encryption key block AWS Athena uses to decrypt the data in S3.
+    attributes: 
+      encryption_option: 
+        label: Encryption Option
+        description: Type of key
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        options: 
+          - SSE_S3
+          - SSE_KMS
+          - CSE_KMS
+        ui_control: select
+      kms_key: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+        label: KMS Key
+        description: "KMS key ARN or ID; required for key types `SSE KMS` and `CSE KMS`."
+
+discovery:
+  type: aws_athena_database
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: bucket

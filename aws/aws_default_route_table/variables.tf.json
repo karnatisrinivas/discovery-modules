@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "default_route_table_id": [
+      {
+        "description": "ID of the default route table to manage or modify.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "propagating_vgws": [
+      {
+        "description": "List of virtual gateways to propagate routes from, must be associated with the route table.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "route": [
+      {
+        "description": "List of routes to associate with the default route table.",
+        "nullable": true,
+        "type": "list(object({cidr_block: string, core_network_arn: string, destination_prefix_list_id: string, egress_only_gateway_id: string, gateway_id: string, instance_id: string, ipv6_cidr_block: string, nat_gateway_id: string, network_interface_id: string, transit_gateway_id: string, vpc_endpoint_id: string, vpc_peering_connection_id: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the default route table for resource organization and management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout durations for create, update, and delete operations on the default route table.",
+        "nullable": true,
+        "type": "object({create: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

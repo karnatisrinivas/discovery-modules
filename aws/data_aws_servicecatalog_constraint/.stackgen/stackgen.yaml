@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Servicecatalog Constraint"
+  node:
+    label:
+      static: "[Data] Servicecatalog Constraint"
+      template: "[Data] Servicecatalog Constraint"
+    display_type: default
+
+discovery:
+  type: data_aws_servicecatalog_constraint
+  dnd_supported: false

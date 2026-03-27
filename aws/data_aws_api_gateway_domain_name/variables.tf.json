@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "domain_name": [
+      {
+        "description": "The custom domain name for the API Gateway, used to access your API with a more user-friendly URL.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

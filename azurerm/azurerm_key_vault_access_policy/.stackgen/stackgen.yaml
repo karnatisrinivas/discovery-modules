@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Key Vault Access Policy
+  node:
+    label:
+      static: Key Vault Access Policy
+      template: Key Vault Access Policy
+    display_type: default
+
+discovery:
+  type: azurerm_key_vault_access_policy
+  dnd_supported: false
+  references:
+    object_id:
+      from: azurerm_aks
+      output: identity_principal_id
+    key_vault_id:
+      from: azurerm_keyvault
+      output: id

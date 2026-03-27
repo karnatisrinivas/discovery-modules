@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Secretsmanager Secret Policy
+  node:
+    label:
+      static: Secretsmanager Secret Policy
+      template: ${secret_arn}
+    display_type: default
+
+discovery:
+  type: aws_secretsmanager_secret_policy
+  dnd_supported: false
+  references:
+    secret_arn:
+      from: aws_secretsmanager_secret
+      output: arn
+    policy:
+      from: data_aws_iam_policy_document
+      output: json

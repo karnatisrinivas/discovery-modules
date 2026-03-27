@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.arn}"
+        },
+        "connected_device_id": {
+            "description": "The ID of the device that is connected to the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.connected_device_id}"
+        },
+        "connected_link_id": {
+            "description": "The ID of the link that is connected to the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.connected_link_id}"
+        },
+        "description": {
+            "description": "A description of the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.description}"
+        },
+        "device_id": {
+            "description": "The ID of the device associated with the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.device_id}"
+        },
+        "id": {
+            "description": "The unique identifier for the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.id}"
+        },
+        "link_id": {
+            "description": "The ID of the link associated with the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.link_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the network manager connection.",
+            "value": "${data.aws_networkmanager_connection.this.tags}"
+        }
+    }
+}

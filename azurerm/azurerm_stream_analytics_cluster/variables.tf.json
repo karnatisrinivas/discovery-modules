@@ -1,0 +1,29 @@
+{
+  "variable": {
+    "stream_analytics_cluster_name": [
+      {
+        "type": "string",
+        "description": "The name of the stream analytics cluster."
+      }
+    ],
+    "stream_capacity": [
+      {
+        "type": "number",
+        "description": "The number of streaming units to use. Acceptable values are multiples of 36",
+        "default": 36
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

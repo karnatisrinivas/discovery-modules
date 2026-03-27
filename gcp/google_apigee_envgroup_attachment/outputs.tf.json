@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for identifying the environment group attachment in Apigee configurations",
+            "value": "${google_apigee_envgroup_attachment.this.id}"
+        },
+        "name": {
+            "description": "Name of the environment group attachment, useful for API queries and resource management",
+            "value": "${google_apigee_envgroup_attachment.this.name}"
+        }
+    }
+}

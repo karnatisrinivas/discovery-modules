@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM policies and API calls",
+            "value": "${aws_codecommit_repository.this.arn}"
+        },
+        "clone_url_http": {
+            "description": "HTTP URL for cloning the repository via HTTPS",
+            "value": "${aws_codecommit_repository.this.clone_url_http}"
+        },
+        "clone_url_ssh": {
+            "description": "SSH URL for cloning the repository securely",
+            "value": "${aws_codecommit_repository.this.clone_url_ssh}"
+        },
+        "id": {
+            "description": "Repository name for identifying and accessing it",
+            "value": "${aws_codecommit_repository.this.id}"
+        },
+        "repository_id": {
+            "description": "Unique ID for internal reference and operations",
+            "value": "${aws_codecommit_repository.this.repository_id}"
+        },
+        "tags_all": {
+            "description": "Collection of all tags applied to the repository",
+            "value": "${aws_codecommit_repository.this.tags_all}"
+        }
+    }
+}

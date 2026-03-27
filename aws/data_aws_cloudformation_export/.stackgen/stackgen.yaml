@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudformation Export"
+  node:
+    label:
+      static: "[Data] Cloudformation Export"
+      template: "[Data] Cloudformation Export"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudformation_export
+  dnd_supported: false

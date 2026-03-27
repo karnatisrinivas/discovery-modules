@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "include_public_key": [
+      {
+        "description": "Indicates whether to include the public key in the key pair resource.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "key_name": [
+      {
+        "description": "The name assigned to the key pair.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key_pair_id": [
+      {
+        "description": "The unique identifier for the key pair.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Lakeformation Permissions"
+  node:
+    label:
+      static: "[Data] Lakeformation Permissions"
+      template: "[Data] Lakeformation Permissions"
+    display_type: default
+
+discovery:
+  type: data_aws_lakeformation_permissions
+  dnd_supported: false

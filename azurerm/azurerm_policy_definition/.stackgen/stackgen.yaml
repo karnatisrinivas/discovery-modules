@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Policy Definition
+  node:
+    label:
+      static: Policy Definition
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_policy_definition
+  dnd_supported: false
+  data_source: data_azurerm_policy_definition

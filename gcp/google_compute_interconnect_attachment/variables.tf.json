@@ -1,0 +1,123 @@
+{
+  "variable": {
+    "admin_enabled": [
+      {
+        "description": "Specifies whether the interconnect attachment is enabled for use. Must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "bandwidth": [
+      {
+        "description": "Specifies the capacity of the interconnect attachment, must be one of the allowed bandwidth tiers (e.g., BPS_50M, BPS_100M, etc.).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "candidate_subnets": [
+      {
+        "description": "Specifies the subnets from which Cloud Router allocates IP addresses for the interconnect attachment; must belong to the same region as the attachment.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies a description for the interconnect attachment, providing details about its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_availability_domain": [
+      {
+        "description": "Specifies the availability domain for the interconnect attachment, either \"AVAILABILITY_DOMAIN_1\" or \"AVAILABILITY_DOMAIN_2\", to determine edge location preferences.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption": [
+      {
+        "description": "Specifies whether the interconnect attachment uses encryption, with options being 'NONE' or 'IPSEC'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "interconnect": [
+      {
+        "description": "Specifies the name of the interconnect to associate with the attachment; must be an existing interconnect in the same project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipsec_internal_addresses": [
+      {
+        "description": "Defines the internal IP addresses used for the IPSec tunnel configuration, must be in the same region as the interconnect attachment and belong to a valid subnet.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the attachment, must be a set of strings or integers.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "mtu": [
+      {
+        "description": "Specifies the maximum transmission unit (MTU) size for the interconnect attachment, measured in bytes. Must be a valid MTU value supported by the interconnect.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the interconnect attachment; must be compliant with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "router": [
+      {
+        "description": "Specifies the Cloud Router used for dynamic routing, required for creating the interconnect attachment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stack_type": [
+      {
+        "description": "Specifies the stack type for the interconnect attachment; must be either 'IPV4_ONLY' or 'IPV4_IPV6'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "subnet_length": [
+      {
+        "description": "Length of the subnet prefix used for the interconnect attachment, defining the range of IP addresses allocated.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout configuration for operations on the interconnect attachment, including create, update, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of interconnect attachment, either 'PARTNER' for connections through a partner or 'DEDICATED' for direct connections.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vlan_tag8021q": [
+      {
+        "description": "Specifies the VLAN tag for the interconnect attachment, must be an integer between 2 and 4094 or 0 for untagged.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

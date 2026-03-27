@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "client_id": [
+      {
+        "description": "Specifies the Application ID of the Azure AD application associated with the service principal.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Specifies the display name for the service principal, typically matching the name of the associated application.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_id": [
+      {
+        "description": "Unique identifier of the Azure Active Directory object to associate with the service principal.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout settings for operations such as creation, update, or deletion of the service principal.",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

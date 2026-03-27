@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Api Gateway Export"
+  node:
+    label:
+      static: "[Data] Api Gateway Export"
+      template: "[Data] Api Gateway Export"
+    display_type: default
+
+discovery:
+  type: data_aws_api_gateway_export
+  dnd_supported: false

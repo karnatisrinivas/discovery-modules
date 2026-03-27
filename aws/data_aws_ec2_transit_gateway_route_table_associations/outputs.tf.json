@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the specific Transit Gateway route table association.",
+            "value": "${data.aws_ec2_transit_gateway_route_table_associations.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all Transit Gateway route table associations.",
+            "value": "${data.aws_ec2_transit_gateway_route_table_associations.this.ids}"
+        }
+    }
+}

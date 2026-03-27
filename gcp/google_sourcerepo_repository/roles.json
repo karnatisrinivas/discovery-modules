@@ -1,0 +1,14 @@
+[
+    {
+        "value": "roles/source.reader",
+        "label": "Source Reader"
+    },
+    {
+        "value": "roles/source.admin",
+        "label": "Source Admin"
+    },
+    {
+        "value": "roles/source.writer",
+        "label": "Source Writer"
+    }
+]

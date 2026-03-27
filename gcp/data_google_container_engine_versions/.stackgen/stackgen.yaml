@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[DATA] Container Engine Versions"
+  node:
+    label:
+      static: "[DATA] Container Engine Versions"
+      template: "[DATA] Container Engine Versions"
+    display_type: default
+
+discovery:
+  type: data_google_container_engine_versions
+  dnd_supported: false

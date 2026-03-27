@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Region Network Endpoint Group
+  node:
+    label:
+      static: Compute Region Network Endpoint Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_region_network_endpoint_group
+  dnd_supported: false
+  references:
+    network:
+      from: google_compute_network
+      output: self_link
+    subnetwork:
+      from: google_compute_subnetwork
+      output: self_link

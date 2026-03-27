@@ -1,0 +1,24 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudtrail
+  node:
+    label:
+      static: Cloudtrail
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_cloudtrail
+  dnd_supported: false
+  references:
+    cloud_watch_logs_role_arn:
+      from: aws_iam_role
+      output: arn
+    kms_key_id:
+      from: aws_kms_key
+      output: arn
+    s3_bucket_name:
+      from: aws_s3_bucket
+      output: id

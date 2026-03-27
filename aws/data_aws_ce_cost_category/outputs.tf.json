@@ -1,0 +1,40 @@
+{
+    "output": {
+        "default_value": {
+            "description": "The default value assigned to the cost category when no rules match.",
+            "value": "${data.aws_ce_cost_category.this.default_value}"
+        },
+        "effective_end": {
+            "description": "The date when the cost category becomes inactive.",
+            "value": "${data.aws_ce_cost_category.this.effective_end}"
+        },
+        "effective_start": {
+            "description": "The date when the cost category starts being active.",
+            "value": "${data.aws_ce_cost_category.this.effective_start}"
+        },
+        "id": {
+            "description": "The unique identifier for the cost category.",
+            "value": "${data.aws_ce_cost_category.this.id}"
+        },
+        "name": {
+            "description": "The name given to the cost category.",
+            "value": "${data.aws_ce_cost_category.this.name}"
+        },
+        "rule": {
+            "description": "The rules that define how costs are categorized, based on dimensions, tags, or other criteria.",
+            "value": "${data.aws_ce_cost_category.this.rule}"
+        },
+        "rule_version": {
+            "description": "The version of the rule schema used for the cost category.",
+            "value": "${data.aws_ce_cost_category.this.rule_version}"
+        },
+        "split_charge_rule": {
+            "description": "Rules that determine how to split shared costs among different targets.",
+            "value": "${data.aws_ce_cost_category.this.split_charge_rule}"
+        },
+        "tags": {
+            "description": "Key-value pairs used to tag the cost category for organizational purposes.",
+            "value": "${data.aws_ce_cost_category.this.tags}"
+        }
+    }
+}

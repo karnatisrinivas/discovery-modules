@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam User Ssh Key"
+  node:
+    label:
+      static: "[Data] Iam User Ssh Key"
+      template: "[Data] Iam User Ssh Key"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_user_ssh_key
+  dnd_supported: false

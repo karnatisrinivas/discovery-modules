@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "key": [
+      {
+        "description": "Defines the key for the tag, which identifies the purpose or category of the tagged resource; must be unique per resource and cannot be empty.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_id": [
+      {
+        "description": "The ID of the resource to which the tag will be applied; must be a valid AWS resource ID.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "value": [
+      {
+        "description": "Specifies the value for the tag; must be a string and can include letters, numbers, and special characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

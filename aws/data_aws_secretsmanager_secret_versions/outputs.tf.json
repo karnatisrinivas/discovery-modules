@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the secret.",
+            "value": "${data.aws_secretsmanager_secret_versions.this.arn}"
+        },
+        "name": {
+            "description": "The name of the secret.",
+            "value": "${data.aws_secretsmanager_secret_versions.this.name}"
+        },
+        "versions": {
+            "description": "A list of versions for the secret, each containing the created time, last accessed date, version ID, and version stages.",
+            "value": "${data.aws_secretsmanager_secret_versions.this.versions}"
+        }
+    }
+}

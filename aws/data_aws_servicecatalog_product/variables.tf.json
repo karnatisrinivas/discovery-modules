@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "accept_language": [
+      {
+        "description": "The language code for the language in which to display descriptions for AWS Service Catalog resources.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "id": [
+      {
+        "description": "The unique identifier for the AWS Service Catalog product.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

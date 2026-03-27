@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the DynamoDB table item.",
+            "value": "${data.aws_dynamodb_table_item.this.id}"
+        },
+        "item": {
+            "description": "The actual data content of the DynamoDB table item.",
+            "value": "${data.aws_dynamodb_table_item.this.item}"
+        }
+    }
+}

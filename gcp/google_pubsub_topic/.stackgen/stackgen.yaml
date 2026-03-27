@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: PubSub Topic
+  node:
+    label:
+      static: PubSub Topic
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_pubsub_topic
+  dnd_supported: false
+  references:
+    kms_key_name:
+      from: google_kms_crypto_key
+      output: id

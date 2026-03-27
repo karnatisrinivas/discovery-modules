@@ -1,0 +1,16 @@
+{
+    "output": {
+        "behavior_on_mx_failure": {
+            "description": "Indicates the action to take if there's a failure in the MX (Mail Exchange) record lookup for the Mail From domain.",
+            "value": "${data.aws_sesv2_email_identity_mail_from_attributes.this.behavior_on_mx_failure}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the email identity's Mail From attributes.",
+            "value": "${data.aws_sesv2_email_identity_mail_from_attributes.this.id}"
+        },
+        "mail_from_domain": {
+            "description": "The custom MAIL FROM domain that is used for the email identity.",
+            "value": "${data.aws_sesv2_email_identity_mail_from_attributes.this.mail_from_domain}"
+        }
+    }
+}

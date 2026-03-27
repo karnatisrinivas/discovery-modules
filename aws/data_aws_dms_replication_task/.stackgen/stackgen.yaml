@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Dms Replication Task"
+  node:
+    label:
+      static: "[Data] Dms Replication Task"
+      template: "[Data] Dms Replication Task"
+    display_type: default
+
+discovery:
+  type: data_aws_dms_replication_task
+  dnd_supported: false

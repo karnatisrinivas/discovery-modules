@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Snapshot
+  node:
+    label:
+      static: Compute Snapshot
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_snapshot
+  dnd_supported: false
+  references:
+    source_disk:
+      from: google_compute_disk
+      output: id

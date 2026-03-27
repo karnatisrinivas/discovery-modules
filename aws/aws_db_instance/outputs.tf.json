@@ -1,0 +1,44 @@
+{
+    "output": {
+        "allocated_storage": {
+            "description": "The allocated storage of the DB instance",
+            "value": "${aws_db_instance.this.allocated_storage}"
+        },
+        "arn": {
+            "description": "The ARN of the DB instance",
+            "value": "${aws_db_instance.this.arn}"
+        },
+        "db_name": {
+            "description": "The name of the DB instance",
+            "value": "${aws_db_instance.this.db_name}"
+        },
+        "endpoint": {
+            "description": "The endpoint of the DB instance",
+            "value": "${aws_db_instance.this.endpoint}"
+        },
+        "engine": {
+            "description": "The engine of the DB instance",
+            "value": "${aws_db_instance.this.engine}"
+        },
+        "engine_version": {
+            "description": "The engine version of the DB instance",
+            "value": "${aws_db_instance.this.engine_version}"
+        },
+        "id": {
+            "description": "The ID of the DB instance",
+            "value": "${aws_db_instance.this.id}"
+        },
+        "instance_class": {
+            "description": "The instance class of the DB instance",
+            "value": "${aws_db_instance.this.instance_class}"
+        },
+        "port": {
+            "description": "The port of the DB instance",
+            "value": "${aws_db_instance.this.port}"
+        },
+        "username": {
+            "description": "The username of the DB instance",
+            "value": "${aws_db_instance.this.username}"
+        }
+    }
+}

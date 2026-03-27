@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "employee_id": [
+      {
+        "description": "Unique identifier assigned to the employee",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "mail": [
+      {
+        "description": "Email address associated with the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "mail_nickname": [
+      {
+        "description": "Alias for the email account, often used in directories",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "object_id": [
+      {
+        "description": "Globally unique identifier for the resource object",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout settings for resource operations",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ],
+    "user_principal_name": [
+      {
+        "description": "User's login name in email format (e.g., user@domain.com)",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloudfunctions2 Function
+  node:
+    label:
+      static: Cloudfunctions2 Function
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloudfunctions2_function
+  dnd_supported: false

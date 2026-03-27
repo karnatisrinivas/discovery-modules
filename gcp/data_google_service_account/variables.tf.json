@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "account_id": [
+      {
+        "description": "The unique ID for the service account, must be between 6 and 30 characters and match the regex `[a-z]([-a-z0-9]*[a-z0-9])`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

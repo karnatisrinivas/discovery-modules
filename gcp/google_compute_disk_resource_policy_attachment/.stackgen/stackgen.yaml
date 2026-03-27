@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Disk Resource Policy Attachment
+  node:
+    label:
+      static: Compute Disk Resource Policy Attachment
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_disk_resource_policy_attachment
+  dnd_supported: false
+  references:
+    name:
+      from: google_compute_resource_policy
+      output: name
+    disk:
+      from: google_compute_disk
+      output: name

@@ -1,0 +1,158 @@
+{
+  "variable": {
+    "catalog_target": [
+      {
+        "description": "Defines the Glue Catalog target configuration, specifying the database and table to be included for crawling.",
+        "nullable": true,
+        "type": "list(object({connection_name: optional(string),database_name: string,dlq_event_queue_arn: optional(string),event_queue_arn: optional(string),tables: list(string)}))"
+      }
+    ],
+    "classifiers": [
+      {
+        "description": "Defines the custom classifiers to use for data categorization, enabling the crawler to identify the format and structure of your data.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "configuration": [
+      {
+        "description": "Specifies advanced JSON configuration options for the crawler, such as data lineage settings or custom classifiers.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "database_name": [
+      {
+        "description": "Name of the Glue Data Catalog database to associate with the crawler; must already exist in the same AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "delta_target": [
+      {
+        "description": "Specifies the Delta Lake data source configuration for the crawler, including database and table information.",
+        "nullable": true,
+        "type": "list(object({connection_name: optional(string),create_native_delta_table: optional(bool),delta_tables: list(string),write_manifest: bool}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a detailed summary or metadata about the Glue crawler's purpose and functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dynamodb_target": [
+      {
+        "description": "Specifies the DynamoDB table to crawl, including table name and optional scan rate.",
+        "nullable": true,
+        "type": "list(object({path: string,scan_all: optional(bool),scan_rate: optional(number)}))"
+      }
+    ],
+    "hudi_target": [
+      {
+        "description": "Defines the target data source for the Glue crawler, specifically for Hudi datasets, which must be compatible with Hudi table formats.",
+        "nullable": true,
+        "type": "list(object({connection_name: optional(string),exclusions: optional(list(string)),maximum_traversal_depth: number,paths: list(string)}))"
+      }
+    ],
+    "iceberg_target": [
+      {
+        "description": "Defines the target Iceberg table location for the Glue crawler, specifying the data source to be crawled.",
+        "nullable": true,
+        "type": "list(object({connection_name: optional(string),exclusions: optional(list(string)),maximum_traversal_depth: number,paths: list(string)}))"
+      }
+    ],
+    "jdbc_target": [
+      {
+        "description": "Specifies the JDBC target configuration for the Glue crawler, including connection details and paths to crawl.",
+        "nullable": true,
+        "type": "list(object({connection_name: string,enable_additional_metadata: optional(list(string)),exclusions: optional(list(string)),path: string}))"
+      }
+    ],
+    "lake_formation_configuration": [
+      {
+        "description": "Defines the Lake Formation settings for the crawler, specifying data catalog permissions and integration options.",
+        "nullable": true,
+        "type": "list(object({account_id: optional(string),use_lake_formation_credentials: optional(bool)}))"
+      }
+    ],
+    "lineage_configuration": [
+      {
+        "description": "Defines the data lineage configuration for the Glue crawler, specifying whether lineage generation is enabled or disabled.",
+        "nullable": true,
+        "type": "list(object({crawler_lineage_settings: optional(string)}))"
+      }
+    ],
+    "mongodb_target": [
+      {
+        "description": "Defines the MongoDB connection target for the AWS Glue crawler, including connection details and database settings.",
+        "nullable": true,
+        "type": "list(object({connection_name: string,path: string,scan_all: optional(bool)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the Glue crawler, must be between 1 and 255 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "recrawl_policy": [
+      {
+        "description": "Defines the recrawl policy for the crawler, specifying how data sources are revisited to detect changes. Options include \"CRAWL_EVERYTHING,\" \"CRAWL_NEW_FOLDERS_ONLY,\" or \"CRAWL_EVENT_MODE.\"",
+        "nullable": true,
+        "type": "list(object({recrawl_behavior: optional(string)}))"
+      }
+    ],
+    "role": [
+      {
+        "description": "IAM role ARN that grants permissions for the Glue crawler to access data stores and resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "s3_target": [
+      {
+        "description": "Specifies the S3 target configuration for the Glue crawler, including the S3 path and optional settings like exclusions. Must be a valid S3 URI.",
+        "nullable": true,
+        "type": "list(object({connection_name: optional(string),dlq_event_queue_arn: optional(string),event_queue_arn: optional(string),exclusions: optional(list(string)),path: string,sample_size: optional(number)}))"
+      }
+    ],
+    "schedule": [
+      {
+        "description": "Defines the cron expression or predefined schedule for the crawler's run times. Must be in a valid cron or schedule expression format.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "schema_change_policy": [
+      {
+        "description": "Defines the behavior for handling schema changes in the data source, including update and deletion policies.",
+        "nullable": true,
+        "type": "list(object({delete_behavior: optional(string),update_behavior: optional(string)}))"
+      }
+    ],
+    "security_configuration": [
+      {
+        "description": "Specifies the name of the security configuration to use for the crawler, ensuring data encryption and compliance requirements are met.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "table_prefix": [
+      {
+        "description": "Defines a prefix for table names created by the Glue crawler; must be unique within the target database.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs used to organize and categorize the Glue crawler, typically for cost tracking or other administrative purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

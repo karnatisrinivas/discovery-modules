@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafv2 Rule Group"
+  node:
+    label:
+      static: "[Data] Wafv2 Rule Group"
+      template: "[Data] Wafv2 Rule Group"
+    display_type: default
+
+discovery:
+  type: data_aws_wafv2_rule_group
+  dnd_supported: false

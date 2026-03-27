@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Kinesis Stream Consumer
+  node:
+    label:
+      static: Kinesis Stream Consumer
+      template: Kinesis Stream Consumer
+    display_type: default
+
+discovery:
+  type: aws_kinesis_stream_consumer
+  dnd_supported: false
+  data_source: data_aws_kinesis_stream_consumer
+  references:
+    stream_arn:
+      from: aws_kinesis_stream
+      output: arn

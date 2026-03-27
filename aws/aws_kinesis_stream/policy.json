@@ -1,0 +1,24 @@
+{
+    "name": "aws_kinesis_stream",
+    "policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "Default",
+                "Effect": "Allow",
+                "Action": [
+                    "kinesis:CreateStream",
+                    "kinesis:DeleteStream",
+                    "kinesis:DescribeStream",
+                    "kinesis:ListStreams",
+                    "kinesis:MergeShards",
+                    "kinesis:SplitShard",
+                    "kinesis:UpdateShardCount"
+                ],
+                "Resource": [
+                    "${module.module_name.arn}"
+                ]
+            }
+        ]
+    }
+}

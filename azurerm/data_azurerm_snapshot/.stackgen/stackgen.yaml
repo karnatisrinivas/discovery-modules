@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Snapshot"
+  node:
+    label:
+      static: "[Data] Snapshot"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_snapshot
+  dnd_supported: false

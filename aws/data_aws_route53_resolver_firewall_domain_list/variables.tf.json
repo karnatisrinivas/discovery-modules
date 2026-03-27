@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "firewall_domain_list_id": [
+      {
+        "description": "The unique identifier for the Route 53 Resolver firewall domain list.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

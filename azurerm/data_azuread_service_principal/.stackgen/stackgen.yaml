@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Service Principal"
+  node:
+    label:
+      static: "[Data] Service Principal"
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: data_azuread_service_principal
+  dnd_supported: false

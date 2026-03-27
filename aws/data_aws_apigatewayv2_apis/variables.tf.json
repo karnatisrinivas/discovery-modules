@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the API Gateway API.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "protocol_type": [
+      {
+        "description": "The protocol type of the API (e.g., HTTP, WEBSOCKET).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the API Gateway API.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

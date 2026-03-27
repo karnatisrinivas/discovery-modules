@@ -1,0 +1,68 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.arn}"
+        },
+        "cache_usage_limits": {
+            "description": "The limits on cache usage, including data storage and eCPU usage per second.",
+            "value": "${data.aws_elasticache_serverless_cache.this.cache_usage_limits}"
+        },
+        "create_time": {
+            "description": "The time when the ElastiCache serverless cache was created.",
+            "value": "${data.aws_elasticache_serverless_cache.this.create_time}"
+        },
+        "daily_snapshot_time": {
+            "description": "The time of day when daily snapshots are taken.",
+            "value": "${data.aws_elasticache_serverless_cache.this.daily_snapshot_time}"
+        },
+        "description": {
+            "description": "A description of the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.description}"
+        },
+        "endpoint": {
+            "description": "The network endpoint information including address and port for the cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.endpoint}"
+        },
+        "engine": {
+            "description": "The name of the cache engine used by the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.engine}"
+        },
+        "full_engine_version": {
+            "description": "The full version of the cache engine.",
+            "value": "${data.aws_elasticache_serverless_cache.this.full_engine_version}"
+        },
+        "kms_key_id": {
+            "description": "The identifier of the AWS KMS key used to encrypt the data.",
+            "value": "${data.aws_elasticache_serverless_cache.this.kms_key_id}"
+        },
+        "major_engine_version": {
+            "description": "The major version of the cache engine.",
+            "value": "${data.aws_elasticache_serverless_cache.this.major_engine_version}"
+        },
+        "reader_endpoint": {
+            "description": "The network endpoint information for read-only access.",
+            "value": "${data.aws_elasticache_serverless_cache.this.reader_endpoint}"
+        },
+        "security_group_ids": {
+            "description": "The security group IDs associated with the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.security_group_ids}"
+        },
+        "snapshot_retention_limit": {
+            "description": "The number of days to retain snapshots.",
+            "value": "${data.aws_elasticache_serverless_cache.this.snapshot_retention_limit}"
+        },
+        "status": {
+            "description": "The current status of the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.status}"
+        },
+        "subnet_ids": {
+            "description": "The subnet IDs associated with the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.subnet_ids}"
+        },
+        "user_group_id": {
+            "description": "The user group ID associated with the ElastiCache serverless cache.",
+            "value": "${data.aws_elasticache_serverless_cache.this.user_group_id}"
+        }
+    }
+}

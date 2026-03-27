@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Global Forwarding Rule
+  node:
+    label:
+      static: Compute Global Forwarding Rule
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_global_forwarding_rule
+  dnd_supported: false

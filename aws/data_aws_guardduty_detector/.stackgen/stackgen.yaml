@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Guardduty Detector"
+  node:
+    label:
+      static: "[Data] Guardduty Detector"
+      template: "[Data] Guardduty Detector"
+    display_type: default
+
+discovery:
+  type: data_aws_guardduty_detector
+  dnd_supported: false

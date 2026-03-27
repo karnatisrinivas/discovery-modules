@@ -1,0 +1,195 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created."
+      }
+    ],
+    "network_profile": [
+      {
+        "type": "list(object({name: string, primary: bool, accelerated_networking: optional(bool), ip_forwarding: optional(bool), network_security_group_id: optional(string), dns_settings: list(object({dns_servers: list(string)})), ip_configuration: list(object({name: string, subnet_id: string, application_gateway_backend_address_pool_ids: list(string), load_balancer_backend_address_pool_ids: list(string), load_balancer_inbound_nat_rules_ids: list(string), primary: bool, application_security_group_ids: list(string), public_ip_address_configuration: list(object({name: string, idle_timeout: number, domain_name_label: string}))}))}))",
+        "description": "A collection of network_profile blocks."
+      }
+    ],
+    "os_profile": [
+      {
+        "type": "list(object({computer_name_prefix: string, admin_username: string, admin_password: optional(string), custom_data: optional(string)}))",
+        "description": "A collection of os_profile blocks."
+      }
+    ],
+    "os_profile_windows_config": [
+      {
+        "type": "list(object({provision_vm_agent: optional(bool), enable_automatic_updates: optional(bool), winrm: list(object({protocol: string, certificate_url: optional(string)})), additional_unattend_config: list(object({pass: string, component: string, setting_name: string, content: string}))}))",
+        "description": "A os_profile_windows_config block.",
+        "nullable": true
+      }
+    ],
+    "os_profile_linux_config": [
+      {
+        "type": "list(object({disable_password_authentication: optional(bool), ssh_keys: list(object({key_data: optional(string), path: string}))}))",
+        "description": "A os_profile_linux_config block.",
+        "nullable": true
+      }
+    ],
+    "proximity_placement_group_id": [
+      {
+        "type": "string",
+        "description": "The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created",
+        "nullable": true
+      }
+    ],
+    "sku": [
+      {
+        "type": "list(object({name: string, capacity: number, tier: optional(string)}))",
+        "description": "A sku block"
+      }
+    ],
+    "storage_profile_os_disk": [
+      {
+        "type": "list(object({create_option: string, name: optional(string), vhd_containers: list(string), managed_disk_type: optional(string), caching: optional(string), image: optional(string), os_type: optional(string)}))",
+        "description": "A storage_profile_os_disk block"
+      }
+    ],
+    "upgrade_policy_mode": [
+      {
+        "type": "string",
+        "description": "Specifies the mode of an upgrade to virtual machines in the scale set. When choosing Rolling, you will need to set a health probe."
+      }
+    ],
+    "identity": [
+      {
+        "type": "list(object({type: string, identity_ids: list(string)}))",
+        "description": "An identity block",
+        "nullable": true
+      }
+    ],
+    "automatic_os_upgrade": [
+      {
+        "type": "bool",
+        "description": "Automatic OS patches can be applied by Azure to your scaleset.",
+        "nullable": true,
+        "default": false
+      }
+    ],
+    "boot_diagnostics": [
+      {
+        "type": "list(object({enabled: optional(bool), storage_uri: string}))",
+        "description": "A boot_diagnostics block",
+        "nullable": true
+      }
+    ],
+    "extension": [
+      {
+        "type": "list(object({name: string, publisher: string, type: string, type_handler_version: string, auto_upgrade_minor_version: optional(bool), provision_after_extensions: list(string), settings: optional(string), protected_settings: string}))",
+        "description": "Can be specified multiple times to add extension profiles to the scale set.",
+        "nullable": true
+      }
+    ],
+    "eviction_policy": [
+      {
+        "type": "string",
+        "description": "Specifies the eviction policy for Virtual Machines in this Scale Set. Changing this forces a new resource to be created.",
+        "nullable": true
+      }
+    ],
+    "health_probe_id": [
+      {
+        "type": "string",
+        "description": "Specifies the identifier for the load balancer health probe. Required when using Rolling as your `Upgrade Policy Mode`.",
+        "nullable": true
+      }
+    ],
+    "license_type": [
+      {
+        "type": "string",
+        "description": "Specifies the Windows OS license type.",
+        "nullable": true
+      }
+    ],
+    "os_profile_secrets": [
+      {
+        "type": "list(object({source_vault_id: string, vault_certificates: list(object({certificate_url: string, certificate_store: optional(string)}))}))",
+        "description": "Specifies the Windows OS license type.",
+        "nullable": true
+      }
+    ],
+    "overprovision": [
+      {
+        "type": "bool",
+        "description": "Specifies whether the virtual machine scale set should be overprovisioned.",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "plan": [
+      {
+        "type": "list(object({name: string, publisher: string, product: string}))",
+        "description": "A plan block",
+        "nullable": true
+      }
+    ],
+    "priority": [
+      {
+        "type": "string",
+        "description": "Specifies the priority for the Virtual Machines in the Scale Set. Changing this forces a new resource to be created.",
+        "nullable": true
+      }
+    ],
+    "rolling_upgrade_policy": [
+      {
+        "type": "list(object({max_batch_instance_percent: optional(number), max_unhealthy_instance_percent: optional(number), max_unhealthy_upgraded_instance_percent: optional(number), pause_time_between_batches: optional(string)}))",
+        "description": "A rolling_upgrade_policy block. This is only applicable when the `Upgrade Policy Mode` is Rolling.",
+        "nullable": true
+      }
+    ],
+    "single_placement_group": [
+      {
+        "type": "bool",
+        "description": "Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Changing this forces a new resource to be created.",
+        "nullable": true,
+        "default": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true
+      }
+    ],
+    "zones": [
+      {
+        "type": "list(string)",
+        "description": "A collection of availability zones to spread the Virtual Machines over.",
+        "nullable": true
+      }
+    ],
+    "storage_profile_data_disk": [
+      {
+        "type": "list(object({lun: number, create_option: string, caching: optional(string), disk_size_gb: optional(number), managed_disk_type: optional(string)}))",
+        "description": "A storage_profile_data_disk block",
+        "nullable": true
+      }
+    ],
+    "storage_profile_image_reference": [
+      {
+        "type": "list(object({id: optional(number), publisher: optional(string), offer: optional(string), sku: optional(string), version: optional(string)}))",
+        "description": "A storage_profile_image_reference block",
+        "nullable": true
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

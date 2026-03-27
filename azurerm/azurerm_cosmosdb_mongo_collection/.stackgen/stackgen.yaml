@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CosmosDB Mongo Collection
+  node:
+    label:
+      static: CosmosDB Mongo Collection
+      template: ${name}
+    display_type: default
+
+variables:
+  unique:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: "Are the index keys unique or not?"
+    type: bool
+
+discovery:
+  type: azurerm_cosmosdb_mongo_collection
+  dnd_supported: false
+  references:
+    database_name:
+      from: azurerm_cosmosdb_mongo_database
+      output: mongo_db_name

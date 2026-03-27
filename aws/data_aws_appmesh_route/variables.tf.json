@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "mesh_name": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "virtual_router_name": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

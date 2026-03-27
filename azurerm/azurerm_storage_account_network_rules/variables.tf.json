@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "bypass": [
+      {
+        "description": "List of services bypassing network rules",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "default_action": [
+      {
+        "description": "Default network action (allow or deny)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ip_rules": [
+      {
+        "description": "IP addresses for network access control",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "private_link_access": [
+      {
+        "description": "Private link endpoints configuration",
+        "nullable": true,
+        "type": "list(object({endpoint_resource_id: string,endpoint_tenant_id: optional(string)}))"
+      }
+    ],
+    "storage_account_id": [
+      {
+        "description": "ID of the associated storage account",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Operation time limits (create, delete, etc.)",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "virtual_network_subnet_ids": [
+      {
+        "description": "Subnets for virtual network integration",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

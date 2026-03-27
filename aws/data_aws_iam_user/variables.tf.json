@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user_name": [
+      {
+        "description": "The name of the IAM user to be created in AWS.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

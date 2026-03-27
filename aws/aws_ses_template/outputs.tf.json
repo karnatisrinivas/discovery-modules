@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing the SES template in IAM or APIs",
+            "value": "${aws_ses_template.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the SES template within the configuration",
+            "value": "${aws_ses_template.this.id}"
+        }
+    }
+}

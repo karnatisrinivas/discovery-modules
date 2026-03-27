@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name assigned to the AWS Signer signing profile, which uniquely identifies the profile.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "vpc_id": [
+      {
+        "description": "The ID of the VPC where the route tables will be created.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

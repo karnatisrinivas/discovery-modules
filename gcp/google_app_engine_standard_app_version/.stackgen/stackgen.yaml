@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Standard App Version
+  node:
+    label:
+      static: Standard App Version
+      template: Standard App Version
+    display_type: default
+
+discovery:
+  type: google_app_engine_standard_app_version
+  dnd_supported: false

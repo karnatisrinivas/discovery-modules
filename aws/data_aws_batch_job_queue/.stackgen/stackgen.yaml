@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Batch Job Queue"
+  node:
+    label:
+      static: "[Data] Batch Job Queue"
+      template: "[Data] Batch Job Queue"
+    display_type: default
+
+discovery:
+  type: data_aws_batch_job_queue
+  dnd_supported: false

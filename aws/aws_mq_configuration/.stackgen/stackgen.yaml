@@ -1,0 +1,30 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: MQ Configuration
+  node:
+    label:
+      static: MQ Configuration
+      template: MQ Configuration
+    display_type: default
+
+variables:
+  engine_type:
+    ui_control: select
+    description: Type of broker engine. Currently, Valid values are ActiveMQ and RabbitMQ.
+    type: string
+    options: 
+      - ActiveMQ
+      - RabbitMQ
+  authentication_strategy:
+    description: The authentication strategy used to secure the broker.
+    type: string
+    options: 
+      - simple
+      - ldap
+    ui_control: select
+
+discovery:
+  type: aws_mq_configuration
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Used for concurrency control to prevent overwriting updates",
+            "value": "${google_cloudfunctions2_function_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Identifier for managing IAM binding within the function",
+            "value": "${google_cloudfunctions2_function_iam_binding.this.id}"
+        }
+    }
+}

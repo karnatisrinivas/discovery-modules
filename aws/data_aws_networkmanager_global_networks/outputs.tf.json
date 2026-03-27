@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the single global network instance.",
+            "value": "${data.aws_networkmanager_global_networks.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all global network instances.",
+            "value": "${data.aws_networkmanager_global_networks.this.ids}"
+        }
+    }
+}

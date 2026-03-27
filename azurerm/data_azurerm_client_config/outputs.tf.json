@@ -1,0 +1,24 @@
+{
+    "output": {
+        "client_id": {
+            "description": "The ID of the Azure client making the request.",
+            "value": "${data.azurerm_client_config.this.client_id}"
+        },
+        "id": {
+            "description": "The ID of the Azure client configuration.",
+            "value": "${data.azurerm_client_config.this.id}"
+        },
+        "object_id": {
+            "description": "The object ID of the Azure client.",
+            "value": "${data.azurerm_client_config.this.object_id}"
+        },
+        "subscription_id": {
+            "description": "The ID of the Azure subscription.",
+            "value": "${data.azurerm_client_config.this.subscription_id}"
+        },
+        "tenant_id": {
+            "description": "The ID of the Azure tenant.",
+            "value": "${data.azurerm_client_config.this.tenant_id}"
+        }
+    }
+}

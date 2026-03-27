@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Backend Bucket
+  node:
+    label:
+      static: Compute Backend Bucket
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_backend_bucket
+  dnd_supported: false
+  references:
+    bucket_name:
+      from: google_storage_bucket_composite
+      output: name

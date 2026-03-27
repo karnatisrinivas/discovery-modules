@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the EKS cluster.",
+            "value": "${data.aws_eks_clusters.this.id}"
+        },
+        "names": {
+            "description": "A set of names for the EKS clusters.",
+            "value": "${data.aws_eks_clusters.this.names}"
+        }
+    }
+}

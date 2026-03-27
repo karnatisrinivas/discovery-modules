@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the selected AWS SSM maintenance window.",
+            "value": "${data.aws_ssm_maintenance_windows.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all AWS SSM maintenance windows that match the criteria.",
+            "value": "${data.aws_ssm_maintenance_windows.this.ids}"
+        }
+    }
+}

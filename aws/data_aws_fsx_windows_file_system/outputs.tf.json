@@ -1,0 +1,104 @@
+{
+    "output": {
+        "active_directory_id": {
+            "description": "The ID of the Active Directory to which the file system is joined.",
+            "value": "${data.aws_fsx_windows_file_system.this.active_directory_id}"
+        },
+        "aliases": {
+            "description": "A list of DNS aliases associated with the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.aliases}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.arn}"
+        },
+        "audit_log_configuration": {
+            "description": "Configuration for audit logging, including destination and log levels for file access.",
+            "value": "${data.aws_fsx_windows_file_system.this.audit_log_configuration}"
+        },
+        "automatic_backup_retention_days": {
+            "description": "The number of days automatic backups are retained.",
+            "value": "${data.aws_fsx_windows_file_system.this.automatic_backup_retention_days}"
+        },
+        "backup_id": {
+            "description": "The ID of the backup associated with the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.backup_id}"
+        },
+        "copy_tags_to_backups": {
+            "description": "Indicates whether tags on the file system should be copied to backups.",
+            "value": "${data.aws_fsx_windows_file_system.this.copy_tags_to_backups}"
+        },
+        "daily_automatic_backup_start_time": {
+            "description": "The daily time when automatic backups are scheduled to start.",
+            "value": "${data.aws_fsx_windows_file_system.this.daily_automatic_backup_start_time}"
+        },
+        "deployment_type": {
+            "description": "The deployment type of the file system, such as MULTI_AZ_1 or SINGLE_AZ_1.",
+            "value": "${data.aws_fsx_windows_file_system.this.deployment_type}"
+        },
+        "disk_iops_configuration": {
+            "description": "Configuration for disk IOPS, including the number of IOPS and mode.",
+            "value": "${data.aws_fsx_windows_file_system.this.disk_iops_configuration}"
+        },
+        "dns_name": {
+            "description": "The DNS name of the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.dns_name}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS Key Management Service (KMS) key used to encrypt the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.kms_key_id}"
+        },
+        "network_interface_ids": {
+            "description": "A list of IDs of the network interfaces created for the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.network_interface_ids}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the file system owner.",
+            "value": "${data.aws_fsx_windows_file_system.this.owner_id}"
+        },
+        "preferred_file_server_ip": {
+            "description": "The preferred IP address of the file server.",
+            "value": "${data.aws_fsx_windows_file_system.this.preferred_file_server_ip}"
+        },
+        "preferred_subnet_id": {
+            "description": "The ID of the preferred subnet for the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.preferred_subnet_id}"
+        },
+        "security_group_ids": {
+            "description": "A list of security group IDs associated with the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.security_group_ids}"
+        },
+        "skip_final_backup": {
+            "description": "Indicates whether to skip creating a final backup when deleting the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.skip_final_backup}"
+        },
+        "storage_capacity": {
+            "description": "The storage capacity of the file system in gigabytes (GB).",
+            "value": "${data.aws_fsx_windows_file_system.this.storage_capacity}"
+        },
+        "storage_type": {
+            "description": "The type of storage used, such as SSD or HDD.",
+            "value": "${data.aws_fsx_windows_file_system.this.storage_type}"
+        },
+        "subnet_ids": {
+            "description": "A list of subnet IDs where the file system is deployed.",
+            "value": "${data.aws_fsx_windows_file_system.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the file system.",
+            "value": "${data.aws_fsx_windows_file_system.this.tags}"
+        },
+        "throughput_capacity": {
+            "description": "The throughput capacity of the file system in megabytes per second (MBps).",
+            "value": "${data.aws_fsx_windows_file_system.this.throughput_capacity}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC that the file system is associated with.",
+            "value": "${data.aws_fsx_windows_file_system.this.vpc_id}"
+        },
+        "weekly_maintenance_start_time": {
+            "description": "The preferred start time for weekly maintenance, in the format d:HH:MM.",
+            "value": "${data.aws_fsx_windows_file_system.this.weekly_maintenance_start_time}"
+        }
+    }
+}

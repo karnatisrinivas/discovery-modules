@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.arn}"
+        },
+        "delete_protection": {
+            "description": "Indicates if the firewall is protected from being deleted.",
+            "value": "${data.aws_networkfirewall_firewall.this.delete_protection}"
+        },
+        "description": {
+            "description": "A description of the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.description}"
+        },
+        "encryption_configuration": {
+            "description": "The encryption configuration settings for the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.encryption_configuration}"
+        },
+        "firewall_policy_arn": {
+            "description": "The ARN of the firewall policy associated with the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.firewall_policy_arn}"
+        },
+        "firewall_policy_change_protection": {
+            "description": "Indicates if the firewall policy is protected from changes.",
+            "value": "${data.aws_networkfirewall_firewall.this.firewall_policy_change_protection}"
+        },
+        "firewall_status": {
+            "description": "The current status and capacity usage summary of the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.firewall_status}"
+        },
+        "id": {
+            "description": "The unique identifier of the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.id}"
+        },
+        "name": {
+            "description": "The name of the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.name}"
+        },
+        "subnet_change_protection": {
+            "description": "Indicates if the firewall's subnet associations are protected from changes.",
+            "value": "${data.aws_networkfirewall_firewall.this.subnet_change_protection}"
+        },
+        "subnet_mapping": {
+            "description": "The mapping of subnets associated with the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.subnet_mapping}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the firewall.",
+            "value": "${data.aws_networkfirewall_firewall.this.tags}"
+        },
+        "update_token": {
+            "description": "A token used for optimistic locking of firewall updates.",
+            "value": "${data.aws_networkfirewall_firewall.this.update_token}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC where the firewall is located.",
+            "value": "${data.aws_networkfirewall_firewall.this.vpc_id}"
+        }
+    }
+}

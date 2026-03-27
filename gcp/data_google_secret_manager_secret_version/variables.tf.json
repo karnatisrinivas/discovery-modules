@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "google_secret_manager_secret_version_version": [
+      {
+        "description": "Specifies the version of the secret to use, required for accessing a specific iteration within Google Secret Manager.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "is_secret_data_base64": [
+      {
+        "description": "Specifies whether the secret data is provided in base64-encoded format; must be true for base64 input and false for raw string data.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "secret": [
+      {
+        "description": "Specifies the data stored in the secret version. Must be a valid UTF-8 encoded string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

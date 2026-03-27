@@ -1,0 +1,28 @@
+{
+    "output": {
+        "account": {
+            "description": "The AWS account ID that owns the resource.",
+            "value": "${data.aws_arn.this.account}"
+        },
+        "id": {
+            "description": "The full ARN (Amazon Resource Name) for the resource.",
+            "value": "${data.aws_arn.this.id}"
+        },
+        "partition": {
+            "description": "The partition the resource is in, such as 'aws' or 'aws-cn'.",
+            "value": "${data.aws_arn.this.partition}"
+        },
+        "region": {
+            "description": "The AWS region where the resource is located.",
+            "value": "${data.aws_arn.this.region}"
+        },
+        "resource": {
+            "description": "The specific resource identifier within the ARN.",
+            "value": "${data.aws_arn.this.resource}"
+        },
+        "service": {
+            "description": "The AWS service namespace that the resource belongs to.",
+            "value": "${data.aws_arn.this.service}"
+        }
+    }
+}

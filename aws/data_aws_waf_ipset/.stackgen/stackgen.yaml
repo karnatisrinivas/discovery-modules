@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Waf Ipset"
+  node:
+    label:
+      static: "[Data] Waf Ipset"
+      template: "[Data] Waf Ipset"
+    display_type: default
+
+discovery:
+  type: data_aws_waf_ipset
+  dnd_supported: false

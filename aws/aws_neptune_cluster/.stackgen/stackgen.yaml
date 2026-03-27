@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Neptune Cluster
+  node:
+    label:
+      static: Neptune Cluster
+      template: ${cluster_identifier}
+    display_type: default
+
+discovery:
+  type: aws_neptune_cluster
+  dnd_supported: false

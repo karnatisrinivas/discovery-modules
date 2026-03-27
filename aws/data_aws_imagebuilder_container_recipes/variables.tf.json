@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "owner": [
+      {
+        "description": "The account ID of the owner of the container recipe.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

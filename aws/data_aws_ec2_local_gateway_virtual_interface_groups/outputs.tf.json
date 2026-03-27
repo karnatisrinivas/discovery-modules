@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the specific local gateway virtual interface group.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface_groups.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all the local gateway virtual interface groups.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface_groups.this.ids}"
+        },
+        "local_gateway_virtual_interface_ids": {
+            "description": "A list of identifiers for the local gateway virtual interfaces associated with the groups.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface_groups.this.local_gateway_virtual_interface_ids}"
+        }
+    }
+}

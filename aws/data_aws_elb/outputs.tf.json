@@ -1,0 +1,84 @@
+{
+    "output": {
+        "access_logs": {
+            "description": "Details about the access logs for the load balancer, including bucket name, prefix, and whether logging is enabled.",
+            "value": "${data.aws_elb.this.access_logs}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the load balancer.",
+            "value": "${data.aws_elb.this.arn}"
+        },
+        "availability_zones": {
+            "description": "The list of availability zones where the load balancer is available.",
+            "value": "${data.aws_elb.this.availability_zones}"
+        },
+        "connection_draining": {
+            "description": "Indicates whether connection draining is enabled for the load balancer.",
+            "value": "${data.aws_elb.this.connection_draining}"
+        },
+        "connection_draining_timeout": {
+            "description": "The time in seconds to allow existing connections to close before deregistering an instance.",
+            "value": "${data.aws_elb.this.connection_draining_timeout}"
+        },
+        "cross_zone_load_balancing": {
+            "description": "Indicates whether cross-zone load balancing is enabled.",
+            "value": "${data.aws_elb.this.cross_zone_load_balancing}"
+        },
+        "desync_mitigation_mode": {
+            "description": "The desynchronization mitigation mode for the load balancer.",
+            "value": "${data.aws_elb.this.desync_mitigation_mode}"
+        },
+        "dns_name": {
+            "description": "The DNS name of the load balancer.",
+            "value": "${data.aws_elb.this.dns_name}"
+        },
+        "health_check": {
+            "description": "Configuration for health checks performed on the load balancer's instances.",
+            "value": "${data.aws_elb.this.health_check}"
+        },
+        "id": {
+            "description": "The ID of the load balancer.",
+            "value": "${data.aws_elb.this.id}"
+        },
+        "idle_timeout": {
+            "description": "The amount of time, in seconds, that the connection is allowed to be idle.",
+            "value": "${data.aws_elb.this.idle_timeout}"
+        },
+        "instances": {
+            "description": "The list of instance IDs that are currently registered with the load balancer.",
+            "value": "${data.aws_elb.this.instances}"
+        },
+        "internal": {
+            "description": "Indicates whether the load balancer is internal or internet-facing.",
+            "value": "${data.aws_elb.this.internal}"
+        },
+        "listener": {
+            "description": "Details about the listeners configured for the load balancer.",
+            "value": "${data.aws_elb.this.listener}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the load balancer.",
+            "value": "${data.aws_elb.this.security_groups}"
+        },
+        "source_security_group": {
+            "description": "The security group that you can use as part of your inbound rules for your load balancer's back-end instances.",
+            "value": "${data.aws_elb.this.source_security_group}"
+        },
+        "source_security_group_id": {
+            "description": "The ID of the source security group associated with the load balancer.",
+            "value": "${data.aws_elb.this.source_security_group_id}"
+        },
+        "subnets": {
+            "description": "The subnets that are attached to the load balancer.",
+            "value": "${data.aws_elb.this.subnets}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the load balancer.",
+            "value": "${data.aws_elb.this.tags}"
+        },
+        "zone_id": {
+            "description": "The canonical hosted zone ID of the load balancer.",
+            "value": "${data.aws_elb.this.zone_id}"
+        }
+    }
+}

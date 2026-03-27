@@ -1,0 +1,32 @@
+{
+    "variable": {
+        "group_name": [
+            {
+                "type": "string",
+                "description": "The name of the group.",
+                "nullable": false
+            }
+        ],
+        "filter_expression": [
+            {
+                "type": "string",
+                "description": "The filter expression defining criteria by which to group traces.",
+                "nullable": false
+            }
+        ],
+        "insights_configuration": [
+            {
+                "type": "list(object({ insights_enabled: bool, notifications_enabled: bool}))",
+                "description": "The insights configuration setting.",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "description": "A map of tags to assign to the group.",
+                "nullable": true
+            }
+        ]
+    }
+}

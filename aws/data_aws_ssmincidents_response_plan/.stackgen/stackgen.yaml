@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssmincidents Response Plan"
+  node:
+    label:
+      static: "[Data] Ssmincidents Response Plan"
+      template: "[Data] Ssmincidents Response Plan"
+    display_type: default
+
+discovery:
+  type: data_aws_ssmincidents_response_plan
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "ciphertext_blob": {
+            "description": "The encrypted data (ciphertext) that is the result of encrypting the specified plaintext using the specified KMS key.",
+            "value": "${data.aws_kms_ciphertext.this.ciphertext_blob}"
+        },
+        "id": {
+            "description": "The unique identifier for the KMS ciphertext data source, used to reference the encrypted data.",
+            "value": "${data.aws_kms_ciphertext.this.id}"
+        }
+    }
+}

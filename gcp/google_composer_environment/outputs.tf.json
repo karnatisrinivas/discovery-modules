@@ -1,0 +1,16 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Final set of labels applied to the Composer environment, useful for categorization and filtering",
+            "value": "${google_composer_environment.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the Composer environment, useful for referencing in dependencies",
+            "value": "${google_composer_environment.this.id}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for the Composer environment, aiding in resource organization",
+            "value": "${google_composer_environment.this.terraform_labels}"
+        }
+    }
+}

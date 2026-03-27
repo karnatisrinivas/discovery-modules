@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.id}"
+        },
+        "name": {
+            "description": "The name of the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.name}"
+        },
+        "organization_resource_id": {
+            "description": "The resource identifier for the organization associated with the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.organization_resource_id}"
+        },
+        "permissions": {
+            "description": "A set of permissions assigned to the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.permissions}"
+        },
+        "security_profile_id": {
+            "description": "The security profile ID used within AWS Connect.",
+            "value": "${data.aws_connect_security_profile.this.security_profile_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AWS Connect security profile.",
+            "value": "${data.aws_connect_security_profile.this.tags}"
+        }
+    }
+}

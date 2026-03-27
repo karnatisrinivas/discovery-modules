@@ -1,0 +1,84 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) identifying your DynamoDB table.",
+            "value": "${data.aws_dynamodb_table.this.arn}"
+        },
+        "attribute": {
+            "description": "Attributes used in the DynamoDB table including name and type.",
+            "value": "${data.aws_dynamodb_table.this.attribute}"
+        },
+        "billing_mode": {
+            "description": "The billing mode for the DynamoDB table, such as 'PROVISIONED' or 'PAY_PER_REQUEST'.",
+            "value": "${data.aws_dynamodb_table.this.billing_mode}"
+        },
+        "deletion_protection_enabled": {
+            "description": "Whether deletion protection is enabled for the DynamoDB table.",
+            "value": "${data.aws_dynamodb_table.this.deletion_protection_enabled}"
+        },
+        "global_secondary_index": {
+            "description": "Global secondary indexes for the table, including key attributes and capacities.",
+            "value": "${data.aws_dynamodb_table.this.global_secondary_index}"
+        },
+        "hash_key": {
+            "description": "The primary key attribute used to uniquely identify items in the table.",
+            "value": "${data.aws_dynamodb_table.this.hash_key}"
+        },
+        "id": {
+            "description": "The unique ID of the DynamoDB table.",
+            "value": "${data.aws_dynamodb_table.this.id}"
+        },
+        "local_secondary_index": {
+            "description": "Local secondary indexes for the table, including key attributes.",
+            "value": "${data.aws_dynamodb_table.this.local_secondary_index}"
+        },
+        "point_in_time_recovery": {
+            "description": "Point-in-time recovery settings for the table, indicating if it's enabled.",
+            "value": "${data.aws_dynamodb_table.this.point_in_time_recovery}"
+        },
+        "range_key": {
+            "description": "The range key attribute used to define the sort order within a partition.",
+            "value": "${data.aws_dynamodb_table.this.range_key}"
+        },
+        "read_capacity": {
+            "description": "The read capacity units configured for the table.",
+            "value": "${data.aws_dynamodb_table.this.read_capacity}"
+        },
+        "replica": {
+            "description": "Replica configurations for the table, including region and KMS key.",
+            "value": "${data.aws_dynamodb_table.this.replica}"
+        },
+        "stream_arn": {
+            "description": "The ARN of the stream associated with the DynamoDB table.",
+            "value": "${data.aws_dynamodb_table.this.stream_arn}"
+        },
+        "stream_enabled": {
+            "description": "Indicates if DynamoDB Streams are enabled for the table.",
+            "value": "${data.aws_dynamodb_table.this.stream_enabled}"
+        },
+        "stream_label": {
+            "description": "A timestamp, in ISO 8601 format, associated with the stream.",
+            "value": "${data.aws_dynamodb_table.this.stream_label}"
+        },
+        "stream_view_type": {
+            "description": "The type of data view provided by the stream.",
+            "value": "${data.aws_dynamodb_table.this.stream_view_type}"
+        },
+        "table_class": {
+            "description": "The class of the table, such as 'STANDARD' or 'STANDARD_INFREQUENT_ACCESS'.",
+            "value": "${data.aws_dynamodb_table.this.table_class}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the DynamoDB table.",
+            "value": "${data.aws_dynamodb_table.this.tags}"
+        },
+        "ttl": {
+            "description": "Time to live settings for the table, including the attribute name and enabled status.",
+            "value": "${data.aws_dynamodb_table.this.ttl}"
+        },
+        "write_capacity": {
+            "description": "The write capacity units configured for the table.",
+            "value": "${data.aws_dynamodb_table.this.write_capacity}"
+        }
+    }
+}

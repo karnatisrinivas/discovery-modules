@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Elastic Cloud Elasticsearch
+  node:
+    label:
+      static: Elastic Cloud Elasticsearch
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_elastic_cloud_elasticsearch
+  dnd_supported: false

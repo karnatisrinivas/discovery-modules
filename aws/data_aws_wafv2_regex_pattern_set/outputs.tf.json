@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_wafv2_regex_pattern_set.this.arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_wafv2_regex_pattern_set.this.description}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_wafv2_regex_pattern_set.this.id}"
+        },
+        "regular_expression": {
+            "description": "",
+            "value": "${data.aws_wafv2_regex_pattern_set.this.regular_expression}"
+        }
+    }
+}

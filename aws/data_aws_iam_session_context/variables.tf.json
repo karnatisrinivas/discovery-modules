@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) that uniquely identifies the AWS IAM session context.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

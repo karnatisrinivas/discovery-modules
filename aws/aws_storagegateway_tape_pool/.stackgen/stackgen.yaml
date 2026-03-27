@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storagegateway Tape Pool
+  node:
+    label:
+      static: Storagegateway Tape Pool
+      template: ${pool_name}
+    display_type: default
+
+discovery:
+  type: aws_storagegateway_tape_pool
+  dnd_supported: false

@@ -1,0 +1,165 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: EKS Cluster
+  node:
+    label:
+      static: EKS Cluster
+      template: ${name}
+    display_type: default
+
+variables:
+  outpost_config:
+    description: "Configuration block representing the configuration of your local Amazon EKS cluster on an AWS Outpost. This block isn't available for creating Amazon EKS clusters on the AWS cloud."
+    attributes: 
+      control_plane_instance_type: 
+        label: Control Place Instance Type
+        description: "The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on Outposts. The instance type that you specify is used for all Kubernetes control plane instances. The instance type can't be changed after cluster creation. Choose an instance type based on the number of nodes that your cluster will have. If your cluster will have:
+-> 1–20 nodes, then we recommend specifying a large instance type.
+->21–100 nodes, then we recommend specifying an xlarge instance type.
+->101–250 nodes, then we recommend specifying a 2xlarge instance type.
+The control plane is not automatically scaled by Amazon EKS."
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        options: 
+          - m5.large
+          - m5.xlarge
+          - m5.2xlarge
+          - m5d.large
+          - m5d.xlarge
+          - m5d.2xlarge
+          - c5.large
+          - c5.xlarge
+          - c5.2xlarge
+          - c5d.large
+          - c5d.xlarge
+          - c5d.2xlarge
+          - r5.large
+          - r5.xlarge
+          - r5.2xlarge
+          - r5d.large
+          - r5d.xlarge
+          - r5d.2xlarge
+          - g4dn.large
+          - g4dn.xlarge
+          - g4dn.2xlarge
+          - i3en.large
+          - i3en.xlarge
+          - i3en.2xlarge
+        ui_control: select
+      group_name: 
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        ui_control: text
+        label: Group Name
+        description: "The name of the placement group for the Kubernetes control plane instances. This setting can't be changed after cluster creation."
+      outpost_arn: 
+        label: Outpost ARN
+        description: The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+  endpoint_public_access:
+    options: 
+      - true
+      - false
+    ui_control: select
+  endpoint_private_access:
+    options: 
+      - true
+      - false
+    ui_control: select
+  access_config:
+    description: Configuration block for the access config associated with your cluster.
+    attributes: 
+      authentication_mode: 
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - CONFIG_MAP
+          - API
+          - API_AND_CONFIG_MAP
+        ui_control: select
+        label: Authentication Mode
+        description: The authentication mode for the cluster.
+      bootstrap_cluster_creator_admin_permissions: 
+        label: Bootstrap Cluster Creator Admin Permissions
+        description: Whether or not to bootstrap the access config values to the cluster.
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  kubernetes_network_config:
+    description: Configuration block with kubernetes network configuration for the cluster. If removed, Terraform will only perform drift detection if a configuration value is provided.
+    attributes: 
+      service_ipv4_cidr: 
+        validation: 
+          required: false
+          dataType: list(string)
+        type: list(string)
+        ui_control: text_list
+        label: Service IPv4 CIDR
+        description: "The CIDR block to assign Kubernetes pod and service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC. You can only specify a custom CIDR block when you create a cluster, changing this value will force a new cluster to be created. The block must meet the following requirements:
+ 1- Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
+ 2- Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+ 3- Between /24 and /12."
+      ip_family: 
+        label: IP Family
+        description: The IP family used to assign Kubernetes pod and service addresses. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - ipv4
+          - ipv6
+        ui_control: select
+
+variable_groups:
+- label: Required
+  variables:
+    - name
+    - role_arn
+- label: Optional
+  variables:
+    - compute_config
+    - storage_config
+    - tags
+    - eks_version
+    - vpc_config
+    - enabled_cluster_log_types
+    - timeouts
+    - bootstrap_self_managed_addons
+    - remote_network_config
+    - upgrade_policy
+    - zonal_shift_config
+- label: Access Config
+  variables:
+    - access_config
+- label: Encryption Config
+  variables:
+    - encryption_config
+- label: Outpost Config
+  variables:
+    - outpost_config
+- label: Kubernetes Network Config
+  variables:
+    - kubernetes_network_config
+
+discovery:
+  type: aws_eks_cluster
+  dnd_supported: false
+  data_source: data_aws_eks_cluster

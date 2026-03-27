@@ -1,0 +1,28 @@
+{
+    "output": {
+        "comment": {
+            "description": "A brief description or note about the cache policy.",
+            "value": "${data.aws_cloudfront_cache_policy.this.comment}"
+        },
+        "default_ttl": {
+            "description": "The default time-to-live (TTL) in seconds for objects in the cache.",
+            "value": "${data.aws_cloudfront_cache_policy.this.default_ttl}"
+        },
+        "etag": {
+            "description": "The unique identifier for the cache policy, used for versioning.",
+            "value": "${data.aws_cloudfront_cache_policy.this.etag}"
+        },
+        "max_ttl": {
+            "description": "The maximum time-to-live (TTL) in seconds that objects can stay in the cache.",
+            "value": "${data.aws_cloudfront_cache_policy.this.max_ttl}"
+        },
+        "min_ttl": {
+            "description": "The minimum time-to-live (TTL) in seconds for objects in the cache.",
+            "value": "${data.aws_cloudfront_cache_policy.this.min_ttl}"
+        },
+        "parameters_in_cache_key_and_forwarded_to_origin": {
+            "description": "Configuration for how cookies, headers, and query strings are included in the cache key and forwarded to the origin.",
+            "value": "${data.aws_cloudfront_cache_policy.this.parameters_in_cache_key_and_forwarded_to_origin}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Event Hub Namespace.",
+            "value": "${azurerm_eventhub_namespace.this.id}"
+        },
+        "name": {
+            "description": "The name of the Event Hub Namespace.",
+            "value": "${azurerm_eventhub_namespace.this.name}"
+        }
+    }
+}

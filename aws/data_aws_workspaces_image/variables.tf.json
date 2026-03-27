@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "image_id": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

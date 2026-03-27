@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Provides additional details about the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "encryption_configuration": [
+      {
+        "description": "Configures key management for data encryption",
+        "nullable": true,
+        "type": "list(object({key_id: optional(string),type: string}))"
+      }
+    ],
+    "firewall_policy": [
+      {
+        "description": "Defines rules and actions for network traffic filtering",
+        "nullable": true,
+        "type": "list(object({stateful_default_actions: optional(list(string)),stateless_default_actions: list(string),stateless_fragment_default_actions: list(string),tls_inspection_configuration_arn: optional(string),policy_variables: list(object({rule_variables: list(object({key: string,ip_set: list(object({definition: list(string)}))}))})),stateful_engine_options: list(object({rule_order: optional(string),stream_exception_policy: optional(string),flow_timeouts: list(object({tcp_idle_timeout_seconds: optional(number)}))})),stateful_rule_group_reference: list(object({priority: optional(number),resource_arn: string,override: list(object({action: optional(string)}))})),stateless_custom_action: list(object({action_name: string,action_definition: list(object({publish_metric_action: list(object({dimension: list(object({value: string}))}))}))})),stateless_rule_group_reference: list(object({priority: number,resource_arn: string}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the resource",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Associates key-value pairs for resource categorization",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

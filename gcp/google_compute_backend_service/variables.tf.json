@@ -1,0 +1,221 @@
+{
+  "variable": {
+    "affinity_cookie_ttl_sec": [
+      {
+        "description": "Defines the time-to-live for session affinity cookies in seconds. If set, the value must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "backend": [
+      {
+        "description": "Configures the backend services for load balancing, including settings such as balancing mode, capacity scaler, and connection limits. The 'group' field is required and must specify a valid backend group.",
+        "nullable": true,
+        "type": "list(object({balancing_mode: optional(string),capacity_scaler: optional(number),description: optional(string),group: string,max_connections: optional(number),max_connections_per_endpoint: optional(number),max_connections_per_instance: optional(number),max_rate: optional(number),max_rate_per_endpoint: optional(number),max_rate_per_instance: optional(number),max_utilization: optional(number),custom_metrics: list(object({dry_run: bool,max_utilization: optional(number),name: string}))}))"
+      }
+    ],
+    "cdn_policy": [
+      {
+        "description": "Specifies the settings for Cloud CDN, including cache mode, TTL values, signed URL configurations, and cache key policies. Constraints and options depend on the object fields provided.",
+        "nullable": true,
+        "type": "list(object({cache_mode: optional(string),client_ttl: optional(number),default_ttl: optional(number),max_ttl: optional(number),negative_caching: optional(bool),serve_while_stale: optional(number),signed_url_cache_max_age_sec: optional(number),bypass_cache_on_request_headers: list(object({header_name: string})),cache_key_policy: list(object({include_host: optional(bool),include_http_headers: optional(list(string)),include_named_cookies: optional(list(string)),include_protocol: optional(bool),include_query_string: optional(bool),query_string_blacklist: optional(list(string)),query_string_whitelist: optional(list(string))})),negative_caching_policy: list(object({code: optional(number),ttl: optional(number)}))}))"
+      }
+    ],
+    "circuit_breakers": [
+      {
+        "description": "Defines circuit breaker policies to protect against overload by specifying limits for connections, pending requests, and retries. Values must be positive integers.",
+        "nullable": true,
+        "type": "list(object({max_connections: optional(number),max_pending_requests: optional(number),max_requests: optional(number),max_requests_per_connection: optional(number),max_retries: optional(number)}))"
+      }
+    ],
+    "compression_mode": [
+      {
+        "description": "Sets the compression mode for traffic, such as 'NONE', 'GZIP', or 'BROTLI'. Must be a valid compression type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "connection_draining_timeout_sec": [
+      {
+        "description": "Specifies the timeout duration in seconds for connection draining during backend instance removal. Must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "consistent_hash": [
+      {
+        "description": "Configures consistent hashing policies for session affinity, including options for HTTP headers, cookies, and ring size. Requires at least one valid configuration field.",
+        "nullable": true,
+        "type": "list(object({http_header_name: optional(string),minimum_ring_size: optional(number),http_cookie: list(object({name: optional(string),path: optional(string),ttl: list(object({nanos: optional(number),seconds: number}))}))}))"
+      }
+    ],
+    "custom_metrics": [
+      {
+        "description": "Defines custom metrics for backend services, including the metric name and whether the configuration is in a dry-run state.",
+        "nullable": true,
+        "type": "list(object({dry_run: bool,name: string}))"
+      }
+    ],
+    "custom_request_headers": [
+      {
+        "description": "Specifies additional HTTP headers to include in requests sent to backends. Each header must be a valid string.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "custom_response_headers": [
+      {
+        "description": "Specifies additional HTTP headers to include in responses sent to clients. Each header must be a valid string.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a user-defined description for the resource. The value is optional and can include any string.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "edge_security_policy": [
+      {
+        "description": "Specifies the security policy to apply at the edge for HTTP/HTTPS traffic. Must reference a valid security policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_cdn": [
+      {
+        "description": "Enables or disables Cloud CDN for the resource. Accepts a boolean value.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "health_checks": [
+      {
+        "description": "Lists health check resources associated with the backend service. Each entry must be a valid health check URL or name.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "iap": [
+      {
+        "description": "Configures Identity-Aware Proxy (IAP) settings, including OAuth2 credentials and whether IAP is enabled.",
+        "nullable": true,
+        "type": "list(object({enabled: bool,oauth2_client_id: optional(string),oauth2_client_secret: optional(string),oauth2_client_secret_sha256: optional(string)}))"
+      }
+    ],
+    "ip_address_selection_policy": [
+      {
+        "description": "Defines the policy for selecting IP addresses for backend instances. Must be a valid policy type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "load_balancing_scheme": [
+      {
+        "description": "Determines the load balancing scheme, such as 'EXTERNAL', 'INTERNAL', or 'INTERNAL_MANAGED'. Must be a valid scheme.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "locality_lb_policies": [
+      {
+        "description": "Specifies custom locality load balancing policies or predefined policies for distributing traffic based on location.",
+        "nullable": true,
+        "type": "list(object({custom_policy: list(object({data: optional(string),name: string})),policy: list(object({name: string}))}))"
+      }
+    ],
+    "locality_lb_policy": [
+      {
+        "description": "Sets the locality load balancing policy, such as 'ROUND_ROBIN' or 'LEAST_CONNECTIONS'. Must be a valid policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Configures logging settings, including whether logging is enabled and the sample rate for logs. Sample rate must be a decimal between 0 and 1.",
+        "nullable": true,
+        "type": "list(object({enable: optional(bool),sample_rate: optional(number)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the resource. This value is required and must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "outlier_detection": [
+      {
+        "description": "Configures outlier detection settings to identify and remove unhealthy backends. Includes thresholds for errors, retries, and success rates.",
+        "nullable": true,
+        "type": "list(object({consecutive_errors: optional(number),consecutive_gateway_failure: optional(number),enforcing_consecutive_errors: optional(number),enforcing_consecutive_gateway_failure: optional(number),enforcing_success_rate: optional(number),max_ejection_percent: optional(number),success_rate_minimum_hosts: optional(number),success_rate_request_volume: optional(number),success_rate_stdev_factor: optional(number),base_ejection_time: list(object({nanos: optional(number),seconds: number})),interval: list(object({nanos: optional(number),seconds: number}))}))"
+      }
+    ],
+    "port_name": [
+      {
+        "description": "Specifies the name of the port used for the backend service. Must match the port name defined in the backend instance group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "protocol": [
+      {
+        "description": "Defines the protocol used for communication, such as 'HTTP', 'HTTPS', or 'TCP'. Must be a valid protocol.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_policy": [
+      {
+        "description": "Specifies the security policy to apply to the backend service. Must reference an existing security policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "security_settings": [
+      {
+        "description": "Configures security settings such as TLS policies, subject alternative names, and AWS v4 authentication details.",
+        "nullable": true,
+        "type": "list(object({client_tls_policy: optional(string),subject_alt_names: optional(list(string)),aws_v4_authentication: list(object({access_key: optional(string),access_key_id: optional(string),access_key_version: optional(string),origin_region: optional(string)}))}))"
+      }
+    ],
+    "service_lb_policy": [
+      {
+        "description": "Defines the load balancing policy for the service. Must be a valid policy type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "session_affinity": [
+      {
+        "description": "Specifies the session affinity type for the backend service, such as 'NONE' or 'CLIENT_IP'. Must be a valid affinity type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "strong_session_affinity_cookie": [
+      {
+        "description": "Configures strong session affinity cookies, including the cookie name, path, and TTL in seconds and nanoseconds.",
+        "nullable": true,
+        "type": "list(object({name: optional(string),path: optional(string),ttl: list(object({nanos: optional(number),seconds: number}))}))"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "Specifies the timeout duration for requests in seconds. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeouts for resource operations such as creation, deletion, and updates. Values must be valid time duration strings.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+This resource is not meant to be used in topologies, it exists to be used as the resource in IAM type connections so the user can input the roles they want.

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Application Insights
+  node:
+    label:
+      static: Application Insights
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_application_insights
+  dnd_supported: false
+  references:
+    workspace_id:
+      from: data_azurerm_log_analytics_workspace
+      output: id

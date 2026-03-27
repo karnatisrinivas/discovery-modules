@@ -1,0 +1,20 @@
+{
+    "output": {
+        "child_policies": {
+            "description": "List of IDs for child policies linked to this firewall policy",
+            "value": "${azurerm_firewall_policy.this.child_policies}"
+        },
+        "firewalls": {
+            "description": "List of firewall IDs associated with this policy",
+            "value": "${azurerm_firewall_policy.this.firewalls}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${azurerm_firewall_policy.this.id}"
+        },
+        "rule_collection_groups": {
+            "description": "List of IDs for rule collection groups in this policy",
+            "value": "${azurerm_firewall_policy.this.rule_collection_groups}"
+        }
+    }
+}

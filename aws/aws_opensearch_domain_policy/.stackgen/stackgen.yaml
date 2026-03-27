@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: OpenSearch Domain Policy
+  node:
+    label:
+      static: OpenSearch Domain Policy
+      template: OpenSearch Domain Policy
+    display_type: default
+
+discovery:
+  type: aws_opensearch_domain_policy
+  dnd_supported: false
+  references:
+    domain_name:
+      from: aws_opensearch_domain
+      output: domain_name

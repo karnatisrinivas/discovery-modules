@@ -1,0 +1,20 @@
+{
+    "output": {
+        "assignable_scopes": {
+            "description": "List of scopes where the role can be assigned, useful for role management",
+            "value": "${data.azurerm_role_definition.this.assignable_scopes}"
+        },
+        "description": {
+            "description": "Textual explanation of the role's purpose, aiding in understanding role usage",
+            "value": "${data.azurerm_role_definition.this.description}"
+        },
+        "id": {
+            "description": "The computed value of id",
+            "value": "${data.azurerm_role_definition.this.id}"
+        },
+        "permissions": {
+            "description": "Defines actions allowed by the role, crucial for access control",
+            "value": "${data.azurerm_role_definition.this.permissions}"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "instance": [
+      {
+        "description": "Specifies the name or ID of the instance that will be associated with the resource. Must be a valid, non-empty string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_group": [
+      {
+        "description": "Defines the name or ID of the instance group to which the instance belongs. This is required and cannot be left empty.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Allows customization of timeouts for creating or deleting the resource. Specify values in string format such as '30m' for 30 minutes.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Determines the geographic zone in which the resource will be deployed. Can be null if the zone is specified elsewhere.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

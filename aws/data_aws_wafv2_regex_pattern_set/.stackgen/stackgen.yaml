@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafv2 Regex Pattern Set"
+  node:
+    label:
+      static: "[Data] Wafv2 Regex Pattern Set"
+      template: "[Data] Wafv2 Regex Pattern Set"
+    display_type: default
+
+discovery:
+  type: data_aws_wafv2_regex_pattern_set
+  dnd_supported: false

@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) assigned to the IAM group, which uniquely identifies it across AWS.",
+            "value": "${aws_iam_group.this.arn}"
+        },
+        "id": {
+            "description": "The unique name of the IAM group as specified in the AWS account.",
+            "value": "${aws_iam_group.this.id}"
+        },
+        "name": {
+            "description": "The name of the IAM group.",
+            "value": "${aws_iam_group.this.name}"
+        },
+        "unique_id": {
+            "description": "A unique identifier for the IAM group, which is consistent across all AWS accounts.",
+            "value": "${aws_iam_group.this.unique_id}"
+        }
+    }
+}

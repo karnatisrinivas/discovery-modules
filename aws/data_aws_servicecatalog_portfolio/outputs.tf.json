@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Service Catalog portfolio.",
+            "value": "${data.aws_servicecatalog_portfolio.this.arn}"
+        },
+        "created_time": {
+            "description": "The timestamp of when the Service Catalog portfolio was created.",
+            "value": "${data.aws_servicecatalog_portfolio.this.created_time}"
+        },
+        "description": {
+            "description": "A brief text description of the Service Catalog portfolio.",
+            "value": "${data.aws_servicecatalog_portfolio.this.description}"
+        },
+        "name": {
+            "description": "The name of the Service Catalog portfolio.",
+            "value": "${data.aws_servicecatalog_portfolio.this.name}"
+        },
+        "provider_name": {
+            "description": "The name of the entity providing the Service Catalog portfolio.",
+            "value": "${data.aws_servicecatalog_portfolio.this.provider_name}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs assigned to the Service Catalog portfolio.",
+            "value": "${data.aws_servicecatalog_portfolio.this.tags}"
+        }
+    }
+}

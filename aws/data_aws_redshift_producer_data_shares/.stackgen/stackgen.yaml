@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshift Producer Data Shares"
+  node:
+    label:
+      static: "[Data] Redshift Producer Data Shares"
+      template: "[Data] Redshift Producer Data Shares"
+    display_type: default
+
+discovery:
+  type: data_aws_redshift_producer_data_shares
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sesv2 Dedicated Ip Pool"
+  node:
+    label:
+      static: "[Data] Sesv2 Dedicated Ip Pool"
+      template: "[Data] Sesv2 Dedicated Ip Pool"
+    display_type: default
+
+discovery:
+  type: data_aws_sesv2_dedicated_ip_pool
+  dnd_supported: false

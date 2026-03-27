@@ -1,0 +1,8 @@
+{
+    "output": {
+        "arn": {
+            "description": "The ARN of the snapshot",
+            "value": "${aws_ebs_snapshot.this.arn}"
+        }
+    }
+}

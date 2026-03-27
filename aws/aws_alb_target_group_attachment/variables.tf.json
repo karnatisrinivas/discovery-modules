@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "availability_zone": [
+      {
+        "description": "Specifies the availability zone where the target is located; must match the availability zones of the ALB.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "port": [
+      {
+        "description": "Specifies the port on which the target receives traffic. Must match a port defined in the associated target group.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "target_group_arn": [
+      {
+        "description": "ARN of the target group to attach the target to; must be a valid and existing target group.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "target_id": [
+      {
+        "description": "ID of the target to be attached to the target group; must be an instance ID or IP address.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

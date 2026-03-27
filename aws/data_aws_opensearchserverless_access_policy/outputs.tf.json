@@ -1,0 +1,20 @@
+{
+    "output": {
+        "description": {
+            "description": "A brief explanation or summary of the access policy for AWS OpenSearch Serverless.",
+            "value": "${data.aws_opensearchserverless_access_policy.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the access policy in AWS OpenSearch Serverless.",
+            "value": "${data.aws_opensearchserverless_access_policy.this.id}"
+        },
+        "policy": {
+            "description": "The actual policy document detailing permissions and rules for accessing AWS OpenSearch Serverless.",
+            "value": "${data.aws_opensearchserverless_access_policy.this.policy}"
+        },
+        "policy_version": {
+            "description": "The version number of the access policy for AWS OpenSearch Serverless.",
+            "value": "${data.aws_opensearchserverless_access_policy.this.policy_version}"
+        }
+    }
+}

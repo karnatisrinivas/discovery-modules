@@ -1,0 +1,20 @@
+{
+    "output": {
+        "database": {
+            "description": "The name of the database in which the Athena named query is saved.",
+            "value": "${data.aws_athena_named_query.this.database}"
+        },
+        "description": {
+            "description": "A brief explanation or details about what the Athena named query does.",
+            "value": "${data.aws_athena_named_query.this.description}"
+        },
+        "id": {
+            "description": "A unique identifier for the Athena named query.",
+            "value": "${data.aws_athena_named_query.this.id}"
+        },
+        "querystring": {
+            "description": "The actual SQL query string that is executed in Athena.",
+            "value": "${data.aws_athena_named_query.this.querystring}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Instance Attachment
+  node:
+    label:
+      static: Apigee Instance Attachment
+      template: ${instance_id}
+    display_type: default
+
+discovery:
+  type: google_apigee_instance_attachment
+  dnd_supported: false
+  references:
+    environment:
+      from: google_apigee_environment
+      output: name
+    instance_id:
+      from: google_apigee_instance
+      output: id

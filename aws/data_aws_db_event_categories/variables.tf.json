@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "source_type": [
+      {
+        "description": "Specifies the type of AWS RDS source (e.g., db-instance, db-cluster) for which you want to list event categories.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

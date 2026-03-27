@@ -1,0 +1,31 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Key Vault
+  node:
+    label:
+      static: Key Vault
+      template: ${name}
+    display_type: default
+
+variables:
+  sku_name:
+    description: "The SKU name of the Key Vault, such as 'standard' or 'premium'."
+    type: string
+    options: 
+      - standard
+      - premium
+    ui_control: select
+  purge_protection_enabled:
+    description: Enables protection against accidental purges of the Key Vault.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: azurerm_key_vault
+  dnd_supported: false
+  data_source: data_azurerm_key_vault

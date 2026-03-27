@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Bucket IAM Binding
+  node:
+    label:
+      static: Storage Bucket IAM Binding
+      template: Storage Bucket IAM Binding
+    display_type: default
+
+discovery:
+  type: google_storage_bucket_iam_binding
+  dnd_supported: false
+  references:
+    bucket:
+      from: google_storage_bucket
+      output: name

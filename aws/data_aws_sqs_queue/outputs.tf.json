@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the SQS queue.",
+            "value": "${data.aws_sqs_queue.this.arn}"
+        },
+        "id": {
+            "description": "The ID of the SQS queue.",
+            "value": "${data.aws_sqs_queue.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the SQS queue.",
+            "value": "${data.aws_sqs_queue.this.tags}"
+        },
+        "url": {
+            "description": "The URL of the SQS queue.",
+            "value": "${data.aws_sqs_queue.this.url}"
+        }
+    }
+}

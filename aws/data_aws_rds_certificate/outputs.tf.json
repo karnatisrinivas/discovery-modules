@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the RDS certificate.",
+            "value": "${data.aws_rds_certificate.this.arn}"
+        },
+        "certificate_type": {
+            "description": "The type of the RDS certificate, indicating its purpose or use.",
+            "value": "${data.aws_rds_certificate.this.certificate_type}"
+        },
+        "customer_override": {
+            "description": "Indicates whether the customer has overridden the default certificate.",
+            "value": "${data.aws_rds_certificate.this.customer_override}"
+        },
+        "customer_override_valid_till": {
+            "description": "The date until which the customer override is valid.",
+            "value": "${data.aws_rds_certificate.this.customer_override_valid_till}"
+        },
+        "id": {
+            "description": "The unique identifier for the RDS certificate.",
+            "value": "${data.aws_rds_certificate.this.id}"
+        },
+        "thumbprint": {
+            "description": "The thumbprint of the RDS certificate, used to verify its authenticity.",
+            "value": "${data.aws_rds_certificate.this.thumbprint}"
+        },
+        "valid_from": {
+            "description": "The date from which the RDS certificate is valid.",
+            "value": "${data.aws_rds_certificate.this.valid_from}"
+        },
+        "valid_till": {
+            "description": "The date until which the RDS certificate remains valid.",
+            "value": "${data.aws_rds_certificate.this.valid_till}"
+        }
+    }
+}

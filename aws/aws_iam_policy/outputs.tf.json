@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_iam_policy.this.arn}"
+        },
+        "policy_id": {
+            "description": "The value of the policy_id output",
+            "value": "${aws_iam_policy.this.policy_id}"
+        }
+    }
+}

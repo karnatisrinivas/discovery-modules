@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elasticache Cluster"
+  node:
+    label:
+      static: "[Data] Elasticache Cluster"
+      template: "[Data] Elasticache Cluster"
+    display_type: default
+
+discovery:
+  type: data_aws_elasticache_cluster
+  dnd_supported: false

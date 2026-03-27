@@ -1,0 +1,158 @@
+{
+    "variable": {
+        "all_instances_config": [
+            {
+                "description": "Defines configuration for all instances, including optional labels and metadata. Labels and metadata must be provided as key-value pairs.",
+                "nullable": true,
+                "type": "list(object({labels: optional(map(string)),metadata: optional(map(string))}))"
+            }
+        ],
+        "auto_healing_policies": [
+            {
+                "description": "Specifies auto-healing policies, including the required health check name and initial delay in seconds for health verification.",
+                "nullable": true,
+                "type": "list(object({health_check: string,initial_delay_sec: number}))"
+            }
+        ],
+        "base_instance_name": [
+            {
+                "description": "Sets the base name for instances in the managed instance group. This value is required and must be unique within the group.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "description": [
+            {
+                "description": "Provides a textual description of the managed instance group. This value is optional.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "instance_lifecycle_policy": [
+            {
+                "description": "Defines lifecycle policies for instances, including optional actions on failure and whether to force updates during repairs.",
+                "nullable": true,
+                "type": "list(object({default_action_on_failure: optional(string),force_update_on_repair: optional(string)}))"
+            }
+        ],
+        "list_managed_instances_results": [
+            {
+                "description": "Captures the results of listing managed instances. This value is optional and represented as a string.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "name": [
+            {
+                "description": "Specifies the name of the managed instance group. This value is required and must be unique within the zone.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "named_port": [
+            {
+                "description": "Defines named ports for the instance group, including the port number and its associated name. Port numbers must be valid integers.",
+                "nullable": true,
+                "type": "list(object({name: string,port: number}))"
+            }
+        ],
+        "standby_policy": [
+            {
+                "description": "Configures standby policies with optional initial delay and mode settings for instances in standby.",
+                "nullable": true,
+                "type": "list(object({initial_delay_sec: optional(number),mode: optional(string)}))"
+            }
+        ],
+        "stateful_disk": [
+            {
+                "description": "Manages stateful disks, including the device name and optional delete rules for disk lifecycle management.",
+                "nullable": true,
+                "type": "list(object({delete_rule: optional(string),device_name: string}))"
+            }
+        ],
+        "stateful_external_ip": [
+            {
+                "description": "Handles stateful external IP configurations, including optional delete rules and interface names.",
+                "nullable": true,
+                "type": "list(object({delete_rule: optional(string),interface_name: optional(string)}))"
+            }
+        ],
+        "stateful_internal_ip": [
+            {
+                "description": "Handles stateful internal IP configurations, including optional delete rules and interface names.",
+                "nullable": true,
+                "type": "list(object({delete_rule: optional(string),interface_name: optional(string)}))"
+            }
+        ],
+        "target_pools": [
+            {
+                "description": "Lists target pools for the instances in the group. Each pool must be specified as a string.",
+                "nullable": true,
+                "type": "list(string)"
+            }
+        ],
+        "target_size": [
+            {
+                "description": "Defines the desired number of instances in the managed instance group. Must be a non-negative integer.",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "target_stopped_size": [
+            {
+                "description": "Specifies the desired number of stopped instances in the group. Must be a non-negative integer.",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "target_suspended_size": [
+            {
+                "description": "Specifies the desired number of suspended instances in the group. Must be a non-negative integer.",
+                "nullable": true,
+                "type": "number"
+            }
+        ],
+        "timeouts": [
+            {
+                "description": "Customizes timeout settings for create, delete, and update operations. Values should be provided in string format representing durations.",
+                "nullable": true,
+                "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+            }
+        ],
+        "update_policy": [
+            {
+                "description": "Defines update policies, including surge and unavailability thresholds, minimal and disruptive actions, replacement methods, and policy type.",
+                "nullable": true,
+                "type": "list(object({max_surge_fixed: optional(number),max_surge_percent: optional(number),max_unavailable_fixed: optional(number),max_unavailable_percent: optional(number),minimal_action: string,most_disruptive_allowed_action: optional(string),replacement_method: optional(string),type: string}))"
+            }
+        ],
+        "template_version": [
+            {
+                "description": "Specifies instance template versions for the group, including optional names and target size configurations with fixed or percentage values.",
+                "nullable": true,
+                "type": "list(object({instance_template: string,name: optional(string),target_size: list(object({fixed: optional(number),percent: optional(number)}))}))"
+            }
+        ],
+        "wait_for_instances": [
+            {
+                "description": "Indicates whether to wait for all instances to become stable before completing operations. Accepts true or false.",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "wait_for_instances_status": [
+            {
+                "description": "Specifies the status to wait for when ensuring instance stability. Must match a valid instance status string.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "zone": [
+            {
+                "description": "Identifies the zone where the managed instance group is deployed. Must be a valid zone name within the cloud provider.",
+                "nullable": true,
+                "type": "string"
+            }
+        ]
+    }
+}

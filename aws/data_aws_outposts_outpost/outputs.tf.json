@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.arn}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the Outpost is located.",
+            "value": "${data.aws_outposts_outpost.this.availability_zone}"
+        },
+        "availability_zone_id": {
+            "description": "The ID of the availability zone where the Outpost is located.",
+            "value": "${data.aws_outposts_outpost.this.availability_zone_id}"
+        },
+        "description": {
+            "description": "A brief description of the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier of the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.id}"
+        },
+        "lifecycle_status": {
+            "description": "The current lifecycle status of the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.lifecycle_status}"
+        },
+        "name": {
+            "description": "The name assigned to the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.name}"
+        },
+        "site_arn": {
+            "description": "The ARN of the site associated with the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.site_arn}"
+        },
+        "site_id": {
+            "description": "The ID of the site associated with the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.site_id}"
+        },
+        "supported_hardware_type": {
+            "description": "The type of hardware supported by the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.supported_hardware_type}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Outpost.",
+            "value": "${data.aws_outposts_outpost.this.tags}"
+        }
+    }
+}

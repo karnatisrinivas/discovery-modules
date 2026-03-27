@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route53 Record
+  node:
+    label:
+      static: Route53 Record
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_route53_record
+  dnd_supported: false
+  references:
+    zone_id:
+      from: data_aws_route53_zone
+      output: zone_id

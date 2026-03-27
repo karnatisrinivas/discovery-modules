@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Redshift Cluster Credentials"
+  node:
+    label:
+      static: "[Data] Redshift Cluster Credentials"
+      template: "[Data] Redshift Cluster Credentials"
+    display_type: default
+
+discovery:
+  type: data_aws_redshift_cluster_credentials
+  dnd_supported: false

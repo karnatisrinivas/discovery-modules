@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the testable permissions query resource",
+            "value": "${data.google_iam_testable_permissions.this.id}"
+        },
+        "permissions": {
+            "description": "List of IAM permissions applicable to the specified resource",
+            "value": "${data.google_iam_testable_permissions.this.permissions}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "statemachine_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Step Functions state machine.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

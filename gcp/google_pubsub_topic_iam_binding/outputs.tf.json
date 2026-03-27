@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag for tracking changes to the IAM binding configuration",
+            "value": "${google_pubsub_topic_iam_binding.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the IAM binding on the Pub/Sub topic",
+            "value": "${google_pubsub_topic_iam_binding.this.id}"
+        }
+    }
+}

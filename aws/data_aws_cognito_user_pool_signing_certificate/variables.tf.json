@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "user_pool_id": [
+      {
+        "description": "The unique identifier for the Cognito User Pool from which the signing certificate is to be retrieved.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

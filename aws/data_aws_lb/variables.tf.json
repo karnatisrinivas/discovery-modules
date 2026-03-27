@@ -1,0 +1,14 @@
+{
+  "variable": {
+    "arn": [{
+      "description": "The ARN of the LB",
+      "type": "string",
+      "nullable": false
+    }],
+    "name": [{
+      "description": "The name of the LB",
+      "type": "string",
+      "nullable": false
+    }]
+  }
+}

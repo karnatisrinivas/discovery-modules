@@ -1,0 +1,56 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Route 53 hosted zone.",
+            "value": "${data.aws_route53_zone.this.arn}"
+        },
+        "caller_reference": {
+            "description": "A unique string that identifies the request to create the hosted zone.",
+            "value": "${data.aws_route53_zone.this.caller_reference}"
+        },
+        "comment": {
+            "description": "Any comments or notes about the hosted zone.",
+            "value": "${data.aws_route53_zone.this.comment}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the hosted zone by AWS.",
+            "value": "${data.aws_route53_zone.this.id}"
+        },
+        "linked_service_description": {
+            "description": "Description of the service linked to the hosted zone.",
+            "value": "${data.aws_route53_zone.this.linked_service_description}"
+        },
+        "linked_service_principal": {
+            "description": "The principal for the linked service associated with the hosted zone.",
+            "value": "${data.aws_route53_zone.this.linked_service_principal}"
+        },
+        "name": {
+            "description": "The name of the domain for the hosted zone.",
+            "value": "${data.aws_route53_zone.this.name}"
+        },
+        "name_servers": {
+            "description": "A list of name servers associated with the hosted zone.",
+            "value": "${data.aws_route53_zone.this.name_servers}"
+        },
+        "primary_name_server": {
+            "description": "The primary name server for the hosted zone.",
+            "value": "${data.aws_route53_zone.this.primary_name_server}"
+        },
+        "resource_record_set_count": {
+            "description": "The number of resource record sets in the hosted zone.",
+            "value": "${data.aws_route53_zone.this.resource_record_set_count}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the hosted zone.",
+            "value": "${data.aws_route53_zone.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC associated with the hosted zone, if applicable.",
+            "value": "${data.aws_route53_zone.this.vpc_id}"
+        },
+        "zone_id": {
+            "description": "The ID of the hosted zone.",
+            "value": "${data.aws_route53_zone.this.zone_id}"
+        }
+    }
+}

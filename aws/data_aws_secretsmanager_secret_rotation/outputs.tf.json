@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the secret rotation configuration.",
+            "value": "${data.aws_secretsmanager_secret_rotation.this.id}"
+        },
+        "rotation_enabled": {
+            "description": "Indicates whether the secret rotation is enabled.",
+            "value": "${data.aws_secretsmanager_secret_rotation.this.rotation_enabled}"
+        },
+        "rotation_lambda_arn": {
+            "description": "The Amazon Resource Name (ARN) of the Lambda function used for rotation.",
+            "value": "${data.aws_secretsmanager_secret_rotation.this.rotation_lambda_arn}"
+        },
+        "rotation_rules": {
+            "description": "Defines the rules for how often and when the secret is rotated.",
+            "value": "${data.aws_secretsmanager_secret_rotation.this.rotation_rules}"
+        }
+    }
+}

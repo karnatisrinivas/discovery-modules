@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name_prefix": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "enabled_controls": {
+            "description": "A list of control identifiers that are currently enabled in AWS Control Tower.",
+            "value": "${data.aws_controltower_controls.this.enabled_controls}"
+        },
+        "id": {
+            "description": "The unique identifier for the set of controls managed by AWS Control Tower.",
+            "value": "${data.aws_controltower_controls.this.id}"
+        }
+    }
+}

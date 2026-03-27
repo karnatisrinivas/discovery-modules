@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "domain_name": [
+      {
+        "description": "The unique name of the OpenSearch domain you want to create.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

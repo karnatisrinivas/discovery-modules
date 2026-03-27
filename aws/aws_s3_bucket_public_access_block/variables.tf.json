@@ -1,0 +1,44 @@
+{
+    "variable": {
+        "bucket": [
+            {
+                "default": "",
+                "description": "The name of the bucket to store the file in",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "block_public_acls": [
+            {
+                "default": true,
+                "description": "Whether Amazon S3 should block public ACLs for this bucket",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "block_public_policy": [
+            {
+                "default": true,
+                "description": "Whether Amazon S3 should block public bucket policies for this bucket",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "ignore_public_acls": [
+            {
+                "default": true,
+                "description": "Whether Amazon S3 should ignore public ACLs for this bucket",
+                "nullable": true,
+                "type": "bool"
+            }
+        ],
+        "restrict_public_buckets": [
+            {
+                "default": true,
+                "description": "Whether Amazon S3 should restrict public buckets for this bucket",
+                "nullable": true,
+                "type": "bool"
+            }
+        ]
+    }
+}

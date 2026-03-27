@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the backup report plan.",
+            "value": "${data.aws_backup_report_plan.this.arn}"
+        },
+        "creation_time": {
+            "description": "The time when the backup report plan was created.",
+            "value": "${data.aws_backup_report_plan.this.creation_time}"
+        },
+        "deployment_status": {
+            "description": "The current status of the backup report plan deployment.",
+            "value": "${data.aws_backup_report_plan.this.deployment_status}"
+        },
+        "description": {
+            "description": "A brief description of the backup report plan.",
+            "value": "${data.aws_backup_report_plan.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the backup report plan.",
+            "value": "${data.aws_backup_report_plan.this.id}"
+        },
+        "report_delivery_channel": {
+            "description": "Details about where and how the report is delivered, including formats and S3 bucket information.",
+            "value": "${data.aws_backup_report_plan.this.report_delivery_channel}"
+        },
+        "report_setting": {
+            "description": "Configurations for the report settings, including accounts, frameworks, and report templates.",
+            "value": "${data.aws_backup_report_plan.this.report_setting}"
+        },
+        "tags": {
+            "description": "A map of tags associated with the backup report plan.",
+            "value": "${data.aws_backup_report_plan.this.tags}"
+        }
+    }
+}

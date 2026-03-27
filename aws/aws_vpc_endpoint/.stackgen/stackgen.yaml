@@ -1,0 +1,51 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: VPC Endpoint
+  node:
+    label:
+      static: VPC Endpoint
+      template: VPC Endpoint
+    display_type: default
+
+variables:
+  auto_accept:
+    description: Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  private_dns_enabled:
+    description: (AWS services and AWS Marketplace partner services only) Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type Interface. Most users will want this enabled to allow services within the VPC to automatically use the endpoint.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  ip_address_type:
+    description: The IP address type for the endpoint.
+    type: string
+    options: 
+      - ipv4
+      - dualstack
+      - ipv6
+    ui_control: select
+  vpc_endpoint_type:
+    description: The VPC endpoint type
+    type: string
+    options: 
+      - Gateway
+      - GatewayLoadBalancer
+      - Interface
+    ui_control: select
+
+discovery:
+  type: aws_vpc_endpoint
+  dnd_supported: false
+  data_source: data_aws_vpc_endpoint
+  references:
+    vpc_id:
+      from: aws_vpc
+      output: vpc_id

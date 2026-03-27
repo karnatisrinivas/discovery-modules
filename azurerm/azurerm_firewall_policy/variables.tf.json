@@ -1,0 +1,128 @@
+{
+  "variable": {
+    "auto_learn_private_ranges_enabled": [
+      {
+        "description": "Enables automatic learning of private IP ranges",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "base_policy_id": [
+      {
+        "description": "Specifies the ID of the base policy to associate with the resource",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "dns": [
+      {
+        "description": "Configures DNS settings, including proxy and server options",
+        "nullable": true,
+        "type": "list(object({proxy_enabled: optional(bool),servers: optional(list(string))}))"
+      }
+    ],
+    "explicit_proxy": [
+      {
+        "description": "Defines explicit proxy settings like PAC file, ports, and enablement",
+        "nullable": true,
+        "type": "list(object({enable_pac_file: optional(bool),enabled: optional(bool),http_port: optional(number),https_port: optional(number),pac_file: optional(string),pac_file_port: optional(number)}))"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Defines identity configuration including principal and tenant IDs",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "insights": [
+      {
+        "description": "Configures insights for logging and analytics with retention settings",
+        "nullable": true,
+        "type": "list(object({default_log_analytics_workspace_id: string,enabled: bool,retention_in_days: optional(number),log_analytics_workspace: list(object({firewall_location: string,id: string}))}))"
+      }
+    ],
+    "intrusion_detection": [
+      {
+        "description": "Manages intrusion detection with modes, ranges, and bypass rules",
+        "nullable": true,
+        "type": "list(object({mode: optional(string),private_ranges: optional(list(string)),signature_overrides: list(object({id: optional(string),state: optional(string)})),traffic_bypass: list(object({description: optional(string),destination_addresses: optional(list(string)),destination_ip_groups: optional(list(string)),destination_ports: optional(list(string)),name: string,protocol: string,source_addresses: optional(list(string)),source_ip_groups: optional(list(string))}))}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the resource (required)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "private_ip_ranges": [
+      {
+        "description": "Lists private IP ranges in CIDR notation",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "sku": [
+      {
+        "description": "Defines the SKU for the resource (e.g., standard, premium)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sql_redirect_allowed": [
+      {
+        "description": "Allows SQL redirection if enabled",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines tags for resource categorization and billing",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "threat_intelligence_allowlist": [
+      {
+        "description": "Specifies IPs and FQDNs to exclude from threat intelligence checks",
+        "nullable": true,
+        "type": "list(object({fqdns: optional(list(string)),ip_addresses: optional(list(string))}))"
+      }
+    ],
+    "threat_intelligence_mode": [
+      {
+        "description": "Sets the mode for threat intelligence (e.g., alert, deny)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures operation timeouts for create, read, update, and delete",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "tls_certificate": [
+      {
+        "description": "Specifies TLS certificates with Key Vault secret IDs and names",
+        "nullable": true,
+        "type": "list(object({key_vault_secret_id: string,name: string}))"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

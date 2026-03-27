@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Prefix List"
+  node:
+    label:
+      static: "[Data] Prefix List"
+      template: "[Data] Prefix List"
+    display_type: default
+
+discovery:
+  type: data_aws_prefix_list
+  dnd_supported: false

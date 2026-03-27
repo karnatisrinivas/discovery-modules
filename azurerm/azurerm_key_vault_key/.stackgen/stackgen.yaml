@@ -1,0 +1,48 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Key Vault Key
+  node:
+    label:
+      static: Key Vault Key
+      template: ${key_name}
+    display_type: default
+
+variables:
+  key_type:
+    description: "Specifies the Key Type to use for this Key Vault Key. Possible values are EC (Elliptic Curve), EC-HSM, RSA and RSA-HSM. Changing this forces a new resource to be created."
+    type: string
+    options: 
+      - EC
+      - "EC-HSM"
+      - RSA
+      - "RSA-HSM"
+    ui_control: select
+
+variable_groups:
+- label: Key Attributes
+  variables:
+    - key_opts
+    - key_size
+    - key_type
+    - curve
+- label: Lifecycle
+  variables:
+    - expiration_date
+    - not_before_date
+    - expire_after
+    - notify_before_expiry
+- label: Rotation Policy
+  variables:
+    - time_after_creation
+    - time_before_expiry
+
+discovery:
+  type: azurerm_key_vault_key
+  dnd_supported: false
+  data_source: data_azurerm_key_vault_key
+  references:
+    key_vault_id:
+      from: azurerm_keyvault
+      output: id

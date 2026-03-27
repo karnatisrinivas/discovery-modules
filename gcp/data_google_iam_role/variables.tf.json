@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Unique identifier for the IAM role; must be a string with a maximum length of 64 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

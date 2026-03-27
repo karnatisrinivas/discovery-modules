@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "service_code": [
+      {
+        "description": "",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "quota_code": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "quota_name": [
+      {
+        "description": "",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

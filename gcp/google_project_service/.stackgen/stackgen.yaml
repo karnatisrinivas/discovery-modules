@@ -1,0 +1,30 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Service
+  node:
+    label:
+      static: Project Service
+      template: ${service}
+    display_type: default
+
+variables:
+  disable_dependent_services:
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Indicates whether to disable services that are dependent on this service when it is disabled.
+    type: bool
+  disable_on_destroy:
+    description: Specifies whether the service should be disabled when the Terraform resource is destroyed.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: google_project_service
+  dnd_supported: false

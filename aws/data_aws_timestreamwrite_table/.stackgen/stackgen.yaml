@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Timestreamwrite Table"
+  node:
+    label:
+      static: "[Data] Timestreamwrite Table"
+      template: "[Data] Timestreamwrite Table"
+    display_type: default
+
+discovery:
+  type: data_aws_timestreamwrite_table
+  dnd_supported: false

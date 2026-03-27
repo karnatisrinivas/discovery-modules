@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS IoT registration code.",
+            "value": "${data.aws_iot_registration_code.this.id}"
+        },
+        "registration_code": {
+            "description": "The registration code used to register devices with AWS IoT.",
+            "value": "${data.aws_iot_registration_code.this.registration_code}"
+        }
+    }
+}

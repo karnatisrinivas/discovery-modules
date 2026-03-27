@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Testable Permissions"
+  node:
+    label:
+      static: "[Data] Iam Testable Permissions"
+      template: ${full_resource_name}
+    display_type: default
+
+discovery:
+  type: data_google_iam_testable_permissions
+  dnd_supported: false

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the IAM OpenID Connect provider.",
+            "value": "${data.aws_iam_openid_connect_provider.this.arn}"
+        },
+        "client_id_list": {
+            "description": "A list of client IDs (also known as audiences) that are allowed to access the IAM OpenID Connect provider.",
+            "value": "${data.aws_iam_openid_connect_provider.this.client_id_list}"
+        },
+        "id": {
+            "description": "The ID of the IAM OpenID Connect provider.",
+            "value": "${data.aws_iam_openid_connect_provider.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the IAM OpenID Connect provider.",
+            "value": "${data.aws_iam_openid_connect_provider.this.tags}"
+        },
+        "thumbprint_list": {
+            "description": "A list of certificate thumbprints for the IAM OpenID Connect provider's server certificate(s).",
+            "value": "${data.aws_iam_openid_connect_provider.this.thumbprint_list}"
+        },
+        "url": {
+            "description": "The URL of the IAM OpenID Connect provider.",
+            "value": "${data.aws_iam_openid_connect_provider.this.url}"
+        }
+    }
+}

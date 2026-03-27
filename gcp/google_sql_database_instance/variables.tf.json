@@ -1,0 +1,56 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created",
+                "nullable": true
+            }
+        ],
+        "deletion_protection": [
+            {
+                "type": "bool",
+                "description": "Whether Terraform will be prevented from destroying the instance. When the field is set to true or unset in Terraform state, a terraform apply or terraform destroy that would delete the instance will fail. When the field is set to false, deleting the instance is allowed",
+                "default": false,
+                "nullable": true
+            }
+        ],
+        "settings": [
+            {
+                "type": "list(object({tier: string, edition: optional(string), user_labels: map(string), activation_policy: optional(string), availability_type: optional(string), collation: optional(string), deletion_protection_enabled: optional(bool), connector_enforcement: optional(string), enable_google_ml_integration: optional(bool), enable_dataplex_integration: optional(bool), disk_autoresize: optional(bool), disk_autoresize_limit: optional(number), disk_size: optional(number), disk_type: optional(string), time_zone: optional(string), advanced_machine_features: list(object({threads_per_core: optional(number)})), database_flags: list(object({name: string, value: string})), active_directory_config: list(object({domain: string})), data_cache_config: list(object({data_cache_enabled: optional(bool)})), deny_maintenance_period: list(object({end_date: string, start_date: string, time: string})), sql_server_audit_config: list(object({bucket: optional(string), upload_interval: optional(string), retention_interval: optional(string)})), backup_configuration: list(object({binary_log_enabled: optional(bool), enabled: optional(bool), start_time: optional(string), point_in_time_recovery_enabled: optional(string), location: optional(string), transaction_log_retention_days: optional(string), backup_retention_settings: list(object({retained_backups: optional(number)}))})), ip_configuration: list(object({ipv4_enabled: optional(bool), private_network: optional(string), ssl_mode: optional(string), server_ca_mode: optional(string), allocated_ip_range: optional(string), enable_private_path_for_google_cloud_services: optional(bool), authorized_networks: list(object({expiration_time: optional(string), name: optional(string), value: string})), psc_config: list(object({psc_enabled: optional(bool), allowed_consumer_projects: list(string)}))})), location_preference: list(object({follow_gae_application: optional(string), zone: optional(string), secondary_zone: optional(string)})), maintenance_window: list(object({day: optional(number), hour: optional(number), update_track: optional(string)})), insights_config: list(object({query_insights_enabled: bool, query_string_length: number, record_application_tags: bool, record_client_address: bool, query_plans_per_minute: number})), password_validation_policy: list(object({min_length: number, complexity: string, reuse_interval: number, disallow_username_substring: bool, password_change_interval: number, enable_password_policy: bool}))}))",
+                "description": "The settings to use for the database. Required if clone is not set.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "database_version": [
+            {
+                "type": "string",
+                "description": "The MySQL, PostgreSQL or SQL Server version to use.",
+                "nullable": true
+            }
+        ],
+        "replica_configuration": [
+            {
+                "type": "list(object({ca_certificate: optional(string), client_certificate: optional(string), client_key: optional(string), connect_retry_interval: optional(number), dump_file_path: optional(string), failover_target: optional(bool), master_heartbeat_period: optional(number), password: optional(string), ssl_cipher: optional(string), username: optional(string), verify_server_certificate: optional(bool)}))",
+                "description": "The name of the existing instance that will act as the master in the replication setup. Note, this requires the master to have `Binary Log Enabled` set, as well as existing backups.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "restore_backup_context": [
+            {
+                "type": "list(object({backup_run_id: string, instance_id: optional(string), project: optional(string)}))",
+                "description": "The context needed to restore the database to a backup run. This field will cause Terraform to trigger the database to restore from the backup run indicated. NOTE: Restoring from a backup is an imperative action and not recommended via Terraform. Adding or modifying this block during resource creation/update will trigger the restore action after the resource is created/updated.",
+                "nullable": true
+            }
+        ],
+        "clone": [
+            {
+                "type": "list(object({source_instance_name: string, point_in_time: optional(string), preferred_zone: optional(string), database_names: list(string), allocated_ip_range: optional(string)}))",
+                "description": "The context needed to create this instance as a clone of another instance. When this field is set during resource creation, Terraform will attempt to clone another instance as indicated in the context.",
+                "nullable": true
+            }
+        ]
+    }
+}

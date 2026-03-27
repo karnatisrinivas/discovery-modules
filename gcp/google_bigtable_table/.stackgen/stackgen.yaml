@@ -1,0 +1,39 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: BigTable Table
+  node:
+    label:
+      static: BigTable Table
+      template: ${name}
+    display_type: default
+
+variables:
+  deletion_protection:
+    ui_control: select
+    description: A field to make the cluster protected against data loss i.e. when set to PROTECTED, deleting the cluster and the instance containing the cluster would be prohibited. If not provided, deletion protection will be set to UNPROTECTED. default value is PROTECTED.
+    type: string
+    options: 
+      - PROTECTED
+      - UNPROTECTED
+  storage_type:
+    options: 
+      - SSD
+      - HDD
+    ui_control: select
+  column_family:
+    description: A group of columns within a table which share a common configuration. This can be specified multiple times.
+    attributes: 
+      family: 
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Family
+        description: The name of the column family.
+
+discovery:
+  type: google_bigtable_table
+  dnd_supported: false

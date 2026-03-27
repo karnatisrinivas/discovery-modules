@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "service_principal": [
+      {
+        "description": "The name of the AWS service that is enabled to perform actions in your account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

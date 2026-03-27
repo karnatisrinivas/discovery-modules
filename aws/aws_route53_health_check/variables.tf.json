@@ -1,0 +1,158 @@
+{
+  "variable": {
+    "child_health_threshold": [
+      {
+        "description": "Number of child health checks that must be healthy for the parent health check to be considered healthy; must be less than or equal to the number of child health checks.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "child_healthchecks": [
+      {
+        "description": "List of health check IDs to associate as child health checks in a calculated health check. Must be valid Route 53 health check IDs.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "cloudwatch_alarm_name": [
+      {
+        "description": "Specifies the name of the CloudWatch alarm to associate with the Route 53 health check; must match an existing CloudWatch alarm.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cloudwatch_alarm_region": [
+      {
+        "description": "Specifies the AWS region where the CloudWatch alarm associated with the health check is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Indicates whether the health check is disabled. Set to true to prevent Route 53 from performing health checks.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_sni": [
+      {
+        "description": "Determines whether to enable Server Name Indication (SNI) for HTTPS health checks; required for servers hosting multiple TLS/SSL certificates.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "failure_threshold": [
+      {
+        "description": "Number of consecutive health check failures required before marking the endpoint as unhealthy. Must be between 1 and 10.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "fqdn": [
+      {
+        "description": "Specifies the fully qualified domain name (FQDN) of the endpoint to check, required for HTTP or HTTPS health checks. Must be a valid domain name.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "insufficient_data_health_status": [
+      {
+        "description": "Specifies the health check status to report when no sufficient data is available, such as \"Healthy\" or \"Unhealthy\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "invert_healthcheck": [
+      {
+        "description": "Specifies whether to invert the health check's status; set to true to consider the endpoint healthy when it is unhealthy and vice versa.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "IPv4 address of the endpoint to check for health; required if using TCP or HTTP/HTTPS protocols.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "measure_latency": [
+      {
+        "description": "Indicates whether to measure latency between health checkers and the endpoint. Accepts true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "port": [
+      {
+        "description": "Specifies the port on which the endpoint is listening; valid values are 1 to 65535.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "reference_name": [
+      {
+        "description": "Friendly identifier for the health check, used to easily identify it within the configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "regions": [
+      {
+        "description": "Specifies the AWS regions to route traffic for health check evaluation; must include valid region names.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "request_interval": [
+      {
+        "description": "Defines the frequency (in seconds) at which Route 53 sends health check requests to the endpoint. Must be either 10 or 30 seconds.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "resource_path": [
+      {
+        "description": "Specifies the HTTP or HTTPS path to check for a healthy response; required if the health check type is HTTP or HTTPS.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "routing_control_arn": [
+      {
+        "description": "ARN of the routing control associated with the health check; required for routing control-based checks.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "search_string": [
+      {
+        "description": "Specifies the string to search for in the response body from the health check endpoint; required for HTTP or HTTPS health checks with string matching enabled.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize and categorize the health check, supporting tagging for identification, filtering, and management.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Defines the events or metrics that initiate the health check evaluation, such as changes in resource state or specific conditions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of health check to perform, such as HTTP, HTTPS, or TCP; must match one of the supported health check types.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "bucket": [
+            {
+                "type": "string",
+                "description": "ID (name) of the bucket.",
+                "nullable": false
+            }
+        ],
+        "expected_bucket_owner": [
+            {
+                "type": "string",
+                "description": "Account ID of the expected bucket owner.",
+                "nullable": true
+            }
+        ],
+        "rule": [
+            {
+                "type": "list(object({bucket_key_enabled: bool, apply_server_side_encryption_by_default: list(object({sse_algorithm: string, kms_master_key_id: string}))}))",
+                "description": "The server-side encryption configuration applied when the rule is matched.",
+                "nullable": false
+            }
+        ]
+    }
+}

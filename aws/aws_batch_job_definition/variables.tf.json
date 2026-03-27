@@ -1,0 +1,103 @@
+{
+  "variable": {
+    "container_properties": [
+      {
+        "description": "Defines the configuration for the containers in the job, including memory and CPU requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "deregister_on_new_revision": [
+      {
+        "description": "Indicates whether to deregister the job definition when a new revision is created.",
+        "nullable": true,
+        "type": "bool",
+        "default": true
+      }
+    ],
+    "ecs_properties": [
+      {
+        "description": "Specifies the properties specific to the Amazon ECS orchestration platform.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the job definition, which must be unique within the region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "node_properties": [
+      {
+        "description": "Defines the properties for a multi-node parallel job.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "A set of key-value pairs that are passed to the job at runtime.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "platform_capabilities": [
+      {
+        "description": "Specifies the platform capabilities required by the job, such as 'EC2' or 'FARGATE'.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "propagate_tags": [
+      {
+        "description": "Determines whether to propagate tags from the job definition to the tasks.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "scheduling_priority": [
+      {
+        "description": "Defines the priority for scheduling the job, with higher numbers indicating higher priority.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the job definition for organizing and managing resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of job definition, such as 'container' or 'multinode'.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "eks_properties": [
+    {
+      "description": "Optional block for configuring EKS properties including pod properties.",
+      "nullable": true,
+      "type": "list(object({ pod_properties: object({ dns_policy: string, host_network: bool, service_account_name: string, share_process_namespace: bool, containers: list(object({ args: list(string), command: list(string), image: string, image_pull_policy: string, name: string, env: list(object({ name: string, value: string })), resources: object({ limits: map(string), requests: map(string) }), security_context: object({ privileged: bool, read_only_root_file_system: bool, run_as_group: number, run_as_non_root: bool, run_as_user: number }), volume_mounts: list(object({ mount_path: string, name: string, read_only: bool })) })) }), image_pull_secret: object({ name: string }), init_containers: list(object({ args: list(string), command: list(string), image: string, image_pull_policy: string, name: string, env: list(object({ name: string, value: string })), resources: object({ limits: map(string), requests: map(string) }), security_context: object({ privileged: bool, read_only_root_file_system: bool, run_as_group: number, run_as_non_root: bool, run_as_user: number }), volume_mounts: list(object({ mount_path: string, name: string, read_only: bool })) })), metadata: object({ labels: map(string) }), volumes: list(object({ name: string, empty_dir: object({ medium: string, size_limit: string }), host_path: object({ path: string }), secret: object({ optional: bool, secret_name: string }) })) }))"
+    }
+  ],
+  "retry_strategy": [
+    {
+      "description": "Optional block for defining the retry strategy for the job definition.",
+      "nullable": true,
+      "type": "list(object({ attempts: number, evaluate_on_exit: list(object({ action: string, on_exit_code: string, on_reason: string, on_status_reason: string })) }))"
+    }
+  ],
+  "timeout": [
+    {
+      "description": "Optional block for specifying the job timeout configuration.",
+      "nullable": true,
+      "type": "list(object({ attempt_duration_seconds: number }))"
+    }
+  ]
+  }
+}

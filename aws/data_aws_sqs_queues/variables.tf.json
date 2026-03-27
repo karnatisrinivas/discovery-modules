@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "queue_name_prefix": [
+      {
+        "description": "A prefix to be added to the names of the SQS queues.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

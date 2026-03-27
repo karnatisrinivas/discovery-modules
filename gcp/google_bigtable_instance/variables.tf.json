@@ -1,0 +1,26 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.",
+                "nullable": false
+            }
+        ],
+        "deletion_protection": [
+            {
+                "type": "string",
+                "description": "A field to make the cluster protected against data loss i.e. when set to PROTECTED, deleting the cluster and the instance containing the cluster would be prohibited. If not provided, deletion protection will be set to UNPROTECTED. default value is PROTECTED.",
+                "nullable": true,
+                "default": "PROTECTED"
+            }
+        ],
+        "cluster": [
+            {
+                "type": "list(object({cluster_id: string, zone: optional(string), num_nodes: optional(number), storage_type: optional(string), kms_key_name: optional(string)}))",
+                "description": "A block of cluster configuration options. This can be specified at least once, and up to as many as possible within 8 cloud regions. Removing the field entirely from the config will cause the provider to default to the backend value.",
+                "nullable": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] AzureAD Client Config"
+  node:
+    label:
+      static: "[Data] AzureAD Client Config"
+      template: "[Data] AzureAD Client Config"
+    display_type: default
+
+discovery:
+  type: data_azuread_client_config
+  dnd_supported: false

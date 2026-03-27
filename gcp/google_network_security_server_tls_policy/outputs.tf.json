@@ -1,0 +1,24 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the TLS policy was created",
+            "value": "${google_network_security_server_tls_policy.this.create_time}"
+        },
+        "effective_labels": {
+            "description": "Labels applied to the TLS policy, including inherited ones",
+            "value": "${google_network_security_server_tls_policy.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the TLS policy used in resource referencing",
+            "value": "${google_network_security_server_tls_policy.this.id}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly defined in the Terraform configuration for the policy",
+            "value": "${google_network_security_server_tls_policy.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update made to the TLS policy",
+            "value": "${google_network_security_server_tls_policy.this.update_time}"
+        }
+    }
+}

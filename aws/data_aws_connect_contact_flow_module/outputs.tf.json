@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the contact flow module.",
+            "value": "${data.aws_connect_contact_flow_module.this.arn}"
+        },
+        "contact_flow_module_id": {
+            "description": "The unique identifier of the contact flow module.",
+            "value": "${data.aws_connect_contact_flow_module.this.contact_flow_module_id}"
+        },
+        "content": {
+            "description": "The actual content or definition of the contact flow module.",
+            "value": "${data.aws_connect_contact_flow_module.this.content}"
+        },
+        "description": {
+            "description": "A brief description of the contact flow module.",
+            "value": "${data.aws_connect_contact_flow_module.this.description}"
+        },
+        "id": {
+            "description": "The identifier of the contact flow module, often the same as the module ID.",
+            "value": "${data.aws_connect_contact_flow_module.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the contact flow module.",
+            "value": "${data.aws_connect_contact_flow_module.this.name}"
+        },
+        "state": {
+            "description": "The current state of the contact flow module, such as active or inactive.",
+            "value": "${data.aws_connect_contact_flow_module.this.state}"
+        },
+        "status": {
+            "description": "The status of the contact flow module, indicating its operational condition.",
+            "value": "${data.aws_connect_contact_flow_module.this.status}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the contact flow module for organizational purposes.",
+            "value": "${data.aws_connect_contact_flow_module.this.tags}"
+        }
+    }
+}

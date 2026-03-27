@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpc Dhcp Options"
+  node:
+    label:
+      static: "[Data] Vpc Dhcp Options"
+      template: "[Data] Vpc Dhcp Options"
+    display_type: default
+
+discovery:
+  type: data_aws_vpc_dhcp_options
+  dnd_supported: false

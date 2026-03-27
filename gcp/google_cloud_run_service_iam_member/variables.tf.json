@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an IAM condition that determines under what circumstances the IAM policy binding applies, including attributes like title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the Google Cloud location (region) where the Cloud Run service is deployed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the role will be applied; can be a user, group, service account, or domain.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to assign to the member, such as roles/cloudrun.admin.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "service": [
+      {
+        "description": "Specifies the Cloud Run service to which the IAM policy member will be applied. Must be the name of an existing service in the specified project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

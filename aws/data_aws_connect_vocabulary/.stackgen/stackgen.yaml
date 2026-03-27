@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Connect Vocabulary"
+  node:
+    label:
+      static: "[Data] Connect Vocabulary"
+      template: "[Data] Connect Vocabulary"
+    display_type: default
+
+discovery:
+  type: data_aws_connect_vocabulary
+  dnd_supported: false

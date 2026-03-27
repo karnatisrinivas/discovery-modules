@@ -1,0 +1,32 @@
+{
+    "output": {
+        "contact_ids": {
+            "description": "A list of contact IDs associated with the rotation.",
+            "value": "${data.aws_ssmcontacts_rotation.this.contact_ids}"
+        },
+        "id": {
+            "description": "The unique identifier for the rotation.",
+            "value": "${data.aws_ssmcontacts_rotation.this.id}"
+        },
+        "name": {
+            "description": "The name assigned to the rotation.",
+            "value": "${data.aws_ssmcontacts_rotation.this.name}"
+        },
+        "recurrence": {
+            "description": "The recurrence settings for the rotation, detailing when and how often shifts occur.",
+            "value": "${data.aws_ssmcontacts_rotation.this.recurrence}"
+        },
+        "start_time": {
+            "description": "The starting time for the rotation schedule.",
+            "value": "${data.aws_ssmcontacts_rotation.this.start_time}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the rotation for categorization or identification.",
+            "value": "${data.aws_ssmcontacts_rotation.this.tags}"
+        },
+        "time_zone_id": {
+            "description": "The time zone in which the rotation schedule is set.",
+            "value": "${data.aws_ssmcontacts_rotation.this.time_zone_id}"
+        }
+    }
+}

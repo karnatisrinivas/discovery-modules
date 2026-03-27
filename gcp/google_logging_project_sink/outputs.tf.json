@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the logging sink resource",
+            "value": "${google_logging_project_sink.this.id}"
+        },
+        "writer_identity": {
+            "description": "Service account used by the sink to write logs",
+            "value": "${google_logging_project_sink.this.writer_identity}"
+        }
+    }
+}

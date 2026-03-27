@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional expression for the IAM condition, specifying the circumstances under which the policy binding is applied.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "folder": [
+      {
+        "description": "Specifies the ID of the Google Cloud folder where the IAM policy binding will be applied.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "member": [
+      {
+        "description": "Specifies the identity to which the IAM role will be applied, such as a user, group, or service account. Must be in the form of an email address or a predefined identifier.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "role": [
+      {
+        "description": "Role assigned to the IAM member for the specified Google Cloud folder; must be in the form of roles/{role_id}.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

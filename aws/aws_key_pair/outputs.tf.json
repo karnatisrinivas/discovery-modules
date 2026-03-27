@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The value of the arn output",
+            "value": "${aws_key_pair.this.arn}"
+        },
+        "key_name": {
+            "description": "The value of the key_name output",
+            "value": "${aws_key_pair.this.key_name}"
+        }
+    }
+}

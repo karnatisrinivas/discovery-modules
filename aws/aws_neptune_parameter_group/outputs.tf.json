@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing and referencing the parameter group.",
+            "value": "${aws_neptune_parameter_group.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune parameter group in the configuration.",
+            "value": "${aws_neptune_parameter_group.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags applied to the parameter group for resource organization.",
+            "value": "${aws_neptune_parameter_group.this.tags_all}"
+        }
+    }
+}

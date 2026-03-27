@@ -1,0 +1,95 @@
+{
+  "variable": {
+    "broker_node_group_info": [
+      {
+        "description": "Configuration block for the broker nodes, including instance type, storage, and AZ distribution settings.",
+        "nullable": false,
+        "type": "list(object({az_distribution: optional(string),client_subnets: list(string),instance_type: string,security_groups: list(string),connectivity_info: list(object({public_access: list(object({type: optional(string)})),vpc_connectivity: list(object({client_authentication: list(object({tls: optional(bool),sasl: list(object({iam: optional(bool),scram: optional(bool)}))}))}))})),storage_info: list(object({ebs_storage_info: list(object({volume_size: optional(number),provisioned_throughput: list(object({enabled: optional(bool),volume_throughput: optional(number)}))}))}))}))"
+      }
+    ],
+    "client_authentication": [
+      {
+        "description": "Defines the method for client authentication, such as TLS, SASL, or both, to ensure secure communication with the Kafka cluster.",
+        "nullable": true,
+        "type": "list(object({unauthenticated: optional(bool),sasl: list(object({iam: optional(bool),scram: optional(bool)})),tls: list(object({certificate_authority_arns: optional(list(string))}))}))"
+      }
+    ],
+    "cluster_name": [
+      {
+        "description": "Name of the Amazon MSK cluster, must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "configuration_info": [
+      {
+        "description": "Defines the Amazon MSK cluster configuration to use, specifying the ARN and revision of the configuration.",
+        "nullable": true,
+        "type": "list(object({arn: string,revision: number}))"
+      }
+    ],
+    "encryption_info": [
+      {
+        "description": "Defines the encryption settings for the MSK cluster, including encryption at rest and in transit.",
+        "nullable": true,
+        "type": "list(object({encryption_at_rest_kms_key_arn: optional(string),encryption_in_transit: list(object({client_broker: optional(string),in_cluster: optional(bool)}))}))"
+      }
+    ],
+    "enhanced_monitoring": [
+      {
+        "description": "Specifies the level of monitoring for the MSK cluster, such as DEFAULT, PER_BROKER, or PER_TOPIC_PER_BROKER.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kafka_version": [
+      {
+        "description": "Specifies the version of Kafka to be used for the MSK cluster. Must be a supported Kafka version.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "logging_info": [
+      {
+        "description": "Configuration for broker logging, specifying the type and details of logs to be enabled for the Amazon MSK cluster.",
+        "nullable": true,
+        "type": "list(object({broker_logs: list(object({cloudwatch_logs: list(object({enabled: bool,log_group: optional(string)})),firehose: list(object({delivery_stream: optional(string),enabled: bool})),s3: list(object({bucket: optional(string),enabled: bool,prefix: optional(string)}))}))}))"
+      }
+    ],
+    "number_of_broker_nodes": [
+      {
+        "description": "Specifies the number of broker nodes in the MSK cluster; must be a positive integer and meet the cluster's availability requirements.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "open_monitoring": [
+      {
+        "description": "Configures the open monitoring settings for the MSK cluster, allowing integration with third-party monitoring systems; requires specifying Prometheus settings.",
+        "nullable": true,
+        "type": "list(object({prometheus: list(object({jmx_exporter: list(object({enabled_in_broker: bool})),node_exporter: list(object({enabled_in_broker: bool}))}))}))"
+      }
+    ],
+    "storage_mode": [
+      {
+        "description": "Defines the storage mode for the MSK cluster, such as \"EBS\" for storage backed by Amazon Elastic Block Store.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the MSK cluster for identification and organization; must comply with AWS tagging requirements.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration for create, update, and delete operations on the MSK cluster. Use ISO 8601 format for specifying time periods.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

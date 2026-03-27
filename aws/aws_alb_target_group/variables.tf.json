@@ -1,0 +1,57 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "Name of the target group",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "port": [
+            {
+                "default": 80,
+                "description": "Port on which targets receive traffic, unless overridden when registering a specific target. Required when target_type is instance, ip or alb. Does not apply when target_type is lambda.",
+                "type": "number",
+                "nullable": true
+            }
+        ],
+        "protocol": [
+            {
+                "default": "HTTP",
+                "description": "Protocol to use for routing traffic to the targets",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to all resources",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "target_type": [
+            {
+                "default": "ip",
+                "description": "The type of target that you must specify when registering targets with this target group.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "vpc_id": [
+            {
+                "description": "Identifier of the VPC in which to create the target group.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "deregistration_delay": [
+            {
+                "default": "300",
+                "description": "The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused",
+                "type": "string",
+                "nullable": true
+            }
+        ]
+    }
+}

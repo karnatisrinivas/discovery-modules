@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the AWS SSO application assignment.",
+            "value": "${data.aws_ssoadmin_application_assignments.this.id}"
+        }
+    }
+}

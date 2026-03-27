@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Description of the external VPN gateway, providing context for its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "interface": [
+      {
+        "description": "Defines the network interfaces for the external VPN gateway, specifying interface IDs and associated IP addresses. Up to 8 interfaces are supported.",
+        "nullable": true,
+        "type": "list(object({id: optional(number),ip_address: optional(string),ipv6_address: optional(string)}))"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs for organizing and categorizing the external VPN gateway; must comply with label naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the unique name for the external VPN gateway, which must be compliant with GCP naming conventions and globally unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "redundancy_type": [
+      {
+        "description": "Specifies the redundancy type for the external VPN gateway; must be either 'SINGLE_IP_INTERNALLY_REDUNDANT' or 'IP_REDUNDANCY_TYPE_UNSPECIFIED'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations on the external VPN gateway, such as creation, update, or deletion, in order to prevent timeout errors.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

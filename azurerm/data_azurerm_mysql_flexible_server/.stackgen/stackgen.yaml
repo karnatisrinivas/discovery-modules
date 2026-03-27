@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] MySQL DB Flexible Server"
+  node:
+    label:
+      static: "[Data] MySQL DB Flexible Server"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_mysql_flexible_server
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ecs Service"
+  node:
+    label:
+      static: "[Data] Ecs Service"
+      template: "[Data] Ecs Service"
+    display_type: default
+
+discovery:
+  type: data_aws_ecs_service
+  dnd_supported: false

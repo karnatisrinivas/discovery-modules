@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Log Analytics Workspace"
+  node:
+    label:
+      static: "[Data] Log Analytics Workspace"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_log_analytics_workspace
+  dnd_supported: false

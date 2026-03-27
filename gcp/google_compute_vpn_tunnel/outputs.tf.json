@@ -1,0 +1,40 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the VPN tunnel was created",
+            "value": "${google_compute_vpn_tunnel.this.creation_timestamp}"
+        },
+        "detailed_status": {
+            "description": "Current operational status of the VPN tunnel for troubleshooting",
+            "value": "${google_compute_vpn_tunnel.this.detailed_status}"
+        },
+        "effective_labels": {
+            "description": "Computed labels applied to the VPN tunnel for organizational purposes",
+            "value": "${google_compute_vpn_tunnel.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the VPN tunnel in configurations",
+            "value": "${google_compute_vpn_tunnel.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Hash of labels used to detect changes for updates",
+            "value": "${google_compute_vpn_tunnel.this.label_fingerprint}"
+        },
+        "self_link": {
+            "description": "URL for accessing the VPN tunnel resource via the API",
+            "value": "${google_compute_vpn_tunnel.this.self_link}"
+        },
+        "shared_secret_hash": {
+            "description": "Hash of the shared secret for secure VPN tunnel authentication",
+            "value": "${google_compute_vpn_tunnel.this.shared_secret_hash}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly defined in Terraform for resource management",
+            "value": "${google_compute_vpn_tunnel.this.terraform_labels}"
+        },
+        "tunnel_id": {
+            "description": "Unique internal identifier for the VPN tunnel in GCP",
+            "value": "${google_compute_vpn_tunnel.this.tunnel_id}"
+        }
+    }
+}

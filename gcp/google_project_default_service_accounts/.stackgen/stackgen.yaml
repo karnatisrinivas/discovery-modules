@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Default Service Accounts
+  node:
+    label:
+      static: Project Default Service Accounts
+      template: ${action}
+    display_type: default
+
+discovery:
+  type: google_project_default_service_accounts
+  dnd_supported: false

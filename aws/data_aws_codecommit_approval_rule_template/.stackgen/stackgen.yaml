@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Codecommit Approval Rule Template"
+  node:
+    label:
+      static: "[Data] Codecommit Approval Rule Template"
+      template: "[Data] Codecommit Approval Rule Template"
+    display_type: default
+
+discovery:
+  type: data_aws_codecommit_approval_rule_template
+  dnd_supported: false

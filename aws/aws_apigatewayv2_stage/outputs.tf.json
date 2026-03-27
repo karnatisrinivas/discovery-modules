@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for identifying the API Gateway stage in AWS",
+            "value": "${aws_apigatewayv2_stage.this.arn}"
+        },
+        "execution_arn": {
+            "description": "ARN used for invoking the stage during API Gateway executions",
+            "value": "${aws_apigatewayv2_stage.this.execution_arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing and referencing the API Gateway stage",
+            "value": "${aws_apigatewayv2_stage.this.id}"
+        },
+        "invoke_url": {
+            "description": "Endpoint URL for making HTTP requests to the API Gateway stage",
+            "value": "${aws_apigatewayv2_stage.this.invoke_url}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags assigned to the API Gateway stage for resource organization",
+            "value": "${aws_apigatewayv2_stage.this.tags_all}"
+        }
+    }
+}

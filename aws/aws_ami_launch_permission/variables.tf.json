@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "account_id": [
+      {
+        "description": "Specifies the AWS account ID to grant launch permissions for the AMI. Must be a valid 12-digit account number.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "group": [
+      {
+        "description": "Specifies the user group to grant launch permissions, such as \"all\" for public access.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "image_id": [
+      {
+        "description": "Specifies the ID of the Amazon Machine Image (AMI) to which launch permissions will be added.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "organization_arn": [
+      {
+        "description": "Specifies the ARN of the organization to grant launch permissions for the AMI. Must be a valid organization ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "organizational_unit_arn": [
+      {
+        "description": "ARN of the organizational unit to grant launch permissions, specifying the target organizational unit within AWS Organizations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

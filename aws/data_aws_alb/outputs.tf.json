@@ -1,0 +1,132 @@
+{
+    "output": {
+        "access_logs": {
+            "description": "Information about the access logs configuration, including bucket, whether it is enabled, and the prefix.",
+            "value": "${data.aws_alb.this.access_logs}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the load balancer.",
+            "value": "${data.aws_alb.this.arn}"
+        },
+        "arn_suffix": {
+            "description": "The ARN suffix for the load balancer, which can be useful for constructing ARNs for related resources.",
+            "value": "${data.aws_alb.this.arn_suffix}"
+        },
+        "client_keep_alive": {
+            "description": "The time, in seconds, that the load balancer allows a client to keep connections alive.",
+            "value": "${data.aws_alb.this.client_keep_alive}"
+        },
+        "connection_logs": {
+            "description": "Information about the connection logs configuration, including bucket, whether it is enabled, and the prefix.",
+            "value": "${data.aws_alb.this.connection_logs}"
+        },
+        "customer_owned_ipv4_pool": {
+            "description": "The ID of the customer-owned IPv4 pool.",
+            "value": "${data.aws_alb.this.customer_owned_ipv4_pool}"
+        },
+        "desync_mitigation_mode": {
+            "description": "The desynchronization mitigation mode applied to the load balancer.",
+            "value": "${data.aws_alb.this.desync_mitigation_mode}"
+        },
+        "dns_name": {
+            "description": "The DNS name of the load balancer.",
+            "value": "${data.aws_alb.this.dns_name}"
+        },
+        "dns_record_client_routing_policy": {
+            "description": "The client routing policy for DNS records.",
+            "value": "${data.aws_alb.this.dns_record_client_routing_policy}"
+        },
+        "drop_invalid_header_fields": {
+            "description": "Indicates whether to drop invalid header fields.",
+            "value": "${data.aws_alb.this.drop_invalid_header_fields}"
+        },
+        "enable_cross_zone_load_balancing": {
+            "description": "Indicates whether cross-zone load balancing is enabled.",
+            "value": "${data.aws_alb.this.enable_cross_zone_load_balancing}"
+        },
+        "enable_deletion_protection": {
+            "description": "Indicates whether deletion protection is enabled for the load balancer.",
+            "value": "${data.aws_alb.this.enable_deletion_protection}"
+        },
+        "enable_http2": {
+            "description": "Indicates whether HTTP/2 is enabled.",
+            "value": "${data.aws_alb.this.enable_http2}"
+        },
+        "enable_tls_version_and_cipher_suite_headers": {
+            "description": "Indicates whether TLS version and cipher suite headers are enabled.",
+            "value": "${data.aws_alb.this.enable_tls_version_and_cipher_suite_headers}"
+        },
+        "enable_waf_fail_open": {
+            "description": "Indicates whether the load balancer allows traffic if the web application firewall fails open.",
+            "value": "${data.aws_alb.this.enable_waf_fail_open}"
+        },
+        "enable_xff_client_port": {
+            "description": "Indicates whether the load balancer includes the X-Forwarded-For client port.",
+            "value": "${data.aws_alb.this.enable_xff_client_port}"
+        },
+        "enable_zonal_shift": {
+            "description": "Indicates whether zonal shift is enabled.",
+            "value": "${data.aws_alb.this.enable_zonal_shift}"
+        },
+        "enforce_security_group_inbound_rules_on_private_link_traffic": {
+            "description": "Indicates the enforcement of security group inbound rules on PrivateLink traffic.",
+            "value": "${data.aws_alb.this.enforce_security_group_inbound_rules_on_private_link_traffic}"
+        },
+        "id": {
+            "description": "The ID of the load balancer.",
+            "value": "${data.aws_alb.this.id}"
+        },
+        "idle_timeout": {
+            "description": "The idle timeout value, in seconds, for connections to the load balancer.",
+            "value": "${data.aws_alb.this.idle_timeout}"
+        },
+        "internal": {
+            "description": "Indicates whether the load balancer is internal.",
+            "value": "${data.aws_alb.this.internal}"
+        },
+        "ip_address_type": {
+            "description": "The type of IP addresses used by the load balancer, either IPv4 or dualstack.",
+            "value": "${data.aws_alb.this.ip_address_type}"
+        },
+        "load_balancer_type": {
+            "description": "The type of the load balancer, such as application or network.",
+            "value": "${data.aws_alb.this.load_balancer_type}"
+        },
+        "name": {
+            "description": "The name of the load balancer.",
+            "value": "${data.aws_alb.this.name}"
+        },
+        "preserve_host_header": {
+            "description": "Indicates whether to preserve the original host header.",
+            "value": "${data.aws_alb.this.preserve_host_header}"
+        },
+        "security_groups": {
+            "description": "The security groups associated with the load balancer.",
+            "value": "${data.aws_alb.this.security_groups}"
+        },
+        "subnet_mapping": {
+            "description": "Information about the subnet mappings for the load balancer.",
+            "value": "${data.aws_alb.this.subnet_mapping}"
+        },
+        "subnets": {
+            "description": "The subnets associated with the load balancer.",
+            "value": "${data.aws_alb.this.subnets}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the load balancer.",
+            "value": "${data.aws_alb.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC for the load balancer.",
+            "value": "${data.aws_alb.this.vpc_id}"
+        },
+        "xff_header_processing_mode": {
+            "description": "The processing mode for X-Forwarded-For headers.",
+            "value": "${data.aws_alb.this.xff_header_processing_mode}"
+        },
+        "zone_id": {
+            "description": "The ID of the zone where the load balancer is located.",
+            "value": "${data.aws_alb.this.zone_id}"
+        }
+    }
+}

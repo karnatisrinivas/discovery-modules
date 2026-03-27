@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Efs Mount Target
+  node:
+    label:
+      static: Efs Mount Target
+      template: ${file_system_id}
+    display_type: default
+
+discovery:
+  type: aws_efs_mount_target
+  dnd_supported: false
+  references:
+    file_system_id:
+      from: aws_efs_file_system
+      output: id
+    security_groups:
+      from: aws_security_group
+      output: id

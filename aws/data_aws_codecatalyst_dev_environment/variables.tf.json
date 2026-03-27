@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "alias": [
+      {
+        "description": "A short name or identifier used as an alternative to the full name of the resource.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "creator_id": [
+      {
+        "description": "The unique identifier of the user who created the development environment.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "env_id": [
+      {
+        "description": "The unique identifier for the development environment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "project_name": [
+      {
+        "description": "The name of the project associated with the development environment.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "space_name": [
+      {
+        "description": "The name of the space or workspace where the project is located.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

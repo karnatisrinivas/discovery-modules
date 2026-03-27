@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Internet Gateway"
+  node:
+    label:
+      static: "[Data] Internet Gateway"
+      template: "[Data] Internet Gateway"
+    display_type: default
+
+discovery:
+  type: data_aws_internet_gateway
+  dnd_supported: false

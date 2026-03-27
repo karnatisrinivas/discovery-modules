@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "latest_valid_till": [
+      {
+        "description": "Indicates whether to retrieve the latest expiration date for the RDS certificate.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Waf Subscribed Rule Group"
+  node:
+    label:
+      static: "[Data] Waf Subscribed Rule Group"
+      template: "[Data] Waf Subscribed Rule Group"
+    display_type: default
+
+discovery:
+  type: data_aws_waf_subscribed_rule_group
+  dnd_supported: false

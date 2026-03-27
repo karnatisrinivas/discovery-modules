@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "access_string": [
+      {
+        "description": "Specifies the access permissions for the ElastiCache user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "engine": [
+      {
+        "description": "The database engine used by the ElastiCache user, such as Redis.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "no_password_required": [
+      {
+        "description": "Indicates whether the user can access ElastiCache without a password.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "passwords": [
+      {
+        "description": "A set of passwords for the ElastiCache user, allowing multiple passwords to be set.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "user_id": [
+      {
+        "description": "A unique identifier for the ElastiCache user.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "user_name": [
+      {
+        "description": "The name assigned to the ElastiCache user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

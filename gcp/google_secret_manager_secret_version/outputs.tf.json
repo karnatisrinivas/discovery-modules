@@ -1,0 +1,29 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp for the creation of the secret version, useful for auditing changes",
+            "value": "${google_secret_manager_secret_version.this.create_time}"
+        },
+        "destroy_time": {
+            "description": "Timestamp for the deletion of the secret version, useful for tracking lifecycle events",
+            "value": "${google_secret_manager_secret_version.this.destroy_time}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the secret version in configurations",
+            "value": "${google_secret_manager_secret_version.this.id}"
+        },
+        "name": {
+            "description": "Resource name used to identify the secret version for API operations",
+            "value": "${google_secret_manager_secret_version.this.name}"
+        },
+        "secret_data": {
+            "description": "Encrypted payload of the secret, useful for retrieving sensitive data securely",
+            "sensitive": true,
+            "value": "${google_secret_manager_secret_version.this.secret_data}"
+        },
+        "version": {
+            "description": "Version number indicating the specific iteration of the secret",
+            "value": "${google_secret_manager_secret_version.this.version}"
+        }
+    }
+}

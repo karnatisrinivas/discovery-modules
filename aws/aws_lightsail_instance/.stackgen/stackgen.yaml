@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Lightsail Instance
+  node:
+    label:
+      static: Lightsail Instance
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_lightsail_instance
+  dnd_supported: false

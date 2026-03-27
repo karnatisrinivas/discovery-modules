@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Network Security Group"
+  node:
+    label:
+      static: "[Data] Network Security Group"
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_network_security_group
+  dnd_supported: false

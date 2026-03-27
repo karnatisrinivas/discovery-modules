@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "display_name": [
+      {
+        "description": "Name assigned to the API key for identification purposes; must be unique within the project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The display name of the API key, must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "restrictions": [
+      {
+        "description": "Defines the usage restrictions for the API key, such as allowed referrers, IP addresses, or API services.",
+        "nullable": true,
+        "type": "list(object({android_key_restrictions: list(object({allowed_applications: list(object({package_name: string,sha1_fingerprint: string}))})),api_targets: list(object({methods: optional(list(string)),service: string})),browser_key_restrictions: list(object({allowed_referrers: list(string)})),ios_key_restrictions: list(object({allowed_bundle_ids: list(string)})),server_key_restrictions: list(object({allowed_ips: list(string)}))}))"
+      }
+    ],
+    "service_account_email": [
+      {
+        "description": "Email of the service account used to authenticate API key operations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration settings for creating, updating, or deleting the API key, allowing customization of operation time limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

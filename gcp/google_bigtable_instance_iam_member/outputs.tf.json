@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Resource fingerprint for detecting configuration changes",
+            "value": "${google_bigtable_instance_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Identifier linking the IAM member to the Bigtable instance",
+            "value": "${google_bigtable_instance_iam_member.this.id}"
+        }
+    }
+}

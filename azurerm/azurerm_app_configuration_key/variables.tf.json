@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "configuration_store_id": [
+      {
+        "description": "Defines the ID of the configuration store (required)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "content_type": [
+      {
+        "description": "Specifies the content type (e.g., application/json, text/plain)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "etag": [
+      {
+        "description": "Represents the entity tag for concurrency control",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "key": [
+      {
+        "description": "Defines the unique key for the configuration setting (required)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "label": [
+      {
+        "description": "Specifies the label for the configuration setting (optional)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "locked": [
+      {
+        "description": "Indicates if the setting is locked (true/false)",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Defines metadata as key-value pairs for categorization",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Manages operation timeouts (e.g., create, read, update, delete)",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of the configuration setting",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "value": [
+      {
+        "description": "Defines the value of the configuration setting",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vault_key_reference": [
+      {
+        "description": "References a vault key for encryption purposes",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

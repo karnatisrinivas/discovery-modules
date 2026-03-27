@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elb Service Account"
+  node:
+    label:
+      static: "[Data] Elb Service Account"
+      template: "[Data] Elb Service Account"
+    display_type: default
+
+discovery:
+  type: data_aws_elb_service_account
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DB Option Group
+  node:
+    label:
+      static: DB Option Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_db_option_group
+  dnd_supported: false

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "dns_zone_id": {
+            "description": "The value of the dns_zone_id output",
+            "value": "${azurerm_dns_zone.zone.id}"
+        },
+        "name": {
+            "description": "The value of the name output",
+            "value": "${azurerm_dns_zone.zone.name}"
+        }
+    }
+}

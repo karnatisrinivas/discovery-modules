@@ -1,0 +1,61 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the Memcache instance.",
+                "nullable": false
+            }
+        ],
+        "authorized_network": [
+            {
+                "type": "string",
+                "description": "The full name of the GCE network to connect the instance to. If not provided, 'default' will be used.",
+                "nullable": true
+            }
+        ],
+        "labels": [
+            {
+                "type": "map(string)",
+                "description": "A set of key/value label pairs to assign to the Memcache instance.",
+                "nullable": true
+            }
+        ],
+        "cpu_count": [
+            {
+                "type": "number",
+                "description": "Number of CPUs per node in the Memcache instance. Must be even number or 1.",
+                "nullable": false
+            }
+        ],
+        "memory_size_mb": [
+            {
+                "type": "number",
+                "description": "Memory size in MiB for each Memcache node. Valid range ",
+                "nullable": false
+            }
+        ],
+        "node_count": [
+            {
+                "type": "number",
+                "description": "Number of nodes in the memcache instance. Must be within Range. [1, 20]",
+                "nullable": false
+            }
+        ],
+        "memcache_version": [
+            {
+                "type": "string",
+                "description": "The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically determined by our system based on the latest supported minor version. Default value is MEMCACHE_1_5",
+                "nullable": true,
+                "default": "MEMCACHE_1_5"
+            }
+        ],
+        "maintenance_policy": [
+            {
+                "type": "list(object({ day: string, duration: number, hours: optional(number), minutes: optional(number), seconds: optional(number), nanos: optional(number) }))",
+                "description": "Maintenance policy for an instance. If no values are set, maintenance will be scheduled at midnight on the day selected in UTC. Duration must be within [10,800 - 28,800] and must end with 's'.",
+                "nullable": true
+            }
+        ]
+    }
+}

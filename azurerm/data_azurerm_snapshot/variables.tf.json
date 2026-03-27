@@ -1,0 +1,24 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "Specifies the name of the snapshot. Must be unique within the resource group and adhere to Azure naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines custom timeout settings for create, read, update, and delete operations on the snapshot.",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

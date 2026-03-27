@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS Organizations policy associated with the specified target.",
+            "value": "${data.aws_organizations_policies_for_target.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for all AWS Organizations policies associated with the specified target.",
+            "value": "${data.aws_organizations_policies_for_target.this.ids}"
+        }
+    }
+}

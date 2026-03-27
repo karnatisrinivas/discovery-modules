@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "availability_zone": [
+      {
+        "description": "The specific availability zone in which to check the spot price of the EC2 instance.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "instance_type": [
+      {
+        "description": "The type of EC2 instance for which the spot price is being queried, such as t2.micro or m5.large.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

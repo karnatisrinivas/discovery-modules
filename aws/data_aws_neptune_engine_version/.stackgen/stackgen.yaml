@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Neptune Engine Version"
+  node:
+    label:
+      static: "[Data] Neptune Engine Version"
+      template: "[Data] Neptune Engine Version"
+    display_type: default
+
+discovery:
+  type: data_aws_neptune_engine_version
+  dnd_supported: false

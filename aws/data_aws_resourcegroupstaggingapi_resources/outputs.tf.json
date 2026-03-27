@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the resource tagging API resources.",
+            "value": "${data.aws_resourcegroupstaggingapi_resources.this.id}"
+        },
+        "resource_tag_mapping_list": {
+            "description": "A list detailing the resource tags, including compliance information and resource ARNs.",
+            "value": "${data.aws_resourcegroupstaggingapi_resources.this.resource_tag_mapping_list}"
+        }
+    }
+}

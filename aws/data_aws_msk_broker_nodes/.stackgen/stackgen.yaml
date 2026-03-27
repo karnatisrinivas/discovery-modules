@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Msk Broker Nodes"
+  node:
+    label:
+      static: "[Data] Msk Broker Nodes"
+      template: "[Data] Msk Broker Nodes"
+    display_type: default
+
+discovery:
+  type: data_aws_msk_broker_nodes
+  dnd_supported: false

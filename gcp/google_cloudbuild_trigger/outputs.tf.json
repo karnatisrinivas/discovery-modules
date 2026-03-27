@@ -1,0 +1,16 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the Cloud Build trigger was created",
+            "value": "${google_cloudbuild_trigger.this.create_time}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the Cloud Build trigger resource",
+            "value": "${google_cloudbuild_trigger.this.id}"
+        },
+        "trigger_id": {
+            "description": "Unique ID for referencing the trigger in build configurations",
+            "value": "${google_cloudbuild_trigger.this.trigger_id}"
+        }
+    }
+}

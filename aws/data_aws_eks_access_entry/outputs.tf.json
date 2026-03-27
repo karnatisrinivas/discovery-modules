@@ -1,0 +1,32 @@
+{
+    "output": {
+        "access_entry_arn": {
+            "description": "The Amazon Resource Name (ARN) of the EKS access entry, which uniquely identifies it.",
+            "value": "${data.aws_eks_access_entry.this.access_entry_arn}"
+        },
+        "created_at": {
+            "description": "The date and time when the EKS access entry was created.",
+            "value": "${data.aws_eks_access_entry.this.created_at}"
+        },
+        "id": {
+            "description": "The unique identifier for the EKS access entry.",
+            "value": "${data.aws_eks_access_entry.this.id}"
+        },
+        "kubernetes_groups": {
+            "description": "A set of Kubernetes groups associated with the EKS access entry.",
+            "value": "${data.aws_eks_access_entry.this.kubernetes_groups}"
+        },
+        "modified_at": {
+            "description": "The date and time when the EKS access entry was last modified.",
+            "value": "${data.aws_eks_access_entry.this.modified_at}"
+        },
+        "tags_all": {
+            "description": "A map of tags assigned to the EKS access entry, providing metadata information.",
+            "value": "${data.aws_eks_access_entry.this.tags_all}"
+        },
+        "user_name": {
+            "description": "The name of the user associated with the EKS access entry.",
+            "value": "${data.aws_eks_access_entry.this.user_name}"
+        }
+    }
+}

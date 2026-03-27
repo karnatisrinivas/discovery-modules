@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the IAM account alias.",
+            "value": "${aws_iam_account_alias.this.id}"
+        }
+    }
+}

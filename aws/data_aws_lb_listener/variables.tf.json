@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The ARN of the LB Listener",
+        "type": "string",
+        "nullable": false
+      }
+    ]
+  }
+}

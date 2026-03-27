@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "domain": [
+            {
+                "type": "string",
+                "description": "The domain to create the mail from",
+                "nullable": false
+            }
+        ],
+        "mail_from_domain": [
+            {
+                "type": "string",
+                "description": "The mail from domain",
+                "nullable": false
+            }
+        ],
+        "behavior_on_mx_failure": [
+            {
+                "type": "string",
+                "description": "The behavior on mx failure",
+                "nullable": true
+            }
+        ]
+    }
+}

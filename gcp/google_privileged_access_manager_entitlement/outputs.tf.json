@@ -1,0 +1,28 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp when the entitlement was created for audit purposes",
+            "value": "${google_privileged_access_manager_entitlement.this.create_time}"
+        },
+        "etag": {
+            "description": "Entity tag for tracking changes to the entitlement resource",
+            "value": "${google_privileged_access_manager_entitlement.this.etag}"
+        },
+        "id": {
+            "description": "Unique identifier for the entitlement used in resource referencing",
+            "value": "${google_privileged_access_manager_entitlement.this.id}"
+        },
+        "name": {
+            "description": "Fully qualified name of the entitlement for identification",
+            "value": "${google_privileged_access_manager_entitlement.this.name}"
+        },
+        "state": {
+            "description": "Current operational state of the entitlement resource",
+            "value": "${google_privileged_access_manager_entitlement.this.state}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update to the entitlement for tracking modifications",
+            "value": "${google_privileged_access_manager_entitlement.this.update_time}"
+        }
+    }
+}

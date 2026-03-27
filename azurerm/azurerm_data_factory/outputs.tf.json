@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The value of the data_factory_id output",
+            "value": "${azurerm_data_factory.this.id}"
+        }
+    }
+}

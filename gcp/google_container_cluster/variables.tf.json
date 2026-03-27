@@ -1,0 +1,487 @@
+{
+  "variable": {
+    "addons_config": [
+      {
+        "description": "Configuration block for enabling or disabling various Kubernetes add-ons, such as HTTP load balancing, Cloud Run, or Node Local DNS.",
+        "nullable": true,
+        "type": "list(object({cloudrun_config: list(object({disabled: bool,load_balancer_type: optional(string)})),config_connector_config: list(object({enabled: bool})),dns_cache_config: list(object({enabled: bool})),gce_persistent_disk_csi_driver_config: list(object({enabled: bool})),gcp_filestore_csi_driver_config: list(object({enabled: bool})),gcs_fuse_csi_driver_config: list(object({enabled: bool})),gke_backup_agent_config: list(object({enabled: bool})),horizontal_pod_autoscaling: list(object({disabled: bool})),http_load_balancing: list(object({disabled: bool})),network_policy_config: list(object({disabled: bool})),parallelstore_csi_driver_config: list(object({enabled: bool})),ray_operator_config: list(object({enabled: bool,ray_cluster_logging_config: list(object({enabled: bool})),ray_cluster_monitoring_config: list(object({enabled: bool}))})),stateful_ha_config: list(object({enabled: bool}))}))"
+      }
+    ],
+    "allow_net_admin": [
+      {
+        "description": "Determines whether network administrators are granted permissions within the Kubernetes Engine cluster; must be set based on organizational access policies.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "authenticator_groups_config": [
+      {
+        "description": "Configures Google Groups for RBAC role bindings, specifying the security group for authentication.",
+        "nullable": true,
+        "type": "list(object({security_group: string}))"
+      }
+    ],
+    "binary_authorization": [
+      {
+        "description": "Enables Binary Authorization for the cluster to enforce image verification policies.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool),evaluation_mode: optional(string)}))"
+      }
+    ],
+    "cluster_autoscaling": [
+      {
+        "description": "Configures cluster autoscaling settings, enabling automatic adjustment of node pool sizes based on resource usage.",
+        "nullable": true,
+        "type": "list(object({auto_provisioning_locations: optional(list(string)),autoscaling_profile: optional(string),enabled: optional(bool),auto_provisioning_defaults: list(object({boot_disk_kms_key: optional(string),disk_size: optional(number),disk_type: optional(string),image_type: optional(string),min_cpu_platform: optional(string),oauth_scopes: optional(list(string)),service_account: optional(string),management: list(object({auto_repair: optional(bool),auto_upgrade: optional(bool),upgrade_options: optional(list(object({auto_upgrade_start_time:string,description:string})))})),shielded_instance_config: list(object({enable_integrity_monitoring: optional(bool),enable_secure_boot: optional(bool)})),upgrade_settings: list(object({max_surge: optional(number),max_unavailable: optional(number),strategy: optional(string),blue_green_settings: list(object({node_pool_soak_duration: optional(string),standard_rollout_policy: list(object({batch_node_count: optional(number),batch_percentage: optional(number),batch_soak_duration: optional(string)}))}))}))})),resource_limits: list(object({maximum: number,minimum: optional(number),resource_type: string}))}))"
+      }
+    ],
+    "cluster_ipv4_cidr": [
+      {
+        "description": "Defines the IP address range for the cluster's pods, specified in CIDR notation. Must not overlap with any existing network CIDR ranges.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "confidential_nodes": [
+      {
+        "description": "Enables confidential computing on all nodes in the cluster; must be used with supported machine types.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "control_plane_endpoints_config": [
+      {
+        "description": "Configuration for the control plane endpoints, specifying how the cluster's API server is accessed and exposed.",
+        "nullable": true,
+        "type": "list(object({dns_endpoint_config: list(object({allow_external_traffic: optional(bool),endpoint: optional(string)})),ip_endpoints_config: list(object({enabled: optional(bool)}))}))"
+      }
+    ],
+    "cost_management_config": [
+      {
+        "description": "Configures cost management settings for the cluster, including parameters for tracking and optimizing resource usage.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "database_encryption": [
+      {
+        "description": "Specifies the configuration for database encryption, including the key to encrypt Kubernetes secrets. Requires a Google Cloud KMS key.",
+        "nullable": true,
+        "type": "list(object({key_name: optional(string),state: string}))"
+      }
+    ],
+    "datapath_provider": [
+      {
+        "description": "Specifies the network datapath provider for the cluster; options are 'LEGACY_DATAPATH' or 'ADVANCED_DATAPATH'.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "default_max_pods_per_node": [
+      {
+        "description": "Specifies the maximum number of pods that can run on a single node; must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "default_snat_status": [
+      {
+        "description": "Controls whether default SNAT is enabled for the cluster; must be a valid configuration for the cluster's networking setup.",
+        "nullable": true,
+        "type": "list(object({disabled: bool}))"
+      }
+    ],
+    "deletion_protection": [
+      {
+        "description": "Enables protection against accidental deletion of the cluster; set to true to prevent deletion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "description": [
+      {
+        "description": "Specifies the description of the GKE cluster; can be used to provide context or details about the cluster's purpose.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_l4_lb_firewall_reconciliation": [
+      {
+        "description": "Determines whether automatic firewall rule reconciliation for L4 load balancers is disabled; set to true to disable.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "dns_config": [
+      {
+        "description": "Configures DNS settings for the Kubernetes cluster, including features like private DNS and Cloud DNS integration.",
+        "nullable": true,
+        "type": "list(object({additive_vpc_scope_dns_domain: optional(string),cluster_dns: optional(string),cluster_dns_domain: optional(string),cluster_dns_scope: optional(string)}))"
+      }
+    ],
+    "enable_autopilot": [
+      {
+        "description": "Enables Autopilot mode for the cluster, which manages and optimizes infrastructure and operations automatically; requires Kubernetes version compatibility.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_cilium_clusterwide_network_policy": [
+      {
+        "description": "Enables the use of Cilium cluster-wide network policies for enhanced security and traffic management; requires the cluster to support Cilium networking.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_fqdn_network_policy": [
+      {
+        "description": "Determines whether the Fully Qualified Domain Name (FQDN) network policy is enabled for the cluster, allowing domain-based restrictions for network traffic.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_intranode_visibility": [
+      {
+        "description": "Controls whether intra-node visibility is enabled, allowing packets sent between nodes to pass through the cluster's virtual network. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_k8s_beta_apis": [
+      {
+        "description": "Determines whether Kubernetes beta APIs are enabled for the cluster; requires compatibility with the cluster version and features.",
+        "nullable": true,
+        "type": "list(object({enabled_apis: list(string)}))"
+      }
+    ],
+    "enable_kubernetes_alpha": [
+      {
+        "description": "Enables Kubernetes alpha features; setting this to true is irreversible and may include breaking changes.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_l4_ilb_subsetting": [
+      {
+        "description": "Enables L4 Internal Load Balancer subsetting, allowing backend services to distribute traffic only to healthy nodes. Requires private cluster and network configuration.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_legacy_abac": [
+      {
+        "description": "Enables or disables the Legacy ABAC authorization mode for the cluster; must be set to false for enhanced security.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_multi_networking": [
+      {
+        "description": "Determines if multi-networking is enabled for the cluster, allowing the use of multiple network interfaces.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_shielded_nodes": [
+      {
+        "description": "Specifies whether Shielded Nodes are enabled, providing additional security features for node instances.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_tpu": [
+      {
+        "description": "Enables the use of Cloud TPUs in the cluster; requires TPU support to be available in the selected zone.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enterprise_config": [
+      {
+        "description": "Specifies the configuration for enabling enterprise features in the cluster, such as advanced security or access controls.",
+        "nullable": true,
+        "type": "list(object({cluster_tier: optional(string),desired_tier: optional(string)}))"
+      }
+    ],
+    "fleet": [
+      {
+        "description": "Specifies the configuration for the Anthos fleet integration, enabling features such as service mesh, workload identity, and other fleet-specific functionalities.",
+        "nullable": true,
+        "type": "list(object({membership: optional(string),membership_id: optional(string),membership_location: optional(string),pre_registered: optional(bool),project: optional(string)}))"
+      }
+    ],
+    "gateway_api_config": [
+      {
+        "description": "Configuration for the Gateway API feature, enabling or disabling the feature and specifying additional settings if required.",
+        "nullable": true,
+        "type": "list(object({channel: string}))"
+      }
+    ],
+    "identity_service_config": [
+      {
+        "description": "Configuration for enabling and managing workload identity service on the cluster; must be a valid identity service configuration block.",
+        "nullable": true,
+        "type": "list(object({enabled: optional(bool)}))"
+      }
+    ],
+    "initial_node_count": [
+      {
+        "description": "Specifies the number of nodes to create in the initial node pool; must be a non-negative integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "ip_allocation_policy": [
+      {
+        "description": "Defines the IP allocation settings for the cluster, including whether to use VPC-native IPs and the specific ranges for pods and services.",
+        "nullable": true,
+        "type": "list(object({cluster_ipv4_cidr_block: optional(string),cluster_secondary_range_name: optional(string),services_ipv4_cidr_block: optional(string),services_secondary_range_name: optional(string),stack_type: optional(string),additional_pod_ranges_config: list(object({pod_range_names: list(string)})),pod_cidr_overprovision_config: list(object({disabled: bool}))}))"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the zone or region where the cluster will be created; must match the format for Google Cloud locations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "logging_config": [
+      {
+        "description": "Defines the logging configuration for the Kubernetes cluster, specifying the services or components for which logs should be enabled or disabled.",
+        "nullable": true,
+        "type": "list(object({enable_components: list(string)}))"
+      }
+    ],
+    "logging_service": [
+      {
+        "description": "Specifies the logging service used by the cluster, such as 'logging.googleapis.com/kubernetes' for Cloud Logging. Use 'none' to disable logging.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "maintenance_policy": [
+      {
+        "description": "Specifies the maintenance policy for the cluster, including maintenance windows and exclusions; must follow GKE maintenance policy format.",
+        "nullable": true,
+        "type": "list(object({daily_maintenance_window: list(object({duration: optional(string),start_time: string})),maintenance_exclusion: list(object({end_time: string,exclusion_name: string,start_time: string,exclusion_options: list(object({scope: string}))})),recurring_window: list(object({end_time: string,recurrence: string,start_time: string}))}))"
+      }
+    ],
+    "master_auth": [
+      {
+        "description": "Defines the authentication methods for accessing the Kubernetes master endpoint, including options for username-password, client certificates, and disabling authentication.",
+        "nullable": true,
+        "type": "list(object({client_certificate: optional(string),client_key: optional(string),cluster_ca_certificate: optional(string),client_certificate_config: list(object({issue_client_certificate: bool}))}))"
+      }
+    ],
+    "master_authorized_networks_config": [
+      {
+        "description": "Specifies the CIDR blocks and their corresponding descriptions to allow access to the Kubernetes master endpoint; must be a list of authorized networks.",
+        "nullable": true,
+        "type": "list(object({gcp_public_cidrs_access_enabled: optional(bool),private_endpoint_enforcement_enabled: optional(bool),cidr_blocks: list(object({cidr_block: string,display_name: optional(string)}))}))"
+      }
+    ],
+    "mesh_certificates": [
+      {
+        "description": "Enables or disables the issuance of Mesh Certificates for the cluster, used for service mesh features.",
+        "nullable": true,
+        "type": "list(object({enable_certificates: bool}))"
+      }
+    ],
+    "min_master_version": [
+      {
+        "description": "Specifies the minimum Kubernetes version for the cluster's master node; must match or exceed the supported versions for the selected cluster region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "monitoring_config": [
+      {
+        "description": "Configuration for monitoring settings in the Kubernetes cluster, including components to be enabled or disabled.",
+        "nullable": true,
+        "type": "list(object({enable_components: optional(list(string)),advanced_datapath_observability_config: list(object({enable_metrics: bool,enable_relay: bool})),managed_prometheus: list(object({enabled: bool,auto_monitoring_config: list(object({scope: string}))}))}))"
+      }
+    ],
+    "monitoring_service": [
+      {
+        "description": "Specifies the monitoring service used for the cluster. Must be one of \"monitoring.googleapis.com\" (Cloud Monitoring) or \"none\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Google Kubernetes Engine cluster, must be unique within the project and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network in which the cluster is created; must be a VPC network in the same project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "network_policy": [
+      {
+        "description": "Enables or disables network policy in the cluster; requires the cluster to have a compatible network plugin such as Calico.",
+        "nullable": true,
+        "type": "list(object({enabled: bool,provider: optional(string)}))"
+      }
+    ],
+    "networking_mode": [
+      {
+        "description": "Specifies the networking mode for the cluster, such as VPC-native or routes-based. Ensure compatibility with the cluster's networking configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "node_config": [
+      {
+        "description": "Configuration for the nodes in the cluster, including machine type, disk size, and other settings.",
+        "nullable": true,
+        "type": "list(object({boot_disk_kms_key: optional(string),disk_size_gb: optional(number),disk_type: optional(string),effective_taints: optional(list(object({effect:string,key:string,value:string}))),enable_confidential_storage: optional(bool),image_type: optional(string),labels: optional(map(string)),local_ssd_count: optional(number),local_ssd_encryption_mode: optional(string),logging_variant: optional(string),machine_type: optional(string),max_run_duration: optional(string),metadata: optional(map(string)),min_cpu_platform: optional(string),node_group: optional(string),oauth_scopes: optional(list(string)),preemptible: optional(bool),resource_labels: optional(map(string)),resource_manager_tags: optional(map(string)),service_account: optional(string),spot: optional(bool),storage_pools: optional(list(string)),tags: optional(list(string)),advanced_machine_features: list(object({enable_nested_virtualization: optional(bool),threads_per_core: number})),confidential_nodes: list(object({enabled: bool})),containerd_config: list(object({private_registry_access_config: list(object({enabled: bool,certificate_authority_domain_config: list(object({fqdns: list(string),gcp_secret_manager_certificate_config: list(object({secret_uri: string}))}))}))})),ephemeral_storage_local_ssd_config: list(object({local_ssd_count: number})),fast_socket: list(object({enabled: bool})),gcfs_config: list(object({enabled: bool})),guest_accelerator: list(object({count: number,gpu_partition_size: optional(string),type: string,gpu_driver_installation_config: list(object({gpu_driver_version: string})),gpu_sharing_config: list(object({gpu_sharing_strategy: string,max_shared_clients_per_gpu: number}))})),gvnic: list(object({enabled: bool})),host_maintenance_policy: list(object({maintenance_interval: string})),kubelet_config: list(object({allowed_unsafe_sysctls: optional(list(string)),container_log_max_files: optional(number),container_log_max_size: optional(string),cpu_cfs_quota: optional(bool),cpu_cfs_quota_period: optional(string),cpu_manager_policy: optional(string),image_gc_high_threshold_percent: optional(number),image_gc_low_threshold_percent: optional(number),image_maximum_gc_age: optional(string),image_minimum_gc_age: optional(string),insecure_kubelet_readonly_port_enabled: optional(string),pod_pids_limit: optional(number)})),linux_node_config: list(object({cgroup_mode: optional(string),sysctls: optional(map(string)),hugepages_config: list(object({hugepage_size_1g: optional(number),hugepage_size_2m: optional(number)}))})),local_nvme_ssd_block_config: list(object({local_ssd_count: number})),reservation_affinity: list(object({consume_reservation_type: string,key: optional(string),values: optional(list(string))})),secondary_boot_disks: list(object({disk_image: string,mode: optional(string)})),shielded_instance_config: list(object({enable_integrity_monitoring: optional(bool),enable_secure_boot: optional(bool)})),sole_tenant_config: list(object({node_affinity: list(object({key: string,operator: string,values: list(string)}))})),taint: list(object({effect: string,key: string,value: string})),windows_node_config: list(object({osversion: optional(string)})),workload_metadata_config: list(object({mode: string}))}))"
+      }
+    ],
+    "node_locations": [
+      {
+        "description": "Specifies the zones in which the cluster's nodes should be created; must be within the cluster's region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "node_pool": [
+      {
+        "description": "Configuration for the node pool, including settings such as the number of nodes, machine type, and auto-scaling options.",
+        "nullable": true,
+        "type": "list(object({initial_node_count: optional(number),instance_group_urls: optional(list(string)),managed_instance_group_urls: optional(list(string)),max_pods_per_node: optional(number),name: optional(string),name_prefix: optional(string),node_count: optional(number),node_locations: optional(list(string)),version: optional(string),autoscaling: list(object({location_policy: optional(string),max_node_count: optional(number),min_node_count: optional(number),total_max_node_count: optional(number),total_min_node_count: optional(number)})),management: list(object({auto_repair: optional(bool),auto_upgrade: optional(bool)})),network_config: list(object({create_pod_range: optional(bool),enable_private_nodes: optional(bool),pod_ipv4_cidr_block: optional(string),pod_range: optional(string),additional_node_network_configs: list(object({network: optional(string),subnetwork: optional(string)})),additional_pod_network_configs: list(object({max_pods_per_node: optional(number),secondary_pod_range: optional(string),subnetwork: optional(string)})),network_performance_config: list(object({total_egress_bandwidth_tier: string})),pod_cidr_overprovision_config: list(object({disabled: bool}))})),node_config: list(object({boot_disk_kms_key: optional(string),disk_size_gb: optional(number),disk_type: optional(string),effective_taints: optional(list(object({effect:string,key:string,value:string}))),enable_confidential_storage: optional(bool),image_type: optional(string),labels: optional(map(string)),local_ssd_count: optional(number),local_ssd_encryption_mode: optional(string),logging_variant: optional(string),machine_type: optional(string),max_run_duration: optional(string),metadata: optional(map(string)),min_cpu_platform: optional(string),node_group: optional(string),oauth_scopes: optional(list(string)),preemptible: optional(bool),resource_labels: optional(map(string)),resource_manager_tags: optional(map(string)),service_account: optional(string),spot: optional(bool),storage_pools: optional(list(string)),tags: optional(list(string)),advanced_machine_features: list(object({enable_nested_virtualization: optional(bool),threads_per_core: number})),confidential_nodes: list(object({enabled: bool})),containerd_config: list(object({private_registry_access_config: list(object({enabled: bool,certificate_authority_domain_config: list(object({fqdns: list(string),gcp_secret_manager_certificate_config: list(object({secret_uri: string}))}))}))})),ephemeral_storage_local_ssd_config: list(object({local_ssd_count: number})),fast_socket: list(object({enabled: bool})),gcfs_config: list(object({enabled: bool})),guest_accelerator: list(object({count: number,gpu_partition_size: optional(string),type: string,gpu_driver_installation_config: list(object({gpu_driver_version: string})),gpu_sharing_config: list(object({gpu_sharing_strategy: string,max_shared_clients_per_gpu: number}))})),gvnic: list(object({enabled: bool})),host_maintenance_policy: list(object({maintenance_interval: string})),kubelet_config: list(object({allowed_unsafe_sysctls: optional(list(string)),container_log_max_files: optional(number),container_log_max_size: optional(string),cpu_cfs_quota: optional(bool),cpu_cfs_quota_period: optional(string),cpu_manager_policy: optional(string),image_gc_high_threshold_percent: optional(number),image_gc_low_threshold_percent: optional(number),image_maximum_gc_age: optional(string),image_minimum_gc_age: optional(string),insecure_kubelet_readonly_port_enabled: optional(string),pod_pids_limit: optional(number)})),linux_node_config: list(object({cgroup_mode: optional(string),sysctls: optional(map(string)),hugepages_config: list(object({hugepage_size_1g: optional(number),hugepage_size_2m: optional(number)}))})),local_nvme_ssd_block_config: list(object({local_ssd_count: number})),reservation_affinity: list(object({consume_reservation_type: string,key: optional(string),values: optional(list(string))})),secondary_boot_disks: list(object({disk_image: string,mode: optional(string)})),shielded_instance_config: list(object({enable_integrity_monitoring: optional(bool),enable_secure_boot: optional(bool)})),sole_tenant_config: list(object({node_affinity: list(object({key: string,operator: string,values: list(string)}))})),taint: list(object({effect: string,key: string,value: string})),windows_node_config: list(object({osversion: optional(string)})),workload_metadata_config: list(object({mode: string}))})),placement_policy: list(object({policy_name: optional(string),tpu_topology: optional(string),type: string})),queued_provisioning: list(object({enabled: bool})),upgrade_settings: list(object({max_surge: optional(number),max_unavailable: optional(number),strategy: optional(string),blue_green_settings: list(object({node_pool_soak_duration: optional(string),standard_rollout_policy: list(object({batch_node_count: optional(number),batch_percentage: optional(number),batch_soak_duration: optional(string)}))}))}))}))"
+      }
+    ],
+    "node_pool_auto_config": [
+      {
+        "description": "Enables automatic configuration of node pools to optimize security and performance.",
+        "nullable": true,
+        "type": "list(object({resource_manager_tags: optional(map(string)),linux_node_config: list(object({cgroup_mode: optional(string)})),network_tags: list(object({tags: optional(list(string))})),node_kubelet_config: list(object({insecure_kubelet_readonly_port_enabled: optional(string)}))}))"
+      }
+    ],
+    "node_pool_defaults": [
+      {
+        "description": "\"Defines default configuration settings for node pools, including options like machine type, disk size, and auto-scaling policies.\"",
+        "nullable": true,
+        "type": "list(object({node_config_defaults: list(object({insecure_kubelet_readonly_port_enabled: optional(string),logging_variant: optional(string),containerd_config: list(object({private_registry_access_config: list(object({enabled: bool,certificate_authority_domain_config: list(object({fqdns: list(string),gcp_secret_manager_certificate_config: list(object({secret_uri: string}))}))}))})),gcfs_config: list(object({enabled: bool}))}))}))"
+      }
+    ],
+    "node_version": [
+      {
+        "description": "Specifies the Kubernetes version to use for the nodes in the cluster. Must match available versions for the selected region and cluster configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "notification_config": [
+      {
+        "description": "Specifies the notification configuration for the cluster, including Pub/Sub topics for sending notifications.",
+        "nullable": true,
+        "type": "list(object({pubsub: list(object({enabled: bool,topic: optional(string),filter: list(object({event_type: list(string)}))}))}))"
+      }
+    ],
+    "private_cluster_config": [
+      {
+        "description": "Configures the private cluster settings, including private nodes and access control for master and node communication.",
+        "nullable": true,
+        "type": "list(object({enable_private_endpoint: optional(bool),enable_private_nodes: optional(bool),master_ipv4_cidr_block: optional(string),peering_name: optional(string),private_endpoint: optional(string),private_endpoint_subnetwork: optional(string),public_endpoint: optional(string),master_global_access_config: list(object({enabled: bool}))}))"
+      }
+    ],
+    "private_ipv6_google_access": [
+      {
+        "description": "Controls the availability of private Google access for nodes and pods in the cluster. Can be set to `PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED`, `PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE`, or `PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL`.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "release_channel": [
+      {
+        "description": "Determines the release channel for the cluster, such as rapid, regular, or stable, to control the cadence of cluster updates.",
+        "nullable": true,
+        "type": "list(object({channel: string}))"
+      }
+    ],
+    "remove_default_node_pool": [
+      {
+        "description": "Determines whether the default node pool should be removed from the cluster during creation; must be true if custom node pools are to be used.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_labels": [
+      {
+        "description": "Defines key-value pairs to organize and categorize the cluster, useful for filtering and identifying resources. Constraints: Maximum 64 labels per cluster, keys must be 1-63 characters, and values must be 0-63 characters.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_usage_export_config": [
+      {
+        "description": "Configures the export of resource usage data to a specified BigQuery dataset.",
+        "nullable": true,
+        "type": "list(object({enable_network_egress_metering: optional(bool),enable_resource_consumption_metering: optional(bool),bigquery_destination: list(object({dataset_id: string}))}))"
+      }
+    ],
+    "secret_manager_config": [
+      {
+        "description": "Configures the use of Secret Manager for storing Kubernetes secrets, specifying whether Secret Manager is enabled and any associated settings.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "security_posture_config": [
+      {
+        "description": "Configures the security posture for the cluster, including features like shielded nodes and workload identity; must comply with GKE security settings.",
+        "nullable": true,
+        "type": "list(object({mode: optional(string),vulnerability_mode: optional(string)}))"
+      }
+    ],
+    "service_external_ips_config": [
+      {
+        "description": "Configures external IPs for Kubernetes services, specifying whether external IPs are allowed.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "subnetwork": [
+      {
+        "description": "Specifies the subnetwork to which the cluster will be connected; must exist in the same region as the cluster.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout duration for operations on the Kubernetes cluster, such as creation, update, or deletion.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "user_managed_keys_config": [
+      {
+        "description": "Specifies whether to use user-managed keys for Google Kubernetes Engine cluster's encryption, requiring pre-existing Cloud KMS keys.",
+        "nullable": true,
+        "type": "list(object({aggregation_ca: optional(string),cluster_ca: optional(string),control_plane_disk_encryption_key: optional(string),etcd_api_ca: optional(string),etcd_peer_ca: optional(string),gkeops_etcd_backup_encryption_key: optional(string),service_account_signing_keys: optional(list(string)),service_account_verification_keys: optional(list(string))}))"
+      }
+    ],
+    "vertical_pod_autoscaling": [
+      {
+        "description": "Enables automatic adjustment of resource requests and limits for pods based on usage metrics.",
+        "nullable": true,
+        "type": "list(object({enabled: bool}))"
+      }
+    ],
+    "workload_identity_config": [
+      {
+        "description": "Configures Workload Identity for the cluster, allowing Kubernetes service accounts to act as Google service accounts.",
+        "nullable": true,
+        "type": "list(object({workload_pool: optional(string)}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "profiles": {
+            "description": "A list of Route 53 profile objects, each containing the ARN, ID, name, and share status of the profile.",
+            "value": "${data.aws_route53profiles_profiles.this.profiles}"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "cloud_function": [
+            {
+                "description": "Specifies the Cloud Function for which IAM policy bindings will be managed, requiring the resource name in the format `projects/{project}/locations/{location}/functions/{function_name}`.",
+                "nullable": false,
+                "type": "string"
+            }
+        ],
+        "location": [
+            {
+                "description": "Specifies the Google Cloud region where the Cloud Function and IAM policy binding should be applied.",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "policy_data": [
+            {
+                "description": "The IAM policy data to set for the Cloud Function, typically obtained from a `google_iam_policy` data source.",
+                "nullable": false,
+                "type": "string"
+            }
+        ]
+    }
+}

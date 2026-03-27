@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "disallowed_cidrs": [
+      {
+        "description": "A list of CIDR blocks that should not be assigned when previewing the next CIDR from the IPAM pool.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "ipam_pool_id": [
+      {
+        "description": "The ID of the IPAM pool from which to preview the next available CIDR.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "netmask_length": [
+      {
+        "description": "The netmask length for the CIDR block to preview. This defines the size of the CIDR block.",
+        "nullable": true,
+        "type": "number"
+      }
+    ]
+  }
+}

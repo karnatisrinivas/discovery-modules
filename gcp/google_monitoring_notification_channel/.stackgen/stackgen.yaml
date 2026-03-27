@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Monitoring Notification Channel
+  node:
+    label:
+      static: Monitoring Notification Channel
+      template: ${display_name}
+    display_type: default
+
+discovery:
+  type: google_monitoring_notification_channel
+  dnd_supported: false
+  data_source: data_google_monitoring_notification_channel

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EC2 CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the EC2 CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.id}"
+        },
+        "local_gateway_route_table_id": {
+            "description": "The ID of the local gateway route table associated with the CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.local_gateway_route_table_id}"
+        },
+        "pool_cidrs": {
+            "description": "A set of CIDR blocks associated with the CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.pool_cidrs}"
+        },
+        "pool_id": {
+            "description": "The ID of the CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.pool_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the CoIP pool.",
+            "value": "${data.aws_ec2_coip_pool.this.tags}"
+        }
+    }
+}

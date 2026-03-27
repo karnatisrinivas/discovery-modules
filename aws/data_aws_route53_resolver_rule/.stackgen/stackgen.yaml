@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Resolver Rule"
+  node:
+    label:
+      static: "[Data] Route53 Resolver Rule"
+      template: "[Data] Route53 Resolver Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_route53_resolver_rule
+  dnd_supported: false

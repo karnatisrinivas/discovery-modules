@@ -1,0 +1,16 @@
+{
+    "output": {
+        "domain_owner": {
+            "description": "The AWS account ID of the owner of the domain.",
+            "value": "${data.aws_codeartifact_repository_endpoint.this.domain_owner}"
+        },
+        "id": {
+            "description": "The unique identifier for the CodeArtifact repository endpoint.",
+            "value": "${data.aws_codeartifact_repository_endpoint.this.id}"
+        },
+        "repository_endpoint": {
+            "description": "The URL endpoint of the CodeArtifact repository.",
+            "value": "${data.aws_codeartifact_repository_endpoint.this.repository_endpoint}"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "resource_id": [
+      {
+        "description": "The unique identifier of the AWS Route 53 Resolver Firewall configuration resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

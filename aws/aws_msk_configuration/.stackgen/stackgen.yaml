@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Msk Configuration
+  node:
+    label:
+      static: Msk Configuration
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_msk_configuration
+  dnd_supported: false
+  data_source: data_aws_msk_configuration

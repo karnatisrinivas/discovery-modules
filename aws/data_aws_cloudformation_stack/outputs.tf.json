@@ -1,0 +1,48 @@
+{
+    "output": {
+        "capabilities": {
+            "description": "The capabilities allowed in the CloudFormation stack, such as CAPABILITY_IAM or CAPABILITY_NAMED_IAM, which are necessary for creating resources with specific permissions.",
+            "value": "${data.aws_cloudformation_stack.this.capabilities}"
+        },
+        "description": {
+            "description": "A brief explanation or summary of the CloudFormation stack's purpose or functionality.",
+            "value": "${data.aws_cloudformation_stack.this.description}"
+        },
+        "disable_rollback": {
+            "description": "Indicates whether the stack should disable rollback if the creation fails, meaning it will keep the resources created up to the failure point.",
+            "value": "${data.aws_cloudformation_stack.this.disable_rollback}"
+        },
+        "iam_role_arn": {
+            "description": "The Amazon Resource Name (ARN) of the IAM role that CloudFormation assumes to create the stack.",
+            "value": "${data.aws_cloudformation_stack.this.iam_role_arn}"
+        },
+        "id": {
+            "description": "The unique identifier assigned to the CloudFormation stack.",
+            "value": "${data.aws_cloudformation_stack.this.id}"
+        },
+        "notification_arns": {
+            "description": "The ARNs of SNS topics to which CloudFormation sends notifications about stack events.",
+            "value": "${data.aws_cloudformation_stack.this.notification_arns}"
+        },
+        "outputs": {
+            "description": "The output values defined in the CloudFormation stack, which may be used as inputs for other stacks or services.",
+            "value": "${data.aws_cloudformation_stack.this.outputs}"
+        },
+        "parameters": {
+            "description": "The key-value pairs specified in the stack that define input parameters for the CloudFormation template.",
+            "value": "${data.aws_cloudformation_stack.this.parameters}"
+        },
+        "tags": {
+            "description": "A set of key-value pairs used to organize, track, or control access to the CloudFormation stack.",
+            "value": "${data.aws_cloudformation_stack.this.tags}"
+        },
+        "template_body": {
+            "description": "The content of the CloudFormation template used to create the stack, written in JSON or YAML format.",
+            "value": "${data.aws_cloudformation_stack.this.template_body}"
+        },
+        "timeout_in_minutes": {
+            "description": "The maximum amount of time, in minutes, that CloudFormation should take to create the stack before timing out.",
+            "value": "${data.aws_cloudformation_stack.this.timeout_in_minutes}"
+        }
+    }
+}

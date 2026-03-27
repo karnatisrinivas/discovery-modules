@@ -1,0 +1,20 @@
+{
+    "output": {
+        "fair_share_policy": {
+            "description": "Details the fair share policy that includes compute reservations, share decay time, and share distribution among entities identified by share identifiers with respective weight factors.",
+            "value": "${data.aws_batch_scheduling_policy.this.fair_share_policy}"
+        },
+        "id": {
+            "description": "The unique identifier of the AWS Batch scheduling policy.",
+            "value": "${data.aws_batch_scheduling_policy.this.id}"
+        },
+        "name": {
+            "description": "The name of the AWS Batch scheduling policy.",
+            "value": "${data.aws_batch_scheduling_policy.this.name}"
+        },
+        "tags": {
+            "description": "A collection of key-value pairs assigned to the AWS Batch scheduling policy for organizational purposes.",
+            "value": "${data.aws_batch_scheduling_policy.this.tags}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Crypto Key IAM Binding
+  node:
+    label:
+      static: Crypto Key IAM Binding
+      template: Crypto Key IAM Binding
+    display_type: default
+
+discovery:
+  type: google_kms_crypto_key_iam_binding
+  dnd_supported: false
+  references:
+    crypto_key_id:
+      from: google_kms_crypto_key
+      output: id

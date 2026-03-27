@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Waf Rule"
+  node:
+    label:
+      static: "[Data] Waf Rule"
+      template: "[Data] Waf Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_waf_rule
+  dnd_supported: false

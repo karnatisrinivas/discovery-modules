@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "application_id": [
+      {
+        "description": "The unique identifier for the AWS AppConfig application to which the environment belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "environment_id": [
+      {
+        "description": "The unique identifier for the AWS AppConfig environment where configurations are deployed.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

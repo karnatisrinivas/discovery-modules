@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssmcontacts Rotation"
+  node:
+    label:
+      static: "[Data] Ssmcontacts Rotation"
+      template: "[Data] Ssmcontacts Rotation"
+    display_type: default
+
+discovery:
+  type: data_aws_ssmcontacts_rotation
+  dnd_supported: false

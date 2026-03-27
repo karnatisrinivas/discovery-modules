@@ -1,0 +1,64 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the disk resource was created in Google Cloud",
+            "value": "${google_compute_disk.this.creation_timestamp}"
+        },
+        "disk_id": {
+            "description": "Unique identifier for referencing the disk in configurations",
+            "value": "${google_compute_disk.this.disk_id}"
+        },
+        "effective_labels": {
+            "description": "All labels on the disk, including inherited ones, for organization",
+            "value": "${google_compute_disk.this.effective_labels}"
+        },
+        "id": {
+            "description": "Terraform identifier for the disk resource",
+            "value": "${google_compute_disk.this.id}"
+        },
+        "label_fingerprint": {
+            "description": "Fingerprint to detect changes in disk labels",
+            "value": "${google_compute_disk.this.label_fingerprint}"
+        },
+        "last_attach_timestamp": {
+            "description": "Time the disk was last attached to an instance",
+            "value": "${google_compute_disk.this.last_attach_timestamp}"
+        },
+        "last_detach_timestamp": {
+            "description": "Time the disk was last detached from an instance",
+            "value": "${google_compute_disk.this.last_detach_timestamp}"
+        },
+        "name": {
+            "description": "Name of the disk",
+            "value": "${google_compute_disk.this.name}"
+        },
+        "self_link": {
+            "description": "API URL for managing or accessing this disk",
+            "value": "${google_compute_disk.this.self_link}"
+        },
+        "source_disk_id": {
+            "description": "Identifier of the original disk used to create this one",
+            "value": "${google_compute_disk.this.source_disk_id}"
+        },
+        "source_image_id": {
+            "description": "Identifier of the source image used to create this disk",
+            "value": "${google_compute_disk.this.source_image_id}"
+        },
+        "source_instant_snapshot_id": {
+            "description": "Identifier of the instant snapshot used as this disk's source",
+            "value": "${google_compute_disk.this.source_instant_snapshot_id}"
+        },
+        "source_snapshot_id": {
+            "description": "Identifier of the snapshot used to create this disk",
+            "value": "${google_compute_disk.this.source_snapshot_id}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly defined for the disk in Terraform",
+            "value": "${google_compute_disk.this.terraform_labels}"
+        },
+        "users": {
+            "description": "Resources currently attached to or using the disk",
+            "value": "${google_compute_disk.this.users}"
+        }
+    }
+}

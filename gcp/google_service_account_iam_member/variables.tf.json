@@ -1,0 +1,45 @@
+{
+    "variable": {
+        "service_account_id": [
+            {
+                "type": "string",
+                "description": "The fully-qualified name of the service account to apply policy to."
+            }
+        ],
+        "role": [
+            {
+                "type": "string",
+                "description": "The role that should be applied. Only one google_service_account_iam_binding can be used per role. Note that custom roles must be of the format [projects|organizations]/{parent-name}/roles/{role-name}."
+            }
+        ],
+        "member": [
+            {
+                "type": "string",
+                "description": "Identities that will be granted the privilege in role. Valid values: allUsers, AllAuthenticatedUsers, user:{emailid}, serviceAccount:{emailid}, group:{emailid}, domain:{domain}"
+            }
+        ],
+        "condition_expression": [
+            {
+                "type": "string",
+                "description": "Textual representation of an expression in Common Expression Language syntax. Must also set Condition Title to create a condition.",
+                "nullable": true,
+                "default": ""
+            }
+        ],
+        "condition_title": [
+            {
+                "type": "string",
+                "description": "Title for the expression, i.e. a short string describing its purpose. Must also set Condition Expression to create a condition.",
+                "nullable": true,
+                "default": ""
+            }
+        ],
+        "condition_description": [
+            {
+                "type": "string",
+                "description": "An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.",
+                "nullable": true
+            }
+        ]
+    }
+}

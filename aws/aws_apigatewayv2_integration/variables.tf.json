@@ -1,0 +1,130 @@
+{
+  "variable": {
+    "api_id": [
+      {
+        "description": "Specifies the ID of the API Gateway V2 where the integration will be created; required for associating the integration with the correct API.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "connection_id": [
+      {
+        "description": "Specifies the ID of the VPC Link or the AWS service's network connection to be used for the integration. Required if connection type is VPC_LINK.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "connection_type": [
+      {
+        "description": "Specifies the type of network connection for the integration, such as \"INTERNET\" or \"VPC_LINK\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "content_handling_strategy": [
+      {
+        "description": "Specifies how to handle request payloads, either converting them to text or binary format; valid values are \"CONVERT_TO_TEXT\" or \"CONVERT_TO_BINARY\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "credentials_arn": [
+      {
+        "description": "ARN of the IAM role that API Gateway assumes to call the integrated service on behalf of the user. Must be specified for AWS service integrations requiring authorization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a detailed summary of the integration's purpose or functionality, aiding in API Gateway management; must be concise and relevant.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "integration_method": [
+      {
+        "description": "Specifies the HTTP method used for the integration, such as GET, POST, DELETE, etc. Must be supported by the integrated backend service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "integration_subtype": [
+      {
+        "description": "Specifies the subtype of the integration, required for certain types like AWS service integrations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "integration_type": [
+      {
+        "description": "Specifies the type of integration, such as HTTP_PROXY, AWS_PROXY, or MOCK, required for the API Gateway integration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "integration_uri": [
+      {
+        "description": "URI of the backend endpoint for the integration; must be a valid URI and compatible with the integration type.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "passthrough_behavior": [
+      {
+        "description": "Specifies how the API Gateway should handle incoming requests when the request data does not match the integration request mapping. Must be one of \"WHEN_NO_MATCH\", \"WHEN_NO_TEMPLATES\", or \"NEVER\".",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "payload_format_version": [
+      {
+        "description": "Specifies the payload format version for the integration, required for HTTP APIs and must be either 1.0 or 2.0.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "request_parameters": [
+      {
+        "description": "Defines key-value pairs to map request parameters from the incoming request to the backend integration, ensuring proper routing and transformation.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "request_templates": [
+      {
+        "description": "Defines the mapping templates for the request payload, specifying how the integration request data should be transformed before being sent to the backend.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "response_parameters": [
+      {
+        "description": "Defines the response parameters to be passed from the backend to the API Gateway, allowing customization of response headers, query strings, or status codes.",
+        "nullable": true,
+        "type": "list(object({mappings: map(string),status_code: string}))"
+      }
+    ],
+    "template_selection_expression": [
+      {
+        "description": "Specifies the selection expression for choosing an integration template, used for request payload mapping.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeout_milliseconds": [
+      {
+        "description": "Specifies the maximum timeout in milliseconds for an integration request to complete, ranging from 50 to 30000.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tls_config": [
+      {
+        "description": "\"Specifies the TLS configuration for the integration, including requirements for server name verification.\"",
+        "nullable": true,
+        "type": "list(object({server_name_to_verify: optional(string)}))"
+      }
+    ]
+  }
+}

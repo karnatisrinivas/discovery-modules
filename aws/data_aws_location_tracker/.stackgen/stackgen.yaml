@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Location Tracker"
+  node:
+    label:
+      static: "[Data] Location Tracker"
+      template: "[Data] Location Tracker"
+    display_type: default
+
+discovery:
+  type: data_aws_location_tracker
+  dnd_supported: false

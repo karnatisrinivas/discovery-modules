@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for managing permissions and API interactions",
+            "value": "${aws_rds_global_cluster.this.arn}"
+        },
+        "endpoint": {
+            "description": "Cluster endpoint for database connection and operations",
+            "value": "${aws_rds_global_cluster.this.endpoint}"
+        },
+        "engine_version_actual": {
+            "description": "Active database engine version for compatibility checks",
+            "value": "${aws_rds_global_cluster.this.engine_version_actual}"
+        },
+        "global_cluster_members": {
+            "description": "List of cluster members for replication setup and monitoring",
+            "value": "${aws_rds_global_cluster.this.global_cluster_members}"
+        },
+        "global_cluster_resource_id": {
+            "description": "Unique resource ID for referencing the global cluster",
+            "value": "${aws_rds_global_cluster.this.global_cluster_resource_id}"
+        },
+        "id": {
+            "description": "Unique identifier for the RDS global cluster",
+            "value": "${aws_rds_global_cluster.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for resource categorization and filtering",
+            "value": "${aws_rds_global_cluster.this.tags_all}"
+        }
+    }
+}

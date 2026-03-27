@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigateway V2 Authorizer
+  node:
+    label:
+      static: Apigateway V2 Authorizer
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_apigatewayv2_authorizer
+  dnd_supported: false
+  references:
+    api_id:
+      from: aws_apigatewayv2_api
+      output: id

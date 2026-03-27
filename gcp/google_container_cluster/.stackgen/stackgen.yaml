@@ -1,0 +1,22 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: GKE Cluster
+  node:
+    label:
+      static: GKE Cluster
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_container_cluster
+  dnd_supported: false
+  data_source: data_google_container_cluster
+  references:
+    network:
+      from: google_compute_network
+      output: id
+    subnetwork:
+      from: google_compute_subnetwork
+      output: id

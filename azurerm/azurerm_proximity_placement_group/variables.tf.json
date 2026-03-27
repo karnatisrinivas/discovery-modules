@@ -1,0 +1,44 @@
+{
+  "variable": {
+    "allowed_vm_sizes": [
+      {
+        "description": "A set of virtual machine sizes that are allowed to be placed in this proximity placement group. This helps in optimizing the performance of applications by co-locating VMs in close proximity.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the proximity placement group, which is a logical grouping of Azure resources to improve the performance of your applications by minimizing network latency.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs used to tag the proximity placement group with metadata, allowing for easy organization and management of resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zone": [
+      {
+        "description": "The zone of the proximity placement group, which can be used to specify the availability zone within a region where the resources should be placed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

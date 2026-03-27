@@ -1,0 +1,24 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp indicating when the folder was created",
+            "value": "${google_folder.this.create_time}"
+        },
+        "folder_id": {
+            "description": "Unique identifier for the folder within Google Cloud",
+            "value": "${google_folder.this.folder_id}"
+        },
+        "id": {
+            "description": "Resource ID used for managing the folder in Terraform",
+            "value": "${google_folder.this.id}"
+        },
+        "lifecycle_state": {
+            "description": "Current state of the folder, such as ACTIVE or DELETE_REQUESTED",
+            "value": "${google_folder.this.lifecycle_state}"
+        },
+        "name": {
+            "description": "Human-readable name assigned to the folder",
+            "value": "${google_folder.this.name}"
+        }
+    }
+}

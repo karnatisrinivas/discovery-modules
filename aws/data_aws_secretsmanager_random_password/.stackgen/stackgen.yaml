@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Secretsmanager Random Password"
+  node:
+    label:
+      static: "[Data] Secretsmanager Random Password"
+      template: "[Data] Secretsmanager Random Password"
+    display_type: default
+
+discovery:
+  type: data_aws_secretsmanager_random_password
+  dnd_supported: false

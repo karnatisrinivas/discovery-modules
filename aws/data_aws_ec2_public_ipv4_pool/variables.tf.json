@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "pool_id": [
+      {
+        "description": "The unique identifier for the EC2 public IPv4 pool.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

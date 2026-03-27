@@ -1,0 +1,348 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Launch Template
+  node:
+    label:
+      static: Launch Template
+      template: ${name}
+    display_type: default
+
+variables:
+  placement:
+    description: Placement configuration for the instance
+    attributes: 
+      tenancy: 
+        options: 
+          - default
+          - dedicated
+          - host
+        ui_control: select
+        label: Tenancy
+        description: The tenancy for the placement.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+  private_dns_name_options:
+    description: Private DNS name options for the instance
+    attributes: 
+      enable_resource_name_dns_aaaa_record: 
+        ui_control: select
+        label: Enable Resource Name DNS AAAA Record
+        description: Whether to enable the resource name DNS AAAA record.
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+      hostname_type: 
+        label: Hostname Type
+        description: The hostname type for the private DNS name options.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - "ip-name"
+          - "resource-name"
+        ui_control: select
+      enable_resource_name_dns_a_record: 
+        label: Enable Resource Name DNS A Record
+        description: Whether to enable the resource name DNS A record.
+        validation: 
+          dataType: bool
+          required: false
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  network_interfaces:
+    description: Network interface configuration for the instance
+    attributes: 
+      device_index: 
+        label: Device Index
+        description: The index of the network interface.
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      associate_public_ip_address: 
+        label: Associate Public IP
+        description: Associate a public IP address with the network interface.
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+      delete_on_termination: 
+        label: Delete on Termination
+        description: Whether the network interface should be destroyed on instance termination.
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  disable_api_termination:
+    description: Whether to disable API termination
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  capacity_reservation_specification:
+    description: Targeting for EC2 capacity reservations
+    attributes: 
+      capacity_reservation_preference: 
+        label: Capacity Reservation Preference
+        description: The preference for capacity reservation.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - open
+          - none
+        ui_control: select
+  maintenance_options:
+    description: Maintenance options for the instance.
+    attributes: 
+      auto_recovery: 
+        options: 
+          - default
+          - disabled
+        ui_control: select
+        label: Auto Recovery
+        description: Whether to enable auto recovery
+        validation: 
+          required: false
+          dataType: string
+        type: string
+  credit_specification:
+    description: CPU specifications for the launch template
+    attributes: 
+      cpu_credits: 
+        ui_control: select
+        label: CPU Credits
+        description: The CPU credits for the launch template.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - standard
+          - unlimited
+  enclave_options:
+    description: Whether to enable Nitro Enclaves
+    attributes: 
+      enabled: 
+        label: Enabled
+        description: Whether to enable Nitro Enclaves
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  monitoring:
+    description: Whether monitoring is enabled
+    attributes: 
+      enabled: 
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Enabled
+        description: Whether to enable monitoring
+  ebs_optimized:
+    description: Whether the instance is EBS optimized
+    type: string
+    options: 
+      - true
+      - false
+    ui_control: select
+  hibernation_options:
+    description: Whether the hibernation is configured
+    attributes: 
+      configured: 
+        label: Configured
+        description: Whether the hibernation is configured
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+  instance_initiated_shutdown_behavior:
+    description: Shutdown behavior for the instance
+    type: string
+    options: 
+      - stop
+      - terminate
+    ui_control: select
+  instance_market_options:
+    description: Market options for the instance
+    attributes: 
+      market_type: 
+        label: Market Type
+        description: The market type for the launch template.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - spot
+          - on_demand
+        ui_control: select
+  metadata_options:
+    description: Metadata options for the instance.
+    attributes: 
+      http_endpoint: 
+        description: The HTTP endpoint for the metadata options.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - enabled
+          - disabled
+        ui_control: select
+        label: HTTP Endpoint
+      http_protocol_ipv6: 
+        label: HTTP Protocol IPv6
+        description: The HTTP protocol IPv6 for the metadata options.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - enabled
+          - disabled
+        ui_control: select
+      http_tokens: 
+        description: The HTTP tokens for the metadata options.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        options: 
+          - optional
+          - required
+        ui_control: select
+        label: HTTP Tokens
+      instance_metadata_tags: 
+        description: The instance metadata tags for the metadata options.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        options: 
+          - enabled
+          - disabled
+        ui_control: select
+        label: Instance Metadata Tags
+  block_device_mappings:
+    description: Block device mapping configuration for the launch template
+    attributes: 
+      device_name: 
+        ui_control: text
+        label: Device Name
+        description: The name of the device to mount.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+
+variable_groups:
+- label: Basic Configuration
+  variables:
+    - name
+    - description
+    - default_version
+    - update_default_version
+    - instance_initiated_shutdown_behavior
+    - disable_api_termination
+    - ebs_optimized
+    - kernel_id
+    - ram_disk_id
+- label: Application and OS Images
+  variables:
+    - image_id
+- label: Instance Type
+  variables:
+    - instance_type
+- label: Key Pair (login)
+  variables:
+    - key_name
+- label: Network Configuration
+  variables:
+    - security_group_names
+    - vpc_security_group_ids
+    - network_interfaces
+- label: Storage (Volumes)
+  variables:
+    - block_device_mappings
+- label: Capacity Reservation
+  variables:
+    - capacity_reservation_specification
+- label: CPU Options and Monitoring
+  variables:
+    - cpu_options
+    - monitoring
+- label: Advance Details
+  variables:
+    - credit_specification
+    - elastic_gpu_specifications
+    - elastic_inference_accelerator
+    - enclave_options
+    - hibernation_options
+    - iam_instance_profile
+- label: Instance Market Options
+  variables:
+    - instance_market_options
+- label: License and Maintenance
+  variables:
+    - license_specification
+    - maintenance_options
+- label: Metadata Options
+  variables:
+    - metadata_options
+- label: Placement
+  variables:
+    - placement
+- label: Private DNS Name Options
+  variables:
+    - private_dns_name_options
+- label: Resource Tags
+  variables:
+    - tag_specifications
+    - tags
+    - user_data
+
+discovery:
+  type: aws_launch_template
+  dnd_supported: false
+  data_source: data_aws_launch_template
+  references:
+    vpc_security_group_ids:
+      from: aws_security_group
+      output: id

@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "bigquery_options": [
+      {
+        "description": "Specifies advanced options for sinks exporting logs to BigQuery, such as partitioning or clustering settings.",
+        "nullable": true,
+        "type": "list(object({use_partitioned_tables: bool}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a brief explanation of the sink's purpose or functionality within the logging system.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination": [
+      {
+        "description": "Specifies the destination for the logging sink, such as a Cloud Storage bucket, BigQuery dataset, or Pub/Sub topic. Must follow the appropriate format for the chosen destination type.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "disabled": [
+      {
+        "description": "Determines whether the folder sink is disabled; set to true to disable logging for the sink.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "exclusions": [
+      {
+        "description": "Defines log entry exclusion filters for the sink, specifying criteria to exclude certain log entries from being exported.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),disabled: optional(bool),filter: string,name: string}))"
+      }
+    ],
+    "filter": [
+      {
+        "description": "Defines the filter expression used to determine which log entries to include in the sink, following the Logging query language syntax.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "folder": [
+      {
+        "description": "Specifies the folder ID where the logging sink will be created. Must be in the format \"folders/{folder_id}\".",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "include_children": [
+      {
+        "description": "Specifies whether to include logs from child resources of the folder in the sink.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "intercept_children": [
+      {
+        "description": "Determines whether log entries from child resources are included in the sink; set to true to enable inclusion.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the logging sink, must be compliant with Google Cloud naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

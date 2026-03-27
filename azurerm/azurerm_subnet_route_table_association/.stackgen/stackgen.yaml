@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Route Table Association
+  node:
+    label:
+      static: Route Table Association
+      template: Route Table Association
+    display_type: default
+
+discovery:
+  type: azurerm_subnet_route_table_association
+  dnd_supported: false
+  references:
+    route_table_id:
+      from: azurerm_route_table
+      output: id
+    subnet_id:
+      from: azurerm_subnet
+      output: id

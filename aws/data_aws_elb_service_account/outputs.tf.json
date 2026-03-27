@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS ELB service account.",
+            "value": "${data.aws_elb_service_account.this.arn}"
+        },
+        "id": {
+            "description": "The unique identifier (ID) of the AWS ELB service account.",
+            "value": "${data.aws_elb_service_account.this.id}"
+        }
+    }
+}

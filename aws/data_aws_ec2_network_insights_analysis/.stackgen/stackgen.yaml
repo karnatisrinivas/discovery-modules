@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Network Insights Analysis"
+  node:
+    label:
+      static: "[Data] Ec2 Network Insights Analysis"
+      template: "[Data] Ec2 Network Insights Analysis"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_network_insights_analysis
+  dnd_supported: false

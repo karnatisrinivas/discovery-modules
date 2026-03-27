@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Rds Clusters"
+  node:
+    label:
+      static: "[Data] Rds Clusters"
+      template: "[Data] Rds Clusters"
+    display_type: default
+
+discovery:
+  type: data_aws_rds_clusters
+  dnd_supported: false

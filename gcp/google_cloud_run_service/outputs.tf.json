@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Cloud Run service, used for resource management and referencing",
+            "value": "${google_cloud_run_service.this.id}"
+        },
+        "name": {
+            "description": "Name of the Cloud Run service",
+            "value": "${google_cloud_run_service.this.name}"
+        },
+        "status": {
+            "description": "Current operational status of the Cloud Run service, useful for monitoring and debugging",
+            "value": "${google_cloud_run_service.this.status}"
+        }
+    }
+}

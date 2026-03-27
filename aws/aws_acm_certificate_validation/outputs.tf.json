@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for tracking certificate validation in AWS resources",
+            "value": "${aws_acm_certificate_validation.this.id}"
+        }
+    }
+}

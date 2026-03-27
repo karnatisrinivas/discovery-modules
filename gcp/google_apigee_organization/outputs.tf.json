@@ -1,0 +1,24 @@
+{
+    "output": {
+        "apigee_project_id": {
+            "description": "Google Cloud project associated with the Apigee organization",
+            "value": "${google_apigee_organization.this.apigee_project_id}"
+        },
+        "ca_certificate": {
+            "description": "Certificate authority for secure communication within the organization",
+            "value": "${google_apigee_organization.this.ca_certificate}"
+        },
+        "id": {
+            "description": "Unique identifier for the Apigee organization resource",
+            "value": "${google_apigee_organization.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name assigned to the Apigee organization",
+            "value": "${google_apigee_organization.this.name}"
+        },
+        "subscription_type": {
+            "description": "Defines the subscription tier of the Apigee organization",
+            "value": "${google_apigee_organization.this.subscription_type}"
+        }
+    }
+}

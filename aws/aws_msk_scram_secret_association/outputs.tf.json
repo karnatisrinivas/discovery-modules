@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the SCRAM secret association in the MSK cluster",
+            "value": "${aws_msk_scram_secret_association.this.id}"
+        }
+    }
+}

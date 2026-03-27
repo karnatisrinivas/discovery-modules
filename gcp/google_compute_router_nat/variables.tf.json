@@ -1,0 +1,158 @@
+{
+    "variable": {
+      "auto_network_tier": [
+        {
+          "description": "Specifies the network service tier for automatic allocations. Must be either 'PREMIUM' or 'STANDARD'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "drain_nat_ips": [
+        {
+          "description": "List of NAT IPs to be drained. Used for transitioning NAT IPs out of service.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "enable_dynamic_port_allocation": [
+        {
+          "description": "Enables dynamic port allocation for NAT. If true, ports are assigned as needed.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "enable_endpoint_independent_mapping": [
+        {
+          "description": "Enables endpoint-independent mapping for NAT, allowing bidirectional communication through NAT without restrictions.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "endpoint_types": [
+        {
+          "description": "Defines the endpoint types for NAT. Accepted values include 'VM_PRIMARY_IP', 'VM_SECONDARY_IP'.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "icmp_idle_timeout_sec": [
+        {
+          "description": "Timeout in seconds for idle ICMP connections. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "initial_nat_ips": [
+        {
+          "description": "List of static NAT IPs to be initially allocated. Must be valid external IPs.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "log_config": [
+        {
+          "description": "Configuration for logging, including enablement and filter criteria.",
+          "nullable": true,
+          "type": "list(object({enable: bool,filter: string}))"
+        }
+      ],
+      "max_ports_per_vm": [
+        {
+          "description": "Maximum number of ports allocated per VM. Must be a positive integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "min_ports_per_vm": [
+        {
+          "description": "Minimum number of ports allocated per VM. Must be a positive integer and less than or equal to 'max_ports_per_vm'.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "name": [
+        {
+          "description": "Name of the NAT resource. Must be unique within the project and adhere to naming conventions.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "nat_ip_allocate_option": [
+        {
+          "description": "Specifies the allocation method for NAT IPs. Valid values are 'AUTO_ONLY' or 'MANUAL_ONLY'.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "nat_ips": [
+        {
+          "description": "List of NAT IPs for manual allocation. Must be valid external IPs.",
+          "nullable": true,
+          "type": "list(string)"
+        }
+      ],
+      "router": [
+        {
+          "description": "Name of the router that the NAT is associated with. Must already exist in the same region.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "rules": [
+        {
+          "description": "List of NAT rules, including match conditions and actions for specific traffic flows.",
+          "nullable": true,
+          "type": "list(object({description: optional(string),match: string,rule_number: number,action: list(object({source_nat_active_ips: optional(list(string)),source_nat_drain_ips: optional(list(string))}))}))"
+        }
+      ],
+      "source_subnetwork_ip_ranges_to_nat": [
+        {
+          "description": "Specifies which subnetwork IP ranges are NATed. Valid values are 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES'.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "subnetwork": [
+        {
+          "description": "List of subnetworks to configure for NAT, including secondary IP ranges and source ranges.",
+          "nullable": true,
+          "type": "list(object({name: string,secondary_ip_range_names: optional(list(string)),source_ip_ranges_to_nat: list(string)}))"
+        }
+      ],
+      "tcp_established_idle_timeout_sec": [
+        {
+          "description": "Timeout in seconds for idle established TCP connections. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "tcp_time_wait_timeout_sec": [
+        {
+          "description": "Timeout in seconds for TCP connections in the TIME_WAIT state. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "tcp_transitory_idle_timeout_sec": [
+        {
+          "description": "Timeout in seconds for idle transitory TCP connections. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ],
+      "timeouts": [
+        {
+          "description": "Specifies custom timeouts for create, update, or delete operations.",
+          "nullable": true,
+          "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+        }
+      ],
+      "udp_idle_timeout_sec": [
+        {
+          "description": "Timeout in seconds for idle UDP connections. Must be a non-negative integer.",
+          "nullable": true,
+          "type": "number"
+        }
+      ]
+    }
+  }

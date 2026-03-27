@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique identifier for the Google Compute Router Peer resource",
+            "value": "${google_compute_router_peer.this.id}"
+        },
+        "is_advertised_route_priority_set": {
+            "description": "Indicates if advertised route priorities are explicitly configured",
+            "value": "${google_compute_router_peer.this.is_advertised_route_priority_set}"
+        },
+        "is_custom_learned_priority_set": {
+            "description": "Shows whether custom priorities for learned routes are set",
+            "value": "${google_compute_router_peer.this.is_custom_learned_priority_set}"
+        },
+        "management_type": {
+            "description": "Defines the management type of the router peer, such as MANAGED_BY_USER",
+            "value": "${google_compute_router_peer.this.management_type}"
+        }
+    }
+}

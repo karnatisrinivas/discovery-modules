@@ -1,0 +1,28 @@
+{
+    "output": {
+        "certificate_id": {
+            "description": "Unique ID for identifying the SSL certificate in GCP resources",
+            "value": "${google_compute_managed_ssl_certificate.this.certificate_id}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the SSL certificate was created",
+            "value": "${google_compute_managed_ssl_certificate.this.creation_timestamp}"
+        },
+        "expire_time": {
+            "description": "Date and time when the SSL certificate will expire",
+            "value": "${google_compute_managed_ssl_certificate.this.expire_time}"
+        },
+        "id": {
+            "description": "Resource ID for referencing the managed SSL certificate",
+            "value": "${google_compute_managed_ssl_certificate.this.id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the SSL certificate resource in GCP",
+            "value": "${google_compute_managed_ssl_certificate.this.self_link}"
+        },
+        "subject_alternative_names": {
+            "description": "List of domains covered by the managed SSL certificate",
+            "value": "${google_compute_managed_ssl_certificate.this.subject_alternative_names}"
+        }
+    }
+}

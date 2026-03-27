@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the hosted zone associated with the AWS App Runner service.",
+            "value": "${data.aws_apprunner_hosted_zone_id.this.id}"
+        },
+        "region": {
+            "description": "The AWS region where the hosted zone for the App Runner service is located.",
+            "value": "${data.aws_apprunner_hosted_zone_id.this.region}"
+        }
+    }
+}

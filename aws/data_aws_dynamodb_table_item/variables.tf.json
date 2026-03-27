@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "expression_attribute_names": [
+      {
+        "description": "A map of attribute names to use in an expression, allowing you to substitute and avoid conflicts with reserved keywords.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "key": [
+      {
+        "description": "The primary key of the item you want to work with, which uniquely identifies the item in the DynamoDB table.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "projection_expression": [
+      {
+        "description": "A string that specifies the attributes you want to retrieve from the DynamoDB table, limiting the data you retrieve.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "table_name": [
+      {
+        "description": "The name of the DynamoDB table where the item is stored or will be stored.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

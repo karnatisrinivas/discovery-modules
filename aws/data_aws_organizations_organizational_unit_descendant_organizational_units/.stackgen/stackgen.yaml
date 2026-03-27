@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Organizational Unit Descendant Organizational Units"
+  node:
+    label:
+      static: "[Data] Organizations Organizational Unit Descendant Organizational Units"
+      template: "[Data] Organizations Organizational Unit Descendant Organizational Units"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_organizational_unit_descendant_organizational_units
+  dnd_supported: false

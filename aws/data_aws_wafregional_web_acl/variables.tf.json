@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the WAF Regional Web ACL to be created. It identifies the Web ACL and should be unique.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "artifact_store": [
+      {
+        "description": "Defines the S3 bucket and encryption settings for storing pipeline artifacts, required for pipeline execution.",
+        "nullable": false,
+        "type": "list(object({location: string,region: optional(string),type: string,encryption_key: list(object({id: string,type: string}))}))"
+      }
+    ],
+    "execution_mode": [
+      {
+        "description": "Specifies the mode in which the pipeline executes, such as parallel or serial, to control the order of actions and stages.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the CodePipeline. Must be unique within the AWS account and region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "pipeline_type": [
+      {
+        "description": "Specifies the type of pipeline to be created, such as source, build, or deploy stages; must align with the intended workflow.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "role_arn": [
+      {
+        "description": "IAM role ARN required for the CodePipeline to access resources and perform actions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage": [
+      {
+        "description": "Defines the stage configuration for the CodePipeline, specifying actions, their types, order, and dependencies within the pipeline.",
+        "nullable": true,
+        "type": "list(object({name: string,action: list(object({category: string,configuration: optional(map(string)),input_artifacts: optional(list(string)),name: string,namespace: optional(string),output_artifacts: optional(list(string)),owner: string,provider: string,region: optional(string),role_arn: optional(string),run_order: optional(number),timeout_in_minutes: optional(number),version: string})),before_entry: list(object({condition: list(object({result: optional(string),rule: list(object({commands: optional(list(string)),configuration: optional(map(string)),input_artifacts: optional(list(string)),name: string,region: optional(string),role_arn: optional(string),timeout_in_minutes: optional(number),rule_type_id: list(object({category: string,owner: optional(string),provider: string,version: optional(string)}))}))}))})),on_failure: list(object({result: optional(string),condition: list(object({result: optional(string),rule: list(object({commands: optional(list(string)),configuration: optional(map(string)),input_artifacts: optional(list(string)),name: string,region: optional(string),role_arn: optional(string),timeout_in_minutes: optional(number),rule_type_id: list(object({category: string,owner: optional(string),provider: string,version: optional(string)}))}))})),retry_configuration: list(object({retry_mode: optional(string)}))})),on_success: list(object({condition: list(object({result: optional(string),rule: list(object({commands: optional(list(string)),configuration: optional(map(string)),input_artifacts: optional(list(string)),name: string,region: optional(string),role_arn: optional(string),timeout_in_minutes: optional(number),rule_type_id: list(object({category: string,owner: optional(string),provider: string,version: optional(string)}))}))}))}))}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the pipeline for resource tagging and organization.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "trigger": [
+      {
+        "description": "Determines whether the pipeline should automatically start upon changes to the source repository or manual intervention.",
+        "nullable": true,
+        "type": "list(object({provider_type: string,git_configuration: list(object({source_action_name: string,pull_request: list(object({events: optional(list(string)),branches: list(object({excludes: optional(list(string)),includes: optional(list(string))})),file_paths: list(object({excludes: optional(list(string)),includes: optional(list(string))}))})),push: list(object({branches: list(object({excludes: optional(list(string)),includes: optional(list(string))})),file_paths: list(object({excludes: optional(list(string)),includes: optional(list(string))})),tags: list(object({excludes: optional(list(string)),includes: optional(list(string))}))}))}))}))"
+      }
+    ],
+    "variable": [
+      {
+        "description": "Defines the configuration or value for a specific aspect of the CodePipeline, such as stage, action, or artifact, ensuring compatibility with pipeline requirements.",
+        "nullable": true,
+        "type": "list(object({default_value: optional(string),description: optional(string),name: string}))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "compatible_architecture": [
+      {
+        "description": "Specifies the architecture for which the lambda layer is compatible, such as x86_64 or arm64.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "compatible_runtime": [
+      {
+        "description": "Indicates the runtime environment(s) that the lambda layer supports, such as nodejs12.x or python3.8.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "layer_name": [
+      {
+        "description": "The name of the Lambda layer, which must be unique within an AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+    "output": {
+        "access_policies": {
+            "description": "The access policies for the Elasticsearch domain, typically defined in JSON format.",
+            "value": "${data.aws_elasticsearch_domain.this.access_policies}"
+        },
+        "advanced_options": {
+            "description": "A map of key-value pairs to configure advanced options for the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.advanced_options}"
+        },
+        "advanced_security_options": {
+            "description": "Security options that include enabling advanced security and internal user database.",
+            "value": "${data.aws_elasticsearch_domain.this.advanced_security_options}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.arn}"
+        },
+        "auto_tune_options": {
+            "description": "Configuration options for auto-tuning the Elasticsearch domain, including maintenance schedules.",
+            "value": "${data.aws_elasticsearch_domain.this.auto_tune_options}"
+        },
+        "cluster_config": {
+            "description": "Cluster configuration options, including instance types, counts, and zone awareness settings.",
+            "value": "${data.aws_elasticsearch_domain.this.cluster_config}"
+        },
+        "cognito_options": {
+            "description": "Cognito authentication options, defining the identity pool, user pool, and role ARN.",
+            "value": "${data.aws_elasticsearch_domain.this.cognito_options}"
+        },
+        "created": {
+            "description": "Indicates whether the Elasticsearch domain has been created.",
+            "value": "${data.aws_elasticsearch_domain.this.created}"
+        },
+        "deleted": {
+            "description": "Indicates whether the Elasticsearch domain has been deleted.",
+            "value": "${data.aws_elasticsearch_domain.this.deleted}"
+        },
+        "domain_id": {
+            "description": "The unique identifier for the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.domain_id}"
+        },
+        "ebs_options": {
+            "description": "Configuration for EBS volumes attached to the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.ebs_options}"
+        },
+        "elasticsearch_version": {
+            "description": "The version of Elasticsearch that the domain is running.",
+            "value": "${data.aws_elasticsearch_domain.this.elasticsearch_version}"
+        },
+        "encryption_at_rest": {
+            "description": "Configuration for encryption at rest, including whether it is enabled and the KMS key ID.",
+            "value": "${data.aws_elasticsearch_domain.this.encryption_at_rest}"
+        },
+        "endpoint": {
+            "description": "The endpoint URL for the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.endpoint}"
+        },
+        "id": {
+            "description": "The ID of the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.id}"
+        },
+        "kibana_endpoint": {
+            "description": "The endpoint URL for the Kibana dashboard associated with the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.kibana_endpoint}"
+        },
+        "log_publishing_options": {
+            "description": "Options for publishing logs to CloudWatch, including log type and enabling status.",
+            "value": "${data.aws_elasticsearch_domain.this.log_publishing_options}"
+        },
+        "node_to_node_encryption": {
+            "description": "Indicates whether node-to-node encryption is enabled for the domain.",
+            "value": "${data.aws_elasticsearch_domain.this.node_to_node_encryption}"
+        },
+        "processing": {
+            "description": "Indicates whether the Elasticsearch domain is currently processing changes.",
+            "value": "${data.aws_elasticsearch_domain.this.processing}"
+        },
+        "snapshot_options": {
+            "description": "Options for automated snapshots, including the start hour.",
+            "value": "${data.aws_elasticsearch_domain.this.snapshot_options}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the Elasticsearch domain.",
+            "value": "${data.aws_elasticsearch_domain.this.tags}"
+        },
+        "vpc_options": {
+            "description": "VPC configuration options for the Elasticsearch domain, including subnets and security groups.",
+            "value": "${data.aws_elasticsearch_domain.this.vpc_options}"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket CORS Configuration
+  node:
+    label:
+      static: S3 Bucket CORS Configuration
+      template: S3 Bucket CORS Configuration
+    display_type: default
+
+variables:
+  cors_rule:
+    description: A list of CORS rules.
+    attributes: 
+      allowed_methods: 
+        label: Allowed HeadeMethodsrs
+        description: A list of methods allowed.
+        validation: 
+          dataType: string
+        type: string
+
+discovery:
+  type: aws_s3_bucket_cors_configuration
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3
+      output: bucket_name

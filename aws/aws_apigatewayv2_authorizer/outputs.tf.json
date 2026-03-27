@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for integrating the authorizer with API Gateway routes",
+            "value": "${aws_apigatewayv2_authorizer.this.id}"
+        }
+    }
+}

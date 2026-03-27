@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "latest": [
+      {
+        "description": "A boolean value that indicates whether to use the latest version of the AWS Synthetics runtime.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "prefix": [
+      {
+        "description": "A string value representing the prefix of the AWS Synthetics runtime version to be used.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

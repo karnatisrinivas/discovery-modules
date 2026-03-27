@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier for the global network in which the link is to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "link_id": [
+      {
+        "description": "The unique identifier for the specific link within the global network.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

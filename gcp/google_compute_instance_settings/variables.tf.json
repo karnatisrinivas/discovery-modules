@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "metadata": [
+      {
+        "description": "Key-value pairs to configure instance metadata, such as custom data or information used by startup scripts.",
+        "nullable": true,
+        "type": "list(object({items: optional(map(string))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines time durations for create, update, and delete operations, ensuring proper execution and avoiding timeouts.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone where the instance will be created, must match available zones for the selected region.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

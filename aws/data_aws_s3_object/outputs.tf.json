@@ -1,0 +1,124 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) uniquely identifying the S3 object.",
+            "value": "${data.aws_s3_object.this.arn}"
+        },
+        "body": {
+            "description": "The content of the S3 object.",
+            "value": "${data.aws_s3_object.this.body}"
+        },
+        "bucket": {
+            "description": "Name of the bucket.",
+            "value": "${data.aws_s3_object.this.bucket}"
+        },
+        "bucket_key_enabled": {
+            "description": "Indicates if the bucket key for server-side encryption is enabled.",
+            "value": "${data.aws_s3_object.this.bucket_key_enabled}"
+        },
+        "cache_control": {
+            "description": "Specifies caching behavior along the request/reply chain.",
+            "value": "${data.aws_s3_object.this.cache_control}"
+        },
+        "checksum_crc32": {
+            "description": "The CRC32 checksum of the object data.",
+            "value": "${data.aws_s3_object.this.checksum_crc32}"
+        },
+        "checksum_crc32c": {
+            "description": "The CRC32C checksum of the object data.",
+            "value": "${data.aws_s3_object.this.checksum_crc32c}"
+        },
+        "checksum_sha1": {
+            "description": "The SHA1 checksum of the object data.",
+            "value": "${data.aws_s3_object.this.checksum_sha1}"
+        },
+        "checksum_sha256": {
+            "description": "The SHA256 checksum of the object data.",
+            "value": "${data.aws_s3_object.this.checksum_sha256}"
+        },
+        "content_disposition": {
+            "description": "Specifies how the content should be presented to the user.",
+            "value": "${data.aws_s3_object.this.content_disposition}"
+        },
+        "content_encoding": {
+            "description": "Specifies what content encodings have been applied to the object.",
+            "value": "${data.aws_s3_object.this.content_encoding}"
+        },
+        "content_language": {
+            "description": "The language the content is in.",
+            "value": "${data.aws_s3_object.this.content_language}"
+        },
+        "content_length": {
+            "description": "The size of the content in bytes.",
+            "value": "${data.aws_s3_object.this.content_length}"
+        },
+        "content_type": {
+            "description": "The MIME type of the content.",
+            "value": "${data.aws_s3_object.this.content_type}"
+        },
+        "etag": {
+            "description": "The entity tag for the object.",
+            "value": "${data.aws_s3_object.this.etag}"
+        },
+        "expiration": {
+            "description": "The expiration date of the object if lifecycle is configured.",
+            "value": "${data.aws_s3_object.this.expiration}"
+        },
+        "expires": {
+            "description": "The date and time the object is no longer cacheable.",
+            "value": "${data.aws_s3_object.this.expires}"
+        },
+        "id": {
+            "description": "The ID of the S3 object.",
+            "value": "${data.aws_s3_object.this.id}"
+        },
+        "key": {
+            "description": "Key of the S3 Object.",
+            "value": "${data.aws_s3_object.this.key}"
+        },
+        "last_modified": {
+            "description": "The date and time when the object was last modified.",
+            "value": "${data.aws_s3_object.this.last_modified}"
+        },
+        "metadata": {
+            "description": "A map of metadata for the object.",
+            "value": "${data.aws_s3_object.this.metadata}"
+        },
+        "object_lock_legal_hold_status": {
+            "description": "The legal hold status of the object.",
+            "value": "${data.aws_s3_object.this.object_lock_legal_hold_status}"
+        },
+        "object_lock_mode": {
+            "description": "The lock mode currently in place for this object.",
+            "value": "${data.aws_s3_object.this.object_lock_mode}"
+        },
+        "object_lock_retain_until_date": {
+            "description": "The date until which the object is locked.",
+            "value": "${data.aws_s3_object.this.object_lock_retain_until_date}"
+        },
+        "server_side_encryption": {
+            "description": "The server-side encryption algorithm used when storing this object.",
+            "value": "${data.aws_s3_object.this.server_side_encryption}"
+        },
+        "sse_kms_key_id": {
+            "description": "The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the object.",
+            "value": "${data.aws_s3_object.this.sse_kms_key_id}"
+        },
+        "storage_class": {
+            "description": "The storage class of the object.",
+            "value": "${data.aws_s3_object.this.storage_class}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the object.",
+            "value": "${data.aws_s3_object.this.tags}"
+        },
+        "version_id": {
+            "description": "The version ID of the object, if bucket versioning is enabled.",
+            "value": "${data.aws_s3_object.this.version_id}"
+        },
+        "website_redirect_location": {
+            "description": "The redirect location for the object, if configured as a website.",
+            "value": "${data.aws_s3_object.this.website_redirect_location}"
+        }
+    }
+}

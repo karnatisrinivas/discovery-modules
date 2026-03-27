@@ -1,0 +1,130 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies a textual description of the image for identification and documentation purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disk_size_gb": [
+      {
+        "description": "Specifies the size of the image disk in gigabytes, must be equal to or greater than the source disk's size.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "family": [
+      {
+        "description": "Specifies the image family to group related images for rolling updates and version management.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "guest_os_features": [
+      {
+        "description": "Specifies the enabled guest operating system features for the image, such as UEFI_COMPATIBLE or VIRTIO_SCSI_MULTIQUEUE.",
+        "nullable": true,
+        "type": "list(object({type: string}))"
+      }
+    ],
+    "image_encryption_key": [
+      {
+        "description": "Specifies the custom encryption key to secure the image. Must match the format required for Google Compute Engine encryption keys.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string)}))"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the image, typically used for management and filtering purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "licenses": [
+      {
+        "description": "List of URIs representing the licenses applied to the image; must be valid and compatible with the image configuration.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the image, which must be unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "raw_disk": [
+      {
+        "description": "Specifies the raw disk configuration, including source file and disk format, used to create the image.",
+        "nullable": true,
+        "type": "list(object({container_type: optional(string),sha1: optional(string),source: string}))"
+      }
+    ],
+    "shielded_instance_initial_state": [
+      {
+        "description": "Specifies the initial state to configure shielded instance features for the image, such as Secure Boot, vTPM, and Integrity Monitoring.",
+        "nullable": true,
+        "type": "list(object({dbs: list(object({content: string,file_type: optional(string)})),dbxs: list(object({content: string,file_type: optional(string)})),keks: list(object({content: string,file_type: optional(string)})),pk: list(object({content: string,file_type: optional(string)}))}))"
+      }
+    ],
+    "source_disk": [
+      {
+        "description": "Specifies the source disk used to create the image. Must be an existing persistent disk in the same project and zone.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_disk_encryption_key": [
+      {
+        "description": "Specifies the encryption key used to encrypt the source disk. Required if the source disk is encrypted with a customer-supplied encryption key.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string)}))"
+      }
+    ],
+    "source_image": [
+      {
+        "description": "Specifies the source image used to create the custom image, must be in the same project or accessible via shared images.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_image_encryption_key": [
+      {
+        "description": "Specifies the customer-managed encryption key used to encrypt the source image. Must match the key used for the source image's encryption.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string)}))"
+      }
+    ],
+    "source_snapshot": [
+      {
+        "description": "Specifies the source snapshot used to create the image. Must be the full or partial URL of the snapshot.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "source_snapshot_encryption_key": [
+      {
+        "description": "Specifies the customer-supplied encryption key for the source snapshot, required if the snapshot is encrypted.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string)}))"
+      }
+    ],
+    "storage_locations": [
+      {
+        "description": "Specifies the geographic locations where the image is stored; must be a valid Google Cloud region or multi-region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeouts for create, update, and delete operations on the compute image.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

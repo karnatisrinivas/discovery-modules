@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Policy"
+  node:
+    label:
+      static: "[Data] Organizations Policy"
+      template: "[Data] Organizations Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_policy
+  dnd_supported: false

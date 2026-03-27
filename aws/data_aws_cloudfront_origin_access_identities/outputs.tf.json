@@ -1,0 +1,20 @@
+{
+    "output": {
+        "iam_arns": {
+            "description": "A set of IAM Amazon Resource Names (ARNs) associated with the CloudFront origin access identities.",
+            "value": "${data.aws_cloudfront_origin_access_identities.this.iam_arns}"
+        },
+        "id": {
+            "description": "The identifier for the specific CloudFront origin access identity.",
+            "value": "${data.aws_cloudfront_origin_access_identities.this.id}"
+        },
+        "ids": {
+            "description": "A set of identifiers for all CloudFront origin access identities.",
+            "value": "${data.aws_cloudfront_origin_access_identities.this.ids}"
+        },
+        "s3_canonical_user_ids": {
+            "description": "A set of canonical user IDs for the S3 buckets associated with the CloudFront origin access identities.",
+            "value": "${data.aws_cloudfront_origin_access_identities.this.s3_canonical_user_ids}"
+        }
+    }
+}

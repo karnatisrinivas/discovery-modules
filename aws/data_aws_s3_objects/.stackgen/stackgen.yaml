@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] S3 Objects"
+  node:
+    label:
+      static: "[Data] S3 Objects"
+      template: "[Data] S3 Objects"
+    display_type: default
+
+discovery:
+  type: data_aws_s3_objects
+  dnd_supported: false

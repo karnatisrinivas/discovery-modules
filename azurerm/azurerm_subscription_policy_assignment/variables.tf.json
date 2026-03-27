@@ -1,0 +1,101 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Specifies additional information about the policy, which can be utilized for identification or description purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Determines the user-friendly name for the policy, often used for display purposes in interfaces.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enforce": [
+      {
+        "description": "Indicates whether the policy should be strictly enforced; true enables enforcement, while false allows for monitoring without enforcement.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "identity": [
+      {
+        "description": "Defines a set of identities associated with the policy, including identity IDs and tenant information, required for access control and authentication.",
+        "nullable": true,
+        "type": "list(object({identity_ids: optional(list(string)),principal_id: optional(string),tenant_id: optional(string),type: string}))"
+      }
+    ],
+    "metadata": [
+      {
+        "description": "Contains arbitrary metadata related to the policy, which can include tags or annotations for organizational purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the exact name of the policy, which is used for identification and must be unique within the scope of the configuration.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "non_compliance_message": [
+      {
+        "description": "Defines messages that are displayed when the policy is violated, including specific content and optional references to policy definitions.",
+        "nullable": true,
+        "type": "list(object({content: string,policy_definition_reference_id: optional(string)}))"
+      }
+    ],
+    "not_scopes": [
+      {
+        "description": "Lists specific scopes that should be excluded from the policy, allowing for exceptions in policy application.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "overrides": [
+      {
+        "description": "Specifies policy override values and conditions, enabling customization of policy behavior based on selectors.",
+        "nullable": true,
+        "type": "list(object({value: string,selectors: list(object({in: optional(list(string)),kind: optional(string),not_in: optional(list(string))}))}))"
+      }
+    ],
+    "parameters": [
+      {
+        "description": "Holds parameters for the policy, which might include settings or configurations necessary for policy execution.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "policy_definition_id": [
+      {
+        "description": "Identifies the specific policy definition that this policy is based on, required for linking to the correct policy logic.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_selectors": [
+      {
+        "description": "Defines criteria for selecting resources to which the policy applies, including specific names and conditions.",
+        "nullable": true,
+        "type": "list(object({name: optional(string),selectors: list(object({in: optional(list(string)),kind: string,not_in: optional(list(string))}))}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Sets timeout durations for various operations related to the policy, such as create, update, read, and delete actions.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

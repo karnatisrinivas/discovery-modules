@@ -1,0 +1,20 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the HTTPS proxy was created",
+            "value": "${google_compute_region_target_https_proxy.this.creation_timestamp}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the HTTPS proxy in configurations",
+            "value": "${google_compute_region_target_https_proxy.this.id}"
+        },
+        "proxy_id": {
+            "description": "System-generated ID for the HTTPS proxy, useful for API calls",
+            "value": "${google_compute_region_target_https_proxy.this.proxy_id}"
+        },
+        "self_link": {
+            "description": "URL for directly accessing the HTTPS proxy resource",
+            "value": "${google_compute_region_target_https_proxy.this.self_link}"
+        }
+    }
+}

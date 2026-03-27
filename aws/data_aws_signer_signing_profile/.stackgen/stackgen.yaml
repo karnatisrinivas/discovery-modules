@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Signer Signing Profile"
+  node:
+    label:
+      static: "[Data] Signer Signing Profile"
+      template: "[Data] Signer Signing Profile"
+    display_type: default
+
+discovery:
+  type: data_aws_signer_signing_profile
+  dnd_supported: false

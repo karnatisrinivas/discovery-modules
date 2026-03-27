@@ -1,0 +1,32 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the transit gateway peering attachment.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.id}"
+        },
+        "peer_account_id": {
+            "description": "The AWS account ID of the peer.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.peer_account_id}"
+        },
+        "peer_region": {
+            "description": "The AWS region of the peer transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.peer_region}"
+        },
+        "peer_transit_gateway_id": {
+            "description": "The ID of the peer transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.peer_transit_gateway_id}"
+        },
+        "state": {
+            "description": "The current state of the transit gateway peering attachment.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the transit gateway peering attachment.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.tags}"
+        },
+        "transit_gateway_id": {
+            "description": "The ID of the local transit gateway.",
+            "value": "${data.aws_ec2_transit_gateway_peering_attachment.this.transit_gateway_id}"
+        }
+    }
+}

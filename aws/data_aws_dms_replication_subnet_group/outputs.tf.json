@@ -1,0 +1,32 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.id}"
+        },
+        "replication_subnet_group_arn": {
+            "description": "The Amazon Resource Name (ARN) of the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.replication_subnet_group_arn}"
+        },
+        "replication_subnet_group_description": {
+            "description": "A description of the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.replication_subnet_group_description}"
+        },
+        "subnet_group_status": {
+            "description": "The current status of the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.subnet_group_status}"
+        },
+        "subnet_ids": {
+            "description": "The set of subnet IDs associated with the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.subnet_ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the DMS replication subnet group.",
+            "value": "${data.aws_dms_replication_subnet_group.this.tags}"
+        },
+        "vpc_id": {
+            "description": "The VPC ID where the DMS replication subnet group is located.",
+            "value": "${data.aws_dms_replication_subnet_group.this.vpc_id}"
+        }
+    }
+}

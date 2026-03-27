@@ -1,0 +1,20 @@
+{
+    "output": {
+        "credential_arn": {
+            "description": "The Amazon Resource Name (ARN) for the credentials associated with the ECR pull through cache rule.",
+            "value": "${data.aws_ecr_pull_through_cache_rule.this.credential_arn}"
+        },
+        "id": {
+            "description": "The unique identifier for the ECR pull through cache rule.",
+            "value": "${data.aws_ecr_pull_through_cache_rule.this.id}"
+        },
+        "registry_id": {
+            "description": "The ID of the Amazon ECR registry to which the pull through cache rule is associated.",
+            "value": "${data.aws_ecr_pull_through_cache_rule.this.registry_id}"
+        },
+        "upstream_registry_url": {
+            "description": "The URL of the upstream registry that is cached by the ECR pull through cache rule.",
+            "value": "${data.aws_ecr_pull_through_cache_rule.this.upstream_registry_url}"
+        }
+    }
+}

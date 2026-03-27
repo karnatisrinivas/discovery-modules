@@ -1,0 +1,36 @@
+{
+    "output": {
+        "app_id": {
+            "description": "Unique identifier for the App Engine application, used for resource management",
+            "value": "${google_app_engine_application.this.app_id}"
+        },
+        "code_bucket": {
+            "description": "Cloud Storage bucket for storing application code and artifacts",
+            "value": "${google_app_engine_application.this.code_bucket}"
+        },
+        "default_bucket": {
+            "description": "Default Cloud Storage bucket linked to the App Engine application",
+            "value": "${google_app_engine_application.this.default_bucket}"
+        },
+        "default_hostname": {
+            "description": "Primary hostname used to access the App Engine application",
+            "value": "${google_app_engine_application.this.default_hostname}"
+        },
+        "gcr_domain": {
+            "description": "Domain name for accessing Google Container Registry resources",
+            "value": "${google_app_engine_application.this.gcr_domain}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the App Engine application in configurations",
+            "value": "${google_app_engine_application.this.id}"
+        },
+        "name": {
+            "description": "Name of the App Engine application, useful for identification and logging",
+            "value": "${google_app_engine_application.this.name}"
+        },
+        "url_dispatch_rule": {
+            "description": "Set of URL dispatch rules for routing requests to specific services",
+            "value": "${google_app_engine_application.this.url_dispatch_rule}"
+        }
+    }
+}

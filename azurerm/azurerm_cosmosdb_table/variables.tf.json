@@ -1,0 +1,24 @@
+{
+  "variable": {
+    "account_name": [
+      {
+        "description": "The name of the Cosmos DB account in which the table will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the Cosmos DB table to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

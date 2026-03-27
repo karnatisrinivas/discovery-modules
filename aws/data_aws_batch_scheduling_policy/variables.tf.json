@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the AWS Batch Scheduling Policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

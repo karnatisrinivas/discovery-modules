@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Billing Service Account"
+  node:
+    label:
+      static: "[Data] Billing Service Account"
+      template: "[Data] Billing Service Account"
+    display_type: default
+
+discovery:
+  type: data_aws_billing_service_account
+  dnd_supported: false

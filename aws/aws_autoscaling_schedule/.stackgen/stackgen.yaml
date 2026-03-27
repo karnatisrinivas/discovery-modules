@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Autoscaling Schedule
+  node:
+    label:
+      static: Autoscaling Schedule
+      template: ${scheduled_action_name}
+    display_type: default
+
+discovery:
+  type: aws_autoscaling_schedule
+  dnd_supported: false
+  references:
+    autoscaling_group_name:
+      from: aws_autoscaling_group
+      output: autoscaling_group_name

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: DB Subnet Group
+  node:
+    label:
+      static: DB Subnet Group
+      template: DB Subnet Group
+    display_type: default
+
+discovery:
+  type: aws_db_subnet_group
+  dnd_supported: false
+  data_source: data_aws_db_subnet_group
+  references:
+    subnet_ids:
+      from: aws_subnet
+      output: id

@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EFS access point.",
+            "value": "${data.aws_efs_access_point.this.arn}"
+        },
+        "file_system_arn": {
+            "description": "The ARN of the EFS file system associated with this access point.",
+            "value": "${data.aws_efs_access_point.this.file_system_arn}"
+        },
+        "file_system_id": {
+            "description": "The ID of the EFS file system associated with this access point.",
+            "value": "${data.aws_efs_access_point.this.file_system_id}"
+        },
+        "id": {
+            "description": "The ID of the EFS access point.",
+            "value": "${data.aws_efs_access_point.this.id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the EFS access point.",
+            "value": "${data.aws_efs_access_point.this.owner_id}"
+        },
+        "posix_user": {
+            "description": "The POSIX user settings for the access point, including user ID (UID), group ID (GID), and secondary group IDs.",
+            "value": "${data.aws_efs_access_point.this.posix_user}"
+        },
+        "root_directory": {
+            "description": "The root directory settings for the access point, specifying path and permission settings.",
+            "value": "${data.aws_efs_access_point.this.root_directory}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EFS access point.",
+            "value": "${data.aws_efs_access_point.this.tags}"
+        }
+    }
+}

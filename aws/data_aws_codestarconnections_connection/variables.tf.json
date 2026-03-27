@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the CodeStar connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the CodeStar connection.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

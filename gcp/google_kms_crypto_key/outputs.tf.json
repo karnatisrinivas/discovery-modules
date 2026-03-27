@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "An identifier for the resource with format {{key_ring}}/cryptoKeys/{{name}}",
+            "value": "${google_kms_crypto_key.this.id}"
+        }
+    }
+}

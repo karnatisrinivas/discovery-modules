@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS WAF subscribed rule group.",
+            "value": "${data.aws_waf_subscribed_rule_group.this.id}"
+        }
+    }
+}

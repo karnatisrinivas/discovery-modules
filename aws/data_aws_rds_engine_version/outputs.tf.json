@@ -1,0 +1,88 @@
+{
+    "output": {
+        "default_character_set": {
+            "description": "The default character set for the RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.default_character_set}"
+        },
+        "engine_description": {
+            "description": "A description of the RDS engine.",
+            "value": "${data.aws_rds_engine_version.this.engine_description}"
+        },
+        "exportable_log_types": {
+            "description": "The types of logs that can be exported from the RDS engine.",
+            "value": "${data.aws_rds_engine_version.this.exportable_log_types}"
+        },
+        "id": {
+            "description": "The identifier for the RDS engine version data source.",
+            "value": "${data.aws_rds_engine_version.this.id}"
+        },
+        "parameter_group_family": {
+            "description": "The family of parameter groups that this RDS engine version belongs to.",
+            "value": "${data.aws_rds_engine_version.this.parameter_group_family}"
+        },
+        "status": {
+            "description": "The current status of the RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.status}"
+        },
+        "supported_character_sets": {
+            "description": "Character sets supported by this RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.supported_character_sets}"
+        },
+        "supported_feature_names": {
+            "description": "Feature names supported by this RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.supported_feature_names}"
+        },
+        "supported_modes": {
+            "description": "Modes supported by this RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.supported_modes}"
+        },
+        "supported_timezones": {
+            "description": "Timezones supported by this RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.supported_timezones}"
+        },
+        "supports_global_databases": {
+            "description": "Indicates if the RDS engine version supports global databases.",
+            "value": "${data.aws_rds_engine_version.this.supports_global_databases}"
+        },
+        "supports_limitless_database": {
+            "description": "Indicates if the RDS engine version supports limitless databases.",
+            "value": "${data.aws_rds_engine_version.this.supports_limitless_database}"
+        },
+        "supports_log_exports_to_cloudwatch": {
+            "description": "Indicates if the RDS engine version supports exporting logs to CloudWatch.",
+            "value": "${data.aws_rds_engine_version.this.supports_log_exports_to_cloudwatch}"
+        },
+        "supports_parallel_query": {
+            "description": "Indicates if the RDS engine version supports parallel query.",
+            "value": "${data.aws_rds_engine_version.this.supports_parallel_query}"
+        },
+        "supports_read_replica": {
+            "description": "Indicates if the RDS engine version supports read replicas.",
+            "value": "${data.aws_rds_engine_version.this.supports_read_replica}"
+        },
+        "valid_major_targets": {
+            "description": "Valid major version targets for upgrade.",
+            "value": "${data.aws_rds_engine_version.this.valid_major_targets}"
+        },
+        "valid_minor_targets": {
+            "description": "Valid minor version targets for upgrade.",
+            "value": "${data.aws_rds_engine_version.this.valid_minor_targets}"
+        },
+        "valid_upgrade_targets": {
+            "description": "Valid targets for upgrading to this RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.valid_upgrade_targets}"
+        },
+        "version": {
+            "description": "The version number of the RDS engine.",
+            "value": "${data.aws_rds_engine_version.this.version}"
+        },
+        "version_actual": {
+            "description": "The actual version of the RDS engine being used.",
+            "value": "${data.aws_rds_engine_version.this.version_actual}"
+        },
+        "version_description": {
+            "description": "A description of the RDS engine version.",
+            "value": "${data.aws_rds_engine_version.this.version_description}"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "output": {
+        "access_token": {
+            "description": "The OAuth2 access token used by the client to authenticate against the Google Cloud API.",
+            "value": "${data.google_client_config.this.access_token}"
+        },
+        "default_labels": {
+            "description": "The default labels configured on the provider.",
+            "value": "${data.google_client_config.this.default_labels}"
+        },
+        "project": {
+            "description": "The project ID",
+            "value": "${data.google_client_config.this.project}"
+        },
+        "region": {
+            "description": "The region to operate under.",
+            "value": "${data.google_client_config.this.region}"
+        },
+        "zone": {
+            "description": "The zone to operate under.",
+            "value": "${data.google_client_config.this.zone}"
+        }
+    }
+}

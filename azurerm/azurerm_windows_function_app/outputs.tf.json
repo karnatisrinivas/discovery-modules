@@ -1,0 +1,20 @@
+{
+    "output": {
+        "default_hostname": {
+            "description": "The default hostname assigned to the Windows Function App.",
+            "value": "${azurerm_windows_function_app.this.default_hostname}"
+        },
+        "hosting_environment_id": {
+            "description": "The ID of the hosting environment where the Windows Function App is running.",
+            "value": "${azurerm_windows_function_app.this.hosting_environment_id}"
+        },
+        "id": {
+            "description": "The unique identifier of the Windows Function App.",
+            "value": "${azurerm_windows_function_app.this.id}"
+        },
+        "key_vault_reference_identity_id": {
+            "description": "The identity ID used for referencing Azure Key Vault in the Windows Function App.",
+            "value": "${azurerm_windows_function_app.this.key_vault_reference_identity_id}"
+        }
+    }
+}

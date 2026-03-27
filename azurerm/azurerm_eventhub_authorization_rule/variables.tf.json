@@ -1,0 +1,52 @@
+{
+  "variable": {
+    "eventhub_name": [
+      {
+        "description": "The name of the Event Hub for which the authorization rule is being created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "listen": [
+      {
+        "description": "A boolean flag to specify if the authorization rule should have listen permissions. Defaults to 'false' if not specified.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "manage": [
+      {
+        "description": "A boolean flag to specify if the authorization rule should have manage permissions, which includes listen and send permissions. Defaults to 'false' if not specified.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the authorization rule to be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "namespace_name": [
+      {
+        "description": "The name of the Event Hub Namespace within which the Event Hub and authorization rule reside.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "send": [
+      {
+        "description": "A boolean flag to specify if the authorization rule should have send permissions. Defaults to 'false' if not specified.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

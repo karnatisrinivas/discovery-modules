@@ -1,0 +1,12 @@
+{
+    "output": {
+        "accounts": {
+            "description": "A list of child accounts within the organizational unit, including details such as ARN, email, ID, name, and status.",
+            "value": "${data.aws_organizations_organizational_unit_child_accounts.this.accounts}"
+        },
+        "id": {
+            "description": "The unique identifier of the organizational unit containing the child accounts.",
+            "value": "${data.aws_organizations_organizational_unit_child_accounts.this.id}"
+        }
+    }
+}

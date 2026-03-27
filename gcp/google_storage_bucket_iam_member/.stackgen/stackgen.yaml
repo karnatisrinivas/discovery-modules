@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Storage Bucket Iam Member
+  node:
+    label:
+      static: Storage Bucket Iam Member
+      template: Storage Bucket Iam Member
+    display_type: default
+
+discovery:
+  type: google_storage_bucket_iam_member
+  dnd_supported: false
+  references:
+    bucket:
+      from: google_storage_bucket_composite
+      output: name

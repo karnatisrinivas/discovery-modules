@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Users"
+  node:
+    label:
+      static: "[Data] Iam Users"
+      template: "[Data] Iam Users"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_users
+  dnd_supported: false

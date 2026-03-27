@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "registry_id": [
+      {
+        "description": "The identifier for the AWS ECR registry. This is used to specify which ECR registry to obtain the authorization token for.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

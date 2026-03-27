@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cosmos DB Table
+  node:
+    label:
+      static: Cosmos DB Table
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_cosmosdb_table
+  dnd_supported: false

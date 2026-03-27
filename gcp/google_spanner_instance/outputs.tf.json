@@ -1,0 +1,24 @@
+{
+    "output": {
+        "effective_labels": {
+            "description": "Final set of labels applied to the Spanner instance after merging defaults and overrides",
+            "value": "${google_spanner_instance.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the Spanner instance, used for resource referencing",
+            "value": "${google_spanner_instance.this.id}"
+        },
+        "name": {
+            "description": "Name of the spanner instance.",
+            "value": "${google_spanner_instance.this.name}"
+        },
+        "state": {
+            "description": "Current operational state of the Spanner instance, e.g., READY or CREATING",
+            "value": "${google_spanner_instance.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels explicitly set via Terraform for organizing and categorizing the instance",
+            "value": "${google_spanner_instance.this.terraform_labels}"
+        }
+    }
+}

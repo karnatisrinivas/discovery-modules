@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for the organization sink, useful for referencing in configurations.",
+            "value": "${google_logging_organization_sink.this.id}"
+        },
+        "writer_identity": {
+            "description": "Service account used to write logs, important for access control and permissions.",
+            "value": "${google_logging_organization_sink.this.writer_identity}"
+        }
+    }
+}

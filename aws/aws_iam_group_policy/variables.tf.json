@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "group": [
+      {
+        "description": "Specifies the IAM group to which the policy will be applied. Must be an existing IAM group name.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the policy. Must be unique within the group and adhere to AWS naming constraints.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Sets a prefix for the policy name, which must be unique within the IAM group and adhere to AWS naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "policy": [
+      {
+        "description": "Specifies the policy document to attach to the IAM group, defining permissions and access control. Must be a valid JSON string.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Version identifier for IAM policy to detect changes",
+            "value": "${google_cloudfunctions_function_iam_policy.this.etag}"
+        },
+        "id": {
+            "description": "Resource ID for managing IAM policy associations",
+            "value": "${google_cloudfunctions_function_iam_policy.this.id}"
+        }
+    }
+}

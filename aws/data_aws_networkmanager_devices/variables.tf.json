@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier of the global network to which the device belongs.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "site_id": [
+      {
+        "description": "The unique identifier of the site where the device is located, if applicable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of key-value pairs to tag the device for organizational purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

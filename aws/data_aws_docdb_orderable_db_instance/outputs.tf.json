@@ -1,0 +1,24 @@
+{
+    "output": {
+        "availability_zones": {
+            "description": "A list of availability zones where the orderable DB instance is available.",
+            "value": "${data.aws_docdb_orderable_db_instance.this.availability_zones}"
+        },
+        "engine_version": {
+            "description": "The version of the database engine for the orderable DB instance.",
+            "value": "${data.aws_docdb_orderable_db_instance.this.engine_version}"
+        },
+        "id": {
+            "description": "The identifier of the orderable DB instance.",
+            "value": "${data.aws_docdb_orderable_db_instance.this.id}"
+        },
+        "instance_class": {
+            "description": "The class type of the orderable DB instance, indicating the instance's computing power and size.",
+            "value": "${data.aws_docdb_orderable_db_instance.this.instance_class}"
+        },
+        "vpc": {
+            "description": "A boolean indicating whether the orderable DB instance is in a Virtual Private Cloud (VPC).",
+            "value": "${data.aws_docdb_orderable_db_instance.this.vpc}"
+        }
+    }
+}

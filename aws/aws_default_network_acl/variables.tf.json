@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "default_network_acl_id": [
+      {
+        "description": "The ID of the default network ACL to associate with the VPC. Must reference an existing network ACL.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "egress": [
+      {
+        "description": "Defines the egress rules for the default network ACL, specifying outbound traffic permissions. Must include valid rule parameters such as protocol, ports, and CIDR blocks.",
+        "nullable": true,
+        "type": "list(object({action: string,cidr_block: optional(string),from_port: number,icmp_code: optional(number),icmp_type: optional(number),ipv6_cidr_block: optional(string),protocol: string,rule_no: number,to_port: number}))"
+      }
+    ],
+    "ingress": [
+      {
+        "description": "Defines the rules for inbound traffic to the default network ACL, specifying allowed or denied protocols, ports, and IP ranges.",
+        "nullable": true,
+        "type": "list(object({action: string,cidr_block: optional(string),from_port: number,icmp_code: optional(number),icmp_type: optional(number),ipv6_cidr_block: optional(string),protocol: string,rule_no: number,to_port: number}))"
+      }
+    ],
+    "subnet_ids": [
+      {
+        "description": "List of subnet IDs to associate with the default network ACL. Each subnet must belong to the same VPC as the network ACL.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to associate with the network ACL for identification and organization purposes.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

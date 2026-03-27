@@ -1,0 +1,239 @@
+{
+  "variable": {
+    "name": [
+      {
+        "type": "string",
+        "description": "The name of the virtual machine.",
+        "nullable": false
+      }
+    ],
+    "vm_size": [
+      {
+        "type": "string",
+        "description": "The size of the virtual machine.",
+        "nullable": false
+      }
+    ],
+    "network_interface_ids": [
+      {
+        "type": "list(string)",
+        "description": "A list of IDs of the network interfaces to associate with the virtual machine.",
+        "nullable": false
+      }
+    ],
+    "availability_set_id": [
+      {
+        "type": "string",
+        "description": "The ID of the availability set to associate with the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "enabled": [
+      {
+        "type": "bool",
+        "description": "Should Boot Diagnostics be enabled for this Virtual Machine?",
+        "nullable": true
+      }
+    ],
+    "storage_uri": [
+      {
+        "type": "string",
+        "description": "The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.",
+        "nullable": true
+      }
+    ],
+    "delete_os_disk_on_termination": [
+      {
+        "type": "bool",
+        "description": "Should the OS Disk be deleted when the Virtual Machine is deleted?",
+        "nullable": true
+      }
+    ],
+    "delete_data_disks_on_termination": [
+      {
+        "type": "bool",
+        "description": "Should the Data Disks be deleted when the Virtual Machine is deleted?",
+        "nullable": true
+      }
+    ],
+    "tags": [
+      {
+        "type": "map(string)",
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true
+      }
+    ],
+    "id": [
+      {
+        "type": "string",
+        "description": "Specifies the ID of the Custom Image, Either provide Id or any other image reference.",
+        "nullable": true
+      }
+    ],
+    "publisher": [
+      {
+        "type": "string",
+        "description": "Specifies the publisher of the image used to create the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "offer": [
+      {
+        "type": "string",
+        "description": "Specifies the offer of the image used to create the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "sku": [
+      {
+        "type": "string",
+        "description": "Specifies the SKU of the image used to create the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "image_version": [
+      {
+        "type": "string",
+        "description": "Specifies the version of the image used to create the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "storage_data_disk": [
+      {
+        "type": "list(object({name: string, create_option:string, caching: string, disk_size_gb: number, lun: number}))",
+        "description": "Specifies the storage data disks to attach to the virtual machine.",
+        "nullable": true
+      }
+    ],
+    "disable_password_authentication": [
+      {
+        "type": "bool",
+        "description": "Specifies whether password authentication should be disabled. If set to false, an admin_password must be specified.",
+        "nullable": true
+      }
+    ],
+    "ssh_keys": [
+      {
+        "type": "list(object({path: string, key_data: string}))",
+        "description": "Source the Key Data from a local file using file() function.",
+        "nullable": true
+      }
+    ],
+    "provision_vm_agent": [
+      {
+        "type": "bool",
+        "description": " Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine?",
+        "nullable": true
+      }
+    ],
+    "enable_automatic_upgrades": [
+      {
+        "type": "bool",
+        "description": " Are automatic updates enabled on this Virtual Machine?",
+        "nullable": true
+      }
+    ],
+    "timezone": [
+      {
+        "type": "string",
+        "description": "Specifies the timezone of the Virtual Machine.",
+        "nullable": true
+      }
+    ],
+    "protocol": [
+      {
+        "type": "string",
+        "description": "Specifies the protocol of listener.",
+        "nullable": true
+      }
+    ],
+    "certificate_url": [
+      {
+        "type": "string",
+        "description": "The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the vault_certificates block within the os_profile_secrets block",
+        "nullable": true
+      }
+    ],
+    "pass": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the pass that the content applies to",
+        "nullable": true
+      }
+    ],
+    "component": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the component to configure with the added content.",
+        "nullable": true
+      }
+    ],
+    "setting_name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the setting to which the content applies.",
+        "nullable": true
+      }
+    ],
+    "content": [
+      {
+        "type": "string",
+        "description": "Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.",
+        "nullable": true
+      }
+    ],
+    "computer_name": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the Virtual Machine.",
+        "nullable": true
+      }
+    ],
+    "admin_username": [
+      {
+        "type": "string",
+        "description": "Specifies the name of the local administrator account.",
+        "nullable": true
+      }
+    ],
+    "admin_password": [
+      {
+        "type": "string",
+        "description": "The password associated with the local administrator account.",
+        "nullable": true
+      }
+    ],
+    "type": [
+      {
+        "type": "string",
+        "description": " Specifies the type of Managed Service Identity that should be configured on this Virtual Machine.",
+        "nullable": true
+      }
+    ],
+    "identity_ids": [
+      {
+        "type": "list(string)",
+        "description": "Specifies a list of User Assigned Managed Identity IDs to be assigned to this Virtual Machine. Required when 'type' is set to 'UserAssigned' or 'Both'.",
+        "nullable": true
+      }
+    ],
+    "storage_os_disk": [
+      {
+        "type": "list(object({name: string, create_option: string, caching: string, disk_size_gb: number, image_uri: string, os_type: string, write_accelerator_enabled: bool}))",
+        "description": "A storage_os_disk block."
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

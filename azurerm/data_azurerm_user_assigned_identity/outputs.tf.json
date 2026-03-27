@@ -1,0 +1,28 @@
+{
+    "output": {
+        "client_id": {
+            "description": "The Client ID of the User Assigned Identity.",
+            "value": "${data.azurerm_user_assigned_identity.this.client_id}"
+        },
+        "id": {
+            "description": "The ID of the User Assigned Identity.",
+            "value": "${data.azurerm_user_assigned_identity.this.id}"
+        },
+        "location": {
+            "description": "The Azure location where the User Assigned Identity exists.",
+            "value": "${data.azurerm_user_assigned_identity.this.location}"
+        },
+        "principal_id": {
+            "description": "The Service Principal ID of the User Assigned Identity.",
+            "value": "${data.azurerm_user_assigned_identity.this.principal_id}"
+        },
+        "tags": {
+            "description": "A mapping of tags assigned to the User Assigned Identity.",
+            "value": "${data.azurerm_user_assigned_identity.this.tags}"
+        },
+        "tenant_id": {
+            "description": "The Tenant ID of the User Assigned Identity.",
+            "value": "${data.azurerm_user_assigned_identity.this.tenant_id}"
+        }
+    }
+}

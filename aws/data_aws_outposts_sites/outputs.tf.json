@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "",
+            "value": "${data.aws_outposts_sites.this.id}"
+        },
+        "ids": {
+            "description": "",
+            "value": "${data.aws_outposts_sites.this.ids}"
+        }
+    }
+}

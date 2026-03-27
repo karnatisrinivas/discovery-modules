@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Api Gateway Vpc Link
+  node:
+    label:
+      static: Api Gateway Vpc Link
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_api_gateway_vpc_link
+  dnd_supported: false
+  data_source: data_aws_api_gateway_vpc_link
+  references:
+    target_arns:
+      from: aws_lb
+      output: arn

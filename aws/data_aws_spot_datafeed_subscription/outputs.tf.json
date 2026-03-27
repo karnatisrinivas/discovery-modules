@@ -1,0 +1,12 @@
+{
+    "output": {
+        "bucket": {
+            "description": "The name of the S3 bucket where the AWS Spot Instance data feed is stored.",
+            "value": "${data.aws_spot_datafeed_subscription.this.bucket}"
+        },
+        "prefix": {
+            "description": "The prefix applied to the data feed files in the S3 bucket.",
+            "value": "${data.aws_spot_datafeed_subscription.this.prefix}"
+        }
+    }
+}

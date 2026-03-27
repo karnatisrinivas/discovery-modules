@@ -1,0 +1,60 @@
+{
+    "output": {
+        "allocated_storage": {
+            "description": "Amount of storage allocated for the snapshot in gigabytes",
+            "value": "${aws_neptune_cluster_snapshot.this.allocated_storage}"
+        },
+        "availability_zones": {
+            "description": "List of availability zones where the snapshot is accessible",
+            "value": "${aws_neptune_cluster_snapshot.this.availability_zones}"
+        },
+        "db_cluster_snapshot_arn": {
+            "description": "Amazon Resource Name for referencing the snapshot in IAM or API operations",
+            "value": "${aws_neptune_cluster_snapshot.this.db_cluster_snapshot_arn}"
+        },
+        "engine": {
+            "description": "Database engine used for the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.engine}"
+        },
+        "engine_version": {
+            "description": "Version of the Neptune database engine for the snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.engine_version}"
+        },
+        "id": {
+            "description": "Unique identifier for the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.id}"
+        },
+        "kms_key_id": {
+            "description": "Key ID of the KMS encryption key used for the snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.kms_key_id}"
+        },
+        "license_model": {
+            "description": "License model associated with the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.license_model}"
+        },
+        "port": {
+            "description": "Port number used to connect to the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.port}"
+        },
+        "snapshot_type": {
+            "description": "Type of snapshot, e.g., automated or manual",
+            "value": "${aws_neptune_cluster_snapshot.this.snapshot_type}"
+        },
+        "source_db_cluster_snapshot_arn": {
+            "description": "ARN of the source cluster snapshot from which this snapshot was created",
+            "value": "${aws_neptune_cluster_snapshot.this.source_db_cluster_snapshot_arn}"
+        },
+        "status": {
+            "description": "Current status of the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.status}"
+        },
+        "storage_encrypted": {
+            "description": "Indicates whether the snapshot storage is encrypted",
+            "value": "${aws_neptune_cluster_snapshot.this.storage_encrypted}"
+        },
+        "vpc_id": {
+            "description": "ID of the VPC associated with the Neptune cluster snapshot",
+            "value": "${aws_neptune_cluster_snapshot.this.vpc_id}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Account IAM Member
+  node:
+    label:
+      static: Service Account IAM Member
+      template: Service Account IAM Member
+    display_type: default
+
+discovery:
+  type: google_service_account_iam_member
+  dnd_supported: false

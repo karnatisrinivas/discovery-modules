@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssmincidents Replication Set"
+  node:
+    label:
+      static: "[Data] Ssmincidents Replication Set"
+      template: "[Data] Ssmincidents Replication Set"
+    display_type: default
+
+discovery:
+  type: data_aws_ssmincidents_replication_set
+  dnd_supported: false

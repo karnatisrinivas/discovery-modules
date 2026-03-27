@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "calculator_name": [
+      {
+        "description": "The unique name for the route calculator resource.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

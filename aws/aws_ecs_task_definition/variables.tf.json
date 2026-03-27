@@ -1,0 +1,147 @@
+{
+    "variable": {
+        "container_definitions": [
+            {
+                "description": " A list of valid container definitions provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document.",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "family": [
+            {
+                "description": "The family of your task definition, used as the definition name",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "cpu": [
+            {
+                "type": "string",
+                "description": "Number of cpu units used by the task. If the requires_compatibilities is FARGATE this field is required.",
+                "nullable": true
+            }
+        ],
+        "enable_fault_injection": [
+            {
+                "description": "Whether to enable fault injection for the task.",
+                "type": "bool",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "execution_role_arn": [
+            {
+                "description": "ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume",
+                "nullable": true,
+                "type": "string"
+            }
+        ],
+        "inference_accelerator": [
+            {
+                "description": "Configuration block for the inference accelerator.",
+                "type": "list(object({device_name: string, device_type: string}))",
+                "nullable": true
+            }
+        ],
+        "ipc_mode": [
+            {
+                "description": "IPC mode to use for the containers in the task",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "memory": [
+            {
+                "type": "string",
+                "description": "Amount (in MiB) of memory used by the task. If the requires_compatibilities is FARGATE this field is required.",
+                "nullable": true
+            }
+        ],
+        "network_mode": [
+            {
+                "description": "Docker networking mode to use for the containers in the task",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "runtime_platform": [
+            {
+                "description": "Configuration block for the runtime platform of the task definition.",
+                "type": "list(object({cpu_architecture: string, operating_system_family: string}))",
+                "nullable": true
+            }
+        ],
+        "pid_mode": [
+            {
+                "description": "PID mode to use for the containers in the task",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "placement_constraints": [
+            {
+                "description": "Configuration block for placing containers.",
+                "type": "list(object({type: string, expression: string}))",
+                "nullable": true
+            }
+        ],
+        "proxy_configuration": [
+            {
+                "description": "Configuration block for the proxy configuration.",
+                "type": "list(object({container_name: string, properties: map(string), type: string}))",
+                "nullable": true
+            }
+        ],
+        "ephemeral_storage": [
+            {
+                "description": "Configuration block for the ephemeral storage settings.",
+                "type": "list(object({size_in_gib: number}))",
+                "nullable": true
+            }
+        ],
+        "requires_compatibilities": [
+            {
+                "description": "Set of launch types required by the task",
+                "type": "list(string)",
+                "nullable": true
+            }
+        ],
+        "skip_destroy": [
+            {
+                "description": "Whether to skip destroying the task definition.",
+                "type": "bool",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "tags": [
+            {
+                "description": "A map of tags to add to all resources",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ],
+        "task_role_arn": [
+            {
+                "description": "ARN of the task role that containers in the task may assume",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "track_latest": [
+            {
+                "description": "Whether to track the latest revision of the task definition.",
+                "type": "bool",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "volume": [
+            {
+                "description": "Configuration block for volumes.",
+                "type": "list(object({name: string, host_path: string, docker_volume_configuration: list(object({autoprovision: bool, driver_opts: map(string), driver: string, labels: map(string), scope: string})), efs_volume_configuration: list(object({file_system_id: string, root_directory: string, transit_encryption: string, transit_encryption_port: number, authorization_config:list(object({iam: string, access_point_id: string}))})), fsx_windows_file_server_volume_configuration: list(object({authorization_config: list(object({credentials_parameter: string, domain: string})), file_system_id: string, root_directory: string})), configure_at_launch: optional(bool)}))",
+                "nullable": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,217 @@
+{
+  "variable": {
+    "account_enabled": [
+      {
+        "description": "Indicates if the user account is enabled or not.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "age_group": [
+      {
+        "description": "Specifies the age group of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "city": [
+      {
+        "description": "The city where the user is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "company_name": [
+      {
+        "description": "The name of the company the user is associated with.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "consent_provided_for_minor": [
+      {
+        "description": "Indicates if consent has been provided for a minor.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "cost_center": [
+      {
+        "description": "The cost center associated with the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "country": [
+      {
+        "description": "The country where the user is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "department": [
+      {
+        "description": "The department the user belongs to.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "disable_password_expiration": [
+      {
+        "description": "Determines if the user's password expiration is disabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "disable_strong_password": [
+      {
+        "description": "Determines if strong password enforcement is disabled for the user.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "display_name": [
+      {
+        "description": "The display name of the user, which is required.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "division": [
+      {
+        "description": "The division within the company the user is part of.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "employee_id": [
+      {
+        "description": "The employee ID of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "employee_type": [
+      {
+        "description": "The type of employment (e.g., full-time, part-time) of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "fax_number": [
+      {
+        "description": "The fax number associated with the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_password_change": [
+      {
+        "description": "Indicates if the user is required to change their password on next login.",
+        "nullable": true,
+        "type": "bool",
+        "default": false
+      }
+    ],
+    "given_name": [
+      {
+        "description": "The given (first) name of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "job_title": [
+      {
+        "description": "The job title of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "manager_id": [
+      {
+        "description": "The ID of the user's manager.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "mobile_phone": [
+      {
+        "description": "The mobile phone number of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "office_location": [
+      {
+        "description": "The office location of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "other_mails": [
+      {
+        "description": "A set of additional email addresses for the user.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "postal_code": [
+      {
+        "description": "The postal code of the user's location.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "preferred_language": [
+      {
+        "description": "The preferred language of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "show_in_address_list": [
+      {
+        "description": "Determines if the user should be visible in the address list.",
+        "nullable": true,
+        "type": "bool",
+        "default": true
+      }
+    ],
+    "state": [
+      {
+        "description": "The state or province where the user is located.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "street_address": [
+      {
+        "description": "The street address of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "surname": [
+      {
+        "description": "The surname (last name) of the user.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "usage_location": [
+      {
+        "description": "The location where the user primarily uses services.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "user_principal_name": [
+      {
+        "description": "The User Principal Name (UPN) of the user, which is required.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

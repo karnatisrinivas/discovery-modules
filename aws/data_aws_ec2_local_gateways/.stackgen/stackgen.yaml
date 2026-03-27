@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Local Gateways"
+  node:
+    label:
+      static: "[Data] Ec2 Local Gateways"
+      template: "[Data] Ec2 Local Gateways"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_local_gateways
+  dnd_supported: false

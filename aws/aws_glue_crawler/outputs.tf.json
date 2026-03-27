@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name for IAM policies and API calls related to the Glue crawler",
+            "value": "${aws_glue_crawler.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier to reference the Glue crawler in configurations",
+            "value": "${aws_glue_crawler.this.id}"
+        },
+        "tags_all": {
+            "description": "Key-value pairs for categorizing and organizing the Glue crawler resource",
+            "value": "${aws_glue_crawler.this.tags_all}"
+        }
+    }
+}

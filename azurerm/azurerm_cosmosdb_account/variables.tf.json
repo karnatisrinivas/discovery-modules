@@ -1,0 +1,150 @@
+{
+  "variable": {
+    "access_key_metadata_writes_enabled": [
+      {
+        "description": "Enable or disable metadata writes using access keys.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "analytical_storage_enabled": [
+      {
+        "description": "Enable or disable analytical storage for the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "burst_capacity_enabled": [
+      {
+        "description": "Enable or disable burst capacity for the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "consistency_level": [
+      {
+        "description": "Consistency level for the Cosmos DB account (e.g., BoundedStaleness, Eventual, Session, Strong or ConsistentPrefix).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "default_identity_type": [
+      {
+        "description": "Specify the default identity type used by the Cosmos DB account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "geo_location": [
+      {
+        "description": "A list of objects containing the location and failover priority of the Cosmos DB account.",
+        "nullable": true,
+        "type": "list(object({ location: string, failover_priority: number }))",
+        "default": []
+      }
+    ],
+    "ip_range_filter": [
+      {
+        "description": "Set an IP range filter to restrict access to the Cosmos DB account.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "is_virtual_network_filter_enabled": [
+      {
+        "description": "Enable or disable virtual network filtering for the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "key_vault_key_id": [
+      {
+        "description": "Specify the Key Vault key ID for encryption at rest.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kind": [
+      {
+        "description": "Type of Cosmos DB account (e.g., MongoDB, SQL).",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "local_authentication_disabled": [
+      {
+        "description": "Enable or disable local authentication for the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "max_interval_in_seconds": [
+      {
+        "description": "When used with the Bounded Staleness consistency level, this value represents the time amount of staleness.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Cosmos DB account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network_acl_bypass_for_azure_services": [
+      {
+        "description": "Allow Azure services to bypass network ACLs.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "network_acl_bypass_ids": [
+      {
+        "description": "List of IDs allowed to bypass network ACLs.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "offer_type": [
+      {
+        "description": "Specify the offer type for the Cosmos DB account (e.g., Standard).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "partition_merge_enabled": [
+      {
+        "description": "Enable or disable partition merge for the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Enable or disable public network access to the Cosmos DB account.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Tags to associate with the Cosmos DB account.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

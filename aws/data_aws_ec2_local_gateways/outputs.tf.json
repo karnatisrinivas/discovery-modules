@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the local gateway.",
+            "value": "${data.aws_ec2_local_gateways.this.id}"
+        },
+        "ids": {
+            "description": "A list of unique identifiers for the local gateways.",
+            "value": "${data.aws_ec2_local_gateways.this.ids}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the local gateways.",
+            "value": "${data.aws_ec2_local_gateways.this.tags}"
+        }
+    }
+}

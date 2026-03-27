@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "resource_id": [
+      {
+        "description": "The unique identifier of the AWS resource you want to tag.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

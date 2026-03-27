@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Delegated Services"
+  node:
+    label:
+      static: "[Data] Organizations Delegated Services"
+      template: "[Data] Organizations Delegated Services"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_delegated_services
+  dnd_supported: false

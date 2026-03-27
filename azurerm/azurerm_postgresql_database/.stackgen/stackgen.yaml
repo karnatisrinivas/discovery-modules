@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: PostgreSQL Database
+  node:
+    label:
+      static: PostgreSQL Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_postgresql_database
+  dnd_supported: false
+  references:
+    server_name:
+      from: azurerm_postgresql_server
+      output: name

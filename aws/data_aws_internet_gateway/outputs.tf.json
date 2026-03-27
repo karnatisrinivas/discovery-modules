@@ -1,0 +1,28 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.arn}"
+        },
+        "attachments": {
+            "description": "A list of attachments showing the state and VPC ID associated with the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.attachments}"
+        },
+        "id": {
+            "description": "The unique identifier of the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.id}"
+        },
+        "internet_gateway_id": {
+            "description": "The ID of the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.internet_gateway_id}"
+        },
+        "owner_id": {
+            "description": "The AWS account ID of the owner of the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.owner_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the internet gateway.",
+            "value": "${data.aws_internet_gateway.this.tags}"
+        }
+    }
+}

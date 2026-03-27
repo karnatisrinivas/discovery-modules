@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "domain": [
+      {
+        "description": "Specifies the domain associated with the Google Cloud organization, required for identifying the organization.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "organization": [
+      {
+        "description": "ID of the Google Cloud organization to associate resources with. Must be a valid organization ID.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the SAML provider.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

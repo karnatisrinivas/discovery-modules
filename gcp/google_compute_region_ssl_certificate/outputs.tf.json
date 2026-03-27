@@ -1,0 +1,24 @@
+{
+    "output": {
+        "certificate_id": {
+            "description": "Unique identifier for referencing the SSL certificate resource",
+            "value": "${google_compute_region_ssl_certificate.this.certificate_id}"
+        },
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the SSL certificate was created",
+            "value": "${google_compute_region_ssl_certificate.this.creation_timestamp}"
+        },
+        "expire_time": {
+            "description": "Date and time when the SSL certificate will expire",
+            "value": "${google_compute_region_ssl_certificate.this.expire_time}"
+        },
+        "id": {
+            "description": "Primary ID for identifying the SSL certificate resource",
+            "value": "${google_compute_region_ssl_certificate.this.id}"
+        },
+        "self_link": {
+            "description": "Fully qualified URL for accessing the SSL certificate resource",
+            "value": "${google_compute_region_ssl_certificate.this.self_link}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "name": [
+      {
+        "description": "The name of the VPC Lattice service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "service_identifier": [
+      {
+        "description": "A unique identifier for the VPC Lattice service.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

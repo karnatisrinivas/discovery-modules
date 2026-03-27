@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Log Analytics Workspace.",
+            "value": "${data.azurerm_log_analytics_workspace.this.id}"
+        },
+        "workspace_id": {
+            "description": "The unique workspace ID associated with the Log Analytics Workspace.",
+            "value": "${data.azurerm_log_analytics_workspace.this.workspace_id}"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The ID of the selected AWS AMI (Amazon Machine Image).",
+            "value": "${data.aws_ami_ids.this.id}"
+        },
+        "ids": {
+            "description": "A list of IDs for all matching AWS AMIs (Amazon Machine Images).",
+            "value": "${data.aws_ami_ids.this.ids}"
+        }
+    }
+}

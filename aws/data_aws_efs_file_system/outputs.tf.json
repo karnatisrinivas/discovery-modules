@@ -1,0 +1,72 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.arn}"
+        },
+        "availability_zone_id": {
+            "description": "The ID of the availability zone where the EFS file system is located.",
+            "value": "${data.aws_efs_file_system.this.availability_zone_id}"
+        },
+        "availability_zone_name": {
+            "description": "The name of the availability zone where the EFS file system is located.",
+            "value": "${data.aws_efs_file_system.this.availability_zone_name}"
+        },
+        "creation_token": {
+            "description": "A unique token used to ensure idempotent creation of the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.creation_token}"
+        },
+        "dns_name": {
+            "description": "The DNS name of the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.dns_name}"
+        },
+        "encrypted": {
+            "description": "Indicates whether the EFS file system is encrypted.",
+            "value": "${data.aws_efs_file_system.this.encrypted}"
+        },
+        "file_system_id": {
+            "description": "The ID of the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.file_system_id}"
+        },
+        "id": {
+            "description": "The ID of the EFS file system (same as file_system_id).",
+            "value": "${data.aws_efs_file_system.this.id}"
+        },
+        "kms_key_id": {
+            "description": "The ID of the AWS KMS key used to encrypt the file system.",
+            "value": "${data.aws_efs_file_system.this.kms_key_id}"
+        },
+        "lifecycle_policy": {
+            "description": "The lifecycle policies for the EFS file system, defining transitions to different storage classes.",
+            "value": "${data.aws_efs_file_system.this.lifecycle_policy}"
+        },
+        "name": {
+            "description": "The name of the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.name}"
+        },
+        "performance_mode": {
+            "description": "The performance mode of the EFS file system (e.g., generalPurpose or maxIO).",
+            "value": "${data.aws_efs_file_system.this.performance_mode}"
+        },
+        "protection": {
+            "description": "The protection settings for the EFS file system, including replication options.",
+            "value": "${data.aws_efs_file_system.this.protection}"
+        },
+        "provisioned_throughput_in_mibps": {
+            "description": "The provisioned throughput in MiB/s for the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.provisioned_throughput_in_mibps}"
+        },
+        "size_in_bytes": {
+            "description": "The size of the EFS file system in bytes.",
+            "value": "${data.aws_efs_file_system.this.size_in_bytes}"
+        },
+        "tags": {
+            "description": "The tags assigned to the EFS file system.",
+            "value": "${data.aws_efs_file_system.this.tags}"
+        },
+        "throughput_mode": {
+            "description": "The throughput mode for the EFS file system (e.g., bursting or provisioned).",
+            "value": "${data.aws_efs_file_system.this.throughput_mode}"
+        }
+    }
+}

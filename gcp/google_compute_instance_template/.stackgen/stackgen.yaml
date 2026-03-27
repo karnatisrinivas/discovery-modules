@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Instance Template
+  node:
+    label:
+      static: Compute Instance Template
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_instance_template
+  dnd_supported: false

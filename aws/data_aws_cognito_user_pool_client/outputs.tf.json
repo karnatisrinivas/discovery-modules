@@ -1,0 +1,88 @@
+{
+    "output": {
+        "access_token_validity": {
+            "description": "The validity duration of the access token in seconds.",
+            "value": "${data.aws_cognito_user_pool_client.this.access_token_validity}"
+        },
+        "allowed_oauth_flows": {
+            "description": "The OAuth flows that are allowed for this client.",
+            "value": "${data.aws_cognito_user_pool_client.this.allowed_oauth_flows}"
+        },
+        "allowed_oauth_flows_user_pool_client": {
+            "description": "Indicates whether the client is allowed to use OAuth flows with the user pool.",
+            "value": "${data.aws_cognito_user_pool_client.this.allowed_oauth_flows_user_pool_client}"
+        },
+        "allowed_oauth_scopes": {
+            "description": "The OAuth scopes that are allowed for this client.",
+            "value": "${data.aws_cognito_user_pool_client.this.allowed_oauth_scopes}"
+        },
+        "analytics_configuration": {
+            "description": "Configuration for analytics logging related to this client.",
+            "value": "${data.aws_cognito_user_pool_client.this.analytics_configuration}"
+        },
+        "callback_urls": {
+            "description": "A list of allowed callback URLs for the client.",
+            "value": "${data.aws_cognito_user_pool_client.this.callback_urls}"
+        },
+        "default_redirect_uri": {
+            "description": "The default redirect URI for the client.",
+            "value": "${data.aws_cognito_user_pool_client.this.default_redirect_uri}"
+        },
+        "enable_propagate_additional_user_context_data": {
+            "description": "Indicates whether additional user context data should be propagated.",
+            "value": "${data.aws_cognito_user_pool_client.this.enable_propagate_additional_user_context_data}"
+        },
+        "enable_token_revocation": {
+            "description": "Indicates whether token revocation is enabled for the client.",
+            "value": "${data.aws_cognito_user_pool_client.this.enable_token_revocation}"
+        },
+        "explicit_auth_flows": {
+            "description": "The authentication flows that are explicitly allowed for this client.",
+            "value": "${data.aws_cognito_user_pool_client.this.explicit_auth_flows}"
+        },
+        "generate_secret": {
+            "description": "Indicates whether a secret is generated for the client.",
+            "value": "${data.aws_cognito_user_pool_client.this.generate_secret}"
+        },
+        "id": {
+            "description": "The unique identifier of the user pool client.",
+            "value": "${data.aws_cognito_user_pool_client.this.id}"
+        },
+        "id_token_validity": {
+            "description": "The validity duration of the ID token in seconds.",
+            "value": "${data.aws_cognito_user_pool_client.this.id_token_validity}"
+        },
+        "logout_urls": {
+            "description": "A list of allowed logout URLs for the client.",
+            "value": "${data.aws_cognito_user_pool_client.this.logout_urls}"
+        },
+        "name": {
+            "description": "The name of the user pool client.",
+            "value": "${data.aws_cognito_user_pool_client.this.name}"
+        },
+        "prevent_user_existence_errors": {
+            "description": "Prevents user existence errors during sign-in attempts.",
+            "value": "${data.aws_cognito_user_pool_client.this.prevent_user_existence_errors}"
+        },
+        "read_attributes": {
+            "description": "A list of user attributes that the client can read.",
+            "value": "${data.aws_cognito_user_pool_client.this.read_attributes}"
+        },
+        "refresh_token_validity": {
+            "description": "The validity duration of the refresh token in seconds.",
+            "value": "${data.aws_cognito_user_pool_client.this.refresh_token_validity}"
+        },
+        "supported_identity_providers": {
+            "description": "The identity providers that are supported for this client.",
+            "value": "${data.aws_cognito_user_pool_client.this.supported_identity_providers}"
+        },
+        "token_validity_units": {
+            "description": "The units of time for the validity of tokens.",
+            "value": "${data.aws_cognito_user_pool_client.this.token_validity_units}"
+        },
+        "write_attributes": {
+            "description": "A list of user attributes that the client can write.",
+            "value": "${data.aws_cognito_user_pool_client.this.write_attributes}"
+        }
+    }
+}

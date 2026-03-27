@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the Redshift producer data share.",
+            "value": "${data.aws_redshift_producer_data_shares.this.id}"
+        }
+    }
+}

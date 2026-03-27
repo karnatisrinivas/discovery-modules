@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: AWS Network ACL
+  node:
+    label:
+      static: AWS Network ACL
+      template: AWS Network ACL
+    display_type: default
+
+discovery:
+  type: aws_network_acl
+  dnd_supported: false
+  references:
+    vpc_id:
+      from: aws_vpc
+      output: id

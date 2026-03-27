@@ -1,0 +1,74 @@
+{
+  "variable": {
+    "chain_name": [
+      {
+        "description": "Specifies the name of the snapshot chain, used to group related snapshots for incremental backups or other purposes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a human-readable description for the snapshot, detailing its purpose or usage.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs to organize and categorize the snapshot; must comply with GCP label naming and formatting rules.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the snapshot to be created, must be unique within the project and comply with naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "snapshot_encryption_key": [
+      {
+        "description": "Specifies the customer-managed encryption key used to encrypt the snapshot, requiring the key to exist in Google Cloud Key Management Service.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string),sha256: optional(string)}))"
+      }
+    ],
+    "source_disk": [
+      {
+        "description": "Specifies the disk to create the snapshot from; must be an existing disk in the same project and zone.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "source_disk_encryption_key": [
+      {
+        "description": "Defines the encryption key used to decrypt the source disk. Must match the key used when the disk was originally encrypted.",
+        "nullable": true,
+        "type": "list(object({kms_key_self_link: optional(string),kms_key_service_account: optional(string),raw_key: optional(string),rsa_encrypted_key: optional(string)}))"
+      }
+    ],
+    "storage_locations": [
+      {
+        "description": "Specifies the geographic locations where the snapshot will be stored; must be valid Google Cloud storage locations.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout durations for create, update, and delete operations of the snapshot, ensuring operations complete within specified limits.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zone": [
+      {
+        "description": "Specifies the zone of the source disk for the snapshot; must match the zone where the disk resides.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AppConfig configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.arn}"
+        },
+        "description": {
+            "description": "A description of the AppConfig configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.description}"
+        },
+        "id": {
+            "description": "The ID of the AppConfig configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.id}"
+        },
+        "kms_key_identifier": {
+            "description": "The identifier of the AWS KMS key used for encrypting the configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.kms_key_identifier}"
+        },
+        "location_uri": {
+            "description": "The URI location of the configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.location_uri}"
+        },
+        "name": {
+            "description": "The name of the AppConfig configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.name}"
+        },
+        "retrieval_role_arn": {
+            "description": "The ARN of the IAM role used to retrieve the configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.retrieval_role_arn}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AppConfig configuration profile.",
+            "value": "${data.aws_appconfig_configuration_profile.this.tags}"
+        },
+        "validator": {
+            "description": "A set of validators for the configuration profile, including content and type.",
+            "value": "${data.aws_appconfig_configuration_profile.this.validator}"
+        }
+    }
+}

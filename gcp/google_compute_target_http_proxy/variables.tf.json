@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines a general description applicable to the resource or module, can be null if not used.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "http_keep_alive_timeout_sec": [
+      {
+        "description": "Specifies the keep-alive timeout in seconds for HTTP connections. Must be a positive integer if provided.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "name": [
+      {
+        "description": "Sets the name for the resource, which must be a non-empty string and adhere to naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "project": [
+      {
+        "description": "Indicates the project associated with the resource. Can be null if not specifically required.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "proxy_bind": [
+      {
+        "description": "Determines whether to bind the proxy, accepting a boolean value. True enables binding.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the timeout settings for create, delete, and update operations. Each can be a string duration, such as '30m'.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "url_map": [
+      {
+        "description": "Associates a URL map with the resource, requiring a valid string reference to an existing URL map.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

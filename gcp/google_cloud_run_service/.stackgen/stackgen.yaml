@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Cloud Run Service
+  node:
+    label:
+      static: Cloud Run Service
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_cloud_run_service
+  dnd_supported: false

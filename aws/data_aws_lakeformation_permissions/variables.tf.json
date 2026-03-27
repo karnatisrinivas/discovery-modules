@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "catalog_id": [
+      {
+        "description": "The identifier for the AWS Glue Data Catalog to which the permissions apply. If not provided, the default account catalog is used.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "catalog_resource": [
+      {
+        "description": "A boolean value indicating whether the permissions apply to the entire catalog. Set to true for catalog-wide permissions.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "principal": [
+      {
+        "description": "The principal (e.g., IAM user or role) to whom the permissions are granted.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

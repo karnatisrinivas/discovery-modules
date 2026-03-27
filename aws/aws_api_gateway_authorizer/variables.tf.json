@@ -1,0 +1,67 @@
+{
+  "variable": {
+    "authorizer_credentials": [
+      {
+        "description": "IAM role ARN specifying the credentials required for the authorizer to invoke a Lambda function.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "authorizer_result_ttl_in_seconds": [
+      {
+        "description": "Time-to-live duration (in seconds) for caching authorizer results, must be between 0 and 3600.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "authorizer_uri": [
+      {
+        "description": "URI of the Lambda function to use for the custom authorizer; must be a valid ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identity_source": [
+      {
+        "description": "Specifies the source of the identity for authorization, typically a header or query parameter, required for validating requests.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "identity_validation_expression": [
+      {
+        "description": "Validation regex pattern for incoming identity sources, used to ensure the format of the identity value matches expected requirements.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the API Gateway authorizer, which must be unique within the API Gateway instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "provider_arns": [
+      {
+        "description": "List of ARNs for the identity providers that the authorizer uses to validate the caller's identity.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "rest_api_id": [
+      {
+        "description": "ID of the associated API Gateway REST API that the authorizer will be linked to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the type of authorizer, either TOKEN, REQUEST, or COGNITO_USER_POOLS, to define how authorization is handled.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

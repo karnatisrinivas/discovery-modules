@@ -1,0 +1,8 @@
+{
+    "output": {
+        "stream_analytics_cluster_id": {
+            "description": "The value of the stream_analytics_cluster_id output",
+            "value": "${azurerm_stream_analytics_cluster.this.id}"
+        }
+    }
+}

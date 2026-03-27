@@ -1,0 +1,44 @@
+{
+    "variable": {
+        "runtime": [
+            {
+                "type": "string",
+                "description": "Desired runtime. Example python27."
+            }
+        ],
+        "service": [
+            {
+                "type": "string",
+                "description": "AppEngine service resource"
+            }
+        ],
+        "shell": [
+            {
+                "type": "string",
+                "description": "The format should be a shell command that can be fed to bash -c."
+            }
+        ],
+        "zip_source_url": [
+            {
+                "type": "string",
+                "description": "Source URl",
+                "nullable": true
+            }
+        ],
+        "zip_files_count": [
+            {
+                "type": "number",
+                "description": "Files count",
+                "nullable": true
+            }
+        ],
+        "files": [
+            {
+                "type": "list(object({name: string, sha1_sum: string, source_url: string}))",
+                "description": "Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.",
+                "default": [],
+                "nullable": true
+            }
+        ]
+    }
+}

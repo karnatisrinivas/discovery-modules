@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the Lake Formation resource.",
+            "value": "${data.aws_lakeformation_resource.this.id}"
+        },
+        "last_modified": {
+            "description": "The timestamp of when the Lake Formation resource was last modified.",
+            "value": "${data.aws_lakeformation_resource.this.last_modified}"
+        },
+        "role_arn": {
+            "description": "The Amazon Resource Name (ARN) of the role associated with the Lake Formation resource.",
+            "value": "${data.aws_lakeformation_resource.this.role_arn}"
+        }
+    }
+}

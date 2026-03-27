@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Rds Orderable Db Instance"
+  node:
+    label:
+      static: "[Data] Rds Orderable Db Instance"
+      template: "[Data] Rds Orderable Db Instance"
+    display_type: default
+
+discovery:
+  type: data_aws_rds_orderable_db_instance
+  dnd_supported: false

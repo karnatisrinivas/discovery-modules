@@ -1,0 +1,32 @@
+{
+    "output": {
+        "created_at": {
+            "description": "The date and time when the inference profile was created.",
+            "value": "${data.aws_bedrock_inference_profile.this.created_at}"
+        },
+        "description": {
+            "description": "A brief summary or explanation of the inference profile.",
+            "value": "${data.aws_bedrock_inference_profile.this.description}"
+        },
+        "inference_profile_arn": {
+            "description": "The Amazon Resource Name (ARN) uniquely identifying the inference profile.",
+            "value": "${data.aws_bedrock_inference_profile.this.inference_profile_arn}"
+        },
+        "inference_profile_name": {
+            "description": "The name assigned to the inference profile.",
+            "value": "${data.aws_bedrock_inference_profile.this.inference_profile_name}"
+        },
+        "models": {
+            "description": "A list of models associated with the inference profile, each identified by their ARN.",
+            "value": "${data.aws_bedrock_inference_profile.this.models}"
+        },
+        "status": {
+            "description": "The current status of the inference profile, indicating its state or condition.",
+            "value": "${data.aws_bedrock_inference_profile.this.status}"
+        },
+        "updated_at": {
+            "description": "The date and time when the inference profile was last updated.",
+            "value": "${data.aws_bedrock_inference_profile.this.updated_at}"
+        }
+    }
+}

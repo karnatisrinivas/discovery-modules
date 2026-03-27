@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Organization
+  node:
+    label:
+      static: Apigee Organization
+      template: ${project_id}
+    display_type: default
+
+discovery:
+  type: google_apigee_organization
+  dnd_supported: false
+  references:
+    authorized_network:
+      from: google_compute_network
+      output: id

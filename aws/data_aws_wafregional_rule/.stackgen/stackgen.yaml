@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Wafregional Rule"
+  node:
+    label:
+      static: "[Data] Wafregional Rule"
+      template: "[Data] Wafregional Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_wafregional_rule
+  dnd_supported: false

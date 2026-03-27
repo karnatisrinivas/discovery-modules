@@ -1,0 +1,16 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for API calls and IAM policy references",
+            "value": "${aws_storagegateway_tape_pool.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for managing the tape pool in Terraform",
+            "value": "${aws_storagegateway_tape_pool.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for categorizing and organizing the tape pool",
+            "value": "${aws_storagegateway_tape_pool.this.tags_all}"
+        }
+    }
+}

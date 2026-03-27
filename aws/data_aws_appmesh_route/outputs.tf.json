@@ -1,0 +1,36 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.arn}"
+        },
+        "created_date": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.created_date}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.id}"
+        },
+        "last_updated_date": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.last_updated_date}"
+        },
+        "mesh_owner": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.mesh_owner}"
+        },
+        "resource_owner": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.resource_owner}"
+        },
+        "spec": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.spec}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_appmesh_route.this.tags}"
+        }
+    }
+}

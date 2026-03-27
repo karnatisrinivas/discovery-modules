@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eks Node Group"
+  node:
+    label:
+      static: "[Data] Eks Node Group"
+      template: "[Data] Eks Node Group"
+    display_type: default
+
+discovery:
+  type: data_aws_eks_node_group
+  dnd_supported: false

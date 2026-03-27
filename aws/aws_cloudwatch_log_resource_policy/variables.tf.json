@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "policy_document": [
+      {
+        "description": "Defines the policy document in JSON format that specifies permissions for the CloudWatch Logs resource. Ensure valid JSON syntax and include required actions and resources.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "policy_name": [
+      {
+        "description": "Specifies the name of the CloudWatch Logs resource policy, which must be unique within the account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

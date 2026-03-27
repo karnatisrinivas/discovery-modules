@@ -1,0 +1,74 @@
+{
+    "variable": {
+        "key_ring": [
+            {
+                "type": "string",
+                "description": "The KeyRing that this key belongs to."
+            }
+        ],
+        "name": [
+            {
+                "type": "string",
+                "description": "The resource name for the CryptoKey."
+            }
+        ],
+        "rotation_period": [
+            {
+                "type": "string",
+                "description": "Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than a day (ie, 86400).",
+                "nullable": true
+            }
+        ],
+        "labels": [
+            {
+                "type": "map(string)",
+                "description": "Labels with user-defined metadata to apply to this resource.",
+                "nullable": true
+            }
+        ],
+        "purpose": [
+            {
+                "type": "string",
+                "description": "The immutable purpose of this CryptoKey.",
+                "nullable": true,
+                "default": "ENCRYPT_DECRYPT"
+            }
+        ],
+        "destroy_scheduled_duration": [
+            {
+                "type": "string",
+                "description": "The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 30 days.",
+                "nullable": true
+            }
+        ],
+        "import_only": [
+            {
+                "type": "bool",
+                "description": "Whether this key may contain imported versions only.",
+                "nullable": true
+            }
+        ],
+        "crypto_key_backend": [
+            {
+                "type": "string",
+                "description": "The resource name of the backend environment associated with all CryptoKeyVersions within this CryptoKey. The resource name is in the format \"projects//locations//ekmConnections/*\" and only applies to \"EXTERNAL_VPC\" keys.",
+                "nullable": true
+            }
+        ],
+        "skip_initial_version_creation": [
+            {
+                "type": "bool",
+                "description": "If set to true, the request will create a CryptoKey without any CryptoKeyVersions. You must use the google_kms_crypto_key_version resource to create a new CryptoKeyVersion or google_kms_key_ring_import_job resource to import the CryptoKeyVersion.",
+                "nullable": true
+            }
+        ],
+        "version_template": [
+            {
+                "type": "list(object({algorithm: string, protection_level: string}))",
+                "description": "A template describing settings for new crypto key versions.",
+                "nullable": true,
+                "default": []
+            }
+        ]
+    }
+}

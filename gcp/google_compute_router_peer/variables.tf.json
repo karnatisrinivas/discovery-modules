@@ -1,0 +1,193 @@
+{
+  "variable": {
+    "advertise_mode": [
+      {
+        "description": "Determines the advertisement mode for the peer, either 'DEFAULT' to advertise a standard set of routes or 'CUSTOM' to specify a custom set of advertised routes.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "advertised_groups": [
+      {
+        "description": "Defines the list of predefined groups of IP ranges to advertise, such as 'ALL_SUBNETS'. Must match one of the available groups supported by Google Cloud.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "advertised_ip_ranges": [
+      {
+        "description": "Defines the IP ranges advertised to the peer, specified as CIDR blocks. Must be non-overlapping and valid IP ranges.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),range: string}))"
+      }
+    ],
+    "advertised_route_priority": [
+      {
+        "description": "Defines the priority of advertised routes, where lower values indicate higher priority. Must be an integer between 0 and 65535.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "bfd": [
+      {
+        "description": "Configures Bidirectional Forwarding Detection (BFD) for the peer; requires BFD to be supported and enabled on both ends of the connection.",
+        "nullable": true,
+        "type": "list(object({min_receive_interval: optional(number),min_transmit_interval: optional(number),multiplier: optional(number),session_initialization_mode: string}))"
+      }
+    ],
+    "custom_learned_ip_ranges": [
+      {
+        "description": "Defines custom IP ranges to be learned and advertised by the peer, must be valid CIDR blocks.",
+        "nullable": true,
+        "type": "list(object({range: string}))"
+      }
+    ],
+    "custom_learned_route_priority": [
+      {
+        "description": "Defines the priority for custom learned routes, determining their preference in routing decisions. Must be an integer between 0 and 65535.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "enable": [
+      {
+        "description": "Determines whether the BGP peer is enabled. Must be set to true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_ipv4": [
+      {
+        "description": "Enables IPv4 support for the router peer; set to true to allow IPv4 traffic.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_ipv6": [
+      {
+        "description": "Controls whether IPv6 is enabled for the peer; must be set to true to allow IPv6 traffic.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "export_policies": [
+      {
+        "description": "Defines the export policies for the router peer, specifying which routes are advertised to the peer.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "import_policies": [
+      {
+        "description": "Defines the set of policy names to control the import of routes into the router, ensuring route selection complies with specified constraints.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "interface": [
+      {
+        "description": "Specifies the interface name used by the router peer, which must match an existing router interface.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "ip_address": [
+      {
+        "description": "Specifies the IP address of the BGP peer. Must be a valid IPv4 address within the subnet range.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipv4_nexthop_address": [
+      {
+        "description": "Specifies the IPv4 address of the next hop for the BGP peer; must be a valid IPv4 address.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "ipv6_nexthop_address": [
+      {
+        "description": "IPv6 address of the next hop, required for IPv6 BGP peer configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "md5_authentication_key": [
+      {
+        "description": "Specifies the MD5 authentication key for BGP sessions, must be a string between 1-80 characters.",
+        "nullable": true,
+        "type": "list(object({key: string,name: string}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name of the peer, required for identifying the BGP session within the router.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "peer_asn": [
+      {
+        "description": "Specifies the autonomous system number for the BGP peer; must be a valid ASN within the range of 1 to 4294967295.",
+        "nullable": false,
+        "type": "number"
+      }
+    ],
+    "peer_ip_address": [
+      {
+        "description": "IP address of the peer router interface, must be in the same subnet as the router interface IP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "peer_ipv4_nexthop_address": [
+      {
+        "description": "IPv4 address of the next hop for the peer connection, used for routing traffic; must be within the range of the router's subnetwork.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "peer_ipv6_nexthop_address": [
+      {
+        "description": "IPv6 address of the next hop for the peer; must be in the same subnet and unique within the network.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "router": [
+      {
+        "description": "Defines the name or self-link of the Google Compute Router to associate with the peer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "router_appliance_instance": [
+      {
+        "description": "Specifies the self-link of the VM instance to use as the router appliance, must be in the same region as the router.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the time durations for create, update, and delete operations of the router peer, allowing customization of operation timeouts.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "zero_advertised_route_priority": [
+      {
+        "description": "Defines the priority for routes advertised to the peer, with lower values indicating higher priority. Must be a non-negative integer.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "zero_custom_learned_route_priority": [
+      {
+        "description": "Specifies the priority of custom learned routes when no priority is explicitly set, must be a value between 0 and 65535.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ]
+  }
+}

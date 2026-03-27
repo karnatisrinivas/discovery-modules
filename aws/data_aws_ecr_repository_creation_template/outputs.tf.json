@@ -1,0 +1,44 @@
+{
+    "output": {
+        "applied_for": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.applied_for}"
+        },
+        "custom_role_arn": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.custom_role_arn}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.description}"
+        },
+        "encryption_configuration": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.encryption_configuration}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.id}"
+        },
+        "image_tag_mutability": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.image_tag_mutability}"
+        },
+        "lifecycle_policy": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.lifecycle_policy}"
+        },
+        "registry_id": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.registry_id}"
+        },
+        "repository_policy": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.repository_policy}"
+        },
+        "resource_tags": {
+            "description": "",
+            "value": "${data.aws_ecr_repository_creation_template.this.resource_tags}"
+        }
+    }
+}

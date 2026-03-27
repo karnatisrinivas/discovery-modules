@@ -1,0 +1,16 @@
+{
+    "variable": {
+        "roles": [
+            {
+                "type": "list(object({role: string}))",
+                "description": "List of roles to bind to the service account in the connected resource."
+            }
+        ],
+        "service_account_email": [
+            {
+                "type": "string",
+                "description": "Email of the Service Account"
+            }
+        ]
+    }
+}

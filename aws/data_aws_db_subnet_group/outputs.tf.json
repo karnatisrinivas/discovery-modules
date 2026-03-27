@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.arn}"
+        },
+        "description": {
+            "description": "A description of the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.description}"
+        },
+        "id": {
+            "description": "The ID of the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.id}"
+        },
+        "status": {
+            "description": "The status of the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.status}"
+        },
+        "subnet_ids": {
+            "description": "A set of subnet IDs associated with the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.subnet_ids}"
+        },
+        "supported_network_types": {
+            "description": "The network types supported by the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.supported_network_types}"
+        },
+        "vpc_id": {
+            "description": "The ID of the VPC containing the DB subnet group.",
+            "value": "${data.aws_db_subnet_group.this.vpc_id}"
+        }
+    }
+}

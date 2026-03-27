@@ -1,0 +1,97 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the autoscaling policy",
+                "nullable": false
+            }
+        ],
+        "autoscaling_group_name": [
+            {
+                "type": "string",
+                "description": "The name of the autoscaling group",
+                "nullable": false
+            }
+        ],
+        "adjustment_type": [
+            {
+                "type": "string",
+                "description": "The type of adjustment to make to the autoscaling group",
+                "nullable": true
+            }
+        ],
+        "policy_type": [
+            {
+                "type": "string",
+                "description": "The type of the policy",
+                "nullable": true,
+                "default": "SimpleScaling"
+            }
+        ],
+        "estimated_instance_warmup": [
+            {
+                "type": "number",
+                "description": "Estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics",
+                "nullable": true
+            }
+        ],
+        "enabled": [
+            {
+                "type": "bool",
+                "description": "Whether the scaling policy is enabled",
+                "nullable": true,
+                "default": true
+            }
+        ],
+        "min_adjustment_magnitude": [
+            {
+                "type": "number",
+                "description": "The minimum adjustment magnitude",
+                "nullable": true
+            }
+        ],
+        "cooldown": [
+            {
+                "type": "number",
+                "description": " Amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.",
+                "nullable": true
+            }
+        ],
+        "scaling_adjustment": [
+            {
+                "type": "number",
+                "description": "The scaling adjustment",
+                "nullable": true
+            }
+        ],
+        "metric_aggregation_type": [
+            {
+                "type": "string",
+                "description": "The metric aggregation type",
+                "nullable": true
+            }
+        ],
+        "step_adjustment": [
+            {
+                "type": "list(object({scaling_adjustment: number, metric_interval_lower_bound: number, metric_interval_upper_bound: number}))",
+                "description": "The step adjustment",
+                "nullable": true
+            }
+        ],
+        "target_tracking_configuration": [
+            {
+                "type": "list(object({target_value: number, disable_scale_in: bool, predefined_metric_specification: optional(list(object({predefined_metric_type: string, resource_label: string}))), customized_metric_specification: list(object({metric_name: string, namespace: string, statistic: string, unit: string, metric_dimension: list(object({name: string, value: string})), metrics: optional(list(object({expression: string, label: string, id: string, return_data: bool, metric_stat: list(object({metric: list(object({metric_name: string, namespace: string, dimensions: list(object({name: string, value: string}))})), stat: string, period: number, unit: string}))})))}))}))",
+                "description": "The predictive scaling configuration",
+                "nullable": true
+            }
+        ],
+        "predictive_scaling_configuration": [
+            {
+                "type": "list(object({max_capacity_breach_behavior: string, max_capacity_buffer: number, mode: string, scheduling_buffer_time: number, metric_specification: list(object({target_value: number, customized_capacity_metric_specification: list(object({metric_data_queries: list(object({expression: string, id: string, label: string, return_data: bool, metric_stat: list(object({metric: list(object({metric_name: string, namespace: string, dimensions: list(object({name: string, value: string}))})), stat: string, unit: string}))}))})), customized_load_metric_specification: list(object({metric_data_queries: list(object({expression: string, id: string, label: string, return_data: bool, metric_stat: list(object({metric: list(object({metric_name: string, namespace: string, dimensions: list(object({name: string, value: string}))})), stat: string, unit: string}))}))})), customized_scaling_metric_specification: list(object({metric_data_queries: list(object({expression: string, id: string, label: string, return_data: bool, metric_stat: list(object({metric: list(object({metric_name: string, namespace: string, dimensions: list(object({name: string, value: string}))})), stat: string, unit: string}))}))})), predefined_scaling_metric_specification: list(object({predefined_metric_type: string, resource_label: string})), predefined_load_metric_specification: list(object({predefined_metric_type: string, resource_label: string})), predefined_metric_pair_specification: list(object({predefined_metric_type: string, resource_label: string}))}))}))",
+                "description": "The predictive scaling configuration",
+                "nullable": true
+            }
+        ]
+    }
+}

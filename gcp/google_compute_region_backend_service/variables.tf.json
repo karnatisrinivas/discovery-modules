@@ -1,0 +1,179 @@
+{
+  "variable": {
+    "affinity_cookie_ttl_sec": [
+      {
+        "description": "Specifies the duration, in seconds, for which the affinity cookie is valid, applicable only if session affinity is set to \"GENERATED_COOKIE\".",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "backend": [
+      {
+        "description": "Defines the backend resources for the regional backend service, specifying server groups or services to which requests are forwarded.",
+        "nullable": true,
+        "type": "list(object({balancing_mode: optional(string),capacity_scaler: optional(number),description: optional(string),failover: optional(bool),group: string,max_connections: optional(number),max_connections_per_endpoint: optional(number),max_connections_per_instance: optional(number),max_rate: optional(number),max_rate_per_endpoint: optional(number),max_rate_per_instance: optional(number),max_utilization: optional(number),custom_metrics: list(object({dry_run: bool,max_utilization: optional(number),name: string}))}))"
+      }
+    ],
+    "cdn_policy": [
+      {
+        "description": "Configures Cloud CDN settings for the backend service, including caching and optimization policies; set to enable CDN functionality.",
+        "nullable": true,
+        "type": "list(object({cache_mode: optional(string),client_ttl: optional(number),default_ttl: optional(number),max_ttl: optional(number),negative_caching: optional(bool),serve_while_stale: optional(number),signed_url_cache_max_age_sec: optional(number),cache_key_policy: list(object({include_host: optional(bool),include_named_cookies: optional(list(string)),include_protocol: optional(bool),include_query_string: optional(bool),query_string_blacklist: optional(list(string)),query_string_whitelist: optional(list(string))})),negative_caching_policy: list(object({code: optional(number)}))}))"
+      }
+    ],
+    "circuit_breakers": [
+      {
+        "description": "Configures thresholds and limits for circuit breaking, including maximum connections, pending requests, and retries, to control backend service overload behavior.",
+        "nullable": true,
+        "type": "list(object({max_connections: optional(number),max_pending_requests: optional(number),max_requests: optional(number),max_requests_per_connection: optional(number),max_retries: optional(number)}))"
+      }
+    ],
+    "connection_draining_timeout_sec": [
+      {
+        "description": "Specifies the time, in seconds, to wait for existing connections to drain before removing instances from the backend service. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "consistent_hash": [
+      {
+        "description": "Defines settings for consistent hash load balancing, including parameters for determining the hash key.",
+        "nullable": true,
+        "type": "list(object({http_header_name: optional(string),minimum_ring_size: optional(number),http_cookie: list(object({name: optional(string),path: optional(string),ttl: list(object({nanos: optional(number),seconds: number}))}))}))"
+      }
+    ],
+    "custom_metrics": [
+      {
+        "description": "Defines the custom metrics configuration for the backend service, specifying monitoring and reporting details for service performance.",
+        "nullable": true,
+        "type": "list(object({dry_run: bool,name: string}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a human-readable explanation of the backend service's purpose or functionality.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_cdn": [
+      {
+        "description": "Determines whether Cloud CDN is enabled for the backend service; requires a valid HTTP/HTTPS protocol configuration.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "failover_policy": [
+      {
+        "description": "Defines the failover policy configuration, specifying how traffic is directed to a backup backend service during failover scenarios; requires at least one failover backend.",
+        "nullable": true,
+        "type": "list(object({disable_connection_drain_on_failover: optional(bool),drop_traffic_if_unhealthy: optional(bool),failover_ratio: optional(number)}))"
+      }
+    ],
+    "health_checks": [
+      {
+        "description": "List of health check resource names to monitor the backend service's availability and health; must reference existing health checks in the same region.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "iap": [
+      {
+        "description": "Enables Identity-Aware Proxy for the backend service; requires OAuth 2.0 client ID and secret.",
+        "nullable": true,
+        "type": "list(object({enabled: bool,oauth2_client_id: optional(string),oauth2_client_secret: optional(string),oauth2_client_secret_sha256: optional(string)}))"
+      }
+    ],
+    "ip_address_selection_policy": [
+      {
+        "description": "Determines the policy for selecting the IP address of backend instances; must match the backend's configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "load_balancing_scheme": [
+      {
+        "description": "Specifies the load balancing scheme, either INTERNAL or EXTERNAL, to determine how the backend service routes traffic.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "locality_lb_policy": [
+      {
+        "description": "Specifies the load balancing policy for distributing traffic among backend instances within a region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "log_config": [
+      {
+        "description": "Configuration for enabling and managing logging for the backend service, including options for logging traffic.",
+        "nullable": true,
+        "type": "list(object({enable: optional(bool),optional_fields: optional(list(string)),optional_mode: optional(string),sample_rate: optional(number)}))"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name of the regional backend service, required to be compliant with Google Cloud naming conventions and globally unique within the project.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the self-link of the network to which the backend service is connected; must be in the same project.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "outlier_detection": [
+      {
+        "description": "Configuration for outlier detection to automatically remove unhealthy backend instances based on failure criteria.",
+        "nullable": true,
+        "type": "list(object({consecutive_errors: optional(number),consecutive_gateway_failure: optional(number),enforcing_consecutive_errors: optional(number),enforcing_consecutive_gateway_failure: optional(number),enforcing_success_rate: optional(number),max_ejection_percent: optional(number),success_rate_minimum_hosts: optional(number),success_rate_request_volume: optional(number),success_rate_stdev_factor: optional(number),base_ejection_time: list(object({nanos: optional(number),seconds: number})),interval: list(object({nanos: optional(number),seconds: number}))}))"
+      }
+    ],
+    "port_name": [
+      {
+        "description": "Specifies the name of the port used by the backend service, matching the name defined in the backend's instance group or network endpoint group.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "protocol": [
+      {
+        "description": "Defines the communication protocol used by the backend service, such as HTTP, HTTPS, or TCP.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "session_affinity": [
+      {
+        "description": "Determines how traffic is distributed among backend instances based on session affinity settings; valid values include NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "strong_session_affinity_cookie": [
+      {
+        "description": "Specifies the name of the cookie used for enabling strong session affinity; must be set when session affinity is configured.",
+        "nullable": true,
+        "type": "list(object({name: optional(string),path: optional(string),ttl: list(object({nanos: optional(number),seconds: number}))}))"
+      }
+    ],
+    "timeout_sec": [
+      {
+        "description": "Defines the timeout duration in seconds for requests sent to the backend service. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout durations for HTTP, HTTPS, and TCP connections in the backend service, ensuring proper configuration for request handling.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

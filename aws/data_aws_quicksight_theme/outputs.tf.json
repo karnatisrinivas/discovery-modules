@@ -1,0 +1,56 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.arn}"
+        },
+        "aws_account_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.aws_account_id}"
+        },
+        "base_theme_id": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.base_theme_id}"
+        },
+        "configuration": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.configuration}"
+        },
+        "created_time": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.created_time}"
+        },
+        "id": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.id}"
+        },
+        "last_updated_time": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.last_updated_time}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.name}"
+        },
+        "permissions": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.permissions}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.status}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.tags}"
+        },
+        "version_description": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.version_description}"
+        },
+        "version_number": {
+            "description": "",
+            "value": "${data.aws_quicksight_theme.this.version_number}"
+        }
+    }
+}

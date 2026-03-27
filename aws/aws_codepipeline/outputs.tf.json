@@ -1,0 +1,20 @@
+{
+    "output": {
+        "arn": {
+            "description": "Amazon Resource Name used for managing permissions and API calls",
+            "value": "${aws_codepipeline.this.arn}"
+        },
+        "id": {
+            "description": "Unique identifier for referencing the CodePipeline resource",
+            "value": "${aws_codepipeline.this.id}"
+        },
+        "tags_all": {
+            "description": "Consolidated tags for resource categorization and identification",
+            "value": "${aws_codepipeline.this.tags_all}"
+        },
+        "trigger_all": {
+            "description": "Configuration details for all pipeline triggers",
+            "value": "${aws_codepipeline.this.trigger_all}"
+        }
+    }
+}

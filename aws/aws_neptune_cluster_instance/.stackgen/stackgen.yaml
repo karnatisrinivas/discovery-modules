@@ -1,0 +1,21 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Neptune Cluster Instance
+  node:
+    label:
+      static: Neptune Cluster Instance
+      template: ${cluster_identifier}
+    display_type: default
+
+discovery:
+  type: aws_neptune_cluster_instance
+  dnd_supported: false
+  references:
+    cluster_identifier:
+      from: aws_neptune_cluster
+      output: id
+    neptune_parameter_group_name:
+      from: aws_neptune_cluster_parameter_group
+      output: name

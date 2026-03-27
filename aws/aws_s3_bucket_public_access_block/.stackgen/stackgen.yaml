@@ -1,0 +1,48 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket Public Access Block
+  node:
+    label:
+      static: S3 Bucket Public Access Block
+      template: S3 Bucket Public Access Block
+    display_type: default
+
+variables:
+  ignore_public_acls:
+    description: Whether Amazon S3 should ignore public ACLs for this bucket
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  restrict_public_buckets:
+    description: Whether Amazon S3 should restrict public buckets for this bucket
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  block_public_acls:
+    description: Whether Amazon S3 should block public ACLs for this bucket
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  block_public_policy:
+    description: Whether Amazon S3 should block public bucket policies for this bucket
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+
+discovery:
+  type: aws_s3_bucket_public_access_block
+  dnd_supported: false
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: bucket

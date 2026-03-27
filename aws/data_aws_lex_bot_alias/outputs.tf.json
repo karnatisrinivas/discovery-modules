@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) that uniquely identifies the Lex bot alias.",
+            "value": "${data.aws_lex_bot_alias.this.arn}"
+        },
+        "bot_version": {
+            "description": "The version of the Lex bot that the alias points to.",
+            "value": "${data.aws_lex_bot_alias.this.bot_version}"
+        },
+        "checksum": {
+            "description": "A checksum used to verify the integrity of the Lex bot alias.",
+            "value": "${data.aws_lex_bot_alias.this.checksum}"
+        },
+        "created_date": {
+            "description": "The date when the Lex bot alias was created.",
+            "value": "${data.aws_lex_bot_alias.this.created_date}"
+        },
+        "description": {
+            "description": "A brief description of the Lex bot alias.",
+            "value": "${data.aws_lex_bot_alias.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the Lex bot alias.",
+            "value": "${data.aws_lex_bot_alias.this.id}"
+        },
+        "last_updated_date": {
+            "description": "The date when the Lex bot alias was last updated.",
+            "value": "${data.aws_lex_bot_alias.this.last_updated_date}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Efs File System"
+  node:
+    label:
+      static: "[Data] Efs File System"
+      template: "[Data] Efs File System"
+    display_type: default
+
+discovery:
+  type: data_aws_efs_file_system
+  dnd_supported: false

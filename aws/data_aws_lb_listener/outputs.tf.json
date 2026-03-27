@@ -1,0 +1,48 @@
+{
+    "output": {
+        "alpn_policy": {
+            "description": "The ALPN policy associated with the listener, which helps with protocol negotiation.",
+            "value": "${data.aws_lb_listener.this.alpn_policy}"
+        },
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the listener.",
+            "value": "${data.aws_lb_listener.this.arn}"
+        },
+        "certificate_arn": {
+            "description": "The ARN of the SSL certificate associated with the listener.",
+            "value": "${data.aws_lb_listener.this.certificate_arn}"
+        },
+        "default_action": {
+            "description": "The default action that the listener takes when handling requests.",
+            "value": "${data.aws_lb_listener.this.default_action}"
+        },
+        "id": {
+            "description": "The ID of the listener.",
+            "value": "${data.aws_lb_listener.this.id}"
+        },
+        "load_balancer_arn": {
+            "description": "The ARN of the load balancer that the listener is associated with.",
+            "value": "${data.aws_lb_listener.this.load_balancer_arn}"
+        },
+        "mutual_authentication": {
+            "description": "Settings related to mutual TLS authentication for the listener.",
+            "value": "${data.aws_lb_listener.this.mutual_authentication}"
+        },
+        "port": {
+            "description": "The port on which the listener is listening for requests.",
+            "value": "${data.aws_lb_listener.this.port}"
+        },
+        "protocol": {
+            "description": "The protocol used by the listener, such as HTTP or HTTPS.",
+            "value": "${data.aws_lb_listener.this.protocol}"
+        },
+        "ssl_policy": {
+            "description": "The SSL policy applied to the listener for securing connections.",
+            "value": "${data.aws_lb_listener.this.ssl_policy}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the listener for identification and organization.",
+            "value": "${data.aws_lb_listener.this.tags}"
+        }
+    }
+}

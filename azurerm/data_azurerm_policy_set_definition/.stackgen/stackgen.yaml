@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Policy Set Definition"
+  node:
+    label:
+      static: "[Data] Policy Set Definition"
+      template: ${management_group_name}
+    display_type: default
+
+discovery:
+  type: data_azurerm_policy_set_definition
+  dnd_supported: false

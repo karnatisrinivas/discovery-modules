@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Service Discovery Dns Namespace"
+  node:
+    label:
+      static: "[Data] Service Discovery Dns Namespace"
+      template: "[Data] Service Discovery Dns Namespace"
+    display_type: default
+
+discovery:
+  type: data_aws_service_discovery_dns_namespace
+  dnd_supported: false

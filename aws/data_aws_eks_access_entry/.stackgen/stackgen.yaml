@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Eks Access Entry"
+  node:
+    label:
+      static: "[Data] Eks Access Entry"
+      template: "[Data] Eks Access Entry"
+    display_type: default
+
+discovery:
+  type: data_aws_eks_access_entry
+  dnd_supported: false

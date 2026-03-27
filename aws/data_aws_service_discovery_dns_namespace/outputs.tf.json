@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the DNS namespace.",
+            "value": "${data.aws_service_discovery_dns_namespace.this.arn}"
+        },
+        "description": {
+            "description": "A text description of the DNS namespace.",
+            "value": "${data.aws_service_discovery_dns_namespace.this.description}"
+        },
+        "hosted_zone": {
+            "description": "The ID of the hosted zone associated with the DNS namespace.",
+            "value": "${data.aws_service_discovery_dns_namespace.this.hosted_zone}"
+        },
+        "id": {
+            "description": "The unique identifier of the DNS namespace.",
+            "value": "${data.aws_service_discovery_dns_namespace.this.id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the DNS namespace.",
+            "value": "${data.aws_service_discovery_dns_namespace.this.tags}"
+        }
+    }
+}

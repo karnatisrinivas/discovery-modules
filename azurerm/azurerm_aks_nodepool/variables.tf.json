@@ -1,0 +1,106 @@
+{
+  "variable": {
+    "node_pool_name": [
+      {
+        "description": "The name which should be used for the Kubernetes Node Pool. Contain only lowercase letters and numbers and be between 1 and 12 characters in length.",
+        "type": "string"
+      }
+    ],
+    "aks_cluster_resource_id":[
+      {
+        "description": "The resource ID of the AKS Cluster. Drag, drop and connect a AKS Cluster resource to automatically populate this field.",
+        "type": "string"
+      }
+    ],
+    "vm_size":[
+      {
+        "default": "Standard_DS2_v2",
+        "description": "The size of the Virtual Machine which should be used for the Node Pool.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "node_count": [
+      {
+        "default": 2,
+        "description": "The initial number of nodes which should exist in this Node Pool. If specified this must be between 1 and 1000 and between min_count and max_count.",
+        "type": "number"
+      }
+    ],
+    "node_labels":[
+      {
+        "description": "A mapping of Kubernetes Node Labels which should be applied to the Node Pool",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "node_taints":[
+      {
+        "description": "A list of Kubernetes taints which should be applied to the Node Pool. (e.g key=value:NoSchedule)",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "enable_auto_scaling":[
+      {
+        "default": true,
+        "description": "Should the Kubernetes Node Pool have auto scaling enabled?",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "min_count":[
+      {
+        "default": 1,
+        "description": "The minimum number of nodes which should exist in this Node Pool when autoscaling is enabled.",
+        "type": "number"
+      }
+    ],
+    "max_count":[
+      {
+        "default": 100,
+        "description": "The maximum number of nodes which should exist in this Node Pool when autoscaling is enabled.",
+        "type": "number"
+      }
+    ],
+    "mode":[
+      {
+        "default": "User",
+        "description": "Should this Node Pool be used for System or User resources?. Possible values are System and User",
+        "type": "string"
+      }
+    ],
+    "spot_enabled":[
+      {
+        "default": false,
+        "description": "Should this Node Pool be a spot instance pool?",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "eviction_policy":[
+      {
+        "default": "Delete",
+        "description": "The eviction policy for the Spot Node Pool. Possible values are Delete and Deallocate",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "spot_max_price":[
+      {
+        "default": -1,
+        "description": "The maximum price you're willing to pay in USD per Virtual Machine. Valid values are -1 (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "tags":[
+      {
+        "description": "A mapping of tags to assign to the resource.",
+        "nullable": true,
+        "type": "map(string)",
+        "default":{}
+      }
+    ]
+  }
+}

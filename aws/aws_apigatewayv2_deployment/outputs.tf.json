@@ -1,0 +1,12 @@
+{
+    "output": {
+        "auto_deployed": {
+            "description": "Indicates if the deployment was automatically created by the system",
+            "value": "${aws_apigatewayv2_deployment.this.auto_deployed}"
+        },
+        "id": {
+            "description": "Unique identifier for the API Gateway deployment resource",
+            "value": "${aws_apigatewayv2_deployment.this.id}"
+        }
+    }
+}

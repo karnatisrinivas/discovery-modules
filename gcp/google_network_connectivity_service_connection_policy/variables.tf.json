@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the purpose and details of the service connection policy, including any relevant metadata or context for connectivity.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs used for organizing and categorizing the service connection policy; must be unique within the project.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "location": [
+      {
+        "description": "Specifies the Google Cloud location where the service connection policy will be created; must be a valid regional or global location.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the service connection policy, must be compliant with Google Cloud resource naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "network": [
+      {
+        "description": "Specifies the network to associate with the service connection policy, must be in the same project as the policy.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "psc_config": [
+      {
+        "description": "Defines Private Service Connect (PSC) configuration, specifying the consumer and producer service attachments.",
+        "nullable": true,
+        "type": "list(object({limit: optional(string),subnetworks: list(string)}))"
+      }
+    ],
+    "service_class": [
+      {
+        "description": "Specifies the service class for the connection policy, defining the type and quality of service for network connectivity.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the timeout settings for creating, updating, and deleting the service connection policy.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

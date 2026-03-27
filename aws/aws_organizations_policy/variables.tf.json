@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "content": [
+      {
+        "description": "Specifies the main content or data associated with the resource, cannot be null",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Provides a brief overview or explanation for the resource, optional field",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the resource, must be specified and cannot be null",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "skip_destroy": [
+      {
+        "description": "Indicates whether the resource should bypass the destruction process during a Terraform destroy operation, optional field",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Allows assignment of custom metadata or labels to the resource, optional field and supports key-value pairs",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "type": [
+      {
+        "description": "Specifies the resource type or category, optional field",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

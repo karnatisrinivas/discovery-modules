@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Kendra Thesaurus"
+  node:
+    label:
+      static: "[Data] Kendra Thesaurus"
+      template: "[Data] Kendra Thesaurus"
+    display_type: default
+
+discovery:
+  type: data_aws_kendra_thesaurus
+  dnd_supported: false

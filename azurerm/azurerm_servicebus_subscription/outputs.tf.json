@@ -1,0 +1,8 @@
+{
+    "output": {
+        "servicebus_subscription_id": {
+            "description": "The value of the servicebus_subscription_id output",
+            "value": "${azurerm_servicebus_subscription.this.id}"
+        }
+    }
+}

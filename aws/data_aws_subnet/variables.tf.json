@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "id": [
+      {
+        "description": "ID of the subnet",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "vpc_id": [
+      {
+        "description": "VPC id to which the subnet belongs",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

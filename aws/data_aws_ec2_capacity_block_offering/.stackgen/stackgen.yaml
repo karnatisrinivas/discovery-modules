@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ec2 Capacity Block Offering"
+  node:
+    label:
+      static: "[Data] Ec2 Capacity Block Offering"
+      template: "[Data] Ec2 Capacity Block Offering"
+    display_type: default
+
+discovery:
+  type: data_aws_ec2_capacity_block_offering
+  dnd_supported: false

@@ -1,0 +1,28 @@
+{
+    "output": {
+        "created_date": {
+            "description": "The date when the lifecycle policy was created.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.created_date}"
+        },
+        "description": {
+            "description": "A brief explanation of what the lifecycle policy is for.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.description}"
+        },
+        "id": {
+            "description": "A unique identifier for the lifecycle policy.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.id}"
+        },
+        "last_modified_date": {
+            "description": "The date when the lifecycle policy was last modified.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.last_modified_date}"
+        },
+        "policy": {
+            "description": "The specific rules and actions defined in the lifecycle policy.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.policy}"
+        },
+        "policy_version": {
+            "description": "The version number of the lifecycle policy.",
+            "value": "${data.aws_opensearchserverless_lifecycle_policy.this.policy_version}"
+        }
+    }
+}

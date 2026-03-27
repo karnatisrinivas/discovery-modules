@@ -1,0 +1,53 @@
+{
+    "variable": {
+      "name": [
+        {
+          "description": "Name of the database to create.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "bucket": [
+        {
+          "description": "Name of S3 bucket to save the results of the query execution.",
+          "nullable": false,
+          "type": "string"
+        }
+      ],
+      "encryption_configuration": [
+        {
+          "default": [],
+          "description": "Encryption key block AWS Athena uses to decrypt the data in S3.",
+          "nullable": true,
+          "type": "list(object({ encryption_option: string, kms_key: string }))"
+        }
+      ],
+      "expected_bucket_owner": [
+        {
+          "description": "AWS account ID that you expect to be the owner of the Amazon S3 bucket.",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "force_destroy": [
+        {
+          "default": false,
+          "description": "Whether to destroy all tables in the database when destroying the database resource.",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "acl_configuration": [
+        {
+          "default": [
+            {
+              "s3_acl_option": "BUCKET_OWNER_FULL_CONTROL"
+            }
+          ],
+          "description": "Should an Amazon S3 canned ACL be set to control ownership of stored query results.",
+          "nullable": true,
+          "type": "list(object({ s3_acl_option: string }))"
+        }
+      ]
+    }
+  }

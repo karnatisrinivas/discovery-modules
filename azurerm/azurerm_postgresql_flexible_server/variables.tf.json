@@ -1,0 +1,130 @@
+{
+  "variable": {
+    "administrator_login": [
+      {
+        "type": "string",
+        "description": "The login username for the database administrator.",
+        "nullable": true
+      }
+    ],
+    "administrator_password": [
+      {
+        "description": "The password for the database administrator.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "auto_grow_enabled": [
+      {
+        "description": "Indicates if auto-grow is enabled for storage.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "create_mode": [
+      {
+        "description": "Specifies the mode for creating the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "delegated_subnet_id": [
+      {
+        "description": "The ID of the subnet delegated to the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "geo_redundant_backup_enabled": [
+      {
+        "description": "Indicates if geo-redundant backup is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the PostgreSQL flexible server.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "point_in_time_restore_time_in_utc": [
+      {
+        "description": "The UTC time to restore the server to.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "postgresql_version": [
+      {
+        "type": "string",
+        "description": "The version of the postgresql server.",
+        "nullable": false,
+        "default": "11"
+      }
+    ],
+    "private_dns_zone_id": [
+      {
+        "description": "The ID of the private DNS zone associated with the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "public_network_access_enabled": [
+      {
+        "description": "Indicates if public network access is enabled.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "replication_role": [
+      {
+        "description": "The replication role of the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "sku_name": [
+      {
+        "type": "string",
+        "description": "The name of the SKU.",
+        "nullable": false,
+        "default": "B_Standard_B1ms"
+      }
+    ],
+    "source_server_id": [
+      {
+        "description": "The ID of the source server for replication.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the server.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "zone": [
+      {
+        "description": "The availability zone for the server.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ],
+    "location": [
+      {
+        "type": "string",
+        "description": "Location that this resource will be created in. (e.g. eastus2, southeastasia)"
+      }
+    ]
+  }
+}

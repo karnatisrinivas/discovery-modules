@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Folder Iam Binding
+  node:
+    label:
+      static: Folder Iam Binding
+      template: ${folder}
+    display_type: default
+
+discovery:
+  type: google_folder_iam_binding
+  dnd_supported: false

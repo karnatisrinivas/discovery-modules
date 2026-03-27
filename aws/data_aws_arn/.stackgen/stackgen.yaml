@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Arn"
+  node:
+    label:
+      static: "[Data] Arn"
+      template: "[Data] Arn"
+    display_type: default
+
+discovery:
+  type: data_aws_arn
+  dnd_supported: false

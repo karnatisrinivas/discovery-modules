@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "metadata": [
+      {
+        "description": "Optional map of custom metadata for the storage queue.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the storage queue.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "storage_account_name": [
+      {
+        "description": "The name of the storage account where the queue is located.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

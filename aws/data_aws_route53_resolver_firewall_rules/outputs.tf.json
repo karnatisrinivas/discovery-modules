@@ -1,0 +1,12 @@
+{
+    "output": {
+        "firewall_rules": {
+            "description": "A list of firewall rules that include various attributes such as action, domain settings, creation details, and priority, used to manage and filter DNS queries in AWS Route 53.",
+            "value": "${data.aws_route53_resolver_firewall_rules.this.firewall_rules}"
+        },
+        "id": {
+            "description": "The unique identifier for the set of Route 53 Resolver firewall rules.",
+            "value": "${data.aws_route53_resolver_firewall_rules.this.id}"
+        }
+    }
+}

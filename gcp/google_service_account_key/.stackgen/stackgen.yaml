@@ -1,0 +1,27 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Account Key
+  node:
+    label:
+      static: Service Account Key
+      template: Service Account Key
+    display_type: default
+
+variables:
+  public_key_type:
+    description: The output format of the public key requested.
+    type: string
+    options: 
+      - TYPE_X509_PEM_FILE
+      - TYPE_RAW_PUBLIC_KEY
+    ui_control: select
+
+discovery:
+  type: google_service_account_key
+  dnd_supported: false
+  references:
+    service_account_id:
+      from: google_service_account_composite
+      output: id

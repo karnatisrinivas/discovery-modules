@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "configuration_store_id": [
+      {
+        "description": "Unique identifier for the configuration store",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "key": [
+      {
+        "description": "Defines the key name for resource lookup",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "label": [
+      {
+        "description": "Specifies label for resource categorization",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures read timeout duration",
+        "nullable": true,
+        "type": "object({read: optional(string)})"
+      }
+    ]
+  }
+}

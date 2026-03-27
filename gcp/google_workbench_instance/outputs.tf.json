@@ -1,0 +1,48 @@
+{
+    "output": {
+        "create_time": {
+            "description": "Timestamp for when the instance was created, useful for auditing and tracking.",
+            "value": "${google_workbench_instance.this.create_time}"
+        },
+        "creator": {
+            "description": "Email or identifier of the user who created the instance, useful for ownership tracking.",
+            "value": "${google_workbench_instance.this.creator}"
+        },
+        "effective_labels": {
+            "description": "Final set of labels applied to the instance, useful for categorization and filtering.",
+            "value": "${google_workbench_instance.this.effective_labels}"
+        },
+        "health_info": {
+            "description": "Detailed health diagnostics of the instance, useful for monitoring and troubleshooting.",
+            "value": "${google_workbench_instance.this.health_info}"
+        },
+        "health_state": {
+            "description": "Current health status of the instance, useful for identifying issues quickly.",
+            "value": "${google_workbench_instance.this.health_state}"
+        },
+        "id": {
+            "description": "Unique identifier for the instance, essential for referencing in other resources or APIs.",
+            "value": "${google_workbench_instance.this.id}"
+        },
+        "proxy_uri": {
+            "description": "URI for accessing the instance via proxy, useful for secure connections.",
+            "value": "${google_workbench_instance.this.proxy_uri}"
+        },
+        "state": {
+            "description": "Current operational state of the instance, useful for determining availability.",
+            "value": "${google_workbench_instance.this.state}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform configuration, useful for organizing and managing resources.",
+            "value": "${google_workbench_instance.this.terraform_labels}"
+        },
+        "update_time": {
+            "description": "Timestamp of the last update to the instance, useful for tracking changes.",
+            "value": "${google_workbench_instance.this.update_time}"
+        },
+        "upgrade_history": {
+            "description": "Record of upgrades performed on the instance, useful for maintenance tracking.",
+            "value": "${google_workbench_instance.this.upgrade_history}"
+        }
+    }
+}

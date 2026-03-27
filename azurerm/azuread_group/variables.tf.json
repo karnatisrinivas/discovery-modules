@@ -1,0 +1,110 @@
+{
+  "variable": {
+    "display_name": [{
+      "type": "string",
+      "description": "The display name for the group"
+    }],
+    "assignable_to_role": [{
+      "type": "bool",
+      "description": "Indicates whether this group can be assigned to an Azure Active Directory role",
+      "default": false,
+      "nullable": true
+    }],
+    "auto_subscribe_new_members": [{
+      "type": "bool",
+      "description": "Indicates whether new members added to the group will be auto-subscribed to receive email notifications",
+      "default": false,
+      "nullable": true
+    }],
+    "behaviors": [{
+      "type": "list(string)",
+      "description": "The group behaviors for a Microsoft 365 group",
+      "default": [],
+      "nullable": true
+    }],
+    "description": [{
+      "type": "string",
+      "description": "The description for the group",
+      "default": null,
+      "nullable": true
+    }],
+    "external_senders_allowed": [{
+      "type": "bool",
+      "description": "Indicates whether external senders can send emails to group",
+      "default": false,
+      "nullable": true
+    }],
+    "hide_from_address_lists": [{
+      "type": "bool",
+      "description": "Indicates whether the group is displayed in certain parts of the Outlook user interface",
+      "default": false,
+      "nullable": true
+    }],
+    "hide_from_outlook_clients": [{
+      "type": "bool",
+      "description": "Indicates whether the group is displayed in Outlook clients",
+      "default": false,
+      "nullable": true
+    }],
+    "mail_enabled": [{
+      "type": "bool",
+      "description": "Whether the group is mail-enabled",
+      "default": false,
+      "nullable": true
+    }],
+    "mail_nickname": [{
+      "type": "string",
+      "description": "The mail alias for the group",
+      "default": null,
+      "nullable": true
+    }],
+    "members": [{
+      "type": "list(string)",
+      "description": "A list of member object IDs to add to the group",
+      "default": [],
+      "nullable": true
+    }],
+    "owners": [{
+      "type": "list(string)",
+      "description": "A list of owner object IDs to add to the group",
+      "default": [],
+      "nullable": true
+    }],
+    "prevent_duplicate_names": [{
+      "type": "bool",
+      "description": "If true, will return an error if an existing group exists with the same name",
+      "default": false,
+      "nullable": true
+    }],
+    "provisioning_options": [{
+      "type": "list(string)",
+      "description": "A list of provisioning options for a Microsoft 365 group",
+      "default": [],
+      "nullable": true
+    }],
+    "security_enabled": [{
+      "type": "bool",
+      "description": "Whether the group is a security group",
+      "default": true,
+      "nullable": true
+    }],
+    "theme": [{
+      "type": "string",
+      "description": "The color theme for a Microsoft 365 group",
+      "default": null,
+      "nullable": true
+    }],
+    "types": [{
+      "type": "list(string)",
+      "description": "A list of group types to configure for the group",
+      "default": [],
+      "nullable": true
+    }],
+    "visibility": [{
+      "type": "string",
+      "description": "The group join policy and group content visibility",
+      "default": null,
+      "nullable": true
+    }]
+  }
+}

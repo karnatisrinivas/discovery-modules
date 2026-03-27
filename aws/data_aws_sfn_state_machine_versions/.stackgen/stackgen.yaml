@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sfn State Machine Versions"
+  node:
+    label:
+      static: "[Data] Sfn State Machine Versions"
+      template: "[Data] Sfn State Machine Versions"
+    display_type: default
+
+discovery:
+  type: data_aws_sfn_state_machine_versions
+  dnd_supported: false

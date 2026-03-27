@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the snapshot in Azure resources and configurations",
+            "value": "${azurerm_snapshot.this.id}"
+        },
+        "trusted_launch_enabled": {
+            "description": "Indicates whether Trusted Launch is enabled for enhanced VM security",
+            "value": "${azurerm_snapshot.this.trusted_launch_enabled}"
+        }
+    }
+}

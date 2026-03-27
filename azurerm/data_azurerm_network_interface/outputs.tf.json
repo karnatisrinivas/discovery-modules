@@ -1,0 +1,20 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the network interface.",
+            "value": "${data.azurerm_network_interface.this.id}"
+        },
+        "internal_dns_name_label": {
+            "description": "The internal DNS name label of the network interface.",
+            "value": "${data.azurerm_network_interface.this.internal_dns_name_label}"
+        },
+        "network_security_group_id": {
+            "description": "The ID of the network security group associated with the network interface.",
+            "value": "${data.azurerm_network_interface.this.network_security_group_id}"
+        },
+        "virtual_machine_id": {
+            "description": "The ID of the virtual machine associated with the network interface.",
+            "value": "${data.azurerm_network_interface.this.virtual_machine_id}"
+        }
+    }
+}

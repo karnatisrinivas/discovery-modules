@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Dax Subnet Group
+  node:
+    label:
+      static: Dax Subnet Group
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_dax_subnet_group
+  dnd_supported: false
+  references:
+    subnet_ids:
+      from: aws_subnet
+      output: id

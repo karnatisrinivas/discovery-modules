@@ -1,0 +1,46 @@
+{
+    "variable": {
+        "module": [
+            {
+                "description": "The terraform module",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "mode": [
+            {
+                "description": "The mode of the terraform module",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "type": [
+            {
+                "description": "The terraform resource type",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "name": [
+            {
+                "description": "The name of the terraform resource",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "provider": [
+            {
+                "description": "The terraform provider",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "attributes": [
+            {
+                "description": "The terraform resource attributes",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ]
+    }
+}

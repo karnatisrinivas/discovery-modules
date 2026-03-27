@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Sesv2 Email Identity"
+  node:
+    label:
+      static: "[Data] Sesv2 Email Identity"
+      template: "[Data] Sesv2 Email Identity"
+    display_type: default
+
+discovery:
+  type: data_aws_sesv2_email_identity
+  dnd_supported: false

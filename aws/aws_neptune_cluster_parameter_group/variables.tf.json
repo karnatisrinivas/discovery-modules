@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "description": [
+      {
+        "description": "Defines the description of the Neptune cluster parameter group, providing context for its purpose or configuration.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "family": [
+      {
+        "description": "Specifies the Neptune engine version for the parameter group; must match the engine version of the cluster.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Name of the Neptune cluster parameter group. Must be unique within the AWS account and follow naming conventions.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name_prefix": [
+      {
+        "description": "Specifies a prefix for the name of the Neptune cluster parameter group, which must be unique within the AWS account and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "parameter": [
+      {
+        "description": "Defines custom parameters for the Neptune cluster, allowing you to modify database settings to optimize performance and behavior.",
+        "nullable": true,
+        "type": "list(object({apply_method: optional(string),name: string,value: string}))"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to categorize and organize the parameter group.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

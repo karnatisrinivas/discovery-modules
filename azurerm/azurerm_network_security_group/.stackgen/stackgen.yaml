@@ -1,0 +1,73 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Network Security Group
+  node:
+    label:
+      static: Network Security Group
+      template: ${name}
+    display_type: default
+
+variables:
+  security_rules:
+    description: List of security rules.
+    attributes: 
+      name: 
+        description: The name of the security rule.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+        label: Name
+      protocol: 
+        label: Protocol
+        description: Network protocol this rule applies to.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Tcp
+          - Udp
+          - Icmp
+          - Esp
+          - Ah
+          - "*"
+        ui_control: select
+      access: 
+        type: string
+        options: 
+          - Allow
+          - Deny
+        ui_control: select
+        label: Access
+        description: Specifies whether network traffic is allowed or denied.
+        validation: 
+          required: true
+          dataType: string
+      direction: 
+        label: Direction
+        description: The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - Inbound
+          - Outbound
+        ui_control: select
+      priority: 
+        label: Priority
+        description: Specifies the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        ui_control: text
+
+discovery:
+  type: azurerm_network_security_group
+  dnd_supported: false
+  data_source: data_azurerm_network_security_group

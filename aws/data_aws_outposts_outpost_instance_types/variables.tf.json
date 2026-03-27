@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Outpost for which the instance types are being queried.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

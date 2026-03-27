@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the secret, which uniquely identifies it within AWS.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the secret, which is used to identify it within AWS Secrets Manager.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

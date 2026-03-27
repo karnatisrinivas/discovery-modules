@@ -1,0 +1,12 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AWS CloudTrail service account.",
+            "value": "${data.aws_cloudtrail_service_account.this.arn}"
+        },
+        "id": {
+            "description": "The ID of the AWS CloudTrail service account.",
+            "value": "${data.aws_cloudtrail_service_account.this.id}"
+        }
+    }
+}

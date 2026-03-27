@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Firewall
+  node:
+    label:
+      static: Firewall
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: azurerm_firewall
+  dnd_supported: false
+  references:
+    firewall_policy_id:
+      from: azurerm_firewall_policy
+      output: id

@@ -1,0 +1,40 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the local gateway virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.id}"
+        },
+        "local_address": {
+            "description": "The local IP address of the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.local_address}"
+        },
+        "local_bgp_asn": {
+            "description": "The local BGP Autonomous System Number (ASN) for the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.local_bgp_asn}"
+        },
+        "local_gateway_id": {
+            "description": "The ID of the local gateway associated with the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.local_gateway_id}"
+        },
+        "local_gateway_virtual_interface_ids": {
+            "description": "A set of IDs for the local gateway virtual interfaces.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.local_gateway_virtual_interface_ids}"
+        },
+        "peer_address": {
+            "description": "The peer IP address of the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.peer_address}"
+        },
+        "peer_bgp_asn": {
+            "description": "The peer BGP Autonomous System Number (ASN) for the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.peer_bgp_asn}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.tags}"
+        },
+        "vlan": {
+            "description": "The VLAN ID associated with the virtual interface.",
+            "value": "${data.aws_ec2_local_gateway_virtual_interface.this.vlan}"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: S3 Bucket Policy
+  node:
+    label:
+      static: S3 Bucket Policy
+      template: ${bucket}
+    display_type: default
+
+discovery:
+  type: aws_s3_bucket_policy
+  dnd_supported: false
+  data_source: data_aws_s3_bucket_policy
+  references:
+    bucket:
+      from: aws_s3_bucket
+      output: bucket

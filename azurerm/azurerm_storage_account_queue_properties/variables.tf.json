@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "cors_rule": [
+      {
+        "description": "Defines CORS settings for storage, including headers, methods, origins, and max age",
+        "nullable": true,
+        "type": "list(object({allowed_headers: list(string),allowed_methods: list(string),allowed_origins: list(string),exposed_headers: list(string),max_age_in_seconds: number}))"
+      }
+    ],
+    "hour_metrics": [
+      {
+        "description": "Configures hourly metrics, including API tracking and data retention settings",
+        "nullable": true,
+        "type": "list(object({include_apis: optional(bool),retention_policy_days: optional(number),version: string}))"
+      }
+    ],
+    "logging": [
+      {
+        "description": "Controls logging settings for read, write, and delete operations with retention policies",
+        "nullable": true,
+        "type": "list(object({delete: bool,read: bool,retention_policy_days: optional(number),version: string,write: bool}))"
+      }
+    ],
+    "minute_metrics": [
+      {
+        "description": "Configures per-minute metrics, including API tracking and retention policies",
+        "nullable": true,
+        "type": "list(object({include_apis: optional(bool),retention_policy_days: optional(number),version: string}))"
+      }
+    ],
+    "storage_account_id": [
+      {
+        "description": "References the unique ID of the associated storage account (mandatory)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout durations for create, read, update, and delete operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

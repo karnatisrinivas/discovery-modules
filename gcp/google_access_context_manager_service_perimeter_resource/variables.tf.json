@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "perimeter_name": [
+      {
+        "description": "Specifies the name of the service perimeter to associate the resource with; must be an existing perimeter.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "resource": [
+      {
+        "description": "Specifies the GCP resource to be included in the service perimeter. Must be in the format `projects/{project_number}` or `projects/{project_id}`.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Manages the timeouts for creating, updating, or deleting the service perimeter resource.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string)})"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Glue Catalog Database
+  node:
+    label:
+      static: Glue Catalog Database
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: aws_glue_catalog_database
+  dnd_supported: false

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Elasticache Serverless Cache"
+  node:
+    label:
+      static: "[Data] Elasticache Serverless Cache"
+      template: "[Data] Elasticache Serverless Cache"
+    display_type: default
+
+discovery:
+  type: data_aws_elasticache_serverless_cache
+  dnd_supported: false

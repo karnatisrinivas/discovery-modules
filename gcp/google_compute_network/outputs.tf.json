@@ -1,0 +1,16 @@
+{
+    "output": {
+        "id": {
+            "description": "An identifier for the resource with format projects/{{project}}/locations/{{location}}/networks/{{name}}",
+            "value": "${google_compute_network.this.id}"
+        },
+        "name": {
+            "description": "An identifier for the resource with format projects/{{project}}/locations/{{location}}/networks/{{name}}",
+            "value": "${google_compute_network.this.name}"
+        },
+        "self_link": {
+            "description": "The URI of the created resource.",
+            "value": "${google_compute_network.this.self_link}"
+        }
+    }
+}

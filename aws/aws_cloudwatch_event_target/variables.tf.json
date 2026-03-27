@@ -1,0 +1,144 @@
+{
+  "variable": {
+    "appsync_target": [
+      {
+        "description": "Defines the AppSync targets with optional GraphQL operations for event rules, allowing flexibility in specifying the operations.",
+        "nullable": true,
+        "type": "list(object({graphql_operation: optional(string)}))"
+      }
+    ],
+    "arn": [
+      {
+        "description": "Please specify the ARN of the target; it is mandatory for resource creation.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "batch_target": [
+      {
+        "description": "Configures AWS Batch as a target with necessary job details like job name and job definition, and optional parameters such as array size and job attempts.",
+        "nullable": true,
+        "type": "list(object({array_size: optional(number),job_attempts: optional(number),job_definition: string,job_name: string}))"
+      }
+    ],
+    "dead_letter_config": [
+      {
+        "description": "Defines the dead-letter queue configuration using an optional ARN, facilitating error handling by redirecting failed events.",
+        "nullable": true,
+        "type": "list(object({arn: optional(string)}))"
+      }
+    ],
+    "ecs_target": [
+      {
+        "description": "Specifies ECS task details as targets, including mandatory task definition ARN and optional settings like launch type, network configuration, and placement strategies.",
+        "nullable": true,
+        "type": "list(object({enable_ecs_managed_tags: optional(bool),enable_execute_command: optional(bool),group: optional(string),launch_type: optional(string),platform_version: optional(string),propagate_tags: optional(string),tags: optional(map(string)),task_count: optional(number),task_definition_arn: string,capacity_provider_strategy: list(object({base: optional(number),capacity_provider: string,weight: optional(number)})),network_configuration: list(object({assign_public_ip: optional(bool),security_groups: optional(list(string)),subnets: list(string)})),ordered_placement_strategy: list(object({field: optional(string),type: string})),placement_constraint: list(object({expression: optional(string),type: string}))}))"
+      }
+    ],
+    "event_bus_name": [
+      {
+        "description": "Names the event bus to associate with rules, allowing separation of event sources and targets; optional unless using a custom event bus.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_destroy": [
+      {
+        "description": "Indicates whether to forcefully delete resources when destroying, which is useful for resources with dependencies.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "http_target": [
+      {
+        "description": "Defines HTTP endpoints as targets with optional parameter configurations for headers, path, and query strings.",
+        "nullable": true,
+        "type": "list(object({header_parameters: optional(map(string)),path_parameter_values: optional(list(string)),query_string_parameters: optional(map(string))}))"
+      }
+    ],
+    "input": [
+      {
+        "description": "Specifies the input passed to the event target, allowing data customization for processing.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "input_path": [
+      {
+        "description": "Defines the JSON path to extract data from the event before passing it to the target, allowing precise data handling.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "input_transformer": [
+      {
+        "description": "Transforms the input data using specified paths and templates, enabling dynamic data manipulation for event targets.",
+        "nullable": true,
+        "type": "list(object({input_paths: optional(map(string)),input_template: string}))"
+      }
+    ],
+    "kinesis_target": [
+      {
+        "description": "Targets a Kinesis stream with optional partition key path for organizing data flow, useful in real-time processing scenarios.",
+        "nullable": true,
+        "type": "list(object({partition_key_path: optional(string)}))"
+      }
+    ],
+    "redshift_target": [
+      {
+        "description": "Configures Redshift as a target with necessary details like database name and optional SQL statements for data operations.",
+        "nullable": true,
+        "type": "list(object({database: string,db_user: optional(string),secrets_manager_arn: optional(string),sql: optional(string),statement_name: optional(string),with_event: optional(bool)}))"
+      }
+    ],
+    "retry_policy": [
+      {
+        "description": "Sets retry policies for handling event processing failures, with optional parameters for maximum event age and retry attempts.",
+        "nullable": true,
+        "type": "list(object({maximum_event_age_in_seconds: optional(number),maximum_retry_attempts: optional(number)}))"
+      }
+    ],
+    "role_arn": [
+      {
+        "description": "Specifies the IAM role ARN that provides permissions for event targets, essential for resource access control.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "rule": [
+      {
+        "description": "Defines the event rule that triggers specified targets, essential for orchestrating event-driven workflows.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "run_command_targets": [
+      {
+        "description": "Specifies targets for running commands, detailing keys and values to identify instances or EC2 tags.",
+        "nullable": true,
+        "type": "list(object({key: string,values: list(string)}))"
+      }
+    ],
+    "sagemaker_pipeline_target": [
+      {
+        "description": "Targets a SageMaker pipeline with specified parameter lists, facilitating machine learning workflows integration.",
+        "nullable": true,
+        "type": "list(object({pipeline_parameter_list: list(object({name: string,value: string}))}))"
+      }
+    ],
+    "sqs_target": [
+      {
+        "description": "Configures SQS queue targets with optional message group ID for FIFO queues, ensuring message ordering.",
+        "nullable": true,
+        "type": "list(object({message_group_id: optional(string)}))"
+      }
+    ],
+    "target_id": [
+      {
+        "description": "Assigns an identifier to the event target, aiding in distinguishing between multiple targets within a rule.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

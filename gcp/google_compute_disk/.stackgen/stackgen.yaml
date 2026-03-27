@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Compute Disk
+  node:
+    label:
+      static: Compute Disk
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_compute_disk
+  dnd_supported: false
+  references:
+    image:
+      from: data_google_compute_image
+      output: self_link

@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "condition": [
+      {
+        "description": "Defines an optional IAM condition for the binding, specifying the circumstances under which the binding is applied. Must include title, description, and expression.",
+        "nullable": true,
+        "type": "list(object({description: optional(string),expression: string,title: string}))"
+      }
+    ],
+    "members": [
+      {
+        "description": "List of members to bind to the IAM role, specified as email addresses or service accounts; must be unique and valid.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "role": [
+      {
+        "description": "Specifies the IAM role to bind to the members within the project. Must be a valid predefined or custom role.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

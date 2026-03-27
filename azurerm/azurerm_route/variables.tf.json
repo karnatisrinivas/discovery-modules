@@ -1,0 +1,52 @@
+{
+  "variable": {
+    "address_prefix": [
+      {
+        "description": "Defines the IP range in CIDR notation (e.g., 10.0.0.0/16)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the unique name for the resource",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "next_hop_in_ip_address": [
+      {
+        "description": "Optional next hop's IP address for routing",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "next_hop_type": [
+      {
+        "description": "Defines the type of next hop (e.g., VirtualAppliance, Internet)",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "route_table_name": [
+      {
+        "description": "Specifies the name of the route table to associate with",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Optional timeouts for create, read, update, and delete operations",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),read: optional(string),update: optional(string)})"
+      }
+    ],
+    "resource_group_name": [
+      {
+        "type": "string",
+        "description": "Name of the resource group that this resource will be created in."
+      }
+    ]
+  }
+}

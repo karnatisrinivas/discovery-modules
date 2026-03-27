@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "allow_major_version_upgrade": [
+      {
+        "description": "Indicates whether major version upgrades are allowed for the replication instance.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "apply_immediately": [
+      {
+        "description": "Specifies whether the modifications should be applied immediately or during the next maintenance window.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "replication_instance_class": [
+      {
+        "description": "The compute and memory capacity class of the replication instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "replication_instance_id": [
+      {
+        "description": "A unique identifier for the replication instance.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "A map of tags to assign to the resource, which can help categorize and organize resources.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "type": "object({create: optional(string), update: optional(string), delete: optional(string)})",
+        "description": "The timeouts",
+        "nullable": true
+      }
+    ]
+  }
+}

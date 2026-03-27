@@ -1,0 +1,12 @@
+{
+    "output": {
+        "etag": {
+            "description": "Etag to track changes to the IAM policy for concurrency control",
+            "value": "${google_spanner_database_iam_member.this.etag}"
+        },
+        "id": {
+            "description": "Fully qualified ID for referencing the Spanner IAM member",
+            "value": "${google_spanner_database_iam_member.this.id}"
+        }
+    }
+}

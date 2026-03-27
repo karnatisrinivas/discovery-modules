@@ -1,0 +1,52 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.arn}"
+        },
+        "created_time": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.created_time}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.description}"
+        },
+        "distributor": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.distributor}"
+        },
+        "has_default_path": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.has_default_path}"
+        },
+        "name": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.name}"
+        },
+        "owner": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.owner}"
+        },
+        "status": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.status}"
+        },
+        "support_description": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.support_description}"
+        },
+        "support_email": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.support_email}"
+        },
+        "support_url": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.support_url}"
+        },
+        "tags": {
+            "description": "",
+            "value": "${data.aws_servicecatalog_product.this.tags}"
+        }
+    }
+}

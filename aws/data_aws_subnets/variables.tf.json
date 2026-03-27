@@ -1,0 +1,20 @@
+{
+    "variable": {
+        "filter": [
+            {
+                "type": "list(object({ name: string, values: list(string) }))",
+                "description": "Custom filter block as described below.",
+                "nullable": true,
+                "default": null
+            }
+        ],
+"tags": [
+    {
+        "type": "map(string)",
+        "description": "Map of tags, each pair of which must exactly match a pair on the desired subnets.",
+        "nullable": true,
+        "default": null
+    }
+]
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Location Map"
+  node:
+    label:
+      static: "[Data] Location Map"
+      template: "[Data] Location Map"
+    display_type: default
+
+discovery:
+  type: data_aws_location_map
+  dnd_supported: false

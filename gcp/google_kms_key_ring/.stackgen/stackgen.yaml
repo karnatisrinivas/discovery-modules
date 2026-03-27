@@ -1,0 +1,15 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Key Ring
+  node:
+    label:
+      static: Key Ring
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_kms_key_ring
+  dnd_supported: false
+  data_source: data_google_kms_key_ring

@@ -1,0 +1,46 @@
+{
+  "variable": {
+    "api_id": [
+      {
+        "description": "The unique identifier of the API to be exported.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "export_version": [
+      {
+        "description": "The version of the export format, if applicable.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "include_extensions": [
+      {
+        "description": "Specifies whether to include extensions in the export.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "output_type": [
+      {
+        "description": "The format of the exported API (e.g., 'oas30').",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "specification": [
+      {
+        "description": "The API specification type (e.g., 'OAS30' for OpenAPI 3.0).",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "stage_name": [
+      {
+        "description": "The name of the stage to export.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

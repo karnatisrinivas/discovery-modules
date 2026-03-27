@@ -1,0 +1,96 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Service Bus Namespace
+  node:
+    label:
+      static: Service Bus Namespace
+      template: ${name}
+    display_type: default
+
+variables:
+  public_network_access_enabled:
+    ui_control: select
+    description: Enable public network access. Disabling it will allow database access only via private endpoints.
+    type: bool
+    options: 
+      - true
+      - false
+  zone_redundant:
+    description: Whether or not this resource is zone redundant. sku needs to be Premium. Changing this forces a new resource to be created.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  local_auth_enabled:
+    description: Whether or not SAS authentication is enabled for the Service Bus namespace. Defaults to true.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  sku:
+    options: 
+      - Standard
+      - Basic
+      - Premium
+    ui_control: select
+    description: Defines which tier to use. Options are Basic, Standard or Premium. Please note that setting this field to Premium will force the creation of a new resource.
+    type: string
+  capacity:
+    description: Specifies the capacity. When sku is Premium, capacity can be 1, 2, 4, 8 or 16. When sku is Basic or Standard, capacity can be 0 only.
+    type: number
+    options: 
+      - 0
+      - 2
+      - 4
+      - 8
+      - 16
+    ui_control: select
+  premium_messaging_partitions:
+    description: Specifies the number messaging partitions. Only valid when sku is Premium and the minimum number is 1. Possible values include 0, 1, 2, and 4. Defaults to 0 for Standard, Basic namespace. Changing this forces a new resource to be created.
+    type: number
+    options: 
+      - 0
+      - 1
+      - 2
+      - 4
+    ui_control: select
+  network_rule_set_default_action:
+    options: 
+      - Allow
+      - Deny
+    ui_control: select
+    description: Specifies the default action for the Network Rule Set. If allowed network ruleset will be created on resource.
+    type: string
+
+variable_groups:
+- label: Service Bus Namespace details
+  variables:
+    - capacity
+    - premium_messaging_partitions
+    - sku
+    - zone_redundant
+- label: Network and Access Control
+  variables:
+    - public_network_access_enabled
+    - ip_rules
+    - local_auth_enabled
+    - minimum_tls_version
+    - network_rule_set_default_action
+    - allowed_subnet_ids
+    - trusted_services_allowed
+    - user_managed_identities
+- label: Encryption
+  variables:
+    - identity_id
+    - key_vault_key_id
+- label: Tags
+  variables:
+    - tags
+
+discovery:
+  type: azurerm_servicebus_namespace
+  dnd_supported: false

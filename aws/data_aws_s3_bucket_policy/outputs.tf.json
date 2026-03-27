@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the S3 bucket policy.",
+            "value": "${data.aws_s3_bucket_policy.this.id}"
+        },
+        "policy": {
+            "description": "The JSON formatted policy document of the S3 bucket.",
+            "value": "${data.aws_s3_bucket_policy.this.policy}"
+        }
+    }
+}

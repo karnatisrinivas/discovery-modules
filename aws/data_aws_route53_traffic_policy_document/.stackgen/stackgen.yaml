@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Traffic Policy Document"
+  node:
+    label:
+      static: "[Data] Route53 Traffic Policy Document"
+      template: "[Data] Route53 Traffic Policy Document"
+    display_type: default
+
+discovery:
+  type: data_aws_route53_traffic_policy_document
+  dnd_supported: false

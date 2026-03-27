@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Cloudwatch Event Source"
+  node:
+    label:
+      static: "[Data] Cloudwatch Event Source"
+      template: "[Data] Cloudwatch Event Source"
+    display_type: default
+
+discovery:
+  type: data_aws_cloudwatch_event_source
+  dnd_supported: false

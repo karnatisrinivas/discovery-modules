@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "resolver_endpoint_id": [
+      {
+        "description": "The unique identifier of the Route 53 Resolver endpoint.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

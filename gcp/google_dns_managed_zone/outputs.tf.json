@@ -1,0 +1,28 @@
+{
+    "output": {
+        "creation_time": {
+            "description": "Timestamp indicating when the DNS zone was created",
+            "value": "${google_dns_managed_zone.this.creation_time}"
+        },
+        "effective_labels": {
+            "description": "Final set of labels applied to the DNS zone for resource organization",
+            "value": "${google_dns_managed_zone.this.effective_labels}"
+        },
+        "id": {
+            "description": "Unique identifier for the DNS zone used in configurations",
+            "value": "${google_dns_managed_zone.this.id}"
+        },
+        "managed_zone_id": {
+            "description": "System-assigned ID for the managed DNS zone in Google Cloud",
+            "value": "${google_dns_managed_zone.this.managed_zone_id}"
+        },
+        "name_servers": {
+            "description": "List of DNS servers used to resolve queries for the zone",
+            "value": "${google_dns_managed_zone.this.name_servers}"
+        },
+        "terraform_labels": {
+            "description": "Labels defined in Terraform for tagging the DNS zone",
+            "value": "${google_dns_managed_zone.this.terraform_labels}"
+        }
+    }
+}

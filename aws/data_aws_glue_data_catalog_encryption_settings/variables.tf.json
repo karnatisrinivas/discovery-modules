@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "catalog_id": [
+      {
+        "description": "The unique identifier of the AWS Glue Data Catalog to apply the encryption settings to.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

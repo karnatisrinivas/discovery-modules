@@ -1,0 +1,53 @@
+{
+  "variable": {
+    "alternative_name_server_config": [
+      {
+        "description": "Specifies the configuration for alternative name servers to forward DNS queries, including target name servers and forwarding rules.",
+        "nullable": true,
+        "type": "list(object({target_name_servers: list(object({forwarding_path: optional(string),ipv4_address: string}))}))"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the user-provided description for the DNS policy, offering context or purpose for the policy.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "enable_inbound_forwarding": [
+      {
+        "description": "Determines whether DNS queries from VMs in the same VPC network are forwarded to the DNS resolvers specified in the policy.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "enable_logging": [
+      {
+        "description": "Determines whether query logging is enabled for the DNS policy; must be true or false.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the DNS policy, must be unique within the project and adhere to Google's naming conventions.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "networks": [
+      {
+        "description": "Specifies the VPC networks to which the DNS policy is applied; must be in the same project as the policy.",
+        "nullable": true,
+        "type": "list(object({network_url: string}))"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines timeout duration for operations related to the DNS policy, ensuring proper management of execution time.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

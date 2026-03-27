@@ -1,0 +1,24 @@
+{
+    "output": {
+        "creation_timestamp": {
+            "description": "Timestamp indicating when the URL map was created",
+            "value": "${google_compute_url_map.this.creation_timestamp}"
+        },
+        "fingerprint": {
+            "description": "Used to detect conflicts during updates",
+            "value": "${google_compute_url_map.this.fingerprint}"
+        },
+        "id": {
+            "description": "The unique identifier for the URL map",
+            "value": "${google_compute_url_map.this.id}"
+        },
+        "map_id": {
+            "description": "Numeric identifier for the URL map resource",
+            "value": "${google_compute_url_map.this.map_id}"
+        },
+        "self_link": {
+            "description": "URL for accessing the URL map resource in Google Cloud",
+            "value": "${google_compute_url_map.this.self_link}"
+        }
+    }
+}

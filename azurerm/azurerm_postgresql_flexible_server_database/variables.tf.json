@@ -1,0 +1,32 @@
+{
+  "variable": {
+    "charset": [
+      {
+        "description": "The character set to use for the database.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "collation": [
+      {
+        "description": "The collation order to use for the database.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "The name of the database.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "server_id": [
+      {
+        "description": "The ID of the PostgreSQL server where the database will be created.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

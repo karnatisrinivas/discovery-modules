@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Qldb Ledger"
+  node:
+    label:
+      static: "[Data] Qldb Ledger"
+      template: "[Data] Qldb Ledger"
+    display_type: default
+
+discovery:
+  type: data_aws_qldb_ledger
+  dnd_supported: false

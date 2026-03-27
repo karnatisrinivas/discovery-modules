@@ -1,0 +1,24 @@
+{
+    "output": {
+        "arn": {
+            "description": "",
+            "value": "${data.aws_verifiedpermissions_policy_store.this.arn}"
+        },
+        "created_date": {
+            "description": "",
+            "value": "${data.aws_verifiedpermissions_policy_store.this.created_date}"
+        },
+        "description": {
+            "description": "",
+            "value": "${data.aws_verifiedpermissions_policy_store.this.description}"
+        },
+        "last_updated_date": {
+            "description": "",
+            "value": "${data.aws_verifiedpermissions_policy_store.this.last_updated_date}"
+        },
+        "validation_settings": {
+            "description": "",
+            "value": "${data.aws_verifiedpermissions_policy_store.this.validation_settings}"
+        }
+    }
+}

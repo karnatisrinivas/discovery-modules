@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "function_name": [
+      {
+        "description": "The name of the Lambda function for which you want to create a URL.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "qualifier": [
+      {
+        "description": "The version or alias of the Lambda function. This is optional.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

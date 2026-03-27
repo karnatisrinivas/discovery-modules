@@ -1,0 +1,156 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "Name of the google storgage bucket",
+                "type": "string"
+            }
+        ],
+        "location": [
+            {
+                "description": "The GCS location.",
+                "type": "string"
+            }
+        ],
+        "force_destroy": [
+            {
+                "default": false,
+                "description": "Whether to allow the bucket and all objects to be deleted on destroy",
+                "type": "bool"
+            }
+        ],
+        "storage_class": [
+            {
+                "default": "STANDARD",
+                "description": "The Storage Class of the new bucket.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "autoclass": [
+            {
+                "description": "The bucket's Autoclass configuration.",
+                "type": "list(object({enabled: bool, terminal_storage_class: string}))",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "lifecycle_rule": [
+            {
+                "description": "The bucket's Lifecycle Rules configuration.",
+                "type": "list(object({action: list(object({type: string, storage_class: string})), condition: list(object({age: optional(number), created_before: optional(string), with_state: optional(string), matches_storage_class: optional(list(string)), matches_prefix: optional(list(string)), matches_suffix: optional(list(string)), num_newer_versions: optional(number), send_num_newer_versions_if_zero: optional(bool), custom_time_before: optional(string), days_since_custom_time: optional(number), send_age_if_zero: optional(bool), send_days_since_custom_time_if_zero: optional(bool), days_since_noncurrent_time: optional(number), send_days_since_noncurrent_time_if_zero: optional(bool), noncurrent_time_before: optional(string)}))}))",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "versioning": [
+            {
+                "type": "list(object({enabled: bool}))",
+                "description": "If versioning is enabled for this bucket",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "website": [
+            {
+                "type": "list(object({main_page_suffix: optional(string), not_found_page: optional(string)}))",
+                "description": "Configuration if the bucket acts as a website.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "uniform_bucket_level_access": [
+            {
+                "default": false,
+                "description": "Whether to enable uniform bucket-level access",
+                "type": "bool"
+            }
+        ],
+        "cors": [
+            {
+                "type": "list(object({origin: list(string), method: list(string), response_header: list(string), max_age_seconds: optional(number)}))",
+                "description": "Configuration if the bucket acts as a website.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "default_event_based_hold": [
+            {
+                "type": "bool",
+                "description": "Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.",
+                "nullable": true
+            }
+        ],
+        "retention_policy": [
+            {
+                "type": "list(object({is_locked: optional(bool), retention_period: string}))",
+                "description": "Configuration of the bucket's data retention policy for how long objects in the bucket should be retained.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "labels": [
+            {
+                "type": "map(string)",
+                "description": "A map of key/value label pairs to assign to the bucket.",
+                "nullable": true
+            }
+        ],
+        "encryption": [
+            {
+                "type": "list(object({default_kms_key_name: string}))",
+                "description": "The bucket's encryption configuration.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "enable_object_retention": [
+            {
+                "type": "bool",
+                "description": "Enables object retention on a storage bucket.",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "requester_pays": [
+            {
+                "type": "bool",
+                "description": "Enables Requester Pays on a storage bucket.",
+                "nullable": true,
+                "default": false
+            }
+        ],
+        "rpo": [
+            {
+                "type": "string",
+                "description": "The recovery point objective for cross-region replication of the bucket. Applicable only for dual and multi-region buckets.",
+                "nullable": true,
+                "default": "DEFAULT"
+            }
+        ],
+        "public_access_prevention": [
+            {
+                "type": "string",
+                "description": "Prevents public access to a bucket. Acceptable values are \"inherited\" or \"enforced\". If \"inherited\", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint.",
+                "nullable": true,
+                "default": "inherited"
+            }
+        ],
+        "custom_placement_config": [
+            {
+                "type": "list(object({data_locations: list(string)}))",
+                "description": "The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty.",
+                "nullable": true,
+                "default": []
+            }
+        ],
+        "soft_delete_policy": [
+            {
+                "type": "list(object({retention_duration_seconds: optional(number)}))",
+                "description": "The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. If the block is not provided, Server side value will be kept which means removal of block won't generate any terraform change.",
+                "nullable": true,
+                "default": []
+            }
+        ]
+    }
+}

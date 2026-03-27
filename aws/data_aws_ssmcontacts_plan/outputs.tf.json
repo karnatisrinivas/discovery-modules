@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier of the AWS SSM Contact Plan.",
+            "value": "${data.aws_ssmcontacts_plan.this.id}"
+        },
+        "stage": {
+            "description": "Details of the escalation stages in the SSM Contact Plan, including their duration and target contact information.",
+            "value": "${data.aws_ssmcontacts_plan.this.stage}"
+        }
+    }
+}

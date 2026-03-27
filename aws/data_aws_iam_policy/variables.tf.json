@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "Specifies the ARN of the IAM policy to retrieve.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Specifies the name of the IAM policy to retrieve.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "path_prefix": [
+      {
+        "description": "Specifies the path prefix for filtering IAM policies. This is an optional parameter that helps organize policies by grouping them under a common path.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

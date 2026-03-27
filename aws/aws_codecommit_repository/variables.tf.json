@@ -1,0 +1,39 @@
+{
+  "variable": {
+    "default_branch": [
+      {
+        "description": "Specifies the default branch for the repository, typically used for version control workflows; must already exist in the repository.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "description": [
+      {
+        "description": "Defines the repository's purpose or details, displayed in the AWS Management Console, with a maximum length of 1,000 characters.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "kms_key_id": [
+      {
+        "description": "Specifies the ARN of the KMS key used to encrypt the repository. Must be a valid KMS key ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "repository_name": [
+      {
+        "description": "Name of the CodeCommit repository to create; must be unique within the AWS account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs to organize, categorize, or identify the repository; must be a valid tag format.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

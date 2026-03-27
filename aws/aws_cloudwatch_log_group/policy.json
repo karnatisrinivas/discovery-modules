@@ -1,0 +1,23 @@
+{
+  "name": "aws_cloudwatch_log_group",
+  "policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Default",
+        "Effect": "Allow",
+        "Action": [
+          "logs:CreateLogGroup",
+          "logs:DeleteLogGroup",
+          "logs:DescribeLogGroups",
+          "logs:ListTagsLogGroup",
+          "logs:TagLogGroup",
+          "logs:UntagLogGroup"
+        ],
+        "Resource": [
+          "${module.module_name.arn}"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "autoscaling_config": [
+      {
+        "description": "Configuration for instance autoscaling, including settings for scaling based on load. Constraints may depend on instance type and region.",
+        "nullable": true,
+        "type": "list(object({asymmetric_autoscaling_options: list(object({overrides: list(object({autoscaling_limits: list(object({max_nodes: number,min_nodes: number}))})),replica_selection: list(object({location: string}))})),autoscaling_limits: list(object({max_nodes: optional(number),max_processing_units: optional(number),min_nodes: optional(number),min_processing_units: optional(number)})),autoscaling_targets: list(object({high_priority_cpu_utilization_percent: optional(number),storage_utilization_percent: optional(number)}))}))"
+      }
+    ],
+    "config": [
+      {
+        "description": "Defines the configuration for the Spanner instance, including the regional or multi-regional instance placement and replication settings.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "default_backup_schedule_type": [
+      {
+        "description": "Defines the default backup schedule type for the Spanner instance, specifying how backups are automatically managed.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "display_name": [
+      {
+        "description": "Human-readable name for the Spanner instance, limited to 30 characters.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "edition": [
+      {
+        "description": "Specifies the edition of the Spanner instance, such as 'STANDARD' or 'ENTERPRISE'; must match the available editions for your project and region.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "force_destroy": [
+      {
+        "description": "Indicates whether the Spanner instance should be forcefully destroyed, removing all data and resources without confirmation.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "labels": [
+      {
+        "description": "Key-value pairs used to organize and categorize the Spanner instance; must comply with label naming conventions.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique name for the Spanner instance, must be between 6 and 30 characters and match the pattern [a-z]([-a-z0-9]*[a-z0-9])?.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "num_nodes": [
+      {
+        "description": "Specifies the number of nodes allocated to the Spanner instance, which affects performance and cost. Must be a positive integer.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "processing_units": [
+      {
+        "description": "The number of processing units to allocate for the Spanner instance; must be a positive integer and adhere to platform-specific minimum and maximum limits.",
+        "nullable": true,
+        "type": "number"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Specifies the duration to wait for each operation (create, update, delete) on the Spanner instance before timing out.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ]
+  }
+}

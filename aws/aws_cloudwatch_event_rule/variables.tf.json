@@ -1,0 +1,61 @@
+{
+    "variable": {
+        "name": [
+            {
+                "description": "The name of the Cloudwatch event rule",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "description": [
+            {
+                "description": "The description of the Cloudwatch event rule",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "schedule_expression": [
+            {
+                "description": "The schedule expression for the Cloudwatch event rule. For example, cron(0 20 * * ? *) or rate(5 minutes)",
+                "type": "string",
+                "nullable": false
+            }
+        ],
+        "event_pattern": [
+            {
+                "description": "The event pattern for the Cloudwatch event rule.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "event_bus_name": [
+            {
+                "description": "The event bus to associate with the rule. If you omit this, the default event bus is used.",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "role_arn": [
+            {
+                "description": "The Amazon Resource Name (ARN) associated with the role that is used for target invocation",
+                "type": "string",
+                "nullable": true
+            }
+        ],
+        "state": [
+            {
+                "description": "Indicates whether the rule is enabled or disabled",
+                "type": "string",
+                "nullable": false,
+                "default": "ENABLED"
+            }
+        ],
+        "tags": [
+            {
+                "description": "The list of tags to apply to the Cloudwatch event rule",
+                "type": "map(string)",
+                "nullable": true
+            }
+        ]
+    }
+}

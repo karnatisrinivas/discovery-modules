@@ -1,0 +1,81 @@
+{
+  "variable": {
+    "data_access_role_arn": [
+      {
+        "description": "ARN of the IAM role that grants permissions to access the input data for training the entity recognizer.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "input_data_config": [
+      {
+        "description": "Configuration block specifying the S3 location of the input data required for the entity recognizer, including entity types and annotations.",
+        "nullable": false,
+        "type": "list(object({data_format: optional(string),annotations: list(object({s3_uri: string,test_s3_uri: optional(string)})),augmented_manifests: list(object({annotation_data_s3_uri: optional(string),attribute_names: list(string),document_type: optional(string),s3_uri: string,source_documents_s3_uri: optional(string),split: optional(string)})),documents: list(object({input_format: optional(string),s3_uri: string,test_s3_uri: optional(string)})),entity_list: list(object({s3_uri: string})),entity_types: list(object({type: string}))}))"
+      }
+    ],
+    "language_code": [
+      {
+        "description": "Specifies the language of the input data for the entity recognizer. Must be a supported language code, such as \"en\" for English.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "model_kms_key_id": [
+      {
+        "description": "Specifies the AWS KMS key ID used to encrypt the custom entity recognizer model. Must be a valid KMS key ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Defines the name of the custom entity recognizer; must be unique within the AWS Comprehend account.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "tags": [
+      {
+        "description": "Key-value pairs for tagging the entity recognizer, used for identifying and organizing resources; keys and values must be strings.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Defines the duration allowed for operations like create, read, update, and delete of the entity recognizer. Adjust based on expected operation time.",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "version_name": [
+      {
+        "description": "Specifies the name of the version for the entity recognizer, which must be unique within the recognizer and adhere to AWS naming constraints.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "version_name_prefix": [
+      {
+        "description": "Defines the prefix for the version name of the entity recognizer, used to distinguish different versions within the specified recognizer.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "volume_kms_key_id": [
+      {
+        "description": "Specifies the KMS key ID for encrypting the volume used during training. Must be a valid KMS key ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpc_config": [
+      {
+        "description": "Configuration details for the VPC, including subnets and security groups, required for the entity recognizer to access resources securely.",
+        "nullable": true,
+        "type": "list(object({security_group_ids: list(string),subnets: list(string)}))"
+      }
+    ]
+  }
+}

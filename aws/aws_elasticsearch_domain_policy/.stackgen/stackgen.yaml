@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Elasticsearch Domain Policy
+  node:
+    label:
+      static: Elasticsearch Domain Policy
+      template: ${domain_name}
+    display_type: default
+
+discovery:
+  type: aws_elasticsearch_domain_policy
+  dnd_supported: false
+  references:
+    domain_name:
+      from: aws_elasticsearch_domain
+      output: domain_name

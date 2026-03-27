@@ -1,0 +1,109 @@
+{
+  "variable": {
+    "carrier_gateway_id": [
+      {
+        "description": "Specifies the ID of the carrier gateway",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "core_network_arn": [
+      {
+        "description": "Provides the ARN of the core network",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_cidr_block": [
+      {
+        "description": "Defines the IPv4 CIDR block for destination",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_ipv6_cidr_block": [
+      {
+        "description": "Specifies the IPv6 CIDR block for destination",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "destination_prefix_list_id": [
+      {
+        "description": "Identifies the prefix list for destination",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "egress_only_gateway_id": [
+      {
+        "description": "ID for the egress-only internet gateway",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "gateway_id": [
+      {
+        "description": "ID of the gateway for route traffic",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "local_gateway_id": [
+      {
+        "description": "ID of the local gateway for routing",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "nat_gateway_id": [
+      {
+        "description": "ID of the NAT gateway for network translation",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "network_interface_id": [
+      {
+        "description": "ID of the network interface for attachment",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "route_table_id": [
+      {
+        "description": "ID of the route table to associate with",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "timeouts": [
+      {
+        "description": "Configures timeout settings for create, delete, update",
+        "nullable": true,
+        "type": "object({create: optional(string),delete: optional(string),update: optional(string)})"
+      }
+    ],
+    "transit_gateway_id": [
+      {
+        "description": "ID of the transit gateway for routing",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpc_endpoint_id": [
+      {
+        "description": "ID of the VPC endpoint for connection",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "vpc_peering_connection_id": [
+      {
+        "description": "ID of the VPC peering connection to use",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

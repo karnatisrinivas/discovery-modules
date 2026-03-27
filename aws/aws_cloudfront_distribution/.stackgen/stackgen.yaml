@@ -1,0 +1,189 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: CloudFront Distribution
+  node:
+    label:
+      static: CloudFront Distribution
+      template: CloudFront Distribution
+    display_type: default
+
+variables:
+  http_version:
+    description: Maximum HTTP version to support on the distribution.
+    type: string
+    options: 
+      - http1.1
+      - http2
+      - http2and3
+      - http3
+    ui_control: select
+  default_cache_behavior:
+    description: A list of cache behaviors that are associated with this distribution.
+    attributes: 
+      smooth_streaming: 
+        description: Indicates whether you want to distribute media files in Microsoft Smooth Streaming format using the origin that is associated with this cache behavior.
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: Smooth Streaming
+      trusted_key_groups: 
+        description: List of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+        validation: 
+          required: false
+          dataType: list(string)
+        type: list(string)
+        ui_control: text_list
+        label: Trusted Key Groups
+      trusted_signers: 
+        ui_control: text_list
+        label: Trusted Signers
+        description: "List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content."
+        validation: 
+          required: false
+          dataType: list(string)
+        type: list(string)
+      cache_policy_id: 
+        label: Cache Policy ID
+        description: "Unique identifier of the cache policy that is attached to the cache behavior. Either `Cache Policy ID` or `Forwarded Values` must be set."
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        ui_control: text
+      min_ttl: 
+        label: Min TTL
+        description: Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      realtime_log_config_arn: 
+        label: Realtime Log Config ARN
+        description: "ARN of the real-time log configuration that is attached to this cache behavior."
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      target_origin_id: 
+        label: Target Origin ID
+        description: Value of ID for the origin that you want CloudFront to route requests to when a request matches the path pattern either for a cache behavior or for the default cache behavior.
+        validation: 
+          dataType: string
+          required: true
+        type: string
+        ui_control: text
+      path_pattern: 
+        label: Path Pattern
+        description: " Pattern (for example, `images/*.jpg`) that specifies which requests you want this cache behavior to apply to."
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      allowed_methods: 
+        type: list(string)
+        ui_control: text_list
+        label: Allowed Methods
+        description: Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.
+        validation: 
+          dataType: list(string)
+          required: true
+      field_level_encryption_id: 
+        label: Field Level Encryption ID
+        description: Field level encryption configuration ID.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      max_ttl: 
+        ui_control: text
+        label: Max TTL
+        description: "Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of `Cache-Control max-age`, `Cache-Control s-maxage`, and `Expires` headers."
+        validation: 
+          required: false
+          dataType: number
+        type: number
+      response_headers_policy_id: 
+        label: Response Headers Policy ID
+        description: Identifier for a response headers policy.
+        validation: 
+          required: false
+          dataType: string
+        type: string
+        ui_control: text
+      viewer_protocol_policy: 
+        label: Viewer Protocol Policy
+        description: Use this element to specify the protocol that users can use to access the files in the origin specified by TargetOriginId when a request matches the path pattern in PathPattern.
+        validation: 
+          required: true
+          dataType: string
+        type: string
+        options: 
+          - "allow-all"
+          - "https-only"
+          - "redirect-to-https"
+        ui_control: select
+      cached_methods: 
+        validation: 
+          required: true
+          dataType: list(string)
+        type: list(string)
+        ui_control: text_list
+        label: Cached Methods
+        description: Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.
+      compress: 
+        description: "Whether you want CloudFront to automatically compress content for web requests that include `Accept-Encoding: gzip`"
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: compress
+      default_ttl: 
+        label: Default TTL
+        description: "Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an `Cache-Control max-age` or `Expires` header."
+        validation: 
+          required: false
+          dataType: number
+        type: number
+        ui_control: text
+      origin_request_policy_id: 
+        label: Origin Request Policy ID
+        description: Unique identifier of the origin request policy that is attached to the behavior.
+        validation: 
+          dataType: string
+          required: false
+        type: string
+        ui_control: text
+  enabled:
+    description: Whether the distribution is enabled to accept end user requests for content.
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+  is_ipv6_enabled:
+    type: bool
+    options: 
+      - true
+      - false
+    ui_control: select
+    description: Whether the IPv6 is enabled for the distribution.
+
+discovery:
+  type: aws_cloudfront_distribution
+  dnd_supported: false
+  data_source: data_aws_cloudfront_distribution

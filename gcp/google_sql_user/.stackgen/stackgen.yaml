@@ -1,0 +1,54 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: SQL User
+  node:
+    label:
+      static: SQL User
+      template: ${name}
+    display_type: default
+
+variables:
+  type:
+    options: 
+      - BUILT_IN
+      - CLOUD_IAM_USER
+      - CLOUD_IAM_SERVICE_ACCOUNT
+      - CLOUD_IAM_GROUP
+      - CLOUD_IAM_GROUP_USER
+      - CLOUD_IAM_GROUP_SERVICE_ACCOUNT
+    ui_control: select
+    description: "The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. "
+    type: string
+  password_policy:
+    description: A policy block for the passwords
+    attributes: 
+      enable_failed_attempts_check: 
+        options: 
+          - true
+          - false
+        ui_control: select
+        label: "Enable Failed Attempts Check?"
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+      enable_password_verification: 
+        label: "Enable Password Verification?"
+        validation: 
+          required: false
+          dataType: bool
+        type: bool
+        options: 
+          - true
+          - false
+        ui_control: select
+
+discovery:
+  type: google_sql_user
+  dnd_supported: false
+  references:
+    instance:
+      from: google_sql_database_instance
+      output: name

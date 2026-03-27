@@ -1,0 +1,60 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the EBS volume.",
+            "value": "${data.aws_ebs_volume.this.arn}"
+        },
+        "availability_zone": {
+            "description": "The availability zone where the EBS volume is located.",
+            "value": "${data.aws_ebs_volume.this.availability_zone}"
+        },
+        "encrypted": {
+            "description": "Indicates whether the EBS volume is encrypted.",
+            "value": "${data.aws_ebs_volume.this.encrypted}"
+        },
+        "id": {
+            "description": "The unique identifier of the EBS volume.",
+            "value": "${data.aws_ebs_volume.this.id}"
+        },
+        "iops": {
+            "description": "The input/output operations per second (IOPS) of the EBS volume.",
+            "value": "${data.aws_ebs_volume.this.iops}"
+        },
+        "kms_key_id": {
+            "description": "The identifier of the AWS KMS key used to encrypt the volume.",
+            "value": "${data.aws_ebs_volume.this.kms_key_id}"
+        },
+        "multi_attach_enabled": {
+            "description": "Indicates if the volume can be attached to multiple instances.",
+            "value": "${data.aws_ebs_volume.this.multi_attach_enabled}"
+        },
+        "outpost_arn": {
+            "description": "The ARN of the Outpost where the EBS volume is located, if applicable.",
+            "value": "${data.aws_ebs_volume.this.outpost_arn}"
+        },
+        "size": {
+            "description": "The size of the EBS volume in GiBs.",
+            "value": "${data.aws_ebs_volume.this.size}"
+        },
+        "snapshot_id": {
+            "description": "The snapshot from which the EBS volume was created, if applicable.",
+            "value": "${data.aws_ebs_volume.this.snapshot_id}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the EBS volume.",
+            "value": "${data.aws_ebs_volume.this.tags}"
+        },
+        "throughput": {
+            "description": "The throughput of the EBS volume in MiB/s, relevant for certain volume types.",
+            "value": "${data.aws_ebs_volume.this.throughput}"
+        },
+        "volume_id": {
+            "description": "The ID of the EBS volume.",
+            "value": "${data.aws_ebs_volume.this.volume_id}"
+        },
+        "volume_type": {
+            "description": "The type of the EBS volume (e.g., gp2, io1).",
+            "value": "${data.aws_ebs_volume.this.volume_type}"
+        }
+    }
+}

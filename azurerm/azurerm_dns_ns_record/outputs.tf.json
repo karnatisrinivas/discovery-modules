@@ -1,0 +1,8 @@
+{
+    "output": {
+        "dns_ns_record_id": {
+            "description": "The value of the dns_ns_record_id output",
+            "value": "${azurerm_dns_ns_record.record.id}"
+        }
+    }
+}

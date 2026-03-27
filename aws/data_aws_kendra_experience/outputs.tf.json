@@ -1,0 +1,48 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Kendra experience, which uniquely identifies it.",
+            "value": "${data.aws_kendra_experience.this.arn}"
+        },
+        "configuration": {
+            "description": "The configuration settings of the Kendra experience, including content sources and user identity settings.",
+            "value": "${data.aws_kendra_experience.this.configuration}"
+        },
+        "created_at": {
+            "description": "The date and time when the Kendra experience was created.",
+            "value": "${data.aws_kendra_experience.this.created_at}"
+        },
+        "description": {
+            "description": "A brief description of the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.description}"
+        },
+        "endpoints": {
+            "description": "A set of endpoints for accessing the Kendra experience, including their types.",
+            "value": "${data.aws_kendra_experience.this.endpoints}"
+        },
+        "error_message": {
+            "description": "The error message, if any, associated with the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.error_message}"
+        },
+        "id": {
+            "description": "The unique identifier of the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.id}"
+        },
+        "name": {
+            "description": "The name of the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.name}"
+        },
+        "role_arn": {
+            "description": "The ARN of the IAM role associated with the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.role_arn}"
+        },
+        "status": {
+            "description": "The current status of the Kendra experience.",
+            "value": "${data.aws_kendra_experience.this.status}"
+        },
+        "updated_at": {
+            "description": "The date and time when the Kendra experience was last updated.",
+            "value": "${data.aws_kendra_experience.this.updated_at}"
+        }
+    }
+}

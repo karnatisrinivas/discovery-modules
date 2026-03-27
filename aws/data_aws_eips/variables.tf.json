@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A map of key-value pairs to assign as tags to the Elastic IPs.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

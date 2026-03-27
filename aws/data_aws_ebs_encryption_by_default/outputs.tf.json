@@ -1,0 +1,12 @@
+{
+    "output": {
+        "enabled": {
+            "description": "Indicates whether EBS encryption by default is enabled for the AWS account.",
+            "value": "${data.aws_ebs_encryption_by_default.this.enabled}"
+        },
+        "id": {
+            "description": "The unique identifier for the EBS encryption by default setting.",
+            "value": "${data.aws_ebs_encryption_by_default.this.id}"
+        }
+    }
+}

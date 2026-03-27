@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Ssm Maintenance Windows"
+  node:
+    label:
+      static: "[Data] Ssm Maintenance Windows"
+      template: "[Data] Ssm Maintenance Windows"
+    display_type: default
+
+discovery:
+  type: data_aws_ssm_maintenance_windows
+  dnd_supported: false

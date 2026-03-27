@@ -1,0 +1,25 @@
+{
+    "variable": {
+        "identifier": [
+            {
+                "type": "string",
+                "nullable": true,
+                "description": "The snapshot schedule identifier. If omitted, Terraform will assign a random, unique identifier."
+            }
+        ],
+        "definitions": [
+            {
+                "type": "list(string)",
+                "nullable": true,
+                "description": "The definition of the snapshot schedule. The definition is made up of schedule expressions, for example cron(30 12 *) or rate(12 hours)."
+            }
+        ],
+        "tags": [
+            {
+                "type": "map(string)",
+                "nullable": true,
+                "description": "A mapping of tags to assign to the resource."
+            }
+        ]
+    }
+}

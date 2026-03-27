@@ -1,0 +1,64 @@
+{
+    "output": {
+        "access_url": {
+            "description": "The URL that can be used to access the directory service.",
+            "value": "${data.aws_directory_service_directory.this.access_url}"
+        },
+        "alias": {
+            "description": "A unique alias assigned to the directory.",
+            "value": "${data.aws_directory_service_directory.this.alias}"
+        },
+        "connect_settings": {
+            "description": "Settings related to connecting to the directory, including network and authentication details.",
+            "value": "${data.aws_directory_service_directory.this.connect_settings}"
+        },
+        "description": {
+            "description": "A brief description of the directory service.",
+            "value": "${data.aws_directory_service_directory.this.description}"
+        },
+        "dns_ip_addresses": {
+            "description": "The IP addresses of the DNS servers for the directory.",
+            "value": "${data.aws_directory_service_directory.this.dns_ip_addresses}"
+        },
+        "edition": {
+            "description": "The edition of the directory (e.g., Standard or Enterprise).",
+            "value": "${data.aws_directory_service_directory.this.edition}"
+        },
+        "enable_sso": {
+            "description": "Indicates whether single sign-on (SSO) is enabled for the directory.",
+            "value": "${data.aws_directory_service_directory.this.enable_sso}"
+        },
+        "id": {
+            "description": "The unique identifier of the directory.",
+            "value": "${data.aws_directory_service_directory.this.id}"
+        },
+        "name": {
+            "description": "The name of the directory.",
+            "value": "${data.aws_directory_service_directory.this.name}"
+        },
+        "radius_settings": {
+            "description": "Configuration settings for RADIUS authentication.",
+            "value": "${data.aws_directory_service_directory.this.radius_settings}"
+        },
+        "security_group_id": {
+            "description": "The ID of the security group associated with the directory.",
+            "value": "${data.aws_directory_service_directory.this.security_group_id}"
+        },
+        "short_name": {
+            "description": "The short name of the directory.",
+            "value": "${data.aws_directory_service_directory.this.short_name}"
+        },
+        "size": {
+            "description": "The size of the directory, typically indicating the number of users it can support.",
+            "value": "${data.aws_directory_service_directory.this.size}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the directory.",
+            "value": "${data.aws_directory_service_directory.this.tags}"
+        },
+        "vpc_settings": {
+            "description": "Settings related to the VPC where the directory is deployed, including subnets and availability zones.",
+            "value": "${data.aws_directory_service_directory.this.vpc_settings}"
+        }
+    }
+}

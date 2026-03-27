@@ -1,0 +1,60 @@
+{
+  "variable": {
+    "constraints": [
+      {
+        "description": "Defines the conditions under which the grant is applied, specifying operations, principals, and resources associated with the KMS key.",
+        "nullable": true,
+        "type": "list(object({encryption_context_equals: optional(map(string)),encryption_context_subset: optional(map(string))}))"
+      }
+    ],
+    "grant_creation_tokens": [
+      {
+        "description": "Defines a list of tokens used to identify and authorize the creation of the grant; must be unique within the context of the grant.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "grantee_principal": [
+      {
+        "description": "Specifies the AWS principal (IAM user, role, or service) that is granted permission to use the KMS key.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "key_id": [
+      {
+        "description": "Specifies the unique identifier of the KMS key for which the grant is created; must be a valid key ID, ARN, alias name, or alias ARN.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "name": [
+      {
+        "description": "Unique identifier for the grant, used to refer to the grant in subsequent operations.",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "operations": [
+      {
+        "description": "Defines the list of operations that the grant allows, such as 'Encrypt', 'Decrypt', 'GenerateDataKey', etc. Must match the supported operations for the KMS key.",
+        "nullable": false,
+        "type": "list(string)"
+      }
+    ],
+    "retire_on_delete": [
+      {
+        "description": "Indicates whether the grant should be retired when the resource is deleted; requires the grant token to be provided.",
+        "nullable": true,
+        "type": "bool"
+      }
+    ],
+    "retiring_principal": [
+      {
+        "description": "Specifies the principal allowed to retire the grant, such as an AWS service or IAM user/role. Must be a valid AWS principal ARN.",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "output": {
+        "id": {
+            "description": "The unique identifier for the association between the AWS Connect instance and the Lambda function.",
+            "value": "${data.aws_connect_lambda_function_association.this.id}"
+        }
+    }
+}

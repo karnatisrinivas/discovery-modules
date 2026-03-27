@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: App Engine Application
+  node:
+    label:
+      static: App Engine Application
+      template: ${location_id}
+    display_type: default
+
+discovery:
+  type: google_app_engine_application
+  dnd_supported: false

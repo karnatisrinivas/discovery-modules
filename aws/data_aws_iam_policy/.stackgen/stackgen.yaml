@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Iam Policy"
+  node:
+    label:
+      static: "[Data] Iam Policy"
+      template: "[Data] Iam Policy"
+    display_type: default
+
+discovery:
+  type: data_aws_iam_policy
+  dnd_supported: false

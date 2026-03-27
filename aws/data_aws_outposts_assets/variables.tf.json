@@ -1,0 +1,25 @@
+{
+  "variable": {
+    "arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) uniquely identifying the Outpost asset.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "host_id_filter": [
+      {
+        "description": "A set of host IDs used to filter Outpost assets based on their host identifier.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "status_id_filter": [
+      {
+        "description": "A set of status IDs used to filter Outpost assets based on their status.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

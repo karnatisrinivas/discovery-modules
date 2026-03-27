@@ -1,0 +1,9 @@
+resource "aws_msk_vpc_connection" "this" {
+  authentication     = var.authentication
+  target_cluster_arn = var.target_cluster_arn
+  vpc_id             = var.vpc_id
+  client_subnets     = var.client_subnets
+  security_groups    = var.security_groups
+  tags               = var.tags
+}
+

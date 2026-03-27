@@ -1,0 +1,11 @@
+{
+  "variable": {
+    "tags": [
+      {
+        "description": "A map of key-value pairs to associate with the EC2 CoIP pool as tags.",
+        "nullable": true,
+        "type": "map(string)"
+      }
+    ]
+  }
+}

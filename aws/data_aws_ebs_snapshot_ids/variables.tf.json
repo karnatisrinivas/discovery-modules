@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "owners": [
+      {
+        "description": "List of AWS account IDs that own the EBS snapshots.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ],
+    "restorable_by_user_ids": [
+      {
+        "description": "List of AWS account IDs that are allowed to restore the EBS snapshots.",
+        "nullable": true,
+        "type": "list(string)"
+      }
+    ]
+  }
+}

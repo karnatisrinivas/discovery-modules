@@ -1,0 +1,40 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the Redshift Serverless workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.arn}"
+        },
+        "endpoint": {
+            "description": "The endpoint information for connecting to the Redshift Serverless workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.endpoint}"
+        },
+        "enhanced_vpc_routing": {
+            "description": "Indicates whether enhanced VPC routing is enabled for the workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.enhanced_vpc_routing}"
+        },
+        "id": {
+            "description": "The unique identifier for the Redshift Serverless workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.id}"
+        },
+        "namespace_name": {
+            "description": "The name of the namespace associated with the Redshift Serverless workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.namespace_name}"
+        },
+        "publicly_accessible": {
+            "description": "Indicates whether the workgroup is accessible from the internet.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.publicly_accessible}"
+        },
+        "security_group_ids": {
+            "description": "The set of security group IDs associated with the workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.security_group_ids}"
+        },
+        "subnet_ids": {
+            "description": "The set of subnet IDs associated with the workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.subnet_ids}"
+        },
+        "workgroup_id": {
+            "description": "The identifier for the Redshift Serverless workgroup.",
+            "value": "${data.aws_redshiftserverless_workgroup.this.workgroup_id}"
+        }
+    }
+}

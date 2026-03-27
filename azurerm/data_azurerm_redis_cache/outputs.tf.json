@@ -1,0 +1,24 @@
+{
+    "output": {
+        "hostname": {
+            "description": "The DNS name of the Redis Cache.",
+            "value": "${data.azurerm_redis_cache.this.hostname}"
+        },
+        "id": {
+            "description": "The unique identifier of the Redis Cache.",
+            "value": "${data.azurerm_redis_cache.this.id}"
+        },
+        "name": {
+            "description": "The name of the Redis Cache.",
+            "value": "${data.azurerm_redis_cache.this.name}"
+        },
+        "sku_name": {
+            "description": "The SKU name of the Redis Cache, indicating its pricing tier.",
+            "value": "${data.azurerm_redis_cache.this.sku_name}"
+        },
+        "subnet_id": {
+            "description": "The ID of the subnet associated with the Redis Cache.",
+            "value": "${data.azurerm_redis_cache.this.subnet_id}"
+        }
+    }
+}

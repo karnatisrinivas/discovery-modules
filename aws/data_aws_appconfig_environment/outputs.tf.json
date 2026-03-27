@@ -1,0 +1,32 @@
+{
+    "output": {
+        "arn": {
+            "description": "The Amazon Resource Name (ARN) of the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.arn}"
+        },
+        "description": {
+            "description": "A brief description of the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.description}"
+        },
+        "id": {
+            "description": "The unique identifier for the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.id}"
+        },
+        "monitor": {
+            "description": "A set of monitoring configurations, including alarm ARNs and roles, for the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.monitor}"
+        },
+        "name": {
+            "description": "The name of the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.name}"
+        },
+        "state": {
+            "description": "The current state of the AppConfig environment, such as READY or DEPLOYING.",
+            "value": "${data.aws_appconfig_environment.this.state}"
+        },
+        "tags": {
+            "description": "A map of tags assigned to the AppConfig environment.",
+            "value": "${data.aws_appconfig_environment.this.tags}"
+        }
+    }
+}

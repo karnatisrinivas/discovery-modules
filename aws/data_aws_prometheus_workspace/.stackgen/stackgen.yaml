@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Prometheus Workspace"
+  node:
+    label:
+      static: "[Data] Prometheus Workspace"
+      template: "[Data] Prometheus Workspace"
+    display_type: default
+
+discovery:
+  type: data_aws_prometheus_workspace
+  dnd_supported: false

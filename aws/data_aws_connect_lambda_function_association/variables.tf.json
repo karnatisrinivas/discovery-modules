@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "function_arn": [
+      {
+        "description": "The Amazon Resource Name (ARN) of the Lambda function to be associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "instance_id": [
+      {
+        "description": "The identifier of the Amazon Connect instance to associate the Lambda function with.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

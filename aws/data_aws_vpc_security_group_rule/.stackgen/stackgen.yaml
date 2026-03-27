@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Vpc Security Group Rule"
+  node:
+    label:
+      static: "[Data] Vpc Security Group Rule"
+      template: "[Data] Vpc Security Group Rule"
+    display_type: default
+
+discovery:
+  type: data_aws_vpc_security_group_rule
+  dnd_supported: false

@@ -1,0 +1,18 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Apigee Addons Config
+  node:
+    label:
+      static: Apigee Addons Config
+      template: ${org}
+    display_type: default
+
+discovery:
+  type: google_apigee_addons_config
+  dnd_supported: false
+  references:
+    org:
+      from: google_apigee_organization
+      output: name

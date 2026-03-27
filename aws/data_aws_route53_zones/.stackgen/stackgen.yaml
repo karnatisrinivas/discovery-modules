@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Route53 Zones"
+  node:
+    label:
+      static: "[Data] Route53 Zones"
+      template: "[Data] Route53 Zones"
+    display_type: default
+
+discovery:
+  type: data_aws_route53_zones
+  dnd_supported: false

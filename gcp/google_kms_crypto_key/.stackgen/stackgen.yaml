@@ -1,0 +1,19 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Crypto Key
+  node:
+    label:
+      static: Crypto Key
+      template: ${name}
+    display_type: default
+
+discovery:
+  type: google_kms_crypto_key
+  dnd_supported: false
+  data_source: data_google_kms_crypto_key
+  references:
+    key_ring:
+      from: google_kms_key_ring_composite
+      output: id

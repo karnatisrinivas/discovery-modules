@@ -1,0 +1,12 @@
+{
+    "output": {
+        "id": {
+            "description": "Unique ID for referencing the Identity Platform configuration in other resources",
+            "value": "${google_identity_platform_config.this.id}"
+        },
+        "name": {
+            "description": "Human-readable name of the Identity Platform configuration for easy identification",
+            "value": "${google_identity_platform_config.this.name}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: "[Data] Organizations Resource Tags"
+  node:
+    label:
+      static: "[Data] Organizations Resource Tags"
+      template: "[Data] Organizations Resource Tags"
+    display_type: default
+
+discovery:
+  type: data_aws_organizations_resource_tags
+  dnd_supported: false

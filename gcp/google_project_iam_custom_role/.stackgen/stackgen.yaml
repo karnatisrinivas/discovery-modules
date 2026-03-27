@@ -1,0 +1,25 @@
+version: 1.0
+
+representation:
+  side_panel:
+    label: Project Custom Role
+  node:
+    label:
+      static: Project Custom Role
+      template: ${title}
+    display_type: default
+
+variables:
+  stage:
+    ui_control: select
+    description: The current launch stage of the role.
+    type: string
+    options: 
+      - GA
+      - ALPHA
+      - BETA
+      - EAP
+
+discovery:
+  type: google_project_iam_custom_role
+  dnd_supported: false

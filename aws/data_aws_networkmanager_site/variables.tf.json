@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "global_network_id": [
+      {
+        "description": "The unique identifier for the global network with which the site is associated.",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "site_id": [
+      {
+        "description": "The unique identifier for the site within the global network.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}
