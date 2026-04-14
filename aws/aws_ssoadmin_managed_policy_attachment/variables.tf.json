@@ -2,27 +2,31 @@
   "variable": {
     "instance_arn": [
       {
+        "default": null,
         "description": "ARN of the AWS SSO instance to which the managed policy will be attached; must be a valid and existing SSO instance ARN.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "managed_policy_arn": [
       {
+        "default": null,
         "description": "ARN of the managed policy to attach; must be a valid AWS managed policy ARN.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "permission_set_arn": [
       {
+        "default": null,
         "description": "ARN of the permission set to which the managed policy will be attached; must be a valid Amazon Resource Name format.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "timeouts": [
       {
+        "default": null,
         "description": "Defines the duration allowed for create, read, update, and delete operations, ensuring efficient resource management.",
         "nullable": true,
         "type": "object({create: optional(string),delete: optional(string)})"
