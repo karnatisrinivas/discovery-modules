@@ -1,14 +1,35 @@
-version: 1.0
-
+version: "1.0"
 representation:
   side_panel:
-    label: Identitystore Group
+    label: "AWS Identity Store Group"
+    icon: "aws-identitystore-group"
   node:
     label:
-      static: Identitystore Group
-      template: ${display_name}
-    display_type: default
-
-discovery:
-  type: aws_identitystore_group
-  dnd_supported: false
+      static: "Identity Store Group"
+      template: "Identity Store Group - ${display_name}"
+variables:
+  description:
+    label: "Description"
+    description: "Defines the group's description, providing a brief summary or purpose; must not exceed 1024 characters."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  display_name:
+    label: "Display Name"
+    description: "Specifies the name displayed for the group, must be unique within the identity store."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  identity_store_id:
+    label: "Identity Store ID"
+    description: "Specifies the ID of the identity store to associate the group with; must correspond to an existing AWS Identity Store."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+variable_groups:
+  - label: "Group Configuration"
+    description: "Identity store group identity and scope"
+    variables: ["display_name", "identity_store_id", "description"]

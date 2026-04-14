@@ -2,6 +2,7 @@
   "variable": {
     "description": [
       {
+        "default": null,
         "description": "Defines the group's description, providing a brief summary or purpose; must not exceed 1024 characters.",
         "nullable": true,
         "type": "string"
@@ -9,15 +10,17 @@
     ],
     "display_name": [
       {
+        "default": null,
         "description": "Specifies the name displayed for the group, must be unique within the identity store.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "identity_store_id": [
       {
+        "default": null,
         "description": "Specifies the ID of the identity store to associate the group with; must correspond to an existing AWS Identity Store.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ]

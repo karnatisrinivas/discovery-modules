@@ -3,19 +3,18 @@ resource "aws_ssoadmin_customer_managed_policy_attachment" "this" {
   permission_set_arn = var.permission_set_arn
 
   dynamic "customer_managed_policy_reference" {
-    for_each = var.customer_managed_policy_reference
+    for_each = var.customer_managed_policy_reference != null ? var.customer_managed_policy_reference : []
     content {
       name = customer_managed_policy_reference.value.name
-      path = customer_managed_policy_reference.value.path
+      path = try(customer_managed_policy_reference.value.path, null) != null && try(customer_managed_policy_reference.value.path, null) != "" ? try(customer_managed_policy_reference.value.path, null) : null
     }
   }
 
   dynamic "timeouts" {
     for_each = var.timeouts != null ? [var.timeouts] : []
     content {
-      create = lookup(timeouts.value, "create", null)
-      delete = lookup(timeouts.value, "delete", null)
+      create = try(timeouts.value.create, null) != null && try(timeouts.value.create, null) != "" ? try(timeouts.value.create, null) : null
+      delete = try(timeouts.value.delete, null) != null && try(timeouts.value.delete, null) != "" ? try(timeouts.value.delete, null) : null
     }
   }
-
 }

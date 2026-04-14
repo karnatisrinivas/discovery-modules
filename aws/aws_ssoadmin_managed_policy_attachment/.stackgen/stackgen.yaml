@@ -1,14 +1,58 @@
-version: 1.0
-
+version: "1.0"
 representation:
   side_panel:
-    label: Ssoadmin Managed Policy Attachment
+    label: "AWS SSO Managed Policy Attachment"
+    icon: "aws-ssoadmin-managed-policy-attachment"
   node:
     label:
-      static: Ssoadmin Managed Policy Attachment
-      template: ${managed_policy_arn}
-    display_type: default
-
-discovery:
-  type: aws_ssoadmin_managed_policy_attachment
-  dnd_supported: false
+      static: "SSO Managed Policy Attachment"
+      template: "SSO Managed Policy - ${managed_policy_arn}"
+variables:
+  instance_arn:
+    label: "Instance ARN"
+    description: "ARN of the AWS SSO instance to which the managed policy will be attached; must be a valid and existing SSO instance ARN."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  managed_policy_arn:
+    label: "Managed Policy ARN"
+    description: "ARN of the managed policy to attach; must be a valid AWS managed policy ARN."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  permission_set_arn:
+    label: "Permission Set ARN"
+    description: "ARN of the permission set to which the managed policy will be attached; must be a valid Amazon Resource Name format."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  timeouts:
+    label: "Timeouts"
+    description: "Defines the duration allowed for create, read, update, and delete operations, ensuring efficient resource management."
+    type: "object"
+    ui_control: "object"
+    attributes:
+      create:
+        label: "Create"
+        type: "string"
+        ui_control: "text"
+        validation:
+          required: false
+      delete:
+        label: "Delete"
+        type: "string"
+        ui_control: "text"
+        validation:
+          required: false
+    validation:
+      required: false
+variable_groups:
+  - label: "Attachment"
+    description: "SSO instance, permission set, and managed policy"
+    variables: ["instance_arn", "permission_set_arn", "managed_policy_arn"]
+  - label: "Timeouts"
+    description: "Optional create and delete timeouts"
+    variables: ["timeouts"]

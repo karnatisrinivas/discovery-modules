@@ -6,9 +6,8 @@ resource "aws_ssoadmin_managed_policy_attachment" "this" {
   dynamic "timeouts" {
     for_each = var.timeouts != null ? [var.timeouts] : []
     content {
-      create = lookup(timeouts.value, "create", null)
-      delete = lookup(timeouts.value, "delete", null)
+      create = try(timeouts.value.create, null) != null && try(timeouts.value.create, null) != "" ? try(timeouts.value.create, null) : null
+      delete = try(timeouts.value.delete, null) != null && try(timeouts.value.delete, null) != "" ? try(timeouts.value.delete, null) : null
     }
   }
-
 }

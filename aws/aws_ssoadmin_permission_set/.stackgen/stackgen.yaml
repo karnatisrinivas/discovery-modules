@@ -1,14 +1,73 @@
-version: 1.0
-
+version: "1.0"
 representation:
   side_panel:
-    label: Ssoadmin Permission Set
+    label: "AWS SSO Admin Permission Set"
+    icon: "aws-ssoadmin-permission-set"
   node:
     label:
-      static: Ssoadmin Permission Set
-      template: ${name}
-    display_type: default
-
-discovery:
-  type: aws_ssoadmin_permission_set
-  dnd_supported: false
+      static: "SSO Permission Set"
+      template: "SSO Permission Set - ${name}"
+variables:
+  description:
+    label: "Description"
+    description: "Defines the purpose or details of the permission set to help identify its role or usage within AWS SSO."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  instance_arn:
+    label: "Instance ARN"
+    description: "Specifies the ARN of the AWS SSO instance associated with the permission set."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  name:
+    label: "Name"
+    description: "Defines the name of the permission set, which must be unique within the AWS SSO instance."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  relay_state:
+    label: "Relay State"
+    description: "Default URL or state that users are directed to after signing in, must be a valid URL format."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  session_duration:
+    label: "Session Duration"
+    description: "Defines the duration for a single sign-on session, specified in ISO 8601 format (e.g., PT1H for 1 hour). Must be between 1 hour and 12 hours."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  tags:
+    label: "Tags"
+    description: "Key-value pairs to categorize or organize resources, typically used for management, cost tracking, or identification purposes."
+    type: "map(string)"
+    ui_control: "dictionary"
+    validation:
+      required: false
+  timeouts:
+    label: "Timeouts"
+    description: "Defines custom timeout settings for operations such as create, update, and delete actions."
+    type: "object"
+    ui_control: "object"
+    attributes:
+      update:
+        label: "Update"
+        type: "string"
+        ui_control: "text"
+        validation:
+          required: false
+    validation:
+      required: false
+variable_groups:
+  - label: "Permission Set Core"
+    description: "Name, instance, and session settings"
+    variables: ["name", "instance_arn", "description", "session_duration", "relay_state"]
+  - label: "Tags and Timeouts"
+    description: "Resource tags and operation timeouts"
+    variables: ["tags", "timeouts"]

@@ -1,14 +1,208 @@
-version: 1.0
-
+version: "1.0"
 representation:
   side_panel:
-    label: Identitystore User
+    label: "AWS Identity Store User"
+    icon: "aws-identitystore-user"
   node:
     label:
-      static: Identitystore User
-      template: ${user_name}
-    display_type: default
-
-discovery:
-  type: aws_identitystore_user
-  dnd_supported: false
+      static: "Identity Store User"
+      template: "Identity Store User - ${user_name}"
+variables:
+  addresses:
+    label: "Addresses"
+    description: "Defines the physical or postal addresses associated with the user, including type, format, and constraints as required by the identity store."
+    type: "list(object)"
+    ui_control: "object_list"
+    attributes:
+      country:
+        label: "Country"
+        type: "string"
+        ui_control: "text"
+      formatted:
+        label: "Formatted Address"
+        type: "string"
+        ui_control: "text"
+      locality:
+        label: "Locality"
+        type: "string"
+        ui_control: "text"
+      postal_code:
+        label: "Postal Code"
+        type: "string"
+        ui_control: "text"
+      primary:
+        label: "Primary"
+        type: "bool"
+        ui_control: "select"
+        options: [true, false]
+      region:
+        label: "Region"
+        type: "string"
+        ui_control: "text"
+      street_address:
+        label: "Street Address"
+        type: "string"
+        ui_control: "text"
+      type:
+        label: "Type"
+        type: "string"
+        ui_control: "text"
+    validation:
+      required: false
+  display_name:
+    label: "Display Name"
+    description: "The name displayed for the user, typically used for identification purposes; must be unique within the identity store."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  emails:
+    label: "Emails"
+    description: "List of email addresses associated with the user, including at least one primary email; required for user creation."
+    type: "list(object)"
+    ui_control: "object_list"
+    attributes:
+      primary:
+        label: "Primary"
+        type: "bool"
+        ui_control: "select"
+        options: [true, false]
+      type:
+        label: "Type"
+        type: "string"
+        ui_control: "text"
+      value:
+        label: "Email Address"
+        type: "string"
+        ui_control: "text"
+    validation:
+      required: false
+  identity_store_id:
+    label: "Identity Store ID"
+    description: "The identifier of the AWS Identity Store associated with the user, required for managing user resources."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  locale:
+    label: "Locale"
+    description: "Specifies the user's locale, typically in the format of a language code followed by a country code (e.g., \"en_US\"). Must comply with ISO 639-1 and ISO 3166-1 standards."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  name:
+    label: "Name"
+    description: "Specifies the user's display name, which is required and must be unique within the identity store."
+    type: "list(object)"
+    ui_control: "object_list"
+    attributes:
+      family_name:
+        label: "Family Name"
+        type: "string"
+        ui_control: "text"
+      formatted:
+        label: "Formatted Name"
+        type: "string"
+        ui_control: "text"
+      given_name:
+        label: "Given Name"
+        type: "string"
+        ui_control: "text"
+      honorific_prefix:
+        label: "Honorific Prefix"
+        type: "string"
+        ui_control: "text"
+      honorific_suffix:
+        label: "Honorific Suffix"
+        type: "string"
+        ui_control: "text"
+      middle_name:
+        label: "Middle Name"
+        type: "string"
+        ui_control: "text"
+    validation:
+      required: false
+  nickname:
+    label: "Nickname"
+    description: "Specifies the nickname for the user, typically used as a casual or informal name."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  phone_numbers:
+    label: "Phone Numbers"
+    description: "List of phone numbers associated with the user, each entry must include type and value attributes."
+    type: "list(object)"
+    ui_control: "object_list"
+    attributes:
+      primary:
+        label: "Primary"
+        type: "bool"
+        ui_control: "select"
+        options: [true, false]
+      type:
+        label: "Type"
+        type: "string"
+        ui_control: "text"
+      value:
+        label: "Phone Number"
+        type: "string"
+        ui_control: "text"
+    validation:
+      required: false
+  preferred_language:
+    label: "Preferred Language"
+    description: "Specifies the user's preferred language for communication, typically formatted as a language tag (e.g., \"en-US\")."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  profile_url:
+    label: "Profile URL"
+    description: "URL of the user's profile, typically used for referencing external user details; must be a valid URL format."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  timezone:
+    label: "Timezone"
+    description: "Specifies the user's timezone in IANA format (e.g., \"America/New_York\"); must be a valid timezone identifier."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  title:
+    label: "Title"
+    description: "The user's title or designation within the organization."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  user_name:
+    label: "User Name"
+    description: "Specifies the unique name of the user within the identity store; must meet the naming conventions of the identity provider."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+  user_type:
+    label: "User Type"
+    description: "Specifies the type of user, such as employee or contractor, within the identity store."
+    type: "string"
+    ui_control: "text"
+    validation:
+      required: false
+variable_groups:
+  - label: "Basic Configuration"
+    description: "General identity store user settings"
+    variables: ["display_name", "user_name", "identity_store_id", "name", "emails"]
+  - label: "Contact Information"
+    description: "User contact details"
+    variables: ["addresses", "nickname", "phone_numbers", "profile_url"]
+  - label: "Preferences"
+    description: "Locale, language, and time settings"
+    variables: ["locale", "preferred_language", "timezone"]
+  - label: "Role and Type"
+    description: "Organizational role and user classification"
+    variables: ["title", "user_type"]

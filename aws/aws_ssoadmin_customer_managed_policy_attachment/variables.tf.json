@@ -2,27 +2,31 @@
   "variable": {
     "customer_managed_policy_reference": [
       {
+        "default": null,
         "description": "Reference to the ARN of the customer-managed IAM policy to be attached to the specified permission set.",
-        "nullable": false,
+        "nullable": true,
         "type": "list(object({name: string,path: optional(string)}))"
       }
     ],
     "instance_arn": [
       {
+        "default": null,
         "description": "ARN of the AWS SSO instance to which the customer-managed policy will be attached.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "permission_set_arn": [
       {
+        "default": null,
         "description": "ARN of the permission set to attach the customer-managed policy to. Must be a valid and existing permission set ARN.",
-        "nullable": false,
+        "nullable": true,
         "type": "string"
       }
     ],
     "timeouts": [
       {
+        "default": null,
         "description": "Defines the duration for operations to complete, such as attaching or detaching customer-managed policies, with specified timeout constraints.",
         "nullable": true,
         "type": "object({create: optional(string),delete: optional(string)})"
